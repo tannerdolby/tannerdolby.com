@@ -1,0 +1,21 @@
+<nav>
+    <div class="nav-wrapper">
+        <ul class="nav-home">
+            <li><a href="/" class="home" style="font-size: 18px;"><span class="initials">{{ site.page_info.initials }}</span>Tanner Dolby</a></li>
+        </ul>
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a class="nav-about {{ 'active' if '/about/' in page.url }}" href="/about/">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-blog {{ 'active' if '/writing/' in page.url }}" href="/writing/">Writing</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-art" href="/art/">Art</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-fun" href="https://codepen.io/tannerdolby">Fun</a>
+            </li>
+        </ul>
+    </div>
+</nav>

@@ -1,0 +1,38 @@
+{
+  "name": "11ty-gallery",
+  "version": "1.0.0",
+  "description": "My personal website built with the static site generator Eleventy",
+  "main": ".eleventy.js",
+  "scripts": {
+    "build": "eleventy build",
+    "serve": "eleventy --serve",
+    "run": "eleventy --serve",
+    "debug": "DEBUG=* eleventy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Tanner Dolby",
+    "email": "dolb.tanner@gmail.com",
+    "url": "https://github.com/tannerdolby"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "@11ty/eleventy-cache-assets": "^2.0.3",
+    "clean-css": "^4.2.3",
+    "speedlify-score": "^2.0.1",
+    "terser": "^5.3.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tannerdolby/eleventy-stock-gallery.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tannerdolby/eleventy-stock-gallery/issues"
+  },
+  "homepage": "https://github.com/tannerdolby/eleventy-stock-gallery#readme",
+  "devDependencies": {
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1"
+  }
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{{ site.page_info.webpage_title }}</title>
+        <meta name="description" 
+            content="Hello! Welcome to the home of my personal website built with Eleventy. 
+            I've had so much fun self teaching myself web development and want to continue sharing about my journey with tech.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+        {% set css %}
+            {% include "css/style.css" %}
+            {% include "css/speedlify-score.css" %}
+        {% endset %}
+        <style lang="css">
+            {{ css | cssmin | safe }}
+        </style>
+    </head>
+    <body>
+        <a href="#post-content" class="skip-link">Skip to main content</a>
+        {% include "layouts/nav.njk" %}
+        <main class="main-container" role="main" id="post-content">
+            <section id="post" class="main-content">
+                {{ content | safe }}
+            </section>
+        </main>
+        {% include "layouts/footer.njk" %}
+    </body>
+</html>

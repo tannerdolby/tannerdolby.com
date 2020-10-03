@@ -1,0 +1,186 @@
+[
+    {
+        "name": "Archimedean spiral with randomized path",
+        "url": "https://codepen.io/tannerdolby/full/KKzrOEv",
+        "date_created": "September 22, 2020",
+        "datetime": "2020 22 9",
+        "credit": "https://en.wikipedia.org/wiki/Archimedean_spiral",
+        "image": {
+            "fallback_src": "/images/arc-spiral-large.jpg",
+            "alt": "Archimedean Spirl with randomized offset spiral path",
+            "large": {
+                "webp": "/images/arc-spiral-large.webp",
+                "jpg": "/images/arc-spiral-large.jpg",
+                "width": "1024w"
+            },
+            "med": {
+                "webp": "/images/arc-spiral-med.webp",
+                "jpg": "/images/arc-spiral-med.jpg",
+                "width": "640w"
+            },
+            "small": {
+                "webp": "/images/arc-spiral-small.webp",
+                "jpg": "/images/arc-spiral-small.jpg",
+                "width": "320w"
+            }
+        }
+    },
+    {
+        "name": "UPS Store",
+        "url": "https://codepen.io/tannerdolby/full/NWNEBYV",
+        "date_created": "September 21, 2020",
+        "datetime": "2020 21 9",
+        "credit": "https://ups.com",
+        "svg_credit": "https://worldvectorlogo.com/logo/ups",
+        "image": {
+            "fallback_src": "/images/ups-store-large.jpg",
+            "alt": "UPS Store with glossy windows",
+            "large": {
+                "webp": "/images/ups-store-large.webp",
+                "width": "1024w"
+            },
+            "med": {
+                "webp": "/images/ups-store-med.webp",
+                "width": "640w"
+            },
+            "small": {
+                "webp": "/images/ups-store-small.webp",
+                "width": "320w"
+            }
+        }
+    },
+    {
+        "name": "Window during nighttime",
+        "url": "https://codepen.io/tannerdolby/full/ZEWKEvR",
+        "date_created": "August 26, 2020",
+        "datetime": "2020 26 08",
+        "credit": "https://dribbble.com/shots/11283947-Taking-it-slow",
+        "desc": "While scrolling through designs over on dribbble, I came across this illustration of a woman sitting in front a window. I tried recreating it using a bit of Markup and CSS. This drawing in particular was alot of fun because I've really enjoyed creating lamps/lighting effects lately.",
+        "image": {
+            "fallback_src": "/images/css-window-night-large.jpg",
+            "alt": "CSS drawing of a window with dark night sky background",
+            "large": {
+                "webp": "/images/css-window-night-large.webp",
+                "jpg": "/images/css-window-night-large.jpg",
+                "width": "1024w"
+            },
+            "med": {
+                "webp": "/images/css-window-night-med.webp",
+                "jpg": "/images/css-window-night-med.jpg",
+                "width": "640w"
+            },
+            "small": {
+                "webp": "/images/css-window-night-small.webp",
+                "jpg": "/images/css-window-night-small.jpg",
+                "width": "320w"
+            }
+        }
+    },
+    {
+        "name": "Telephone booth",
+        "url": "https://codepen.io/tannerdolby/full/JjXYPQL",
+        "date_created": "August 10, 2020",
+        "datetime": "2020 10 08",
+        "credit": "https://dribbble.com/shots/11454238-Telephone-London",
+        "desc": "I'd seen this style of telephone booth in commercials, games and around the web so I finally created one. This red booth is based on a illustration from dribbble. Click inside the booth to turn the lights on/off.",
+        "image": {
+            "fallback_src": "/images/css-booth-large.jpg",
+            "alt": "CSS drawing of a red telephone booth with blue background",
+            "large": {
+                "webp": "/images/css-booth-large.webp",
+                "jpg": "/images/css-booth-large.jpg",
+                "width": "1024w"
+            },
+            "med": {
+                "webp": "/images/css-booth-med.webp",
+                "jpg": "/images/css-booth-med.jpg",
+                "width": "640w"
+            },
+            "small": {
+                "webp": "/images/css-booth-small.webp",
+                "jpg": "/images/css-booth-small.jpg",
+                "width": "320w"
+            }
+        }
+    },
+    {
+        "name": "Cassette Tape",
+        "url": "https://codepen.io/tannerdolby/full/ExPqqVZ",
+        "date_created": "August 2, 2020",
+        "datetime": "2020 2 08",
+        "credit": "https://depositphotos.com/vector-images/cassette-tape.html",
+        "desc": "This drawing of a cassette is one of my all time favorites. I went the endless box-shadow route here which I haven't used in my more recent illustrations. Nonetheless, a cool look compact cassette.",
+        "image": {
+            "fallback_src": "/images/css-cassette-large.jpg",
+            "alt": "CSS drawing of a cassette tape with blue background",
+            "large": {
+                "webp": "/images/css-cassette-large.webp",
+                "jpg": "/images/css-cassette-large.jpg",
+                "width": "1024w"
+            },
+            "med": {
+                "webp": "/images/css-cassette-med.webp",
+                "jpg": "/images/css-cassette-med.jpg",
+                "width": "640w"
+            },
+            "small": {
+                "webp": "/images/css-cassette-small.webp",
+                "jpg": "/images/css-cassette-small.jpg",
+                "width": "320w"
+            }
+        }
+    },
+    {
+        "name": "Blue crayon",
+        "url": "https://codepen.io/tannerdolby/full/PoZyXqB",
+        "credit": "https://hacks.mozilla.org/2014/09/single-div-drawings-with-css/",
+        "date_created": "July 16, 2020",
+        "datetime": "2020 16 07",
+        "desc": "I was amazed by the power of single div art described in",
+        "image": {
+            "fallback_src": "/images/css-crayon-large.jpg",
+            "alt": "CSS drawing of a blue crayon",
+            "large": {
+                "webp": "/images/css-crayon-large.webp",
+                "jpg": "/images/css-crayon-large.jpg",
+                "width": "1024w"
+            },
+            "med": {
+                "webp": "/images/css-crayon-med.webp",
+                "jpg": "/images/css-crayon-med.jpg",
+                "width": "640w"
+            },
+            "small": {
+                "webp": "/images/css-crayon-small.webp",
+                "jpg": "/images/css-crayon-small.jpg",
+                "width": "320w"
+            }
+        }
+    },
+    {
+        "name": "Pixel art ghost",
+        "url": "https://codepen.io/tannerdolby/full/dyGjMEN",
+        "date_created": "July 12, 2020",
+        "datetime": "2020 12 07",
+        "credit": "https://pxl.netlify.app",
+        "image": {
+            "fallback_src": "/images/pxl-ghost-large.jpg",
+            "alt": "Pixel art ghost with dark gray background",
+            "large": {
+                "webp": "/images/pxl-ghost-large.webp",
+                "jpg": "/images/pxl-ghost-large.jpg",
+                "width": "1024w"
+            },
+            "med": {
+                "webp": "/images/pxl-ghost-med.webp",
+                "jpg": "/images/pxl-ghost-med.jpg",
+                "width": "640w"
+            },
+            "small": {
+                "webp": "/images/pxl-ghost-small.webp",
+                "jpg": "/images/pxl-ghost-small.jpg",
+                "width": "320w"
+            }
+        }
+    }
+]

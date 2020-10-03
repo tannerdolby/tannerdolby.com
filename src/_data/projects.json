@@ -1,0 +1,104 @@
+[
+    {
+        "id": "project-one",
+        "name": "Photo Gallery Template",
+        "description": "Starter repository for a small photo gallery website using the static site generator Eleventy.",
+        "url": "https://11tygallery.netlify.app/",
+        "url_short_name": "11tygallery.netlify.app",
+        "source_url": "https://github.com/tannerdolby/eleventy-stock-gallery",
+        "image_data": {
+            "fallback_src": "/images/11ty-gall-large.jpg",
+            "alt": "Eleventy stock gallery project tile",
+            "large": {
+                "webp": "/images/11ty-gall-large.webp",
+                "width": "1024w"
+            },
+            "med": {
+                "webp": "/images/11ty-gall-med.webp",
+                "width": "640w"
+            },
+            "small": {
+                "webp": "/images/11ty-gall-small.webp",
+                "width": "320w"
+            }
+        }
+    },
+    {
+        "id": "project-two",
+        "name": "String Variation Table",
+        "description": "Dynamic string variation table containing some of the most common string operations.",
+        "url": "https://reactstrtable.netlify.app/",
+        "url_short_name": "reactstrtable.netlify.app",
+        "source_url": "https://github.com/tannerdolby/react-string-table",
+        "image_data": {
+            "fallback_src": "/images/str-table-med.jpg",
+            "alt": "React string variation table project tile",
+            "large": {
+                "webp": "/images/str-table-large.webp",
+                "jpg": "/images/str-table-large.jpg",
+                "width": "1024w"
+            },
+            "med": {
+                "webp": "/images/str-table-med.webp",
+                "jpg": "/images/str-table-med.jpg",
+                "width": "640w"
+            },
+            "small": {
+                "webp": "/images/str-table-small.webp",
+                "jpg": "/images/str-table-small.jpg",
+                "width": "320w"
+            }
+        }
+    },
+    {
+        "id": "project-three",
+        "name": "Markdown Previewer",
+        "description": "Markdown previewer capable of parsing GFM amongst other markdown flavors to HTML. Built with React.js",
+        "url": "https://markdownpre.netlify.app/",
+        "url_short_name": "markdownpre.netlify.app",
+        "source_url": "https://github.com/tannerdolby/react-markdown-previewer",
+        "image_data": {
+            "fallback_src": "/images/mark-prev-lg.jpg",
+            "alt": "React markdown previewer project tile",
+            "large": {
+                "webp": "/images/mark-prev-lg.webp",
+                "jpg": "/images/mark-prev-lg.jpg",
+                "width": "1024w"
+            },
+            "med": {
+                "webp": "/images/mark-prev-med.webp",
+                "jpg": "/images/mark-prev-med.jpg",
+                "width": "640w"
+            },
+            "small": {
+                "webp": "/images/mark-prev-sm.webp",
+                "jpg": "/images/mark-prev-sm.jpg",
+                "width": "320w"
+            }
+        }
+    },
+    {
+        "id": "project-four",
+        "name": "TypeScript Pokedex",
+        "description": "Pokedex app built with TypeScript, HTML and CSS. Search by name from any of the original 151 Pokemon.",
+        "url": "https://tspokedex.netlify.app/",
+        "url_short_name": "tspokedex.netlify.app",
+        "source_url": "https://github.com/tannerdolby/typescript-pokedex",
+        "image_data": {
+            "fallback_src": "/images/ts-poke-large.jpg",
+            "alt": "TypeScript pokedex project tile",
+            "large": {
+                "webp": "/images/ts-poke-large.webp",
+                "width": "1024w"
+            },
+            "med": {
+                "webp": "/images/ts-poke-medium.webp",
+                "width": "640w"
+            },
+            "small": {
+                "webp": "/images/ts-poke-small.webp",
+                "width": "320w"
+            }
+        }
+    }
+]

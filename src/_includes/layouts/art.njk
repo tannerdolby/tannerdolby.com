@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{{ site.page_info.page_titles.art }}</title>
+        <meta name="description" content="A small collection of the CSS artwork I've created over the last few months.
+            I'm looking into drawing with a stylus on iPad to play around with SVG illustrations in the future. These illustrations are quite fun and also bring me alot of joy.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% set css %}
+            {% include "css/style.css" %}
+            {% include "css/speedlify-score.css" %}
+        {% endset %}
+        <style lang="css">
+            {{ css | cssmin | safe }}
+        </style>
+    </head>
+    <body>
+        <a href="#main-art" class="skip-link">Skip to main content</a>
+        {% include "layouts/nav.njk" %}
+        <main class="main-container" id="main-art">
+            <header class="banner-container">
+                <h1 class="h1" style="margin-bottom: 1rem;">{{ site.page_headers.art }}</h1>
+                {{ content | safe }}
+            </header>
+            <section class="art">
+            {% for drawing in art %}
+                <div class="art-details">
+                    <a href="{{ drawing.url }}">
+                        <picture>
+                            <source 
+                                type="image/webp"
+                                srcset="
+                                    {{ drawing.image.large.webp }} {{ drawing.image.large.width }},
+                                    {{ drawing.image.med.webp }} {{ drawing.image.med.width }},
+                                    {{ drawing.image.small.webp }} {{ drawing.image.small.width }}
+                                    "
+                                sizes="33.vw, 50vw, 100vw">
+                            <img 
+                            src="{{ drawing.image.fallback_src }}" 
+                            alt="{{ drawing.alt }}"
+                            loading="lazy">
+                        </picture>
+                    </a>
+                    <h2 class="h3" style="margin-top: .75rem; margin-bottom: .75rem; text-align: center;">{{ drawing.name }}</h3>
+                    <p style="margin-top: 0; text-align: center; font-size: 16px;"><time datetime="{{ 'drawing.datetime' | slug }}">{{ drawing.date_created }}</time> - <a href="{{ drawing.credit }}">Photo credit</a></p>
+                </div>
+            {% endfor %}
+            </section>
+        </main>
+        {% include "layouts/footer.njk" %}
+    </body>
+</html>

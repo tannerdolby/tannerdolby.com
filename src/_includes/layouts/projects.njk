@@ -1,0 +1,37 @@
+<section class="projects" id="my-projects">
+    <div class="projects-wrapper">
+        <h2 class="section-title">Featured Projects</h2>
+        <ul class="project-grid">
+        {% for project in projects %}
+            <li class="project-tile">
+                <a href="{{ project.url }}">
+                    <picture>
+                        <source
+                            type="image/webp"
+                            srcset="
+                                {{ project.image_data.large.webp }} {{ project.image_data.large.width }},
+                                {{ project.image_data.med.webp }} {{ project.image_data.med.width }},
+                                {{ project.image_data.small.webp }} {{ project.image_data.small.width }}
+                                "
+                            sizes="33.3vw, 50vw, 100vw"
+                        >
+                        <img 
+                            src="{{ project.image_data.fallback_src }}" 
+                            alt="{{ project.image_data.alt }}"
+                            loading="lazy"
+                        >
+                    </picture>
+                </a>
+                <div class="project-details">
+                    <h3>{{ project.name }}</h3>
+                    <p style="margin-top: .5rem; margin-bottom: .5rem;">{{ project.description }}</p>
+                    <ul class="links">
+                        <li><a class="tile-link" href="{{ project.url }}">Live demo</a></li>
+                        <li><a class="tile-link" href="{{ project.source_url }}">Source code</a></li>
+                    </ul>
+                </div>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+</section>

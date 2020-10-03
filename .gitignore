@@ -1,0 +1,11 @@
+# Node 
+/node_modules
+
+# Eleventy site output 
+_site
+
+# Ignore cached static API from speedlify
+.cache
+
+# DS_Store
+.DS_Store

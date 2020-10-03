@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{{ site.page_info.page_titles.home }}</title>
+        <meta name="description" 
+            content="Hello! Welcome to the home of Tanner Dolby's personal website. This site is built with the Static Site Generator 11ty. 
+            I've had so much fun self teaching myself web development and want to continue sharing about my journey with tech.">
+        {% set css %}
+            {% include "css/style.css" %}
+            {% include "css/speedlify-score.css" %}
+        {% endset %}
+        <style lang="css">
+           {{ css | cssmin | safe }}
+        </style>
+    </head>
+    <body>
+        <a href="#main" class="skip-link">Skip to main content</a>
+        {% include "layouts/nav.njk" %}
+        <main class="main-container" id="main" tabindex="-1">
+            {% include "layouts/home-banner.njk" %}
+            <section class="recent-posts" id="recent-posts-home" style="margin-top: 2rem;">
+                <div class="rp-container">
+                    <h2>Recent Posts</h2>
+                    {% for post in collections.posts %}
+                    <article class="post">
+                        <h3 style="margin-bottom: .75rem; font-size: 24px;"><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+                        <time datetime="{{ post.data.datetime | slug }}">{{ post.data.date_created}}</time>
+                        <p class="preview">{{ post.data.preview }}</p>
+                    </article>
+                    {% endfor %}
+                    <div class="read-more">
+                        <a style="text-decoration: underline;" class="see-more-btn" href="/writing/">See more posts <span class="entity-rightarr">&#8594;</a></a>
+                    </div>
+                </div>
+            </section>
+            {% include "layouts/projects.njk" %}
+            <section class="featured-art" id="feat-art">
+                <div class="feat-art-wrapper">
+                    <h2 style="color: #333;">Latest Art</h2>
+                    <ul class="feat-art-list" style="padding-left: 0; list-style: none;">
+                        <li>
+                            <a href="#">
+                                <img src="/images/css-window-night-med.jpg" alt="stuff">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="/images/css-booth-med.jpg" alt="stuff">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="/images/css-cassette-med.jpg" alt="stuff">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="contact" id="contact-me">
+                <div class="contact-wrapper">
+                    <h2>Contact Me</h2>
+                    <p>I'm always interested in having a chat about web development. If you think my skills would align with your projects needs, I'd love to hear from you. I'm available at any of the social links below or via <a href="mailto:dolb.tanner@gmail.com">email</a>.</p>
+                    <ul class="socials-list">
+                        <li>
+                            <a class="github-block" href="{{ site.page_info.socials.github }}">
+                                <img src="/images/githubLight.svg" alt="Link to my Github">
+                                Github
+                            </a>
+                        </li>
+                        <li>
+                            <a class="twitter-block" href="{{ site.page_info.socials.twitter }}">
+                                <img src="/images/twitterLight.svg" alt="Link to my Twitter">
+                                Twitter
+                            </a>
+                        </li>
+                        <li>
+                            <a class="linkedin-block" href="{{ site.page_info.socials.linkedin }}">
+                                <img src="/images/linkedinLight.svg" alt="Link to my LinkedIn">
+                                LinkedIn
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+        {% include "layouts/footer.njk" %}
+    </body>
+</html>
