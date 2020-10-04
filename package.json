@@ -26,12 +26,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tannerdolby/eleventy-stock-gallery.git"
+    "url": "git+https://github.com/tannerdolby/tannerdolby.com.git"
   },
   "bugs": {
-    "url": "https://github.com/tannerdolby/eleventy-stock-gallery/issues"
+    "url": "https://github.com/tannerdolby/tannerdolby.com/issues"
   },
-  "homepage": "https://github.com/tannerdolby/eleventy-stock-gallery#readme",
+  "homepage": "https://github.com/tannerdolby/tannerdolby.com/#readme",
   "devDependencies": {
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1"
   }
