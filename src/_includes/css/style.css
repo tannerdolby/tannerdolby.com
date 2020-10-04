@@ -242,6 +242,7 @@ main {
     background: #212421;
     background: var(--black);
     background: var(--nav-background);
+    background: inherit;
 }
 
 .top-nav .nav-wrapper {
@@ -266,6 +267,7 @@ main {
 .top-nav .nav-wrapper ul li a,
 .top-nav .nav-wrapper .nav-home li a {
     color: #fff;
+    color: #333;
     /* color: #333; */
     text-decoration: none;
     font-weight: 500;
@@ -285,15 +287,15 @@ main {
 .top-nav .nav-wrapper .nav-home li a span {
     background: hsl(0, 0%, 20%);
     background: var(--nav-background);
-    background: #f9fafa;
-    background: #eee;
+    /* background: #f9fafa;
+    background: #eee; */
     border: .5px solid #333;
     border: 1px solid #f9fafa;
     color: #333;
     color: #eee;
-    color: #333;
+    /* color: #333; */
     border-radius: 0;
-    padding: .4rem;
+    padding: .5rem;
     margin-right: .75rem;
     font-weight: 500;
     font-size: 16px;
@@ -330,6 +332,7 @@ main {
     background: rgb(240, 240, 240);
     /* background: rgb(240, 240, 240); */
     /* background: inherit; */
+    border-top: 1px solid lightgray;
     border-bottom: 1px solid lightgray;
 }
 
@@ -914,14 +917,7 @@ main {
     margin: 3rem auto 0 auto;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    background: #f1f2fa;
     background: inherit;
-    background: rgb(245, 245, 245);
-    background: rgb(240, 240, 240);
-    /* background: inherit;
-    background: #0e1e24; */
-    /* background: #1f2325; */
-    /* border-top: 1px solid lightgray; */
 }
 
 .footer-content {
