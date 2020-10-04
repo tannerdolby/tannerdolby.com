@@ -1,5 +1,8 @@
 # My Personal Website 
-A repository containing all of my current website source code. 
+Current site lives at [https://tannerdolby.netlify.app](https://tannerdolby.netlify.app/) until I buy my own domain name.. 😅
+
+# Local Development
+coming soon...
 
 ## Built with
 * Eleventy

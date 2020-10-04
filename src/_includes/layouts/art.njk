@@ -36,7 +36,8 @@
                                     {{ drawing.image.small.webp }} {{ drawing.image.small.width }}
                                     "
                                 sizes="33.vw, 50vw, 100vw">
-                            <img 
+                            <img
+                            id="{{ drawing.id }}" 
                             src="{{ drawing.image.fallback_src }}" 
                             alt="{{ drawing.alt }}"
                             loading="lazy">

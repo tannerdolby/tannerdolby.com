@@ -234,7 +234,7 @@ main {
     text-decoration-color: var(--hyperlink-primary-dark-green);
 } */
 
-nav {
+.top-nav {
     background: #f1e8e6;
     background: #212425;
     background: #202220;
@@ -244,7 +244,7 @@ nav {
     background: var(--nav-background);
 }
 
-nav .nav-wrapper {
+.top-nav .nav-wrapper {
     max-width: 1000px;
     padding: .3rem 1.1rem;
     padding: .2rem 1.1rem;
@@ -254,7 +254,7 @@ nav .nav-wrapper {
     align-items: center;
 }
 
-nav .nav-wrapper ul {
+.top-nav .nav-wrapper ul {
     padding-left: 0;
     list-style: none;
     display: flex;
@@ -263,8 +263,8 @@ nav .nav-wrapper ul {
     margin-bottom: .8rem;
 }
 
-nav .nav-wrapper ul li a,
-nav .nav-wrapper .nav-home li a {
+.top-nav .nav-wrapper ul li a,
+.top-nav .nav-wrapper .nav-home li a {
     color: #fff;
     /* color: #333; */
     text-decoration: none;
@@ -272,18 +272,17 @@ nav .nav-wrapper .nav-home li a {
     font-size: 16px;
 }
 
-nav .nav-wrapper .nav-menu li a:hover {
+.top-nav .nav-wrapper .nav-menu li a:hover {
     text-decoration: underline;
-    color: var(--maroon);
 }
 
-nav .nav-wrapper .nav-home {
+.top-nav .nav-wrapper .nav-home {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-nav .nav-wrapper .nav-home li a span {
+.top-nav .nav-wrapper .nav-home li a span {
     background: hsl(0, 0%, 20%);
     background: var(--nav-background);
     background: #f9fafa;
@@ -300,12 +299,12 @@ nav .nav-wrapper .nav-home li a span {
     font-size: 16px;
 }
 
-nav .nav-wrapper .nav-menu li a {
+.top-nav .nav-wrapper .nav-menu li a {
     padding: 0.3rem 0;
     margin: 0 1rem;
 }
 
-nav .nav-wrapper .nav-menu li .home {
+.top-nav .nav-wrapper .nav-menu li .home {
     font-weight: 500;
     font-size: 16px;
 }
@@ -798,6 +797,7 @@ nav .nav-wrapper .nav-menu li .home {
     max-width: 1000px;
     padding-left: 1.1rem;
     padding-right: 1.1rem;
+    margin-top: 2rem;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 3rem;
@@ -1091,7 +1091,7 @@ main .art img {
         align-items: flex-start;
     }
     .footer-content .footer-nav .footer-flex {
-        padding-top: .75rem;
+        padding-bottom: .25rem;
     }
 }
 
@@ -1099,7 +1099,7 @@ main .art img {
     #post #post-title {
         font-size: 32px;
     }
-    nav .nav-wrapper {
+    .top-nav .nav-wrapper {
         padding-top: 1rem;
         display: flex;
         flex-direction: column;
