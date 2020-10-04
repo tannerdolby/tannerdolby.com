@@ -4,7 +4,7 @@
         <ul class="project-grid">
         {% for project in projects %}
             <li class="project-tile">
-                <a href="{{ project.url }}">
+                <a href="{{ project.url }}" aria-label="{{ project.aria_label }}">
                     <picture>
                         <source
                             type="image/webp"
