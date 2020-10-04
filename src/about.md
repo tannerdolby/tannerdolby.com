@@ -1,8 +1,8 @@
 ---
-title: About me
+page_name: About - Tanner Dolby
+title: About Me
 permalink: "/about/"
 layout: layouts/about.njk
-
 ---
 
 My name is Tanner Dolby. I'm a mathematician and front-end developer based in Sacramento, CA. I enjoy using semantic and accessible HTML paired with modern CSS to build fast websites. I'm currently focused on learning more about Web Content Accessibility Guidelines (WCAG) and SVG.

@@ -13,58 +13,6 @@
             "src": "/images/headshot3.png",
             "alt": "Headshot of Tanner after graduating from ASU"
         },
-        "email": "dolb.tanner@gmail.com",
-        "page_titles": {
-            "art": "Art - Tanner Dolby",
-            "writing": "Writing - Tanner Dolby",
-            "about": "About - Tanner Dolby",
-            "home": "Tanner Dolby - Developer, Mathematician, Designer"
-        }
-    },
-    "page_headers": {
-        "about": "About Me",
-        "art": "Latest Art",
-        "writing": "Latest Articles"
-    },
-    "permalinks": {
-        "home": {
-            "uri": "/",
-            "edit_page": "tbd"
-        },
-        "art": {
-            "uri": "/art/",
-            "edit_page": "tbd"
-        },
-        "writing": {
-            "uri": "/writing/",
-            "edit_page": "tbd"
-        },
-        "about": {
-            "uri": "/about/",
-            "edit_page": "tbd"
-        }
-    },
-    "art": {
-        "drawing_one": {
-            "original_source": "https://dribbble.com/shots/11283947-Taking-it-slow"
-        },
-        "drawing_two": {
-            "original_source": ""
-        },
-        "drawing_three": {
-            "original_source": ""
-        },
-        "drawing_four": {
-            "original_source": ""
-        },
-        "drawing_five": {
-            "original_source": ""
-        },
-        "drawing_six": {
-            "original_source": ""
-        },
-        "drawing_seven": {
-            "original_source": ""
-        }
+        "email": "dolb.tanner@gmail.com"
     }
 }

@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{ site.page_info.page_titles.home }}</title>
+        <title>{{ page_name }}</title>
         <meta name="description" 
             content="Hello! Welcome to the home of Tanner Dolby's personal website. This site is built with the Static Site Generator 11ty. 
             I've had so much fun self teaching myself web development and want to continue sharing about my journey with tech.">
@@ -20,7 +20,8 @@
         <a href="#main" class="skip-link">Skip to main content</a>
         {% include "layouts/nav.njk" %}
         <main class="main-container" id="main" tabindex="-1">
-            {% include "layouts/home-banner.njk" %}
+            {# {% include "layouts/home-banner.njk" %} #}
+            {{ content | safe }}
             <section class="recent-posts" id="recent-posts-home" style="margin-top: 2rem;">
                 <div class="rp-container">
                     <h2>Recent Posts</h2>

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>{{ site.page_info.page_titles.art }}</title>
+        <title>{{ page_name }}</title>
         <meta name="description" content="A small collection of the CSS artwork I've created over the last few months.
             I'm looking into drawing with a stylus on iPad to play around with SVG illustrations in the future. These illustrations are quite fun and also bring me alot of joy.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,7 +20,7 @@
         {% include "layouts/nav.njk" %}
         <main class="main-container" id="main-art">
             <header class="banner-container">
-                <h1 class="h1" style="margin-bottom: 1rem;">{{ site.page_headers.art }}</h1>
+                <h1 class="h1" style="margin-bottom: 1rem;">{{ title }}</h1>
                 {{ content | safe }}
             </header>
             <section class="art">
