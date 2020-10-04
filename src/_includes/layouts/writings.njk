@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>{{ site.page_info.webpage_title }}</title>
+        <title>{{ page_name}}</title>
         <meta name="description" 
             content="Hello! Welcome to the home of my personal website built with Eleventy. I've had so much fun self teaching myself web development and want to continue sharing about my journey with tech.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,7 +21,7 @@
         {% include "layouts/nav.njk" %}
         <main class="main-container" id="main-writing">
             <header class="banner-container">
-                <h1 class="h1" id="writing">{{ site.page_headers.writing }}</h1>
+                <h1 class="h1" id="writing">{{ title }}</h1>
             </header>
             <section class="main-content">
                 <div class="writing-about">

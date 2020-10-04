@@ -5,16 +5,16 @@
         </ul>
         <ul class="nav-menu">
             <li class="nav-item">
-                <a style="margin-left: .25rem;" class="nav-about {{ 'active' if '/about/' in page.url }}" href="/about/">About</a>
+                <a style="margin-left: .25rem;" class="{{ 'active' if '/about/' in page.url }}" href="/about/">About</a>
             </li>
             <li class="nav-item">
-                <a href="/writing/">Writing</a>
+                <a href="/writing/" class="{{ 'active' if '/writing/' in page.url }}">Writing</a>
             </li>
             <li class="nav-item">
-                <a href="/art/">Art</a>
+                <a href="/art/" class="{{ 'active' if '/art/' in page.url }}">Art</a>
             </li>
             <li class="nav-item">
-                <a href="https://codepen.io/tannerdolby">Fun</a>
+                <a href="https://codepen.io/tannerdolby">Codepen</a>
             </li>
         </ul>
     </div>
