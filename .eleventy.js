@@ -39,7 +39,7 @@ module.exports = (eleventyConfig) => {
     });
 
     // Inspired by @zachleat and his code title shortcode - credit: https://github.com/11ty/11ty-website/blob/master/.eleventy.js#L107-L109
-    eleventyConfig.addShortcode("codetitle", function(title, header = "Filename:") {
+    eleventyConfig.addShortcode("codetitle", function(title, header = "Filename") {
         return `<div class="filename-title" style="font-size: 14px;><b style="font-size: 14px;">${header}</b> <code style="font-size: 14px;">${title}</code></div>`;
     });
 

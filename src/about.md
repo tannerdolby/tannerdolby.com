@@ -2,6 +2,8 @@
 page_name: About - Tanner Dolby
 title: About Me
 permalink: "/about/"
+headshot: 
+    src: "/images/headshot3.png"
 layout: layouts/about.njk
 ---
 
@@ -16,7 +18,7 @@ During my time at ASU, I worked as an Undergraduate Researcher and Supplemental 
 
 I started my journey as a self taught developer using [freeCodeCamp.org](https://freecodecamp.org) in 2017. Ever since then, I've been hooked on building things for the web.
 
-{% img %}{{ site.page_info.tanner_headshot.src }}{% endimg %}
+{% img %}{{ headshot.src }}{% endimg %}
 
 ## Need More?
 
