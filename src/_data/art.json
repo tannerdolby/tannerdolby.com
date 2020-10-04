@@ -2,6 +2,7 @@
     {
         "name": "Archimedean spiral with randomized path",
         "id": "archimedean-spiral",
+        "aria-label": "Link to archimedean spiral on Codepen",
         "url": "https://codepen.io/tannerdolby/full/KKzrOEv",
         "date_created": "September 22, 2020",
         "datetime": "2020 22 9",
@@ -27,8 +28,9 @@
         }
     },
     {
-        "name": "UPS Store",
-        "id": "ups-store",
+        "name": "UPS Building",
+        "id": "ups-building",
+        "aria-label": "Link to UPS building on Codepen",
         "url": "https://codepen.io/tannerdolby/full/NWNEBYV",
         "date_created": "September 21, 2020",
         "datetime": "2020 21 9",
@@ -36,7 +38,7 @@
         "svg_credit": "https://worldvectorlogo.com/logo/ups",
         "image": {
             "fallback_src": "/images/ups-store-large.jpg",
-            "alt": "UPS Store with glossy windows",
+            "alt": "UPS Building with glossy windows",
             "large": {
                 "webp": "/images/ups-store-large.webp",
                 "width": "1024w"
@@ -53,6 +55,7 @@
     },
     {
         "name": "Window during nighttime",
+        "aria-label": "Link to nighttime window on Codepen",
         "id": "window-nighttime",
         "url": "https://codepen.io/tannerdolby/full/ZEWKEvR",
         "date_created": "August 26, 2020",
@@ -82,6 +85,7 @@
     {
         "name": "Telephone booth",
         "id": "telephone-booth",
+        "aria-label": "Link to telephone booth on Codepen",
         "url": "https://codepen.io/tannerdolby/full/JjXYPQL",
         "date_created": "August 10, 2020",
         "datetime": "2020 10 08",
@@ -138,6 +142,7 @@
     {
         "name": "Blue crayon",
         "id": "blue-crayon",
+        "aria-label": "Link to blue crayon on Codepen",
         "url": "https://codepen.io/tannerdolby/full/PoZyXqB",
         "credit": "https://hacks.mozilla.org/2014/09/single-div-drawings-with-css/",
         "date_created": "July 16, 2020",
@@ -165,6 +170,7 @@
     },
     {
         "name": "Pixel art ghost",
+        "aria-label": "Link to pixel ghost on Codepen",
         "id": "pixel-ghost",
         "url": "https://codepen.io/tannerdolby/full/dyGjMEN",
         "date_created": "July 12, 2020",

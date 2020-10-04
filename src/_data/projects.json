@@ -2,13 +2,13 @@
     {
         "id": "project-one",
         "name": "Photo Gallery Template",
-        "aria_label": "Featured project one link",
+        "aria_label": "Photo gallery template link",
         "description": "Starter repository for a small photo gallery website using the static site generator Eleventy.",
         "url": "https://11tygallery.netlify.app/",
         "url_short_name": "11tygallery.netlify.app",
         "source_url": "https://github.com/tannerdolby/eleventy-stock-gallery",
         "image_data": {
-            "fallback_src": "/images/11ty-gall-med.jpg",
+            "fallback_src": "/images/11ty-gall-small.jpg",
             "alt": "Eleventy stock gallery project tile",
             "large": {
                 "webp": "/images/11ty-gall-large.webp",
@@ -27,7 +27,7 @@
     {
         "id": "project-two",
         "name": "String Variation Table",
-        "aria_label": "Featured project two link",
+        "aria_label": "String variation table link",
         "description": "Dynamic string variation table containing some of the most common string operations.",
         "url": "https://reactstrtable.netlify.app/",
         "url_short_name": "reactstrtable.netlify.app",
@@ -55,7 +55,7 @@
     {
         "id": "project-three",
         "name": "Markdown Previewer",
-        "aria_label": "Featured project three link",
+        "aria_label": "Markdown previewer link",
         "description": "Markdown previewer capable of parsing GFM amongst other markdown flavors to HTML. Built with React.js",
         "url": "https://markdownpre.netlify.app/",
         "url_short_name": "markdownpre.netlify.app",
@@ -83,7 +83,7 @@
     {
         "id": "project-four",
         "name": "TypeScript Pokedex",
-        "aria_label": "Featured project four link",
+        "aria_label": "TypeScript pokedex link",
         "description": "Pokedex app built with TypeScript, HTML and CSS. Search by name from any of the original 151 Pokemon.",
         "url": "https://tspokedex.netlify.app/",
         "url_short_name": "tspokedex.netlify.app",
