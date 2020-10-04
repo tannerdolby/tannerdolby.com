@@ -321,7 +321,7 @@ main {
 
 .main-container .welcome-container {
     padding: 2.75rem 0 2.75rem 0;
-    /* background: #faf9f7;
+    background: #faf9f7;
     background: rgb(245, 245, 245);
     background: var(--brown);
     color: var(--black);
@@ -333,13 +333,17 @@ main {
     background: #1b2227;
     background: #202d3d;
     background: #252f38;
-    background: #EAEDED; */
+    background: #EAEDED;
     /* background: #F2F3F4; */
     /* background: var(--outer-space); */
-    /* background: rgb(240, 240, 240); */
+    background: rgb(240, 240, 240);
+    background: rgb(239, 243, 243);
+    background: #EAEDED;
+    background: #252f38;
+    background: #F2F2F2;
     /* background: inherit; */
-    /* border-top: 1px solid lightgray;
-    border-bottom: 1px solid lightgray;*/
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
 } 
 
 .about-main {
@@ -440,9 +444,6 @@ main {
     color: #1d252c;
     color: var(--off-white);
     color: #252f38;
-    /* color: #edebe3; */
-    /* color: #252f38; */
-
 }
 
 .main-container .welcome-container .home-banner h2 {
