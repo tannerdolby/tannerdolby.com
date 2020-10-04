@@ -243,11 +243,11 @@ main {
     background: var(--black);
     background: var(--nav-background);
     background: inherit;
+    background: #212421;
 }
 
 .top-nav .nav-wrapper {
     max-width: 1000px;
-    padding: .3rem 1.1rem;
     padding: .2rem 1.1rem;
     margin: 0 auto;
     display: flex;
@@ -267,8 +267,6 @@ main {
 .top-nav .nav-wrapper ul li a,
 .top-nav .nav-wrapper .nav-home li a {
     color: #fff;
-    color: #333;
-    /* color: #333; */
     text-decoration: none;
     font-weight: 500;
     font-size: 16px;
@@ -286,19 +284,28 @@ main {
 
 .top-nav .nav-wrapper .nav-home li a span {
     background: hsl(0, 0%, 20%);
-    background: var(--nav-background);
-    /* background: #f9fafa;
-    background: #eee; */
+    background: inherit;
+    /* background: var(--nav-background); */
+    /* background: #f9fafa; */
     border: .5px solid #333;
     border: 1px solid #f9fafa;
+    border: 2px solid #333;
     color: #333;
     color: #eee;
+    /* color: #eee; */
+    border: 1px solid #eee;
     /* color: #333; */
     border-radius: 0;
     padding: .5rem;
     margin-right: .75rem;
     font-weight: 500;
     font-size: 16px;
+    transition: 600ms background ease-out, 600ms color ease-out;
+}
+
+.top-nav .nav-wrapper .nav-home li a:hover span {
+    background: hsl(0, 0%, 20%);
+    color: #fff;
 }
 
 .top-nav .nav-wrapper .nav-menu li a {
@@ -1058,8 +1065,6 @@ main .art img {
     height: 50vh;
     height: auto;
     height: 400px;
-    /* width: 100%; */
-    /* height: auto; */
 }
 
 /* Media query - START */
@@ -1073,8 +1078,6 @@ main .art img {
     }
     .featured-art .feat-art-list li a img {
         height: 100%;
-        /* margin-top: .25rem;
-        margin-bottom: .25rem; */
     }
 } 
 
@@ -1102,23 +1105,18 @@ main .art img {
         justify-content: flex-start;
         align-items: flex-start;
     }
-    .navigation .navigation-wrapper .nav-main .nav-list .nav-item a {
-        padding-left: .5rem;
-        margin-left: 0;
-    }
 
-    header .nav-main .nav-home a {
-        justify-content: flex-start;
-        align-self: flex-start;
-    }
-
-    header .nav-main .nav-items {
-        padding-top: 1.5rem;
+    .top-nav .nav-wrapper .nav-home {
         margin-bottom: 1rem;
     }
 
-    header .nav-main .nav-items .first-item {
-        padding-left: 0;
+    .top-nav .nav-wrapper .nav-menu {
+        padding-bottom: .2rem;
+    }
+
+    .navigation .navigation-wrapper .nav-main .nav-list .nav-item a {
+        padding-left: .5rem;
+        margin-left: 0;
     }
 }
 
