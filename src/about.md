@@ -22,4 +22,4 @@ I started my journey as a self taught developer using [freeCodeCamp.org](https:/
 
 ## Need More?
 
-I'm available for all things web related: speaking, writing, static sites, JAMstack, accessibility, UI design and more. Feel free to send me an email me at [dolb.tanner@gmail.com](mailto:dolb.tanner@gmail.com) if you'd like to chat!
+I'm available for all things web related: speaking, writing, static sites, JAMstack, accessibility, UI design and more. Feel free to [send me an email](mailto:dolb.tanner@gmail.com) if you'd like to chat!

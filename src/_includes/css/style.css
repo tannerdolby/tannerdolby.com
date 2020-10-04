@@ -230,12 +230,6 @@ main {
     overflow: hidden;
 }
 
-/* main a {
-    color: var(--hyperlink-primary-dark-green);
-    text-decoration: underline;
-    text-decoration-color: var(--hyperlink-primary-dark-green);
-} */
-
 .top-nav {
     background: #f1e8e6;
     background: #212425;
@@ -274,7 +268,8 @@ main {
 }
 
 .top-nav .nav-wrapper .nav-menu li a:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    border-bottom: 4px solid lightgray;
 }
 
 .top-nav .nav-wrapper .nav-home {

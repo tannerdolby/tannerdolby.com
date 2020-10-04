@@ -1,6 +1,6 @@
 ---
 page_name: Art - Tanner Dolby 
-title: My Art
+title: Recent Stuff
 permalink: "/art/"
 layout: layouts/art.njk
 ---
