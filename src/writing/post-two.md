@@ -76,7 +76,7 @@ After performing the above command, your shell will prompt you to enter a passwo
 
 The goal of level zero is for you to log into the game using SSH and become familiarized with the bandit shell.
 
-The host to which you need to connect is `bandit.labs.overthewire.org` on port 2220, the username and password are both `bandit0`. Once logged in, go to the [Level One](https://overthewire.org/wargames/bandit/bandit1.html) page to find out how to beat this first Bandit level (or keep reading).
+The host to which you need to connect is `bandit.labs.overthewire.org` on port 2220. We are told that the username and password are both `bandit0`. Once logged in, go to the [Level One](https://overthewire.org/wargames/bandit/bandit1.html) page to find out how to beat this first Bandit level (or keep reading).
 
 Now that you've sucessfully connected to the Bandit shell you will have access to the root directory contents. If you haven't already, make sure to connect using SSH to Bandit level zero. Refer back to the [Connecting to Bandit Shell](/writing/{{ tag }}/{{ shortname | slug }}/#connect-bandit-shell) section.
 

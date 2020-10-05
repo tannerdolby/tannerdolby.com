@@ -100,6 +100,7 @@ p {
 code {
     font-family: monospace;
     font-size: 18px;
+    font-size: 16px;
     line-height: 100%;
     font-weight: 400;
     color: #222;
@@ -608,6 +609,10 @@ main {
     -webkit-backface-visibility: hidden;
 }
 
+.see-more:hover {
+    text-decoration: none !important;
+}
+
 .rp-container {
     margin-left: auto;
     margin-right: auto;
@@ -628,14 +633,6 @@ main {
     margin-bottom: 1rem;
 }
 
-.recent-posts .read-more {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
 .recent-posts h2 {
     margin-bottom: .25rem;
 }
@@ -648,15 +645,10 @@ main {
     text-decoration: none;
 }
 
-.recent-posts .read-more .date,
-.recent-posts .read-more .date time {
-    font-size: .8rem;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
 .recent-posts .read-more .see-more-btn:hover {
     cursor: pointer;
+    text-decoration: underline;
+
 }
 
 .slide-right {
@@ -920,11 +912,6 @@ main .art .art-details h2 {
 
 main .art img {
     object-fit: cover;
-    width: 1024px;
-    width: 1024vw;
-    width: 600px;
-    height: 50vh;
-    height: auto;
     height: 400px;
 }
 

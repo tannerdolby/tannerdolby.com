@@ -31,7 +31,7 @@
                     {% for post in collections.posts %}
                     <article class="post">
                         <h2 style="margin-bottom: .8rem; font-size: 24px;"><a style="text-decoration: underline;" href="{{ post.url }}">{{ post.data.title }}</a></h2>
-                        <p class="date" style="font-size: 16px;"><time datetime="{{ post.data.datetime | slug }}">{{ post.data.date_created}}</time></p>
+                        <p class="date" style="font-size: 16px;"><time datetime="{{ post.data.datetime }}">{{ post.data.date_created}}</time></p>
                         <p class="preview">{{ post.data.preview }}</p>
                     </article>
                     {% endfor %}
