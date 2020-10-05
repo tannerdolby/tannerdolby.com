@@ -2,7 +2,7 @@
 title: An Introduction To Client-side JavaScript
 shortname: JS Client Side
 date_created: March 21, 2020
-datetime: 03 21 2020
+datetime: 2020 3 21
 tag: web
 post_tags:
     - JavaScript
