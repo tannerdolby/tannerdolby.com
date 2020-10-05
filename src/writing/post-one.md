@@ -1,5 +1,5 @@
 ---
-title: An Introduction to Client-side JavaScript
+title: An Introduction To Client-side JavaScript
 shortname: JS Client Side
 date_created: March 21, 2020
 datetime: 2020 21 03
@@ -7,24 +7,23 @@ tag: web
 post_tags:
     - JavaScript
     - HTML
-preview: Have you ever thought to yourself while building a website, "It sure would be nice to change the color of an element upon being clicked?" Well now you can by using client-side JavaScript to manipulate specific DOM elements!
+preview: Have you ever thought to yourself while building a website, It sure would be nice to change the background color of an element upon being clicked? Well now you can by using client-side JavaScript!
 permalink: /writing/{{ tag }}/{{ shortname | slug }}/
 ---
 
 <h1 class="h1" id="post-title">{{ title }}</h1>
 <p>Published <time datetime="{{ datetime }}">{{ date_created }}</time> &bull; {% for tags in post_tags %}<code style="margin-right: .3rem; font-size: 16px;">{{ tags }}</code>{% endfor %}</p>
 
-Have you ever thought to yourself while building a website, "It sure would be nice to use JavaScript for manipulating specific DOM elements?" Well now you can start building your own web pages using client-side JavaScript. Virtually creating and binding DOM elements is the first step in more advanced JS frameworks such as React and Angular. They function in a similar workflow to how we build web pages with low level JS. The JS handles virtually creating HTML elements, binding elements to the DOM, adding/removing element attributes and handling the events/handlers.
+{{ preview }} Client-side means that the JavaScript code is run on the client machine, which is the browser. Server-side JavaScript means that the code is run on the server which is serving web pages.
 
-Client-side means that the JavaScript code is run on the client machine, which is the browser. Server-side JavaScript means that the code is run on the server which is serving web pages.
+<h2 class="h3">This post will aim to cover:</h2>
 
-### This post will aim to cover:
 1. Virtually creating HTML elements in JavaScript
 2. Binding the created HTML elements to the DOM
 3. Adding and deleting attributes to HTML DOM elements
 4. Adding and removing basic event listeners and handlers
 
-### What is JavaScript?
+<h3> What is JavaScript?</h3>
 JavaScript is a lightweight, interpreted, compiled programming language with first class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.
 
 ## Why read this article?

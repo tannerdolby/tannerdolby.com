@@ -1,5 +1,5 @@
 ---
-title: Getting started with OverTheWire Bandit Security Games
+title: Getting Started With OverTheWire Bandit Security Games
 author: Tanner Dolby
 shortname: Overthewire Games
 date_created: March 06, 2020
@@ -8,7 +8,7 @@ tag: web
 post_tags: 
 - shell
 - security
-preview: "How familiar are you with using SSH? If you hesitated to answer the question, don't fear as after reading this article you will understand how to perform a secure remote connection to a server using SSH and work in the server environment."
+preview: "How familiar are you with using SSH? If you hesitated to answer, don't fear as after reading this article you will understand how to perform a secure remote connection to a server using SSH and work in the server environment."
 permalink: /writing/{{ tag }}/{{ shortname | slug }}/
 image: 
     fallback:
@@ -26,8 +26,8 @@ image:
 ---
 
 
-<h1 style="text-align: center;" class="h1">{{ title }}</h1>
-<p style="text-align: center;">Published <time datetime="{{ datetime }}">{{ date_created }}</time> &bull; Tagged with: {% for tags in post_tags %}<code style="margin: 0 .3rem;">{{ tags }}</code>{% endfor %}</p>
+<h1 id="post-title" style="text-align: left;" class="h1">{{ title }}</h1>
+<p style="text-align: left;">Published <time datetime="{{ datetime }}">{{ date_created }}</time> &bull; Tagged with: {% for tags in post_tags %}<code style="margin: 0 .3rem;">{{ tags }}</code>{% endfor %}</p>
 
 <picture>
     <source
@@ -44,7 +44,7 @@ image:
 
 <p style="text-align: center; margin-top: .5rem; font-size: 14px;"><i>Photo by Scott Webb from <a href="{{ image.credit}}">Pexels</a></i></p>
 
-{{ preview}} I am by no means a security expert, but these challenges can be quite fun (similar to [Sudoku](https://en.wikipedia.org/wiki/Sudoku)). Grab your favorite cup of coffee or tea and get ready to conquer some OverTheWire Bandit games.
+{{ preview }} I'm by no means a security expert, but these challenges can be quite fun while providing solid file system practice. Grab your favorite cup of coffee or tea and get ready to conquer some OverTheWire Bandit games!
 
 <h2 id="what-is-ssh">What is SSH?</h2>
 
@@ -309,8 +309,7 @@ Thank you for reading this far! I hope your experience with using the terminal (
 
 ### References
 
-- [overthewire.org](https://overthewire.org/wargames/)
-- [telnet](https://www.ssh.com/ssh/telnet)
-- [rlogin](https://www.ssh.com/ssh/rlogin)
-- [FTP](https://en.wikipedia.org/wiki/File_Transfer_Protocol)
-- [Sudoku](https://en.wikipedia.org/wiki/Sudoku)
+1. [overthewire.org](https://overthewire.org/wargames/)
+2. [telnet](https://www.ssh.com/ssh/telnet)
+3. [rlogin](https://www.ssh.com/ssh/rlogin)
+4. [FTP](https://en.wikipedia.org/wiki/File_Transfer_Protocol)
