@@ -896,7 +896,6 @@ main .art {
     padding-left: 1rem;
     padding-right: 1rem;
     padding-bottom: 1rem;
-    max-width: 950px;
     max-width: 1000px;
 }
 
@@ -912,6 +911,7 @@ main .art .art-details h2 {
 
 main .art img {
     object-fit: cover;
+    width: 640px;
     height: 400px;
 }
 
