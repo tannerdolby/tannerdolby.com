@@ -23,7 +23,7 @@
             <header class="banner-container">
                 <h1 class="h1" id="writing">{{ title }}</h1>
             </header>
-            <section class="main-content">
+            <div class="main-content">
                 <div class="writing-about">
                     {{ content | safe }}
                 </div>
@@ -36,7 +36,7 @@
                     </article>
                     {% endfor %}
                 </div>
-            </section>
+            </div>
         </main>
         {% include "layouts/footer.njk" %}
     </body>
