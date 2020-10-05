@@ -2,7 +2,7 @@
 title: An Introduction To Client-side JavaScript
 shortname: JS Client Side
 date_created: March 21, 2020
-datetime: 2020-03-21
+datetime: 2020-03-21 00:00:00 Z
 tag: web
 post_tags:
     - JavaScript
@@ -10,9 +10,6 @@ post_tags:
 preview: Have you ever thought to yourself while building a website, It sure would be nice to change the background color of an element upon being clicked? Well now you can by using client-side JavaScript!
 permalink: /writing/{{ tag }}/{{ shortname | slug }}/
 ---
-
-<h1 class="h1" id="post-title">{{ title }}</h1>
-<p>Posted <time datetime="{{ datetime }}">{{ date_created }}</time> &bull; {% for tags in post_tags %}<code style="margin-right: .3rem; font-size: 16px;">{{ tags }}</code>{% endfor %}</p>
 
 {{ preview }} Client-side means that the JavaScript code is run on the client machine, which is the browser. Server-side JavaScript means that the code is run on the server which is serving web pages.
 

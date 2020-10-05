@@ -5,7 +5,6 @@
         "aria_label": "Link to archimedean spiral on Codepen",
         "url": "https://codepen.io/tannerdolby/full/KKzrOEv",
         "date_created": "September 22, 2020",
-        "datetime": "2020 22 9",
         "credit": "https://en.wikipedia.org/wiki/Archimedean_spiral",
         "image": {
             "fallback_src": "/images/arc-spiral-large.jpg",
@@ -33,7 +32,6 @@
         "aria_label": "Link to UPS building on Codepen",
         "url": "https://codepen.io/tannerdolby/full/NWNEBYV",
         "date_created": "September 21, 2020",
-        "datetime": "2020 21 9",
         "credit": "https://ups.com",
         "svg_credit": "https://worldvectorlogo.com/logo/ups",
         "image": {
@@ -59,7 +57,6 @@
         "id": "window-nighttime",
         "url": "https://codepen.io/tannerdolby/full/ZEWKEvR",
         "date_created": "August 26, 2020",
-        "datetime": "2020 26 08",
         "credit": "https://dribbble.com/shots/11283947-Taking-it-slow",
         "desc": "While scrolling through designs over on dribbble, I came across this illustration of a woman sitting in front a window. I tried recreating it using a bit of Markup and CSS. This drawing in particular was alot of fun because I've really enjoyed creating lamps/lighting effects lately.",
         "image": {
@@ -88,7 +85,6 @@
         "aria_label": "Link to telephone booth on Codepen",
         "url": "https://codepen.io/tannerdolby/full/JjXYPQL",
         "date_created": "August 10, 2020",
-        "datetime": "2020 10 08",
         "credit": "https://dribbble.com/shots/11454238-Telephone-London",
         "desc": "I'd seen this style of telephone booth in commercials, games and around the web so I finally created one. This red booth is based on a illustration from dribbble. Click inside the booth to turn the lights on/off.",
         "image": {
@@ -117,7 +113,6 @@
         "aria_label": "Link to cassette tape on Codepen",
         "url": "https://codepen.io/tannerdolby/full/ExPqqVZ",
         "date_created": "August 2, 2020",
-        "datetime": "2020 2 08",
         "credit": "https://depositphotos.com/vector-images/cassette-tape.html",
         "desc": "This drawing of a cassette is one of my all time favorites. I went the endless box-shadow route here which I haven't used in my more recent illustrations. Nonetheless, a cool look compact cassette.",
         "image": {
@@ -147,7 +142,6 @@
         "url": "https://codepen.io/tannerdolby/full/PoZyXqB",
         "credit": "https://hacks.mozilla.org/2014/09/single-div-drawings-with-css/",
         "date_created": "July 16, 2020",
-        "datetime": "2020 16 07",
         "desc": "I was amazed by the power of single div art described in",
         "image": {
             "fallback_src": "/images/css-crayon-large.jpg",
@@ -175,7 +169,6 @@
         "id": "pixel-ghost",
         "url": "https://codepen.io/tannerdolby/full/dyGjMEN",
         "date_created": "July 12, 2020",
-        "datetime": "2020 12 07",
         "credit": "https://pxl.netlify.app",
         "image": {
             "fallback_src": "/images/pxl-ghost-large.jpg",

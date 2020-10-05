@@ -22,6 +22,8 @@
         {% include "layouts/nav.njk" %}
         <main class="main-container" role="main" id="post-content">
             <section id="post" class="main-content">
+                <h1 class="h1" id="post-title">{{ title }}</h1>
+                <p>Posted on <time datetime="{{ datetime | date('YYYY-MM-DD') }}">{{ datetime | date('MMMM DD, YYYY') }}</time> &bull; Tagged with: {% for tags in post_tags %}<code style="margin-right: .3rem; font-size: 16px;"><strong>#</strong>{{ tags }}</code>{% endfor %}</p>
                 {{ content | safe }}
             </section>
         </main>

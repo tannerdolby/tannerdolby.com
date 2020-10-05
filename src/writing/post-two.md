@@ -3,7 +3,7 @@ title: Getting Started With OverTheWire Bandit Security Games
 author: Tanner Dolby
 shortname: Overthewire Games
 date_created: March 06, 2020
-datetime: 2020-03-06
+datetime: 2020-03-06 00:00:00 Z
 tag: web
 post_tags: 
 - shell
@@ -24,10 +24,6 @@ image:
         width: 320w
     credit: https://www.pexels.com/photo/equipment-pavement-security-security-camera-430208/
 ---
-
-
-<h1 id="post-title" style="text-align: left; font-size: 40px;">{{ title }}</h1>
-<p style="text-align: left;">Posted <time datetime="{{ datetime }}">{{ date_created }}</time> &bull; Tagged with: {% for tags in post_tags %}<code style="margin: 0 .3rem;"><strong>#</strong>{{ tags }}</code>{% endfor %}</p>
 
 <picture>
     <source

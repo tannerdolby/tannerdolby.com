@@ -1,6 +1,7 @@
 const CleanCSS = require("clean-css");
 const { minify } = require("terser");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const dateFilter = require("nunjucks-date-filter");
 
 module.exports = (eleventyConfig) => {
     
@@ -19,6 +20,8 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.addPlugin(syntaxHighlight, {
         templateFormats: ["njk", "md"],
     });
+
+    eleventyConfig.addFilter("date", dateFilter);
 
     // Minify CSS with clean-css
     eleventyConfig.addFilter("cssmin", function(code) {
