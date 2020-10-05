@@ -38,6 +38,10 @@ module.exports = (eleventyConfig) => {
         }
     });
 
+    eleventyConfig.addShortcode("skiplink", function(id, title) {
+        return `<a class="post-skiplink" href=#${id}>${title}</a>`;
+    });
+
     // Inspired by @zachleat and his code title shortcode - credit: https://github.com/11ty/11ty-website/blob/master/.eleventy.js#L107-L109
     eleventyConfig.addShortcode("codetitle", function(title, header = "Filename") {
         return `<div class="filename-title" style="font-size: 14px;><b style="font-size: 14px;">${header}</b> <code style="font-size: 14px;">${title}</code></div>`;
@@ -50,7 +54,7 @@ module.exports = (eleventyConfig) => {
 
     // shortcode for creating my headshot <img> in markdown
     eleventyConfig.addPairedShortcode("img", function(src) {
-        return `<img src="${src}" alt="Headshot of Tanner's face (a bit outdated)" class="about-headshot" loading="lazy">`
+        return `<img width="200" height="200" src="${src}" alt="Headshot of Tanner's face (a bit outdated)" class="about-headshot" loading="lazy">`
     });
 
     return {

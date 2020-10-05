@@ -12,7 +12,7 @@ permalink: /writing/{{ tag }}/{{ shortname | slug }}/
 ---
 
 <h1 class="h1" id="post-title">{{ title }}</h1>
-<p>Published <time datetime="{{ datetime }}">{{ date_created }}</time> &bull; {% for tags in post_tags %}<code style="margin-right: .3rem; font-size: 16px;">{{ tags }}</code>{% endfor %}</p>
+<p>Posted <time datetime="{{ datetime }}">{{ date_created }}</time> &bull; {% for tags in post_tags %}<code style="margin-right: .3rem; font-size: 16px;">{{ tags }}</code>{% endfor %}</p>
 
 {{ preview }} Client-side means that the JavaScript code is run on the client machine, which is the browser. Server-side JavaScript means that the code is run on the server which is serving web pages.
 

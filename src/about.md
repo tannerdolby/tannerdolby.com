@@ -4,6 +4,7 @@ title: About Me
 permalink: "/about/"
 headshot: 
     src: "/images/headshot3.png"
+    srcSmall: "/images/headshot3-small.jpg"
 layout: layouts/about.njk
 ---
 
@@ -18,7 +19,7 @@ I recieved my Bachelor of Science degree in Applied Mathematics from Arizona Sta
 
 During my time at ASU, I worked as an Undergraduate Researcher and Supplemental Instruction leader for Differential Equations. My passion for mathematics and computing became most apparent to me after finishing discrete math and linear algebra. I don't have current plans of attending grad school but I'm interested in learning more about [Knot Theory](https://en.wikipedia.org/wiki/Knot_(mathematics)).
 
-{% img %}{{ headshot.src }}{% endimg %}
+{% img %}{{ headshot.srcSmall }}{% endimg %}
 
 ## Need More?
 

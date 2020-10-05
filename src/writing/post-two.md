@@ -26,8 +26,8 @@ image:
 ---
 
 
-<h1 id="post-title" style="text-align: left;" class="h1">{{ title }}</h1>
-<p style="text-align: left;">Published <time datetime="{{ datetime }}">{{ date_created }}</time> &bull; Tagged with: {% for tags in post_tags %}<code style="margin: 0 .3rem;">{{ tags }}</code>{% endfor %}</p>
+<h1 id="post-title" style="text-align: left; font-size: 40px;">{{ title }}</h1>
+<p style="text-align: left;">Posted <time datetime="{{ datetime }}">{{ date_created }}</time> &bull; Tagged with: {% for tags in post_tags %}<code style="margin: 0 .3rem;"><strong>#</strong>{{ tags }}</code>{% endfor %}</p>
 
 <picture>
     <source
@@ -46,56 +46,60 @@ image:
 
 {{ preview }} I'm by no means a security expert, but these challenges can be quite fun while providing solid file system practice. Grab your favorite cup of coffee or tea and get ready to conquer some OverTheWire Bandit games!
 
-<h2 id="what-is-ssh">What is SSH?</h2>
+<h2 id="what-is-ssh">{% skiplink "what-is-ssh", "What is SSH?" %}</h2>
 
 The [SSH Protocol](https://www.ssh.com/ssh/) (referred to as Secure Shell) is a method for remote secure login from one computer to another. It provides several options for strong remote authentication while also protecting the communications security and health via strong encryption.
 
 Using SSH protocol is the most secure alternative to unprotected login protocols such as [telnet](https://www.ssh.com/ssh/telnet) and [rlogin](https://www.ssh.com/ssh/rlogin), amongst other insecure file transfer methods like [FTP](https://en.wikipedia.org/wiki/File_Transfer_Protocol).
 
-### Getting started with OverTheWire Shell Environment
-Each level offered by [OverTheWire](https://overthewire.org/) can help you to learn and practice security concepts in the form of fun-filled games using the shell. Each shell game server has its own SSH Port to use when connecting to specific games.
+<h2 id="what-is-a-shell">{% skiplink "what-is-a-shell", "What is a shell?" %}</h2>
 
-This article will focus on practicing file security by beginning with the first five [Bandit](https://overthewire.org/wargames/bandit) level games running on `port 2220`.
+The [shell](https://en.wikipedia.org/wiki/Shell_(computing)) is a user interface for performaing system level operations. It's a user level program to start other user level programs, using calls to the operating system. The Terminal (macOS) and CMD (Windows) programs are “shells”.
 
-<h3 id="connect-bandit-shell" >Connecting to the Bandit Shell</h3>
+<h2 id="getting-started-overthewire">{% skiplink "getting-started-overthewire", "Getting Started with OverTheWire" %}</h2>
 
-Open up a Bash shell (Terminal for MacOS, CMD in Windows) and write the following shell command for connecting to bandit level zero on port 2220. More information about connecting can be found on the [Level Zero](https://overthewire.org/wargames/bandit/bandit0.html) page.
+Every level offered by [OverTheWire](https://overthewire.org/) can help you to learn and practice security concepts in the form of fun-filled games using the shell. The game server has its own SSH Port to use when connecting to specific OverTheWire games.
+
+This article will focus on the first five [Bandit](https://overthewire.org/wargames/bandit) level games. All  Bandit levels run on port 2220.
+
+<h3 id="connect-bandit-shell">{% skiplink "connect-bandit-shell", "Connecting to the Bandit Shell"%}</h3>
+
+Open up a shell (Terminal for MacOS, CMD in Windows) program and write the following command for connecting to bandit level zero on port 2220. More information about connecting can be found on the [Level Zero](https://overthewire.org/wargames/bandit/bandit0.html) OverTheWire webpage.
 
 ```bash
 ssh bandit0@bandit.labs.overthewire.org -p 2220
 ```
 
-After performing the above shell command, your shell will prompt you to enter a password. The password for Bandit level 0 is _bandit0_. After the correct passcode has been provided you will have access to the root-directories of the OverTheWire game server. This process of authentication will be performed for every new instance you SSH into a Bandit level.
+After performing the above command, your shell will prompt you to enter a password. The password for Bandit level 0 is `bandit0`. Once the correct passcode has been entered, you will have access to the root directories of the OverTheWire Bandit game server. This process of authentication will be performed for every new instance you SSH into a Bandit level.
 
-### Let the games begin!
+<h2 id="otw-games-begin">{% skiplink "otw-games-begin", "Let the games begin!"%}</h2>
 
-Now that your connected to the Bandit shell you will have access to the root directory contents. The goal of level zero is for you to log into the game using SSH and become familiarized with the bandit shell.
+The goal of level zero is for you to log into the game using SSH and become familiarized with the bandit shell.
 
-The host to which you need to connect is `bandit.labs.overthewire.org` on port 2220. The username is _bandit0_ and the password is _bandit0_. Once logged in, go to the [Level One](https://overthewire.org/wargames/bandit/bandit1.html) page to find out how to beat this first Bandit level.
+The host to which you need to connect is `bandit.labs.overthewire.org` on port 2220, the username and password are both `bandit0`. Once logged in, go to the [Level One](https://overthewire.org/wargames/bandit/bandit1.html) page to find out how to beat this first Bandit level (or keep reading).
 
-If you haven't already, make sure to connect using SSH to Bandit level zero. Refer back to the [Connecting to Bandit Shell](/writing/{{ tag }}/{{ shortname | slug }}/#connect-bandit-shell) section.
+Now that you've sucessfully connected to the Bandit shell you will have access to the root directory contents. If you haven't already, make sure to connect using SSH to Bandit level zero. Refer back to the [Connecting to Bandit Shell](/writing/{{ tag }}/{{ shortname | slug }}/#connect-bandit-shell) section.
 
-Once the correct credentials have been provided you are sucessfully connected to level zero, you will see a shell similar to below:
+Once the correct credentials have been provided, you are sucessfully connected to Bandit level zero and will see a shell similar to below.
 
 ```bash
 bandit0@bandit:~$
 ```
 
-<h3 id="listing-commands"> I've connected to a Bandit Shell with SSH, now what?</h3>
+<h3 id="listing-commands"> I've connected to a bandit shell with SSH, now what?</h3>
 
-After solving most of the Bandit games, I found myself repeating a few commands. Since we are starting at the root directory for every new level, it's wise to list the directories contents with `ls` every time you connect to a new OverTheWire game server.
+When solving most of the Bandit games, I found myself repeatedly using a few shell commands. Since we're starting at the root directory for every new level, it's wise to list the directories contents with `ls` every time you connect to a new OverTheWire game server.
 
 - Run the command `ls` to list all directory contents and files present on the server. 
 
-After running the `ls` command in bandit level zero, the output returns all the directory contents. Within bandit level 0, there is only one file named readme existing inside the current directory.
+After running the `ls` command in bandit level zero, the output returns all the directory contents. Within this level, there is only one file named `readme` existing inside the current directory.
 
 ```bash
 bandit0@bandit:~$ ls 
 readme
 ```
 
-Next, I will usually use the command `ls` with flags `-la` to list all hidden files in long listing format within the bandit level root directory. To define the two affixed letters or commonly referred to as options.
-
+Next, I will use the command `ls` with flags `-la` to list all hidden files in long listing format within the bandit level root directory. To define the flags or options, take a look below.
 
 - `-l` provides a list of a directories content in long listing format.
 - `-a` tells the computer to not ignore entries starting with a period.
@@ -112,13 +116,13 @@ drwxr-xr-x 41 root    root    4096 Oct 16  2018 ..
 bandit0@bandit:~$
 ```
 
-You should see the above code snippet in your corresponding shell when performing the `ls -la` command after connecting to Bandit level zero.
+You *should* see the above file structure in your corresponding shell when performing the `ls -la` command after connecting to Bandit level zero.
 
-<h3 id="bandit-level-zero">Bandit Level Zero &RightArrow; One</h2>
+<h2 id="bandit-level-zero">{% skiplink "bandit-level-zero", "Bandit Level Zero &RightArrow; One" %}</h2>
 
-The password needed to access Bandit level 1 via SSH is stored in a file called `readme` located in the root directory. Use the password you've uncoverered to log into Bandit Level One. Whenever you find a password for a level, use SSH (on port 2220) to log into the next level and continue bandit wargames.
+The password needed to access Bandit level 1 via SSH is stored in a file called `readme` located in the root directory. Use the password you've uncoverered in the previous level to log into Bandit Level One. Whenever you find a new password. Copy it to your clipboard before using SSH (on port 2220) with the corresponding level username `bandit1` to log into the next level and continue bandit wargames.
 
-For these beginning levels, passwords are usually hidden in files that contain ASCII characters or are considered to be human-readable files. To find the first password for bandit level zero we will use the shell command find
+For these first few levels, passwords are usually hidden in files that contain ASCII characters or are considered to be human-readable files. To find the first password for bandit level zero we will use the shell command `find`.
 
 ```bash
 bandit0@bandit:~$ find . -type f -exec file {} + | grep ASCII
@@ -129,26 +133,24 @@ bandit0@bandit:~$ find . -type f -exec file {} + | grep ASCII
 bandit0@bandit:~$
 ```
 
-To break down the above output: The shell told us that each of the files contained ASCII text and were executable. This intermediate step using find is not needed as the password could be found via 'trial-and-error' by opening each file in the current directory. But, I thought it was good practice to show moving forward into the next levels.
+To break down the above output: The shell told us that each of the files contained ASCII text and were executable. This intermediate step using `find` is not needed as the password could be found via 'trial-and-error' by opening each file in the current directory. But, I thought it was good practice to show moving forward into the next levels.
 
-You could proceed to opening each of the files using `cat filename` on macOS, but I have a good feeling about the first entry readme. Lets open it,
+You can proceed to opening each of the files using `cat filename` on macOS, but I have a good feeling about the first file in the output: `readme`. Lets open it.
 
 ```bash
 bandit0@bandit:~$ cat ./readme
 boJ9jbbUNNfk......
 ```
 
-*And Voilà!*
+And Voilà! Copy the password you found to your clipboard or a place you wont forget. You will need to use this password to SSH into the next bandit level. Use the `exit` command to disconnect from a bandit level after you're ready to move on.
 
-Copy the password you found to your clipboard or a place you wont forget as you will need to use this password to SSH into the next bandit level. Use the `exit` command to disconnect from a bandit level after you're ready to move on.
-
-<h3 id="bandit-level-two">Onward! Bandit level One &Rightarrow; Two</h3>
+<h2 id="bandit-level-one">{% skiplink "bandit-level-one", "Bandit level One &RightArrow; Two"} </h3>
 
 Now that you have become relatively familiar with the Bandit shell and how to go about finding passwords. Let's jump right into connecting to Bandit level one and find the hidden password!
 
 If you're following along through OverTheWire's website. We are told that the password for this level is stored inside a file named `-` located in the home directory.
 
-The first order of business will be connecting to Bandit level one using _bandit1_ as the username on port 2220. This levels password will be the characters you copied to clipboard after performing `cat ./readme` to open the file.
+The first order of business will be connecting to Bandit level one using `bandit1` as the username on port 2220. This levels password will be the characters you copied to clipboard after performing `cat ./readme` to open the file.
 
 ```bash
 spherical:~ TannerDolby$ ssh bandit1@bandit.labs.overthewire.org -p 2220
@@ -160,7 +162,7 @@ You will be prompted to enter a password after entering the above command. Paste
 bandit1@bandit:~$
 ```
 
-Sweet! Now that we have connected to the bandit server lets find the password stored in a file called `-` located in the home directory. Like always, lets list all of the root directories contents with `ls -la`. Refer to [ls options](/writing/{{ tag }}/{{ shortname | slug}}/#listing-commands) for a refresher on why we use the `-la`.
+Now that we have connected to the bandit server lets find the password stored in a file called `-` located in the home directory. Like always, lets list all of the root directories contents with `ls -la`. Refer to [ls options](/writing/{{ tag }}/{{ shortname | slug}}/#listing-commands) for a refresher on why we use the `-la`.
 
 ```bash
 bandit1@bandit:~$ ls -la
@@ -195,21 +197,19 @@ CV1DtqXWVF......
 
 Lastly, since we have (_hopefully_) copied the password to clipboard from opening the above file. Exit the current bandit shell and prepare to SSH into the next level! 
 
-<h3 id="bandit-level-three">Bandit Level Two &Rightarrow; Three</h3>
-Now that you've made it this far, going about finding passwords in each Bandit Level should be very clear. OverTheWire tells us that the password for the next level is stored in a file called spaces in this filename located in the home directory.
+<h2 id="bandit-level-two">Bandit Level Two &RightArrow; Three</h3>
+Now that you've made it this far, going about finding passwords in upcoming Bandit Level should be more clear. OverTheWire tells us that the password for the next level is stored in a file called spaces in this filename located in the home directory.
 
-Before we can start searching for the above file, we must first connect to Bandit level two on port 2220 with the username bandit2 and password copied to clipboard from last level.
+Before we can start searching for the above file, we must first connect to Bandit level two on port 2220 with the username bandit2 and password copied to clipboard from last level. The connection process in terminal should be:
 
-The connection process in terminal should be:
-
+```bash
 ssh bandit2@bandit.labs.overthewire.org -p 2220
-Since this post has covered connecting, I will assume you provided the correct password found from the previous level when attempting to SSH into Bandit level two.
+```
 
-After you've connected, whats the first thing you thought to do? 
+Since this post has covered connecting, I will assume you provided the correct password found from the previous level when attempting to SSH into Bandit level two. After you've connected, whats the first thing you thought to do? 
+If you were thinking what I was, then you might have beat me to it by using an `ls -la` command in the shell to perform a long listing format of all the current directories content.
 
-If you were thinking what I was, then you might have beat me to it by performing a ls -la command in the shell to perform a long listing format of the current directories content.
-
-```shell
+```bash
 bandit2@bandit:~$ ls -la
 total 24
 drwxr-xr-x  2 root    root    4096 Oct 16  2018 .
@@ -223,15 +223,15 @@ bandit2@bandit:~$
 
 And there it is! The file, "spaces in this filename". Lets open it by using the cat command and encase the filename in double quotes so the cat command ignores spaces inside filenames.
 
-```shell
+```bash
 bandit2@bandit:~$ cat "spaces in this filename"
 UmHadQclWmgd..........
 bandit2@bandit:~$ exit
 ```
 
-Bada bing bada boom! Make sure to copy the password to clipboard or make note of it as we will need it handy when accessing the next bandit level via SSH!
+Make sure to copy the password to clipboard or make note of it as we will need it handy when accessing the next bandit level.
 
-<h3 id="bandit-level-three">Bandit Level Three &RightArrow; Four</h3>
+<h2 id="bandit-level-three">Bandit Level Three &RightArrow; Four</h3>
 
 OverTheWire tells us that the password to access the next level is stored in a hidden file within the `inhere` directory. Now that the process of using SSH to connect to new OverTheWire Bandit Servers has been repeated, I will just show my terminal command to SSH into Bandit level three on port 2220 with username bandit3 and the password found in the previous level.
 
@@ -272,7 +272,7 @@ pIwrPrtPN36QITS..................
 bandit3@bandit:~/inhere$ exit
 ```
 
-<h3 id="bandit-level-four">Bandit Level Four &RightArrow; Five</h3>
+<h2 id="bandit-level-four">Bandit Level Four &RightArrow; Five</h3>
 
 The password for the next level is stored in the only human-readable file inside the `inhere` directory. Pro tip: if your terminal is cluttered try using the `reset` or `clear` command. 
 
@@ -304,10 +304,10 @@ koReBOKuIDDe.......................
 bandit4@bandit:~/inhere$ exit
 ```
 
-## Concluding Remarks
+<h2 id="concluding-remarks">Concluding Remarks</h2>
 Thank you for reading this far! I hope your experience with using the terminal (or command line) has improved by completing bandit levels 1-5 via OverTheWire. If you noticed all of the passwords for each level are not provided, you saw right  :). I will not provide any of the complete passwords as you are capable of following this tutorial and finding them for yourself! Until next time. 
 
-### References
+<h3 id="references">References</h3>
 
 1. [overthewire.org](https://overthewire.org/wargames/)
 2. [telnet](https://www.ssh.com/ssh/telnet)
