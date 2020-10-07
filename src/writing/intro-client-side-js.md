@@ -1,8 +1,8 @@
 ---
 title: An Introduction To Client-side JavaScript
 shortname: JS Client Side
-date_created: March 21, 2020
-datetime: 2020-03-21 00:00:00 Z
+date_created: September 25, 2020
+datetime: 2020-09-25 00:00:00 Z
 tag: web
 post_tags:
     - JavaScript
@@ -34,7 +34,7 @@ Hours later after re-writing the HTML for one of my current side project homepag
 ### Creating HTML elements and building the DOM using JavaScript
 JavaScript allows us the ability as developers to virtually create HTML elements using the [Document] interface and associated [methods](https://developer.mozilla.org/en-US/docs/Web/API/Document#Methods). Below is an example of virtually creating a new `div` element using `.createElement()` and attaching it to the DOM tree within the `<body>` node of the current document.
 
-{% codetitle "script.js" %}
+{% filename "script.js" %}
 
 ```js
 const div = document.body.createElement("div");
@@ -118,7 +118,7 @@ index.html script.js style.css
 
 Now we're ready to start putting code into these newly created files within the js-tutorial directory. Open up the js-tutorial folder in your preferred editor and navigate into the `index.html` file (it will be blank). I highly suggest using the [html5-boilerplate](https://marketplace.visualstudio.com/items?itemName=sidthesloth.html5-boilerplate) VS Code plugin as I will be using it to generate a template of HTML boilerplate code. Inside the `index.html` file, entering html5-boilerplate with the specified plugin will provide you with the following:
 
-{% codetitle "index.html" %}
+{% filename "index.html" %}
 
 ```html
 <!DOCTYPE html>
@@ -143,7 +143,7 @@ Great! Now that the basic Markup for `index.html` page is setup. Make sure to pr
 
 Navigate to the `script.js` file in the home js-tutorial directory and lets start writing JS code for creating a basic DOM tree. We will create use everything mentioned so far to build a very web page with virtually created HTML elements.
 
-{% codetitle "script.js" %}
+{% filename "script.js" %}
 
 ```js
 const div = document.createElement("div");

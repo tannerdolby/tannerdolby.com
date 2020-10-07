@@ -24,10 +24,10 @@
             <section class="recent-posts" id="recent-posts-home" style="margin-top: 2rem;">
                 <div class="rp-container">
                     <h2>Recent Posts</h2>
-                    {% for post in collections.posts %}
+                    {% for post in collections.posts | reverse %}
                     <article class="post">
-                        <h3 style="margin-bottom: .75rem; font-size: 24px;"><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
-                        <p>Posted on <time datetime="{{ post.data.datetime | date('YYYY-MM-DD') }}">{{ post.data.datetime | date('MMMM DD, YYYY') }}</time></p>
+                        <h3 style="margin-bottom: .5rem; font-size: 24px;"><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+                        <p class="date" style="font-size: 16px; margin-top: .5rem;">Posted on <time datetime="{{ post.data.datetime | date('YYYY-MM-DD') }}">{{ post.data.datetime | date('MMMM DD, YYYY') }}</time></p>
                         <p class="preview">{{ post.data.preview }}</p>
                     </article>
                     {% endfor %}
@@ -41,17 +41,18 @@
                     <ul class="feat-art-list" style="padding-left: 0; list-style: none;">
                         <li>
                             <a href="/art/#window-nighttime" aria-label="featured image two">
-                                <img src="/images/css-window-night-med.jpg" alt="Window during night time">
+                                <!-- 16:9 aspect ratio: width = 330 * (16 / 9) = 640px -->
+                                <img src="/images/css-window-night-med.jpg" alt="Window during night time" width="640" height="330">
                             </a>
                         </li>
                         <li>
                             <a href="/art/#telephone-booth" aria-label="featured image two">
-                                <img src="/images/css-booth-med.jpg" alt="Red telephone booth">
+                                <img src="/images/css-booth-med.jpg" alt="Red telephone booth" width="640" height="330">
                             </a>
                         </li>
                         <li>
                             <a href="/art/#cassette-tape" aria-label="featured image three">
-                                <img src="/images/css-cassette-med.jpg" alt="Cassette tape">
+                                <img src="/images/css-cassette-med.jpg" alt="Cassette tape" width="640" height="330">
                             </a>
                         </li>
                     </ul>
@@ -64,19 +65,19 @@
                     <ul class="socials-list">
                         <li>
                             <a class="github-block" href="{{ site.page_info.socials.github }}">
-                                <img src="/images/githubLight.svg" alt="Link to my Github">
+                                <img width="18" height="18" src="/images/githubFooter.svg" alt="Link to my Github">
                                 Github
                             </a>
                         </li>
                         <li>
                             <a class="twitter-block" href="{{ site.page_info.socials.twitter }}">
-                                <img src="/images/twitterLight.svg" alt="Link to my Twitter">
+                                <img width="18" height="18" src="/images/twitterFooter.svg" alt="Link to my Twitter">
                                 Twitter
                             </a>
                         </li>
                         <li>
                             <a class="linkedin-block" href="{{ site.page_info.socials.linkedin }}">
-                                <img src="/images/linkedinLight.svg" alt="Link to my LinkedIn">
+                                <img width="18" height="18" src="/images/linkedinLight.svg" alt="Link to my LinkedIn">
                                 LinkedIn
                             </a>
                         </li>

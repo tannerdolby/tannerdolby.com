@@ -6,8 +6,8 @@ date_created: March 06, 2020
 datetime: 2020-03-06 00:00:00 Z
 tag: web
 post_tags: 
-- shell
-- security
+    - shell
+    - security
 preview: "How familiar are you with using SSH? If you hesitated to answer, don't fear as after reading this article you will understand how to perform a secure remote connection to a server using SSH and work in the server environment."
 permalink: /writing/{{ tag }}/{{ shortname | slug }}/
 image: 
@@ -33,32 +33,30 @@ image:
             {{ image.med.webp }} {{ image.med.width }},
             {{ image.small.webp }} {{ image.small.width }}
             "
-        sizes="33.3vw, 50vw, 100vw"
+        sizes="(min-width: 500px) 33.3vw, 100vw"
     >
-    <img style="width: 100%" alt="Security Cameras" src="{{ image.fallback.src }}" loading="lazy">
+    <img style="width: 100%;" alt="Security Cameras" src="{{ image.fallback.src }}" loading="lazy">
 </picture>
 
-<p style="text-align: center; margin-top: .5rem; font-size: 14px;"><i>Photo by Scott Webb from <a href="{{ image.credit}}">Pexels</a></i></p>
+<p style="text-align: center; margin-top: .5rem; font-size: 16px;"><i>Photo by Scott Webb from <a href="{{ image.credit}}">Pexels</a></i></p>
 
-{{ preview }} I'm by no means a security expert, but these challenges can be quite fun while providing solid file system practice. Grab your favorite cup of coffee or tea and get ready to conquer some OverTheWire Bandit games!
+{{ preview }} I'm by no means a security expert, but these challenges can be quite fun while providing some solid file system practice. Grab your favorite cup of coffee or tea and get ready to conquer some OverTheWire Bandit games!
 
-<h2 id="what-is-ssh">{% skiplink "what-is-ssh", "What is SSH?" %}</h2>
+<h2 id="what-is-ssh">What is SSH? {% directlink, "what-is-ssh" %}</h2>
 
 The [SSH Protocol](https://www.ssh.com/ssh/) (referred to as Secure Shell) is a method for remote secure login from one computer to another. It provides several options for strong remote authentication while also protecting the communications security and health via strong encryption.
 
 Using SSH protocol is the most secure alternative to unprotected login protocols such as [telnet](https://www.ssh.com/ssh/telnet) and [rlogin](https://www.ssh.com/ssh/rlogin), amongst other insecure file transfer methods like [FTP](https://en.wikipedia.org/wiki/File_Transfer_Protocol).
 
-<h2 id="what-is-a-shell">{% skiplink "what-is-a-shell", "What is a shell?" %}</h2>
+<h2 id="what-is-a-shell">What is a shell? {% directlink "what-is-a-shell" %}</h2>
 
-The [shell](https://en.wikipedia.org/wiki/Shell_(computing)) is a user interface for performaing system level operations. It's a user level program to start other user level programs, using calls to the operating system. The Terminal (macOS) and CMD (Windows) programs are “shells”.
+The [shell](https://en.wikipedia.org/wiki/Shell_(computing)) is a user interface for performing system level operations. It's a user level program to start other user level programs, using calls to the operating system. The Terminal (macOS) and CMD (Windows) programs are “shells”.
 
-<h2 id="getting-started-overthewire">{% skiplink "getting-started-overthewire", "Getting Started with OverTheWire" %}</h2>
+<h2 id="getting-started-overthewire">Getting started with OverTheWire {% directlink "getting-started-overthewire" %}</h2>
 
-Every level offered by [OverTheWire](https://overthewire.org/) can help you to learn and practice security concepts in the form of fun-filled games using the shell. The game server has its own SSH Port to use when connecting to specific OverTheWire games.
+Every level offered by [OverTheWire](https://overthewire.org/) can help you to learn and practice security concepts in the form of fun-filled games using the shell. The game server has its own SSH Port to use when connecting to specific OverTheWire games. This article will focus on the first five [Bandit](https://overthewire.org/wargames/bandit) levels which run on port 2220.
 
-This article will focus on the first five [Bandit](https://overthewire.org/wargames/bandit) level games. All  Bandit levels run on port 2220.
-
-<h3 id="connect-bandit-shell">{% skiplink "connect-bandit-shell", "Connecting to the Bandit Shell"%}</h3>
+<h3 id="connect-bandit-shell">Connecting to the Bandit Shell {% directlink "connect-bandit-shell" %}</h3>
 
 Open up a shell (Terminal for MacOS, CMD in Windows) program and write the following command for connecting to bandit level zero on port 2220. More information about connecting can be found on the [Level Zero](https://overthewire.org/wargames/bandit/bandit0.html) OverTheWire webpage.
 
@@ -66,9 +64,9 @@ Open up a shell (Terminal for MacOS, CMD in Windows) program and write the follo
 ssh bandit0@bandit.labs.overthewire.org -p 2220
 ```
 
-After performing the above command, your shell will prompt you to enter a password. The password for Bandit level 0 is `bandit0`. Once the correct passcode has been entered, you will have access to the root directories of the OverTheWire Bandit game server. This process of authentication will be performed for every new instance you SSH into a Bandit level.
+After running the above command, your shell will prompt you to enter a password. The password for Bandit level 0 is `bandit0`. Once the correct passcode has been entered, you will have access to the root directories for the corresponding Bandit level. This process of authentication will be performed for every new instance you SSH into a Bandit level.
 
-<h2 id="otw-games-begin">{% skiplink "otw-games-begin", "Let the games begin!"%}</h2>
+<h2 id="otw-games-begin">Let the games begin! {% directlink "otw-games-begin" %}</h2>
 
 The goal of level zero is for you to log into the game using SSH and become familiarized with the bandit shell.
 
@@ -82,7 +80,7 @@ Once the correct credentials have been provided, you are sucessfully connected t
 bandit0@bandit:~$
 ```
 
-<h3 id="listing-commands"> I've connected to a bandit shell with SSH, now what?</h3>
+<h3 id="listing-commands">I've connected to a bandit shell with SSH, now what? {% directlink "listing-commands" %}</h3>
 
 When solving most of the Bandit games, I found myself repeatedly using a few shell commands. Since we're starting at the root directory for every new level, it's wise to list the directories contents with `ls` every time you connect to a new OverTheWire game server.
 
@@ -114,7 +112,7 @@ bandit0@bandit:~$
 
 You *should* see the above file structure in your corresponding shell when performing the `ls -la` command after connecting to Bandit level zero.
 
-<h2 id="bandit-level-zero">{% skiplink "bandit-level-zero", "Bandit Level Zero &RightArrow; One" %}</h2>
+<h2 id="bandit-level-zero">Bandit Level Zero <span>&RightArrow;</span> One {% directlink "bandit-level-zero" %}</h2>
 
 The password needed to access Bandit level 1 via SSH is stored in a file called `readme` located in the root directory. Use the password you've uncoverered in the previous level to log into Bandit Level One. Whenever you find a new password. Copy it to your clipboard before using SSH (on port 2220) with the corresponding level username `bandit1` to log into the next level and continue bandit wargames.
 
@@ -140,7 +138,7 @@ boJ9jbbUNNfk......
 
 And Voilà! Copy the password you found to your clipboard or a place you wont forget. You will need to use this password to SSH into the next bandit level. Use the `exit` command to disconnect from a bandit level after you're ready to move on.
 
-<h2 id="bandit-level-one">{% skiplink "bandit-level-one", "Bandit level One &RightArrow; Two"} </h3>
+<h2 id="bandit-level-one">Bandit level One <span>&RightArrow;</span> Two {% directlink "bandit-level-one" %}</h3>
 
 Now that you have become relatively familiar with the Bandit shell and how to go about finding passwords. Let's jump right into connecting to Bandit level one and find the hidden password!
 

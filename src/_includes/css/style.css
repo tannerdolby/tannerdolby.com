@@ -288,7 +288,7 @@ main {
 }
 
 .top-nav .nav-wrapper .nav-home li a:hover span {
-    background: #202931;
+    background: var(--nav-background);
     color: #fff;
 }
 
@@ -717,6 +717,7 @@ main {
 
 .contact-wrapper .socials-list li a {
     color: #fff;
+    filter: brightness(100%);
     text-decoration: none;
     padding-left: .5rem;
     display: flex;
@@ -726,13 +727,13 @@ main {
     padding-left: .75rem;
     padding-right: .75rem;
     border-radius: .3rem;
-    font-weight: 400;
+    font-weight: 450;
 }
 
 .contact-wrapper .socials-list li a img {
     margin-right: .5rem;
-    width: 18px;
-    height: 18px
+    max-width: 100%;
+    height: auto;
 }
 
 .contact-wrapper .socials-list li:nth-child(n) {
@@ -839,14 +840,20 @@ main {
     height: 23px;
 }
 
-.post-skiplink {
+.direct-link {
     text-decoration: none !important;
-    color: inherit !important;
+    color: transparent !important;
+    visibility: hidden !important;
+    vertical-align: top;
+    /* margin-left: -50px; */
 }
 
-.post-skiplink:hover {
-    text-decoration: underline !important;
-    color: var(--link-blue-accessible) !important;
+#post h2:hover .direct-link,
+#post h3:hover .direct-link,
+#post h4:hover .direct-link {
+    color: #555 !important;
+    visibility: visible !important;
+    cursor: pointer !important;
 }
 
 #post {
@@ -867,16 +874,11 @@ main {
     line-height: 1.5;
 }
 
-.main-content .post h3 {
-    margin-bottom: 0;
-}
-
-.main-content .post h3 a:hover {
+.main-content .post h2 a:hover {
     text-decoration: none !important;
 }
 
 .main-content .post .date {
-    margin-top: .5rem;
     margin: 0;
 }
 
@@ -915,7 +917,7 @@ main .art img {
     height: 400px;
 }
 
-/* Media query - START */
+/* Media queries - START */
 
 @media (max-width: 800px) {
     .featured-art  h2 {

@@ -8,17 +8,17 @@
                     <picture>
                         <source
                             type="image/webp"
-                            srcset="
-                                {{ project.image_data.large.webp }} {{ project.image_data.large.width }},
-                                {{ project.image_data.med.webp }} {{ project.image_data.med.width }},
-                                {{ project.image_data.small.webp }} {{ project.image_data.small.width }}
-                                "
-                            sizes="(min-width: 500px) 33.3vw, 100vw"
+                            srcset="{{ project.image_data.large.webp }} {{ project.image_data.large.width }},
+                                    {{ project.image_data.med.webp }} {{ project.image_data.med.width }},
+                                    {{ project.image_data.small.webp }} {{ project.image_data.small.width }}"
+                            sizes="(min-width: 400px) 33.3vw, 100vw"
                         >
                         <img 
                             src="{{ project.image_data.fallback_src }}" 
                             alt="{{ project.image_data.alt }}"
                             loading="lazy"
+                            width="1024"
+                            height="640"
                         >
                     </picture>
                 </a>

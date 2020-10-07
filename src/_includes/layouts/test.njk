@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Employee Profiles page</title>
+        <link rel="stylesheet" src="style.css">
+    </head>
+    <body>
+        <h1>XYZ Company Employee Profile Page</h1>
+        <main>
+            <div class="card-grid">
+                {% for card in cards %}
+                    <h2>{{ card.title }} - #{{ card.id }}</h2>
+                    <p>Hi, I'm {{ card.name }} and I work in {{ card.position }}.</p>
+                    <h3>Interests</h3>
+                    <ul>
+                        {% for interest in card.interests %}
+                        <li>{{ interest }} &nbsp;</li>
+                        {% endfor %}
+                    </ul>
+                    <h3>Schedule</h3>
+                    <ol>
+                        <li>Sunday: {{ card.scheduled.sunday }}</li>
+                        <li>Monday: {{ card.scheduled.monday }}</li>
+                        <li>Tuesday: {{ card.scheduled.tuesday }}</li>
+                        <li>Wednesday: {{ card.scheduled.wednesday }}</li>
+                        <li>Thursday: {{ card.scheduled.thursday }}</li>
+                        <li>Friday: {{ card.scheduled.friday }}</li>
+                        <li>Saturday: {{ card.scheduled.saturday }}</li>
+                    </ol>
+                {% endfor %}
+            </div>
+        </main>
+    </body>
+</html>

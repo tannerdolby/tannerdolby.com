@@ -21,6 +21,7 @@ module.exports = (eleventyConfig) => {
         templateFormats: ["njk", "md"],
     });
 
+    // Nunjucks date filter ie usage is date('YYYY-MM-DD') 
     eleventyConfig.addFilter("date", dateFilter);
 
     // Minify CSS with clean-css
@@ -41,23 +42,20 @@ module.exports = (eleventyConfig) => {
         }
     });
 
-    eleventyConfig.addShortcode("skiplink", function(id, title) {
-        return `<a class="post-skiplink" href=#${id}>${title}</a>`;
+    // Direct link to sections of page by using id selector
+    eleventyConfig.addShortcode("directlink", function(id) {
+        return `<a class="direct-link" href=#${id}>#</a>`;
     });
 
     // Inspired by @zachleat and his code title shortcode - credit: https://github.com/11ty/11ty-website/blob/master/.eleventy.js#L107-L109
-    eleventyConfig.addShortcode("codetitle", function(title, header = "Filename") {
-        return `<div class="filename-title" style="font-size: 14px;"><b style="font-size: 14px;">${header}</b> <code style="font-size: 14px;">${title}</code></div>`;
-    });
-
-    // shortcode for centering post title/date
-    eleventyConfig.addPairedShortcode("center", function(content) {
-        return `<div class="center">${content}</div>`
+    eleventyConfig.addShortcode("filename", function(title, header = "Filename") {
+        return `<div class="filename-title" style="font-size: 14px;"><b style="font-size: 14px;">${header}</b>: <em style="font-size: 14px;">${title}</em></div>`;
     });
 
     // shortcode for creating my headshot <img> in markdown
     eleventyConfig.addPairedShortcode("img", function(src) {
-        return `<img width="200" height="200" src="${src}" alt="Headshot of Tanner's face (a bit outdated)" class="about-headshot" loading="lazy">`
+        // 16:9 aspect ratio for image, width = 377 * (16 / 9) = 670.222 
+        return `<img width="225" height="225" src="${src}" alt="Headshot of Tanner's face (a bit outdated)" class="about-headshot" loading="lazy">`
     });
 
     return {

@@ -1,0 +1,124 @@
+[
+    {
+        "title": "Card One",
+        "name": "Larry",
+        "id": 1,
+        "position": "Systems",
+        "scheduled": {
+            "monday": true,
+            "tuesday": true,
+            "wednesday": true,
+            "thursday": true,
+            "friday": false,
+            "saturday": false,
+            "sunday": false
+        },
+        "interests": [
+            "Some rad stuff",
+            "reading rad blog posts",
+            "eleventy"
+        ]
+    },
+    {
+        "title": "Card Two",
+        "name": "Jerri",
+        "id": 2,
+        "position": "Front-end",
+        "scheduled": {
+            "monday": false,
+            "tuesday": true,
+            "wednesday": true,
+            "thursday": false,
+            "friday": true,
+            "saturday": true,
+            "sunday": false
+        },
+        "interests": [
+            "Figma",
+            "reading rad design blog posts",
+            "eleventy"
+        ]
+    },
+    {
+        "title": "Card Three",
+        "name": "Jane",
+        "id": 3,
+        "position": "Developer Relations",
+        "scheduled": {
+            "monday": true,
+            "tuesday": true,
+            "wednesday": false,
+            "thursday": true,
+            "friday": true,
+            "saturday": false,
+            "sunday": false
+        },
+        "interests": [
+            "Some rad devrel stuff",
+            "reading rad devrel blog posts",
+            "eleventy"
+        ]
+    },
+    {
+        "title": "Card Four",
+        "name": "Dan",
+        "id": 4,
+        "position": "Networking",
+        "scheduled": {
+            "monday": true,
+            "tuesday": false,
+            "wednesday": true,
+            "thursday": true,
+            "friday": false,
+            "saturday": true,
+            "sunday": false
+        },
+        "interests": [
+            "Some rad networking stuff",
+            "reading rad network security blog posts",
+            "eleventy"
+        ]
+    },
+    {
+        "title": "Card Five",
+        "name": "Lars",
+        "id": 5,
+        "position": "IT",
+        "scheduled": {
+            "monday": true,
+            "tuesday": true,
+            "wednesday": true,
+            "thursday": true,
+            "friday": true,
+            "saturday": false,
+            "sunday": false
+        },
+        "interests": [
+            "Some rad IT stuff",
+            "reading rad IT blog posts",
+            "eleventy"
+        ]
+
+    },
+    {
+        "title": "Card One",
+        "firstName": "Tom",
+        "lastName": "Mobile App Design",
+        "id": 6,
+        "position": "Systems",
+        "scheduled": {
+            "monday": true,
+            "tuesday": true,
+            "wednesday": true,
+            "thursday": true,
+            "friday": false,
+            "saturday": false,
+            "sunday": false
+        },
+        "interests": [
+            "Some rad swift stuff",
+            "reading rad app development blog posts",
+            "eleventy"
+        ]
+    }
+]
