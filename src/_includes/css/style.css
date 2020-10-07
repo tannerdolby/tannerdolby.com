@@ -221,16 +221,6 @@ main {
     overflow: hidden;
 }
 
-.top-nav {
-    background: #f1e8e6;
-    background: #212425;
-    background: #202220;
-    background: #212421;
-    background: #212421;
-    background: #22282c;
-    background: inherit;
-}
-
 .top-nav .nav-wrapper {
     max-width: 1000px;
     padding: 1rem 1.1rem;
@@ -260,9 +250,6 @@ main {
 
 .top-nav .nav-wrapper .nav-menu li a:hover {
     text-decoration: underline;
-    /* border-bottom: 4px solid lightgray;
-    border-bottom: 4px solid #e2e6eb;
-    border-bottom: 4px solid #cecece; */
 }
 
 .active {
@@ -309,16 +296,6 @@ main {
 
 .main-container .welcome-container {
     padding: 2.75rem 0 2.75rem 0;
-    background: #EAEDED;
-    background: #F2F2F2;
-    background: #265a70;
-    background: rgb(241, 239, 239);
-    background: #266270;
-    background: rgb(242, 242, 242);
-    background: #252f38;
-    background: var(--foreground-txt);
-    background: #73C6B6;
-    background: #F2F4F4;
     background: inherit;
 } 
 
