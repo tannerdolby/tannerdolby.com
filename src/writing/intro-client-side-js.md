@@ -1,8 +1,8 @@
 ---
 title: An Introduction To Client-side JavaScript
 shortname: JS Client Side
-date_created: September 25, 2020
-datetime: 2020-09-25 00:00:00 Z
+date_created: September 28, 2020
+datetime: 2020-09-28 00:00:00 Z
 tag: web
 post_tags:
     - JavaScript
