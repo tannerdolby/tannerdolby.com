@@ -329,14 +329,10 @@ main {
 }
 
 .about-headshot {
+    display: block;
+    max-width: 220px;
+    margin: 3rem auto;
     border-radius: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 4rem;
-    margin-bottom: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .about-links {
