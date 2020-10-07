@@ -4,7 +4,7 @@ title: About Me
 permalink: "/about/"
 headshot: 
     src: "/images/headshot3.png"
-    srcSmall: "/images/headshot3-small.jpg"
+    srcSmall: "/images/headshot3-sm.jpg"
 layout: layouts/about.njk
 ---
 
