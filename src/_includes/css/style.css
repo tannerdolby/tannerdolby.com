@@ -452,11 +452,12 @@ main {
 
 .main-container .projects .project-grid {
     display: grid;
+    padding-left: 0;
     grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
     gap: 2rem;
     overflow: hidden;
     list-style: none;
-    padding: .2rem;
+    /* padding: .2rem; */
 }
 
 .main-container .projects .project-grid .project-tile {
@@ -969,5 +970,11 @@ main .art img {
 
     .socials-list li a {
         margin: 1rem 0;
+    }
+}
+
+@media (max-width: 350px) {
+    .main-container .projects .project-grid {
+        grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
     }
 }
