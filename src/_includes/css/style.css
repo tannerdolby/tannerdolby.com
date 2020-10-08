@@ -690,7 +690,6 @@ main {
 
 .contact-wrapper .socials-list li a {
     color: rgb(255, 255, 255);
-    border: 1px solid rgb(211, 211, 211);
     text-decoration: none;
     padding-left: .5rem;
     display: flex;
@@ -718,10 +717,15 @@ main {
     background: rgb(29, 161, 242);
     background: #1D90D7;
     background: #2997DB;
+    background: #2179B0;
+    filter: brightness(105%);
+    background: #1273E2;
 }
 
 .twitter-block:hover {
     background: #1c98e6;
+    background: #1273E2;
+    background: rgb(19, 120, 235);
 }
 
 .github-block {
@@ -734,10 +738,12 @@ main {
 
 .linkedin-block {
     background: #1885c9;
+    background: #1273E2;
 }
 
 .linkedin-block:hover {
-    background: #1477b4;
+    background: #0e75b4;
+    background: rgb(19, 120, 235);
 }
 
 .footer-main {
