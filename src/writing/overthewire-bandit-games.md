@@ -68,13 +68,11 @@ After running the above command, your shell will prompt you to enter a password.
 
 <h2 id="otw-games-begin">Let the games begin! {% directlink "otw-games-begin" %}</h2>
 
-The goal of level zero is for you to log into the game using SSH and become familiarized with the bandit shell.
+The goal of level zero is for you to log into the game using SSH and become familiarized with the bandit shell. The host to which you need to connect is `bandit.labs.overthewire.org` on port 2220. We are told that the username and password are both `bandit0`. Once logged in, go to the [Level One](https://overthewire.org/wargames/bandit/bandit1.html) page to find out how to beat this first Bandit level (or keep reading).
 
-The host to which you need to connect is `bandit.labs.overthewire.org` on port 2220. We are told that the username and password are both `bandit0`. Once logged in, go to the [Level One](https://overthewire.org/wargames/bandit/bandit1.html) page to find out how to beat this first Bandit level (or keep reading).
+Now that you've sucessfully connected to the Bandit shell, you will have access to the root directory contents for the corresponding level. If your having trouble connecting, feel free to refer back to the [Connecting to Bandit Shell](/writing/{{ tag }}/{{ shortname | slug }}/#connect-bandit-shell) section.
 
-Now that you've sucessfully connected to the Bandit shell you will have access to the root directory contents. If you haven't already, make sure to connect using SSH to Bandit level zero. Refer back to the [Connecting to Bandit Shell](/writing/{{ tag }}/{{ shortname | slug }}/#connect-bandit-shell) section.
-
-Once the correct credentials have been provided, you are sucessfully connected to Bandit level zero and will see a shell similar to below.
+Once the correct credentials have been provided, you're sucessfully connected to Bandit level zero and will see a shell similar to below.
 
 ```bash
 bandit0@bandit:~$
@@ -86,14 +84,14 @@ When solving most of the Bandit games, I found myself repeatedly using a few she
 
 - Run the command `ls` to list all directory contents and files present on the server. 
 
-After running the `ls` command in bandit level zero, the output returns all the directory contents. Within this level, there is only one file named `readme` existing inside the current directory.
+After running `ls` in bandit level zero, the output returns all the directory contents. Within this level, there is only one file named `readme` existing inside the current directory.
 
 ```bash
 bandit0@bandit:~$ ls 
 readme
 ```
 
-Next, I will use the command `ls` with flags `-la` to list all hidden files in long listing format within the bandit level root directory. To define the flags or options, take a look below.
+Next, use the command `ls` with flags `-la` to list all hidden files in long listing format within the bandit level root directory. To define the flags or options, take a look below.
 
 - `-l` provides a list of a directories content in long listing format.
 - `-a` tells the computer to not ignore entries starting with a period.
@@ -127,7 +125,7 @@ bandit0@bandit:~$ find . -type f -exec file {} + | grep ASCII
 bandit0@bandit:~$
 ```
 
-To break down the above output: The shell told us that each of the files contained ASCII text and were executable. This intermediate step using `find` is not needed as the password could be found via 'trial-and-error' by opening each file in the current directory. But, I thought it was good practice to show moving forward into the next levels.
+To break down the above output: The shell told us that each of the files contained ASCII text and were executable. This intermediate step using `find` is not necessarily needed here as the password could be found via 'trial-and-error' by opening each file in the current directory. But, I thought it was good practice to show moving forward into the next levels.
 
 You can proceed to opening each of the files using `cat filename` on macOS, but I have a good feeling about the first file in the output: `readme`. Lets open it.
 
@@ -136,13 +134,13 @@ bandit0@bandit:~$ cat ./readme
 boJ9jbbUNNfk......
 ```
 
-And Voilà! Copy the password you found to your clipboard or a place you wont forget. You will need to use this password to SSH into the next bandit level. Use the `exit` command to disconnect from a bandit level after you're ready to move on.
+And Voilà! Copy the password you found to your clipboard or a place you wont forget. You will need to use it to SSH into the next bandit level. Use the `exit` command to disconnect from a bandit level after you're ready to move on.
 
 <h2 id="bandit-level-one">Bandit level One <span>&RightArrow;</span> Two {% directlink "bandit-level-one" %}</h3>
 
-Now that you have become relatively familiar with the Bandit shell and how to go about finding passwords. Let's jump right into connecting to Bandit level one and find the hidden password!
+Now that you've become relatively familiar with the Bandit shell and how to go about finding passwords. Lets jump right into connecting to Bandit level one and find the hidden password!
 
-If you're following along through OverTheWire's website. We are told that the password for this level is stored inside a file named `-` located in the home directory.
+If you're following along through OverTheWire's website. We're told that the password for this level is stored inside a file named `-` located in the home directory.
 
 The first order of business will be connecting to Bandit level one using `bandit1` as the username on port 2220. This levels password will be the characters you copied to clipboard after performing `cat ./readme` to open the file.
 
@@ -150,13 +148,13 @@ The first order of business will be connecting to Bandit level one using `bandit
 spherical:~ TannerDolby$ ssh bandit1@bandit.labs.overthewire.org -p 2220
 ```
 
-You will be prompted to enter a password after entering the above command. Paste the password that we copied to the clipboard from the previous level. Remember this password was found by opening the contents of readme by using `cat ./readme`. If the correct password is provided then you will have successfully connected to the bandit level one shell. You terminal or command line should display an output similar to the code snippet below.
+If the correct password is provided then you will have successfully connected to the bandit level one shell. You terminal or command line should display an output similar to the code snippet below.
 
 ```bash
 bandit1@bandit:~$
 ```
 
-Now that we have connected to the bandit server lets find the password stored in a file called `-` located in the home directory. Like always, lets list all of the root directories contents with `ls -la`. Refer to [ls options](/writing/{{ tag }}/{{ shortname | slug}}/#listing-commands) for a refresher on why we use the `-la`.
+Now that your connected to the bandit server lets find the password stored in a file called `-`. Like always, lets list all of the root directories contents with `ls -la`. Refer to [ls options](/writing/{{ tag }}/{{ shortname | slug}}/#listing-commands) for a refresher on why to use the `-la` options.
 
 ```bash
 bandit1@bandit:~$ ls -la
@@ -170,9 +168,19 @@ drwxr-xr-x 41 root    root    4096 Oct 16  2018 ..
 bandit1@bandit:~$
 ```
 
-The file `-` is what we are looking for, which can be found on the first line. Next it would be wise to check and make sure this file contains ASCII characters. 
+The file `-` is what we are looking for, which can be found on the first line. Next, it would be wise to check and make sure this file contains ASCII characters. 
 
-Utilizing the `find` command, we can check for files containing ASCII characters or that are considered to be 'Human Readable'. Perform the command `grep ASCII`. The other helpful options to use here would be, `type -f` to find all regular files, and `-exec file` for finding all executable files.
+Utilizing the `find` command chained with a few other tools, we can check for files containing ASCII characters or that are considered to be "Human Readable".
+
+<h3 id="what-is-grep">What is Grep? {% directlink "what-is-grep" %}</h3>
+
+[Grep](https://phoenixnap.com/kb/grep-command-linux-unix-examples) is an acronym that stands for Global Regular Expression Print. It's usage as a command line tool is to search for a string of text in a given file. The syntax of using `grep` calls for the pattern or string your searching for and the filename you'd like to search in. 
+
+```bash
+grep <string to match> <filename to search for>
+```
+
+The other helpful options to use here would be, `type -f` to find all regular files, and `-exec file` for finding all executable files.
 
 ```bash
 bandit1@bandit:~$ find . -type f -exec file {} + | grep ASCII
@@ -182,26 +190,26 @@ bandit1@bandit:~$ find . -type f -exec file {} + | grep ASCII
 bandit1@bandit:~$
 ```
 
-And would you look at that, the `/-` file indeed contains ASCII text. Lets open it with the `cat` command and find that password.
+And would you look at that, the `/-` file indeed contains ASCII text. Lets open it with the `cat` command and find the password.
 
 ```shell
 bandit1@bandit:~$ cat ./-
 CV1DtqXWVF......
 ```
 
-Lastly, since we have (_hopefully_) copied the password to clipboard from opening the above file. Exit the current bandit shell and prepare to SSH into the next level! 
+Make sure to copy the password to clipboard from opening the above file and exit the current bandit shell. Onward!
 
-<h2 id="bandit-level-two">Bandit Level Two &RightArrow; Three</h3>
-Now that you've made it this far, going about finding passwords in upcoming Bandit Level should be more clear. OverTheWire tells us that the password for the next level is stored in a file called spaces in this filename located in the home directory.
+<h2 id="bandit-level-two">Bandit Level Two &RightArrow; Three {% directlink "bandit-level-two"%}</h3>
 
-Before we can start searching for the above file, we must first connect to Bandit level two on port 2220 with the username bandit2 and password copied to clipboard from last level. The connection process in terminal should be:
+OverTheWire tells us that the password for the next level is stored in a file called `spaces in this filename` located in the home directory.
+
+Before you can start searching for the above file, you must first connect to Bandit level two on port 2220 with the username `bandit2` and password copied to clipboard from last level. The connection process in terminal should be:
 
 ```bash
 ssh bandit2@bandit.labs.overthewire.org -p 2220
 ```
 
-Since this post has covered connecting, I will assume you provided the correct password found from the previous level when attempting to SSH into Bandit level two. After you've connected, whats the first thing you thought to do? 
-If you were thinking what I was, then you might have beat me to it by using an `ls -la` command in the shell to perform a long listing format of all the current directories content.
+After you've connected, whats the first thing you thought to do? If you were thinking what I was, then you might have beat me to it by using an `ls -la` command in the shell to perform a long listing format of all the current directories content.
 
 ```bash
 bandit2@bandit:~$ ls -la
@@ -215,7 +223,7 @@ drwxr-xr-x 41 root    root    4096 Oct 16  2018 ..
 bandit2@bandit:~$
 ```
 
-And there it is! The file, "spaces in this filename". Lets open it by using the cat command and encase the filename in double quotes so the cat command ignores spaces inside filenames.
+The file `spaces in this filename` indeed exists, so lets open it up and see the file contents using the `cat` command. If a filename contains spaces in between characters, try wrapping filename in double quotes so then the `cat` command ignores spaces inside filenames.
 
 ```bash
 bandit2@bandit:~$ cat "spaces in this filename"
@@ -225,20 +233,22 @@ bandit2@bandit:~$ exit
 
 Make sure to copy the password to clipboard or make note of it as we will need it handy when accessing the next bandit level.
 
-<h2 id="bandit-level-three">Bandit Level Three &RightArrow; Four</h3>
+<h2 id="bandit-level-three">Bandit Level Three &RightArrow; Four {% directlink "bandit-level-three" %}</h3>
 
-OverTheWire tells us that the password to access the next level is stored in a hidden file within the `inhere` directory. Now that the process of using SSH to connect to new OverTheWire Bandit Servers has been repeated, I will just show my terminal command to SSH into Bandit level three on port 2220 with username bandit3 and the password found in the previous level.
+OverTheWire tells us that the password to access the next level is stored in a hidden file within the `inhere` directory. Now that the process of using SSH to connect to new OverTheWire Bandit Servers has been repeated a few times, I will just show my terminal command to SSH into Bandit level three on port 2220 with username bandit3 and the password found in the previous level.
 
 ```bash
 spherical:~ TannerDolby$ ssh bandit3@bandit.labs.overthewire.org -p 2220
 ```
+
+Quick listing of the root directory contents.
 
 ```bash
 bandit3@bandit:~$ ls
 inhere
 ```
 
-Remember! We have been told there is a password hidden in a file within the `inhere` directory. Let's change to that directory using the `cd` command and inspect the directories contents.
+Remember! We have been told there is a password hidden in a file within the `inhere` directory. Lets change to that directory using the `cd` command and inspect the directories contents.
 
 ```bash
 bandit3@bandit:~$ cd inhere
@@ -250,7 +260,7 @@ drwxr-xr-x 3 root    root    4096 Oct 16  2018 ..
 bandit3@bandit:~/inhere$
 ```
 
-There we are! We've found a file called `.hidden` with user or groups related to bandit3 and bandit4. To make sure the `.hidden` file contains ASCII characters, try using a `find` command.
+There it is, a file called `.hidden` with user or groups related to bandit3 and bandit4. In order to make sure the `.hidden` file contains ASCII characters, try using a `find` command to uncover any executable file types that contain ASCII text.
 
 ```bash
 bandit3@bandit:~/inhere$ find . -type f -exec file {} + | grep ASCII
@@ -258,7 +268,7 @@ bandit3@bandit:~/inhere$ find . -type f -exec file {} + | grep ASCII
 bandit3@bandit:~/inhere$
 ```
 
-Bravo! The `.hidden` file found in the inhere directory we can be almost positive stores the next levels password.
+The `./.hidden` file is found within the inhere directory. Mine as well open it and see if there is a password inside.
 
 ```bash
 bandit3@bandit:~/inhere$ cat ./.hidden
@@ -266,9 +276,9 @@ pIwrPrtPN36QITS..................
 bandit3@bandit:~/inhere$ exit
 ```
 
-<h2 id="bandit-level-four">Bandit Level Four &RightArrow; Five</h3>
+<h2 id="bandit-level-four">Bandit Level Four &RightArrow; Five {% directlink "bandit-level-four" %}</h3>
 
-The password for the next level is stored in the only human-readable file inside the `inhere` directory. Pro tip: if your terminal is cluttered try using the `reset` or `clear` command. 
+The password for the next level is stored in the only human-readable file inside the `inhere` directory. If your shell is cluttered up with all the previous levels content, try using the `reset` or `clear` command. 
 
 Next, connect to the level 4 bandit server on port 2220 via SSH. Using bandit4 as the username and the last levels hidden password.
 
@@ -276,7 +286,7 @@ Next, connect to the level 4 bandit server on port 2220 via SSH. Using bandit4 a
 spherical:~ TannerDolby$ ssh bandit4@bandit.labs.overthewire.org -p 2220
 ```
 
-Since we are told the password is stored in the only human-readable file within the inhere directory. Lets change directory to 'inhere' and then perform a long listing operation of all the current 'inhere' directories contents. Then use the find command for finding a file containing ASCII characters.
+Since OTW tells you the password is stored in the only human-readable file within the inhere directory. Lets change directory to `inhere` and then perform a long listing operation of all the current `inhere` directories contents. 
 
 ```bash
 bandit4@bandit:~$ cd inhere
@@ -286,11 +296,16 @@ drwxr-xr-x 2 root    root    4096 Oct 16  2018 .
 drwxr-xr-x 3 root    root    4096 Oct 16  2018 ..
 -rw-r----- 1 bandit5 bandit4   33 Oct 16  2018 -file00
 ...
+```
+
+For length purposes, I truncated off the listing content from the above output after `-file00`. There are many files in this directory so why not simply use the `find` command to help match any files containing ASCII characters.
+
+```bash
 bandit4@bandit:~/inhere$ find . -type f -exec file {} + | grep ASCII
 ./-file07: ASCII text
 ```
 
-And there it is, the only human-readable file that is stored in the 'inhere' directory. Lets open it and find the last password of this article!
+And there it is, the only human-readable file that is stored in the `inhere` directory. Lets open it and find the last password of this article!
 
 ```bash
 bandit4@bandit:~/inhere$ cat ./-file07
@@ -298,12 +313,14 @@ koReBOKuIDDe.......................
 bandit4@bandit:~/inhere$ exit
 ```
 
-<h2 id="concluding-remarks">Concluding Remarks</h2>
-Thank you for reading this far! I hope your experience with using the terminal (or command line) has improved by completing bandit levels 1-5 via OverTheWire. If you noticed all of the passwords for each level are not provided, you saw right  :). I will not provide any of the complete passwords as you are capable of following this tutorial and finding them for yourself! Until next time. 
+<h2 id="concluding-remarks">Concluding Remarks {% directlink "concluding-remarks"%}</h2>
 
-<h3 id="references">References</h3>
+Thank you for reading this far! I hope your experience with using the shell has improved by completing bandit levels 1-5 via OverTheWire. If you noticed all of the passwords for each level are not provided, you saw right! I will not provide any of the complete passwords as you are capable of following this tutorial and finding them for yourself! Until next time. 
+
+<h3 id="references">References {% directlink "references" %}</h3>
 
 1. [overthewire.org](https://overthewire.org/wargames/)
 2. [telnet](https://www.ssh.com/ssh/telnet)
 3. [rlogin](https://www.ssh.com/ssh/rlogin)
 4. [FTP](https://en.wikipedia.org/wiki/File_Transfer_Protocol)
+5. [grep command](https://phoenixnap.com/kb/grep-command-linux-unix-examples)

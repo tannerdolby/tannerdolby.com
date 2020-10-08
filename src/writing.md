@@ -1,6 +1,6 @@
 ---
 page_name: Writing - Tanner Dolby
-title: Latest Articles
+title: Writing
 layout: "layouts/writings.njk"
 permalink: "/writing/"
 ---
