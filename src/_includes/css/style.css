@@ -961,3 +961,13 @@ main .art img {
         height: 2.5rem;
     }
 }
+
+@media (max-width: 365px) {
+    .socials-list {
+        flex-direction: column;
+    }
+
+    .socials-list li a {
+        margin: 1rem 0;
+    }
+}
