@@ -31,7 +31,7 @@
                         <p class="preview">{{ post.data.preview }}</p>
                     </article>
                     {% endfor %}
-                    <a class="see-more" style="font-size: 17px; text-decoration: underline;" href="/writing/">See more posts...</a>
+                    <a class="see-more" style="font-size: 17px; text-decoration: underline;" href="/writing/">See more posts <span>&RightArrow;</span></a>
                 </div>
             </section>
             {% include "layouts/projects.njk" %}
@@ -41,7 +41,6 @@
                     <ul class="feat-art-list" style="padding-left: 0; list-style: none;">
                         <li>
                             <a href="/art/#window-nighttime" aria-label="featured image two">
-                                <!-- 16:9 aspect ratio: width = 330 * (16 / 9) = 640px -->
                                 <img src="/images/css-window-night-med.jpg" alt="Window during night time" width="640" height="330">
                             </a>
                         </li>

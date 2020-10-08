@@ -174,7 +174,7 @@ Utilizing the `find` command chained with a few other tools, we can check for fi
 
 <h3 id="what-is-grep">What is Grep? {% directlink "what-is-grep" %}</h3>
 
-[Grep](https://phoenixnap.com/kb/grep-command-linux-unix-examples) is an acronym that stands for Global Regular Expression Print. It's usage as a command line tool is to search for a string of text in a given file. The syntax of using `grep` calls for the pattern or string your searching for and the filename you'd like to search in. 
+[Grep](https://phoenixnap.com/kb/grep-command-linux-unix-examples) is an acronym that stands for Global Regular Expression Print. It's usage as a command line tool is to search for a pattern or string of text in a given file. The syntax of using `grep` calls for the pattern or string your searching for and the filename you'd like to search in. 
 
 ```bash
 grep <string to match> <filename to search for>
