@@ -245,7 +245,7 @@ drwxr-xr-x 3 root    root    4096 Oct 16  2018 ..
 bandit3@bandit:~/inhere$
 ```
 
-There it is, a file called `.hidden` with user or groups related to bandit3 and bandit4. In order to make sure the `.hidden` file contains ASCII characters, try using a `find` command to uncover any executable file types that contain ASCII text.
+There it is, a file called `.hidden` with user or groups related to bandit3 and bandit4. In order to make sure the file contains ASCII characters, try using a `find` command to uncover any executable file types that contain ASCII text.
 
 ```bash
 bandit3@bandit:~/inhere$ find . -type f -exec file {} + | grep ASCII
@@ -253,7 +253,7 @@ bandit3@bandit:~/inhere$ find . -type f -exec file {} + | grep ASCII
 bandit3@bandit:~/inhere$
 ```
 
-The `./.hidden` file is found within the inhere directory. Mine as well open it and see if there is a password inside.
+The `./.hidden` file is found within the inhere directory. Proceed to open it and see if there is a password inside.
 
 ```bash
 bandit3@bandit:~/inhere$ cat ./.hidden
@@ -271,7 +271,7 @@ Next, connect to the level 4 bandit server on port 2220 via SSH. Using bandit4 a
 spherical:~ TannerDolby$ ssh bandit4@bandit.labs.overthewire.org -p 2220
 ```
 
-Since OTW tells you the password is stored in the only human-readable file within the inhere directory. Lets change directory to `inhere` and then perform a long listing operation of all the current `inhere` directories contents. 
+Since OTW tells you the password is stored in the only human-readable file within the inhere directory. Lets change directory to `inhere` and then perform a long listing operation of all the current directories contents. 
 
 ```bash
 bandit4@bandit:~$ cd inhere
@@ -298,7 +298,7 @@ koReBOKuIDDe.......................
 bandit4@bandit:~/inhere$ exit
 ```
 
-<h2 id="concluding-remarks">Concluding Remarks {% directlink "concluding-remarks"%}</h2>
+<h2 id="concluding-remarks">Conclusion {% directlink "concluding-remarks"%}</h2>
 
 Thank you for reading this far! I hope your experience with using the shell has improved by completing bandit levels 1-5 via OverTheWire. If you noticed all of the passwords for each level are not provided, you saw right! I will not provide any of the complete passwords as you are capable of following this tutorial and finding them for yourself! Until next time. 
 

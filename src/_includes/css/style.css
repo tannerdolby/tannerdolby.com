@@ -724,14 +724,17 @@ main {
     background: #1D90D7;
     background: #2997DB;
     background: #2179B0;
-    filter: brightness(105%);
     background: #1273E2;
+    background: #0F73E6;
+    /* background: rgb(19, 118, 231);
+    background: #1573E5; */
 }
 
 .twitter-block:hover {
     background: #1c98e6;
     background: #1273E2;
     background: rgb(19, 120, 235);
+    background: rgb(22, 123, 238);
 }
 
 .github-block {
@@ -744,12 +747,13 @@ main {
 
 .linkedin-block {
     background: #1885c9;
-    background: #1273E2;
+    background: rgb(16, 108, 212);
 }
 
 .linkedin-block:hover {
     background: #0e75b4;
     background: rgb(19, 120, 235);
+    background: rgb(13, 103, 206);
 }
 
 .footer-main {
@@ -858,7 +862,8 @@ main {
     padding-bottom: .5rem;
 }
 
-#post-content #post ul li {
+#post-content #post ul li,
+#post-content #post ol li {
     padding: .3rem 0;
 }
 

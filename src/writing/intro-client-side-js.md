@@ -36,11 +36,11 @@ demo_image:
 
 <h3 id="what-is-javascript">What is JavaScript? {% directlink "what-is-javascript" %}</h3>
 
-JavaScript is a lightweight, interpreted, compiled programming language with first class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.
+[JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) is a lightweight, interpreted, compiled programming language with first class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.
 
 <h2 id="why-read-this">Why read this article? {% directlink "why-read-this" %}</h2>
 
-If you're like me, I was (for some reason) afraid of learning to code in JavaScript at first. It felt so abstract and nothing like the previous experience I had programming with [R/Rstudio](https://www.r-project.org/). Here is a little more backstory, so I was browsing the web and came across a video titled: [This is truly the only way to learn JavaScript](https://www.youtube.com/watch?time_continue=4&v=HnXmI2UVZlU&feature=emb_logo) by Chris Hawkes. Quite a catchy video title. 
+If you're like me, I was (for some reason) afraid of learning to code in JavaScript at first. It felt so abstract and nothing like the previous experience I had programming with [R/Rstudio](https://www.r-project.org/). Here is a little more backstory, so I was browsing the web and came across a video titled, [This is truly the only way to learn JavaScript](https://www.youtube.com/watch?time_continue=4&v=HnXmI2UVZlU&feature=emb_logo) by Chris Hawkes. Quite a catchy video title. 
 
 That being said, after watching the video I was captivated at the fact we could virtually create HTML elements in JavaScript. Then bind them to the DOM while also having the ability to add any valid attributes on these newly created HTML elements. This essentially took out all the need to ever go into my `.html` files, hypotethically speaking. Other than to include a `script` element for referencing the client side JavaScript containing all of the virtually created DOM elements.
 
@@ -158,7 +158,7 @@ Inside the `index.html` file, entering `html5-boilerplate` with the specified pl
 
 Great! Now that the basic markup for `index.html` page is setup. Make sure to provide the relevant document metadata inside the `<head>` tag. Ensure to include references to the custom CSS file using a `<link>` and custom JS `<script>` so the document page can reference that code like the example shows above.
 
-<h2 id="finalize"> Putting it all together! {</h3>
+<h2 id="finalize"> Putting it all together! {% directlink "finalize" %}</h3>
 
 Navigate to the `script.js` file in the home js-tutorial directory and lets start writing JS code for creating a basic DOM tree. We will create use everything mentioned so far to build a very web page with virtually created HTML elements.
 
@@ -209,7 +209,7 @@ div1.appendChild(p);
 document.body.appendChild(div);
 ```
 
-Fire up your local web server or simply open the `index.html` from your file system into the web browser. If you have provided the proper `<link>` element for CSS, the HTML we created in `script.js` will render on the page with the exact DOM structure that was setup while binding the HTML elements. I gave the page a bit more styling within the [stylesheet](https://github.com/tannerdolby/intro-browser-js/blob/master/style.css) if you want to view the code. You could apply the same styles as those present in the CSS file by using JavaScript and `element.style.attributeNode = ""`, this will take a bit longer but again is great practice.
+Start up your local web server or simply open the `index.html` from your file system into the web browser. If you have provided the proper `<link>` element for CSS, the HTML we created in `script.js` will render on the page with the exact DOM structure that was setup while binding the HTML elements. I gave the page a bit more styling within the [stylesheet](https://github.com/tannerdolby/intro-browser-js/blob/master/style.css) if you want to view the code. You could apply the same styles as those present in the CSS file by using JavaScript and `element.style.attributeNode = ""`, this will take a bit longer but again is great practice.
 
 <h3 id="live-demo">Check out the live demo {% directlink "live-demo" %}</h3>
 
@@ -231,7 +231,7 @@ Fire up your local web server or simply open the `index.html` from your file sys
 
 <h2 id="conclusion">Conclusion {% directlink "conclusion" %}</h2>
 
-If you read this far and followed each step, you should now have a very basic web page with a couple HTML elements built primarily with JS instead of using traditional Markup directly inside an `.html` file.
+If you read this far and followed each step, you should now have a very basic web page with a couple HTML elements built primarily with JS instead of using traditional markup directly inside an `.html` file.
 
 For those wanting to start the journey with JavaScript, this is truly some of the best practice to become more familiar with the basics of browser JavaScript. I went from someone who hated JavaScript and had no idea how to use it. Now I utilize the power of JavaScript in my own websites and applications.
 

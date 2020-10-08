@@ -102,10 +102,9 @@
     },
     {
         "title": "Card One",
-        "firstName": "Tom",
-        "lastName": "Mobile App Design",
+        "name": "Tom",
+        "position": "Mobile App Design",
         "id": 6,
-        "position": "Systems",
         "scheduled": {
             "monday": true,
             "tuesday": true,
