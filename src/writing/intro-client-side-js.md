@@ -1,5 +1,5 @@
 ---
-title: An Introduction To Client-side JavaScript
+title: An Introduction to Client-side JavaScript
 shortname: JS Client Side
 date_created: September 28, 2020
 datetime: 2020-09-28 00:00:00 Z

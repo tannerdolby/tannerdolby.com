@@ -1,5 +1,5 @@
 ---
-title: Generate Page Content from a Global Data File using 11ty
+title: Generate Page Content From a Global Data File Using 11ty
 shortname: 11ty Iterate Global Data
 permalink: "/writing/web/{{ shortname | slug }}/"
 dateCreated: 2020-10-05 00:00:00 Z

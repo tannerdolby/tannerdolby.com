@@ -8,11 +8,9 @@ headshot:
 layout: layouts/about.njk
 ---
 
-My name is Tanner Dolby. I'm a mathematician and front-end developer based in Sacramento, CA. I enjoy using semantic and accessible HTML paired with modern CSS to build fast websites. I'm currently focused on learning more about Web Content Accessibility Guidelines (WCAG) and SVG.
+My name is Tanner Dolby. I'm a mathematician and front-end developer based in Sacramento, CA. I enjoy using semantic and accessible HTML paired with modern CSS to build fast websites.
 
-I started my journey as a self taught developer using [freeCodeCamp.org](https://freecodecamp.org) in 2017. Ever since then, I've been hooked on building things for the web. I enjoy creating fun CSS illustrations and front-end demos on [CodePen](https://codepen.io/tannerdolby) in my free time. 
-
-With the JAMstack movement on the rise, I've recently taken an interest in Static Site Generators (SSG). In particular [11ty](https://11ty.dev), which this website is built with.
+I started my journey as a self taught developer using [freeCodeCamp.org](https://freecodecamp.org) in 2017. Ever since then, I've been hooked on building things for the web. I enjoy creating fun CSS illustrations and front-end demos on [CodePen](https://codepen.io/tannerdolby) in my free time. With the JAMstack movement on the rise, I've recently taken an interest in Static Site Generators (SSG). In particular [11ty](https://11ty.dev), which this website is built with.
 
 ## Education
 I recieved my Bachelor of Science degree in Applied Mathematics from Arizona State University on May 11, 2020. Due to COVID-19, the university didn't conduct an in-person commencement ceremenony. Feel free to take a look at the [virtual ceremonies](https://vgradasu.z4.web.core.windows.net/asu/III/#811351). 
