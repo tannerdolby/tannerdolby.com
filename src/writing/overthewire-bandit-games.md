@@ -304,8 +304,8 @@ Thank you for reading this far! I hope your experience with using the shell has 
 
 <h3 id="references">References {% directlink "references" %}</h3>
 
-1. [overthewire.org](https://overthewire.org/wargames/)
-2. [telnet](https://www.ssh.com/ssh/telnet)
-3. [rlogin](https://www.ssh.com/ssh/rlogin)
-4. [FTP](https://en.wikipedia.org/wiki/File_Transfer_Protocol)
-5. [grep command](https://phoenixnap.com/kb/grep-command-linux-unix-examples)
+- [overthewire.org](https://overthewire.org/wargames/)
+- [telnet](https://www.ssh.com/ssh/telnet)
+- [rlogin](https://www.ssh.com/ssh/rlogin)
+- [FTP](https://en.wikipedia.org/wiki/File_Transfer_Protocol)
+- [grep command](https://phoenixnap.com/kb/grep-command-linux-unix-examples)
