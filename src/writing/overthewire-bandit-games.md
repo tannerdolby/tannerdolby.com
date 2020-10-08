@@ -25,21 +25,6 @@ image:
     credit: https://www.pexels.com/photo/equipment-pavement-security-security-camera-430208/
 ---
 
-<picture>
-    <source
-        type="image/webp"
-        srcSet="
-            {{ image.large.webp }} {{ image.large.width }},
-            {{ image.med.webp }} {{ image.med.width }},
-            {{ image.small.webp }} {{ image.small.width }}
-            "
-        sizes="(min-width: 500px) 33.3vw, 100vw"
-    >
-    <img style="width: 100%;" alt="Security Cameras" src="{{ image.fallback.src }}" loading="lazy">
-</picture>
-
-<p style="text-align: center; margin-top: .5rem; font-size: 16px;"><i>Photo by Scott Webb from <a href="{{ image.credit}}">Pexels</a></i></p>
-
 {{ preview }} I'm by no means a security expert, but these challenges can be quite fun while providing some solid file system practice. Grab your favorite cup of coffee or tea and get ready to conquer some OverTheWire Bandit games!
 
 <h2 id="what-is-ssh">What is SSH? {% directlink, "what-is-ssh" %}</h2>

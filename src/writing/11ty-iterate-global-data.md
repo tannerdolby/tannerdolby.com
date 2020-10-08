@@ -4,6 +4,9 @@ shortname: 11ty Iterate Global Data
 permalink: "/writing/web/{{ shortname | slug }}/"
 dateCreated: 2020-10-05 00:00:00 Z
 preview: There are many great features to choose from when building websites with Eleventy (11ty). One thing in particular that I find very useful is the ability to iterate a global data file to generate page content.
+post_tags:
+    - 11ty
+    - Nunjucks
 ---
 
 {{ preview }}

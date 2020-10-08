@@ -209,7 +209,7 @@ div1.appendChild(p);
 document.body.appendChild(div);
 ```
 
-Fire up your local web server or simply open the `index.html` from your file system into the web browser. If you have provided the proper `<link>` element for CSS, the HTML we created in `script.js` will render on the page with the exact DOM structure that was setup while binding the HTML elements. I gave the page a bit more styling within the stylesheet [style.css](https://github.com/tannerdolby/intro-browser-js/blob/master/style.css) if you want to view the code. You could apply the same styles as those present in the CSS file by using JavaScript and `element.style.attributeNode = ""`, this will take a bit longer but again is great practice.
+Fire up your local web server or simply open the `index.html` from your file system into the web browser. If you have provided the proper `<link>` element for CSS, the HTML we created in `script.js` will render on the page with the exact DOM structure that was setup while binding the HTML elements. I gave the page a bit more styling within the [stylesheet](https://github.com/tannerdolby/intro-browser-js/blob/master/style.css) if you want to view the code. You could apply the same styles as those present in the CSS file by using JavaScript and `element.style.attributeNode = ""`, this will take a bit longer but again is great practice.
 
 <h3 id="live-demo">Check out the live demo {% directlink "live-demo" %}</h3>
 
@@ -223,7 +223,8 @@ Fire up your local web server or simply open the `index.html` from your file sys
     <img 
         src="{{ demo_image.fallback.src }}" 
         alt="{{ demo_image.alt }}" 
-        loading="lazy">
+        loading="lazy"
+        style="border: 1px solid lightgray;">
 </picture>
 
 <a href="{{ demo_link }}">Link to the demo &RightArrow;</a>
@@ -237,6 +238,6 @@ For those wanting to start the journey with JavaScript, this is truly some of th
 <a href="https://github.com/tannerdolby/intro-browser-js">View the source code on Github <span>&RightArrow;</span></a>
 
 ## References
-* Chris Hawkes
-* Mozilla Developer Network (MDN)
-* StackOverflow
+* [Chris Hawkes](https://www.codehawke.com/)
+* [Mozilla Developer Network](https://developer.mozilla.org/en-US/)
+* [StackOverflow](https://stackoverflow.com/)
