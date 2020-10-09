@@ -749,7 +749,7 @@ main {
 }
 
 .direct-link:hover {
-    color: inherit;
+    color: inherit !important;
     text-decoration: underline !important;
 }
 
@@ -757,7 +757,7 @@ main {
 #post h3:hover .direct-link,
 #post h4:hover .direct-link {
     color: #444 !important;
-    cursor: pointer !important;
+    cursor: pointer;
 }
 
 #post h2 {
