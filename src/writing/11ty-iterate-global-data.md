@@ -119,6 +119,16 @@ Welcome to the employee home page for company XYZ. The employee cards contain th
 ```
 {% endraw %}
 
+To include the markdown within the `cardBanner.md`, we can reference it inside the layout file `profiles.njk` using {% raw %}`{{ content }}`{% endraw %} and user the `safe` filter. To access front matter data such as `title`, you can use {% raw %}`{{ variable }}`{% endraw %} which is Nunjucks variable syntax.
+
+{% raw %}
+```html
+<body>
+    <h1 style="text-align: center;">{{ title }}</h1>
+    {{ content | safe }}
+</body>
+```
+{% endraw %}
 
 <h3 id="live-demo">Demo Page {% directlink "live-demo" %}</h3>
 
@@ -136,7 +146,7 @@ Welcome to the employee home page for company XYZ. The employee cards contain th
             style="width: 100%; border: 1px solid lightgray;">
 </picture>
 
-<a href="{{ page.url }}/demo/">View the live demo <span>&RightArrow;</span></a>
+<a href="{{ page.url }}demo/">View the live demo <span>&RightArrow;</span></a>
 
 <h2 id="conclusion">Conclusion {% directlink "conclusion" %}</h3>
 
