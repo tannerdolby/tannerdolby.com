@@ -25,7 +25,7 @@ Array.prototype.forEach.call(headingList, (heading) => {
     heading.addEventListener("touchstart", () => {
         touchStart();
     });
-    heading.addEventListener("touchcancel", () => {
+    heading.addEventListener("touchend", () => {
         touchLeave();
     });
 });
