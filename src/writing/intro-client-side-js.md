@@ -75,7 +75,7 @@ div_att.value = "page-content";
 
 This creates a `class` attribute and assigns it the value "page-content".
 
-<h3 id="inject-set-attr">Injecting and Setting element attributes {% directlink "inject-set-attr" %}</h3>
+<h3 id="inject-set-attr">Injecting and Setting Element Attributes {% directlink "inject-set-attr" %}</h3>
 
 Up until this point, we have virtually created HTML elements using `createElement()` and gave those elements some attributes using `createAttribute()`. Now it's time to inject values into the attributes and set their values using the `setAttributeNode()` method. Putting all the previous steps together:
 
@@ -91,7 +91,7 @@ div_att.value = 'page-content';
 div.setAttributeNode(div_att);
 ```
 
-<h3 id="bind-elements-dom">Binding elements to the DOM</h3>
+<h3 id="bind-elements-dom">Binding elements to the DOM {% directlink "bind-elements-dom" %}</h3>
 
 The final step in this low-level workflow is to bind the HTML elements to our DOM tree using `appendChild()`. This step in the process truly improved my overall web content structuring and DOM experience. I highly recommend if you cannot structure a web page with an appropriate DOM tree then practice this low-level JS and in no time you will feel noticeably stronger at understanding each level in your DOM structure.
 
@@ -160,58 +160,91 @@ Great! Now that the basic markup for `index.html` page is setup. Make sure to pr
 
 <h2 id="finalize"> Putting it all together! {% directlink "finalize" %}</h3>
 
-Navigate to the `script.js` file in the home js-tutorial directory and lets start writing JS code for creating a basic DOM tree. We will create use everything mentioned so far to build a very web page with virtually created HTML elements.
+Navigate to the `script.js` file in the home js-tutorial directory and lets start writing JS code for constructing a basic DOM tree. You will be utilizing everything mentioned so far to build a small web page with virtually created HTML elements.
 
-1. Create the HTML elements with a `class` attribute then inject and set a value into it.
+#### 1. Create the `<main>` and `<section>` HTML elements with a `class` attribute then inject and set a value for each.
 
 {% filename "script.js" %}
 
 ```js
-const div = document.createElement("div");
-var div_att = document.createAttribute("class");
-div_att.value = "page-wrapper";
-div.setAttributeNode(div_att);
+// Create <main> landmark element
+var main = document.createElement("main");
+var main_attr = document.createAttribute("class");
+main_attr.value = "page-wrapper";
+main.setAttributeNode(main_attr);
 
-// Create another div to hold page-content
-const div1 = document.createElement("div");
-var div1_att = document.createAttribute("class");
-div1_att.value = "page-content";
-div1.setAttributeNode(div1_att);
+// Create <section> landmark element
+var section = document.createElement("section");
+var section_attr = document.createAttribute("class");
+section_attr.value = "page-content";
+section.setAttributeNode(section_attr);
+```
+#### 2. Create the heading and paragraph elements and give them both some inner text.
 
-// Create an h1 element that will be a child of div1
-const h1 = document.createElement("h1");
+```js
+// Create <h1> element
+var h1 = document.createElement("h1");
 var h1_att = document.createAttribute("class");
 h1_att.value = "section-title";
 h1.setAttributeNode(h1_att);
 
-// Create a paragraph element as a child of the h1 element.
-const p = document.createElement("p");
+// Create <p> element
+var p = document.createElement("p");
 var p_att = document.createAttribute("class");
 p_att.value = "section-text";
-p.setAttributeNote(p_att);
-```
+p.setAttributeNode(p_att);
 
-2. Give the `<h1>` and `<p>` elements some inner text.
-
-```js
+// Give the <h1> and <p> element some inner text!
 h1.innerText = "Hello world!";
-p.innerText = "lorem ipsum dorem.";
+p.innerText = "lorem ipsum dorem dolor.";
 ```
 
-3. Bind the virtually create HTML elements to the DOM Tree.
+#### 3. Create an `<img>` element for the picture I grabbed from [bukk.it](https://bukk.it/)
 
 ```js
-div.appendChild(div1);
-div1.appendChild(h1);
-div1.appendChild(p);
+const img = document.createElement("img");
+var img_attr = document.createAttribute("class");
+var img_src = document.createAttribute("src");
+var img_alt = document.createAttribute("alt");
+var img_loading = document.createAttribute("loading");
+img_attr.value = "photo";
+img_src.value = "cat-coding.jpg";
+img_alt.value = "Cat, presumably coding a very complex system on mini macbook pro.";
+img_loading.value = "lazy";
+img.setAttributeNode(img_attr);
+img.setAttributeNode(img_src);
+img.setAttributeNode(img_alt);
+img.setAttributeNode(img_loading);
+```
 
-// Append the parent div element to the documents body node.
-document.body.appendChild(div);
+#### 4. Create a paragraph element for the image description.
+
+```js
+var p2 = document.createElement("p");
+var p2_att = document.createAttribute("class");
+p2_att.value = "caption";
+p2.innerHTML = `${img_alt.value} This photo was found on bukk.it`
+p2.setAttributeNode(p2_att);
+```
+
+#### 5. Bind the virtually create HTML elements to the DOM Tree.
+
+```js
+section.appendChild(h1);
+section.appendChild(p);
+section.appendChild(img);
+section.appendChild(p2);
+main.appendChild(section);
+
+// Append the first <main> element to the documents body.
+document.body.appendChild(main);
 ```
 
 Start up your local web server or simply open the `index.html` from your file system into the web browser. If you have provided the proper `<link>` element for CSS, the HTML we created in `script.js` will render on the page with the exact DOM structure that was setup while binding the HTML elements. I gave the page a bit more styling within the [stylesheet](https://github.com/tannerdolby/intro-browser-js/blob/master/style.css) if you want to view the code. You could apply the same styles as those present in the CSS file by using JavaScript and `element.style.attributeNode = ""`, this will take a bit longer but again is great practice.
 
 <h3 id="live-demo">Check out the live demo {% directlink "live-demo" %}</h3>
+
+It's always nice to see the outcome after someone shows a bunch of code, so below is a screen shot of the demo page we've built in this article. With a link to the live demo page as well. 
 
 <picture>
     <source 

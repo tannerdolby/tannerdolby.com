@@ -396,7 +396,7 @@ main {
 }
 
 .main-container .main-content .my-writings {
-    padding-top: 1rem;
+    padding-top: 1.5rem;
     border-top: 1px solid lightgray;
 }
 
@@ -835,12 +835,13 @@ main {
 .direct-link {
     text-decoration: none !important;
     color: transparent !important;
-    visibility: hidden !important;
+    /* visibility: hidden !important; */
     vertical-align: top;
-    /* margin-left: -50px; */
+    margin-left: .2rem;
 }
 
 .direct-link:hover {
+    color: inherit;
     text-decoration: underline !important;
 }
 
@@ -848,7 +849,6 @@ main {
 #post h3:hover .direct-link,
 #post h4:hover .direct-link {
     color: #555 !important;
-    visibility: visible !important;
     cursor: pointer !important;
 }
 
