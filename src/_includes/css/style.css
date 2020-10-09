@@ -7,55 +7,12 @@
 :root {
     --system-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     --page-background: #f9fafa;
-    --nav-background: #26292b;
-    --code-block-background: #e6e3e3;
-    --code-block-dark-background: #242323;
     --code-font: "Source Code Pro, sans-serif";
     --light-gray-border: #e2e6eb;
-    --bright-turquoise: #32DBC6;
-    --light-turquoise: #49BEB7;
-    --test-turq: #065F63;
-    --dark-turquoise: rgb(10, 97, 102);
-    --link-green: #02afa1;
-    --link-visited: #5cb95f;
-    --hyperlink-primary-light-green: #259b89;
-    --hyperlink-primary-dark-green: #228576;
-    --hyperlink-primary-dark-g: #1A6156;
-    --link-primary-red: rgb(212, 11, 14);
-    --link-primary-red-two: rgb(236, 43, 46);
-    --link-primary-red-three: #A91923;
-    --link-primary-blue: rgb(48, 87, 244);
-    --link-primary-blue-two: #3c82a0;
-    --link-primary-blue-three: #0075b4;
-    --link-primary-blue-four: #3146e4;
-    --link-primary-blue-five: #4788f2;
-    --link-primary-hover-blue: #237eaf;
-    --link-primary-blue-seven: #20399D;
-    --link-primary-blue-six: #247eaf;
     --link-blue: #125E87;
     --link-blue-two: rgb(34, 60, 165);
     --link-blue-accessible: #2540AD;
     --link-blue-accessible-hover: #1836AF;
-    --link-red-accessible: #A2151F;
-    --link-red-access: rgb(219, 34, 86);
-
-    --brown: #ab6742;
-    --black: #000712;
-
-    --sea-green: #c1f3de;
-    --midnight-blue: #0f667e;
-
-    --outer-space: #35423f;
-    --olive-green: #c3be6e;
-
-    --golden-rod: #f9dc75;
-    --foreground-txt: #021b22;
-
-    --timber-wolf: #e7e6db;
-    --midnight-blue: #1869a4;
-
-    --off-white: #f8f3ef;
-    --maroon: #b2254b;
 }
 
 body {
@@ -100,11 +57,8 @@ pre {
     word-wrap: normal;
     background: #eeeded;
     font-family: var(--code-font);
-    background: var(--code-block-dark-background);
     overflow-x: auto;
     padding: .75rem;
-    border: 1px solid var(--code-block-dark-background);
-    background: #2b2929;
 }
 
 pre code {
@@ -254,6 +208,7 @@ main {
 .top-nav .nav-wrapper .nav-home li a span {
     background: inherit;
     border: 1.9px solid #202220;
+    border: 2px solid #212421;
     color: #212421;
     border-radius: 0;
     padding: .5rem;
@@ -263,7 +218,7 @@ main {
 }
 
 .top-nav .nav-wrapper .nav-home li a:hover span {
-    background: var(--nav-background);
+    background: #212421;
     color: #fff;
 }
 
@@ -461,9 +416,6 @@ main {
     /* transition: box-shadow 200ms ease-out; */
 }
 
-/* .main-container .projects .project-grid .project-tile:hover {
-    box-shadow: none;
-} */
 .main-container .projects .project-grid .project-tile a {
     height: 100%;
     width: 100%;
@@ -561,8 +513,7 @@ main {
 .reach-me.button:hover {
     box-shadow: 0px -1px 0px -1px rgba(0, 0, 0, 0.75);
     border: 2px solid #000;
-    background: hsl(0, 0%, 15%);
-    background: var(--nav-background);
+    background: #212421;
     color: #FFF;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
@@ -577,10 +528,7 @@ main {
     margin-right: auto;
     margin-bottom: 2rem;
     margin-top: 1rem;
-    padding-left: 1.1rem;
-    padding-right: 1.1rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding: 1rem 1.1rem;
     max-width: 950px;
     max-width: 1000px;
     font-family: var(--system-font);
@@ -699,20 +647,12 @@ main {
 }
 
 .twitter-block {
-    background: #28a6f5;
-    background: rgb(29, 161, 242);
-    background: #1D90D7;
-    background: #2997DB;
     background: #2179B0;
     background: #1273E2;
     background: #0F73E6;
-    /* background: rgb(19, 118, 231);
-    background: #1573E5; */
 }
 
 .twitter-block:hover {
-    background: #1c98e6;
-    background: #1273E2;
     background: rgb(19, 120, 235);
     background: rgb(22, 123, 238);
 }
@@ -731,7 +671,6 @@ main {
 }
 
 .linkedin-block:hover {
-    background: #0e75b4;
     background: rgb(19, 120, 235);
     background: rgb(13, 103, 206);
 }
