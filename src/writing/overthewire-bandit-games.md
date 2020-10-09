@@ -2,8 +2,8 @@
 title: Getting Started with OverTheWire Bandit Security Games
 author: Tanner Dolby
 shortname: Overthewire Games
-date_created: September 06, 2020
-datetime: 2020-09-26 00:00:00 Z
+date_created: October 05, 2020
+datetime: 2020-10-05 00:00:00 Z
 tag: web
 post_tags: 
     - shell

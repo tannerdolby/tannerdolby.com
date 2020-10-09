@@ -2,7 +2,8 @@
 title: Generate Page Content From a Global Data File Using 11ty
 shortname: 11ty Iterate Global Data
 permalink: "/writing/web/{{ shortname | slug }}/"
-dateCreated: 2020-10-05 00:00:00 Z
+dateCreated: October 8, 2020
+datetime: 2020-10-08 00:00:00 Z
 preview: There are many great features to choose from when building websites with Eleventy (11ty). One feature in particular that I find very useful is the ability to iterate over a global data file and generate page content using Nunjucks.
 post_tags:
     - 11ty
