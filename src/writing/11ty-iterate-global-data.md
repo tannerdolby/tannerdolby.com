@@ -39,9 +39,9 @@ One of my favorite things about Eleventy is the fact that there isn't a prescrib
 
 The global data folder in Eleventy is decided by [dir.data](https://www.11ty.dev/docs/config/#directory-for-global-data-files) configuration. For this article I will only focus on `.json` global data but you can read more about [other global data](https://www.11ty.dev/docs/data-global/) available to templates if you'd like.
 
-The example below creates an array of objects inside the `cardData.json` global data file. Each employee card object in the array has some filler data to mimic a large page of profile cards or something of that nature.
+The example below creates an array of objects inside the `cards.json` global data file. Each employee card object in the array has some filler data to mimic a large page of profile cards or something of that nature.
 
-{% filename "cardData.json" %}
+{% filename "cards.json" %}
 
 ```json
 [
@@ -68,7 +68,7 @@ The example below creates an array of objects inside the `cardData.json` global 
 ]
 ```
 
-Let's say there were 20 employees at this company and you didn't want to sequentially write out the HTML for each employee profile card. You can create a template file `profiles.njk` inside a new directory called `_includes/layouts/` and save a chunk of time by iterating through the array of card objects in `cardData.json`. This way, you only write a small bit of template HTML for one profile container and let a for loop generate the rest from your global data. Also, this {% raw %}`{% code %}`{% endraw %} and {% raw %}`{{ variable }}`{% endraw %} syntax is the templating language [Nunjucks](https://mozilla.github.io/nunjucks/).
+Let's say there were 20 employees at this company and you didn't want to sequentially write out the HTML for each employee profile card. You can create a template file `profiles.njk` inside a new directory called `_includes/layouts/` and save a chunk of time by iterating through the array of card objects in `cards.json`. This way, you only write a small bit of template HTML for one profile container and let a for loop generate the rest from your global data. Also, this {% raw %}`{% code %}`{% endraw %} and {% raw %}`{{ variable }}`{% endraw %} syntax is the templating language [Nunjucks](https://mozilla.github.io/nunjucks/).
 
 {% filename "profiles.njk" %}
 {% raw %}
