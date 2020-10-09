@@ -216,10 +216,10 @@ main {
     font-size: 16px;
 }
 
-.top-nav .nav-wrapper .nav-home li a:hover span {
+/* .top-nav .nav-wrapper .nav-home li a:hover span {
     background: #212421;
     color: #fff;
-}
+} */
 
 .top-nav .nav-wrapper .nav-menu li a {
     padding: 0.5rem 0;
