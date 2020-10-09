@@ -120,7 +120,7 @@ Welcome to the employee home page for company XYZ. The employee cards contain th
 ```
 {% endraw %}
 
-To include the markdown within the `cardBanner.md`, we can reference it inside the layout file `profiles.njk` using {% raw %}`{{ content }}`{% endraw %} and user the `safe` filter. To access front matter data such as `title`, you can use {% raw %}`{{ variable }}`{% endraw %} which is Nunjucks variable syntax.
+To include the markdown within the `cardBanner.md`, we can reference it inside the layout file `profiles.njk` using {% raw %}`{{ content }}`{% endraw %} and the `safe` filter. To access front matter data such as `title`, you can use {% raw %}`{{ variable }}`{% endraw %} which is Nunjucks variable syntax.
 
 {% raw %}
 ```html
