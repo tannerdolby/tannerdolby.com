@@ -27,17 +27,17 @@ demo_image:
 
 {{ preview }} Client-side means that the JavaScript code is run on the client machine, which is the browser. Server-side JavaScript means that the code is run on the server which is serving web pages.
 
-<h2 id="main-topics">This post will aim to cover: {% directlink "main-topics" %}</h2>
+<h2 id="main-topics" class="dir-link">This post will aim to cover: {% directlink "main-topics" %}</h2>
 
 1. Virtually creating HTML elements in JavaScript
 2. Creating and setting attributes to HTML DOM elements
 3. Binding the created HTML elements to the DOM
 
-<h3 id="what-is-javascript">What is JavaScript? {% directlink "what-is-javascript" %}</h3>
+<h3 id="what-is-javascript" class="dir-link">What is JavaScript? {% directlink "what-is-javascript" %}</h3>
 
 [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) is a lightweight, interpreted, compiled programming language with first class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.
 
-<h2 id="why-read-this">Why read this article? {% directlink "why-read-this" %}</h2>
+<h2 id="why-read-this" class="dir-link">Why read this article? {% directlink "why-read-this" %}</h2>
 
 If you're like me, I was (for some reason) afraid of learning to code in JavaScript at first. It felt so abstract and nothing like the previous experience I had programming with [R/Rstudio](https://www.r-project.org/). Here is a little more backstory, so I was browsing the web and came across a video titled, [This is truly the only way to learn JavaScript](https://www.youtube.com/watch?time_continue=4&v=HnXmI2UVZlU&feature=emb_logo) by Chris Hawkes. Quite a catchy video title. 
 
@@ -45,11 +45,11 @@ That being said, after watching the video I was captivated at the fact we could 
 
 Hours later after re-writing the HTML for one of my current side project homepages entirely in JavaScript. I realized, "you just structured an entire web page and functional DOM that looks exactly the same as one you would write in HTML, but all with JavaScript. It was a refreshing feeling.
 
-<h3 id="wheres-the-html">So where does HTML fit into the picture? {% directlink "wheres-the-html" %}</h3>
+<h3 id="wheres-the-html" class="dir-link">So where does HTML fit into the picture? {% directlink "wheres-the-html" %}</h3>
 
 [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) or HyperText Markup Language is the most rudimentary building block in web development. Using HTML allows us as developers to define the meaning and structure of web content through semantic HTML DOM elements.
 
-<h2 id="create-elements">Creating HTML elements and building the DOM using JavaScript {% directlink "create-elements" %}</h2>
+<h2 id="create-elements" class="dir-link">Creating HTML elements and building the DOM using JavaScript {% directlink "create-elements" %}</h2>
 
 JavaScript allows us the ability as developers to virtually create HTML elements using the [Document](https://developer.mozilla.org/en-US/docs/Web/API/Document) interface and associated [methods](https://developer.mozilla.org/en-US/docs/Web/API/Document#Methods). Below is an example of virtually creating a new `div` element using `createElement()` and attaching it to the DOM tree within the `<body>` node of the current document.
 
@@ -74,7 +74,7 @@ div_att.value = "page-content";
 
 This creates a `class` attribute and assigns it the value "page-content".
 
-<h3 id="inject-set-attr">Injecting and Setting Element Attributes {% directlink "inject-set-attr" %}</h3>
+<h3 id="inject-set-attr" class="dir-link">Injecting and Setting Element Attributes {% directlink "inject-set-attr" %}</h3>
 
 Up until this point, we have virtually created HTML elements using `createElement()` and gave those elements some attributes using `createAttribute()`. Now it's time to inject values into the attributes and set their values using the `setAttributeNode()` method. Putting all the previous steps together:
 
@@ -90,7 +90,7 @@ div_att.value = 'page-content';
 div.setAttributeNode(div_att);
 ```
 
-<h3 id="bind-elements-dom">Binding elements to the DOM {% directlink "bind-elements-dom" %}</h3>
+<h3 id="bind-elements-dom" class="dir-link">Binding elements to the DOM {% directlink "bind-elements-dom" %}</h3>
 
 The final step in this low-level workflow is to bind the HTML elements to our DOM tree using `appendChild()`. This step in the process truly improved my overall web content structuring and DOM experience. I highly recommend if you cannot structure a web page with an appropriate DOM tree then practice this low-level JS and in no time you will feel noticeably stronger at understanding each level in your DOM structure.
 
@@ -102,7 +102,7 @@ document.body.appendChild(div); // binding the div element to DOM tree
 
 So far, you've created one HTML `div` element, set its `class` attribute and then finalized the processing by binding it to the DOM tree. Specifically binding the element onto the `<body>` node of the document. Now who said using JavaScript in web development had to be hard? 
 
-<h2 id="setup-dev-env">Setup Browser Testing Environment {% directlink "setup-dev-env" %}</h2>
+<h2 id="setup-dev-env" class="dir-link">Setup Browser Testing Environment {% directlink "setup-dev-env" %}</h2>
 
 Most browsers will allow you to right click on a webpage and click the `inspect` menu button to inspect the markup within the current page. I recommend installing Chrome [Dev Tools](https://developers.google.com/web/tools/chrome-devtools) or some form of developer tools for the specific browser you are using. You also need a text editor of any flavor. I'm using Visual Studio Code as my IDE (Integrated Development Environment) but feel free to use whichever editor you'd like.
 
@@ -130,7 +130,7 @@ spherical:js-tutorial TannerDolby$ ls
 index.html script.js style.css
 ```
 
-<h2 id="code-it">Lets write some code! {% directlink "code-it" %}</h2>
+<h2 id="code-it" class="dir-link">Lets write some code! {% directlink "code-it" %}</h2>
 
 Now we're ready to start putting code into these newly created files within the js-tutorial directory. Open up the js-tutorial folder in your preferred editor and navigate into the `index.html` file (it will be blank). I suggest using the [html5-boilerplate](https://marketplace.visualstudio.com/items?itemName=sidthesloth.html5-boilerplate) VS Code plugin as I will be using it to generate a template of HTML boilerplate code. But getting familiar with typing out the basic markup for an `.html` page by hand is great practice.
 
@@ -157,7 +157,7 @@ Inside the `index.html` file, entering `html5-boilerplate` with the specified pl
 
 Great! Now that the basic markup for `index.html` page is setup. Make sure to provide the relevant document metadata inside the `<head>` tag. Ensure to include references to the custom CSS file using a `<link>` and custom JS `<script>` so the document page can reference that code like the example shows above.
 
-<h2 id="finalize"> Putting it all together! {% directlink "finalize" %}</h3>
+<h2 id="finalize" class="dir-link"> Putting it all together! {% directlink "finalize" %}</h3>
 
 Navigate to the `script.js` file in the home js-tutorial directory and lets start writing JS code for constructing a basic DOM tree. You will be utilizing everything mentioned so far to build a small web page with virtually created HTML elements.
 
@@ -241,7 +241,7 @@ document.body.appendChild(main);
 
 Start up your local web server or simply open the `index.html` from your file system into the web browser. If you have provided the proper `<link>` element for CSS, the HTML we created in `script.js` will render on the page with the exact DOM structure that was setup while binding the HTML elements. I gave the page a bit more styling within the [stylesheet](https://github.com/tannerdolby/intro-browser-js/blob/master/style.css) if you want to view the code. You could apply the same styles as those present in the CSS file by using JavaScript and `element.style.attributeNode = ""`, this will take a bit longer but again is great practice.
 
-<h3 id="live-demo">Check out the live demo {% directlink "live-demo" %}</h3>
+<h3 id="live-demo" class="dir-link">Check out the live demo {% directlink "live-demo" %}</h3>
 
 It's always nice to see the outcome after someone shows a bunch of code, so below is a screen shot of the demo page we've built in this article. With a link to the live demo page as well. 
 
@@ -261,7 +261,7 @@ It's always nice to see the outcome after someone shows a bunch of code, so belo
 
 <a href="{{ demo_link }}">Link to the demo &RightArrow;</a>
 
-<h2 id="conclusion">Conclusion {% directlink "conclusion" %}</h2>
+<h2 id="conclusion" class="dir-link">Conclusion {% directlink "conclusion" %}</h2>
 
 If you read this far and followed each step, you should now have a very basic web page with a couple HTML elements built primarily with JS instead of using traditional markup directly inside an `.html` file.
 
