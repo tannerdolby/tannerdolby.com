@@ -1,0 +1,132 @@
+---
+pagination:
+  data: testdata
+  size: 1
+  alias: item
+testdata:
+    - javascript
+    - 11ty
+    - html
+    - nunjucks
+    - security
+    - shell
+permalink: "writing/tags/{{item | slug}}/"
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ title }}</title>
+    {% set css %}
+        {% include "css/style.css" %}
+        {% include "css/prism.css" %}
+    {% endset %}
+    <style>
+        {{ css | cssmin | safe }}
+    </style>
+</head>
+<body>
+    {% include "layouts/nav.njk" %}
+    <main style="max-width: 1000px; margin: 0 auto; padding: 0 1.1rem;">
+    {% if 'writing/tags/html/' in page.url %}
+        <h1>Articles Tagged with: {{ item }}</h2>
+        {% for post in collections.html %}
+        <ul style="padding-left: 0; list-style: none;">
+            <li style="display: flex; justify-content: space-between; align-items: center">
+                <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+                <div class="tags" style="display: flex; justify-content: center;">
+                {% for tag in post.data.post_tags %}
+                    <code>#{{ tag }}</code>
+                {% endfor %}
+                </div>
+            </li>
+        </ul>
+        {% endfor %}
+    {% endif %}
+
+    {% if 'writing/tags/javascript/' in page.url %}
+    <h2>Posts Tagged: {{ item }}</h2>
+    {% for post in collections.javascript %}
+        <ul style="padding-left: 0; list-style: none;">
+            <li style="display: flex; justify-content: space-between; align-items: center">
+                <h2 style="margin-bottom: .8rem; font-size: 22px;"><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+                <div class="tags" style="display: flex; justify-content: center;">
+                {% for tag in post.data.post_tags %}
+                    <code style="margin-right: .5rem;">#{{ tag }}</code>
+                {% endfor %}
+                </div>
+            </li>
+        </ul>
+    {% endfor %}
+    {% endif %}
+
+    {% if 'writing/tags/shell/' in page.url %}
+        <h2>Posts Tagged: {{ item }}</h2>
+        {% for post in collections.shell %}
+            <ul style="padding-left: 0; list-style: none;">
+                <li style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center">
+                    <h2 style="margin-bottom: .8rem; font-size: 22px;"><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+                    <div class="tags" style="display: flex; justify-content: center;">
+                    {% for tag in post.data.post_tags %}
+                        <code style="margin-right: .5rem;">#{{ tag }}</code>
+                    {% endfor %}
+                    </div>
+                </li>
+            </ul>
+        {% endfor %}
+    {% endif %}
+
+    {% if 'writing/tags/security/' in page.url %}
+        <h2>Posts Tagged: {{ item }}</h2>
+        {% for post in collections.security %}
+            <ul style="padding-left: 0; list-style: none;">
+                <li style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center">
+                    <h2 style="margin-bottom: .8rem; font-size: 22px;"><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+                    <div class="tags" style="display: flex; justify-content: center;">
+                    {% for tag in post.data.post_tags %}
+                        <code style="margin-right: .5rem;">#{{ tag }}</code>
+                    {% endfor %}
+                    </div>
+                </li>
+            </ul>
+        {% endfor %}
+    {% endif %}
+
+    {% if 'writing/tags/11ty/' in page.url %}
+        <h2>Posts Tagged: {{ item }}</h2>
+        {% for post in collections.11ty %}
+            <ul style="padding-left: 0; list-style: none;">
+                <li style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center">
+                    <h2 style="margin-bottom: .8rem; font-size: 22px;"><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+                    <div class="tags" style="display: flex; justify-content: center;">
+                    {% for tag in post.data.post_tags %}
+                        <code style="margin-right: .5rem;">#{{ tag }}</code>
+                    {% endfor %}
+                    </div>
+                </li>
+            </ul>
+        {% endfor %}
+    {% endif %}
+
+    {% if 'writing/tags/nunjucks/' in page.url %}
+        <h2>Posts Tagged: {{ item }}</h2>
+        {% for post in collections.nunjucks %}
+            <ul style="padding-left: 0; list-style: none;">
+                <li style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center">
+                    <h3 style="margin-bottom: .8rem; font-size: 22px;"><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+                    <div class="tags" style="display: flex; justify-content: center;">
+                    {% for tag in post.data.post_tags %}
+                        <code style="margin-right: .5rem;">#{{ tag }}</code>
+                    {% endfor %}
+                    </div>
+                </li>
+            </ul>
+        {% endfor %}
+    {% endif %}
+    </main>
+    <footer style="position: absolute; bottom: 2rem; margin: 0 auto; width: 100%; text-align: center;">&copy; 2020 Tanner Dolby</footer>
+</body>
+</html>

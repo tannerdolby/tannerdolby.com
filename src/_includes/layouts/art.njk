@@ -10,7 +10,7 @@
         {% set css %}
             {% include "css/style.css" %}
         {% endset %}
-        <style lang="css">
+        <style>
             {{ css | cssmin | safe }}
         </style>
     </head>

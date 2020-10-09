@@ -4,7 +4,12 @@ author: Tanner Dolby
 shortname: Overthewire Games
 date_created: October 05, 2020
 datetime: 2020-10-05 00:00:00 Z
+date: 2020-10-05
 tag: web
+tags:
+    - posts
+    - security
+    - shell
 post_tags: 
     - shell
     - security

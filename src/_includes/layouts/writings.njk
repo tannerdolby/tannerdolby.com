@@ -11,7 +11,7 @@
         {% set css %}
             {% include "css/style.css" %}
         {% endset %}
-        <style lang="css">
+        <style>
             {{ css | cssmin | safe }}
         </style>
     </head>
@@ -27,7 +27,7 @@
                     {{ content | safe }}
                 </div>
                 <div class="my-writings">
-                    {% for post in collections.posts %}
+                    {% for post in collections.posts | reverse %}
                     <article class="post">
                         <h2 style="margin-bottom: .8rem; font-size: 24px;"><a style="text-decoration: underline;" href="{{ post.url }}">{{ post.data.title }}</a></h2>
                         <p class="date" style="font-size: 16px;">Posted on <time datetime="{{ post.data.datetime | date('YYYY-MM-DD') }}">{{ post.data.datetime | date('MMMM DD, YYYY') }}</time></p>
@@ -35,6 +35,14 @@
                     </article>
                     {% endfor %}
                 </div>
+                <h3 style="margin-right: 1rem;">Filter by tags:</h3>
+                <ul style="display: flex; justify-content: flex-start; align-items: center; flex-wrap: wrap; padding-left: 0; list-style: none; margin: .5rem auto;">
+                    {% for post in collections.posts %}
+                        {% for tag in post.data.post_tags %}
+                        <li style="margin-top: .5rem; margin-bottom: .5rem;"><a href="/writing/tags/{{tag}}/"><code style="margin-right: .75rem; color: var(--link-blue-accessible) !important;">#{{ tag }}</a></code></li>
+                        {% endfor %}
+                    {% endfor %}
+                </ul>
             </div>
         </main>
         {% include "layouts/footer.njk" %}

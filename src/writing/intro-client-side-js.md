@@ -3,10 +3,15 @@ title: An Introduction to Client-side JavaScript
 shortname: JS Client Side
 date_created: October 6, 2020
 datetime: 2020-10-06 00:00:00 Z
+date: 2020-10-06
 tag: web
+tags: 
+    - html
+    - javascript
+    - posts
 post_tags:
-    - JavaScript
-    - HTML
+    - javascript
+    - html
 preview: Have you ever thought to yourself while building a website, It sure would be nice to change the background color of an element upon being clicked? Well now you can by using client-side JavaScript!
 permalink: /writing/{{ tag }}/{{ shortname | slug }}/
 demo_link: https://browserjs-intro.netlify.app/
@@ -161,7 +166,8 @@ Great! Now that the basic markup for `index.html` page is setup. Make sure to pr
 
 Navigate to the `script.js` file in the home js-tutorial directory and lets start writing JS code for constructing a basic DOM tree. You will be utilizing everything mentioned so far to build a small web page with virtually created HTML elements.
 
-#### 1. Create the `<main>` and `<section>` HTML elements with a `class` attribute then inject and set a value for each.
+#### Step 1 
+Create the `<main>` and `<section>` HTML elements with a `class` attribute then inject and set a value for each.
 
 {% filename "script.js" %}
 
@@ -178,7 +184,8 @@ var section_attr = document.createAttribute("class");
 section_attr.value = "page-content";
 section.setAttributeNode(section_attr);
 ```
-#### 2. Create the heading and paragraph elements and give them both some inner text.
+#### Step 2 
+Create the heading and paragraph elements and give them both some inner text.
 
 ```js
 // Create <h1> element
@@ -198,7 +205,8 @@ h1.innerText = "Hello world!";
 p.innerText = "lorem ipsum dorem dolor.";
 ```
 
-#### 3. Create an `<img>` element for the picture I grabbed from [bukk.it](https://bukk.it/)
+#### Step 3 
+Create an `<img>` element for the picture I grabbed from [bukk.it](https://bukk.it/)
 
 ```js
 const img = document.createElement("img");
@@ -216,7 +224,8 @@ img.setAttributeNode(img_alt);
 img.setAttributeNode(img_loading);
 ```
 
-#### 4. Create a paragraph element for the image description.
+#### Step 4
+Create a paragraph element for the image description.
 
 ```js
 var p2 = document.createElement("p");
@@ -226,7 +235,8 @@ p2.innerHTML = `${img_alt.value} This photo was found on bukk.it`
 p2.setAttributeNode(p2_att);
 ```
 
-#### 5. Bind the virtually create HTML elements to the DOM Tree.
+#### Step 5 
+Bind the virtually create HTML elements to the DOM Tree.
 
 ```js
 section.appendChild(h1);
