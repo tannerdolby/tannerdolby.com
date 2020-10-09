@@ -1,6 +1,6 @@
 ---
 page_name: Art - Tanner Dolby 
-title: Art & CodePen Fun
+title: Art & Fun
 permalink: "/art/"
 layout: layouts/art.njk
 ---

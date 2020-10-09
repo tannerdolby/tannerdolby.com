@@ -2,6 +2,7 @@ const CleanCSS = require("clean-css");
 const { minify } = require("terser");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const dateFilter = require("nunjucks-date-filter");
+const pluginRSS = require("@11ty/eleventy-plugin-rss");
 
 module.exports = (eleventyConfig) => {
     
@@ -17,6 +18,10 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.addPassthroughCopy("./src/images");
     eleventyConfig.addPassthroughCopy("./src/js");
 
+    // add RSS feed 11ty plugin
+    eleventyConfig.addPlugin(pluginRSS);
+
+    // add PrismJS syntax highlighting with 11ty plugin
     eleventyConfig.addPlugin(syntaxHighlight, {
         templateFormats: ["njk", "md"],
     });
