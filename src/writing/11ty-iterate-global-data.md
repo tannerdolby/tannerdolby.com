@@ -29,6 +29,8 @@ In 11ty, after creating [Global Data files](https://www.11ty.dev/docs/data-globa
 
 Why sit there and type out 30 different `.card` containers when you can store each card elements data inside a global `.json` file. To then iterate through that global card data and generate 30 elements from only one `.card` containers markup within a layout or markdown file. This could be data fetched from an API and stored in a `.json` file or by simply typing in the data needed by hand into a `_data/*.json` file. 
 
+<h2 id="cascade-note">Working with the Data Cascade {% directlink "cascade-note" %}</h2>
+
 Before going any further, I should mention that when building webpages using the Static Site Generator (SSG) Eleventy. Data is being merged from multiple sources before making its way to the actually template file that gets rendered in the site output directory `_site`. This is what Eleventy calls the [Data Cascade](https://www.11ty.dev/docs/data-cascade/) and its really neat.
 
 <h2 id="data-sources">Data Sources {% directlink "data-sources" %}</h3>
