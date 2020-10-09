@@ -20,14 +20,12 @@ function touchLeave() {
     });
 }
 
-
 // add touchstart event to headings 
 Array.prototype.forEach.call(headingList, (heading) => {
     heading.addEventListener("touchstart", () => {
         touchStart();
     });
-    heading.addEventListener("touchend", () => {
+    heading.addEventListener("touchcancel", () => {
         touchLeave();
     });
 });
-
