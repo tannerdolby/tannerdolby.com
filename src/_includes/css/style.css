@@ -59,19 +59,8 @@
 }
 
 body {
-    background: var(--page-background);
-    background: #fff;
-    background: #f9fafa;
     font-family: var(--system-font);
-    /* background: #f7f6f3; */
-    background: var(--black);
-    background: var(--sea-green);
-    background: var(--midnight-blue);
-    background: var(--olive-green);
-    background: var(--golden-rod);
-    background: #fff;
     background: #f9fafa;
-    /* background: var(--off-white); */
     overflow-x: hidden;
     line-height: 1.5;
     font-size: 100%;
@@ -87,11 +76,7 @@ img {
 
 p {
     font-family: var(--system-font);
-    /* font-family: "Inter", var(--system-font), sans-serif; */
-    color: #333;
-    color: #141817;
     color: #212421;
-    font-size: 1rem;
     font-size: 18px;
     line-height: 1.5;
     font-weight: 400;
@@ -103,8 +88,8 @@ code {
     font-size: 16px;
     line-height: 100%;
     font-weight: 400;
-    color: #222;
-    padding: .1rem .2rem;
+    color: #212421;;
+    padding: .075rem .2rem;
     margin: 0 .1rem;
     background: #eeeded;
 }
@@ -126,7 +111,6 @@ pre code {
     margin: 0;
     padding: 0;
     line-height: 1.5;
-    color: #e6e3df;
     background: transparent;
 }
 
