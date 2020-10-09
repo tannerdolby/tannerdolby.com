@@ -159,7 +159,7 @@ Checkout the image below for a glimpse of the page built so far. You can also ta
 
 This is just one method of merging data in Eleventy and if you'd like to learn more. I suggest taking a look at some of the great features Eleventy has to offer such as [Collections](https://www.11ty.dev/docs/collections/), [Pagination](https://www.11ty.dev/docs/pagination/) and [Pages from Data](https://www.11ty.dev/docs/pages-from-data/). 
 
-<h3 id="references" class="dir-link">References {% directlink "references" %}</h3>
+<h3 id="references" class="dir-link" onclick="">References {% directlink "references" %}</h3>
 
 - [Eleventy](https://www.11ty.dev/docs/)
 - [Nunjucks](https://mozilla.github.io/nunjucks/)
