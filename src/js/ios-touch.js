@@ -20,8 +20,11 @@ function touchLeave() {
 
 // change syntax to .addEventListener("event", touchStart, false);
 Array.prototype.forEach.call(headingList, (heading) => {
+    
     heading.addEventListener("mouseover", touchStart, false);
-    heading.addEventListener("mouseout", touchLeave, false);
-    // heading.addEventListener("touchstart", touchStart, false);
-    // heading.addEventListener("touchend", touchLeave, false);
+    heading.addEventListener("mouseleave", touchLeave, false);
+    
+    // Handling iOS/iPhone :hover for touch event 
+    heading.addEventListener("touchstart", touchStart, false);
+    heading.addEventListener("touchend", touchLeave, false);
 });

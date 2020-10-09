@@ -39,7 +39,7 @@ One of my favorite things about Eleventy is the fact that there isn't a prescrib
 
 <h2 id="create-global-data" class="dir-link">Creating a Global Data File {% directlink "create-global-data" %}</h2>
 
-The global data folder in Eleventy is decided by [dir.data](https://www.11ty.dev/docs/config/#directory-for-global-data-files) configuration. For this article I will only focus on `.json` global data but you can read more about [other global data](https://www.11ty.dev/docs/data-global/) available to templates if you'd like.
+The global data folder in Eleventy is decided by the [dir.data](https://www.11ty.dev/docs/config/#directory-for-global-data-files) configuration. For this article I will only focus on `.json` global data but you can read more about [other global data](https://www.11ty.dev/docs/data-global/) available to templates if you'd like.
 
 The example below creates an array of objects inside the `cards.json` global data file. Each employee card object in the array has some filler data to mimic a large page of profile cards or something of that nature.
 
