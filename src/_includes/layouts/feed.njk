@@ -1,39 +1,25 @@
----json
-{
-  "permalink": "feed.xml",
-  "eleventyExcludeFromCollections": true,
-  "metadata": {
-    "title": "Tanner Dolby's blog about web development and technology",
-    "subtitle": "I mostly write about front-end web development and sometimes I'll write about other cool stuff too.",
-    "url": "https://tannerdolby.netlify.app/",
-    "feedUrl": "https://tannerdolby.netlify.app/feed.xml",
-    "author": {
-      "name": "Tanner Dolby",
-      "email": "dolb.tanner@gmail.com"
-    }
-  }
-}
+---
+permalink: "feed.xml"
+metadata:
+  title: Tanner Dolby's blog about web development and technology.
+  subtitle: I mostly write about front-end web development, but sometimes I'll write about other cool stuff too.
+  url: https://tannerdolby.netlify.app
 ---
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <title>{{ metadata.title }}</title>
-  <subtitle>{{ metadata.subtitle }}</subtitle>
-  <link href="{{ metadata.feedUrl }}" rel="self"/>
-  <link href="{{ metadata.url }}"/>
-  <updated>{{ collections.posts | rssLastUpdatedDate }}</updated>
-  <id>{{ metadata.url }}</id>
-  <author>
-    <name>{{ metadata.author.name }}</name>
-    <email>{{ metadata.author.email }}</email>
-  </author>
-  {%- for post in collections.posts %}
-  {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
-  <entry>
-    <title>{{ post.data.title }}</title>
-    <link href="{{ absolutePostUrl }}"/>
-    <updated>{{ post.date | rssDate }}</updated>
-    <id>{{ absolutePostUrl }}</id>
-    <content type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
-  </entry>
-  {%- endfor %}
-</feed>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ metadata.title }}</title>
+    <description>{{ metadata.subtitle }}</description>
+    <link>{{ metadata.url }}</link>
+    <atom:link href="{{ metadata.url }}/feed.xml" rel="self" type="application/rss+xml" />
+    {% for post in collections.posts %}
+      <item>
+        <title>{{ post.data.title }}</title>
+        <description>{{ post.templateContent }}</description>
+        <pubDate>{{ post.date | rssDate }}</pubDate>
+        <link>{{ site.url }}{{ post.url }}</link>
+        <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
+      </item>
+    {% endfor %}
+  </channel>
+</rss>
