@@ -621,8 +621,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: .75rem;
-    padding-right: .75rem;
+    padding: .5rem .75rem;
     border-radius: .3rem;
     font-weight: 450;
 }
