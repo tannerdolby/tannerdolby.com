@@ -294,10 +294,6 @@ main {
     font-size: 16px;
 }
 
-#post h2 {
-    font-size: 2rem;
-}
-
 .main-container .welcome-container {
     padding: 2.75rem 0 2.75rem 0;
     background: inherit;
@@ -852,9 +848,13 @@ main {
     cursor: pointer !important;
 }
 
+#post h2 {
+    font-size: 2rem;
+}
+
 #post {
     max-width: 750px;
-    margin-top: 4rem;
+    margin-top: 3rem;
 }
 
 .main-content .post {
