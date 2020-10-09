@@ -29,15 +29,15 @@ In 11ty, after creating [Global Data files](https://www.11ty.dev/docs/data-globa
 
 Why sit there and type out 30 different `.card` containers when you can store each card elements data inside a global `.json` file. To then iterate through that global card data and generate 30 elements from only one `.card` containers markup within a layout or markdown file. This could be data fetched from an API and stored in a `.json` file or by simply typing in the data needed by hand into a `_data/*.json` file. 
 
-<h2 id="cascade-note">Working with the Data Cascade {% directlink "cascade-note" %}</h2>
+<h2 id="cascade-note" class="dir-link">Working with the Data Cascade {% directlink "cascade-note" %}</h2>
 
 Before going any further, I should mention that when building webpages using the Static Site Generator (SSG) Eleventy. Data is being merged from multiple sources before making its way to the actually template file that gets rendered in the site output directory `_site`. This is what Eleventy calls the [Data Cascade](https://www.11ty.dev/docs/data-cascade/) and its really neat.
 
-<h2 id="data-sources">Data Sources {% directlink "data-sources" %}</h3>
+<h2 id="data-sources" class="dir-link">Data Sources {% directlink "data-sources" %}</h3>
 
 One of my favorite things about Eleventy is the fact that there isn't a prescribed way of merging data within the cascade. There is an [order of priority](https://www.11ty.dev/docs/data-cascade/#sources-of-data) for sources of data in the cascade but that data can defined however you would like. It could be stored as [Computed Data](https://www.11ty.dev/docs/data-computed/), [Front Matter Data](https://www.11ty.dev/docs/data-frontmatter/) in a template or layout file, [template and directory](https://www.11ty.dev/docs/data-template-dir/) data files and lastly global data files.
 
-<h2 id="create-global-data">Creating a Global Data File {% directlink "create-global-data" %}</h2>
+<h2 id="create-global-data" class="dir-link">Creating a Global Data File {% directlink "create-global-data" %}</h2>
 
 The global data folder in Eleventy is decided by [dir.data](https://www.11ty.dev/docs/config/#directory-for-global-data-files) configuration. For this article I will only focus on `.json` global data but you can read more about [other global data](https://www.11ty.dev/docs/data-global/) available to templates if you'd like.
 
@@ -102,7 +102,7 @@ Let's say there were 20 employees at this company and you didn't want to sequent
 ```
 {% endraw %}
 
-<h3 id="using-layouts">Connect Markdown file to a Layout {% directlink "using-layouts" %}</h3>
+<h3 id="using-layouts" class="dir-link">Connect Markdown file to a Layout {% directlink "using-layouts" %}</h3>
 
 Let's say you wanted to write an introduction paragraph underneath the main page title. To start, you would create a `.md` file and add some [Front Matter data](https://www.11ty.dev/docs/data-frontmatter/) at the top of `cardBanner.md` inside the opening and closing document seperators, `---`. Front matter in 11ty uses [YAML](https://yaml.org/spec/1.2/spec.html) syntax. The `permalink` is called a [quoted scalar](https://yaml.org/spec/1.2/spec.html#id2760844) where the `title` and `layout` are scalars in the plain style. All the content outside of the document seperators are rendered as regular Markdown. 
 
@@ -135,7 +135,7 @@ To access front matter data such as `title`, you can use {% raw %}`{{ variable }
 ```
 {% endraw %}
 
-<h3 id="live-demo">Demo Page {% directlink "live-demo" %}</h3>
+<h3 id="live-demo" class="dir-link">Demo Page {% directlink "live-demo" %}</h3>
 
 Checkout the image below for a glimpse of the page built so far. You can also take a look at live demo by clicking on the link underneath the image.
 
@@ -155,11 +155,11 @@ Checkout the image below for a glimpse of the page built so far. You can also ta
 
 <a href="{{ page.url }}demo/">View the live demo <span>&RightArrow;</span></a>
 
-<h2 id="conclusion">Conclusion {% directlink "conclusion" %}</h3>
+<h2 id="conclusion" class="dir-link">Conclusion {% directlink "conclusion" %}</h3>
 
 This is just one method of merging data in Eleventy and if you'd like to learn more. I suggest taking a look at some of the great features Eleventy has to offer such as [Collections](https://www.11ty.dev/docs/collections/), [Pagination](https://www.11ty.dev/docs/pagination/) and [Pages from Data](https://www.11ty.dev/docs/pages-from-data/). 
 
-<h3 id="references">References {% directlink "references" %}</h3>
+<h3 id="references" class="dir-link">References {% directlink "references" %}</h3>
 
 - [Eleventy](https://www.11ty.dev/docs/)
 - [Nunjucks](https://mozilla.github.io/nunjucks/)

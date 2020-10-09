@@ -207,7 +207,7 @@ main {
 
 .top-nav .nav-wrapper .nav-home li a span {
     background: inherit;
-    border: 1.99px solid #212421;
+    border: 2px solid #212421;
     color: #212421;
     border-radius: 0;
     padding: .5rem;
@@ -749,7 +749,6 @@ main {
 }
 
 .direct-link:hover {
-    color: inherit !important;
     text-decoration: underline !important;
 }
 

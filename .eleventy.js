@@ -59,7 +59,6 @@ module.exports = (eleventyConfig) => {
 
     // shortcode for creating my headshot <img> in markdown
     eleventyConfig.addPairedShortcode("img", function(src) {
-        // 16:9 aspect ratio for image, width = 377 * (16 / 9) = 670.222 
         return `<img width="210" height="210" src="${src}" alt="Headshot of Tanner's face (a bit outdated)" class="about-headshot" loading="lazy">`
     });
 

@@ -30,9 +30,8 @@ demo_image:
 <h2 id="main-topics">This post will aim to cover: {% directlink "main-topics" %}</h2>
 
 1. Virtually creating HTML elements in JavaScript
-2. Binding the created HTML elements to the DOM
-3. Adding and deleting attributes to HTML DOM elements
-4. Adding and removing basic event listeners and handlers
+2. Creating and setting attributes to HTML DOM elements
+3. Binding the created HTML elements to the DOM
 
 <h3 id="what-is-javascript">What is JavaScript? {% directlink "what-is-javascript" %}</h3>
 
