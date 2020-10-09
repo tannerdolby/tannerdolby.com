@@ -207,7 +207,6 @@ main {
 
 .top-nav .nav-wrapper .nav-home li a span {
     background: inherit;
-    border: 1.9px solid #202220;
     border: 2px solid #212421;
     color: #212421;
     border-radius: 0;
@@ -597,14 +596,8 @@ main {
 
 .contact-wrapper {
     max-width: 1000px;
-    padding-left: 1.1rem;
-    padding-right: 1.1rem;
-    margin-top: 2rem;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 2rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding: 1rem 1.1rem;
+    margin: 2rem auto;
 }
 
 .contact-wrapper .socials-list {
@@ -625,11 +618,9 @@ main {
 .contact-wrapper .socials-list li a {
     color: rgb(255, 255, 255);
     text-decoration: none;
-    padding-left: .5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: .5rem;
     padding-left: .75rem;
     padding-right: .75rem;
     border-radius: .3rem;
@@ -754,7 +745,6 @@ main {
 .direct-link {
     text-decoration: none !important;
     color: transparent !important;
-    /* visibility: hidden !important; */
     vertical-align: top;
     margin-left: .2rem;
 }
@@ -767,7 +757,7 @@ main {
 #post h2:hover .direct-link,
 #post h3:hover .direct-link,
 #post h4:hover .direct-link {
-    color: #555 !important;
+    color: #444 !important;
     cursor: pointer !important;
 }
 
