@@ -63,7 +63,7 @@ A further break down of the above code:
 1. Create a read only reference value `const` named `div`. 
 2. Assigns the div variable a value of a HTML element created on the document in this case a `div` element. 
 
-<h3 id="creating-attributes">Creating HTML attributes {% directlink "creating-attributes" %}</h3>
+<h3 id="creating-attributes" class="dir-link">Creating HTML attributes {% directlink "creating-attributes" %}</h3>
 
 After virtually creating HTML elements with JavaScript, you can add and remove attributes from them. This step in my workflow is usually done before binding elements to the DOM; but could be done after setting the DOM tree if you are inclined to do so. The `Document` interface provides us with a method called `createAttribute()` to create HTML element attributes.
 
@@ -269,7 +269,8 @@ For those wanting to start the journey with JavaScript, this is truly some of th
 
 <a href="https://github.com/tannerdolby/intro-browser-js">View the source code on Github <span>&RightArrow;</span></a>
 
-## References
+<h3 id="references" class="dir-link">References {% directlink "references" %}</h3>
+
 * [Chris Hawkes](https://www.codehawke.com/)
 * [Mozilla Developer Network](https://developer.mozilla.org/en-US/)
 * [StackOverflow](https://stackoverflow.com/)
