@@ -22,6 +22,8 @@ Array.prototype.forEach.call(headingList, (heading) => {
     
     // Handling iOS/iPhone :hover for touch event 
     heading.addEventListener("touchstart", touchStart, false);
+    
+    // fixes :hover issue on iPhone/safari for direct links in article (scroll each heading to toggle the link)
     heading.addEventListener("touchmove", touchLeave, false);
     heading.addEventListener("touchend", touchLeave, false);
 });
