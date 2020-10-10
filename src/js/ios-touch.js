@@ -20,6 +20,7 @@ function touchLeave() {
 
 Array.prototype.forEach.call(headingList, (heading) => {
     
+    heading.addEventListener("click", touchLeave, false);
     heading.addEventListener("mouseover", touchStart, false);
     heading.addEventListener("mouseleave", touchLeave, false);
     
