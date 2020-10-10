@@ -271,7 +271,7 @@ It's always nice to see the outcome after someone shows a bunch of code, so belo
         style="border: 1px solid lightgray;">
 </picture>
 
-<h2 id="conclusion" class="dir-link">Conclusion {% directlink "conclusion" %}</h2>
+<h2 id="conclusion" class="dir-link" onclick="">Conclusion {% directlink "conclusion" %}</h2>
 
 If you read this far and followed each step, you should now have a very basic web page with a couple HTML elements built primarily with JS instead of using traditional markup directly inside an `.html` file.
 
@@ -279,7 +279,7 @@ For anyone wanting to start their journey with JavaScript, this is truly some of
 
 <a href="https://github.com/tannerdolby/intro-browser-js">View the source code on Github</a>
 
-<h3 id="references" class="dir-link">References {% directlink "references" %}</h3>
+<h3 id="references" class="dir-link" onclick="">References {% directlink "references" %}</h3>
 
 * [Chris Hawkes](https://www.codehawke.com/)
 * [Mozilla Developer Network](https://developer.mozilla.org/en-US/)
