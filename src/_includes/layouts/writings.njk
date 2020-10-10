@@ -48,7 +48,7 @@ tagList:
                 </div>
                 <h3 style="margin-right: 1rem;">Filter by tags:</h3>
                 <ul style="display: flex; justify-content: flex-start; align-items: center; flex-wrap: wrap; padding-left: 0; list-style: none; margin: .5rem auto;">
-                    <li style="display: flex; flex-wrap: wrap; align-items: center;">{% for tag in tagList %}<a style="margin: .75rem 0;" href="/writing/tags/{{ tag }}/"><code style="margin-right: .75rem; color: var(--link-blue-accessible) !important;">#{{ tag }}</code>{% endfor %}</a></li>
+                    <li style="display: flex; flex-wrap: wrap; align-items: center;">{% for tag in tagList %}<a style="margin: .75rem 0;" href="/writing/tags/{{ tag }}/"><code style="margin-right: .75rem; color: var(--link-blue-accessible) !important;">#{{ tag }}</code></a>{% endfor %}</li>
                 </ul>
             </div>
         </main>
