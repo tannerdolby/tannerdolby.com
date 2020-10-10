@@ -576,7 +576,6 @@ main {
 
 .featured-art .feat-art-list li {
     padding-right: .5rem;
-    /* padding-right: 1rem; */
 }
 
 .featured-art .feat-art-list li a img {
@@ -620,7 +619,7 @@ main {
     align-items: center;
     padding: .5rem .75rem;
     border-radius: .3rem;
-    font-weight: 450;
+    font-weight: 500;
 }
 
 .contact-wrapper .socials-list li a img {
