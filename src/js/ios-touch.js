@@ -18,7 +18,6 @@ function touchLeave() {
     });
 }
 
-// change syntax to .addEventListener("event", touchStart, false);
 Array.prototype.forEach.call(headingList, (heading) => {
     
     heading.addEventListener("mouseover", touchStart, false);
