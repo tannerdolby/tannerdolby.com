@@ -31,19 +31,25 @@
                     <li>
                         {% if previousPost %}
                         <h3 style="margin-bottom: .75rem;">Previous</h3>
-                        <a href="{{ previousPost.url }}">&LeftArrow; {{ previousPost.data.title }}</a>
+                        <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
                         {% endif %}
                     </li>
                     <li>
                         {% if nextPost %}
                         <h3 style="margin-bottom: .75rem;">Next</h3>
-                        <a href="{{ nextPost.url }}">{{ nextPost.data.title }} &RightArrow;</a>
+                        <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
                         {% endif %}
                     </li>
                 </ul>
             </section>
         </main>
         {% include "layouts/footer.njk" %}
-        <script src="/js/ios-touch.js"></script>
+        
+        {% set js %}
+            {% include "js/ios-touch.js" %}
+        {% endset %}
+        <script>
+            {{ js | jsmin | safe }}
+        </script>
     </body>
 </html>
