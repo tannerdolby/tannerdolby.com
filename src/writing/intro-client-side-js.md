@@ -38,15 +38,15 @@ demo_image:
 2. Creating and setting attributes to HTML DOM elements
 3. Binding the created HTML elements to the DOM
 
-<h3 id="what-is-javascript" class="dir-link">What is JavaScript? {% directlink "what-is-javascript" %}</h3>
+<h2 id="what-is-javascript" class="dir-link">What is JavaScript? {% directlink "what-is-javascript" %}</h2>
 
 [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) is a lightweight, interpreted, compiled programming language with first class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.
 
 <h2 id="why-read-this" class="dir-link">Why read this article? {% directlink "why-read-this" %}</h2>
 
-If you're like me, I was (for some reason) afraid of learning to code in JavaScript at first. It felt so abstract and nothing like the previous experience I had programming with [R/Rstudio](https://www.r-project.org/). Here is a little more backstory, so I was browsing the web and came across a video titled, [This is truly the only way to learn JavaScript](https://www.youtube.com/watch?time_continue=4&v=HnXmI2UVZlU&feature=emb_logo) by Chris Hawkes. Quite a catchy video title. 
+If you're like me, I was (for some reason) afraid of learning to code in JavaScript at first. We just didn't get along. Then I stumbled upon this video titled: [This is truly the only way to learn JavaScript](https://www.youtube.com/watch?time_continue=4&v=HnXmI2UVZlU&feature=emb_logo) by Chris Hawkes. Quite a catchy video title if I do say so. 
 
-That being said, after watching the video I was captivated at the fact one could virtually create HTML elements in JavaScript. Then bind them to the DOM while also having the ability to add any valid attributes on these newly created HTML elements. This essentially took out all the need to ever go into my `.html` files, hypotethically speaking. Other than to include a `script` element for referencing the client side JavaScript containing all of the virtually created DOM elements.
+That being said, after watching the video I was captivated at the fact you could virtually create HTML elements in JavaScript. Then bind them to the DOM while also having the ability to add any valid attributes on these newly created HTML elements. This essentially took out all the need to ever go into my `.html` files, hypotethically speaking. Other than to include a `script` element for referencing the client side JavaScript containing all of the virtually created DOM elements.
 
 Hours later after re-writing the HTML for one of my current side project homepages entirely in JavaScript. I realized, "you just structured an entire web page and functional DOM that looks exactly the same as one you would write in HTML, but all with JavaScript. It was a refreshing feeling.
 
@@ -109,7 +109,7 @@ So far, you've created one HTML `div` element, set its `class` attribute and the
 
 <h2 id="setup-dev-env" class="dir-link">Setup Browser Testing Environment {% directlink "setup-dev-env" %}</h2>
 
-Most browsers will allow you to right click on a webpage and click the `inspect` menu button to inspect the markup within the current page. I recommend installing Chrome [Dev Tools](https://developers.google.com/web/tools/chrome-devtools) or some form of developer tools for the specific browser you are using. You also need a text editor of any flavor. I'm using Visual Studio Code as my IDE (Integrated Development Environment) but feel free to use whichever editor you'd like.
+Most browsers will allow you to right click on a webpage and use the `inspect` menu button to inspect the markup within the current page. I recommend installing Chrome [Dev Tools](https://developers.google.com/web/tools/chrome-devtools) or some form of developer tools for the specific browser you are using. You also need a text editor of any flavor. I'm using Visual Studio Code as my IDE (Integrated Development Environment) but feel free to use whichever editor you'd like.
 
 Open up a terminal window and create a new directory named js-tutorial using the `mkdir` command,
 
@@ -251,11 +251,9 @@ document.body.appendChild(main);
 
 Start up your local web server or simply open the `index.html` from your file system into the web browser. If you have provided the proper `<link>` element for CSS, the HTML we created in `script.js` will render on the page with the exact DOM structure that was setup while binding the HTML elements. I gave the page a bit more styling within the [stylesheet](https://github.com/tannerdolby/intro-browser-js/blob/master/style.css) if you want to view the code. You could apply the same styles as those present in the CSS file by using JavaScript and `element.style.attributeNode = ""`, this will take a bit longer but again is great practice.
 
-<h3 id="live-demo" class="dir-link">Check out the live demo {% directlink "live-demo" %}</h3>
+<h2 id="live-demo" class="dir-link">Check out the live demo {% directlink "live-demo" %}</h2>
 
-It's always nice to see the outcome after someone shows a bunch of code, so below is a screen shot of the demo page we've built in this article. With a link to the live demo page as well. 
-
-<a href="{{ demo_link }}">Link to the demo...</a>
+It's always nice to see the outcome after someone shows a bunch of code, so below is a screen shot of the demo page we've built in this article. Here's a link to <a href="{{ demo_link }}">the live demo</a>.
 
 <picture>
     <source 
@@ -275,9 +273,9 @@ It's always nice to see the outcome after someone shows a bunch of code, so belo
 
 If you read this far and followed each step, you should now have a very basic web page with a couple HTML elements built primarily with JS instead of using traditional markup directly inside an `.html` file.
 
-For anyone wanting to start their journey with JavaScript, this is truly some of the best practice to become more familiar with the basics of browser JS. I went from someone who hated JavaScript and had no idea how to use it. Now I utilize the power of JavaScript in my own websites and applications, and you can too!
+For anyone wanting to start their journey with JavaScript, this is truly some of the best practice to become more familiar with the basics of browser JS. I went from someone who hated JavaScript and had no idea how to use it. Now I utilize the power of JavaScript in my own websites and applications.
 
-<a href="https://github.com/tannerdolby/intro-browser-js">View the source code on Github</a>
+If you'd like to learn more about this project, you can <a href="https://github.com/tannerdolby/intro-browser-js">view the source code on Github</a>
 
 <h3 id="references" class="dir-link">References {% directlink "references" %}</h3>
 
