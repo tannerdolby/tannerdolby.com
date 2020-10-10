@@ -1,15 +1,16 @@
 ---
 pagination:
-  data: testdata
+  data: taglist
   size: 1
   alias: item
-testdata:
+taglist:
     - javascript
     - 11ty
     - html
     - nunjucks
     - security
     - shell
+    - web
 permalink: "writing/tags/{{item | slug}}/"
 ---
 
@@ -31,97 +32,128 @@ permalink: "writing/tags/{{item | slug}}/"
 <body>
     {% include "layouts/nav.njk" %}
     <main style="max-width: 1000px; margin: 0 auto; padding: 0 1.1rem;">
+    
+    {% if 'writing/tags/web/' in page.url %}
+        <h1 class="h2">Posts Tagged with: <em>{{ item }}</em></h2>
+        {% for post in collections.posts %}
+        <ul style="padding-left: 0; list-style: none;">
+            <li class="tag-item">
+                <h2 class="tagged-title">
+                    <a style="margin-top: 1rem; margin-bottom: 1rem;" href="{{ post.url }}">{{ post.data.title }}</a>
+                    <div class="tags" style="display: flex; justify-content: center;">
+                    {% for tag in post.data.post_tags %}
+                        <code style="margin-right: .75rem;">#{{ tag }}</code>
+                    {% endfor %}
+                    </div>
+                </h2>
+            </li>
+        </ul>
+        {% endfor %}
+    {% endif %}
+
     {% if 'writing/tags/html/' in page.url %}
-        <h1>Articles Tagged with: {{ item }}</h2>
+        <h1 class="h2">Posts Tagged with: <em>{{ item }}</em></h2>
         {% for post in collections.html %}
         <ul style="padding-left: 0; list-style: none;">
-            <li style="display: flex; justify-content: space-between; align-items: center">
-                <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
-                <div class="tags" style="display: flex; justify-content: center;">
-                {% for tag in post.data.post_tags %}
-                    <code>#{{ tag }}</code>
-                {% endfor %}
-                </div>
+            <li class="tag-item">
+                <h2 class="tagged-title">
+                    <a style="margin-top: 1rem; margin-bottom: 1rem;" href="{{ post.url }}">{{ post.data.title }}</a>
+                    <div class="tags" style="display: flex; justify-content: center;">
+                    {% for tag in post.data.post_tags %}
+                        <code style="margin-right: .75rem;">#{{ tag }}</code>
+                    {% endfor %}
+                    </div>
+                </h2>
             </li>
         </ul>
         {% endfor %}
     {% endif %}
 
     {% if 'writing/tags/javascript/' in page.url %}
-    <h2>Posts Tagged: {{ item }}</h2>
+    <h1 class="h2">Posts Tagged: <em>{{ item }}</em></h1>
     {% for post in collections.javascript %}
         <ul style="padding-left: 0; list-style: none;">
-            <li style="display: flex; justify-content: space-between; align-items: center">
-                <h2 style="margin-bottom: .8rem; font-size: 22px;"><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
-                <div class="tags" style="display: flex; justify-content: center;">
-                {% for tag in post.data.post_tags %}
-                    <code style="margin-right: .5rem;">#{{ tag }}</code>
-                {% endfor %}
-                </div>
+            <li class="tag-item">
+                <h2 class="tagged-title">
+                    <a style="margin-top: 1rem; margin-bottom: 1rem;" href="{{ post.url }}">{{ post.data.title }}</a>
+                    <div class="tags" style="display: flex; justify-content: center;">
+                    {% for tag in post.data.post_tags %}
+                        <code style="margin-right: .75rem;">#{{ tag }}</code>
+                    {% endfor %}
+                    </div>
+                </h2>
             </li>
         </ul>
     {% endfor %}
     {% endif %}
 
     {% if 'writing/tags/shell/' in page.url %}
-        <h2>Posts Tagged: {{ item }}</h2>
+        <h1 class="h2">Posts Tagged: <em>{{ item }}</em></h1>
         {% for post in collections.shell %}
             <ul style="padding-left: 0; list-style: none;">
-                <li style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center">
-                    <h2 style="margin-bottom: .8rem; font-size: 22px;"><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
-                    <div class="tags" style="display: flex; justify-content: center;">
-                    {% for tag in post.data.post_tags %}
-                        <code style="margin-right: .5rem;">#{{ tag }}</code>
-                    {% endfor %}
-                    </div>
+                <li class="tag-item">
+                    <h2 class="tagged-title">
+                        <a style="margin-top: 1rem; margin-bottom: 1rem;" href="{{ post.url }}">{{ post.data.title }}</a>
+                        <div class="tags" style="display: flex; justify-content: center;">
+                        {% for tag in post.data.post_tags %}
+                            <code style="margin-right: .75rem;">#{{ tag }}</code>
+                        {% endfor %}
+                        </div>
+                    </h2>
                 </li>
             </ul>
         {% endfor %}
     {% endif %}
 
     {% if 'writing/tags/security/' in page.url %}
-        <h2>Posts Tagged: {{ item }}</h2>
+        <h1 class="h2">Posts With Tag: #{{ item }}</h1>
         {% for post in collections.security %}
             <ul style="padding-left: 0; list-style: none;">
-                <li style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center">
-                    <h2 style="margin-bottom: .8rem; font-size: 22px;"><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
-                    <div class="tags" style="display: flex; justify-content: center;">
-                    {% for tag in post.data.post_tags %}
-                        <code style="margin-right: .5rem;">#{{ tag }}</code>
-                    {% endfor %}
-                    </div>
+                <li class="tag-item">
+                    <h2 class="tagged-title">
+                        <a style="margin-top: 1rem; margin-bottom: 1rem;" href="{{ post.url }}">{{ post.data.title }}</a>
+                        <div class="tags" style="display: flex; justify-content: center;">
+                        {% for tag in post.data.post_tags %}
+                            <code style="margin-right: .75rem;">#{{ tag }}</code>
+                        {% endfor %}
+                        </div>
+                    </h2>
                 </li>
             </ul>
         {% endfor %}
     {% endif %}
 
     {% if 'writing/tags/11ty/' in page.url %}
-        <h2>Posts Tagged: {{ item }}</h2>
+        <h1 class="h2">Posts Tagged: <em>{{ item }}</em></h1>
         {% for post in collections.11ty %}
             <ul style="padding-left: 0; list-style: none;">
-                <li style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center">
-                    <h2 style="margin-bottom: .8rem; font-size: 22px;"><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
-                    <div class="tags" style="display: flex; justify-content: center;">
-                    {% for tag in post.data.post_tags %}
-                        <code style="margin-right: .5rem;">#{{ tag }}</code>
-                    {% endfor %}
-                    </div>
+                <li class="tag-item">
+                    <h2 class="tagged-title">
+                        <a style="margin-top: 1rem; margin-bottom: 1rem;" href="{{ post.url }}">{{ post.data.title }}</a>
+                        <div class="tags" style="display: flex; justify-content: center;">
+                        {% for tag in post.data.post_tags %}
+                            <code style="margin-right: .75rem;">#{{ tag }}</code>
+                        {% endfor %}
+                        </div>
+                    </h2>
                 </li>
             </ul>
         {% endfor %}
     {% endif %}
 
     {% if 'writing/tags/nunjucks/' in page.url %}
-        <h2>Posts Tagged: {{ item }}</h2>
+        <h1 class="h2">Posts Tagged With: <em>{{ item }}</em></h1>
         {% for post in collections.nunjucks %}
             <ul style="padding-left: 0; list-style: none;">
-                <li style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center">
-                    <h3 style="margin-bottom: .8rem; font-size: 22px;"><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
-                    <div class="tags" style="display: flex; justify-content: center;">
-                    {% for tag in post.data.post_tags %}
-                        <code style="margin-right: .5rem;">#{{ tag }}</code>
-                    {% endfor %}
-                    </div>
+                <li class="tag-item">
+                    <h2 class="tagged-title">
+                        <a style="margin-top: 1rem; margin-bottom: 1rem;" href="{{ post.url }}">{{ post.data.title }}</a>
+                        <div class="tags" style="display: flex; justify-content: center;">
+                        {% for tag in post.data.post_tags %}
+                            <code style="margin-right: .75rem;">#{{ tag }}</code>
+                        {% endfor %}
+                        </div>
+                    </h2>
                 </li>
             </ul>
         {% endfor %}

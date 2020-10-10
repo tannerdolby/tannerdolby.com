@@ -8,6 +8,7 @@ article_tags:
     - nunjucks
     - security
     - shell
+    - web
 ---
 
 ## Article tags

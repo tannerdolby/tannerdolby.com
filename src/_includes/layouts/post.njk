@@ -22,8 +22,25 @@
         <main class="main-container" id="post-content">
             <section id="post" class="main-content">
                 <h1 class="h1" id="post-title">{{ title }}</h1>
-                <p>Posted on <time datetime="{{ datetime | date('YYYY-MM-DD') }}">{{ datetime | date('MMMM DD, YYYY') }}</time> &bull; Tagged with: {% for tags in post_tags %}<code style="margin-right: .5rem; font-size: 16px;">#{{ tags }}</code>{% endfor %}</p>
+                <p>Posted on <time datetime="{{ datetime | date('YYYY-MM-DD') }}">{{ datetime | date('MMMM DD, YYYY') }}</time> &bull; Tagged with: {% for tag in post_tags %}<a href="/writing/tags/{{tag}}/"><code style="margin-right: .5rem; font-size: 16px; color: var(--link-blue-accessible);">#{{ tag }}</code></a>{% endfor %}</p>
                 {{ content | safe }}
+
+                {% set previousPost = collections.posts | getPreviousCollectionItem(page) %}
+                {% set nextPost = collections.posts | getNextCollectionItem(page) %}
+                <ul style="padding-left: 0; list-style: none; margin-top: 3rem;">
+                    <li>
+                        {% if previousPost %}
+                        <h3 style="margin-bottom: .75rem;">Previous</h3>
+                        <a href="{{ previousPost.url }}">&LeftArrow; {{ previousPost.data.title }}</a>
+                        {% endif %}
+                    </li>
+                    <li>
+                        {% if nextPost %}
+                        <h3 style="margin-bottom: .75rem;">Next</h3>
+                        <a href="{{ nextPost.url }}">{{ nextPost.data.title }} &RightArrow;</a>
+                        {% endif %}
+                    </li>
+                </ul>
             </section>
         </main>
         {% include "layouts/footer.njk" %}

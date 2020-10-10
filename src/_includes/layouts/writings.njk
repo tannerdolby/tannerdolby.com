@@ -1,3 +1,14 @@
+---
+tagList: 
+    - html
+    - javascript
+    - 11ty
+    - nunjucks
+    - security
+    - shell
+    - web
+---
+
 
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
@@ -37,11 +48,7 @@
                 </div>
                 <h3 style="margin-right: 1rem;">Filter by tags:</h3>
                 <ul style="display: flex; justify-content: flex-start; align-items: center; flex-wrap: wrap; padding-left: 0; list-style: none; margin: .5rem auto;">
-                    {% for post in collections.posts %}
-                        {% for tag in post.data.post_tags %}
-                        <li style="margin-top: .5rem; margin-bottom: .5rem;"><a href="/writing/tags/{{tag}}/"><code style="margin-right: .75rem; color: var(--link-blue-accessible) !important;">#{{ tag }}</a></code></li>
-                        {% endfor %}
-                    {% endfor %}
+                    <li style="display: flex; flex-wrap: wrap; align-items: center;">{% for tag in tagList %}<a style="margin: .75rem 0;"href="/writing/tags/{{ tag }}/"><code style="margin-right: .75rem; color: var(--link-blue-accessible) !important;">#{{ tag }}</code>{% endfor %}</a></li>
                 </ul>
             </div>
         </main>

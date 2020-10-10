@@ -579,7 +579,7 @@ main {
 }
 
 .featured-art .feat-art-list li {
-    padding-right: .5rem;
+    padding-right: 1rem;
 }
 
 .featured-art .feat-art-list li a img {
@@ -766,6 +766,14 @@ main {
 #post {
     max-width: 750px;
     margin-top: 3.5rem;
+}
+
+.tagged-title {
+    font-size: 22px; 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    align-items: center;
 }
 
 .main-content .post {

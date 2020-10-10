@@ -46,7 +46,7 @@ demo_image:
 
 If you're like me, I was (for some reason) afraid of learning to code in JavaScript at first. It felt so abstract and nothing like the previous experience I had programming with [R/Rstudio](https://www.r-project.org/). Here is a little more backstory, so I was browsing the web and came across a video titled, [This is truly the only way to learn JavaScript](https://www.youtube.com/watch?time_continue=4&v=HnXmI2UVZlU&feature=emb_logo) by Chris Hawkes. Quite a catchy video title. 
 
-That being said, after watching the video I was captivated at the fact we could virtually create HTML elements in JavaScript. Then bind them to the DOM while also having the ability to add any valid attributes on these newly created HTML elements. This essentially took out all the need to ever go into my `.html` files, hypotethically speaking. Other than to include a `script` element for referencing the client side JavaScript containing all of the virtually created DOM elements.
+That being said, after watching the video I was captivated at the fact one could virtually create HTML elements in JavaScript. Then bind them to the DOM while also having the ability to add any valid attributes on these newly created HTML elements. This essentially took out all the need to ever go into my `.html` files, hypotethically speaking. Other than to include a `script` element for referencing the client side JavaScript containing all of the virtually created DOM elements.
 
 Hours later after re-writing the HTML for one of my current side project homepages entirely in JavaScript. I realized, "you just structured an entire web page and functional DOM that looks exactly the same as one you would write in HTML, but all with JavaScript. It was a refreshing feeling.
 
@@ -166,7 +166,7 @@ Great! Now that the basic markup for `index.html` page is setup. Make sure to pr
 
 Navigate to the `script.js` file in the home js-tutorial directory and lets start writing JS code for constructing a basic DOM tree. You will be utilizing everything mentioned so far to build a small web page with virtually created HTML elements.
 
-#### Step 1 
+### Step 1 
 Create the `<main>` and `<section>` HTML elements with a `class` attribute then inject and set a value for each.
 
 {% filename "script.js" %}
@@ -184,7 +184,7 @@ var section_attr = document.createAttribute("class");
 section_attr.value = "page-content";
 section.setAttributeNode(section_attr);
 ```
-#### Step 2 
+### Step 2 
 Create the heading and paragraph elements and give them both some inner text.
 
 ```js
@@ -205,7 +205,7 @@ h1.innerText = "Hello world!";
 p.innerText = "lorem ipsum dorem dolor.";
 ```
 
-#### Step 3 
+### Step 3 
 Create an `<img>` element for the picture I grabbed from [bukk.it](https://bukk.it/)
 
 ```js
@@ -224,7 +224,7 @@ img.setAttributeNode(img_alt);
 img.setAttributeNode(img_loading);
 ```
 
-#### Step 4
+### Step 4
 Create a paragraph element for the image description.
 
 ```js
@@ -235,7 +235,7 @@ p2.innerHTML = `${img_alt.value} This photo was found on bukk.it`
 p2.setAttributeNode(p2_att);
 ```
 
-#### Step 5 
+### Step 5 
 Bind the virtually create HTML elements to the DOM Tree.
 
 ```js
@@ -255,6 +255,8 @@ Start up your local web server or simply open the `index.html` from your file sy
 
 It's always nice to see the outcome after someone shows a bunch of code, so below is a screen shot of the demo page we've built in this article. With a link to the live demo page as well. 
 
+<a href="{{ demo_link }}">Link to the demo...</a>
+
 <picture>
     <source 
         type="image/webp" 
@@ -269,15 +271,13 @@ It's always nice to see the outcome after someone shows a bunch of code, so belo
         style="border: 1px solid lightgray;">
 </picture>
 
-<a href="{{ demo_link }}">Link to the demo &RightArrow;</a>
-
 <h2 id="conclusion" class="dir-link">Conclusion {% directlink "conclusion" %}</h2>
 
 If you read this far and followed each step, you should now have a very basic web page with a couple HTML elements built primarily with JS instead of using traditional markup directly inside an `.html` file.
 
-For those wanting to start the journey with JavaScript, this is truly some of the best practice to become more familiar with the basics of browser JavaScript. I went from someone who hated JavaScript and had no idea how to use it. Now I utilize the power of JavaScript in my own websites and applications.
+For anyone wanting to start their journey with JavaScript, this is truly some of the best practice to become more familiar with the basics of browser JS. I went from someone who hated JavaScript and had no idea how to use it. Now I utilize the power of JavaScript in my own websites and applications, and you can too!
 
-<a href="https://github.com/tannerdolby/intro-browser-js">View the source code on Github <span>&RightArrow;</span></a>
+<a href="https://github.com/tannerdolby/intro-browser-js">View the source code on Github</a>
 
 <h3 id="references" class="dir-link">References {% directlink "references" %}</h3>
 
