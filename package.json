@@ -6,7 +6,7 @@
   "scripts": {
     "build": "eleventy build",
     "serve": "eleventy --serve",
-    "debug": "DEBUG=* eleventy",
+    "debug": "DEBUG=* eleventy"
   },
   "keywords": [],
   "author": {
