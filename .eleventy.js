@@ -5,11 +5,6 @@ const dateFilter = require("nunjucks-date-filter");
 const pluginRSS = require("@11ty/eleventy-plugin-rss");
 
 module.exports = (eleventyConfig) => {
-    
-    eleventyConfig.setTemplateFormats([
-        "md",
-        "njk"
-    ]);
 
     markdownTemplateEngine: "njk";
 
@@ -67,5 +62,7 @@ module.exports = (eleventyConfig) => {
           input: "src",
           output: "_site"
         },
+        templateFormats: ["md", "njk"],
+        passthroughFileCopy: true
     };
 }

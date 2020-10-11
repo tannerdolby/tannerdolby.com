@@ -8,18 +8,18 @@
         "url_short_name": "11tygallery.netlify.app",
         "source_url": "https://github.com/tannerdolby/eleventy-stock-gallery",
         "image_data": {
-            "fallback_src": "/images/eleventy-template-large.jpg",
+            "fallback_src": "/images/11ty-gl-tmpl-large.jpg",
             "alt": "Eleventy stock gallery project tile",
             "large": {
-                "webp": "/images/eleventy-template-large.webp",
+                "webp": "/images/11ty-gl-tmpl-large.webp",
                 "width": "1024w"
             },
             "med": {
-                "webp": "/images/eleventy-template-med.webp",
+                "webp": "/images/11ty-gl-tmpl-med.webp",
                 "width": "640w"
             },
             "small": {
-                "webp": "/images/eleventy-template-small.webp",
+                "webp": "/images/11ty-gl-tmpl-small.webp",
                 "width": "320w"
             }
         }

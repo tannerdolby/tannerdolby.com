@@ -8,7 +8,7 @@
     "serve": "eleventy --serve",
     "debug": "DEBUG=* eleventy"
   },
-  "keywords": [],
+  "keywords": ["Static site", "11ty"],
   "author": {
     "name": "Tanner Dolby",
     "email": "dolb.tanner@gmail.com",
