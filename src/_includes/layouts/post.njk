@@ -22,7 +22,7 @@
     <body>
         <a href="#post-content" class="skip-link">Skip to main content</a>
         {% include "layouts/nav.njk" %}
-        <main class="main-container" id="post-content" style="max-width: 85ch; margin: 0 auto;">
+        <main class="main-container" id="post-content" style="max-width: 80ch; margin: 0 auto;">
             <section id="post" class="main-content">
                 <h1 class="h1" id="post-title">{{ title }}</h1>
                 <p>Posted on <time datetime="{{ datetime | date('YYYY-MM-DD') }}">{{ datetime | date('MMMM DD, YYYY') }}</time> &bull; Tagged with: {% for tag in post_tags %}<a href="/writing/tags/{{tag}}/"><code style="margin-right: .5rem; font-size: 16px; color: var(--link-blue-accessible);">#{{ tag }}</code></a>{% endfor %}</p>
