@@ -35,6 +35,7 @@ p {
     font-family: var(--system-font);
     color: #212421;
     font-size: 18px;
+    font-size: clamp(17px, 3vw 18px);
     line-height: 1.5;
     font-weight: 400;
 }
@@ -74,17 +75,29 @@ h1,h2,h3,h4 {
 }
 
 .h1 {
-    font-size: 3rem;
+    --min-font-size: 2.5rem;
+    --flex-unit: 10vw;
+    --max-font-size: 3rem;
+    /* font-size: 3rem; */
+    font-size: clamp(var(--min-font-size), var(--flex-unit), var(--max-font-size));
 }
 
 h2,
 .h2 {
-    font-size: 2.1rem;
+    --min-font-size: 2rem;
+    --flex-unit: 5vw;
+    --max-font-size: 2.25rem;
+    /* font-size: 2rem; */
+    font-size: clamp(var(--min-font-size), var(--flex-unit), var(--max-font-size));
 }
 
 h3,
 .h3 {
-    font-size: 1.5rem;
+    --min-font-size: 1.4rem;
+    --flex-unit: 3vw;
+    --max-font-size: 1.55rem;
+    /* font-size: 1.75rem; */
+    font-size: clamp(var(--min-font-size), var(--flex-unit), var(--max-font-size));
 }
 
 .skip-link {
@@ -271,7 +284,7 @@ main {
 }
 
 .main-container .banner-container {
-    margin-top: 3rem;
+    margin-top: 2.75rem;
 }
 
 .main-container .banner-container h1 {
@@ -307,10 +320,12 @@ main {
 
 .main-container .welcome-container .home-banner h2 {
     font-size: 1.5em;
+    font-size: clamp(1em, 5vw, 1.5em);
 }
 
 .main-container .welcome-container .home-banner h1 {
     font-size: 3em;
+    font-size: clamp(2.5em 10vw, 3em);
 }
 .main-container .welcome-container .home-banner p {
     font-size: 1.4em;
@@ -447,20 +462,20 @@ main {
     padding: .5rem;
     border-radius: .1rem;
     text-decoration: none;
-    color: #333;
+    color: #212421;
+    color: #444;
     font-size: 14px;
     margin-right: .75rem;
     box-shadow: none;
     transition: border 300ms ease-out, background 300ms ease-in-out, color 200ms ease-in;
-    border: 1px solid lightgray;
+    border: 1.5px solid lightgray;
 }
 
 .main-container .projects .project-tile .project-details .links .tile-link:hover,
 .main-container .projects .project-tile .project-details .links .tile-link:focus  {
     cursor: pointer;
-    background: hsl(0, 0%, 20%);
-    border: 1px solid hsl(0, 0%, 20%);
-    color: #fff;
+    color: #212421;
+    border: 1.5px solid hsl(0, 0%, 20%);
 }
 
 .main-container .projects .project-tile .project-details h3 {
@@ -754,17 +769,12 @@ main {
     cursor: pointer;
 }
 
-#post h2 {
-    font-size: 2rem;
-}
-
 #post {
     max-width: 750px;
     margin-top: 3.5rem;
 }
 
 .tagged-title {
-    font-size: 22px; 
     display: flex; 
     flex-wrap: wrap; 
     justify-content: space-between; 
@@ -859,9 +869,6 @@ main .art img {
 }
 
 @media (max-width: 560px) {
-    #post #post-title {
-        font-size: 30px;
-    }
     .top-nav .nav-wrapper {
         padding-top: 1rem;
         padding-bottom: .5rem;
