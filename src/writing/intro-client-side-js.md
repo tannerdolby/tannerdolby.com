@@ -12,7 +12,7 @@ tags:
 post_tags:
     - javascript
     - html
-preview: Have you ever thought to yourself while building a website, It sure would be nice to change the background color of an element upon being clicked? Well now you can by using client-side JavaScript!
+preview: Have you ever thought to yourself while building a website, how could I create HTML elements and bind them to the DOM using JavaScript?
 permalink: /writing/{{ tag }}/{{ shortname | slug }}/
 demo_link: https://browserjs-intro.netlify.app/
 demo_image: 
@@ -30,7 +30,11 @@ demo_image:
         src: "/images/browser-js-demo-large.jpg"
 ---
 
-{{ preview }} Client-side means that the JavaScript code is run on the client machine, which is the browser. Server-side JavaScript means that the code is run on the server which is serving web pages.
+{{ preview }} Maybe you have a JS function that creates multiple list elements and you want to set attributes and apply styles, this is where the power client-side JavaScript really shines! 
+
+Client-side means that the JavaScript code is run on the client machine, which is the browser. 
+
+Server-side JavaScript means that the code is run on the server which is serving web pages.
 
 <h2 id="main-topics" class="dir-link">This post will aim to cover: {% directlink "main-topics" %}</h2>
 

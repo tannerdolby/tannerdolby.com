@@ -114,9 +114,9 @@ Let's say there were 20 employees at this company and you didn't want to sequent
 ```
 {% endraw %}
 
-<h2 id="using-layouts" class="dir-link">Connect Markdown file to a Layout {% directlink "using-layouts" %}</h2>
+<h2 id="using-layouts" class="dir-link">Connect the markdown file to a layout {% directlink "using-layouts" %}</h2>
 
-Let's say you wanted to write an introduction paragraph underneath the main page title. To start, you would create a `.md` file and add some [Front Matter data](https://www.11ty.dev/docs/data-frontmatter/) at the top of `cardBanner.md` inside the opening and closing document seperators, `---`. 
+Let's say you wanted to write an introduction paragraph underneath the main page title. To start, you would create a `.md` file and add some [front Matter data](https://www.11ty.dev/docs/data-frontmatter/) at the top of `cardBanner.md` inside the opening and closing document seperators, `---`. 
 
 Front matter in 11ty uses [YAML](https://yaml.org/spec/1.2/spec.html) syntax. The `permalink` is called a [quoted scalar](https://yaml.org/spec/1.2/spec.html#id2760844) where the `title` and `layout` are scalars in the plain style. All the content outside of the document seperators are rendered as regular Markdown. 
 
