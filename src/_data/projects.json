@@ -9,7 +9,7 @@
         "source_url": "https://github.com/tannerdolby/eleventy-stock-gallery",
         "image_data": {
             "fallback_src": "/images/11ty-gl-tmpl-large.jpg",
-            "alt": "Eleventy stock gallery project tile",
+            "alt": "Eleventy stock gallery project",
             "large": {
                 "webp": "/images/11ty-gl-tmpl-large.webp",
                 "width": "1024w"
@@ -34,7 +34,7 @@
         "source_url": "https://github.com/tannerdolby/react-string-table",
         "image_data": {
             "fallback_src": "/images/str-table-med.jpg",
-            "alt": "React string variation table project tile",
+            "alt": "React string variation table project",
             "large": {
                 "webp": "/images/str-table-large.webp",
                 "jpg": "/images/str-table-large.jpg",
@@ -54,28 +54,25 @@
     },
     {
         "id": "project-three",
-        "name": "Markdown Previewer",
-        "aria_label": "Markdown previewer link",
-        "description": "Markdown previewer capable of parsing GFM amongst other markdown flavors to HTML. Built with React.js",
-        "url": "https://markdownpre.netlify.app/",
-        "url_short_name": "markdownpre.netlify.app",
-        "source_url": "https://github.com/tannerdolby/react-markdown-previewer",
+        "name": "What to Watch",
+        "aria_label": "What to watch project link",
+        "description": "Need a series to watch? Try finding one from the collection of shows, or add your own! Built with Eleventy.",
+        "url": "https://whatt2watch.netlify.app/",
+        "url_short_name": "whatt2watch.netlify.app",
+        "source_url": "https://github.com/tannerdolby/what-to-watch",
         "image_data": {
-            "fallback_src": "/images/mark-prev-lg.jpg",
-            "alt": "React markdown previewer project tile",
+            "fallback_src": "/images/wht-to-watch-large.jpg",
+            "alt": "What to Watch, a collection of TV series project",
             "large": {
-                "webp": "/images/mark-prev-lg.webp",
-                "jpg": "/images/mark-prev-lg.jpg",
+                "webp": "/images/wht-to-watch-large.webp",
                 "width": "1024w"
             },
             "med": {
-                "webp": "/images/mark-prev-med.webp",
-                "jpg": "/images/mark-prev-med.jpg",
+                "webp": "/images/wht-to-watch-med.webp",
                 "width": "640w"
             },
             "small": {
-                "webp": "/images/mark-prev-sm.webp",
-                "jpg": "/images/mark-prev-sm.jpg",
+                "webp": "/images/wht-to-watch-small.webp",
                 "width": "320w"
             }
         }
@@ -90,7 +87,7 @@
         "source_url": "https://github.com/tannerdolby/typescript-pokedex",
         "image_data": {
             "fallback_src": "/images/ts-poke-large.jpg",
-            "alt": "TypeScript pokedex project tile",
+            "alt": "TypeScript pokedex project",
             "large": {
                 "webp": "/images/ts-poke-large.webp",
                 "width": "1024w"
