@@ -35,7 +35,7 @@ p {
     font-family: var(--system-font);
     color: #212421;
     font-size: 18px;
-    font-size: clamp(17px, 3vw 18px);
+    font-size: clamp(1.0625rem, 3vw 1.125rem);
     line-height: 1.5;
     font-weight: 400;
 }
