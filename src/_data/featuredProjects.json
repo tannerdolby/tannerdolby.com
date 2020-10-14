@@ -1,0 +1,83 @@
+[
+    {
+        "name": "Window during nighttime",
+        "aria_label": "Link to nighttime window on Codepen",
+        "id": "window-nighttime",
+        "url": "https://codepen.io/tannerdolby/full/ZEWKEvR",
+        "date_created": "August 26, 2020",
+        "credit": "https://dribbble.com/shots/11283947-Taking-it-slow",
+        "desc": "While scrolling through designs over on dribbble, I came across this illustration of a woman sitting in front a window. I tried recreating it using a bit of Markup and CSS. This drawing in particular was alot of fun because I've really enjoyed creating lamps/lighting effects lately.",
+        "image": {
+            "fallback_src": "/images/css-window-night-large.jpg",
+            "alt": "CSS drawing of a window with dark night sky background",
+            "large": {
+                "webp": "/images/css-window-night-large.webp",
+                "jpg": "/images/css-window-night-large.jpg",
+                "width": "1024w"
+            },
+            "med": {
+                "webp": "/images/css-window-night-med.webp",
+                "jpg": "/images/css-window-night-med.jpg",
+                "width": "640w"
+            },
+            "small": {
+                "webp": "/images/css-window-night-small.webp",
+                "jpg": "/images/css-window-night-small.jpg",
+                "width": "320w"
+            }
+        }
+    },
+    {
+        "name": "Telephone booth",
+        "id": "telephone-booth",
+        "aria_label": "Link to telephone booth on Codepen",
+        "url": "https://codepen.io/tannerdolby/full/JjXYPQL",
+        "date_created": "August 10, 2020",
+        "credit": "https://dribbble.com/shots/11454238-Telephone-London",
+        "desc": "I'd seen this style of telephone booth in commercials, games and around the web so I finally created one. This red booth is based on a illustration from dribbble. Click inside the booth to turn the lights on/off.",
+        "image": {
+            "fallback_src": "/images/tele-booth-large.jpg",
+            "alt": "CSS drawing of a red telephone booth with blue background",
+            "large": {
+                "webp": "/images/tele-booth-large.webp",
+                "width": "1024w"
+            },
+            "med": {
+                "webp": "/images/tele-booth-med.webp",
+                "width": "640w"
+            },
+            "small": {
+                "webp": "/images/tele-booth-small.webp",
+                "width": "320w"
+            }
+        }
+    },
+    {
+        "name": "Cassette Tape",
+        "id": "cassette-tape",
+        "aria_label": "Link to cassette tape on Codepen",
+        "url": "https://codepen.io/tannerdolby/full/ExPqqVZ",
+        "date_created": "August 2, 2020",
+        "credit": "https://depositphotos.com/vector-images/cassette-tape.html",
+        "desc": "This drawing of a cassette is one of my all time favorites. I went the endless box-shadow route here which I haven't used in my more recent illustrations. Nonetheless, a cool look compact cassette.",
+        "image": {
+            "fallback_src": "/images/css-cassette-large.jpg",
+            "alt": "CSS drawing of a cassette tape with blue background",
+            "large": {
+                "webp": "/images/css-cassette-large.webp",
+                "jpg": "/images/css-cassette-large.jpg",
+                "width": "1024w"
+            },
+            "med": {
+                "webp": "/images/css-cassette-med.webp",
+                "jpg": "/images/css-cassette-med.jpg",
+                "width": "640w"
+            },
+            "small": {
+                "webp": "/images/css-cassette-small.webp",
+                "jpg": "/images/css-cassette-small.jpg",
+                "width": "320w"
+            }
+        }
+    }
+]
