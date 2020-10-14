@@ -42,21 +42,21 @@
                 <div class="feat-art-wrapper">
                     <h2 style="color: #333; margin-bottom: 2.5rem;">Latest Art</h2>
                     <ul class="feat-art-list" style="padding-left: 0; list-style: none;">
-                        <li>
-                            <a href="/art/#window-nighttime" aria-label="featured image one">
-                                <img src="/images/css-window-night-med.jpg" alt="Window during night time" width="600" height="330">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/art/#telephone-booth" aria-label="featured image two">
-                                <img src="/images/css-booth-med.jpg" alt="Red telephone booth" width="600" height="330">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/art/#cassette-tape" aria-label="featured image three">
-                                <img src="/images/css-cassette-med.jpg" alt="Cassette tape" width="600" height="330">
-                            </a>
-                        </li>
+                        {% for project in featuredProjects %}
+                            <li>
+                                <a href="/art/#window-nighttime" aria-label="featured image one">
+                                    <picture>
+                                        <source 
+                                            type="image/webp" 
+                                            srcset="{{ project.image.large.webp }} {{ project.image.large.width }},
+                                                    {{ project.image.med.webp }} {{ project.image.med.width }},
+                                                    {{ project.image.small.webp }} {{ project.image.small.width }}"
+                                            sizes="(min-width: 450px) 33.3vw, 100vw">
+                                        <img src="{{ project.image.fallback_src }}" alt="{{ project.image.alt }}" loading="lazy" width="1024" height="640">
+                                    </picture>
+                                </a>
+                            </li>
+                        {% endfor %}
                     </ul>
                 </div>
             </section>
