@@ -86,11 +86,11 @@
         "position": "IT",
         "scheduled": {
             "monday": true,
-            "tuesday": true,
-            "wednesday": true,
+            "tuesday": false,
+            "wednesday": false,
             "thursday": true,
             "friday": true,
-            "saturday": false,
+            "saturday": true,
             "sunday": false
         },
         "interests": [
@@ -101,18 +101,18 @@
 
     },
     {
-        "title": "Card One",
+        "title": "Card Six",
         "name": "Tom",
         "position": "Mobile App Design",
         "id": 6,
         "scheduled": {
-            "monday": true,
+            "monday": false,
             "tuesday": true,
-            "wednesday": true,
+            "wednesday": false,
             "thursday": true,
-            "friday": false,
+            "friday": true,
             "saturday": false,
-            "sunday": false
+            "sunday": true
         },
         "interests": [
             "Some rad swift stuff",
