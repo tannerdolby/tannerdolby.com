@@ -52,6 +52,8 @@ The example below creates an array of objects inside the `cards.json` global dat
 
 {% filename "cards.json" %}
 
+<div title="Code block representing cards.json" tabindex="0">
+
 ```json
 [
     {
@@ -76,6 +78,7 @@ The example below creates an array of objects inside the `cards.json` global dat
     }
 ]
 ```
+</div>
 
 Let's say there were X number of employees at this company and you didn't want to sequentially write out the HTML for each employee profile card. You can create a template file `profiles.njk` inside a new directory called `_includes/layouts/` and save a chunk of time by iterating through the array of card objects in `cards.json`. Below is an example of the `for` loop syntax in Nunjucks.
 
@@ -90,6 +93,7 @@ Let's say there were X number of employees at this company and you didn't want t
 This way, you only write a small bit of template HTML for one profile container. Allowing the `for` loop to generate the rest from your global data. Also, this {% raw %}`{% code %}`{% endraw %} and {% raw %}`{{ variable }}`{% endraw %} syntax is the templating language [Nunjucks](https://mozilla.github.io/nunjucks/).
 
 {% filename "profiles.njk" %}
+<div title="Code block representing cards.json" tabindex="0">
 {% raw %}
 ```html
 <main class="card-grid">
@@ -118,6 +122,7 @@ This way, you only write a small bit of template HTML for one profile container.
 </main>
 ```
 {% endraw %}
+</div>
 
 <h2 id="using-layouts" class="dir-link">Connect the markdown file to a layout {% directlink "using-layouts" %}</h2>
 
@@ -126,6 +131,8 @@ Let's say you wanted to write an introduction paragraph underneath the main page
 Front matter in 11ty uses [YAML](https://yaml.org/spec/1.2/spec.html) syntax. The `permalink` is called a [quoted scalar](https://yaml.org/spec/1.2/spec.html#id2760844) where the `title` and `layout` are scalars in the plain style. All the content outside of the document seperators are rendered as regular Markdown. 
 
 Including a [permalink](https://www.11ty.dev/docs/permalinks/) in front matter data when using 11ty allows for URIs to leave out filename extensions. This page `cardBanner.md` will be written to the sites output as `/employees-page/index.html` and accessible from the `/employees-page/` URI.
+
+<div title="Code block representing cards.json" tabindex="0">
 
 {% filename "cardBanner.md" %}
 {% raw %}
@@ -140,11 +147,13 @@ Welcome to the employee home page for company XYZ. The employee cards contain th
 
 ```
 {% endraw %}
+</div>
 
 To include the markdown within the `cardBanner.md`, we can reference it inside the layout file `profiles.njk` using {% raw %}`{{ content }}`{% endraw %} and the `safe` filter. 
 
 To access front matter data such as `title`, you can use {% raw %}`{{ variable }}`{% endraw %} which is Nunjucks variable syntax.
 
+<div title="Code block" tabindex="0">
 {% raw %}
 ```html
 <body>
@@ -153,6 +162,7 @@ To access front matter data such as `title`, you can use {% raw %}`{{ variable }
 </body>
 ```
 {% endraw %}
+</div>
 
 Here is a link to <a href="{{ page.url }}demo/">the live demo</a>.
 
@@ -160,7 +170,7 @@ Here is a link to <a href="{{ page.url }}demo/">the live demo</a>.
 
 This is just one method of merging data in Eleventy and if you'd like to learn more. I suggest taking a look at some of the great features Eleventy has to offer such as [Collections](https://www.11ty.dev/docs/collections/), [Pagination](https://www.11ty.dev/docs/pagination/) and [Pages from Data](https://www.11ty.dev/docs/pages-from-data/). 
 
-<h3 id="references" class="dir-link" onclick="">References {% directlink "references" %}</h3>
+<h3 id="references" class="dir-link">References {% directlink "references" %}</h3>
 
-- [Eleventy](https://www.11ty.dev/docs/)
-- [Nunjucks](https://mozilla.github.io/nunjucks/)
+- [Eleventy Docs](https://www.11ty.dev/docs/)
+- [Nunjucks Docs](https://mozilla.github.io/nunjucks/)
