@@ -86,7 +86,7 @@ h2,
 .h2 {
     --min-font-size: 2rem;
     --flex-unit: 5vw;
-    --max-font-size: 2.25rem;
+    --max-font-size: 2.1rem;
     /* font-size: 2rem; */
     font-size: clamp(var(--min-font-size), var(--flex-unit), var(--max-font-size));
 }
@@ -852,12 +852,6 @@ main .art img {
     .featured-art .feat-art-list li a img {
         height: 100%;
     }
-    .featured-art .feat-art-list li {
-        padding-right: 0;
-    }
-    #post-title {
-        font-size: 2.5rem;
-    }
 } 
 
 @media (max-width: 635px) {
@@ -901,9 +895,9 @@ main .art img {
         flex-wrap: wrap;
         height: 2.5rem;
     }
-    .main-container .projects .project-tile a img {
+    /* .main-container .projects .project-tile a img {
         height: 30vh;
-    }
+    } */
 }
 
 @media (max-width: 365px) {
@@ -919,11 +913,5 @@ main .art img {
 @media (max-width: 350px) {
     .main-container .projects .project-grid {
         grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
-    }
-}
-
-@media (max-width: 345px) {
-    .home-banner h1 {
-        font-size: 2.5em !important;
     }
 }
