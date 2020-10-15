@@ -42,17 +42,17 @@
                 <div class="feat-art-wrapper">
                     <h2 style="color: #333; margin-bottom: 2.5rem;">Latest Art</h2>
                     <ul class="feat-art-list" style="padding-left: 0; list-style: none;">
-                        {% for project in featuredProjects %}
+                        {% for drawing in featuredArt %}
                             <li>
-                                <a href="/art/#window-nighttime" aria-label="featured image one">
+                                <a href="/art/#{{ drawing.id }}" aria-label="{{ drawing.title }}">
                                     <picture>
                                         <source 
                                             type="image/webp" 
-                                            srcset="{{ project.image.large.webp }} {{ project.image.large.width }},
-                                                    {{ project.image.med.webp }} {{ project.image.med.width }},
-                                                    {{ project.image.small.webp }} {{ project.image.small.width }}"
+                                            srcset="{{ drawing.image.large.webp }} {{ drawing.image.large.width }},
+                                                    {{ drawing.image.med.webp }} {{ drawing.image.med.width }},
+                                                    {{ drawing.image.small.webp }} {{ drawing.image.small.width }}"
                                             sizes="(min-width: 450px) 33.3vw, 100vw">
-                                        <img src="{{ project.image.fallback_src }}" alt="{{ project.image.alt }}" loading="lazy" width="1024" height="640">
+                                        <img src="{{ drawing.image.fallback_src }}" alt="{{ drawing.image.alt }}" loading="lazy" width="1024" height="600">
                                     </picture>
                                 </a>
                             </li>
