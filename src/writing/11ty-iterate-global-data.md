@@ -46,8 +46,8 @@ One of my favorite things about Eleventy is the fact that there isn't a prescrib
 
 Here are a few options for data sources:
 - [Computed Data](https://www.11ty.dev/docs/data-computed/)
-- [Front Matter Data](https://www.11ty.dev/docs/data-frontmatter/) in a template or layout file.
-- [Template and Directory](https://www.11ty.dev/docs/data-template-dir/) data files and lastly global data files.
+- [Front Matter Data](https://www.11ty.dev/docs/data-frontmatter/)
+- [Template and Directory](https://www.11ty.dev/docs/data-template-dir/)
 
 <h2 id="create-global-data" class="dir-link">Creating a Global Data File {% directlink "create-global-data" %}</h2>
 

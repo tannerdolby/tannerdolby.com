@@ -28,7 +28,7 @@
             <section class="art">
             {% for drawing in art %}
                 <div class="art-details">
-                    <a id="{{ 'drawing.title' | slug }}" href="{{ drawing.url }}" aria-label="{{ drawing.aria_label }}">
+                    <a id="{{ drawing.id }}" href="{{ drawing.url }}" aria-label="{{ drawing.aria_label }}">
                         <picture>
                             <source 
                                 type="image/webp"

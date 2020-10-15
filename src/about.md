@@ -1,6 +1,7 @@
 ---
 page_name: About - Tanner Dolby
 title: About Me
+eleventyExcludeFromCollections: true
 permalink: "/about/"
 headshot: 
     src: "/images/headshot3.png"

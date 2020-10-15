@@ -1,6 +1,7 @@
 ---
 page_name: Art - Tanner Dolby 
 title: Art & Fun
+eleventyExcludeFromCollections: true
 permalink: "/art/"
 layout: layouts/art.njk
 ---
