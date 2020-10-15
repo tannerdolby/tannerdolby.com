@@ -585,7 +585,7 @@ main {
 }
 
 .featured-art .feat-art-list li a {
-    height: 100%;
+    padding: 1rem;
 }
 
 .featured-art .feat-art-list li a img {
