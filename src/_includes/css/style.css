@@ -415,6 +415,7 @@ main {
     overflow: hidden;
     max-width: 100%;
     width: 100%;
+    /* height: 100%; */
     margin-bottom: 2rem;
     border-radius: .3rem;
     transform-origin: 50% 50%;
@@ -422,23 +423,16 @@ main {
     /* transition: box-shadow 200ms ease-out; */
 }
 
-.main-container .projects .project-grid .project-tile a {
+.main-container .projects .project-tile picture {
     height: 100%;
     width: 100%;
 }
 
-.main-container .projects .project-tile a picture {
-    height: 100%;
-    width: 100%;
-}
-
-.main-container .projects .project-tile a img {
-    object-fit: fill;
+.main-container .projects .project-tile img {
     height: 45vh;
-    height: 42vh;
+    width: 100%;
     max-width: 100%;
     transform-origin: center;
-    width: 100%;
     overflow: hidden;
 }
 
@@ -592,8 +586,16 @@ main {
 
 .featured-art .feat-art-list li a img {
     border: 1px solid lightgray;
+    /* object-fit: fill; */
+    width: 100%;
     object-fit: cover;
-    height: 43vh;
+    width: 1024px;
+    /* height: 50vh; */
+    /* height: 100%;
+    height: 50vh; */
+    height: 35vh;
+    max-width: 100%;
+    /* height: 43vh; */
 }
 
 .contact {
