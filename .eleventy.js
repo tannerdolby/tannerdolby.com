@@ -29,6 +29,11 @@ module.exports = (eleventyConfig) => {
         return new CleanCSS({}).minify(code).styles;
     });
 
+    // such a nice 11ty feature (saves me writing posts in the tags list for every post lol)
+    eleventyConfig.addCollection("posts", function(collection) {
+        return collection.getFilteredByGlob("src/writing/*.md");
+    });
+
     // Minify JS with terser
     eleventyConfig.addNunjucksAsyncFilter("jsmin", async function (
         code,
