@@ -4,16 +4,11 @@ shortname: JS Client Side
 date_created: October 6, 2020
 datetime: 2020-10-06 00:00:00 Z
 date: 2020-10-06
-tag: web
 tags: 
     - html
     - javascript
-    - posts
-post_tags:
-    - javascript
-    - html
 preview: Have you ever thought to yourself while building a website, how could I create HTML elements and bind them to the DOM using JavaScript?
-permalink: /writing/{{ tag }}/{{ shortname | slug }}/
+permalink: /writing/{{ shortname | slug }}/
 demo_link: https://browserjs-intro.netlify.app/
 demo_image: 
     alt: "Live demo of the code produced in this article"
