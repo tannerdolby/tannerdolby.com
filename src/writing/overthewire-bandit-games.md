@@ -95,7 +95,7 @@ bandit0@bandit:~$
 
 You *should* see the above file structure in your corresponding shell when performing the `ls -la` command after connecting to Bandit level zero.
 
-<h2 id="bandit-level-zero" class="dir-link">Level Zero <span>&RightArrow;</span> One {% directlink "bandit-level-zero" %}</h2>
+<h2 id="bandit-level-zero" class="dir-link">Level Zero &RightArrow; One {% directlink "bandit-level-zero" %}</h2>
 
 The password needed to access Bandit level 1 via SSH is stored in a file called `readme` located in the root directory. Use the password you've uncoverered in the previous level to log into Bandit Level One. Whenever you find a new password. Copy it to your clipboard before using SSH (on port 2220) with the corresponding level username `bandit1` to log into the next level and continue bandit wargames.
 
@@ -121,7 +121,7 @@ boJ9jbbUNNfk......
 
 And Voilà! Copy the password you found to your clipboard or a place you wont forget. You will need to use it to SSH into the next bandit level. Use the `exit` command to disconnect from a bandit level after you're ready to move on.
 
-<h2 id="bandit-level-one" class="dir-link">Level One <span>&RightArrow;</span> Two {% directlink "bandit-level-one" %}</h3>
+<h2 id="bandit-level-one" class="dir-link">Level One &RightArrow; Two {% directlink "bandit-level-one" %}</h3>
 
 Now that you've become relatively familiar with the Bandit shell and how to go about finding passwords. Lets jump right into connecting to Bandit level one and find the hidden password!
 
