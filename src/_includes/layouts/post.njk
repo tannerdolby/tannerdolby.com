@@ -25,7 +25,7 @@
         <main class="main-container" id="post-content" style="max-width: 80ch; margin: 0 auto;">
             <section id="post" class="main-content">
                 <h1 class="h1" id="post-title">{{ title }}</h1>
-                <p>Posted on <time datetime="{{ datetime | date('YYYY-MM-DD') }}">{{ datetime | date('MMMM DD, YYYY') }}</time> &bull; Tagged with: {% for tag in post_tags %}<a href="/writing/tags/{{tag}}/"><code style="margin-right: .5rem; font-size: 16px; color: var(--link-blue-accessible);">#{{ tag }}</code></a>{% endfor %}</p>
+                <p>Posted on <time datetime="{{ datetime | date('YYYY-MM-DD') }}">{{ datetime | date('MMMM DD, YYYY') }}</time> &bull; Tagged with: {% for tag in tags %}<a href="/writing/tags/{{tag}}/"><code style="margin-right: .5rem; font-size: 16px; color: var(--link-blue-accessible);">#{{ tag }}</code></a>{% endfor %}</p>
                 {{ content | safe }}
 
                 {% set previousPost = collections.posts | getPreviousCollectionItem(page) %}
