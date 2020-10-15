@@ -898,9 +898,12 @@ main .art img {
         flex-wrap: wrap;
         height: 2.5rem;
     }
-    /* .main-container .projects .project-tile a img {
-        height: 30vh;
-    } */
+    .footer-content .footer-flex ul .edit-page {
+        margin-top: .75rem;
+    }
+    .footer-flex {
+        margin-top: 1rem;
+    }
 }
 
 @media (max-width: 365px) {
