@@ -585,7 +585,7 @@ main {
 }
 
 .featured-art .feat-art-list li a {
-    padding: 1rem;
+    padding: 1rem 0;
 }
 
 .featured-art .feat-art-list li a img {
@@ -851,6 +851,9 @@ main .art img {
     }
     .featured-art .feat-art-list li a img {
         height: 100%;
+    }
+    .featured-art .feat-art-list li {
+        padding-right: 0;
     }
 } 
 
