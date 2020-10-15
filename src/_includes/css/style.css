@@ -584,6 +584,10 @@ main {
     padding-right: .5rem;
 }
 
+.featured-art .feat-art-list li a {
+    height: 100%;
+}
+
 .featured-art .feat-art-list li a img {
     border: 1px solid lightgray;
     /* object-fit: fill; */
