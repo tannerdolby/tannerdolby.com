@@ -35,7 +35,7 @@ Why sit there and type out 30 different `.card` containers when you can store ea
 
 Before going any further, I should mention that when building webpages using the Static Site Generator (SSG) Eleventy. Data is being merged from multiple sources before making its way to the template file that gets rendered in the site output directory `_site`. This is what Eleventy calls the [Data Cascade](https://www.11ty.dev/docs/data-cascade/) and its really neat.
 
-<h2 id="data-sources" class="dir-link">Data Sources {% directlink "data-sources" %}</h3>
+<h2 id="data-sources" class="dir-link">Data Sources {% directlink "data-sources" %}</h2>
 
 One of my favorite things about Eleventy is the fact that there isn't a prescribed way of merging data within the cascade. There is an [order of priority](https://www.11ty.dev/docs/data-cascade/#sources-of-data) for sources of data in the cascade but that data can defined however you would like. 
 
@@ -51,8 +51,6 @@ The global data folder in Eleventy is decided by the [dir.data](https://www.11ty
 The example below creates an array of objects inside the `cards.json` global data file. Each employee card object in the array has some filler data to mimic a large page of profile cards or something of that nature.
 
 {% filename "cards.json" %}
-
-<div title="Code block representing cards.json" tabindex="0">
 
 ```json
 [
@@ -78,7 +76,6 @@ The example below creates an array of objects inside the `cards.json` global dat
     }
 ]
 ```
-</div>
 
 Let's say there were X number of employees at this company and you didn't want to sequentially write out the HTML for each employee profile card. You can create a template file `profiles.njk` inside a new directory called `_includes/layouts/` and save a chunk of time by iterating through the array of card objects in `cards.json`. Below is an example of the `for` loop syntax in Nunjucks.
 
@@ -132,8 +129,6 @@ Front matter in 11ty uses [YAML](https://yaml.org/spec/1.2/spec.html) syntax. Th
 
 Including a [permalink](https://www.11ty.dev/docs/permalinks/) in front matter data when using 11ty allows for URIs to leave out filename extensions. This page `cardBanner.md` will be written to the sites output as `/employees-page/index.html` and accessible from the `/employees-page/` URI.
 
-<div title="Code block representing cards.json" tabindex="0">
-
 {% filename "cardBanner.md" %}
 {% raw %}
 ```yaml
@@ -147,13 +142,11 @@ Welcome to the employee home page for company XYZ. The employee cards contain th
 
 ```
 {% endraw %}
-</div>
 
 To include the markdown within the `cardBanner.md`, we can reference it inside the layout file `profiles.njk` using {% raw %}`{{ content }}`{% endraw %} and the `safe` filter. 
 
 To access front matter data such as `title`, you can use {% raw %}`{{ variable }}`{% endraw %} which is Nunjucks variable syntax.
 
-<div title="Code block" tabindex="0">
 {% raw %}
 ```html
 <body>
@@ -162,11 +155,10 @@ To access front matter data such as `title`, you can use {% raw %}`{{ variable }
 </body>
 ```
 {% endraw %}
-</div>
 
 Here is a link to <a href="{{ page.url }}demo/">the live demo</a>.
 
-<h2 id="conclusion" class="dir-link">Conclusion {% directlink "conclusion" %}</h3>
+<h2 id="conclusion" class="dir-link">Conclusion {% directlink "conclusion" %}</h2>
 
 This is just one method of merging data in Eleventy and if you'd like to learn more. I suggest taking a look at some of the great features Eleventy has to offer such as [Collections](https://www.11ty.dev/docs/collections/), [Pagination](https://www.11ty.dev/docs/pagination/) and [Pages from Data](https://www.11ty.dev/docs/pages-from-data/). 
 
