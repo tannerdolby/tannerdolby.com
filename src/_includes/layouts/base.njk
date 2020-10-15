@@ -34,7 +34,7 @@
                         <p class="preview">{{ post.data.preview }}</p>
                     </article>
                     {% endfor %}
-                    <a class="see-more" style="font-size: 17px; text-decoration: underline;" href="/writing/">See more posts <span>&RightArrow;</span></a>
+                    <a class="see-more" style="font-size: 17px; text-decoration: underline;" href="/writing/">See more posts &RightArrow;</a>
                 </div>
             </section>
             {% include "layouts/projects.njk" %}
@@ -52,7 +52,7 @@
                                                     {{ drawing.image.med.webp }} {{ drawing.image.med.width }},
                                                     {{ drawing.image.small.webp }} {{ drawing.image.small.width }}"
                                             sizes="(min-width: 450px) 33.3vw, 100vw">
-                                        <img src="{{ drawing.image.fallback_src }}" alt="{{ drawing.image.alt }}" loading="lazy" width="1024" height="600">
+                                        <img src="{{ drawing.image.fallback_src }}" alt="{{ drawing.image.alt }}" loading="lazy">
                                     </picture>
                                 </a>
                             </li>
