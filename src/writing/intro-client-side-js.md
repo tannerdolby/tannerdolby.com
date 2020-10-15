@@ -255,23 +255,7 @@ document.body.appendChild(main);
 
 Start up your local web server or simply open the `index.html` from your file system into the web browser. If you have provided the proper `<link>` element for CSS, the HTML we created in `script.js` will render on the page with the exact DOM structure that was setup while binding the HTML elements. I gave the page a bit more styling within the [stylesheet](https://github.com/tannerdolby/intro-browser-js/blob/master/style.css) if you want to view the code. You could apply the same styles as those present in the CSS file by using JavaScript and `element.style.attributeNode = ""`, this will take a bit longer but again is great practice.
 
-<h2 id="live-demo" class="dir-link">Check out the live demo {% directlink "live-demo" %}</h2>
-
-It's always nice to see the outcome after someone shows a bunch of code, so below is a screen shot of the demo page we've built in this article. Here's a link to <a href="{{ demo_link }}">the live demo</a>.
-
-<picture>
-    <source 
-        type="image/webp" 
-        srcset="{{ demo_image.large.src }} {{ image_demo.large.width }},
-                {{ demo_image.med.src }} {{ image_demo.med.width }},
-                {{ demo_image.small.src }} {{image_demo.small.width }}" 
-        sizes="(min-width: 400px) 33.3vw, 100vw">
-    <img 
-        src="{{ demo_image.fallback.src }}" 
-        alt="{{ demo_image.alt }}" 
-        loading="lazy"
-        style="border: 1px solid lightgray;">
-</picture>
+Here's a link to <a href="{{ demo_link }}">the live demo</a>.
 
 <h2 id="conclusion" class="dir-link">Conclusion {% directlink "conclusion" %}</h2>
 
@@ -279,7 +263,7 @@ If you read this far and followed each step, you should now have a very basic we
 
 For anyone wanting to start their journey with JavaScript, this is truly some of the best practice to become more familiar with the basics of browser JS. I went from someone who hated JavaScript and had no idea how to use it. Now I utilize the power of JavaScript in my own websites and applications.
 
-If you'd like to learn more about this project, you can <a href="https://github.com/tannerdolby/intro-browser-js">view the source code on Github</a>
+If you'd like to learn more about this project, <a href="https://github.com/tannerdolby/intro-browser-js">view the source code on Github</a>.
 
 <h3 id="references" class="dir-link">References {% directlink "references" %}</h3>
 

@@ -82,7 +82,17 @@ The example below creates an array of objects inside the `cards.json` global dat
 ]
 ```
 
-Let's say there were 20 employees at this company and you didn't want to sequentially write out the HTML for each employee profile card. You can create a template file `profiles.njk` inside a new directory called `_includes/layouts/` and save a chunk of time by iterating through the array of card objects in `cards.json`. This way, you only write a small bit of template HTML for one profile container and let a for loop generate the rest from your global data. Also, this {% raw %}`{% code %}`{% endraw %} and {% raw %}`{{ variable }}`{% endraw %} syntax is the templating language [Nunjucks](https://mozilla.github.io/nunjucks/).
+Let's say there were X number of employees at this company and you didn't want to sequentially write out the HTML for each employee profile card. You can create a template file `profiles.njk` inside a new directory called `_includes/layouts/` and save a chunk of time by iterating through the array of card objects in `cards.json`. Below is an example of the `for` loop syntax in Nunjucks.
+
+{% raw %}
+```html
+{% for item in sequence %}
+    <h1>{{ item }}</h1>  
+{% endfor %}
+```
+{% endraw %}
+
+This way, you only write a small bit of template HTML for one profile container. Allowing the `for` loop to generate the rest from your global data. Also, this {% raw %}`{% code %}`{% endraw %} and {% raw %}`{{ variable }}`{% endraw %} syntax is the templating language [Nunjucks](https://mozilla.github.io/nunjucks/).
 
 {% filename "profiles.njk" %}
 {% raw %}
@@ -149,23 +159,7 @@ To access front matter data such as `title`, you can use {% raw %}`{{ variable }
 ```
 {% endraw %}
 
-<h2 id="live-demo" class="dir-link">Demo Page {% directlink "live-demo" %}</h2>
-
-Checkout the image below for a glimpse of the page built so far. You can also take a look at <a href="{{ page.url }}demo/">the live demo</a>.
-
-<picture>
-    <source 
-        type="image/webp"
-        srcset="{{ demo_image.large.src }} {{ demo_image.large.width }},
-            {{ demo_image.med.src }} {{ demo_image.large.width }},
-            {{ demo_image.small.src }} {{ demo_image.small.width }}"
-        sizes="(min-width: 450px) 33.3vw, 100vw">
-        <img 
-            src="{{ demo_image.fallback.src }}"
-            alt="{{ demo_image.alt }}"
-            loading="lazy"
-            style="width: 100%; border: 1px solid lightgray;">
-</picture>
+Here is a link to <a href="{{ page.url }}demo/">the live demo</a>.
 
 <h2 id="conclusion" class="dir-link">Conclusion {% directlink "conclusion" %}</h3>
 
