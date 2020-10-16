@@ -84,9 +84,9 @@ h1,h2,h3,h4 {
 
 h2,
 .h2 {
-    --min-font-size: 2rem;
-    --flex-unit: 5vw;
-    --max-font-size: 2.1rem;
+    --min-font-size: 1.85rem;
+    --flex-unit: 8vw;
+    --max-font-size: 2.2rem;
     /* font-size: 2rem; */
     font-size: clamp(var(--min-font-size), var(--flex-unit), var(--max-font-size));
 }
@@ -251,7 +251,7 @@ main {
 .about-headshot {
     display: block;
     max-width: 220px;
-    margin: 3rem auto;
+    margin: 4rem auto;
     border-radius: 50%;
 }
 
@@ -327,6 +327,7 @@ main {
 }
 .main-container .welcome-container .home-banner p {
     font-size: 1.4em;
+    font-size: (1.2rem, 3vw, 1.4rem);
     line-height: 1.5;
 }
 
@@ -336,9 +337,24 @@ main {
     margin: 0;
 }
 
-.main-container .main-content .my-writings {
+#main-writing,
+#main-about,
+#main-art {
+    max-width: 85ch;
+    margin: 0 auto;
+}
+
+.main-container .main-content .my-posts {
     padding-top: 1.5rem;
     border-top: 1px solid lightgray;
+}
+
+.main-container .main-content .my-posts h2 a {
+    text-decoration: underline;
+}
+
+.main-container .main-content .my-posts h2 a:hover {
+    text-decoration: none;
 }
 
 .main-container .main-content {
@@ -429,7 +445,8 @@ main {
 }
 
 .main-container .projects .project-tile img {
-    height: 45vh;
+    /* height: 45vh; */
+    height: 300px;
     width: 100%;
     max-width: 100%;
     transform-origin: center;
@@ -544,11 +561,13 @@ main {
     margin-bottom: .25rem;
 }
 
-.recent-posts h3 a {
+.recent-posts .post h2 a,
+.recent-posts .post h3 a {
     text-decoration: underline;
 }
 
-.recent-posts h3 a:hover {
+.recent-posts .post h2 a:hover,
+.recent-posts .post h3 a:hover {
     text-decoration: none;
 }
 
@@ -566,8 +585,8 @@ main {
     padding: .5rem 0;
     margin: 0 auto;
     padding: 2rem 0;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
     padding-bottom: 3rem;
     max-width: 1000px;
 }
@@ -593,16 +612,8 @@ main {
     /* object-fit: fill; */
     object-fit: cover;
     width: 640px;
-    height: 350px;
-    /* width: 100%;
-    object-fit: cover;
-    width: 1024px; */
-    /* height: 50vh; */
-    /* height: 100%;
-    height: 50vh; */
-    /* height: 35vh; */
+    height: 300px;
     max-width: 100%;
-    /* height: 43vh; */
 }
 
 .contact {
@@ -800,9 +811,6 @@ main {
     line-height: 1.5;
 }
 
-.main-content .post h2 a:hover {
-    text-decoration: none !important;
-}
 
 .main-content .post .date {
     margin: 0;
@@ -810,7 +818,12 @@ main {
 
 .main-content {
     margin-top: 5rem;
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
+}
+
+#main {
+    max-width: 85ch;
+    margin: 0 auto 3rem auto;
 }
 
 main .art {
