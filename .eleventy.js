@@ -12,7 +12,7 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.addPassthroughCopy("./src/css");
     eleventyConfig.addPassthroughCopy("./src/images");
     eleventyConfig.addPassthroughCopy("./src/js");
-
+    
     // add RSS feed 11ty plugin
     eleventyConfig.addPlugin(pluginRSS);
 

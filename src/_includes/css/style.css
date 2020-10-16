@@ -591,13 +591,16 @@ main {
 .featured-art .feat-art-list li a img {
     border: 1px solid lightgray;
     /* object-fit: fill; */
-    width: 100%;
     object-fit: cover;
-    width: 1024px;
+    width: 640px;
+    height: 350px;
+    /* width: 100%;
+    object-fit: cover;
+    width: 1024px; */
     /* height: 50vh; */
     /* height: 100%;
     height: 50vh; */
-    height: 35vh;
+    /* height: 35vh; */
     max-width: 100%;
     /* height: 43vh; */
 }
@@ -842,13 +845,16 @@ main .art img {
 
 /* Media queries - START */
 
-@media (max-width: 800px) {
-    .featured-art  h2 {
-        text-align: center;
-    }
+@media (max-width: 900px) {
     .featured-art .feat-art-list {
         flex-direction: column;
     }
+    .featured-art  h2 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 800px) {
     .featured-art .feat-art-list li a img {
         height: 100%;
     }
