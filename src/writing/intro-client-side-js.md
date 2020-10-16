@@ -64,8 +64,8 @@ const div = document.body.createElement("div");
 ```
 
 A further break down of the above code: 
-1. Create a read only reference value `const` named `div`. 
-2. Assigns the div variable a value of a HTML element created on the document in this case a `div` element. 
+1. Create a read only reference `const` named div. 
+2. Assign the div variable with an HTML element created on the document in this case a `<div>` container. 
 
 <h3 id="creating-attributes" class="dir-link">Creating HTML attributes {% directlink "creating-attributes" %}</h3>
 

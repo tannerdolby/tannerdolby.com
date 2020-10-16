@@ -27,7 +27,9 @@ demo_image:
 
 {{ preview }}
 
-In 11ty, after creating [Global Data files](https://www.11ty.dev/docs/data-global/) inside the `_data/*.js` directory, they can be accessed by any template in the project structure. I'm still a relatively new developer, but I think its safe to say we've all encountered that moment when faced with creating a large grid of repeating card elements (with different data) or a long listing column of values. 
+In 11ty, after creating [Global Data files](https://www.11ty.dev/docs/data-global/) inside the `_data/*.js` directory. The data files can be accessed by any template in the project structure. 
+
+I think its safe to say when building a website, you might be faced with creating a large grid of repeating card elements (with different data) or a long listing column of values. This could be menu items on a restaurant menu, profiles on a main page, the list goes on and on. 
 
 Why sit there and type out 30 different `.card` containers when you can store each card elements data inside a global `.json` file. To then iterate through that global card data and generate 30 elements from only one `.card` containers markup within a layout or markdown file. This could be data fetched from an API and stored in a `.json` file or by simply typing in the data needed by hand into a `_data/*.json` file. 
 
