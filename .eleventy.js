@@ -3,15 +3,26 @@ const { minify } = require("terser");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const dateFilter = require("nunjucks-date-filter");
 const pluginRSS = require("@11ty/eleventy-plugin-rss");
+const markdownIt = require("markdown-it");
 
 module.exports = (eleventyConfig) => {
+
+    const markdownOptions = {
+        html: true,
+        breaks: true,
+        linkify: true
+    };
+
+    eleventyConfig.setLibrary('md', markdownIt(markdownOptions));
+    
+    const md = markdownIt(markdownOptions); // for .use() future usage
 
     markdownTemplateEngine: "njk";
 
     // Run manual file passthrough copy
-    eleventyConfig.addPassthroughCopy("./src/css");
+    eleventyConfig.addPassthroughCopy("./src/_includes/css");
     eleventyConfig.addPassthroughCopy("./src/images");
-    eleventyConfig.addPassthroughCopy("./src/js");
+    eleventyConfig.addPassthroughCopy("./src/_includes/js");
     
     // add RSS feed 11ty plugin
     eleventyConfig.addPlugin(pluginRSS);
