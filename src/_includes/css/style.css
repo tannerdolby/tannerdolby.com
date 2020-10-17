@@ -806,7 +806,10 @@ main {
 
 #post h2:hover .direct-link,
 #post h3:hover .direct-link,
-#post h4:hover .direct-link {
+#post h4:hover .direct-link,
+#post h2:focus .direct-link,
+#post h3:focus .direct-link,
+#post h4:focus .direct-link{
     color: #444 !important;
     cursor: pointer;
 }
