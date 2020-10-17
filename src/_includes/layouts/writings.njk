@@ -54,6 +54,11 @@ tagList:
             </div>
         </main>
         {% include "layouts/footer.njk" %}
-        <script src="/_includes/js/filter-posts.js"></script>
+        {% set js %}
+            {% include "js/filter-posts.js" %}
+        {% endset %}
+        <script>
+            {{ js | jsmin | safe }}
+        </script>
     </body>
 </html>
