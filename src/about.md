@@ -15,7 +15,7 @@ I started my journey as a self taught developer on [freeCodeCamp.org](https://fr
 
 With the JAMstack movement on the rise, I've recently taken an interest in Static Site Generators (SSG). In particular [11ty](https://11ty.dev), which this website is built with.
 
-## Writing
+## Interests
 I like to write about technology and web development. I'm currently fixated on learning more about accessibility guidelines and web performance. If you'd like to see me write about a specific topic or concept, feel free to message me about it. Lately, I've been very interested in CSS illustrations and SVG. I may write about these hobbies in future posts.
 
 ## Education
