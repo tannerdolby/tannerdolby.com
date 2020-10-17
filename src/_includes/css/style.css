@@ -358,7 +358,7 @@ main {
 .tags-list li .post-label:hover {
     border: 1px solid transparent;
     text-decoration: none;
-    background: hsl(0, 0%, 18%);
+    background: hsl(0, 0%, 23%);
     color: #fff;
 }
 
