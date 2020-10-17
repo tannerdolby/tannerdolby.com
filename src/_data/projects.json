@@ -6,10 +6,10 @@
         "description": "Starter repository for a small photo gallery website using the static site generator Eleventy.",
         "url": "https://11tygallery.netlify.app/",
         "url_short_name": "11tygallery.netlify.app",
-        "source_url": "https://github.com/tannerdolby/eleventy-stock-gallery",
+        "source_url": "https://github.com/tannerdolby/11ty-photo-gallery",
         "image_data": {
             "fallback_src": "/images/11ty-gl-tmpl-large.jpg",
-            "alt": "Eleventy stock gallery project",
+            "alt": "Eleventy photo gallery website",
             "large": {
                 "webp": "/images/11ty-gl-tmpl-large.webp",
                 "width": "1024w"
