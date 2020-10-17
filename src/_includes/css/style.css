@@ -628,7 +628,7 @@ main {
 }
 
 .featured-art .feat-art-list li a {
-    padding: 1rem 0;
+    padding: 1rem 0 0 0;
 }
 
 .featured-art .feat-art-list li a img {
