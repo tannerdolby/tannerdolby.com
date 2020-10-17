@@ -175,6 +175,7 @@ main {
 
 .top-nav .nav-wrapper {
     max-width: 1000px;
+    max-width: 950px;
     padding: 1rem 1.1rem;
     margin: 0 auto;
     display: flex;
@@ -337,16 +338,40 @@ main {
     margin: 0;
 }
 
+.tags-list {
+    display: flex; 
+    justify-content: flex-start; 
+    align-items: center; 
+    flex-wrap: wrap; 
+    padding-left: 0; 
+    list-style: none;
+    margin: .5rem auto;
+}
+
+.tags-list li .post-label {
+    margin: .75rem 0; 
+    padding: .2rem .5rem;
+    margin-right: .5rem; 
+    border: 1px solid lightgray;
+}
+
+.tags-list li .post-label:hover {
+    border: 1px solid transparent;
+    text-decoration: none;
+    background: hsl(0, 0%, 18%);
+    color: #fff;
+}
+
 #main-writing,
 #main-about,
 #main-art {
     max-width: 85ch;
-    margin: 0 auto;
+    margin: 0 auto 4rem auto;
 }
 
 .main-container .main-content .my-posts {
-    padding-top: 1.5rem;
-    border-top: 1px solid lightgray;
+    padding-left: 0;
+    list-style: none;
 }
 
 .main-container .main-content .my-posts h2 a {
@@ -363,7 +388,6 @@ main {
     max-width: 1000px;
     padding-left: 1.1rem;
     padding-right: 1.1rem;
-    margin-top: 2rem;
 }
 
 .main-container .main-content .about-banner {
@@ -707,6 +731,7 @@ main {
     margin-left: auto;
     margin-right: auto;
     max-width: 1000px;
+    max-width: 950px;
     padding-left: 1.1rem;
     padding-right: 1.1rem;
 }
@@ -806,23 +831,16 @@ main {
 #post-content #post ol li {
     padding: .3rem 0;
 }
-
 .main-content .post .preview {
     line-height: 1.5;
 }
-
-
 .main-content .post .date {
     margin: 0;
 }
 
-.main-content {
-    margin-top: 5rem;
-    margin-bottom: 3.5rem;
-}
-
 #main {
     max-width: 85ch;
+    max-width: 950px;
     margin: 0 auto 3rem auto;
 }
 
