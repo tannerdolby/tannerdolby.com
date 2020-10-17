@@ -40,7 +40,7 @@ module.exports = (eleventyConfig) => {
         return new CleanCSS({}).minify(code).styles;
     });
 
-    // such a nice 11ty feature (saves me writing posts in the tags list for every post lol)
+    // create a custom collection "posts"
     eleventyConfig.addCollection("posts", function(collection) {
         return collection.getFilteredByGlob("src/writing/*.md");
     });
@@ -55,6 +55,29 @@ module.exports = (eleventyConfig) => {
             callback(null, minified.code);
         } catch (err) {
             console.log(`Terser error: ${err}`);
+        }
+    });
+
+    // adding tags to data-tags for search feature
+    eleventyConfig.addFilter("stringify", function(tags) {
+        
+        let tagsArr = tags;
+
+        for (var i = 0; i < tagsArr.length; i++) {
+            var dataTags = [];
+            if (tagsArr[i]) {
+                dataTags.push(`"${tags[i]}"`);
+            }
+            if (tagsArr[i+1]) {
+                dataTags.push(`"${tags[i+1]}"`);
+            }
+            if (tagsArr[i+2]) {
+                dataTags.push(`"${tags[i+2]}"`);
+            }
+            if (tagsArr[i+3]) {
+                dataTags.push(`"${tags[i+3]}"`);
+            }
+            return dataTags;
         }
     });
 
