@@ -1,10 +1,11 @@
 const allPosts = document.querySelectorAll(".post");
 console.log(allPosts); // Nodelist of article.post elements
 
-// Get the post tag from the location interface using .search
+/* Get the post tag from the location interface using .search
 console.log(location.host);
 console.log(location.href);
 console.log(allPosts["0"].dataset.tags); // gets the tags ["html", "javascript"] from the dataset stringmap
+*/
 
 // search the location (broswer window) to search the URL for filter?=tag 
 // use slice to grab only the characters after the equal sign ie (=nunjucks)
