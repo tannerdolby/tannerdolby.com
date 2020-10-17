@@ -6,7 +6,6 @@ tagList:
     - nunjucks
     - security
     - shell
-    - web
 ---
 
 
@@ -37,25 +36,24 @@ tagList:
                 <h1 class="h1" id="writing">{{ title }}</h1>
             </header>
             <div class="main-content">
-                <div class="writing-about">
-                    {{ content | safe }}
-                </div>
-                <div class="my-posts">
+                <ul class="my-posts">
                     {% for post in collections.posts | reverse %}
-                    <article class="post" data-tags="[{{ post.data.tags }}]">
-                        <h2 class="h3" style="margin-bottom: .8rem;"><a class="post-title-link" href="{{ post.url }}">{{ post.data.title }}</a></h2>
-                        <p class="date" style="font-size: 16px;">Posted on <time datetime="{{ post.data.datetime | date('YYYY-MM-DD') }}">{{ post.data.datetime | date('MMMM DD, YYYY') }}</time> &bull; tagged with: {% for tag in post.data.tags %}<a class="tag" style="margin-left: .2rem; margin-right: .35rem;" href="/writing/tags/{{ tag }}/"><b role="img">#</b>{{ tag }}</a>{% endfor %}</p>
-                        <p class="preview">{{ post.data.preview }}</p>
-                    </article>
+                    <li>
+                        <article class="post" data-tags="[{{ post.data.tags | stringify }}]">
+                            <h2 class="h3" style="margin-bottom: .8rem;"><a class="post-title-link" href="{{ post.url }}">{{ post.data.title }}</a></h2>
+                            <p class="date" style="font-size: 16px;">Posted on <time datetime="{{ post.data.datetime | date('YYYY-MM-DD') }}">{{ post.data.datetime | date('MMMM DD, YYYY') }}</time> &bull; tagged with: {% for tag in post.data.tags %}<a class="tag" style="margin-left: .2rem; margin-right: .35rem;" href="/writing?filter={{ tag }}"><b>#</b>{{ tag }}</a>{% endfor %}</p>
+                            <p class="preview">{{ post.data.preview }}</p>
+                        </article>
+                    </li>
                     {% endfor %}
-                </div>
-                <h3 style="margin-right: 1rem;">Filter by tags:</h3>
-                <ul style="display: flex; justify-content: flex-start; align-items: center; flex-wrap: wrap; padding-left: 0; list-style: none; margin: .5rem auto;">
-                    <li style="display: flex; flex-wrap: wrap; align-items: center;">{% for tag in tagList %}<a style="margin: .75rem 0; margin-right: .5rem;" href="/writing/tags/{{ tag }}/">#{{ tag }}</a>{% endfor %}</li>
+                </ul>
+                <h3 style="margin-right: 1rem;">Filter Posts by Tag</h3>
+                <ul class="tags-list" style="display: flex; justify-content: flex-start; align-items: center; flex-wrap: wrap; padding-left: 0; list-style: none; margin: .5rem auto;">
+                    <li style="display: flex; flex-wrap: wrap; align-items: center;">{% for tag in tagList %}<a class="post-label" href="/writing?filter={{ tag }}">{{ tag }}</a>{% endfor %}</li>
                 </ul>
             </div>
         </main>
         {% include "layouts/footer.njk" %}
-        <script src="../_includes/js/filter-posts.js"></script>
+        <script src="/_includes/js/filter-posts.js"></script>
     </body>
 </html>
