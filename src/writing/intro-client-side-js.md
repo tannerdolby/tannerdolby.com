@@ -53,7 +53,7 @@ Hours later after re-writing the HTML for one of my current side project homepag
 
 [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) or HyperText Markup Language is the most rudimentary building block in web development. Using HTML allows us as developers to define the meaning and structure of web content through semantic HTML DOM elements.
 
-<h2 id="create-elements" class="dir-link">Creating HTML elements and building the DOM using JavaScript {% directlink "create-elements" %}</h2>
+<h2 id="create-elements" class="dir-link">Build the DOM using JavaScript {% directlink "create-elements" %}</h2>
 
 JavaScript allows us the ability as developers to virtually create HTML elements using the [Document](https://developer.mozilla.org/en-US/docs/Web/API/Document) interface and associated [methods](https://developer.mozilla.org/en-US/docs/Web/API/Document#Methods). Below is an example of virtually creating a new `div` element using `createElement()` and attaching it to the DOM tree within the `<body>` node of the current document.
 

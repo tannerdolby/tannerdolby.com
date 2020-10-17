@@ -15,6 +15,9 @@ I started my journey as a self taught developer on [freeCodeCamp.org](https://fr
 
 With the JAMstack movement on the rise, I've recently taken an interest in Static Site Generators (SSG). In particular [11ty](https://11ty.dev), which this website is built with.
 
+## Writing
+I like to write about technology and web development. I'm currently fixated on learning more about accessibility guidelines and web performance. If you'd like to see me write about a specific topic or concept, feel free to message me about it. Lately, I've been very interested in CSS illustrations and SVG. I may write about these hobbies in future posts.
+
 ## Education
 I recieved my Bachelor of Science in Applied Mathematics from Arizona State University on May 11, 2020. Due to a [global pandemic](https://www.cdc.gov/coronavirus/2019-ncov/index.html), the university didn't conduct an in-person commencement ceremenony. Feel free to take a look at the [virtual ceremonies](https://vgradasu.z4.web.core.windows.net/asu/III/#811351). 
 
