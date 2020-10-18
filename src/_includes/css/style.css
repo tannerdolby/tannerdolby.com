@@ -353,7 +353,6 @@ main {
     padding: .2rem .5rem;
     margin-right: .5rem; 
     border: 1px solid lightgray;
-    border: 1px solid rgb(196, 196, 196);
 }
 
 .tags-list li .post-label:hover {
