@@ -8,6 +8,7 @@ const postTag = location.search.slice(location.search.indexOf("=") + 1);
 const postList = document.querySelector(".my-posts");
 const searchMsg = document.createElement("p");
 const clearBtn = document.createElement("a");
+const listItem = document.createElement("li");
 const em = document.createElement("em");
 clearBtn.innerText = "clear filter";
 clearBtn.setAttribute("class", "clear-filter-btn");
@@ -39,8 +40,8 @@ if (postTag) {
     }
 
     //searchMsg.innerText = `${postsWithTag.length} posts tagged with ${postTag}`;
-    postList.prepend(searchMsg);
+    listItem.append(searchMsg);
     em.append(clearBtn);
     searchMsg.append(em);
-
+    postList.prepend(listItem);
 }
