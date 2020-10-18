@@ -30,7 +30,7 @@
                     {% for post in collections.posts | reverse %}
                     <article class="post">
                         <h3 style="margin-bottom: .5rem;"><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
-                        <p class="date" style="font-size: 16px; margin-top: .5rem;">Posted on <time datetime="{{ post.data.datetime | date('YYYY-MM-DD') }}">{{ post.data.datetime | date('MMMM DD, YYYY') }}</time> <!-- &bull; tagged with {% for tag in post.data.tags %}<a style="margin-left: .2rem; margin-right: .35rem;" href="/writing/tags/{{ tag }}"><b role="img">#</b>{{ tag }}</a>{% endfor %} --></p>
+                        <p class="date" style="font-size: 16px; margin-top: .5rem;">Posted on <time datetime="{{ post.data.datetime | date('YYYY-MM-DD') }}">{{ post.data.datetime | date('MMMM DD, YYYY') }}</time> &bull; tagged with {% for tag in post.data.tags %}<a style="margin-left: .2rem; margin-right: .35rem;" href="/writing?filter={{ tag }}"><b role="img">#</b>{{ tag }}</a>{% endfor %}</p>
                         <p class="preview">{{ post.data.preview }}</p>
                     </article>
                     {% endfor %}

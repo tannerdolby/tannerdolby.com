@@ -353,6 +353,7 @@ main {
     padding: .2rem .5rem;
     margin-right: .5rem; 
     border: 1px solid lightgray;
+    border: 1px solid rgb(196, 196, 196);
 }
 
 .tags-list li .post-label:hover {
@@ -375,11 +376,11 @@ main {
 }
 
 .main-container .main-content .my-posts h2 a {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .main-container .main-content .my-posts h2 a:hover {
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 .main-container .main-content {
@@ -587,12 +588,12 @@ main {
 
 .recent-posts .post h2 a,
 .recent-posts .post h3 a {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .recent-posts .post h2 a:hover,
 .recent-posts .post h3 a:hover {
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 .recent-posts .read-more .see-more-btn:hover {
@@ -817,7 +818,12 @@ main {
 #post {
     margin-top: 3.5rem;
 }
-
+.clear-filter-btn {
+    font-size: .95rem;
+}
+.main-content .my-posts .clear-filter-btn:hover {
+    text-decoration: underline !important;
+}
 .tagged-title {
     display: flex; 
     flex-wrap: wrap; 
