@@ -38,8 +38,7 @@ if (postTag) {
     } else {
         searchMsg.innerText = `${postsWithTag.length} posts tagged with ${postTag}`;
     }
-
-    //searchMsg.innerText = `${postsWithTag.length} posts tagged with ${postTag}`;
+    
     listItem.append(searchMsg);
     em.append(clearBtn);
     searchMsg.append(em);
