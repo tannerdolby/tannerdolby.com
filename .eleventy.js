@@ -12,12 +12,19 @@ module.exports = (eleventyConfig) => {
         breaks: true,
         linkify: true
     };
-
-    eleventyConfig.setLibrary('md', markdownIt(markdownOptions));
     
-    const md = markdownIt(markdownOptions); // for .use() future usage
+    const md = markdownIt(markdownOptions)
+        // Recognize # for links to post tags 
+        .use(function(md) {
+            md.linkify.add("#", {
+                validate: /^[\w-]+/g,
+                normalize: match => {
+                    match.url = "/writing?filter=".concat(match.raw.slice(1));
+                }
+            })
+        });
 
-    markdownTemplateEngine: "njk";
+    eleventyConfig.setLibrary("md", md);
 
     // Run manual file passthrough copy
     eleventyConfig.addPassthroughCopy("./src/_includes/css");
@@ -62,7 +69,7 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.addFilter("stringify", function(tags) {
         
         let tagsArr = tags;
-
+        // tried .forEach() but need to come back and update this, it works but ya
         for (var i = 0; i < tagsArr.length; i++) {
             var dataTags = [];
             if (tagsArr[i]) {
@@ -96,10 +103,14 @@ module.exports = (eleventyConfig) => {
         return `<img width="210" height="210" src="${src}" alt="Headshot of Tanner's face (a bit outdated)" class="about-headshot" loading="lazy">`
     });
 
+    markdownTemplateEngine: "njk";
+
     return {
         dir: {
           input: "src",
-          output: "_site"
+          output: "_site",
+          data: "_data",
+          includes: "_includes"
         },
         templateFormats: ["md", "njk"],
         passthroughFileCopy: true
