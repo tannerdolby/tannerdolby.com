@@ -35,7 +35,7 @@ p {
     font-family: var(--system-font);
     color: #212421;
     font-size: 18px;
-    font-size: clamp(1.0625rem, 3vw 1.125rem);
+    font-size: clamp(1.0625rem, 3vw, 1.125rem);
     line-height: 1.5;
     font-weight: 400;
 }
@@ -102,8 +102,8 @@ h2,
 h3,
 .h3 {
     --min-font-size: 1.4rem;
-    --flex-unit: 6vw;
-    --max-font-size: 1.5rem;
+    --flex-unit: 5vw;
+    --max-font-size: 1.55rem;
     /* font-size: 1.75rem; */
     font-size: clamp(var(--min-font-size), var(--flex-unit), var(--max-font-size));
 }
@@ -585,8 +585,13 @@ main {
 }
 
 .recent-posts article {
-    padding-top: .5rem;
-    padding-bottom: .5rem;
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+}
+
+.recent-posts .post .preview {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
 }
 
 .recent-posts h2 {
@@ -839,8 +844,8 @@ main {
 }
 
 .main-content .post {
-    padding-top: .5rem;
-    padding-bottom: .5rem;
+    padding-top: .25rem;
+    padding-bottom: .25rem;
 }
 
 #post-content #post ul li,
@@ -849,6 +854,8 @@ main {
 }
 .main-content .post .preview {
     line-height: 1.5;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
 }
 .main-content .post .date {
     margin: 0;

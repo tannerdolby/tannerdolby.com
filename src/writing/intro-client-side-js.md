@@ -49,7 +49,7 @@ After watching the video, I was captivated by the fact you could virtually creat
 
 [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) or HyperText Markup Language is the most rudimentary building block in web development. Using HTML allows developers to define the meaning and structure of web content through semantic HTML DOM elements.
 
-<h2 classid="create-elements" class="dir-link h2-5">Build the DOM using JavaScript {% directlink "create-elements" %}</h2>
+<h2 classid="create-elements" class="dir-link h2-5">Build the DOM Tree {% directlink "create-elements" %}</h2>
 
 JavaScript allows for virtually creating HTML elements using the [Document](https://developer.mozilla.org/en-US/docs/Web/API/Document) interface and associated [methods](https://developer.mozilla.org/en-US/docs/Web/API/Document#Methods). Below is an example of virtually creating a new `<div>` element using `createElement()` and attaching it to the DOM tree within the `<body>` node of the current document.
 
@@ -141,7 +141,7 @@ index.html script.js style.css
 
 Now we're ready to start putting code into these newly created files within the js-tutorial directory. Open up the js-tutorial folder in your preferred editor and navigate into the `index.html` file (it will be blank). I suggest using the [html5-boilerplate](https://marketplace.visualstudio.com/items?itemName=sidthesloth.html5-boilerplate) VS Code plugin as I will be using it to generate a template of HTML boilerplate code. But getting familiar with typing out the basic markup for an `.html` page by hand is great practice.
 
-Inside the `index.html` file, entering `html5-boilerplate` with the specified plugin installed will provide you with the following:
+Inside the `index.html` file, include the following HTML.
 
 {% filename "index.html" %}
 
@@ -151,18 +151,18 @@ Inside the `index.html` file, entering `html5-boilerplate` with the specified pl
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
+        <title>Intro to client-side JS</title>
+        <meta name="description" content="A demo page">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <script src=""></script>
+        <script src="script.js"></script>
     </body>
 </html>
 ```
 
-Great! Now that the basic markup for `index.html` page is setup. Make sure to provide the relevant document metadata inside the `<head>` tag. Ensure to include references to the custom CSS file using a `<link>` and custom JS `<script>` so the document page can reference that code like the example shows above.
+Great! Now that the basic markup for `index.html` page is setup. Make sure you've provided the relevant document metadata inside the `<head>` tag. Ensure to include references to the custom CSS file using a `<link>` and custom JavaScript using a `<script>` tag.
 
 <h2 id="finalize" class="dir-link h2-5"> Putting it all together! {% directlink "finalize" %}</h2>
 
