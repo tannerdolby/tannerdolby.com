@@ -28,10 +28,3 @@ npm run build
 ```
 npm run serve
 ```
-
-## Built with
-* Eleventy
-* HTML
-* Nunjucks
-* CSS
-* JavaScript
