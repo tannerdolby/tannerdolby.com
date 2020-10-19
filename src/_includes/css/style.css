@@ -91,11 +91,19 @@ h2,
     font-size: clamp(var(--min-font-size), var(--flex-unit), var(--max-font-size));
 }
 
+.h2-5 {
+    --min-font-size: 1.55rem;
+    --flex-unit: 6vw;
+    --max-font-size: 1.6rem;
+    /* font-size: 1.75rem; */
+    font-size: clamp(var(--min-font-size), var(--flex-unit), var(--max-font-size));
+}
+
 h3,
 .h3 {
     --min-font-size: 1.4rem;
-    --flex-unit: 3vw;
-    --max-font-size: 1.55rem;
+    --flex-unit: 6vw;
+    --max-font-size: 1.5rem;
     /* font-size: 1.75rem; */
     font-size: clamp(var(--min-font-size), var(--flex-unit), var(--max-font-size));
 }
