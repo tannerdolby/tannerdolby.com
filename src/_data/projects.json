@@ -3,13 +3,13 @@
         "id": "project-one",
         "name": "Photo Gallery Template",
         "aria_label": "Photo gallery template link",
-        "description": "Starter repository for a small photo gallery website using the static site generator Eleventy.",
+        "description": "Starter site for creating your own photo or art gallery. Built with Eleventy.",
         "url": "https://11tygallery.netlify.app/",
         "url_short_name": "11tygallery.netlify.app",
         "source_url": "https://github.com/tannerdolby/11ty-photo-gallery",
         "image_data": {
             "fallback_src": "/images/11ty-gl-tmpl-large.jpg",
-            "alt": "Eleventy photo gallery website",
+            "alt": "Photo gallery website",
             "large": {
                 "webp": "/images/11ty-gl-tmpl-large.webp",
                 "width": "1024w"
@@ -28,7 +28,7 @@
         "id": "project-two",
         "name": "String Variation Table",
         "aria_label": "String variation table link",
-        "description": "Dynamic string variation table containing some of the most common string operations.",
+        "description": "A table containing some of the most common string operations. Built with React.",
         "url": "https://reactstrtable.netlify.app/",
         "url_short_name": "reactstrtable.netlify.app",
         "source_url": "https://github.com/tannerdolby/react-string-table",
