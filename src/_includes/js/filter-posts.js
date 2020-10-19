@@ -1,7 +1,7 @@
 const allPosts = [...document.querySelectorAll(".post")]; // convert iterable object (NodeList) to array
 console.log(allPosts); // Nodelist of article.post elements
 
-// search the location (broswer window) to search the URL for filter?=tag 
+// search the location (broswer window) to search the URL for ?filter=tag 
 // use slice to grab only the characters after the equal sign ie (=nunjucks)
 const postTag = location.search.slice(location.search.indexOf("=") + 1);
 
@@ -10,6 +10,7 @@ const searchMsg = document.createElement("p");
 const clearBtn = document.createElement("a");
 const listItem = document.createElement("li");
 const em = document.createElement("em");
+
 clearBtn.innerText = "clear filter";
 clearBtn.setAttribute("class", "clear-filter-btn");
 clearBtn.style.textDecoration = "none";
