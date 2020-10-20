@@ -3,7 +3,7 @@
         "id": "project-one",
         "name": "Photo Gallery Template",
         "aria_label": "Photo gallery template link",
-        "description": "Starter site for creating your own photo or art gallery. Built with Eleventy.",
+        "description": "Starter site for creating a photo or art gallery. Built with Eleventy.",
         "url": "https://11tygallery.netlify.app/",
         "url_short_name": "11tygallery.netlify.app",
         "source_url": "https://github.com/tannerdolby/11ty-photo-gallery",
