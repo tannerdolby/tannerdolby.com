@@ -585,8 +585,8 @@ main {
 }
 
 .recent-posts article {
-    padding-top: .25rem;
-    padding-bottom: .25rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
 }
 
 .recent-posts .post .preview {
@@ -844,8 +844,8 @@ main {
 }
 
 .main-content .post {
-    padding-top: .25rem;
-    padding-bottom: .25rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
 }
 
 #post-content #post ul li,
