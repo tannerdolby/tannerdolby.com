@@ -232,8 +232,6 @@ Start up a local web server or open the `index.html` file using your web browser
 
 I gave the page a bit more styling within the [stylesheet](https://github.com/tannerdolby/intro-browser-js/blob/master/style.css) if you want to view the code. You could also apply the same styles as those present in the `.css` file by using JavaScript and `element.style.attributeNode = ""`, this will take a bit longer.
 
-Here's a link to <a href="{{ demo_link }}">the live demo</a>.
-
 <h2 id="conclusion" class="dir-link h2-5">Conclusion {% directlink "conclusion" %}</h2>
 
 If you read this far and followed each step, you should now have a very basic web page with a couple HTML elements built primarily with JS instead of using traditional markup directly inside an `.html` file.
@@ -241,6 +239,8 @@ If you read this far and followed each step, you should now have a very basic we
 For anyone wanting to start their journey with JavaScript, this is truly some of the best practice to become more familiar with the basics of browser JS. I went from someone who hated JavaScript and had no idea how to use it. Now I utilize the power of JavaScript in my own websites and applications.
 
 Have a look at the <a href="https://github.com/tannerdolby/intro-browser-js">source code on Github</a>. You can also checkout similar posts in the #javascript or #html categories.
+
+Here's a link to <a href="{{ demo_link }}">the live demo</a>.
 
 <h3 id="references" class="dir-link h2-5">References {% directlink "references" %}</h3>
 
