@@ -101,7 +101,7 @@ h2,
 
 h3,
 .h3 {
-    --min-font-size: 1.4rem;
+    --min-font-size: 1.35rem;
     --flex-unit: 5vw;
     --max-font-size: 1.55rem;
     /* font-size: 1.75rem; */
@@ -423,8 +423,6 @@ main {
 }
 
 .main-container .main-content p {
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
     font-family: var(--system-font);
     line-height: 1.5;
 }
@@ -487,7 +485,7 @@ main {
 
 .main-container .projects .project-tile .project-details {
     padding: 1rem;
-    margin: 0 auto;
+    height: auto;
 }
 
 .main-container .projects .project-tile .project-details .links {
@@ -857,8 +855,10 @@ main {
     margin-top: .5rem;
     margin-bottom: .5rem;
 }
-.main-content .post .date {
-    margin: 0;
+.post .date {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: .75rem;
 }
 
 #main {

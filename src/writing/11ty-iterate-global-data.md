@@ -91,7 +91,11 @@ Below is an example of the `for` loop syntax in Nunjucks.
 ```
 {% endraw %}
 
-This way, you only write a small amount of template HTML for one profile container. Allowing the `for` loop to generate the rest of the card containers markup from your global data. Also, this {% raw %}`{% code %}`{% endraw %} and {% raw %}`{{ variable }}`{% endraw %} syntax is the templating language [Nunjucks](https://mozilla.github.io/nunjucks/).
+This way, you only write a small amount of template HTML for one profile container. Allowing the `for` loop to generate the rest of the card containers markup from your global data. 
+
+I'm using [Nunjucks](https://mozilla.github.io/nunjucks/) as the templating language for examples in this article, but everything could be done in a `.liquid` template as well. Liquid is the default templating engine for sites created with Eleventy. 
+
+To create a loop or conditional statement use {% raw %}`{% code %}`{% endraw %}. If you simply want to access data from front matter or in global data, use {% raw %}`{{ variable }}`{% endraw %}. 
 
 {% raw %}
 ```html
@@ -101,9 +105,9 @@ This way, you only write a small amount of template HTML for one profile contain
 ```
 {% endraw %}
 
-You can access global data files in a markdown file or within a template by using the filename without its file extension. When you have a global data file that is an object, you can access that data files content by using {% raw %}`{{ cards.title }}`{% endraw %} without any `for` loop. If you wanted to iterate over the array of card objects in `_data/cards.json`, you would use the code below.
+You can access global data files in a markdown file or within a template by using the filename without its file extension. When you have a global data file thats an object, you can access the content by using {% raw %}`{{ cards.title }}`{% endraw %} without any `for` loop. If you wanted to iterate over the array of card objects in `_data/cards.json`, you would use the code below.
 
-{% filename "profiles.njk" %}
+{% filename "profiles.liquid" %}
 
 {% raw %}
 ```html
@@ -158,18 +162,7 @@ Welcome to the employee home page for company XYZ. The employee cards contain th
 ```
 {% endraw %}
 
-To include the markdown within the `cardBanner.md`, we can reference it inside the layout file `profiles.njk` using {% raw %}`{{ content }}`{% endraw %} and the `safe` filter. 
-
-To access front matter data such as `title`, you can use {% raw %}`{{ variable }}`{% endraw %} which is Nunjucks variable syntax.
-
-{% raw %}
-```html
-<body>
-    <h1 style="text-align: center;">{{ title }}</h1>
-    {{ content | safe }}
-</body>
-```
-{% endraw %}
+To include the markdown in `cardBanner.md`, we can reference it inside the template file `profiles.njk` using {% raw %}`{{ content }}`{% endraw %} and the `safe` filter. 
 
 <h2 id="conclusion" class="dir-link h2-5">Conclusion {% directlink "conclusion" %}</h2>
 
