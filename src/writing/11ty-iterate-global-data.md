@@ -86,7 +86,7 @@ Below is an example of the `for` loop syntax in Nunjucks.
 {% raw %}
 ```html
 {% for item in sequence %}
-    <h1>{{ item }}</h1>  
+    {{ item }}  
 {% endfor %}
 ```
 {% endraw %}
@@ -101,6 +101,7 @@ To create a loop or conditional statement use {% raw %}`{% code %}`{% endraw %}.
 ```html
 {% for card in cards %}
     <h2>{{ card.title }}</p>
+    <p>Hi, my name is {{ card.name }}</p>
 {% endfor %}
 ```
 {% endraw %}
