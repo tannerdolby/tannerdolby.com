@@ -28,7 +28,7 @@
         "id": "project-two",
         "name": "String Variation Table",
         "aria_label": "String variation table link",
-        "description": "A table containing a few common string operations. Built with React.",
+        "description": "A table containing some common string operations. Built with React.",
         "url": "https://reactstrtable.netlify.app/",
         "url_short_name": "reactstrtable.netlify.app",
         "source_url": "https://github.com/tannerdolby/react-string-table",
