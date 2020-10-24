@@ -1,6 +1,6 @@
 ---
 title: XYZ Company Employee Profile Page
-layout: "layouts/global-data-demo.njk"
+layout: global-data-demo.njk
 permalink: "writing/11ty-iterate-global-data/demo/"
 eleventyExcludeFromCollections: true
 ---

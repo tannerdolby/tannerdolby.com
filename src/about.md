@@ -6,7 +6,7 @@ permalink: "/about/"
 headshot: 
     src: "/images/headshot3.png"
     srcSmall: "/images/headshot3-small.jpg"
-layout: layouts/about.njk
+layout: about.njk
 ---
 
 Hi there! My name is Tanner Dolby. I'm a mathematician and front-end developer based in Sacramento, CA. I enjoy using semantic and accessible HTML paired with modern CSS to build fast websites.

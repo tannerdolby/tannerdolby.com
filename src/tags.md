@@ -1,6 +1,6 @@
 ---
 title: Article archive - Tags
-layout: "layouts/tags.njk"
+layout: tags.njk
 eleventyExcludeFromCollections: true
 article_tags: 
     - javascript

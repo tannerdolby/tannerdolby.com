@@ -1,7 +1,7 @@
 --- 
-page_name: Tanner Dolby - Developer, Mathematician, Designer
+pageName: Tanner Dolby - Developer, Mathematician, Designer
 about: I'm a front-end developer, designer, and mathematician. I enjoy building things for the web that are accessible and performant.
-layout: "layouts/base.njk"
+layout: base.njk
 eleventyExcludeFromCollections: true
 ---
 
