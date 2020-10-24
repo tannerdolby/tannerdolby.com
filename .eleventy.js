@@ -67,9 +67,8 @@ module.exports = (eleventyConfig) => {
 
     // adding tags to data-tags for search feature
     eleventyConfig.addFilter("stringify", function(tags) {
-        
         let tagsArr = tags;
-        // tried .forEach() but need to come back and update this, it works but ya
+        // tried .forEach() and need to come back and update this, it works but ya
         for (var i = 0; i < tagsArr.length; i++) {
             var dataTags = [];
             if (tagsArr[i]) {
@@ -103,16 +102,15 @@ module.exports = (eleventyConfig) => {
         return `<img width="210" height="210" src="${src}" alt="Headshot of Tanner's face (a bit outdated)" class="about-headshot" loading="lazy">`
     });
 
-    markdownTemplateEngine: "njk";
-
     return {
         dir: {
           input: "src",
           output: "_site",
+          layouts: "_includes/layouts/",
           data: "_data",
           includes: "_includes"
         },
-        templateFormats: ["md", "njk"],
+        templateFormats: ["md", "liquid", "njk"],
         passthroughFileCopy: true
     };
 }
