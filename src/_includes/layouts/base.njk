@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{ page_name }}</title>
+        <title>{{ pageName }}</title>
         <meta name="description" 
             content="Hello! Welcome to the home of Tanner Dolby's personal website. This site is built with the Static Site Generator 11ty. 
             I've had so much fun self teaching myself web development and want to continue sharing about my journey with tech.">
@@ -13,7 +13,6 @@
         <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
         {% set css %}
             {% include "css/style.css" %}
-            {% include "css/speedlify-score.css" %}
         {% endset %}
         <style>
            {{ css | cssmin | safe }}
@@ -24,7 +23,7 @@
         {% include "layouts/nav.njk" %}
         <main class="main-container" id="main" tabindex="-1">
             {{ content | safe }}
-            <section class="recent-posts" id="recent-posts-home" style="margin-top: 2rem;">
+            <section class="recent-posts" style="margin-top: 2rem;">
                 <div class="rp-container">
                     <h2>Recent Posts</h2>
                     {% for post in collections.posts | reverse %}
