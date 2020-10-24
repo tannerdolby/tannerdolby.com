@@ -4,22 +4,22 @@
         "name": "Photo Gallery Template",
         "aria_label": "Photo gallery template link",
         "description": "A starter site for creating your own photo gallery. Built with Eleventy.",
-        "url": "https://11tygallery.netlify.app/",
-        "url_short_name": "11tygallery.netlify.app",
-        "source_url": "https://github.com/tannerdolby/11ty-photo-gallery",
+        "url": "https://eleventy-gallery.netlify.app/",
+        "url_short_name": "eleventy-gallery.netlify.app",
+        "source_url": "https://github.com/tannerdolby/eleventy-photo-gallery",
         "image_data": {
-            "fallback_src": "/images/11ty-gl-tmpl-large.jpg",
+            "fallback_src": "/images/eleventy-gallery-large.jpg",
             "alt": "Photo gallery website",
             "large": {
-                "webp": "/images/11ty-gl-tmpl-large.webp",
+                "webp": "/images/eleventy-gallery-large.webp",
                 "width": "1024w"
             },
             "med": {
-                "webp": "/images/11ty-gl-tmpl-med.webp",
+                "webp": "/images/eleventy-gallery-med.webp",
                 "width": "640w"
             },
             "small": {
-                "webp": "/images/11ty-gl-tmpl-small.webp",
+                "webp": "/images/eleventy-gallery-small.webp",
                 "width": "320w"
             }
         }
