@@ -61,18 +61,18 @@
         "url_short_name": "whatt2watch.netlify.app",
         "source_url": "https://github.com/tannerdolby/what-to-watch",
         "image_data": {
-            "fallback_src": "/images/wht-to-watch-large.jpg",
+            "fallback_src": "/images/what2watch-large.jpg",
             "alt": "What to Watch, a collection of TV series project",
             "large": {
-                "webp": "/images/wht-to-watch-large.webp",
+                "webp": "/images/what2watch-large.webp",
                 "width": "1024w"
             },
             "med": {
-                "webp": "/images/wht-to-watch-med.webp",
+                "webp": "/images/what2watch-med.webp",
                 "width": "640w"
             },
             "small": {
-                "webp": "/images/wht-to-watch-small.webp",
+                "webp": "/images/what2watch-small.webp",
                 "width": "320w"
             }
         }
