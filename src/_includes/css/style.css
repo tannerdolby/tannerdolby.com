@@ -19,7 +19,7 @@ body {
     font-family: var(--system-font);
     background: #f9fafa;
     overflow-x: hidden;
-    line-height: 1.6;
+    line-height: 1.55;
     font-size: 100%;
     min-height: 100vh;
     margin: 0;
@@ -421,7 +421,7 @@ main {
 
 .main-container .main-content p {
     font-family: var(--system-font);
-    line-height: 1.6;
+    line-height: 1.55;
 }
 
 .main-container .projects .projects-wrapper {
@@ -477,7 +477,7 @@ main {
     max-width: 100%;
     overflow: hidden;
     object-fit: fill;
-    height: 45vh;
+    height: 100%;
     width: 100%;
 }
 
