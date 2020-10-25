@@ -19,7 +19,7 @@ With the JAMstack movement on the rise, I've recently taken an interest in Stati
 I like to write about technology and web development. I'm currently fixated on learning more about accessibility guidelines and web performance. If you'd like to see me write about a specific topic or concept, feel free to message me about it. Lately, I've been very interested in CSS illustrations and SVG. I may write about these hobbies in future posts.
 
 ## Education
-I recieved my Bachelor of Science in Applied Mathematics from Arizona State University on May 11, 2020. Due to a [global pandemic](https://www.cdc.gov/coronavirus/2019-ncov/index.html), the university didn't conduct an in-person commencement ceremenony. Feel free to take a look at the [virtual ceremonies](https://vgradasu.z4.web.core.windows.net/asu/III/#811351). 
+I received my Bachelor of Science in Applied Mathematics from Arizona State University on May 11, 2020. Due to a [global pandemic](https://www.cdc.gov/coronavirus/2019-ncov/index.html), the university didn't conduct an in-person commencement ceremenony. Feel free to take a look at the [virtual ceremonies](https://vgradasu.z4.web.core.windows.net/asu/III/#811351). 
 
 During my time at ASU, I worked as an Undergraduate Researcher and Supplemental Instruction leader for Differential Equations. My passion for mathematics and computing became most apparent to me after completing discrete math and linear algebra. At the moment, I don't have plans for attending grad school but I'm interested in learning about [Knot Theory](https://en.wikipedia.org/wiki/Knot_(mathematics)).
 

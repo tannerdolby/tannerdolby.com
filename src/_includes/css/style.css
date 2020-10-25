@@ -19,7 +19,7 @@ body {
     font-family: var(--system-font);
     background: #f9fafa;
     overflow-x: hidden;
-    line-height: 1.5;
+    line-height: 1.6;
     font-size: 100%;
     min-height: 100vh;
     margin: 0;
@@ -33,7 +33,7 @@ img {
 
 p {
     font-family: var(--system-font);
-    color: #212421;
+    color: #212121;
     font-size: 18px;
     font-size: clamp(1.0625rem, 3vw, 1.125rem);
     line-height: 1.5;
@@ -75,8 +75,8 @@ h1,h2,h3,h4 {
 }
 
 .h1 {
-    --min-font-size: 2.5rem;
-    --flex-unit: 10vw;
+    --min-font-size: 1.75rem;
+    --flex-unit: 9vw;
     --max-font-size: 3rem;
     /* font-size: 3rem; */
     font-size: clamp(var(--min-font-size), var(--flex-unit), var(--max-font-size));
@@ -84,11 +84,12 @@ h1,h2,h3,h4 {
 
 h2,
 .h2 {
-    --min-font-size: 1.85rem;
+    --min-font-size: 2rem;
     --flex-unit: 8vw;
     --max-font-size: 2.2rem;
     /* font-size: 2rem; */
     font-size: clamp(var(--min-font-size), var(--flex-unit), var(--max-font-size));
+    margin-bottom: .5rem;
 }
 
 .h2-5 {
@@ -420,7 +421,7 @@ main {
 
 .main-container .main-content p {
     font-family: var(--system-font);
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 .main-container .projects .projects-wrapper {
@@ -475,8 +476,8 @@ main {
 .main-container .projects .project-tile img {
     max-width: 100%;
     overflow: hidden;
-    object-fit: cover;
-    height: 100%;
+    object-fit: fill;
+    height: 45vh;
     width: 100%;
 }
 
