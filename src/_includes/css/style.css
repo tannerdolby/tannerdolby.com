@@ -470,7 +470,8 @@ main {
 
 .main-container .projects .project-tile img {
     height: 300px;
-    width: 100%;
+    width: 640px;
+    /* width: 100%; */
     max-width: 100%;
     transform-origin: center;
     overflow: hidden;
