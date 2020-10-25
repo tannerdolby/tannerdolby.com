@@ -86,7 +86,7 @@
         "url_short_name": "tspokedex.netlify.app",
         "source_url": "https://github.com/tannerdolby/typescript-pokedex",
         "image_data": {
-            "fallback_src": "/images/ts-pkdex-large.jpg",
+            "fallback_src": "/images/ts-poke-large.jpg",
             "alt": "TypeScript pokedex project",
             "large": {
                 "webp": "/images/ts-poke-large.webp",
