@@ -1,17 +1,17 @@
 <header class="top-nav">
     <nav class="nav-wrapper" aria-label="main nav menu">
         <ul class="nav-home">
-            <li><a href="/" class="home" style="font-size: 18px;"><span class="initials">{{ site.page_info.initials }}</span>Tanner Dolby</a></li>
+            <li><a href="/" class="home"><span class="initials">{{ site.page_info.initials }}</span>Tanner Dolby</a></li>
         </ul>
         <ul class="nav-menu">
             <li class="nav-item">
-                <a style="margin-left: .25rem;" class="{{ 'active' if '/about/' in page.url }}" href="/about/">About</a>
+                <a class="first-link" href="/about/">About</a>
             </li>
             <li class="nav-item">
-                <a href="/writing/" class="{{ 'active' if '/writing/' in page.url }}">Writing</a>
+                <a href="/writing/">Writing</a>
             </li>
             <li class="nav-item">
-                <a href="/art/" class="{{ 'active' if '/art/' in page.url }}">Art</a>
+                <a href="/art/">Art</a>
             </li>
             <li class="nav-item">
                 <a href="https://codepen.io/tannerdolby">CodePen</a>
