@@ -8,18 +8,18 @@
         "url_short_name": "eleventy-gallery.netlify.app",
         "source_url": "https://github.com/tannerdolby/eleventy-photo-gallery",
         "image_data": {
-            "fallback_src": "/images/eleventy-gallery-medium.jpg",
+            "fallback_src": "/images/11ty-ph-gl-large.jpg",
             "alt": "Photo gallery website",
             "large": {
-                "webp": "/images/eleventy-gallery-large.webp",
+                "webp": "/images/11ty-ph-gl-large.webp",
                 "width": "1024w"
             },
             "med": {
-                "webp": "/images/eleventy-gallery-med.webp",
+                "webp": "/images/11ty-ph-gl-med.webp",
                 "width": "640w"
             },
             "small": {
-                "webp": "/images/eleventy-gallery-small.webp",
+                "webp": "/images/11ty-ph-gl-small.webp",
                 "width": "320w"
             }
         }

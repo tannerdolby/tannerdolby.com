@@ -453,14 +453,14 @@ main {
     justify-content: center;
     align-items: flex-start;
     background: #fff;
-    border: 1px solid rgb(219, 218, 218);
+    border: 1px solid rgb(226, 225, 225);
     overflow: hidden;
     max-width: 100%;
     width: 100%;
     margin-bottom: 2rem;
     border-radius: .3rem;
     transform-origin: 50% 50%;
-    box-shadow: 0px 5px 11px -8px rgba(0,0,0,0.75);
+    box-shadow: 0px 5px 10px -7px rgba(0,0,0,0.75);
 }
 
 .main-container .projects .project-tile picture {
@@ -469,12 +469,11 @@ main {
 }
 
 .main-container .projects .project-tile img {
-    height: 300px;
-    width: 640px;
-    /* width: 100%; */
     max-width: 100%;
-    transform-origin: center;
     overflow: hidden;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
 }
 
 .main-container .projects .project-tile .project-details {
@@ -500,17 +499,15 @@ main {
     font-size: .9rem;
     margin-right: .75rem;
     box-shadow: none;
-    /*transition: border 300ms ease-out, background 300ms ease-in-out, color 200ms ease-in; */
+    transition: all 200ms ease;
     border: 1.5px solid lightgray;
 }
 
 .main-container .projects .project-tile .project-details .links .tile-link:hover,
 .main-container .projects .project-tile .project-details .links .tile-link:focus  {
     cursor: pointer;
-    color: #212421;
-    border: 1.5px solid hsl(0, 0%, 20%);
-    background: hsl(0, 0%, 20%);
-    color: #fff;
+    color: var(--link-blue-accessible);
+    border: 1.5px solid var(--link-blue-accessible);
 }
 
 .main-container .projects .project-tile .project-details h3 {
