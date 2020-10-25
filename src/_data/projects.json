@@ -97,7 +97,7 @@
                 "width": "640w"
             },
             "small": {
-                "webp": "/images/ts-poke-small.webp",
+                "webp": "/images/ts-poke-sm.webp",
                 "width": "320w"
             }
         }
