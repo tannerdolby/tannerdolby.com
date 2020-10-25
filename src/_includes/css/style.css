@@ -183,7 +183,7 @@ main {
 
 .top-nav .nav-wrapper {
     max-width: 950px;
-    padding: .75rem 1.1rem;
+    padding: 1rem 1.1rem;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -542,7 +542,7 @@ main {
     color: #000;
     background: #fff;
     margin-top: .75rem;
-    font-weight: 450;
+    font-weight: 400;
     border: 2px solid #272643;
     padding: .75rem 1.75rem;
     font-size: .9rem;
