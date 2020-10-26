@@ -89,7 +89,6 @@ h2,
     --max-font-size: 2.2rem;
     /* font-size: 2rem; */
     font-size: clamp(var(--min-font-size), var(--flex-unit), var(--max-font-size));
-    margin-bottom: .5rem;
 }
 
 .h2-5 {
@@ -445,7 +444,6 @@ main {
     gap: 2rem;
     overflow: hidden;
     list-style: none;
-    /* padding: .2rem; */
 }
 
 .main-container .projects .project-grid .project-tile {
@@ -455,6 +453,7 @@ main {
     align-items: flex-start;
     background: #fff;
     border: 1px solid rgb(226, 225, 225);
+    border: 1px solid lightgray;
     overflow: hidden;
     max-width: 100%;
     width: 100%;
