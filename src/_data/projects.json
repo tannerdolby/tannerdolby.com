@@ -81,7 +81,7 @@
         "id": "project-four",
         "name": "TypeScript Pokedex",
         "aria_label": "TypeScript pokedex link",
-        "description": "Pokedex app built with TypeScript, HTML and CSS. Search by name from the original 151 Pokemon.",
+        "description": "Pokedex app built with TypeScript, HTML and CSS. Search by name from any of the original 151 Pokemon.",
         "url": "https://tspokedex.netlify.app/",
         "url_short_name": "tspokedex.netlify.app",
         "source_url": "https://github.com/tannerdolby/typescript-pokedex",
