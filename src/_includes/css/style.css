@@ -496,7 +496,7 @@ a:hover {
     border-radius: .1rem;
     text-decoration: none;
     color: #444;
-    border: 1.75px solid lightgray;
+    border: 1px solid lightgray;
     font-size: .9rem;
     margin-right: .75rem;
     transition: all 200ms ease;
@@ -506,7 +506,7 @@ a:hover {
 .main-container .projects .project-tile .project-details .links .tile-link:focus  {
     cursor: pointer;
     color: #fff;
-    border: 1.75px solid transparent;
+    border: 1px solid transparent;
     background: hsl(0, 0%, 23%);
 }
 
