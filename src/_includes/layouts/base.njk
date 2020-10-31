@@ -43,7 +43,8 @@
                 <div class="feat-art-wrapper">
                     <h2 style="color: #333; margin-bottom: 2.5rem;">Latest Art</h2>
                     <ul class="feat-art-list" style="padding-left: 0; list-style: none;">
-                        {% for drawing in featuredArt %}
+                        {% for drawing in art %}
+                            {% if drawing.recent %}
                             <li>
                                 <a href="/art/#{{ drawing.id }}" aria-label="{{ drawing.name }}">
                                     <picture>
@@ -57,6 +58,7 @@
                                     </picture>
                                 </a>
                             </li>
+                            {% endif %}
                         {% endfor %}
                     </ul>
                 </div>

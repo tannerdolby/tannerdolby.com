@@ -11,7 +11,9 @@ tags:
 permalink: "/writing/{{ shortname | slug }}/"
 ---
 
-{{ preview }} In 11ty, when you create [global data files](https://www.11ty.dev/docs/data-global/) at the root of your project witin the `_data` directory. The data files can be accessed by any template in the project structure. Global data files can be `.json` or values from `module.exports` in a `.js` file.
+{{ preview }} 
+
+In 11ty, when you create [global data files](https://www.11ty.dev/docs/data-global/) they are placed in `_data` directory. The data files can be accessed by any template in the project structure. Global data files can be stored as JSON `.json` or values from `module.exports` in a JavaScript `.js` file.
 
 I think its safe to say when building a website, you might be faced with creating a large grid of repeating card elements (with different data) or a long listing column of values. This could be menu items on a restaurant menu, profiles on a main page, the list goes on and on. 
 

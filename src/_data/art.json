@@ -1,5 +1,31 @@
 [
     {
+        "name": "CSS Boombox",
+        "id": "css-boombox",
+        "aria_label": "Link to CSS Boombox on Codepen",
+        "url": "https://codepen.io/tannerdolby/full/abZYOMN",
+        "date_created": "October 29, 2020",
+        "recent": true,
+        "credit": "https://dribbble.com/shots/14159520-Boombox",
+        "image": {
+            "fallback_src": "/images/css-boombox-large.jpg",
+            "alt": "Old school boombox made with CSS",
+            "large": {
+                "webp": "/images/css-boombox-large.webp",
+                "jpg": "/images/css-boombox-large.jpg",
+                "width": "1024w"
+            },
+            "med": {
+                "webp": "/images/css-boombox-med.webp",
+                "width": "640w"
+            },
+            "small": {
+                "webp": "/images/css-boombox-small.webp",
+                "width": "320w"
+            }
+        }
+    },
+    {
         "name": "Archimedean spiral with randomized path",
         "id": "archimedean-spiral",
         "aria_label": "Link to archimedean spiral on Codepen",
@@ -57,6 +83,7 @@
         "id": "window-nighttime",
         "url": "https://codepen.io/tannerdolby/full/ZEWKEvR",
         "date_created": "August 26, 2020",
+        "recent": true,
         "credit": "https://dribbble.com/shots/11283947-Taking-it-slow",
         "desc": "While scrolling through designs over on dribbble, I came across this illustration of a woman sitting in front a window. I tried recreating it using a bit of Markup and CSS. This drawing in particular was alot of fun because I've really enjoyed creating lamps/lighting effects lately.",
         "image": {
@@ -113,6 +140,7 @@
         "aria_label": "Link to cassette tape on Codepen",
         "url": "https://codepen.io/tannerdolby/full/ExPqqVZ",
         "date_created": "August 2, 2020",
+        "recent": true,
         "credit": "https://depositphotos.com/vector-images/cassette-tape.html",
         "desc": "This drawing of a cassette is one of my all time favorites. I went the endless box-shadow route here which I haven't used in my more recent illustrations. Nonetheless, a cool look compact cassette.",
         "image": {
