@@ -945,14 +945,11 @@ main .art img {
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
+        overflow-x: auto;
     }
 
     .top-nav .nav-wrapper .nav-home {
         margin-bottom: 1.5rem;
-    }
-
-    .top-nav .nav-wrapper .nav-menu {
-        overflow-x: scroll;
     }
 
     .navigation .navigation-wrapper .nav-main .nav-list .nav-item a {
