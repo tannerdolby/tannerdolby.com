@@ -246,7 +246,7 @@ a:hover {
 .main-container .welcome-container {
     padding: 2.75rem 0 2.75rem 0;
     background: inherit;
-    background: rgb(241, 241, 241);
+    background: rgb(242, 242, 242);
     /* background: #f6f6f6; */
     border-top: 1px solid lightgray;
     border-bottom: 1px solid lightgray;
@@ -945,7 +945,6 @@ main .art img {
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        overflow-x: auto;
     }
 
     .top-nav .nav-wrapper .nav-home {
