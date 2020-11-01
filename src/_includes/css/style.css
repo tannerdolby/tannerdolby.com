@@ -279,6 +279,7 @@ a:hover {
     margin-left: auto;
     margin-right: auto;
     max-width: 1000px;
+    max-width: 970px;
     padding-left: 1.1rem;
     padding-right: 1.1rem;
     display: flex;
@@ -293,12 +294,10 @@ a:hover {
 
 .main-container .banner-container h1 {
     margin: 0;
-    color: #252f38;
 }
 
 .main-container .welcome-container .home-banner h1,
 .main-container .welcome-container .home-banner h2 {
-    color: #252f38;
     margin: 0;
 }
 
@@ -318,10 +317,6 @@ a:hover {
     cursor: pointer;
 }
 
-.main-container .welcome-container .home-banner p {
-    color: #252f38;
-}
-
 .main-container .welcome-container .home-banner h2 {
     font-size: 1.5em;
     font-size: clamp(1em, 5vw, 1.5em);
@@ -335,7 +330,7 @@ a:hover {
     font-size: 1.4em;
     font-size: clamp(1.35rem, 3vw, 1.4rem);
     line-height: 1.5;
-    max-width: 65ch;
+    max-width: 85ch;
 }
 
 .main-container .banner-container .page-banner h2 {
@@ -428,6 +423,7 @@ a:hover {
 
 .main-container .projects .projects-wrapper {
     max-width: 1000px;
+    max-width: 970px;
     display: flex;
     flex-direction: column;
     margin-top: 1rem;
@@ -577,8 +573,7 @@ a:hover {
     margin-bottom: 2rem;
     margin-top: 1rem;
     padding: 1rem 1.1rem;
-    max-width: 950px;
-    max-width: 1000px;
+    max-width: 970px;
     font-family: var(--system-font);
 }
 
@@ -590,6 +585,7 @@ a:hover {
 .recent-posts .post .preview {
     margin-top: .5rem;
     margin-bottom: .5rem;
+    max-width: 80ch;
 }
 
 .recent-posts h2 {
@@ -624,6 +620,7 @@ a:hover {
     padding-right: 1.1rem;
     padding-bottom: 3rem;
     max-width: 1000px;
+    max-width: 970px;
 }
 
 .featured-art .feat-art-list {
@@ -658,6 +655,7 @@ a:hover {
 
 .contact-wrapper {
     max-width: 1000px;
+    max-width: 970px;
     padding: 1rem 1.1rem;
     margin: 2rem auto;
 }
@@ -741,8 +739,7 @@ a:hover {
     flex-direction: column;
     margin-left: auto;
     margin-right: auto;
-    max-width: 950px;
-    max-width: 1000px;
+    max-width: 970px;
     padding-left: 1.1rem;
     padding-right: 1.1rem;
 }
