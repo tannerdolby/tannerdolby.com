@@ -330,7 +330,6 @@ a:hover {
     font-size: 1.4em;
     font-size: clamp(1.35rem, 3vw, 1.4rem);
     line-height: 1.5;
-    max-width: 85ch;
 }
 
 .main-container .banner-container .page-banner h2 {
@@ -867,8 +866,6 @@ a:hover {
 }
 
 #main {
-    /* max-width: 85ch;
-    max-width: 1000px; */
     margin: 0 auto 3rem auto;
 }
 
