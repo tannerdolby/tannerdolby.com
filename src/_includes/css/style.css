@@ -246,10 +246,6 @@ a:hover {
 .main-container .welcome-container {
     padding: 2.75rem 0 2.75rem 0;
     background: inherit;
-    background: rgb(242, 242, 242);
-    /* background: #f6f6f6; */
-    border-top: 1px solid lightgray;
-    border-bottom: 1px solid lightgray;
 } 
 
 .about-main {
@@ -337,8 +333,9 @@ a:hover {
 }
 .main-container .welcome-container .home-banner p {
     font-size: 1.4em;
-    font-size: clamp(1.2rem, 3vw, 1.4rem);
+    font-size: clamp(1.35rem, 3vw, 1.4rem);
     line-height: 1.5;
+    max-width: 65ch;
 }
 
 .main-container .banner-container .page-banner h2 {
@@ -830,6 +827,10 @@ a:hover {
 #post .direct-link:focus {
     color: #444 !important;
     cursor: pointer;
+}
+
+#post-title {
+    margin-bottom: .5rem;
 }
 
 #post {
