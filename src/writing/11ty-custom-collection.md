@@ -3,14 +3,15 @@
 title: Create a Custom Collection with Eleventy
 date: 2020-10-31
 datetime: 2020-10-31 00:00:00 Z
-preview: "If you've built sites using Eleventy before, you're probably familiar with collections. Collections are great feature to show blog posts on your site."
+preview: "If you've built sites using Eleventy before, you're probably familiar with collections. Using the Configuration API allows for creating custom collections which can be useful to only show certain posts on your site."
 tags: 
     - eleventy
     - nunjucks
+    - html
 permalink: "/writing/{{ title | slug }}/"
 ---
 
-If you've built sites using Eleventy (11ty) before, you're probably familiar with [collections](https://www.11ty.dev/docs/collections/). Collections are great feature to show blog posts on your site. If your blog posts are written inside of markdown files, you can give each file the `tags` key as front matter data to create a collection. Front matter in 11ty is placed inside opening and closing document seperators `---` and uses YAML syntax. 
+If you've built sites using Eleventy before, you're probably familiar with [collections](https://www.11ty.dev/docs/collections/). Collections are great feature to show blog posts on your site. If your blog posts are written inside of markdown files, you can give each file the `tags` key as front matter data to create a collection. Front matter in 11ty is placed inside opening and closing document seperators `---` and uses YAML syntax. 
 
 Two markdown files `post-one.md` and `post-two.md` will be the blog posts contained in the `posts` collection.
 
@@ -87,7 +88,9 @@ tags:
 ---
 ```
 
-This is where creating a [custom collection](https://www.11ty.dev/docs/collections/) comes in handy. Instead of including the `posts` tag in the `tags` list for every blog post (which could become cumbersome), just create a custom collection inside the `.eleventy.js` file and omit `posts` from the tags list within front matter data. 
+This is where creating a [custom collection](https://www.11ty.dev/docs/collections/) comes in handy. Instead of including the `posts` tag in the `tags` list for every blog post (which could become cumbersome), just create a custom collection with the markdown files from `/posts/` inside the `.eleventy.js` file. This way you can omit `posts` from the tags list within front matter data. 
+
+<h2 class="post-heading">Create Custom Collections</h2>
 
 All blog posts in this article are saved as `.md` files in the `/posts/` directory. To create a custom collection, navigate to `.eleventy.js`. You will utilize the first argument of the config function `eleventyConfig` to call the API and use `addCollection` to create a new custom collection. You can add the markdown files within `/posts/` to the new collection using `getFilteredByGlob(glob)`, which will match an arbitrary glob or array of globs against the input file's full path (`inputPath`).
 
@@ -112,14 +115,6 @@ Now a custom collection called `myPosts` has been created which contains all the
 ```
 {% endraw %}
 
-Another useful method is `getFilteredByTags(tags)` which will retrieve any content that includes all of the tags passed in.
-
-```js
-eleventyConfig.addCollection("web", function(collection) {
-    return collection.getFilteredByTags("html", "css", "js");
-});
-```
-
 <h2 class="post-heading">Filter Recent Posts</h2>
 
 If you wanted to dedicate a section of the page for some of your most recent blog posts. You could create a custom sorted collection and perform a `slice` array operation to filter the number of recent posts.
@@ -130,6 +125,15 @@ eleventyConfig.addCollection("recentPosts", function(collection) {
 });
 
 ```
+
+Another useful method is `getFilteredByTags(tags)` which will retrieve any content that includes all of the tags passed in.
+
+```js
+eleventyConfig.addCollection("web", function(collection) {
+    return collection.getFilteredByTags("html", "css", "js");
+});
+```
+
 <h2 class="post-heading">Conclusion</h2>
 
 Custom collections along with the ability to build powerful shortcodes and filters in `.eleventy.js` using the [configuration API](https://www.11ty.dev/docs/config/) is one of the main reasons why #eleventy rocks!
