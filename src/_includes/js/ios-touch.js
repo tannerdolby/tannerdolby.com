@@ -1,6 +1,5 @@
 // HTML collections for direct link heading/anchor pairs
-let headingList = document.getElementsByClassName("dir-link");
-let directLinkList = document.getElementsByClassName("direct-link");
+let headingList = document.getElementsByClassName("direct-link");
 
 // Iterate over the HTML collection and apply the direct link color change on touchstart event (iOS, safari, iphone)
 
