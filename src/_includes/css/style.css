@@ -467,7 +467,6 @@ a:hover {
 .main-container .projects .project-tile picture {
     height: 100%;
     width: 100%;
-    height: 20rem; /* 20 * 16 = 320px */
 }
 
 .main-container .projects .project-tile picture img {
