@@ -1,11 +1,11 @@
 ---
-title: Generate Page Content From a Global Data File Using 11ty
+title: Generate Page Content From a Global Data File Using Eleventy
 shortname: 11ty Iterate Global Data
 date: 2020-10-08
 datetime: 2020-10-08 00:00:00 Z
-preview: There are many great features to choose from when building websites with Eleventy (11ty). One feature in particular that I find very useful is the ability to iterate over a global data file and generate page content using Nunjucks.
+preview: There are many great features to choose from when building websites with Eleventy. One feature in particular that I find very useful is the ability to iterate over a global data file and generate page content using Nunjucks.
 tags: 
-    - 11ty
+    - eleventy
     - nunjucks
     - html
 permalink: "/writing/{{ shortname | slug }}/"
@@ -19,11 +19,11 @@ I think its safe to say when building a website, you might be faced with creatin
 
 Why sit there and type out 30 different `.card` containers when you can store each card elements data inside a global data file. To then iterate through that global card data and generate 30 elements from only one card containers markup. This could be data fetched from an API and stored in a `.json` file or by simply typing in the data needed by hand into a `_data/*.json` file. 
 
-<h2 id="cascade-note" class="dir-link h2-5">The Data Cascade {% directlink "cascade-note" %}</h2>
+<h2 id="cascade-note" class="post-heading">The Data Cascade</h2>
 
 Before going any further, I should mention that when building webpages using the Static Site Generator (SSG) Eleventy. Data is being merged from multiple sources before making its way to the template file that gets rendered in the site output directory `_site`. This is what Eleventy calls the [Data Cascade](https://www.11ty.dev/docs/data-cascade/) and its really neat.
 
-<h2 id="data-sources" class="dir-link h2-5">Data Sources {% directlink "data-sources" %}</h2>
+<h2 id="data-sources" class="post-heading">Data Sources</h2>
 
 One of my favorite things about Eleventy is the fact that there isn't a prescribed way of merging data within the cascade. There is an [order of priority](https://www.11ty.dev/docs/data-cascade/#sources-of-data) for sources of data in the cascade but that data can defined however you would like. 
 
@@ -32,7 +32,7 @@ Here are a few options for data sources:
 - [Front Matter Data](https://www.11ty.dev/docs/data-frontmatter/)
 - [Template and Directory](https://www.11ty.dev/docs/data-template-dir/)
 
-<h2 id="create-global-data" class="dir-link h2-5">Creating a Global Data File {% directlink "create-global-data" %}</h2>
+<h2 id="create-global-data" class="post-heading">Creating a Global Data File</h2>
 
 The global data folder in Eleventy is decided by the [dir.data](https://www.11ty.dev/docs/config/#directory-for-global-data-files) configuration. For this article I will only focus on `.json` global data but you can read more about [other global data](https://www.11ty.dev/docs/data-global/) available to templates if you'd like.
 
@@ -67,7 +67,7 @@ Let's say company XYZ has many employees and you don't want to sequentially writ
 ]
 ```
 
-<h2 id="using-global-data" class="dir-link h2-5">Using Global Data {% directlink "using-global-data" %}</h2>
+<h2 id="using-global-data" class="post-heading">Using Global Data</h2>
 
 Below is an example of the `for` loop syntax in Nunjucks.
 
@@ -128,7 +128,7 @@ You can access global data files in a markdown file or within a template by usin
 {% endraw %}
 </div>
 
-<h2 id="using-markdown" class="dir-link h2-5">Using Markdown {% directlink "using-markdown" %}</h2>
+<h2 id="using-markdown" class="post-heading">Using Markdown</h2>
 
 Let's say you wanted to write an introduction paragraph in markdown underneath the main page title. To start, you would create a `.md` file and add some [front matter data](https://www.11ty.dev/docs/data-frontmatter/) at the top of `cardBanner.md` inside the opening and closing document seperators, `---`. 
 
@@ -153,13 +153,8 @@ Welcome to the employee home page for company XYZ. The employee cards contain th
 
 To include the markdown in `cardBanner.md`, we can reference it inside the template file `profiles.njk` using {% raw %}`{{ content }}`{% endraw %} and the `safe` filter. 
 
-<h2 id="conclusion" class="dir-link h2-5">Conclusion {% directlink "conclusion" %}</h2>
+<h2 id="conclusion" class="post-heading">Conclusion</h2>
 
 This is just one method of merging data in Eleventy and if you'd like to learn more. I suggest taking a look at some of the great features Eleventy has to offer such as [Collections](https://www.11ty.dev/docs/collections/), [Pagination](https://www.11ty.dev/docs/pagination/) and [Pages from Data](https://www.11ty.dev/docs/pages-from-data/). 
 
 Here is a link to <a href="{{ page.url }}demo/">the live demo</a>.
-
-<h3 id="references" class="dir-link h2-5">References {% directlink "references" %}</h3>
-
-- [Eleventy Docs](https://www.11ty.dev/docs/)
-- [Nunjucks Docs](https://mozilla.github.io/nunjucks/)
