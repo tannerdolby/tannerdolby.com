@@ -11,26 +11,13 @@
                 </ul>
             </nav>
             <ul style="list-style: none; padding-left: 0; margin-bottom: .5rem;" class="footer-links">
-                <li>
-                    <a class="social-link twitter" href="https://github.com/tannerdolby">
-                        <img src="/images/github.svg" alt="Link to my Github account" loading="lazy">
-                    </a>
-                </li>
-                <li>
-                    <a class="social-link twitter" href="https://twitter.com/tannerdolby">
-                        <img src="/images/twitter.svg" alt="Link to my Twitter account" loading="lazy">
-                    </a>
-                </li>
-                <li>
-                    <a class="social-link twitter" href="https://codepen.io/tannerdolby">
-                        <img src="/images/codepen-logo.svg" alt="Link to my CodePen account" loading="lazy">
-                    </a>
-                </li>
-                <li>
-                    <a class="social-link twitter" href="https://www.linkedin.com/in/tanner-dolby/">
-                        <img src="/images/linkedinFooter.svg" alt="Link to my LinkedIn acount" loading="lazy">
-                    </a> 
-                </li>
+                {% for link in footerIcons %}
+                    <li>
+                        <a class="social-link" href="{{ link.url }}">
+                            <img src="{{ link.src }}" alt="{{ link.alt }}" width="23" height="23" loading="lazy">
+                        </a>
+                    </li>
+                {% endfor %}
             </ul>
         </div>
         <div class="footer-flex">
