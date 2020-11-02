@@ -115,6 +115,14 @@ Now a custom collection called `myPosts` has been created which contains all the
 ```
 {% endraw %}
 
+Another useful method is `getFilteredByTags(tags)` which will retrieve any content that includes all of the tags passed in.
+
+```js
+eleventyConfig.addCollection("web", function(collection) {
+    return collection.getFilteredByTags("html", "css", "js");
+});
+```
+
 <h2 class="post-heading">Filter Recent Posts</h2>
 
 If you wanted to dedicate a section of the page for some of your most recent blog posts. You could create a custom sorted collection and perform a `slice` array operation to filter the number of recent posts.
@@ -124,14 +132,6 @@ eleventyConfig.addCollection("recentPosts", function(collection) {
     return collection.getAllSorted().reverse().slice(0, 3);
 });
 
-```
-
-Another useful method is `getFilteredByTags(tags)` which will retrieve any content that includes all of the tags passed in.
-
-```js
-eleventyConfig.addCollection("web", function(collection) {
-    return collection.getFilteredByTags("html", "css", "js");
-});
 ```
 
 <h2 class="post-heading">Conclusion</h2>
