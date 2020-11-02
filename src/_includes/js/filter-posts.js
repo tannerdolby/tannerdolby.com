@@ -6,15 +6,15 @@ console.log(allPosts); // Nodelist of article.post elements
 const postTag = location.search.slice(location.search.indexOf("=") + 1);
 
 const postList = document.querySelector(".my-posts");
-const searchMsg = document.createElement("p");
+const filterMsg = document.createElement("p");
 const clearBtn = document.createElement("a");
 const listItem = document.createElement("li");
 const em = document.createElement("em");
 
-clearBtn.innerText = "clear filter";
+filterMsg.setAttribute("class", "filter-msg")
+
+clearBtn.innerText = "remove filter";
 clearBtn.setAttribute("class", "clear-filter-btn");
-clearBtn.style.textDecoration = "none";
-clearBtn.style.paddingLeft = ".5rem";
 clearBtn.setAttribute("href", "/writing/");
 
 if (postTag) {
@@ -35,13 +35,13 @@ if (postTag) {
     });
 
     if (postsWithTag.length === 1) {
-        searchMsg.innerText = `${postsWithTag.length} post tagged with ${postTag}`;
+        filterMsg.innerText = `${postsWithTag.length} post tagged with ${postTag}`;
     } else {
-        searchMsg.innerText = `${postsWithTag.length} posts tagged with ${postTag}`;
+        filterMsg.innerText = `${postsWithTag.length} posts tagged with ${postTag}`;
     }
     
-    listItem.append(searchMsg);
+    listItem.append(filterMsg);
     em.append(clearBtn);
-    searchMsg.append(em);
+    filterMsg.append(em);
     postList.prepend(listItem);
 }
