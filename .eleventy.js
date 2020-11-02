@@ -47,6 +47,11 @@ module.exports = (eleventyConfig) => {
         return new CleanCSS({}).minify(code).styles;
     });
 
+    // Retrieve 3 of the most recent blog posts
+    eleventyConfig.addCollection("recentPosts", function(collection) {
+        return collection.getAllSorted().reverse().slice(0, 3);
+    });
+
     // create a custom collection "posts"
     eleventyConfig.addCollection("posts", function(collection) {
         return collection.getFilteredByGlob("src/writing/*.md");
@@ -85,11 +90,6 @@ module.exports = (eleventyConfig) => {
             }
             return dataTags;
         }
-    });
-
-    // Direct link to sections of page by using id selector
-    eleventyConfig.addShortcode("directlink", function(id) {
-        return `<a class="direct-link" href=#${id}>#</a>`;
     });
 
     // Inspired by @zachleat and his code title shortcode - credit: https://github.com/11ty/11ty-website/blob/master/.eleventy.js#L107-L109
