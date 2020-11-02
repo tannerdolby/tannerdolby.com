@@ -26,7 +26,7 @@
             <section class="recent-posts" style="margin-top: 2rem;">
                 <div class="rp-container">
                     <h2>Recent Posts</h2>
-                    {% for post in collections.posts | reverse %}
+                    {% for post in collections.recentPosts %}
                     <article class="post">
                         <h3 style="margin-bottom: .5rem;"><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
                         <p class="date">Posted on <time datetime="{{ post.data.datetime | date('YYYY-MM-DD') }}">{{ post.data.datetime | date('MMMM DD, YYYY') }}</time></p>
