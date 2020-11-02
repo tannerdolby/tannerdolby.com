@@ -206,11 +206,6 @@ a:hover {
     text-decoration: underline;
 }
 
-.active {
-    text-decoration: none !important;
-    border-bottom: 4px solid #ee1846 !important;
-}
-
 .top-nav .nav-wrapper .nav-home {
     display: flex;
     justify-content: center;
@@ -279,7 +274,6 @@ a:hover {
     margin-left: auto;
     margin-right: auto;
     max-width: 1000px;
-    max-width: 970px;
     padding-left: 1.1rem;
     padding-right: 1.1rem;
     display: flex;
@@ -353,12 +347,19 @@ a:hover {
     padding: .2rem .5rem;
     margin-right: .5rem; 
     border: 1px solid lightgray;
+    border: 1px solid rgb(170, 170, 170);
+    color: #212121;
 }
 
 .tags-list li .post-label:hover {
     border: 1px solid transparent;
     text-decoration: none;
     background: hsl(0, 0%, 23%);
+    background: rgb(47, 53, 56);
+    background: rgb(54, 60, 63);
+    background: rgb(30, 35, 39);
+    background: rgb(37, 45, 51);
+    background: rgb(54, 60, 63);
     color: #fff;
 }
 
@@ -376,11 +377,11 @@ a:hover {
 }
 
 .main-container .main-content .my-posts h2 a {
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 .main-container .main-content .my-posts h2 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .main-container .main-content {
@@ -422,7 +423,6 @@ a:hover {
 
 .main-container .projects .projects-wrapper {
     max-width: 1000px;
-    max-width: 970px;
     display: flex;
     flex-direction: column;
     margin-top: 1rem;
@@ -437,7 +437,7 @@ a:hover {
 
 .main-container .projects .project-grid {
     display: grid;
-    padding-left: 0;
+    padding: 0 .4rem;
     grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
     gap: 2rem;
     overflow: hidden;
@@ -449,15 +449,15 @@ a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    /* background: #fff; */
     border: 1px solid rgb(226, 225, 225);
     border: 1px solid lightgray;
     overflow: hidden;
     max-width: 100%;
     width: 100%;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     border-radius: .3rem;
     transform-origin: 50% 50%;
+    box-shadow: rgb(201, 202, 202) 0px 4px 5px 0px;
 }
 
 .main-container .projects .project-grid .project-tile:nth-child(2) img {
@@ -467,6 +467,7 @@ a:hover {
 .main-container .projects .project-tile picture {
     height: 100%;
     width: 100%;
+    height: 20rem; /* 20 * 16 = 320px */
 }
 
 .main-container .projects .project-tile picture img {
@@ -497,19 +498,21 @@ a:hover {
     padding: .5rem;
     border-radius: .1rem;
     text-decoration: none;
-    color: #444;
+    color: #555;
     border: 1px solid lightgray;
     font-size: .9rem;
     margin-right: .75rem;
-    transition: all 200ms ease;
+    /* transition: all 200ms ease; */
 }
 
 .main-container .projects .project-tile .project-details .links .tile-link:hover,
 .main-container .projects .project-tile .project-details .links .tile-link:focus  {
     cursor: pointer;
-    color: #fff;
+    color: #FFF;
     border: 1px solid transparent;
     background: hsl(0, 0%, 23%);
+    background: hsl(0, 0%, 26%);
+    /* background: rgb(45, 50, 53); */
 }
 
 .main-container .projects .project-tile .project-details h3 {
@@ -547,7 +550,8 @@ a:hover {
     padding: .75rem 1.75rem;
     font-size: .9rem;
     transition: box-shadow .1s ease-in-out, background .2s ease-in-out, color .2s ease-in;
-    box-shadow: 4px 4px 0px 0px black;
+    box-shadow: 4px 4px 0px 0px rgb(25, 32, 36);
+    font-weight: 500;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
 }
@@ -557,6 +561,7 @@ a:hover {
     border: 2px solid #2f312f;
     background: #212421;
     background: #2f312f;
+    background: rgb(33, 42, 47);
     color: #FFF;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
@@ -566,6 +571,12 @@ a:hover {
     text-decoration: none !important;
 }
 
+.filter-msg {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .rp-container {
     margin-left: auto;
     margin-right: auto;
@@ -573,6 +584,7 @@ a:hover {
     margin-top: 1rem;
     padding: 1rem 1.1rem;
     max-width: 970px;
+    max-width: 1000px;
     font-family: var(--system-font);
 }
 
@@ -584,7 +596,7 @@ a:hover {
 .recent-posts .post .preview {
     margin-top: .5rem;
     margin-bottom: .5rem;
-    max-width: 80ch;
+    /* max-width: 80ch; */
 }
 
 .recent-posts h2 {
@@ -593,22 +605,18 @@ a:hover {
 
 .recent-posts .post h2 a,
 .recent-posts .post h3 a {
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 .recent-posts .post h2 a:hover,
 .recent-posts .post h3 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .recent-posts .read-more .see-more-btn:hover {
     cursor: pointer;
     text-decoration: underline;
 
-}
-
-.slide-right {
-    transform: translateX(5px);
 }
 
 .featured-art .feat-art-wrapper {
@@ -619,7 +627,6 @@ a:hover {
     padding-right: 1.1rem;
     padding-bottom: 3rem;
     max-width: 1000px;
-    max-width: 970px;
 }
 
 .featured-art .feat-art-list {
@@ -654,7 +661,6 @@ a:hover {
 
 .contact-wrapper {
     max-width: 1000px;
-    max-width: 970px;
     padding: 1rem 1.1rem;
     margin: 2rem auto;
 }
@@ -739,6 +745,7 @@ a:hover {
     margin-left: auto;
     margin-right: auto;
     max-width: 970px;
+    max-width: 1000px;
     padding-left: 1.1rem;
     padding-right: 1.1rem;
 }
@@ -832,11 +839,24 @@ a:hover {
 #post {
     margin-top: 3.5rem;
 }
+
 .clear-filter-btn {
+    text-decoration: none;
+    padding: .25rem .5rem;
+    font-weight: 500;
     font-size: .95rem;
+    background: rgb(26, 32, 36);
+    background: rgb(37, 45, 51);
+    background: rgb(54, 60, 63);
+    /* background: hsl(0, 0%, 23%); */
+    color: #fff;
+    border: 1.5px solid rgb(54, 60, 63);
 }
+
 .main-content .my-posts .clear-filter-btn:hover {
-    text-decoration: underline !important;
+    background: inherit;
+    color: #212121;
+    text-decoration: none;
 }
 .tagged-title {
     display: flex; 
