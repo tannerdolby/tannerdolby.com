@@ -1,5 +1,3 @@
-const headerCollection = document.getElementsByTagName("h2"); // an iterable HTML collection
-
 // Get all <h2> , <h3> and <h4> tags for direct links
 const headerArr = [...document.getElementsByClassName("post-heading")]; // converting the iterable collection to an array
 
@@ -12,7 +10,20 @@ headerArr.forEach(heading => {
     const permalink = document.createElement("a");
     permalink.setAttribute("class", "direct-link");
     permalink.innerText = "#";
-    heading.setAttribute("class", "h2-5");
+
+    switch(heading.tagName) {
+        case "H2":
+            heading.setAttribute("class", "h2-5");
+            break;
+        case "H3":
+            heading.setAttribute("class", "h3");
+            break;
+        case "H4":
+            heading.setAttribute("class", "h4");
+            break;
+        default:
+            break;
+    }
 
     if (heading.id) {
         var id = uniqueID(heading.id);

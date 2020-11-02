@@ -77,7 +77,7 @@ If you wanted to show the markdown from blog posts in another template or layout
 
 One way to create a new collection is simply by giving a `.md` file a new tag within the `tags` key. This method has been demonstrated above to access the `posts` collection.
 
-What if you have multiple tags you wish to include for posts, such as `html`, `css`, `js`. You will add each tag to the `tags` key as a list of values. 
+When you have multiple tags on a blog post, such as `html`, `css`, `js`. You will add each tag to the `tags` key as a list of values. 
 
 ```yaml
 ---
