@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Github",
+        "url": "https://github.com/tannerdolby",
+        "src": "/images/github.svg",
+        "alt": "Link to my Github account"
+    },
+    {
+        "name": "Twitter",
+        "url": "https://twitter.com/tannerdolby",
+        "src": "/images/twitter.svg",
+        "alt": "Link to my Twitter account"
+    },
+    {
+        "name": "CodePen",
+        "url": "https://codepen.io/tannerdolby",
+        "src": "/images/codepen-logo.svg",
+        "alt": "Link to my CodePen account"
+    },
+    {
+        "name": "LinkedIn",
+        "url": "https://linkedin.com/in/tanner-dolby",
+        "src": "/images/linkedinFooter.svg",
+        "alt": "Link to my LinkedIn account"
+    }
+]
