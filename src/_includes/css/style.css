@@ -842,6 +842,12 @@ a:hover {
     margin-top: 3.5rem;
 }
 
+#post h2,
+#post h3,
+#post h4 {
+    margin-bottom: .75rem;
+}
+
 .clear-filter-btn {
     text-decoration: none;
     padding: .25rem .5rem;

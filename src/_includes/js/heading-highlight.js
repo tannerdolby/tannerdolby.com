@@ -5,7 +5,6 @@ function uniqueID(id) {
     return id.toLowerCase().split(" ").join("_");
 };
 
-
 headerArr.forEach(heading => {
     const permalink = document.createElement("a");
     permalink.setAttribute("class", "direct-link");
