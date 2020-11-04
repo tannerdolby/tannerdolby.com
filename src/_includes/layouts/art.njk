@@ -45,8 +45,11 @@
                                 height="640">
                         </picture>
                     </a>
-                    <h2 class="h3 featured-info">{{ drawing.name }}</h2>
-                    <p class="created">{{ drawing.date_created }} - <a href="{{ drawing.credit }}" aria-label="Link to photo credit for {{ drawing.name }}">Photo credit</a></p>
+                    <div class="drawing-info">
+                        <h2 class="h2-5 featured-info">{{ drawing.name }}</h2>
+                        <p class="created">{{ drawing.date_created }} - <a href="{{ drawing.credit }}" aria-label="Link to photo credit for {{ drawing.name }}">Photo Credit</a></p>
+                        <p>{{ drawing.desc }}</p>
+                    </div>
                 </div>
             {% endfor %}
             </section>

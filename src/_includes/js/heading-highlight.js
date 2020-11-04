@@ -12,13 +12,13 @@ headerArr.forEach(heading => {
 
     switch(heading.tagName) {
         case "H2":
-            heading.setAttribute("class", "h2-5");
+            heading.classList.add("h2-5");
             break;
         case "H3":
-            heading.setAttribute("class", "h3");
+            heading.classList.add("h3");
             break;
         case "H4":
-            heading.setAttribute("class", "h4");
+            heading.classList.add("h4");
             break;
         default:
             break;

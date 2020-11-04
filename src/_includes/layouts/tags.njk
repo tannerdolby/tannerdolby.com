@@ -10,7 +10,7 @@ taglist:
     - nunjucks
     - security
     - shell
-permalink: "writing/tags/{{item | slug}}/"
+permalink: "/writing/{{item | slug}}/"
 ---
 
 <!DOCTYPE html>
@@ -54,27 +54,11 @@ permalink: "writing/tags/{{item | slug}}/"
         </nav>
     </header>
     <main style="max-width: 85ch; margin: 2rem auto 3rem auto; padding: 0 1.1rem; width: 100%;">
-    
-    {% if 'writing/tags/web/' in page.url %}
-        <h1 class="h2">Posts Tagged with: <em>{{ item }}</em></h2>
-        {% for post in collections.posts %}
-        <ul style="padding-left: 0; list-style: none;">
-            <li class="tag-item">
-                <h2 class="tagged-title h3">
-                    <a style="margin-top: 1rem; margin-bottom: 1rem;" href="{{ post.url }}">{{ post.data.title }}</a>
-                    <div class="tags" style="display: flex; justify-content: center;">
-                    {% for tag in post.data.tags %}
-                        <code style="margin-right: .75rem;">#{{ tag }}</code>
-                    {% endfor %}
-                    </div>
-                </h2>
-            </li>
-        </ul>
-        {% endfor %}
-    {% endif %}
 
-    {% if 'writing/tags/html/' in page.url %}
-        <h1 class="h2">Posts Tagged with: <em>{{ item }}</em></h2>
+    <h1>Posts Tagged <em>"{{ item }}"</em></h1>
+
+    {# {% if 'writing/tags/html/' in page.url %}
+        <h1 class="h2">Posts Tagged <em>"{{ item }}"</em></h2>
         {% for post in collections.html %}
         <ul style="padding-left: 0; list-style: none;">
             <li class="tag-item">
@@ -89,9 +73,9 @@ permalink: "writing/tags/{{item | slug}}/"
             </li>
         </ul>
         {% endfor %}
-    {% endif %}
+    {% endif %} #}
 
-    {% if 'writing/tags/javascript/' in page.url %}
+    {% if '/writing?filter=javascript/' in page.url %}
     <h1 class="h2">Posts Tagged: <em>{{ item }}</em></h1>
     {% for post in collections.javascript %}
         <ul style="padding-left: 0; list-style: none;">
@@ -145,9 +129,9 @@ permalink: "writing/tags/{{item | slug}}/"
         {% endfor %}
     {% endif %}
 
-    {% if 'writing/tags/11ty/' in page.url %}
-        <h1 class="h2">Posts Tagged: <em>{{ item }}</em></h1>
-        {% for post in collections.11ty %}
+    {% if 'writing/tags/eleventy/' in page.url %}
+        <h1 class="h2">Posts Tagged: <em>"{{ item }}"</em></h1>
+        {% for post in collections.eleventy %}
             <ul style="padding-left: 0; list-style: none;">
                 <li class="tag-item">
                     <h2 class="tagged-title h3">

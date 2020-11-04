@@ -180,7 +180,7 @@ a:hover {
 .top-nav .nav-wrapper {
     max-width: 950px;
     max-width: 1050px;
-    padding: 1rem 1.1rem;
+    padding: 1.5rem 1.1rem .5rem 1.1rem;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -274,6 +274,7 @@ a:hover {
     margin-left: auto;
     margin-right: auto;
     max-width: 1000px;
+    max-width: 960px;
     padding-left: 1.1rem;
     padding-right: 1.1rem;
     display: flex;
@@ -388,6 +389,7 @@ a:hover {
     margin-left: auto;
     margin-right: auto;
     max-width: 1000px;
+    max-width: 960px;
     padding-left: 1.1rem;
     padding-right: 1.1rem;
 }
@@ -423,6 +425,7 @@ a:hover {
 
 .main-container .projects .projects-wrapper {
     max-width: 1000px;
+    max-width: 960px;
     display: flex;
     flex-direction: column;
     margin-top: 1rem;
@@ -437,7 +440,7 @@ a:hover {
 
 .main-container .projects .project-grid {
     display: grid;
-    padding: 0 .3rem;
+    padding: 0 .25rem;
     grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
     gap: 2rem;
     overflow: hidden;
@@ -497,8 +500,9 @@ a:hover {
     padding: .5rem;
     border-radius: .1rem;
     text-decoration: none;
-    color: #555;
+    color: #444;
     border: 1px solid lightgray;
+    background: inherit;
     font-size: .9rem;
     margin-right: .75rem;
     /* transition: all 200ms ease; */
@@ -507,14 +511,13 @@ a:hover {
 .main-container .projects .project-tile .project-details .links .tile-link:hover,
 .main-container .projects .project-tile .project-details .links .tile-link:focus  {
     cursor: pointer;
-    color: #FFF;
-    color: #212121;
+    color: #444;
     border: 1px solid transparent;
-    border: 1px solid #555;
+    border: 1px solid rgb(167, 167, 167);
     background: inherit;
+    background: rgb(251, 251, 251);
     /* background: hsl(0, 0%, 23%);
     background: hsl(0, 0%, 26%); */
-    /* background: rgb(45, 50, 53); */
 }
 
 .main-container .projects .project-tile .project-details h3 {
@@ -549,9 +552,10 @@ a:hover {
     margin-top: .75rem;
     font-weight: 400;
     border: 2px solid #272643;
+    border: 2px solid rgb(25, 32, 36);
     padding: .75rem 1.75rem;
     font-size: .9rem;
-    transition: box-shadow .1s ease-in-out, background .2s ease-in-out, color .2s ease-in;
+    transition: box-shadow 100ms ease-in-out, background 200ms ease-in-out, color 200ms ease-in;
     box-shadow: 4px 4px 0px 0px rgb(25, 32, 36);
     font-weight: 500;
     backface-visibility: hidden;
@@ -585,8 +589,7 @@ a:hover {
     margin-bottom: 2rem;
     margin-top: 1rem;
     padding: 1rem 1.1rem;
-    max-width: 970px;
-    max-width: 1000px;
+    max-width: 960px;
     font-family: var(--system-font);
 }
 
@@ -629,6 +632,7 @@ a:hover {
     padding-right: 1.1rem;
     padding-bottom: 3rem;
     max-width: 1000px;
+    max-width: 960px;
 }
 
 .featured-art .feat-art-list {
@@ -663,6 +667,7 @@ a:hover {
 
 .contact-wrapper {
     max-width: 1000px;
+    max-width: 960px;
     padding: 1rem 1.1rem;
     margin: 2rem auto;
 }
@@ -739,6 +744,11 @@ a:hover {
     padding-top: 1rem;
     padding-bottom: 1rem;
     background: inherit;
+    border-top: .3rem solid lightgray;
+    background: #f0f0f0;
+    background: #f5f5f5;
+    background: #f6f6f6;
+    /* background: #f7f7f7; */
 }
 
 .footer-content {
@@ -746,8 +756,8 @@ a:hover {
     flex-direction: column;
     margin-left: auto;
     margin-right: auto;
-    max-width: 970px;
-    max-width: 1000px;
+    max-width: 960px;
+    /* max-width: 1000px; */
     padding-left: 1.1rem;
     padding-right: 1.1rem;
 }
@@ -769,7 +779,7 @@ a:hover {
 }
 
 .footer-content .footer-flex a {
-    color: #333;
+    color: #212121;
     text-decoration: none;
 }
 
@@ -790,7 +800,7 @@ a:hover {
 }
 
 .footer-content .footer-flex ul li a {
-    color: #333;
+    color: #212121;
 }
 
 .footer-content .footer-flex ul li a:hover,
@@ -821,7 +831,7 @@ a:hover {
 }
 
 .direct-link:hover {
-    text-decoration: underline !important;
+    color: #444 !important;
 }
 
 #post h2:hover .direct-link,
@@ -857,13 +867,13 @@ a:hover {
     background: rgb(37, 45, 51);
     background: rgb(54, 60, 63);
     /* background: hsl(0, 0%, 23%); */
-    color: #fff;
+    color: #fff !important;
     border: 1.5px solid rgb(54, 60, 63);
 }
 
 .main-content .my-posts .clear-filter-btn:hover {
     background: inherit;
-    color: #212121;
+    color: #212121 !important;
     text-decoration: none;
 }
 .tagged-title {
@@ -887,14 +897,19 @@ a:hover {
     margin-top: .5rem;
     margin-bottom: .5rem;
 }
+
 .post .date {
     font-size: 16px;
     margin-top: 0;
     margin-bottom: .75rem;
 }
 
+.tag {
+    margin-right: .3rem;
+}
+
 #main {
-    margin: 0 auto 3rem auto;
+    margin: 0 auto 4rem auto;
 }
 
 main .art {
@@ -909,34 +924,40 @@ main .art {
     padding-right: 1rem;
     padding-bottom: 1rem;
     max-width: 1000px;
+    max-width: 980px;
 }
 
 main .art .art-details {
     margin-top: 2rem;
     margin-bottom: 2rem;
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
-main .art .art-details h2 {
-    font-size: 24px;
+main .art .art-details .drawing-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 main .art img {
     object-fit: cover;
-    /* width: 100%; */
     height: 100%;
 }
 
 .featured-info {
     margin-top: .75rem; 
     margin-bottom: .75rem; 
-    text-align: center;
+    font-size: clamp(1.5rem, 6vw, 1.7rem);
 }
 
 .created {
     margin-top: 0; 
-    text-align: center; 
-    font-size: 16px;
+    margin-bottom: 0; 
 }
 
 /* Media queries - START */

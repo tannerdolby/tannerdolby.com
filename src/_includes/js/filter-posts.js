@@ -35,9 +35,9 @@ if (postTag) {
     });
 
     if (postsWithTag.length === 1) {
-        filterMsg.innerText = `${postsWithTag.length} post tagged with ${postTag}`;
+        filterMsg.innerText = `${postsWithTag.length} post tagged "${postTag}"`;
     } else {
-        filterMsg.innerText = `${postsWithTag.length} posts tagged with ${postTag}`;
+        filterMsg.innerText = `${postsWithTag.length} posts tagged "${postTag}"`;
     }
     
     listItem.append(filterMsg);

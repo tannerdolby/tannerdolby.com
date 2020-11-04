@@ -2,6 +2,7 @@
     {
         "name": "CSS Boombox",
         "id": "css-boombox",
+        "desc": "I saw this illustration while scrolling through dribbble and wanted to try recreating it with CSS. I'm thinking about coming back to this drawing and adding some animation in the future.",
         "aria_label": "Link to CSS Boombox on Codepen",
         "url": "https://codepen.io/tannerdolby/full/abZYOMN",
         "date_created": "October 29, 2020",
@@ -28,6 +29,7 @@
     {
         "name": "Archimedean spiral with randomized path",
         "id": "archimedean-spiral",
+        "desc": "I've always been interested in spirals and the underlying mathematical equations that produce the spiral itself. This is my attempt at drawing a Archimedean Spiral using the Canvas API. Click the spiral to randomize its stroke path.",
         "aria_label": "Link to archimedean spiral on Codepen",
         "url": "https://codepen.io/tannerdolby/full/KKzrOEv",
         "date_created": "September 22, 2020",
@@ -55,6 +57,7 @@
     {
         "name": "UPS Building",
         "id": "ups-building",
+        "desc": "I saw this UPS store in a commercial while watching TV. It really caught my eye, so I attempted to recreate it with CSS. Really simplistic but I had fun watching this come to life.",
         "aria_label": "Link to UPS building on Codepen",
         "url": "https://codepen.io/tannerdolby/full/NWNEBYV",
         "date_created": "September 21, 2020",
@@ -85,7 +88,7 @@
         "date_created": "August 26, 2020",
         "recent": true,
         "credit": "https://dribbble.com/shots/11283947-Taking-it-slow",
-        "desc": "While scrolling through designs over on dribbble, I came across this illustration of a woman sitting in front a window. I tried recreating it using a bit of Markup and CSS. This drawing in particular was alot of fun because I've really enjoyed creating lamps/lighting effects lately.",
+        "desc": "While scrolling through designs over on dribbble, I came across this illustration of a woman sitting in front a window. I tried recreating it using a bit of Markup and CSS. This drawing in particular was alot of fun because I've really enjoyed creating lamps and lighting effects lately.",
         "image": {
             "fallback_src": "/images/css-window-night-large.jpg",
             "alt": "CSS drawing of a window with dark night sky background",
@@ -113,7 +116,7 @@
         "url": "https://codepen.io/tannerdolby/full/JjXYPQL",
         "date_created": "August 10, 2020",
         "credit": "https://dribbble.com/shots/11454238-Telephone-London",
-        "desc": "I'd seen this style of telephone booth in commercials, games and around the web so I finally created one. This red booth is based on a illustration from dribbble. Click inside the booth to turn the lights on/off.",
+        "desc": "I'd seen this style of telephone booth in commercials, games and around the web so I finally created one. The booth is based on a illustration from dribbble. Click inside the booth to turn the lights on/off.",
         "image": {
             "fallback_src": "/images/css-booth-large.jpg",
             "alt": "CSS drawing of a red telephone booth with blue background",
@@ -170,7 +173,7 @@
         "url": "https://codepen.io/tannerdolby/full/PoZyXqB",
         "credit": "https://hacks.mozilla.org/2014/09/single-div-drawings-with-css/",
         "date_created": "July 16, 2020",
-        "desc": "I was amazed by the power of single div art described in",
+        "desc": "A single div blue crayon that I built after reading an article on Mozilla Hacks by Lynn Fisher. I was amazed by the power of single div art described in an article and it got me interested in CSS illustrations.",
         "image": {
             "fallback_src": "/images/css-crayon-large.jpg",
             "alt": "CSS drawing of a blue crayon",
@@ -194,6 +197,7 @@
     {
         "name": "Pixel art ghost",
         "aria_label": "Link to pixel ghost on Codepen",
+        "desc": "Created this image of a ghost on the pixel drawing application PxL created by @jh3y. I animated the pixel ghosts eyes using CSS keyframes. Image also available as an SVG or PNG.",
         "id": "pixel-ghost",
         "url": "https://codepen.io/tannerdolby/full/dyGjMEN",
         "date_created": "July 12, 2020",
