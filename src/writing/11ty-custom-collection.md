@@ -11,9 +11,9 @@ tags:
 permalink: "/writing/{{ title | slug }}/"
 ---
 
-If you've built sites using Eleventy before, you're probably familiar with [collections](https://www.11ty.dev/docs/collections/). Collections are great feature to show blog posts on your site. If your blog posts are written inside of markdown files, you can give each file the `tags` key as front matter data to create a collection. Front matter in 11ty is placed inside opening and closing document seperators `---` and uses YAML syntax. 
+If you've built sites using Eleventy before, you're probably familiar with [collections](https://www.11ty.dev/docs/collections/). Collections are great feature to show blog posts on your site. If your posts are written inside of markdown files, you can give each file the `tags` key as front matter data to create a collection. 
 
-Two markdown files `post-one.md` and `post-two.md` will be the blog posts contained in the `posts` collection.
+Front matter in 11ty is placed inside opening and closing document seperators `---` and uses YAML syntax. Two markdown files `post-one.md` and `post-two.md` will be the blog posts contained in the `posts` collection.
 
 {% filename "post-one.md" %}
 
@@ -50,7 +50,7 @@ The two markdown files would be written to the `_site` output as:
 /posts/blog-post-two/
 ```
 
-Using the `slug` filter works nicely to slugify your posts `title` key. The above permalink could also be written as `permalink: "/posts/blog-posts-two/"` if you wanted to manually write the equivalent of {% raw %}`{{ title | slug }}`{% endraw %}. 
+Using the `slug` filter works nicely to slugify your posts `title` key. The above permalink could also be written as `permalink: "/posts/blog-post-two/"` if you wanted to manually write the equivalent of {% raw %}`{{ title | slug }}`{% endraw %}. 
 
 <h2 class="post-heading">Accessing Collection Data</h2>
 

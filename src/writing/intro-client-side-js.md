@@ -25,7 +25,9 @@ demo_image:
         src: "/images/browser-js-demo-large.jpg"
 ---
 
-{{ preview }} Maybe you've been tasked with writing a function that creates multiple `<li>` list elements. If you wanted to programmaticlly set attributes and apply styles, this is where the power client-side JavaScript really shines! 
+{{ preview }} 
+
+Maybe you've been tasked with writing a function that creates multiple `<li>` list elements. If you wanted to programmaticlly set attributes and apply styles, this is where the power client-side JavaScript really shines! 
 
 Client-side means that the JavaScript code is run on the client machine, which is the browser. Server-side JavaScript means that the code is run on the server which is serving web pages.
 
@@ -39,7 +41,7 @@ Client-side means that the JavaScript code is run on the client machine, which i
 
 [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) is a lightweight, interpreted, compiled programming language with first class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat.
 
-<h2class="post-heading">Why read this article?</h2>
+<h2 class="post-heading">Why read this article?</h2>
 
 If you're like me, I was (for some reason) afraid of learning to code in JavaScript at first. We just didn't get along. Then I stumbled upon this video titled: [This is truly the only way to learn JavaScript](https://www.youtube.com/watch?time_continue=4&v=HnXmI2UVZlU&feature=emb_logo) by Chris Hawkes.
 

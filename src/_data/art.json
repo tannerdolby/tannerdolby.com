@@ -88,7 +88,7 @@
         "date_created": "August 26, 2020",
         "recent": true,
         "credit": "https://dribbble.com/shots/11283947-Taking-it-slow",
-        "desc": "While scrolling through designs over on dribbble, I came across this illustration of a woman sitting in front a window. I tried recreating it using a bit of Markup and CSS. This drawing in particular was alot of fun because I've really enjoyed creating lamps and lighting effects lately.",
+        "desc": "While scrolling through designs over on dribbble, I came across this illustration of a woman sitting in front a window. I tried recreating it using a bit of HTML and CSS. This drawing in particular was alot of fun because I've really enjoyed creating lamps and lighting effects lately.",
         "image": {
             "fallback_src": "/images/css-window-night-large.jpg",
             "alt": "CSS drawing of a window with dark night sky background",
@@ -116,7 +116,7 @@
         "url": "https://codepen.io/tannerdolby/full/JjXYPQL",
         "date_created": "August 10, 2020",
         "credit": "https://dribbble.com/shots/11454238-Telephone-London",
-        "desc": "I'd seen this style of telephone booth in commercials, games and around the web so I finally created one. The booth is based on a illustration from dribbble. Click inside the booth to turn the lights on/off.",
+        "desc": "I'd seen this style of telephone booth in commercials, games and around the web so I finally created one. The booth is based on a illustration from dribbble. Click inside the booth to turn the lights on and off.",
         "image": {
             "fallback_src": "/images/css-booth-large.jpg",
             "alt": "CSS drawing of a red telephone booth with blue background",
@@ -145,7 +145,7 @@
         "date_created": "August 2, 2020",
         "recent": true,
         "credit": "https://depositphotos.com/vector-images/cassette-tape.html",
-        "desc": "This drawing of a cassette is one of my all time favorites. I went the endless box-shadow route here which I haven't used in my more recent illustrations. Nonetheless, a cool look compact cassette.",
+        "desc": "This drawing of a cassette is one of my all time favorites. I went the endless box-shadow route here which I haven't used in my more recent illustrations. Nonetheless, a cool looking compact cassette.",
         "image": {
             "fallback_src": "/images/css-cassette-large.jpg",
             "alt": "CSS drawing of a cassette tape with blue background",

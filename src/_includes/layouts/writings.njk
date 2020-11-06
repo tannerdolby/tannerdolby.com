@@ -41,7 +41,7 @@ tagList:
                     <li>
                         <article class="post" data-tags="[{{ post.data.tags | stringify }}]">
                             <h2 class="h3" style="margin-bottom: .5rem;"><a class="post-title-link" href="{{ post.url }}">{{ post.data.title }}</a></h2>
-                            <p class="date" style="font-size: 16px;">Posted on <time datetime="{{ post.data.datetime | date('YYYY-MM-DD') }}">{{ post.data.datetime | date('MMMM DD, YYYY') }}</time> &bull; tagged with: {% for tag in post.data.tags %}<a class="tag" href="/writing?filter={{ tag }}">#{{ tag }}</a>{% endfor %}</p>
+                            <em class="date">Posted on <time datetime="{{ post.data.datetime | date('YYYY-MM-DD') }}">{{ post.data.datetime | date('MMMM DD, YYYY') }}</time> &bull; Tagged: {% for tag in post.data.tags %}<a class="tag" href="/writing?filter={{ tag }}">#{{ tag }}</a>{% endfor %}</em>
                             <p class="preview">{{ post.data.preview }}</p>
                         </article>
                     </li>

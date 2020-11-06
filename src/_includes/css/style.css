@@ -34,8 +34,9 @@ img {
 p {
     font-family: var(--system-font);
     color: #212121;
-    font-size: 18px;
+    font-size: 17px;
     font-size: clamp(1.0625rem, 3vw, 1.125rem);
+    font-size: clamp(1.05rem, 3vw, 1.1rem);
     line-height: 1.55;
     font-weight: 400;
 }
@@ -44,6 +45,7 @@ code {
     font-family: monospace;
     font-size: 18px;
     font-size: 16px;
+    font-size: clamp(1rem, 3vw, 1.025rem);
     line-height: 100%;
     font-weight: 400;
     color: #212421;;
@@ -60,6 +62,7 @@ pre {
     font-family: var(--code-font);
     overflow-x: auto;
     padding: .75rem;
+    font-size: clamp(1rem, 3vw, 1.0625rem);
 }
 
 pre code {
@@ -180,7 +183,7 @@ a:hover {
 .top-nav .nav-wrapper {
     max-width: 950px;
     max-width: 1050px;
-    padding: 1.5rem 1.1rem .5rem 1.1rem;
+    padding: .75rem 1.1rem .5rem 1.1rem;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -197,7 +200,7 @@ a:hover {
 }
 
 .top-nav .nav-wrapper .nav-menu li a {
-    color: #212421;
+    color: #212121;
     text-decoration: none;
     font-weight: 500;
 }
@@ -214,8 +217,9 @@ a:hover {
 
 .top-nav .nav-wrapper .nav-home li a span {
     background: inherit;
-    border: 1.75px solid #212421;
-    color: #212421;
+    background: #fafafa;
+    border: 1.75px solid #212121;
+    color: #212121;
     border-radius: 0;
     padding: .5rem;
     margin-right: .75rem;
@@ -225,15 +229,15 @@ a:hover {
 
 .top-nav .nav-wrapper .nav-menu li a {
     padding: 0.5rem 0;
-    margin: 0 1rem;
-    color: #212421;
+    margin: 0 .75rem;
+    color: #212121;
     font-size: 1.0625rem;
 }
 
 .top-nav .nav-wrapper .nav-home li .home {
     font-weight: 500;
     font-size: 1.15rem;
-    color: #212421;
+    color: #212121;
     text-decoration: none;
     font-weight: 500;
 }
@@ -241,6 +245,9 @@ a:hover {
 .main-container .welcome-container {
     padding: 2.75rem 0 2.75rem 0;
     background: inherit;
+    background: #f6f6f6;
+    border-top: .1rem solid rgb(218, 218, 218);
+    border-bottom: .1rem solid rgb(218, 218, 218);
 } 
 
 .about-main {
@@ -565,6 +572,7 @@ a:hover {
 .reach-me.button:hover {
     box-shadow: 0px -1px 0px -1px rgba(0, 0, 0, 0.75);
     border: 2px solid #2f312f;
+    border: 2px solid rgb(25, 32, 36);
     background: #212421;
     background: #2f312f;
     background: rgb(33, 42, 47);
@@ -599,7 +607,7 @@ a:hover {
 }
 
 .recent-posts .post .preview {
-    margin-top: .5rem;
+    margin-top: .8rem;
     margin-bottom: .5rem;
     /* max-width: 80ch; */
 }
@@ -637,7 +645,6 @@ a:hover {
 
 .featured-art .feat-art-list {
     display: flex;
-    justify-content: center;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
@@ -745,10 +752,8 @@ a:hover {
     padding-bottom: 1rem;
     background: inherit;
     border-top: .3rem solid lightgray;
-    background: #f0f0f0;
     background: #f5f5f5;
     background: #f6f6f6;
-    /* background: #f7f7f7; */
 }
 
 .footer-content {
@@ -780,6 +785,7 @@ a:hover {
 
 .footer-content .footer-flex a {
     color: #212121;
+    color: #333;
     text-decoration: none;
 }
 
@@ -796,11 +802,15 @@ a:hover {
 .footer-content .footer-flex ul li,
 .footer-links .social-link {
     padding: .2rem;
+}
+
+.footer-links .social-link {
     margin-right: 1rem;
 }
 
 .footer-content .footer-flex ul li a {
-    color: #212121;
+    color: #333;
+    margin-right: .8rem;
 }
 
 .footer-content .footer-flex ul li a:hover,
@@ -894,7 +904,7 @@ a:hover {
 }
 .main-content .post .preview {
     line-height: 1.5;
-    margin-top: .5rem;
+    margin-top: .75rem;
     margin-bottom: .5rem;
 }
 
@@ -940,8 +950,9 @@ main .art .art-details {
 main .art .art-details .drawing-info {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 main .art img {
@@ -972,9 +983,6 @@ main .art img {
 }
 
 @media (max-width: 800px) {
-    .featured-art .feat-art-list li a img {
-        height: 100%;
-    }
     .featured-art .feat-art-list li {
         padding-right: 0;
     }
