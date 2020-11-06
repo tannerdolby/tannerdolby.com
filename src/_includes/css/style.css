@@ -92,6 +92,7 @@ h2,
     --max-font-size: 2.2rem;
     /* font-size: 2rem; */
     font-size: clamp(var(--min-font-size), var(--flex-unit), var(--max-font-size));
+    margin-bottom: 1rem;
 }
 
 .h2-5 {
@@ -613,7 +614,7 @@ a:hover {
 }
 
 .recent-posts h2 {
-    margin-bottom: .25rem;
+    margin-bottom: 0;
 }
 
 .recent-posts .post h2 a,
