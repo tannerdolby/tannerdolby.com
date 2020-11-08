@@ -1085,28 +1085,14 @@ main .art img {
 }
 
 @media (max-width: 635px) {
-
     .footer-content .footer-info {
         justify-content: flex-start;
-    }
-    .footer-content .footer-nav .footer-flex {
-        padding-bottom: .25rem;
     }
 }
 
 @media (max-width: 375px) {
-    .footer-content .footer-nav {
-        padding-bottom: 1rem;
-    }
     .footer-content .footer-flex ul {
         flex-wrap: wrap;
-        height: 2.5rem;
-    }
-    .footer-content .footer-flex ul .edit-page {
-        margin-top: .75rem;
-    }
-    .footer-flex {
-        margin-top: 1rem;
     }
 }
 
