@@ -25,9 +25,7 @@
         <main class="main-container" id="post-content" style="max-width: 80ch; margin: 0 auto 4rem auto;">
             <section id="post" class="main-content">
                 <h1 style="margin-top: .25rem;" class="h1" id="post-title">{{ title }}</h1>
-                {# <p style="margin-bottom: 1.5rem;">Posted on <time datetime="{{ datetime | date('YYYY-MM-DD') }}">{{ datetime | date('MMMM DD, YYYY') }}</time> &bull; tagged with: {% for tag in tags %}<a href="/writing?filter={{ tag }}" aria-label="Link to {{ tag }} posts" style="margin-right: .5rem;">#{{ tag }}</a>{% endfor %}</p> #}
-                <em><time style="margin-bottom: 0;" datetime="{{ datetime | date('YYYY-MM-DD') }}">{{ datetime | date('MMMM DD, YYYY') }}</time> &bull; Tagged: {% for tag in tags %}<a href="/writing?filter={{ tag }}" aria-label="Link to {{ tag }} posts" style="margin-right: .5rem;">#{{ tag }}</a>{% endfor %}</em>
-                {# <p style="margin-bottom: 1.5rem;"> &bull; Tagged with: {% for tag in tags %}<a href="/writing?filter={{ tag }}" aria-label="Link to {{ tag }} posts" style="margin-right: .5rem;">#{{ tag }}</a>{% endfor %}</p> #}
+                <p><time style="margin-bottom: 0;" datetime="{{ datetime | date('YYYY-MM-DD') }}">{{ datetime | date('MMMM DD, YYYY') }}</time> &bull; tagged: {% for tag in tags %}<a href="/writing?filter={{ tag }}" aria-label="Link to {{ tag }} posts" style="margin-right: .35rem;">#{{ tag }}</a>{% endfor %}</p>
                 {{ content | safe }}
 
                 {% set previousPost = collections.posts | getPreviousCollectionItem(page) %}

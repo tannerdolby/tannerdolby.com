@@ -8,7 +8,7 @@ date: 2020-10-05
 tags:
     - security
     - shell
-preview: "How familiar are you with using SSH? If you hesitated to answer, don't fear as after reading this article you will understand how to perform a secure remote connection to a server using SSH and work in the server environment."
+preview: "How familiar are you with using SSH? If you hesitated to answer, don't fear as after reading this article you will understand how to perform a secure remote connection using SSH and work in the server environment."
 permalink: /writing/{{ shortname | slug }}/
 image: 
     fallback:

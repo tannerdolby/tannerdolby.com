@@ -1,27 +1,31 @@
 <footer class="footer-main" style="margin-top: auto">
     <div class="footer-content">
         <div class="footer-nav">
-            <nav class="footer-flex">
-                <ul style="margin-bottom: .5rem;">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about/">About</a></li>
-                    <li><a href="/writing/">Writing</a></li>
-                    <li><a href="/art/">Art</a></li>
-                    <li class="edit-page"><a href="https://github.com/tannerdolby/tannerdolby.com/blob/master/{{ page.inputPath }}">Edit this page</a></li>
+            <div class="column">
+                <h3>About Tanner</h3>
+                <nav class="footer-flex">
+                    <ul class="links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/writing/">Writing</a></li>
+                        <li><a href="/art/">Art</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                        {# <li><a>Accessibility</a></li> #}
+                        <li class="edit-page"><a href="https://github.com/tannerdolby/tannerdolby.com/blob/master/{{ page.inputPath }}">Edit this page</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="column">
+                <h3>Socials</h3>
+                <ul class="links">
+                    {% for link in socials %}
+                        <li><a href="{{ link.url }}">{{ link.name }}</a></li>
+                    {% endfor %}
                 </ul>
-            </nav>
-            <ul style="list-style: none; padding-left: 0; margin-bottom: .5rem;" class="footer-links">
-                {% for link in footerIcons %}
-                    <li>
-                        <a class="social-link" href="{{ link.url }}">
-                            <img src="{{ link.src }}" alt="{{ link.alt }}" width="23" height="23" loading="lazy">
-                        </a>
-                    </li>
-                {% endfor %}
-            </ul>
+            </div>
         </div>
-        <div class="footer-flex">
-            <p style="font-size: 16px;">&copy; 2020 Tanner Dolby. Powered by <a href="https://11ty.dev">Eleventy</a>.</p>
+        <div class="footer-info">
+            <p class="copyright">&copy; 2020 Tanner Dolby. Powered by <a class="ssg" href="https://11ty.dev">Eleventy</a>.</p>
         </div>
     </div>
 </footer>

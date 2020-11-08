@@ -5,9 +5,23 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{{ pageName }}</title>
-        <meta name="description" 
-            content="Hello! Welcome to the home of Tanner Dolby's personal website. This site is built with the Static Site Generator 11ty. 
-            I've had so much fun self teaching myself web development and want to continue sharing about my journey with tech.">
+        <meta name="author" content="Tanner Dolby">
+        <meta name="description" content="{{ site.page_metadata.home }}">
+        <meta name="keywords" content="{{ site.page_metadata.keywords }}">
+        <!-- Twitter Metadata -->
+        <meta name="twitter:card" content="{{ site.doc_metadata.twitter.card }}">
+        <meta name="twitter:title" content="{{ site.doc_metadata.twitter.title }}">
+        <meta name="twitter:creator" content="{{ site.doc_metadata.twitter.creator }}">
+        <meta name="twitter:site" content="{{ site.doc_metadata.twitter.site }}">
+        <meta name="twitter:desc" content="{{ site.doc_metadata.twitter.desc }}">
+        <meta name="twitter:image" content="{{ site.doc_metadata.twitter.image }} ">
+        <!-- OpenGraph Metadata -->
+        <meta name="og:title" content="{{ site.doc_metadata.open_graph.title }}">
+        <meta name="og:type" content="{{ site.doc_metadata.open_graph.type }}">
+        <meta name="og:url" content="{{ page.url }}">
+        <meta name="og:img" content="{{ site.doc_metadata.open_graph.image }}">
+        <meta name="og:description" content="{{ site.doc_metadata.open_graph.description }}">
+        <link rel="canonical" href="{{ page.url }}">
         <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
@@ -29,7 +43,7 @@
                     {% for post in collections.recentPosts %}
                     <article class="post">
                         <h3 style="margin-bottom: .5rem;"><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
-                        <em class="date">Posted on <time datetime="{{ post.data.datetime | date('YYYY-MM-DD') }}">{{ post.data.datetime | date('MMMM DD, YYYY') }}</time></em>
+                        <p class="date">Posted on <time datetime="{{ post.data.datetime | date('YYYY-MM-DD') }}">{{ post.data.datetime | date('MMMM DD, YYYY') }}</time></p>
                         <p class="preview">{{ post.data.preview }}</p>
                     </article>
                     {% endfor %}
@@ -66,7 +80,7 @@
             <section class="contact" id="contact-me">
                 <div class="contact-wrapper">
                     <h2>Contact Me</h2>
-                    <p>I'm always interested in having a chat about web development. If you think my skills would align with your projects needs, I'd love to hear from you. I'm available at any of the social links below or by <a href="mailto:dolb.tanner@gmail.com">sending me an email</a>.</p>
+                    <p>I'm always interested in having a chat about web development. If you think my skills would align with your projects needs, I'd love to hear from you. I'm available at any of the social links below or by navigating to my <a href="/contact/">contact page</a>.</p>
                     <ul class="socials-list">
                         <li>
                             <a class="github-block" href="{{ site.page_info.socials.github }}">

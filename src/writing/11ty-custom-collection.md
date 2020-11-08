@@ -88,7 +88,7 @@ tags:
 ---
 ```
 
-This is where creating a [custom collection](https://www.11ty.dev/docs/collections/) comes in handy. Instead of including the `posts` tag in the `tags` list for every blog post (which could become cumbersome), just create a custom collection with the markdown files from `/posts/` inside the `.eleventy.js` file. This way you can omit `posts` from the tags list within front matter data. 
+This is where creating a [custom collection](https://www.11ty.dev/docs/collections/) comes in handy. Instead of including the `posts` tag in the `tags` list for every blog post (which might be repetitive), just create a custom collection with the markdown files from `/posts/` inside the `.eleventy.js` file. This way you can omit `posts` from the tags list within front matter data. 
 
 <h2 class="post-heading">Create Custom Collections</h2>
 

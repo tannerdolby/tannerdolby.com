@@ -22,5 +22,9 @@
         "url": "https://linkedin.com/in/tanner-dolby",
         "src": "/images/linkedinFooter.svg",
         "alt": "Link to my LinkedIn account"
+    },
+    {
+        "name": "StackOverflow",
+        "url": "https://stackoverflow.com/users/11389581/tanner-dolby"
     }
 ]

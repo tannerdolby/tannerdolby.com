@@ -49,7 +49,7 @@ module.exports = (eleventyConfig) => {
 
     // Retrieve 3 of the most recent blog posts
     eleventyConfig.addCollection("recentPosts", function(collection) {
-        return collection.getAllSorted().reverse().slice(0, 3);
+        return collection.getFilteredByGlob("src/writing/*.md").reverse().slice(0, 3);
     });
 
     // create a custom collection "posts"
