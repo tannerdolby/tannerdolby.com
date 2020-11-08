@@ -4,8 +4,23 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>{{ page_name }}</title>
-        <meta name="description" content="A small collection of the CSS artwork I've created over the last few months.
-            I'm looking into drawing with a stylus on iPad to play around with SVG illustrations in the future. These illustrations are quite fun and also bring me alot of joy.">
+        <meta name="author" content="Tanner Dolby">
+        <meta name="description" content="{{ site.doc_metadata.art }}">
+        <meta name="keywords" content="css-art, {{ site.doc_metadata.keywords }}">
+        <!-- Twitter Metadata -->
+        <meta name="twitter:card" content="{{ site.doc_metadata.twitter.card }}">
+        <meta name="twitter:title" content="Art - {{ site.doc_metadata.twitter.title }}">
+        <meta name="twitter:creator" content="{{ site.doc_metadata.twitter.creator }}">
+        <meta name="twitter:site" content="{{ site.doc_metadata.twitter.site }}">
+        <meta name="twitter:desc" content="{{ site.doc_metadata.twitter.desc }}">
+        <meta name="twitter:image" content="{{ site.doc_metadata.twitter.image }} ">
+        <!-- OpenGraph Metadata -->
+        <meta name="og:title" content="Art - {{ site.doc_metadata.open_graph.title }}">
+        <meta name="og:type" content="{{ site.doc_metadata.open_graph.type }}">
+        <meta name="og:url" content="{{ page.url }}">
+        <meta name="og:img" content="{{ site.doc_metadata.open_graph.image }}">
+        <meta name="og:description" content="{{ site.doc_metadata.open_graph.description }}">
+        <link rel="canonical" href="{{ page.url }}">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">

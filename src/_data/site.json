@@ -1,7 +1,8 @@
 {
     "doc_metadata": {
         "keywords": "eleventy, web developer, front-end, jamstack, html, css, javascript",
-        "home": "Tanner Dolby is an applied mathematician and self taught web developer. This site was built using the Static Site Generator 11ty. I'm passionate about software development and want to continue sharing about my journey with tech.",
+        "home": "Tanner Dolby is an applied mathematician and self taught web developer.",
+        "art": "A small collection of the CSS artwork I've created over the last few months. I'm looking into drawing with a stylus on iPad to play around with SVG illustrations in the future. These illustrations are quite fun and also bring me alot of joy.",
         "open_graph": {
             "title": "Tanner Dolby",
             "type": "website",
