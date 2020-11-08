@@ -13,7 +13,7 @@ permalink: "/writing/{{ shortname | slug }}/"
 
 {{ preview }} 
 
-In 11ty, when you create [global data files](https://www.11ty.dev/docs/data-global/) they are placed in `_data` directory. The data files can be accessed by any template in the project structure. Global data files can be stored as JSON `.json` or values from `module.exports` in a JavaScript `.js` file.
+In 11ty, when you create [global data files](https://www.11ty.dev/docs/data-global/) they are placed inside the `_data` directory. The data files can be accessed by any template in the project structure. Global data files can be stored as JSON `.json` or values from `module.exports` in a JavaScript `.js` file.
 
 I think its safe to say when building a website, you might be faced with creating a large grid of repeating card elements (with different data) or a long listing column of values. This could be menu items on a restaurant menu, profiles on a main page, the list goes on and on. 
 
@@ -134,7 +134,7 @@ Let's say you wanted to write an introduction paragraph in markdown underneath t
 
 Front matter in 11ty uses [YAML](https://yaml.org/spec/1.2/spec.html) syntax. The `permalink` is called a [quoted scalar](https://yaml.org/spec/1.2/spec.html#id2760844) where the `title` and `layout` are scalars in the plain style. All the content outside of the document seperators within a `.md` file are rendered as regular Markdown. 
 
-Including a [permalink](https://www.11ty.dev/docs/permalinks/) in front matter data when using 11ty allows for URIs to leave out filename extensions. This page `cardBanner.md` will be written to the sites output as `/employees-page/index.html` and accessible from the `/employees-page/` URI.
+Including a [permalink](https://www.11ty.dev/docs/permalinks/) in front matter data when using 11ty allows for URIs to leave out filename extensions. The page `cardBanner.md` will be written to the sites output as `/employees-page/index.html` and accessible from the `/employees-page/` URI.
 
 {% filename "cardBanner.md" %}
 

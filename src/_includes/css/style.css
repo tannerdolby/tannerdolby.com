@@ -35,15 +35,14 @@ p {
     font-family: var(--system-font);
     color: #212121;
     font-size: 1.1rem;
-    font-size: clamp(1.0625rem, 3vw, 1.1rem);
+    /* font-size: clamp(1.0625rem, 3vw, 1.0875rem); */
     line-height: 1.7;
     font-weight: 400;
 }
 
 code {
     font-family: monospace;
-    font-size: 16px;
-    font-size: clamp(1rem, 3vw, 1.025rem);
+    font-size: 1em;
     line-height: 100%;
     font-weight: 400;
     color: #212421;;
@@ -972,12 +971,12 @@ a:hover {
 #post .date {
     display: flex;
     flex-wrap: wrap;
-    font-size: 1.025rem;
+    font-size: 1.03rem;
 }
 
 .post .date {
     margin-top: 0;
-    margin-bottom: .75rem;
+    margin-bottom: .5rem;
 }
 
 #post .date {
@@ -1055,6 +1054,21 @@ main .art img {
 
 /* Media queries - START */
 
+/* This is a bit sketchy for handling iPhone landscape mode */
+@media (min-width: 321px) and (max-height: 500px) and (orientation:landscape) {
+    .post h2, 
+    .post h3 {
+        font-size: 1.65rem;
+    }
+    p, #post p, .preview, code, pre code, .post pre code, p code, ol li, ul li, .copyright {
+        font-size: 1rem;
+    }
+    .post .date,
+    #post .date {
+        font-size: 1.25rem;
+        font-size: 1.25rem;
+    }
+}
 @media (max-width: 900px) {
     .featured-art .feat-art-list {
         flex-direction: column;
@@ -1068,6 +1082,9 @@ main .art img {
     .featured-art .feat-art-list li {
         padding-right: 0;
     }
+    /* p {
+        font-size: 1.0625rem;
+    } */
 } 
 
 @media (max-width: 670px) {

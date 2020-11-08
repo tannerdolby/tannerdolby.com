@@ -43,7 +43,7 @@
                     {% for post in collections.recentPosts %}
                     <article class="post">
                         <h3 style="margin-bottom: .5rem;"><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
-                        <p class="date">Posted on&nbsp;<time datetime="{{ post.data.datetime | date('YYYY-MM-DD') }}">{{ post.data.datetime | date('MMMM DD, YYYY') }}</time></p>
+                        <p class="date">Posted on&nbsp;<time datetime="{{ post.data.datetime | date('YYYY-MM-DD') }}">{{ post.data.datetime | date('MMMM DD, YYYY') }}</time>&nbsp;&bull; tagged with&nbsp;{% for tag in post.data.tags %}<a style="margin-right: .35rem;" href="/writing?filter={{ tag }}">#{{ tag }}</a>{% endfor %}</p>
                         <p class="preview">{{ post.data.preview }}</p>
                     </article>
                     {% endfor %}
