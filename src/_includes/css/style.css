@@ -972,9 +972,16 @@ a:hover {
 #post .date {
     display: flex;
     flex-wrap: wrap;
-    font-size: 16px;
+    font-size: 1.025rem;
+}
+
+.post .date {
     margin-top: 0;
     margin-bottom: .75rem;
+}
+
+#post .date {
+    margin: 1rem 0;
 }
 
 #main {
