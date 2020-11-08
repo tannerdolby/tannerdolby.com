@@ -39,7 +39,7 @@
         <main class="main-container" id="post-content" style="max-width: 80ch; margin: 0 auto 4rem auto;">
             <section id="post" class="main-content">
                 <h1 style="margin-top: .25rem;" class="h1" id="post-title">{{ title }}</h1>
-                <p><time style="margin-bottom: 0;" datetime="{{ datetime | date('YYYY-MM-DD') }}">{{ datetime | date('MMMM DD, YYYY') }}</time> &bull; tagged: {% for tag in tags %}<a href="/writing?filter={{ tag }}" aria-label="Link to {{ tag }} posts" style="margin-right: .35rem;">#{{ tag }}</a>{% endfor %}</p>
+                <p class="date"><time style="margin-bottom: 0;" datetime="{{ datetime | date('YYYY-MM-DD') }}">{{ datetime | date('MMMM DD, YYYY') }}</time>&nbsp;&bull; tagged:&nbsp;{% for tag in tags %}<a href="/writing?filter={{ tag }}" aria-label="Link to {{ tag }} posts" style="margin-right: .35rem;">#{{ tag }}</a>{% endfor %}</p>
                 {{ content | safe }}
 
                 {% set previousPost = collections.posts | getPreviousCollectionItem(page) %}
