@@ -3,7 +3,7 @@
 title: Create a Custom Collection with Eleventy
 date: 2020-10-31
 datetime: 2020-10-31 00:00:00 Z
-preview: "If you've built sites using Eleventy before, you're probably familiar with collections. Using the Configuration API allows for creating custom collections which can be useful to only show certain posts on your site."
+preview: "If you've built sites using Eleventy, you're probably familiar with collections. Using the Configuration API allows for creating custom collections which can be useful to only show certain posts on your site."
 tags: 
     - eleventy
     - nunjucks
