@@ -2,7 +2,7 @@
     <div class="footer-content">
         <div class="footer-nav">
             <div class="column">
-                <h3>About Tanner</h3>
+                <h3>Navigation</h3>
                 <nav class="footer-flex">
                     <ul class="links">
                         <li><a href="/">Home</a></li>
@@ -10,17 +10,22 @@
                         <li><a href="/writing/">Writing</a></li>
                         <li><a href="/art/">Art</a></li>
                         <li><a href="/contact/">Contact</a></li>
-                        {# <li><a>Accessibility</a></li> #}
-                        <li class="edit-page"><a href="https://github.com/tannerdolby/tannerdolby.com/blob/master/{{ page.inputPath }}">Edit this page</a></li>
                     </ul>
                 </nav>
             </div>
-            <div class="column">
+            <div class="column" style="margin-right: 1rem;">
                 <h3>Socials</h3>
                 <ul class="links">
                     {% for link in socials %}
                         <li><a href="{{ link.url }}">{{ link.name }}</a></li>
                     {% endfor %}
+                </ul>
+            </div>
+            <div class="column">
+                <h3>Resources</h3>
+                <ul class="links">
+                    <li><a href="/">Accessibility</a></li>
+                    <li class="edit-page"><a href="https://github.com/tannerdolby/tannerdolby.com/blob/master/{{ page.inputPath }}">Edit this page</a></li>
                 </ul>
             </div>
         </div>

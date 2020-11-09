@@ -56,12 +56,12 @@
                                 src="{{ drawing.image.fallback_src }}" 
                                 alt="{{ drawing.image.alt }}"
                                 loading="lazy"
-                                width="1024"
-                                height="640">
+                                width="750"
+                                height="600">
                         </picture>
                     </a>
                     <div class="drawing-info">
-                        <h2 class="h2-5 featured-info">{{ drawing.name }}</h2>
+                        <h2 class="h3 featured-info">{{ drawing.name }}</h2>
                         <p class="created">{{ drawing.date_created }} - <a href="{{ drawing.credit }}" aria-label="Link to photo credit for {{ drawing.name }}">Photo Credit</a></p>
                         {# <p>{{ drawing.desc }}</p> #}
                     </div>

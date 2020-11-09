@@ -11,7 +11,7 @@ tags:
 permalink: "/writing/{{ title | slug }}/"
 ---
 
-If you've built sites using Eleventy before, you're probably familiar with [collections](https://www.11ty.dev/docs/collections/). Collections are great feature to show blog posts on your site. If your posts are written inside of markdown files, you can give each file the `tags` key as front matter data to create a collection. 
+If you've built sites using Eleventy before, you're probably familiar with [collections](https://www.11ty.dev/docs/collections/). Collections are a great feature to show blog posts on your site. If your posts are written inside of markdown files, you can give each post the `tags` key as front matter data to create a collection. 
 
 Front matter in 11ty is placed inside opening and closing document seperators `---` and uses YAML syntax. Two markdown files `post-one.md` and `post-two.md` will be the blog posts contained in the `posts` collection.
 
@@ -92,7 +92,9 @@ This is where creating a [custom collection](https://www.11ty.dev/docs/collectio
 
 <h2 class="post-heading">Create Custom Collections</h2>
 
-All blog posts in this article are saved as `.md` files in the `/posts/` directory. To create a custom collection, navigate to `.eleventy.js`. You will utilize the first argument of the config function `eleventyConfig` to call the API and use `addCollection` to create a new custom collection. You can add the markdown files within `/posts/` to the new collection using `getFilteredByGlob(glob)`, which will match an arbitrary glob or array of globs against the input file's full path (`inputPath`).
+All blog posts in this article are saved as `.md` files in the `/posts/` directory. To create a custom collection, navigate to `.eleventy.js`. You will utilize the first argument of the config function `eleventyConfig` to call the API and use `addCollection` to create a new custom collection. 
+
+You can add the markdown files within `/posts/` to the new collection using `getFilteredByGlob(glob)`, which will match an arbitrary glob or array of globs against the input file's full path (`inputPath`).
 
 {% filename ".eleventy.js" %}
 
