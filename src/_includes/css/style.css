@@ -1081,6 +1081,10 @@ main .art img {
     .featured-art .feat-art-list {
         flex-direction: column;
     }
+    .featured-art .feat-art-list li {
+        margin-bottom: 1rem;
+        transform: none !important;
+    }
     .featured-art  h2 {
         text-align: center;
     }
