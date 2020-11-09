@@ -1094,9 +1094,9 @@ main .art img {
     .featured-art .feat-art-list li {
         padding-right: 0;
     }
-    /* p {
+    p {
         font-size: 1.0625rem;
-    } */
+    }
 } 
 
 @media (max-width: 670px) {
