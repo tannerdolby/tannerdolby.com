@@ -1058,12 +1058,10 @@ main .art img {
 
 .main-container .message-me {
     background: inherit;
-    background: hsl(0, 0%, 18%);
-    border: .125rem solid rgb(37, 43, 48);
+    border: .12rem solid rgb(37, 43, 48);
     padding: .5rem .75rem;
     border-radius: .1rem;
     color: #212121;
-    color: #fff;
     text-decoration: none;
     margin: 2rem auto;
     font-size: 1rem;
