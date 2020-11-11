@@ -13,9 +13,10 @@ permalink: "/writing/{{ shortname | slug }}/"
 
 {{ preview }} 
 
-In 11ty, when you create [global data files](https://www.11ty.dev/docs/data-global/) they are placed inside the `_data` directory. The data files can be accessed by any template in the project structure. Global data files can be stored as JSON `.json` or values from `module.exports` in a JavaScript `.js` file.
+In 11ty, when you create [global data files](https://www.11ty.dev/docs/data-global/) place them inside the `_data` directory. The data files can then be accessed by any template in the project structure. Global data files can be stored as JSON `.json` or values from `module.exports` in a JavaScript `.js` file.
 
 <h2 class="post-heading">Use Cases</h2>
+
 I think its safe to say when building a website, you might be faced with creating a large grid of repeating card elements (with different data) or a long listing column of values. This could be menu items on a restaurant menu, profiles on a main page, the list goes on and on. 
 
 Why sit there and type out 30 different `.card` containers when you can store each card elements data inside a global data file. To then iterate through that global card data and generate 30 elements from only one card containers markup. This could be data fetched from an API and stored in a `.json` file or by simply typing in the data needed by hand into a `_data/*.json` file. 
@@ -95,7 +96,9 @@ To create a loop or conditional statement use {% raw %}`{% code %}`{% endraw %}.
 ```
 {% endraw %}
 
-You can access global data files in a markdown file or within a template by using the filename without its file extension. When you have a global data file thats an object, you can access the content by using {% raw %}`{{ cards.title }}`{% endraw %} without any `for` loop. If you wanted to iterate over the array of card objects in `_data/cards.json`, you would use the code below.
+You can access global data files in a markdown file or within a template by using the filename without its file extension. When you have a global data file thats an object, you can access the content by using {% raw %}`{{ cards.title }}`{% endraw %} without any `for` loop. 
+
+If you wanted to iterate over the array of card objects in `_data/cards.json` and generate HTML. You can inject global data into a template file. Use something like this,
 
 {% filename "profiles.liquid" %}
 

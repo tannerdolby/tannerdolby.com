@@ -1,0 +1,18 @@
+{
+    "one": [
+        {
+            "title": "I'm in group one"
+        },
+        {
+            "title": "Im also in group one"
+        }
+    ],
+    "two": [
+        {
+            "title": "I'm in group two"
+        },
+        {
+            "title": "I'm also in group two"
+        }
+    ]
+}

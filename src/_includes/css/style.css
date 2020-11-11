@@ -15,6 +15,18 @@
     --link-blue-accessible-hover: #1836AF;
 }
 
+/*** Screen reader ***/
+
+.sr-only {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
 body {
     font-family: var(--system-font);
     background: #f9fafa;
@@ -833,7 +845,7 @@ a:hover {
 }
 
 .column h3 {
-    color: #444;
+    color: rgb(53, 53, 53);
     margin-bottom: .4rem;
     font-size: clamp(1rem, 4vw, 1.15rem);
 }
@@ -866,7 +878,7 @@ a:hover {
 
 .footer-info a {
     color: #212121;
-    color: #333;
+    /* color: #333; */
 }
 
 .footer-info .ssg {
@@ -1046,12 +1058,15 @@ main .art img {
 
 .main-container .message-me {
     background: inherit;
-    border: .12rem solid rgb(37, 43, 48);
+    background: hsl(0, 0%, 18%);
+    border: .125rem solid rgb(37, 43, 48);
     padding: .5rem .75rem;
+    border-radius: .1rem;
     color: #212121;
+    color: #fff;
     text-decoration: none;
     margin: 2rem auto;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .message-me:hover {

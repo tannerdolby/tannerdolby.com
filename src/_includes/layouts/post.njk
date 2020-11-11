@@ -37,7 +37,10 @@
         <a href="#post-content" class="skip-link">Skip to main content</a>
         {% include "layouts/nav.njk" %}
         <main class="main-container" id="post-content" style="max-width: 80ch; margin: 0 auto 4rem auto;">
-            <section id="post" class="main-content">
+            <div class="post-sidebar">
+                <p>Some text</p>
+            </div>
+            <div id="post" class="main-content">
                 <h1 style="margin-top: .25rem;" class="h1" id="post-title">{{ title }}</h1>
                 <p class="date">Posted on&nbsp;<time style="margin-bottom: 0;" datetime="{{ datetime | date('YYYY-MM-DD') }}">{{ datetime | date('MMMM DD, YYYY') }}</time>&nbsp;&bull; tagged with&nbsp;{% for tag in tags %}<a href="/writing?filter={{ tag }}" aria-label="Link to {{ tag }} posts" style="margin-right: .35rem;">#{{ tag }}</a>{% endfor %}</p>
                 {{ content | safe }}
@@ -58,7 +61,7 @@
                         {% endif %}
                     </li>
                 </ul>
-            </section>
+            </div>
         </main>
         {% include "layouts/footer.njk" %}
         

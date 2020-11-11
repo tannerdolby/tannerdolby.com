@@ -1,5 +1,5 @@
-const allPosts = [...document.querySelectorAll(".post")]; // convert iterable object (NodeList) to array
-console.log(allPosts); // Nodelist of article.post elements
+// convert iterable object (NodeList) to array using the ... spread operator
+const allPosts = [...document.querySelectorAll(".post")];
 
 // search the location (broswer window) to search the URL for ?filter=tag 
 // use slice to grab only the characters after the equal sign ie (=nunjucks)
@@ -12,7 +12,6 @@ const listItem = document.createElement("li");
 const em = document.createElement("em");
 
 filterMsg.setAttribute("class", "filter-msg")
-
 clearBtn.innerText = "remove filter";
 clearBtn.setAttribute("class", "clear-filter-btn");
 clearBtn.setAttribute("href", "/writing/");
@@ -29,9 +28,12 @@ if (postTag) {
         return JSON.parse(post.dataset.tags).includes(postTag);
     });
 
-    // visually hide the elements not meeting tag query
+    // visually hide the elements not meeting tag query and 
+    // hide them from the accessibility API with aria-hidden=true
+    // so screen readers don't read content that should be hidden
     postsWithoutTag.forEach(post => {
-        post.setAttribute("hidden", true);
+        post.setAttribute("aria-hidden", "true");
+        post.setAttribute("class", "sr-only");
     });
 
     if (postsWithTag.length === 1) {

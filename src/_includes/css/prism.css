@@ -35,7 +35,7 @@ pre[class*="language-"] {
     padding: 1em;
     margin: .5em 0;
     overflow: auto;
-    border-radius: 0.3em;
+    border-radius: 0.2em;
 }
 
 :not(pre) > code[class*="language-"],
@@ -123,4 +123,16 @@ pre[class*="language-"] {
 
 .token.entity {
     cursor: help;
+}
+
+@media (max-width: 770px) {
+    pre[class*="language-"] {
+        padding: 1em;
+        margin: .5em 0;
+        margin-left: -1.1rem;
+        /*margin-right: -1.25rem; */
+        overflow: auto;
+        border-radius: 0em;
+        width: calc(100% + 2.25rem);
+    }
 }
