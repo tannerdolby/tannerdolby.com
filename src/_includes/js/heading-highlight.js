@@ -33,15 +33,17 @@ function headingHighlight(headerArr) {
     headerArr.forEach(heading => {
         const permalink = document.createElement("a");
         permalink.setAttribute("class", "direct-link");
-        permalink.innerText = "#";
+        permalink.textContent = heading.textContent;
     
         if (heading.id) {
             var id = uniqueID(removeChars(heading.id));
+            heading.textContent = "";
             heading.setAttribute("id", `${id}`);
             permalink.setAttribute("href", `#${id}`);
             heading.append(permalink);
         } else {
-            var id = uniqueID(heading.innerText);
+            var id = uniqueID(heading.textContent);
+            heading.textContent = "";
             heading.setAttribute("id", `${id}`);
             permalink.setAttribute("href", `#${id}`);
             heading.append(permalink);
