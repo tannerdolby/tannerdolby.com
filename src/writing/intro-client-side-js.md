@@ -88,11 +88,15 @@ div.setAttribute("class", "page-content");
 
 This produces the same markup `<div class="page-content"></div>` as the method above. You can also get and set the `class` attribute for a specific HTML element by accessing the `className` property of the [Element](https://developer.mozilla.org/en-US/docs/Web/API/Element/className) interface. 
 
+{% raw %}
+```js
+HTMLElement.className = "page-content"
 ```
-HTMLElement.className = "page-content"`
-```
+{% endraw %}
 
-The DOM provides many unique ways to modify the content within HTML nodes or completely alter the document structure. Using the **read-only** `classList` property returns a live [DOMTokenList](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList) collection of class attributes for the element. This way you can ([add](), [remove](), [toggle]()) class attributes from the live collection stored in `classList`.
+The DOM provides many unique ways to modify the content within HTML nodes or completely alter the document structure. Using the **read-only** `classList` property returns a live [DOMTokenList](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList) collection of class attributes for the element. 
+
+The DOMTokenList itself is read-only, although you can modify it with the [add()](https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/add), [remove()](https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/remove), and [toggle()](https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/toggle) methods. 
 
 ```js
 const p = document.createElement("p");
