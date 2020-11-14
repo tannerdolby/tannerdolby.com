@@ -900,15 +900,16 @@ a:hover {
     height: 23px;
 }
 
-.direct-link {
-    text-decoration: none !important;
-    color: transparent !important;
-    vertical-align: top;
-    margin-left: .5rem;
+#post .post-heading .direct-link {
+    text-decoration: none;
+    color: #333 !important;
+    /* vertical-align: top;
+    margin-left: .5rem; */
 }
 
-.direct-link:hover {
-    color: #444 !important;
+#post .post-heading .direct-link:hover {
+    color: #334 !important;
+    text-decoration: underline;
 }
 
 #post h2:hover .direct-link,
