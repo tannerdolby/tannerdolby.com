@@ -265,7 +265,7 @@ a:hover {
     padding: 2.75rem 0 2.75rem 0;
     padding: 2.25rem 0 2.8rem;
     background: inherit;
-    background:rgb(235, 235, 235);
+    background:rgb(240, 240, 240);
     border-top: .12rem solid lightgray;
     border-bottom: .12rem solid lightgray;
 } 
@@ -1096,7 +1096,9 @@ main .art img {
 }
 
 #search {
-    padding: .75rem .5rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    height: 3.25rem;
     width: 50ch;
     max-width: 70ch;
     margin-left: -.1rem;
