@@ -9,7 +9,6 @@
     "debug": "DEBUG=* eleventy",
     "test": "jest"
   },
-  "type": "module",
   "keywords": [
     "Static site",
     "11ty"
