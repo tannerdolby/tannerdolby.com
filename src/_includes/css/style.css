@@ -912,6 +912,24 @@ a:hover {
     text-decoration: underline;
 }
 
+/*
+#post .post-heading .direct-link::before {
+    content: "\1F517";
+    width: 10px;
+    height: 10px;
+    padding-left: .5rem;
+    opacity: 0;
+    outline: 0;
+    text-decoration: none !important;
+}
+
+#post .post-heading .direct-link:hover::before {
+    color: #334;
+    opacity: 1;
+    text-decoration: none !important;
+}
+*/
+
 #post h2:hover .direct-link,
 #post h3:hover .direct-link,
 #post h4:hover .direct-link,
