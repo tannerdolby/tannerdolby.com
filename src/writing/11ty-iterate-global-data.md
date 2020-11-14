@@ -83,7 +83,7 @@ Below is an example of the `for` loop syntax in Nunjucks.
 
 This way, you only write a small amount of template HTML for one profile container. Allowing the `for` loop to generate the rest of the card containers markup from your global data. 
 
-I'm using [Nunjucks](https://mozilla.github.io/nunjucks/) as the templating language for examples in this article, but everything could be done in a `.liquid` template as well. Liquid is the default templating engine for sites created with Eleventy. 
+I'm using [Nunjucks](https://mozilla.github.io/nunjucks/) as the templating language for examples in this article, but everything could be done in a `.liquid` template as well. Liquid is the default templating engine in Eleventy. 
 
 To create a loop or conditional statement use {% raw %}`{% code %}`{% endraw %}. If you simply want to access data from front matter or in global data, use {% raw %}`{{ variable }}`{% endraw %}. 
 
