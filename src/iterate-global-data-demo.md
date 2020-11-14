@@ -1,7 +1,8 @@
 ---
 title: XYZ Company Employee Profile Page
+URI: generate-page-content-from-a-global-data-file-using-eleventy
 layout: global-data-demo.njk
-permalink: "/writing/11ty-iterate-global-data/demo/"
+permalink: "/writing/{{ URI }}/demo/"
 eleventyExcludeFromCollections: true
 ---
 
@@ -13,4 +14,4 @@ The employee cards contain the data fields:
  - interests
  - weekly schedule
 
-[Back to original post...](/writing/11ty-iterate-global-data/)
+[Back to original post...](/writing/generate-page-content-from-a-global-data-file-using-eleventy/)
