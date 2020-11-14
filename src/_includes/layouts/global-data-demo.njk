@@ -16,8 +16,10 @@
         </style>
     </head>
     <body>
-        <h1 style="text-align: center;">{{ title }}</h1>
+        <div style="max-width: 70ch; margin: 0">
+        <h1>{{ title }}</h1>
         {{ content | safe }}
+        </div>
         <main class="card-grid">
         {% for card in cards %}
             <div class="card">

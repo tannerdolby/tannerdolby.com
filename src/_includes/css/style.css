@@ -910,6 +910,7 @@ a:hover {
 #post .post-heading .direct-link:hover {
     color: #334 !important;
     text-decoration: underline;
+    text-decoration-color: #334;
 }
 
 /*

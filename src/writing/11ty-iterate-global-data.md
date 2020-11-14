@@ -166,4 +166,4 @@ To include the markdown in `cardBanner.md`, we can reference it inside the templ
 
 This is just one method of merging data in Eleventy and if you'd like to learn more. I suggest taking a look at some of the great features Eleventy has to offer such as [Collections](https://www.11ty.dev/docs/collections/), [Pagination](https://www.11ty.dev/docs/pagination/) and [Pages from Data](https://www.11ty.dev/docs/pages-from-data/). 
 
-Here is a link to <a href="{{ page.url }}demo/">the live demo</a>.
+Here is a link to <a href="/writing/11ty-iterate-global-data/demo/">the live demo</a>.
