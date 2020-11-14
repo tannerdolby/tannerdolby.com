@@ -1118,12 +1118,16 @@ main .art img {
 
 .search-style,
 .search-page-style {
-    background: rgb(240, 240, 240);
+    background: rgb(238, 238, 238);
     border-radius: .1rem;
     border: .1rem solid lightgray;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.search-style {
+    border: none;
 }
 
 .search-page-style {
