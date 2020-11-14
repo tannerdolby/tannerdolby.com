@@ -1,28 +1,13 @@
 ---
 title: Getting Started with OverTheWire Bandit Security Games
 author: Tanner Dolby
-shortname: Overthewire Games
-date_created: October 05, 2020
 datetime: 2020-10-05 00:00:00 Z
 date: 2020-10-05
 tags:
     - security
     - shell
-preview: "How familiar are you with using SSH? If you hesitated to answer, don't fear as after reading this article you will understand how to perform a secure remote connection using SSH and work in the server environment."
-permalink: /writing/{{ shortname | slug }}/
-image: 
-    fallback:
-        src: /images/pexels-scott-webb-large.jpg
-    large: 
-        webp: /images/pexels-scott-webb-large.webp
-        width: 1024w
-    med: 
-        webp: /images/pexels-scott-webb-med.webp
-        width: 640w
-    small: 
-        webp: /images/pexels-scott-webb-small.webp
-        width: 320w
-    credit: https://www.pexels.com/photo/equipment-pavement-security-security-camera-430208/
+preview: How familiar are you with using SSH? If you hesitated to answer, don't fear as after reading this article you will understand how to perform a secure remote connection using SSH and work in the server environment.
+permalink: "/writing/{{ title | slug }}/"
 ---
 
 {{ preview }} I'm by no means a security expert, but these challenges can be quite fun while providing some solid file system practice. Grab your favorite cup of coffee or tea and get ready to conquer some OverTheWire Bandit games!
@@ -55,9 +40,7 @@ After running the above command, your shell will prompt you to enter a password.
 
 The goal of level zero is for you to log into the game using SSH and become familiarized with the bandit shell. The host to which you need to connect is `bandit.labs.overthewire.org` on port 2220. We are told that the username and password are both `bandit0`. Once logged in, go to the [Level One](https://overthewire.org/wargames/bandit/bandit1.html) page to find out how to beat this first Bandit level (or keep reading).
 
-Now that you've sucessfully connected to the Bandit shell, you will have access to the root directory contents for the corresponding level. If your having trouble connecting, feel free to refer back to the [Connecting to Bandit Shell](/writing/{{ tag }}/{{ shortname | slug }}/#connect-bandit-shell) section.
-
-Once the correct credentials have been provided, you're sucessfully connected to Bandit level zero and will see a shell similar to below.
+Once the correct credentials have been provided, you're sucessfully connected to Bandit level zero and will see a shell similar to below. You will have access to the root directory contents for the corresponding level. 
 
 ```bash
 bandit0@bandit:~$
@@ -139,7 +122,7 @@ If the correct password is provided then you will have successfully connected to
 bandit1@bandit:~$
 ```
 
-Now that your connected to the bandit server lets find the password stored in a file called `-`. Like always, lets list all of the root directories contents with `ls -la`. Refer to [ls options](/writing/{{ tag }}/{{ shortname | slug}}/#listing-commands) for a refresher on why to use the `-la` options.
+Now that your connected to the bandit server lets find the password stored in a file called `-`. Like always, lets list all of the root directories contents with `ls -la`. Refer to [ls options](/writing/{{ title | slug}}/#listing-commands) for a refresher on why to use the `-la` options.
 
 ```bash
 bandit1@bandit:~$ ls -la

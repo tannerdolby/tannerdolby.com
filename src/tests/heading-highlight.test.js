@@ -1,6 +1,6 @@
-const { uniqueID, removeChars }  = require("../_includes/js/heading-highlight");
+const { uniqueID, removeChars } = require( "../_includes/js/heading-highlight");
 
-// Testing uniqueH3ID function for generating unique ID values
+// Testing unique ID function
 test("Test unique ID function on regular heading text", () => {
     expect(uniqueID("Some Heading")).toBe("some_heading");
 });

@@ -1,28 +1,14 @@
 ---
 title: An Introduction to Client-side JavaScript
 shortname: JS Client Side
-date_created: October 6, 2020
 datetime: 2020-10-06 00:00:00 Z
 date: 2020-10-06
 tags: 
     - html
     - javascript
 preview: Have you ever thought to yourself while building a website, how could I create HTML elements and bind them to the DOM? This article explains some of the fundamentals for interacting with the DOM tree using client-side JavaScript.
-permalink: /writing/{{ shortname | slug }}/
+permalink: /writing/{{ title | slug }}/
 demo_link: https://browserjs-intro.netlify.app/
-demo_image: 
-    alt: "Live demo of the code produced in this article"
-    large: 
-        src: /images/browser-js-demo-large.webp
-        width: 1024w
-    med: 
-        src: "/images/browser-js-demo-med.webp"
-        width: 640w
-    small:
-        src: "/images/browser-js-demo-small.webp"
-        width: 320w
-    fallback:
-        src: "/images/browser-js-demo-large.jpg"
 ---
 
 {{ preview }} 
@@ -50,6 +36,9 @@ After watching the video, I was captivated by the fact you could virtually creat
 <h2 class="post-heading">So where does HTML fit into the picture?</h2>
 
 [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) or HyperText Markup Language is the most rudimentary building block in web development. Using HTML allows developers to define the meaning and structure of web content through semantic HTML DOM elements.
+
+<h2 class="post-heading">What is the DOM?</h2>
+From [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction), The Document Object Model (DOM) is the data representation of the objects that comprise the structure and content of a document on the web. The DOM represents the HTML or XML document so that programming languages can easily connect to the page.
 
 <h2 class="post-heading">Build the DOM Tree</h2>
 
@@ -97,7 +86,23 @@ const div = document.createElement('div';
 div.setAttribute("class", "page-content");
 ```
 
-This produces the same markup `<div class="page-content"></div>` as the slower method of creating and setting attributes above.
+This produces the same markup `<div class="page-content"></div>` as the method above. You can also get and set the `class` attribute for a specific HTML element by accessing the `className` property of the [Element](https://developer.mozilla.org/en-US/docs/Web/API/Element/className) interface. 
+
+```
+HTMLElement.className = "page-content"`
+```
+
+The DOM provides many unique ways to modify the content within HTML nodes or completely alter the document structure. Using the **read-only** `classList` property returns a live [DOMTokenList](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList) collection of class attributes for the element. This way you can ([add](), [remove](), [toggle]()) class attributes from the live collection stored in `classList`.
+
+```js
+const p = document.createElement("p");
+p.setAttribute("class", "first-class"); // <p class="first-class"></p>
+
+p.classList.add("second-class"); // <p class="first-class second-class"></p>
+p.classList.remove("first-class"); // <p class="second-class"></p>
+```
+
+**Note**: You can quickly see the nodes and objects contained in each DOM element by inspecting the page and navigating to the properties tab.
 
 <h2 class="post-heading">Binding elements to the DOM</h2>
 

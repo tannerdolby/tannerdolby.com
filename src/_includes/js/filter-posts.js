@@ -12,7 +12,7 @@ const listItem = document.createElement("li");
 const em = document.createElement("em");
 
 filterMsg.setAttribute("class", "filter-msg")
-clearBtn.innerText = "remove filter";
+clearBtn.innerText = "clear filter";
 clearBtn.setAttribute("class", "clear-filter-btn");
 clearBtn.setAttribute("href", "/writing/");
 
@@ -36,7 +36,7 @@ if (postTag) {
         post.setAttribute("class", "sr-only");
     });
 
-    if (postsWithTag.length === 1) {
+    if (postsWithTag & postsWithTag.length === 1) {
         filterMsg.innerText = `${postsWithTag.length} post tagged "${postTag}"`;
     } else {
         filterMsg.innerText = `${postsWithTag.length} posts tagged "${postTag}"`;

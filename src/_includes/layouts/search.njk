@@ -1,13 +1,3 @@
----
-tagList: 
-    - html
-    - javascript
-    - eleventy
-    - nunjucks
-    - security
-    - shell
----
-
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
     <head>
@@ -20,13 +10,13 @@ tagList:
         <meta name="keywords" content="{{ site.doc_metadata.keywords }}">
         <!-- Twitter Metadata -->
         <meta name="twitter:card" content="{{ site.doc_metadata.twitter.card }}">
-        <meta name="twitter:title" content="Writing - {{ site.doc_metadata.twitter.title }}">
+        <meta name="twitter:title" content="Search - {{ site.doc_metadata.twitter.title }}">
         <meta name="twitter:creator" content="{{ site.doc_metadata.twitter.creator }}">
         <meta name="twitter:site" content="{{ site.doc_metadata.twitter.site }}">
         <meta name="twitter:desc" content="{{ site.doc_metadata.twitter.desc }}">
         <meta name="twitter:image" content="{{ site.doc_metadata.twitter.image }} ">
         <!-- OpenGraph Metadata -->
-        <meta name="og:title" content="Writing - {{ site.doc_metadata.open_graph.title }}">
+        <meta name="og:title" content="Search - {{ site.doc_metadata.open_graph.title }}">
         <meta name="og:type" content="{{ site.doc_metadata.open_graph.type }}">
         <meta name="og:url" content="{{ page.url }}">
         <meta name="og:img" content="{{ site.doc_metadata.open_graph.image }}">
@@ -46,10 +36,11 @@ tagList:
         <a href="#main-writing" class="skip-link">Skip to main content</a>
         {% include "layouts/nav.njk" %}
         <main class="main-container" id="main-writing">
-            <header class="banner-container search-box">
+            <header class="banner-container">
                 <h1 class="h1">{{ title }}</h1>
-                <div class="search-style">
-                    <a href="/search/" class="contain">
+                <label class="sr-only" for="search">Search the blog</label>
+                <div class="r">
+                    <div class="search-page-style">
                         <svg version="1.1" id="search_svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.999 511.999" xml:space="preserve">
                         <g>
                             <g>
@@ -60,9 +51,11 @@ tagList:
                             </g>
                         </g>
                         </svg>
-                    </a>
+                    </div>
+                    <input placeholder="Search..." type="text" name="search" class="search-bar" id="search">
                 </div>
             </header>
+            <p class="log sr-only" aria-hidden="true"></p>
             <div class="main-content">
                 <ul class="my-posts">
                     {% for post in collections.posts | reverse %}
@@ -74,10 +67,6 @@ tagList:
                         </article>
                     </li>
                     {% endfor %}
-                </ul>
-                <h3 style="margin-top: 3rem;">Filter Posts by Tag</h3>
-                <ul class="tags-list" style="display: flex; justify-content: flex-start; align-items: center; flex-wrap: wrap; padding-left: 0; list-style: none; margin: .5rem auto;">
-                    <li style="display: flex; flex-wrap: wrap; align-items: center;">{% for tag in tagList %}<a class="post-label" href="/writing?filter={{ tag }}">{{ tag }}</a>{% endfor %}</li>
                 </ul>
             </div>
         </main>

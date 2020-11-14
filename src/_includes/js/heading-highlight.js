@@ -66,7 +66,6 @@ function headingHighlight(headerArr) {
 headingHighlight(headers);
 
 // module.exports = {
-//     headingHighlight,
 //     uniqueID,
 //     removeChars
-// }
+// };

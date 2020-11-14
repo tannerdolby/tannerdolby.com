@@ -8,7 +8,7 @@ tags:
     - eleventy
     - nunjucks
     - html
-permalink: "/writing/{{ shortname | slug }}/"
+permalink: "/writing/{{ title | slug }}/"
 ---
 
 {{ preview }} 
@@ -130,7 +130,6 @@ If you wanted to iterate over the array of card objects in `_data/cards.json` an
 </main>
 ```
 {% endraw %}
-</div>
 
 <h2 id="using-markdown" class="post-heading">Using Markdown</h2>
 
@@ -150,7 +149,13 @@ layout: layouts/profiles.njk
 permalink: "/employees-page/"
 ---
 
-Welcome to the employee home page for company XYZ. The employee cards contain the data fields: name, position, interests and weekly schedule. If you are a new employee and don't see your name on this list, please contact the HR department.
+Welcome to the employee home page for company XYZ.
+
+The employee cards contain the data fields: 
+ - name
+ - position 
+ - interests
+ - weekly schedule
 
 ```
 {% endraw %}

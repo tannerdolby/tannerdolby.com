@@ -9,6 +9,7 @@ https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clik
 code[class*="language-"],
 pre[class*="language-"] {
     color: #f8f8f2;
+    color: #fff;
     background: none;
     text-shadow: 0 1px rgba(0, 0, 0, 0.3);
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
@@ -125,12 +126,11 @@ pre[class*="language-"] {
     cursor: help;
 }
 
-@media (max-width: 770px) {
+@media (max-width: 775px) {
     pre[class*="language-"] {
         padding: 1em;
         margin: .5em 0;
         margin-left: -1.1rem;
-        /*margin-right: -1.25rem; */
         overflow: auto;
         border-radius: 0em;
         width: calc(100% + 2.25rem);
