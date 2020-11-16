@@ -84,7 +84,6 @@ tagList:
         {% include "layouts/footer.njk" %}
         {% set js %}
             {% include "js/filter-posts.js" %}
-            {% include "js/search.js" %}
         {% endset %}
         <script>
             {{ js | jsmin | safe }}
