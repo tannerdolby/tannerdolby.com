@@ -17,6 +17,32 @@
         </style>
     </head>
     <body class="four-oh-four">
-        {{ content | safe }}
+        <header class="top-nav" style="margin: 0;">
+            <nav class="nav-wrapper" aria-label="main nav menu" style="padding: 0;">
+                <ul class="nav-home">
+                    <li><a href="/" class="home"><span class="initials">{{ site.page_info.initials }}</span>Tanner Dolby</a></li>
+                </ul>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a class="first-link" href="/about/">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/writing/">Writing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/contact/">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/art/">Art</a>
+                    </li>
+                    <li>
+                        <a href="/search/">Search</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="ffr-content">
+            {{ content | safe }}
+        </div>
     </body>
 </html>

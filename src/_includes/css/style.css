@@ -144,18 +144,18 @@ h3,
     transform: translateY(0);
 }
 
+/* ya, you read this right */
 .four-oh-four {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
     margin: 0 auto;
-    max-width: 700px;
+    max-width: 980px;
     padding-left: 1rem;
     padding-right: 1rem;
     height: 100vh;
     background: #26292b;
-    color: #fff;
+    background: #fafafa;
+    color: #212121;
 }
 
 .four-oh-four ul li {
@@ -165,11 +165,12 @@ h3,
 .four-oh-four h1,
 .four-oh-four h2,
 .four-oh-four p {
-    color: #fff;
+    color: #333;
 }
 
-.four-oh-four a {
-    color: #19C2FA !important;
+.ffr-content {
+    max-width: 80ch;
+    margin: 2rem auto;
 }
 
 main:focus {
@@ -402,7 +403,7 @@ a:hover {
     margin-right: auto;
     padding-left: 1.1rem;
     padding-right: 1.1rem;
-    margin-top: 1.5rem;
+    margin-top: 1.25rem;
 }
 
 .main-container .main-content .about-banner {
