@@ -54,17 +54,20 @@ p {
 }
 
 code {
-    font-family: monospace;
-    font-size: 1.15rem;
-    /* line-height: 100%; */
+    font-family: consolas, monospace;
+    font-size: inherit;
+    font-size: 93%;
     font-weight: 400;
     white-space: nowrap;
-    color: #212421;;
-    padding: .075rem .2rem;
+    color: #212121;;
+    padding: .15rem .25rem .1rem .25rem;
+    border-radius: .1rem;
     margin: 0 .1rem;
     background: #eeeded;
     background: #f3f3f3;
-    border: .05rem solid lightgray;
+    background: #dfd9d9;
+    background: #ececec;
+    background: rgb(236, 236, 236);
 }
 
 pre {
