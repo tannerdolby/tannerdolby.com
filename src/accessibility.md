@@ -1,5 +1,5 @@
 ---
-title: My Committment to Accessibility
+title: My Commitment to Accessibility
 layout: about.njk
 ---
 
