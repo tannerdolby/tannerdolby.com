@@ -897,15 +897,14 @@ main-container .main-content .about-banner {
 
 #post .post-heading .direct-link {
     text-decoration: none;
-    color: #333 !important;
-    /* vertical-align: top;
-    margin-left: .5rem; */
+    color: transparent !important;
+    vertical-align: top;
+    margin-left: .5rem;
 }
 
 #post .post-heading .direct-link:hover {
-    color: #334 !important;
-    text-decoration: underline;
-    text-decoration-color: #334;
+    color: #444 !important;
+    text-decoration: none;
 }
 
 /*
