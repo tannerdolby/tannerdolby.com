@@ -505,7 +505,7 @@ main-container .main-content .about-banner {
 
 .main-container .projects .project-tile .project-details .links .tile-link {
     padding: .5rem;
-    border-radius: .2rem;
+    border-radius: .1rem;
     text-decoration: none;
     color: #444;
     border: .1rem solid lightgray;
@@ -890,7 +890,7 @@ main-container .main-content .about-banner {
     align-items: flex-end;
 }
 
-.footer-links .social-link img {
+.footer-links .social-link img {    
     width: 23px;
     height: 23px;
 }
