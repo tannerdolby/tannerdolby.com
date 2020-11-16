@@ -493,7 +493,7 @@ main-container .main-content .about-banner {
 }
 
 .main-container .projects .project-tile .project-details .links {
-    margin-top: 1.5rem;
+    margin-top: 1.75rem;
     margin-bottom: 1rem;
     list-style: none;
     padding-left: 0;
@@ -826,7 +826,7 @@ main-container .main-content .about-banner {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    margin-right: 3rem;
+    margin-right: 4rem;
 }
 
 .column h3 {
@@ -852,7 +852,6 @@ main-container .main-content .about-banner {
 
 .column .links li a {
     color: #212121;
-    margin-right: .9rem;
 }
 
 .footer-info {
