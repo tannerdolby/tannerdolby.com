@@ -15,7 +15,7 @@
     --link-blue-accessible-hover: #1836AF;
 }
 
-/*** Screen reader ***/
+/* Screen reader only */
 
 .sr-only {
     clip: rect(0 0 0 0);
@@ -488,7 +488,8 @@ main-container .main-content .about-banner {
 
 .main-container .projects .project-tile .project-details {
     padding: .75rem 1rem;
-    height: auto;
+    height: 100%;
+    width: 100%;
     background: #FFF;
 }
 
