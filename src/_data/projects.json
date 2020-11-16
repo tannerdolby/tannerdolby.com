@@ -79,25 +79,25 @@
     },
     {
         "id": "project-four",
-        "name": "TypeScript Pokedex",
+        "name": "Markdown Previewer",
         "aria_label": "TypeScript pokedex link",
-        "description": "Pokedex app built with TypeScript, HTML, and CSS. Search by name from any of the original 151 Pokemon.",
+        "description": "A markdown previewer capable of parsing multiple flavors of markdown to HTML. Built with React.js and Marked.js.",
         "url": "https://tspokedex.netlify.app/",
         "url_short_name": "tspokedex.netlify.app",
         "source_url": "https://github.com/tannerdolby/typescript-pokedex",
         "image_data": {
-            "fallback_src": "/images/ts-poke-large.jpg",
-            "alt": "TypeScript pokedex project",
+            "fallback_src": "/images/md-preview-large.jpg",
+            "alt": "React Markdown Previewer website",
             "large": {
-                "webp": "/images/ts-poke-large.webp",
+                "webp": "/images/md-preview-large.webp",
                 "width": "1024w"
             },
             "med": {
-                "webp": "/images/ts-poke-med.webp",
+                "webp": "/images/md-preview-med.webp",
                 "width": "640w"
             },
             "small": {
-                "webp": "/images/ts-poke-sm.webp",
+                "webp": "/images/md-preview-sm.webp",
                 "width": "320w"
             }
         }

@@ -4,24 +4,8 @@
         <ul class="project-grid">
         {% for project in projects %}
             <li class="project-tile">
-                <picture>
-                    <source
-                        type="image/webp"
-                        srcset="{{ project.image_data.large.webp }} {{ project.image_data.large.width }},
-                                {{ project.image_data.med.webp }} {{ project.image_data.med.width }},
-                                {{ project.image_data.small.webp }} {{ project.image_data.small.width }}"
-                        sizes="(min-width: 450px) 33.3vw, 100vw"
-                    >
-                    <img 
-                        src="{{ project.image_data.fallback_src }}" 
-                        alt="{{ project.image_data.alt }}"
-                        loading="lazy"
-                        width="640"
-                        height="350"
-                    >
-                </picture>
                 <div class="project-details">
-                    <h3><a href="{{ project.url }}">{{ project.name }}</a></h3>
+                    <h3 class="h2-5"><a href="{{ project.url }}">{{ project.name }}</a></h3>
                     <p style="margin-top: .5rem; margin-bottom: .5rem;">{{ project.description }}</p>
                     <ul class="links">
                         <li><a class="tile-link" href="{{ project.url }}" aria-label="View the live demo for {{ project.name }}">Live demo</a></li>

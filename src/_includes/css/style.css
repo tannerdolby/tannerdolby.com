@@ -406,7 +406,7 @@ a:hover {
     margin-top: 1.25rem;
 }
 
-.main-container .main-content .about-banner {
+main-container .main-content .about-banner {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -451,7 +451,7 @@ a:hover {
 
 .main-container .projects .project-grid {
     display: grid;
-    padding: 1rem .25rem;
+    padding: 1rem 0;
     grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
     gap: 2rem;
     overflow: hidden;
@@ -469,13 +469,9 @@ a:hover {
     max-width: 100%;
     width: 100%;
     margin-bottom: 1rem;
-    border-radius: .3rem;
+    border-radius: .5rem;
     transform-origin: 50% 50%;
     box-shadow: rgb(201, 202, 202) 0px 4px 5px 0px;
-}
-
-.main-container .projects .project-grid .project-tile:nth-child(2) img {
-    padding: .2rem;
 }
 
 .main-container .projects .project-tile picture {
@@ -509,10 +505,10 @@ a:hover {
 
 .main-container .projects .project-tile .project-details .links .tile-link {
     padding: .5rem;
-    border-radius: .1rem;
+    border-radius: .2rem;
     text-decoration: none;
     color: #444;
-    border: 1px solid lightgray;
+    border: .1rem solid lightgray;
     background: inherit;
     font-size: .9rem;
     margin-right: .75rem;
@@ -522,11 +518,9 @@ a:hover {
 .main-container .projects .project-tile .project-details .links .tile-link:hover,
 .main-container .projects .project-tile .project-details .links .tile-link:focus  {
     cursor: pointer;
-    color: #444;
-    border: 1px solid lightgray;
-    /* border: 1px solid rgb(167, 167, 167); */
-    background: inherit;
-    background: rgb(250, 250, 250);
+    border: .1rem solid transparent;
+    background: hsl(0, 0%, 21%);
+    color: #fff;
 }
 
 .main-container .projects .project-tile .project-details h3 {
