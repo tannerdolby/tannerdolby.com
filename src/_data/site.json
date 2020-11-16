@@ -23,6 +23,10 @@
             "title": "Search - tannerdolby.com",
             "desc": "Search the blog of Tanner Dolby"
         },
+        "notes": {
+            "title": "Notes - tannerdolby.com",
+            "desc": "Notes by Tanner Dolby"
+        },
         "open_graph": {
             "title": "Tanner Dolby",
             "type": "website",
