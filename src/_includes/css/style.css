@@ -463,13 +463,12 @@ main-container .main-content .about-banner {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    border: 1px solid rgb(226, 225, 225);
-    border: 1px solid lightgray;
+    border: .1rem solid lightgray;
     overflow: hidden;
     max-width: 100%;
     width: 100%;
     margin-bottom: 1rem;
-    border-radius: .5rem;
+    border-radius: .4rem;
     transform-origin: 50% 50%;
     box-shadow: rgb(201, 202, 202) 0px 4px 5px 0px;
 }
@@ -494,7 +493,7 @@ main-container .main-content .about-banner {
 }
 
 .main-container .projects .project-tile .project-details .links {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     margin-bottom: 1rem;
     list-style: none;
     padding-left: 0;
