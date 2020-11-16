@@ -3,23 +3,23 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>{{ page_name }}</title>
-        <meta name="author" content="Tanner Dolby">
-        <meta name="description" content="{{ site.doc_metadata.art }}">
+        <title>{{ site.doc_metadata.art.title }}</title>
+        <meta name="author" content="{{ site.page_info.full_name }}">
+        <meta name="description" content="{{ site.doc_metadata.art.desc }}">
         <meta name="keywords" content="css-art, {{ site.doc_metadata.keywords }}">
         <!-- Twitter Metadata -->
         <meta name="twitter:card" content="{{ site.doc_metadata.twitter.card }}">
-        <meta name="twitter:title" content="Art - {{ site.doc_metadata.twitter.title }}">
+        <meta name="twitter:title" content="{{ site.doc_metadata.art.title }}">
         <meta name="twitter:creator" content="{{ site.doc_metadata.twitter.creator }}">
         <meta name="twitter:site" content="{{ site.doc_metadata.twitter.site }}">
-        <meta name="twitter:desc" content="{{ site.doc_metadata.twitter.desc }}">
+        <meta name="twitter:desc" content="{{ site.doc_metadata.art.desc }}">
         <meta name="twitter:image" content="{{ site.doc_metadata.twitter.image }} ">
         <!-- OpenGraph Metadata -->
-        <meta name="og:title" content="Art - {{ site.doc_metadata.open_graph.title }}">
+        <meta name="og:title" content="{{ site.doc_metadata.art.title }}">
         <meta name="og:type" content="{{ site.doc_metadata.open_graph.type }}">
-        <meta name="og:url" content="{{ page.url }}">
+        <meta name="og:url" content="https://tannerdolby.com{{ page.url }}">
         <meta name="og:img" content="{{ site.doc_metadata.open_graph.image }}">
-        <meta name="og:description" content="{{ site.doc_metadata.open_graph.description }}">
+        <meta name="og:description" content="{{ site.doc_metadata.art.desc }}">
         <link rel="canonical" href="https://tannerdolby.com{{ page.url }}">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">

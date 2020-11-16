@@ -1,5 +1,4 @@
 ---
-page_name: Writing - Tanner Dolby
 title: Writing
 layout: writings.njk
 permalink: "/writing/"

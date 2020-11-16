@@ -3,15 +3,18 @@ permalink: "feed.xml"
 metadata:
   title: Tanner Dolby's blog about web development and technology.
   subtitle: I mostly write about front-end web development, but sometimes I'll write about other cool stuff too.
-  url: tannerdolby.netlify.app
+  url: https://tannerdolby.com/writing/
+  feedUrl: https://tannerdolby.com/feed.xml
+  author: 
+    name: Tanner Dolby
+    email: dolb.tanner@gmail.com
 ---
-<?xml version="1.0" encoding="utf-8"?>
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>{{ metadata.title }}</title>
   <subtitle>{{ metadata.subtitle }}</subtitle>
-  <link href="{{ metadata.feedUrl }}" rel="self"/>
-  <link href="{{ metadata.url }}"/>
+  <link rel="feed" href="{{ metadata.url }}"/>
+  <link rel="self" href="{{ metadata.feedUrl }}"/>
   <updated>{{ collections.posts | rssLastUpdatedDate }}</updated>
   <id>{{ metadata.url }}</id>
   <author>

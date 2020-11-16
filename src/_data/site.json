@@ -2,7 +2,27 @@
     "doc_metadata": {
         "keywords": "eleventy, web developer, front-end, jamstack, html, css, javascript",
         "home": "Tanner Dolby is an applied mathematician and self taught web developer.",
-        "art": "A small collection of the CSS artwork I've created over the last few months. I'm looking into drawing with a stylus on iPad to play around with SVG illustrations in the future. These illustrations are quite fun and also bring me alot of joy.",
+        "about": {
+            "title": "About - tannerdolby.com",
+            "desc": "A page about Tanner Dolby."
+        },
+        "contact": {
+            "title": "Contact - tannerdolby.com",
+            "desc": "A page to contact Tanner Dolby"
+        },
+        "art": {
+            "desc": "CSS art by Tanner Dolby. A small collection of the CSS artwork I've created.",
+            "title": "Art - tannerdolby.com"
+        },
+        "writing": {
+            "post": "A post by Tanner Dolby",
+            "posts": "Posts by Tanner Dolby",
+            "title": "Writing - tannerdolby.com"
+        },
+        "search": {
+            "title": "Search - tannerdolby.com",
+            "desc": "Search the blog of Tanner Dolby"
+        },
         "open_graph": {
             "title": "Tanner Dolby",
             "type": "website",
@@ -21,6 +41,7 @@
     },
     "page_info": {
         "name": "Tanner",
+        "full_name": "Tanner Dolby",
         "socials": {
             "github": "https://github.com/tannerdolby",
             "twitter": "https://twitter.com/tannerdolby",
