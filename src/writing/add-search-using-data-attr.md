@@ -79,7 +79,7 @@ Here is the full code snippet for adding search functionality to your static sit
 const posts = [...document.getElementsByClassName("post")];
 const searchBar = document.getElementById("#search-bar");
 
-// get user input from search input value
+// get user input from search bar
 function getInput(e) {
     return e.target.value;
 }
