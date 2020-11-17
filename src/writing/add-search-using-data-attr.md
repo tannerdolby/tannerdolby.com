@@ -83,6 +83,7 @@ const searchBar = document.getElementById("#search-bar");
 function getInput(e) {
     return e.target.value;
 }
+
 // add event listener for the input event
 searchBar.addEventListener("input", (e) => {
     let userInput = getInput(e);
