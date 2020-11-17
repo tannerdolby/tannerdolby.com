@@ -11,20 +11,20 @@ permalink: "/writing/{{ title | slug }}/"
 
 {{ preview }}
 
-Building a minimal search feature like this can seem complex, but the underlying logic is very straightforward. The blog post titles will be stored in a custom [data attribute](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes) `data-post-title` to be compared with the user input from the search bar. Using the [Input Event](https://developer.mozilla.org/en-US/docs/Web/API/InputEvent), we can compare the `<input>` elements value against all blog post titles in `post-data-title` everytime the search bar changes. 
+Building a minimal search feature like this can seem complex, but the underlying logic is very straightforward. The blog post titles will be stored in a custom [data attribute](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes) `data-post-title` to be compared with the user input from the search bar. Using the [Input Event](https://developer.mozilla.org/en-US/docs/Web/API/InputEvent), we can compare the `<input>` elements value with blog post titles in the data attribute everytime the search bar changes. 
 
-The user input inside the search bar (ie search query) will be checked against each blog post title for every new character added or removed to the search. This dynamic search feel is made possible thanks to the `input` event. Below is the HTML for creating a search bar `<input>` and corresponding `<label>`.
+The user input inside the search bar (ie search query) will be checked against each blog post title for every character that is added or removed to the search. This "dynamic" search feel is made possible thanks to the `input` event. Below is the HTML for creating a search bar `<input>` and corresponding `<label>`.
 
 {% filename "index.html" %}
 
 ```html
 <label for="search-bar">Search the Blog</label>
 <input id="search-bar" type="text" name="search" placeholder="Search...">
-<!-- Blog posts-->
+<!-- Blog post -->
 <article class="post" data-post-title="Blog Post">..</article>
 ```
 
-The blog post titles in `data-post-title` can be accessed from the DOM via `HTMLElement.dataset.dataPostTitle`. After checking the query against post titles, we can then visually hide the posts with titles not matching the search query. I'm using a `sr-only` class and `aria-hidden="true"` attribute to visually hide non-matching posts from the document and accessibility API.
+The blog post titles in `data-post-title` can be accessed from the DOM via `HTMLElement.dataset.postTitle`. After checking the query against post titles, we can then visually hide the posts with titles not matching the search query. I'm using a `sr-only` class and `aria-hidden="true"` attribute to visually hide non-matching posts from the document and accessibility API.
 
 {% filename "style.css" %}
 
@@ -48,7 +48,7 @@ First, we need a client-side script `search.js` to grab all the blog posts from 
 
 You can now iterate over the blog posts in `posts` and compare the search query with each `data-post-title="Some blog post"` custom data attribute. If a post title matches the consecutive characters entered into the `<input>` element then visually hide the non-matching posts by adding the `.sr-only` class. Since the `input` event fires everytime the search bar text changes, we can compare the query with post titles for each change to the search input. 
 
-I'm using an Eleventy Collection to loop over all the posts in my blog and generate `<article>` elements. If your not using a templating language or Eleventy, feel free to omit the Nunjucks {% raw %}`{% for %}`{% endraw %} loop. 
+I'm using an Eleventy Collection to loop over all the posts in my blog and generate `<article>` elements. If you're not using a templating language or Eleventy, feel free to omit the Nunjucks {% raw %}`{% for %}`{% endraw %} loop. 
 
 Here is the full code snippet for adding search functionality to your static site.
 
@@ -77,30 +77,26 @@ Here is the full code snippet for adding search functionality to your static sit
 ```js
 // grab blog posts and convert HTMLCollection to Array with the spread operator
 const posts = [...document.getElementsByClassName("post")];
-
-// grab search bar to add keyup and click event handlers
 const searchBar = document.getElementById("#search-bar");
-const log = document.querySelector(".log");
 
-// capture search input and inject it into an HTML element.
-function capture(e, element) {
-    return element.textContent = e.target.value;
+// get user input from search input value
+function getInput(e) {
+    return e.target.value;
 }
-
-// add input event listener
+// add event listener for the input event
 searchBar.addEventListener("input", (e) => {
-    capture(e, log);
+    let userInput = getInput(e);
 
-    var searchQuery = [];
-    searchQuery.push(log.innerHTML.toLowerCase());
+    let searchQuery = [];
+    searchQuery.push(userInput.toLowerCase());
 
     // posts with title that matches each character in search query
-    const matchingPost = posts.filter((post) => {
+    const matchingPost = posts.filter(post => {
         return post.dataset.postTitle.toLowerCase().includes(searchQuery);
     });
 
     // posts with title that doesn't match the search query
-    const nonMatchingPost = posts.filter((post) => {
+    const nonMatchingPost = posts.filter(post => {
         return !post.dataset.postTitle.toLowerCase().includes(searchQuery);
     });
 
