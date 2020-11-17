@@ -47,6 +47,7 @@ img {
 p {
     font-family: var(--system-font);
     color: #212121;
+    color: #222;
     font-size: 1.125rem;
     /* font-size: clamp(1.0625rem, 3vw, 1.0875rem); */
     line-height: 1.6;
@@ -590,6 +591,14 @@ main-container .main-content .about-banner {
 
 .see-more:hover {
     text-decoration: none !important;
+}
+
+.filename-title {
+    font-size: 14px;
+}
+
+.filename-title span {
+    color: #333;
 }
 
 .filter-msg {
