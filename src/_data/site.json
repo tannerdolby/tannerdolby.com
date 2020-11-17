@@ -1,5 +1,7 @@
 {
     "doc_metadata": {
+        "image": "https://tannerdolby.com/images/arch-sprial-large.jpg",
+        "alt": "An Archimedean Spiral",
         "keywords": "eleventy, web developer, front-end, jamstack, html, css, javascript",
         "home": "Tanner Dolby is an applied mathematician and self taught web developer.",
         "about": {
@@ -31,16 +33,14 @@
             "title": "Tanner Dolby",
             "type": "website",
             "url": "https://tannerdolby.netlify.app",
-            "description": "Tanner Dolby is an applied mathematician and self taught web developer.",
-            "image": "/images/favicon.ico"
+            "description": "Tanner Dolby is an applied mathematician and self taught web developer."
         },
         "twitter": {
             "card": "summary",
             "title": "Tanner Dolby",
             "creator": "@tannerdolby",
             "site": "@tannerdolby",
-            "desc": "Tanner Dolby is an applied mathematician and self taught web developer.",
-            "image": "/images/favicon.ico" 
+            "desc": "Tanner Dolby is an applied mathematician and self taught web developer."
         }
     },
     "page_info": {
