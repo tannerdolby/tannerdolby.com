@@ -1,6 +1,6 @@
 ---
 title: Add Search to a Static Site using Custom Data Attributes
-date: 2020-11-11
+date: 2020-11-16
 datetime: 2020-11-12 00:00:00 Z
 preview: Creating search functionality for a static site isn't always easy. Luckily, using custom data attributes and a bit of JavaScript. You can filter blog posts by comparing the search input to post titles and visually hide posts that don't match the search query.
 tags: 
