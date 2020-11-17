@@ -18,7 +18,7 @@
 /* Screen reader only */
 
 .sr-only {
-    clip: rect(0 0 0 0);
+    clip: rect(0, 0, 0, 0);
     clip-path: inset(50%);
     height: 1px;
     overflow: hidden;
@@ -56,7 +56,7 @@ p {
 code {
     font-family: consolas, monospace;
     font-size: inherit;
-    font-size: 93%;
+    font-size: 95%;
     font-weight: 400;
     white-space: nowrap;
     color: #212121;;
@@ -67,7 +67,7 @@ code {
     background: #f3f3f3;
     background: #dfd9d9;
     background: #ececec;
-    background: rgb(237, 237, 237);
+    background: rgb(238, 238, 238);
 }
 
 pre {
@@ -466,7 +466,7 @@ main-container .main-content .about-banner {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    border: .1rem solid lightgray;
+    border: .05rem solid lightgray;
     overflow: hidden;
     max-width: 100%;
     width: 100%;
@@ -493,14 +493,14 @@ main-container .main-content .about-banner {
     padding: .75rem 1rem;
     height: 100%;
     width: 100%;
-    background: #FFF;
+    background: #fff;
 }
 
 .main-container .projects .project-tile .project-details .links {
     margin-top: 1.75rem;
     margin-bottom: 1rem;
-    list-style: none;
     padding-left: 0;
+    list-style: none;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -1160,6 +1160,23 @@ main .art img {
     width: 1.25rem;
     height: 1.25rem;
     fill: #000;
+}
+
+.grid-layout {
+    display: grid;
+    /* grid: auto-flow dense / 15rem 80ch 1fr; */
+    grid: 15rem 80ch 1fr / auto-flow;
+    /* grid-template-rows: repeat(auto-fit, 1fr);
+    grid-template-columns: 20rem 15rem 1fr; */
+}
+
+.side-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.side-menu {
+    flex-wrap: wrap;
 }
 
 /* Media queries - START */
