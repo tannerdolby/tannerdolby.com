@@ -43,6 +43,7 @@
     "@11ty/eleventy-plugin-rss": "^1.0.9",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
     "babel-preset-env": "^1.7.0",
-    "jest": "^26.6.3"
+    "jest": "^26.6.3",
+    "node-fetch": "^2.6.1"
   }
 }
