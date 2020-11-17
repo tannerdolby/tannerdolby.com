@@ -4,7 +4,7 @@
 # Eleventy site output 
 _site
 
-# Ignore cached static API from speedlify
+# Ignore cached static API from eleventy-cache-assets
 .cache
 
 # DS_Store
