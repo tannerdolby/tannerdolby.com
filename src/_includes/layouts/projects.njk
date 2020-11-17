@@ -5,7 +5,10 @@
         {% for project in projects %}
             <li class="project-tile">
                 <div class="project-details">
-                    <h3 class="h2-5"><a href="{{ project.url }}">{{ project.name }}</a></h3>
+                    <div class="top-level" style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3 class="h2-5"><a href="{{ project.url }}">{{ project.name }}</a></h3>
+                        {# <span>{{ github.stargazers }}</span> #}
+                    </div>
                     <p style="margin-top: .5rem; margin-bottom: .5rem;">{{ project.description }}</p>
                     <ul class="links">
                         <li><a class="tile-link" href="{{ project.url }}" aria-label="View the live demo for {{ project.name }}">Live demo</a></li>
