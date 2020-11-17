@@ -14,7 +14,7 @@ metadata:
   <title>{{ metadata.title }}</title>
   <subtitle>{{ metadata.subtitle }}</subtitle>
   <link href="{{ metadata.url }}"/>
-  <link rel="self" href="{{ metadata.feedUrl }}"/>
+  <link href="{{ metadata.feedUrl }}" rel="self"/>
   <updated>{{ collections.posts | rssLastUpdatedDate }}</updated>
   <id>{{ metadata.url }}</id>
   <author>
