@@ -497,16 +497,22 @@ main-container .main-content .about-banner {
     height: 100%;
     width: 100%;
     background: #fff;
+    display: flex;
+    flex-direction: column;
 }
 
 .main-container .projects .project-tile .project-details .links {
-    margin-top: 1.75rem;
+    margin-top: auto;
     margin-bottom: 1rem;
     padding-left: 0;
     list-style: none;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+}
+
+.main-container .projects .project-tile .project-details .project-desc {
+    margin-bottom: 1.75rem;
 }
 
 .main-container .projects .project-tile .project-details .links .tile-link {
@@ -525,7 +531,7 @@ main-container .main-content .about-banner {
 .main-container .projects .project-tile .project-details .links .tile-link:focus  {
     cursor: pointer;
     border: .1rem solid transparent;
-    background: hsl(0, 0%, 23%);
+    background: hsl(0, 0%, 25%);
     color: #fff;
 }
 
@@ -1169,11 +1175,15 @@ main .art img {
     margin-top: 2rem;
 }
 
+.top-level a:hover #github-star {
+    fill: #ffc107;
+}
+
 #github-star {
-    padding-right: .25rem;
-    padding-bottom: .1rem;
-    width: 20px;
-    height: 20px;
+    padding-right: .3rem;
+    padding-bottom: .15rem;
+    width: 22px;
+    height: 22px;
 }
 
 #search_svg {
@@ -1199,7 +1209,23 @@ main .art img {
     flex-wrap: wrap;
 }
 
-.top-level span a {
+.top-level {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.top-level .stars {
+    display: flex; 
+    align-items: center;
+}
+
+.top-level .stars .star-row {
+    display: flex;
+    align-items: center;
+}
+
+.top-level a {
     color: #212121;
 }
 
