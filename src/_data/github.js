@@ -1,28 +1,51 @@
 const Cache = require("@11ty/eleventy-cache-assets");
 
-module.exports = async function() {
-    console.log("Fetching Github API data...");
-
+// maybe create a shortcode for this in .eleventy.js to create a plugin for getting github project data
+async function fetchData(url) {
+    console.log("Caching Github API request");
     try {
-        let json = await Cache("https://api.github.com/repos/tannerdolby/eleventy-photo-gallery", {
+        let json = await Cache(url, {
             duration: "1d",
-            type: "json"
+            type: "json",
         });
         return {
-            repoName: json.name,
-            githubHandle: json.owner.login,
-            homepage: json.homepage,
+            title: json.name,
+            desc: json.description,
             stargazers: json.stargazers_count,
-            watchers: json.watchers_count
-        }
-    } catch (e) {
-        console.log("Failed getting Github Repo data from API, returning 0");
-        return {
-            repoName: "Refresh to see Github Repository",
-            githubHandle: "Refresh to see Github handle",
-            homepage: "https://github.com",
-            stargazers: 0,
-            watchers: 0,
+            subscribers: json.subscribers_count,
+            forks: json.forks_count,
+            issues: json.open_issues,
+            stargazers_url: json.stargazers_url,
+            homepage: json.homepage,
+            repo_url: json.html_url
         }
     }
+    catch (e) {
+        console.log(`Error caching github API data for ${url}`);
+        return {
+            title: "A Github Project by Tanner",
+            desc: "This project was created by @tannerdolby",
+            stargazers: 0,
+            subscribers: 0,
+            forks: 0,
+            issues: 0,
+            stargazers_url: "https://github.com/tannerdolby",
+            homepage: "https://github.com/tannerdolby",
+            repo_url: "https://github.com/tannerdolby"
+        }
+    }
+}
+
+module.exports = async function() {
+    try {
+        const eleventyGallery = await fetchData("https://api.github.com/repos/tannerdolby/eleventy-photo-gallery");
+        const personalWebsite = await fetchData("https://api.github.com/repos/tannerdolby/tannerdolby.com");
+        const whatToWatch = await fetchData("https://api.github.com/repos/tannerdolby/what-to-watch");
+        const reactStrTable = await fetchData("https://api.github.com/repos/tannerdolby/react-string-table");
+
+       // return the promise for each project <Promise{ title: ... }>
+        return { eleventyGallery, personalWebsite, whatToWatch, reactStrTable };
+    } catch (e) {
+        console.log("Error returning multiple projects cached API data");
+    } 
 };
