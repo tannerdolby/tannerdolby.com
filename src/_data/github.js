@@ -15,7 +15,7 @@ async function fetchData(url) {
             subscribers: json.subscribers_count,
             forks: json.forks_count,
             issues: json.open_issues,
-            stargazers_url: json.stargazers_url,
+            stargazers_url: json.html_url.concat("/stargazers/"),
             homepage: json.homepage,
             repo_url: json.html_url
         }
@@ -43,6 +43,7 @@ module.exports = async function() {
         const whatToWatch = await fetchData("https://api.github.com/repos/tannerdolby/what-to-watch");
         const reactStrTable = await fetchData("https://api.github.com/repos/tannerdolby/react-string-table");
 
+        console.log(eleventyGallery);
        // return the promise for each project <Promise{ title: ... }>
         return { eleventyGallery, personalWebsite, whatToWatch, reactStrTable };
     } catch (e) {
