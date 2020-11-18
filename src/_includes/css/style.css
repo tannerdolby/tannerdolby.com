@@ -30,9 +30,12 @@
 body {
     font-family: var(--system-font);
     background: #f9fafa;
+    background: #fafafa;
+    background: #f5f8f8;
+    background: rgb(253, 253, 253);
     overflow-x: hidden;
     overflow-y: auto;
-    line-height: 1.7;
+    line-height: 1.6;
     font-size: 100%;
     min-height: 100vh;
     margin: 0;
