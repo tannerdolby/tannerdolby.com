@@ -31,7 +31,6 @@ body {
     font-family: var(--system-font);
     background: #f9fafa;
     background: #fafafa;
-    background: #f5f8f8;
     background: rgb(253, 253, 253);
     overflow-x: hidden;
     overflow-y: auto;
@@ -526,7 +525,7 @@ main-container .main-content .about-banner {
 .main-container .projects .project-tile .project-details .links .tile-link:focus  {
     cursor: pointer;
     border: .1rem solid transparent;
-    background: hsl(0, 0%, 21%);
+    background: hsl(0, 0%, 23%);
     color: #fff;
 }
 
@@ -672,7 +671,6 @@ main-container .main-content .about-banner {
 .featured-art .feat-art-list li {
     padding-right: .5rem;
     transition: 200ms ease-in-out;
-    box-shadow: rgb(240, 240, 240) 0px 0px 1px 0px;
 }
 
 .featured-art .feat-art-list li a {
@@ -680,7 +678,10 @@ main-container .main-content .about-banner {
 }
 
 .featured-art .feat-art-list li:hover {
+    -webkit-transform: translate(0, -.15rem);
     transform: translate(0, -.15rem);
+    -webkit-filter: contrast(93%);
+    filter: contrast(93%);
 }
 
 .featured-art .feat-art-list li a img {
@@ -1168,6 +1169,13 @@ main .art img {
     margin-top: 2rem;
 }
 
+#github-star {
+    padding-right: .25rem;
+    padding-bottom: .1rem;
+    width: 20px;
+    height: 20px;
+}
+
 #search_svg {
     width: 1.25rem;
     height: 1.25rem;
@@ -1189,6 +1197,10 @@ main .art img {
 
 .side-menu {
     flex-wrap: wrap;
+}
+
+.top-level span a {
+    color: #212121;
 }
 
 /* Media queries - START */
