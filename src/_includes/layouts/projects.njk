@@ -2,21 +2,78 @@
     <div class="projects-wrapper">
         <h2 class="section-title">Featured Projects</h2>
         <ul class="project-grid">
-        {% for project in projects %}
             <li class="project-tile">
                 <div class="project-details">
                     <div class="top-level" style="display: flex; justify-content: space-between; align-items: center;">
-                        <h3 class="h2-5"><a href="{{ project.url }}">{{ project.name }}</a></h3>
-                        {# <span>{{ github.stargazers }}</span> #}
+                        <h3 class="h2-5"><a href="{{ github.eleventyGallery.homepage }}">{{ github.eleventyGallery.title }}</a></h3>
+                        <div class="stars">
+                            <a class="star-row" href="{{ github.eleventyGallery.stargazers_url }}">
+                                {% include "star-icon.svg" %}
+                                <span>{{ github.eleventyGallery.stargazers }}</span>
+                            </a>
+                        </div>
                     </div>
-                    <p style="margin-top: .5rem; margin-bottom: .5rem;">{{ project.description }}</p>
+                    <p class="project-desc">{{ github.eleventyGallery.desc }}</p>
                     <ul class="links">
-                        <li><a class="tile-link" href="{{ project.url }}" aria-label="View the live demo for {{ project.name }}">Live demo</a></li>
-                        <li><a class="tile-link" href="{{ project.source_url }}" aria-label="View the source code for {{ project.name }}">Source code</a></li>
+                        <li><a class="tile-link" href="{{ github.eleventyGallery.homepage }}" aria-label="View the live demo for {{ github.eleventyGallery.title }}">Live demo</a></li>
+                        <li><a class="tile-link" href="{{ github.eleventyGallery.repo_url }}" aria-label="View the source code for {{ project.name }}">Source code</a></li>
                     </ul>
                 </div>
             </li>
-        {% endfor %}
+            <li class="project-tile">
+                <div class="project-details">
+                    <div class="top-level">
+                        <h3 class="h2-5"><a href="{{ github.personalWebsite.homepage }}">{{ github.personalWebsite.title }}</a></h3>
+                        <div class="stars">
+                            <a class="star-row" href="{{ github.personalWebsite.stargazers_url }}">
+                                {% include "star-icon.svg" %}
+                                <span>{{ github.personalWebsite.stargazers }}</span>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="project-desc">{{ github.personalWebsite.desc }}</p>
+                    <ul class="links">
+                        <li><a class="tile-link" href="{{ github.personalWebsite.homepage }}" aria-label="View the live demo for {{ github.eleventyGallery.title }}">Live demo</a></li>
+                        <li><a class="tile-link" href="{{ github.personalWebsite.repo_url }}" aria-label="View the source code for {{ project.name }}">Source code</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="project-tile">
+                <div class="project-details">
+                    <div class="top-level">
+                        <h3 class="h2-5"><a href="{{ github.whatToWatch.homepage }}">{{ github.whatToWatch.title }}</a></h3>
+                        <div class="stars">
+                            <a class="star-row" href="{{ github.whatToWatch.stargazers_url }}">
+                                {% include "star-icon.svg" %}
+                                <span>{{ github.whatToWatch.stargazers }}</span>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="project-desc">{{ github.whatToWatch.desc }}</p>
+                    <ul class="links">
+                        <li><a class="tile-link" href="{{ github.whatToWatch.homepage }}" aria-label="View the live demo for {{ github.whatToWatch.title }}">Live demo</a></li>
+                        <li><a class="tile-link" href="{{ github.whatToWatch.repo_url }}" aria-label="View the source code for {{ github.whatToWatch.title }}">Source code</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="project-tile">
+                <div class="project-details">
+                    <div class="top-level">
+                        <h3 class="h2-5"><a href="{{ github.reactStrTable.homepage }}">{{ github.reactStrTable.title }}</a></h3>
+                        <div class="stars">
+                            <a class="star-row" href="{{ github.reactStrTable.stargazers_url }}">
+                                {% include "star-icon.svg" %}
+                                <span>{{ github.reactStrTable.stargazers }}</span>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="project-desc">{{ github.reactStrTable.desc }}</p>
+                    <ul class="links">
+                        <li><a class="tile-link" href="{{ github.reactStrTable.homepage }}" aria-label="View the live demo for {{ github.reactStrTable.title }}">Live demo</a></li>
+                        <li><a class="tile-link" href="{{ github.reactStrTable.repo_url }}" aria-label="View the source code for {{ github.reactStrTable.title }}">Source code</a></li>
+                    </ul>
+                </div>
+            </li>
         </ul>
     </div>
 </section>
