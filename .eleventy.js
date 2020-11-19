@@ -4,8 +4,11 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const dateFilter = require("nunjucks-date-filter");
 const pluginRSS = require("@11ty/eleventy-plugin-rss");
 const markdownIt = require("markdown-it");
+const metagen = require("eleventy-plugin-metagen");
 
 module.exports = (eleventyConfig) => {
+
+    eleventyConfig.addPlugin(metagen);
 
     const markdownOptions = {
         html: true,
