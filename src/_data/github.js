@@ -2,7 +2,7 @@ const Cache = require("@11ty/eleventy-cache-assets");
 
 // maybe create a shortcode for this in .eleventy.js to create a plugin for getting github project data
 async function fetchData(url) {
-    console.log("Caching Github API request");
+    console.log(`Caching: ${url}`);
     try {
         let json = await Cache(url, {
             duration: "1d",
@@ -21,7 +21,7 @@ async function fetchData(url) {
         }
     }
     catch (e) {
-        console.log(`Error caching github API data for ${url}`);
+        console.log(`Error caching: ${url}`);
         return {
             title: "A Github Project by Tanner",
             desc: "This project was created by @tannerdolby",
@@ -39,13 +39,11 @@ async function fetchData(url) {
 module.exports = async function() {
     try {
         const eleventyGallery = await fetchData("https://api.github.com/repos/tannerdolby/eleventy-photo-gallery");
-        const personalWebsite = await fetchData("https://api.github.com/repos/tannerdolby/tannerdolby.com");
+        const pluginMetaGen = await fetchData("https://api.github.com/repos/tannerdolby/eleventy-plugin-metagen");
         const whatToWatch = await fetchData("https://api.github.com/repos/tannerdolby/what-to-watch");
         const reactStrTable = await fetchData("https://api.github.com/repos/tannerdolby/react-string-table");
-
-        console.log(eleventyGallery);
-       // return the promise for each project <Promise{ title: ... }>
-        return { eleventyGallery, personalWebsite, whatToWatch, reactStrTable };
+        // return the promise for each project <Promise{ title: ... }>
+        return { eleventyGallery, pluginMetaGen, whatToWatch, reactStrTable };
     } catch (e) {
         console.log("Error returning multiple projects cached API data");
     } 
