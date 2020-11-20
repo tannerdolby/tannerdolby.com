@@ -51,7 +51,6 @@ p {
     color: #212121;
     color: #222;
     font-size: 1.125rem;
-    /* font-size: clamp(1.0625rem, 3vw, 1.0875rem); */
     line-height: 1.6;
     font-weight: 400;
 }
@@ -476,7 +475,7 @@ main-container .main-content .about-banner {
     margin-bottom: 1rem;
     border-radius: .4rem;
     transform-origin: 50% 50%;
-    box-shadow: 0px 2px 4px 0px rgb(201, 202, 202);
+    /* box-shadow: 0px 2px 4px 0px rgb(201, 202, 202); */
 }
 
 .main-container .projects .project-tile picture {
@@ -496,7 +495,6 @@ main-container .main-content .about-banner {
     padding: .75rem 1rem;
     height: 100%;
     width: 100%;
-    background: #fff;
     display: flex;
     flex-direction: column;
 }
