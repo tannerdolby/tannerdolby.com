@@ -20,17 +20,17 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@11ty/eleventy": "^0.11.0",
+    "@11ty/eleventy": "^0.11.1",
     "@11ty/eleventy-cache-assets": "^2.0.3",
     "@types/jest": "^26.0.15",
     "cheerio": "^1.0.0-rc.3",
     "clean-css": "^4.2.3",
     "elasticlunr": "^0.9.5",
-    "eleventy-plugin-metagen": "^1.0.0",
-    "markdown-it": "^12.0.0",
+    "eleventy-plugin-metagen": "^1.0.2",
+    "markdown-it": "^12.0.2",
     "nunjucks-date-filter": "^0.1.1",
     "speedlify-score": "^2.0.1",
-    "terser": "^5.3.3"
+    "terser": "^5.5.0"
   },
   "repository": {
     "type": "git",
@@ -42,7 +42,7 @@
   "homepage": "https://github.com/tannerdolby/tannerdolby.com/#readme",
   "devDependencies": {
     "@11ty/eleventy-plugin-rss": "^1.0.9",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.4",
     "babel-preset-env": "^1.7.0",
     "jest": "^26.6.3",
     "node-fetch": "^2.6.1"
