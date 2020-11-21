@@ -9,14 +9,19 @@ headshot:
 layout: about.njk
 ---
 
-Hi there! My name is Tanner Dolby. I'm a mathematician and front-end developer based in Sacramento, CA. I enjoy using semantic and accessible HTML paired with modern CSS to build fast websites. I started to learn web development using [freeCodeCamp.org](https://freecodecamp.org) in 2017. 
-
-Ever since then, I've been hooked on building things for the web. I also enjoy creating fun CSS illustrations and front-end demos on [CodePen](https://codepen.io/tannerdolby) in my free time. 
+Hi there! My name is Tanner Dolby. I'm a mathematician and front-end developer based in Sacramento, CA. I enjoy using semantic and accessible HTML paired with modern CSS to build fast websites. I started to learn web development using [freeCodeCamp.org](https://freecodecamp.org) in 2017. Ever since then, I've been hooked on building things for the web. I also enjoy creating fun CSS illustrations and front-end demos on [CodePen](https://codepen.io/tannerdolby) in my free time. 
 
 With the JAMstack movement on the rise, I've recently taken an interest in Static Site Generators (SSG). In particular [11ty](https://11ty.dev), which this website is built with.
 
 ## Interests
-I like to write about technology and web development. I'm currently fixated on learning more about accessibility guidelines and web performance. If you want to see me write about a specific topic or concept, feel free to message me about it. Lately, I've been very interested in CSS illustrations and SVG. I may write about these hobbies in future posts.
+I like to write about technology and web development. I'm currently fixated on learning more about Static Site Generators, JavaScript and Web performance. If you want to see me write about a specific topic or concept, feel free to message me about it. Lately, I've been very interested in CSS illustrations and SVG. I may write about these hobbies in future posts.
+
+## Around the Web
+I can be found at: 
+
+{% for link in socials %}
+<li style="padding: .175rem 0;"><a href="{{ link.url }}">{{ link.name }}</a></li>
+{% endfor %}
 
 ## Education
 I received my Bachelor of Science in Applied Mathematics from Arizona State University on May 11, 2020. Due to a [global pandemic](https://www.cdc.gov/coronavirus/2019-ncov/index.html), the university didn't conduct an in-person commencement ceremenony. Feel free to take a look at the [virtual ceremonies](https://vgradasu.z4.web.core.windows.net/asu/III/#811351). 

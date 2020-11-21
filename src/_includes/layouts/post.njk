@@ -47,7 +47,7 @@
 
                 {% set previousPost = collections.posts | getPreviousCollectionItem(page) %}
                 {% set nextPost = collections.posts | getNextCollectionItem(page) %}
-                <ul style="padding-left: 0; list-style: none; margin-top: 3rem;">
+                <ul class="prev-next">
                     <li>
                         {% if previousPost %}
                         <h3 style="margin-bottom: .75rem;">Previous</h3>

@@ -32,6 +32,7 @@ body {
     background: #f9fafa;
     background: #fafafa;
     background: rgb(253, 253, 253);
+    /* background: #eef0f1; */
     overflow-x: hidden;
     overflow-y: auto;
     line-height: 1.6;
@@ -50,6 +51,7 @@ p {
     font-family: var(--system-font);
     color: #212121;
     color: #222;
+    color: #111;
     font-size: 1.125rem;
     line-height: 1.6;
     font-weight: 400;
@@ -154,7 +156,7 @@ h3,
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    max-width: 980px;
+    max-width: 1050px;
     padding-left: 1rem;
     padding-right: 1rem;
     height: 100vh;
@@ -174,7 +176,7 @@ h3,
 }
 
 .ffr-content {
-    max-width: 80ch;
+    max-width: 85ch;
     margin: 2rem auto;
 }
 
@@ -206,8 +208,8 @@ a:hover {
 
 .top-nav .nav-wrapper {
     max-width: 1100px;
-    max-width: 980px;
-    padding: .65rem 1.1rem;
+    max-width: 1000px;
+    padding: .85rem 1.1rem;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -306,7 +308,7 @@ a:hover {
 .main-container .banner-container {
     margin-left: auto;
     margin-right: auto;
-    max-width: 980px;
+    max-width: 1000px;
     padding-left: 1.1rem;
     padding-right: 1.1rem;
     display: flex;
@@ -317,6 +319,7 @@ a:hover {
 
 .main-container .banner-container {
     margin-top: 2rem;
+    max-width: 85ch;
 }
 
 .main-container .welcome-container .home-banner h1,
@@ -337,7 +340,7 @@ a:hover {
     font-size: 1.4em;
     font-size: clamp(1.35rem, 3vw, 1.4rem);
     line-height: 1.5;
-    max-width: 65ch;
+    max-width: 55ch;
 }
 
 .main-container .banner-container .page-banner h2 {
@@ -372,21 +375,46 @@ a:hover {
     color: #fff;
 }
 
+.prev-next {
+    padding-left: 0; 
+    list-style: none; 
+    margin-top: 3rem;
+}
+
+.prev-next li a {
+    font-size: 1.1rem;
+}
+
+.contact-detail {
+    max-width: 85ch;
+    margin-bottom: 2rem;
+}
+
+.email-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
 #main-writing,
 #main-about,
 #main-art,
 #main-contact,
 #post-content {
-    max-width: 80ch;
+    max-width: 1000px;
     margin: 0 auto 6rem auto;
     overflow-x: hidden;
 }
 
 #main-contact {
     margin-top: 2rem;
+    max-width: 85ch;
     padding-right: 1.1rem;
     padding-left: 1.1rem;
     padding-bottom: 1.5rem;
+    overflow: hidden;
 }
 
 .main-container .main-content .my-posts {
@@ -406,6 +434,7 @@ a:hover {
 .main-container .main-content {
     margin-left: auto;
     margin-right: auto;
+    max-width: 85ch;
     padding-left: 1.1rem;
     padding-right: 1.1rem;
     margin-top: 1.25rem;
@@ -441,7 +470,6 @@ main-container .main-content .about-banner {
 
 .main-container .projects .projects-wrapper {
     max-width: 1000px;
-    max-width: 980px;
     display: flex;
     flex-direction: column;
     margin-top: 1rem;
@@ -456,7 +484,7 @@ main-container .main-content .about-banner {
 
 .main-container .projects .project-grid {
     display: grid;
-    padding: 1rem 0.15rem;
+    padding: 1rem .1rem;
     grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
     gap: 2rem;
     overflow: hidden;
@@ -468,14 +496,14 @@ main-container .main-content .about-banner {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    border: .05rem solid lightgray;
+    border: .075rem solid lightgray;
     overflow: hidden;
     max-width: 100%;
     width: 100%;
     margin-bottom: 1rem;
     border-radius: .4rem;
     transform-origin: 50% 50%;
-    /* box-shadow: 0px 2px 4px 0px rgb(201, 202, 202); */
+    /* box-shadow: 0px 2px 3px 0px rgb(201, 202, 202); */
 }
 
 .main-container .projects .project-tile picture {
@@ -492,6 +520,7 @@ main-container .main-content .about-banner {
 }
 
 .main-container .projects .project-tile .project-details {
+    background: rgb(255, 255, 255);
     padding: .75rem 1rem;
     height: 100%;
     width: 100%;
@@ -539,7 +568,6 @@ main-container .main-content .about-banner {
 }
 
 .main-container .projects .project-tile .project-details h3 a {
-    color: #333;
     text-decoration: none;
 }
 
@@ -619,12 +647,12 @@ main-container .main-content .about-banner {
     margin-bottom: 2rem;
     margin-top: 2rem;
     padding: .25rem 1.1rem;
-    max-width: 980px;
+    max-width: 1000px;
     font-family: var(--system-font);
 }
 
 .recent-posts article {
-    max-width: 80ch;
+    max-width: 85ch;
     padding-top: .5rem;
     padding-bottom: .5rem;
 }
@@ -662,7 +690,6 @@ main-container .main-content .about-banner {
     padding-right: 1.1rem;
     padding-bottom: 3rem;
     max-width: 1000px;
-    max-width: 980px;
 }
 
 .featured-art .feat-art-list {
@@ -698,16 +725,14 @@ main-container .main-content .about-banner {
 
 .contact {
     background: #202d3d;
-    max-width: 980px;
     padding: 1rem 1.1rem;
     background: inherit;
     margin: 2rem auto;
+    max-width: 1000px;
 }
 
 .contact-wrapper {
-    max-width: 1000px;
-    max-width: 980px;
-    max-width: 80ch;
+    max-width: 85ch;
 }
 
 .contact-wrapper .socials-list {
@@ -793,7 +818,7 @@ main-container .main-content .about-banner {
     flex-direction: column;
     margin-left: auto;
     margin-right: auto;
-    max-width: 980px;
+    max-width: 1000px;
     padding-left: 1.1rem;
     padding-right: 1.1rem;
 }
@@ -982,13 +1007,13 @@ main-container .main-content .about-banner {
     background: rgb(54, 60, 63);
     background: hsl(0, 0%, 23%); */
     background: hsl(0, 0%, 23%);
-    color: #ffffff;
+    color: #ffffff !important;
     border: .12rem solid rgb(54, 60, 63);
 }
 
 .main-content .my-posts .clear-filter-btn:hover {
     background: inherit;
-    color: #212121;
+    background: hsl(0, 0%, 27%);
     text-decoration: none;
 }
 .tagged-title {
@@ -1041,11 +1066,9 @@ main .art {
     margin-top: 2rem;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
     padding-bottom: 1rem;
-    max-width: 1000px;
-    max-width: 980px;
 }
 
 main .art .art-details {
@@ -1064,6 +1087,8 @@ main .art .art-details .drawing-info {
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
 }
 
 main .art img {
@@ -1085,6 +1110,7 @@ main .art img {
 .main-container .message-me {
     background: inherit;
     background: hsl(0, 0%, 20%);
+    background: rgb(37, 43, 48);
     border: .125rem solid rgb(37, 43, 48);
     border: .125rem solid hsl(0, 0%, 20%);
     padding: .6rem .75rem;
@@ -1093,13 +1119,13 @@ main .art img {
     text-decoration: none;
     margin: 2rem auto;
     font-size: 1rem;
+    transition: 200ms linear;
 }
 
 .message-me:hover {
-    background: rgb(37, 43, 48);
-    background: hsl(0, 0%, 20%);
-    background: inherit;
-    color: #212121;
+    background: rgb(53, 61, 68);
+    /* background: inherit; */
+    /* color: #212121; */
     text-decoration: none;
 }
 
@@ -1173,17 +1199,6 @@ main .art img {
     margin-top: 2rem;
 }
 
-.top-level a:hover #github-star {
-    fill: #ffc107;
-}
-
-#github-star {
-    padding-right: .3rem;
-    padding-bottom: .15rem;
-    width: 22px;
-    height: 22px;
-}
-
 #search_svg {
     width: 1.25rem;
     height: 1.25rem;
@@ -1224,7 +1239,27 @@ main .art img {
 }
 
 .top-level a {
+    color: #222;
+}
+
+.top-level a span {
     color: #212121;
+}
+
+.top-level a:hover, .stars .star-row:hover span {
+    color: var(--link-blue-accessible);
+    text-decoration: none;
+}
+.top-level a:hover #github-star {
+    /* fill: #ffc107; */
+    fill: var(--link-blue-accessible);
+}
+
+#github-star {
+    padding-right: .3rem;
+    padding-bottom: .15rem;
+    width: 22px;
+    height: 22px;
 }
 
 /* Media queries - START */
@@ -1261,10 +1296,11 @@ main .art img {
     .featured-art .feat-art-list li {
         padding-right: 0;
     }
-    p {
+    p, .prev-next li a {
         font-size: 1.0625rem;
     }
 } 
+
 
 @media (max-width: 670px) {
     .top-nav .nav-wrapper {
