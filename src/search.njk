@@ -1,29 +1,15 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{ site.doc_metadata.search.title }}</title>
-        <meta name="author" content="{{ site.page_info.full_name }}">
-        <meta name="description" content="{{ site.doc_metadata.search.desc }}">
-        <meta name="keywords" content="{{ site.doc_metadata.keywords }}">
-        <!-- Twitter Metadata -->
-        <meta name="twitter:card" content="{{ site.doc_metadata.twitter.card }}">
-        <meta name="twitter:title" content="{{ site.doc_metadata.search.title }}">
-        <meta name="twitter:creator" content="{{ site.doc_metadata.twitter.creator }}">
-        <meta name="twitter:site" content="{{ site.doc_metadata.twitter.site }}">
-        <meta name="twitter:desc" content="{{ site.doc_metadata.search.desc }}">
-        <meta name="twitter:image" content="{{ site.doc_metadata.image }} ">
-        <meta name="twitter:image:alt" content="{{ site.doc_metadata.alt }} ">
-        <!-- OpenGraph Metadata -->
-        <meta name="og:title" content="{{ site.doc_metadata.search.title }}">
-        <meta name="og:type" content="{{ site.doc_metadata.open_graph.type }}">
-        <meta name="og:url" content="https://tannerdolby.com{{ page.url }}">
-        <meta name="og:img" content="{{ site.doc_metadata.image }}">
-        <meta name="og:img:alt" content="{{ site.doc_metadata.alt }} ">
-        <meta name="og:description" content="{{ site.doc_metadata.search.desc }}">
-        <link rel="canonical" href="https://tannerdolby.com{{ page.url }}">
+        {% metagen 
+            title="Search - tannerdolby.com",
+            desc="Search the blog of Tanner Dolby.",
+            url="https://tannerdolby.com/search/",
+            img="https://tannerdolby.com/images/arch-sprial-large.jpg",
+            img_alt="An Archimedean Spiral",
+            twitterHandle="@tannerdolby",
+            name="Tanner Dolby"
+        %}
         <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
