@@ -11,7 +11,7 @@ layout: about.njk
 
 Hi there! My name is Tanner Dolby. I'm a mathematician and front-end developer based in Sacramento, CA. I enjoy using semantic and accessible HTML paired with modern CSS to build fast websites. I started to learn web development using [freeCodeCamp.org](https://freecodecamp.org) in 2017. Ever since then, I've been hooked on building things for the web. I also enjoy creating fun CSS illustrations and front-end demos on [CodePen](https://codepen.io/tannerdolby) in my free time. 
 
-With the JAMstack movement on the rise, I've recently taken an interest in Static Site Generators (SSG). In particular [11ty](https://11ty.dev), which this website is built with.
+With the JAMstack movement on the rise, I've recently taken an interest in Static Site Generators (SSG). In particular [Eleventy](https://11ty.dev), which this website is built with.
 
 ## Interests
 I like to write about technology and web development. I'm currently fixated on learning more about Static Site Generators, JavaScript and Web performance. If you want to see me write about a specific topic or concept, feel free to message me about it. Lately, I've been very interested in CSS illustrations and SVG. I may write about these hobbies in future posts.
