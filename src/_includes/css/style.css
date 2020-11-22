@@ -819,7 +819,6 @@ main-container .main-content .about-banner {
     display: flex;
     /* flex-direction: column; */
     justify-content: flex-start;
-    align-items: center;
     flex-wrap: wrap;
 }
 
@@ -874,6 +873,7 @@ main-container .main-content .about-banner {
 
 .column .links {
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     list-style-type: none;
@@ -894,7 +894,7 @@ main-container .main-content .about-banner {
 
 .footer-info {
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
     align-items: center;
     margin-top: 1rem;
 }
