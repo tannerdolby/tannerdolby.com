@@ -329,7 +329,7 @@ a:hover {
 
 .main-container .welcome-container .home-banner h1 {
     font-size: 3em;
-    font-size: clamp(2.5em, 10vw, 3.1em);
+    font-size: clamp(2.5em, 10vw, 3em);
 }
 .main-container .welcome-container .home-banner p {
     font-size: 1.4em;
