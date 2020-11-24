@@ -1135,6 +1135,11 @@ main .art img {
     text-decoration: none;
 }
 
+.around-the-web ul li p {
+    padding: 0;
+    margin: .3rem 0;
+}
+
 .sidebar {
     width: 22ch;
     width: 14rem;
