@@ -131,8 +131,8 @@ pre[class*="language-"] {
         padding: 1em;
         margin: .5em 0;
         margin-left: -1.1rem;
+        margin-right: -1.1rem;
         overflow: auto;
         border-radius: 0em;
-        width: calc(100% + 2.25rem);
     }
 }

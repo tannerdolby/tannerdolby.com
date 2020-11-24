@@ -394,13 +394,18 @@ a:hover {
 }
 
 #main-about,
-#main-art,
-#post-content {
+#main-art {
     max-width: 1000px;
     margin: 0 auto 6rem auto;
     overflow-x: hidden;
     padding-left: 1rem;
     padding-right: 1rem;
+}
+
+#post-content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 6rem;
 }
 
 #main-contact {
