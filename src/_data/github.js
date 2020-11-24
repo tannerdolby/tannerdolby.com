@@ -1,6 +1,5 @@
 const Cache = require("@11ty/eleventy-cache-assets");
 
-// maybe create a shortcode for this in .eleventy.js to create a plugin for getting github project data
 async function fetchData(url) {
     console.log(`Caching: ${url}`);
     try {

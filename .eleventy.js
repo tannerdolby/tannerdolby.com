@@ -17,15 +17,24 @@ module.exports = (eleventyConfig) => {
     };
     
     const md = markdownIt(markdownOptions)
+        .use(function(md) {
+            md.linkify.add("##", {
+                validate: /^[##]+/g,
+                normalize: headingLink => {
+                    headingLink.url = "/writing/";
+                }
+            })
+        })
         // Recognize # for links to post tags 
         .use(function(md) {
             md.linkify.add("#", {
                 validate: /^[\w-]+/g,
                 normalize: match => {
-                    match.url = "/writing?filter=".concat(match.raw.slice(1));
+                    match.url = "/writing/?filter=".concat(match.raw.slice(1));
                 }
             })
         });
+        
 
     eleventyConfig.setLibrary("md", md);
 

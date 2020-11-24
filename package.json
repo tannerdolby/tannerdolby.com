@@ -1,6 +1,6 @@
 {
   "name": "11ty-gallery",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "My personal website built with the static site generator Eleventy",
   "main": ".eleventy.js",
   "scripts": {
