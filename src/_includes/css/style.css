@@ -695,12 +695,16 @@ main-container .main-content .about-banner {
 }
 
 .wrap {
-    max-width: 1000px;
+    max-width: 80ch;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 6rem;
     padding-left: 1rem;
     padding-right: 1rem;
+}
+
+.lg {
+    max-width: 1000px;
 }
 
 .featured-art .feat-art-list li {
@@ -1118,12 +1122,12 @@ main .art img {
     /* background: hsl(0, 0%, 19%); */
     /* background: rgb(46, 54, 59); */
     background: hsl(0, 0%, 20%);
-    background: inherit;
     border: .125rem solid rgb(37, 43, 48);
     border: .124rem solid hsl(0, 0%, 20%);
     padding: .7rem .8rem;
     border-radius: .1rem;
     color: #212121;
+    color: #fff;
     text-decoration: none;
     margin: 2rem auto;
     font-size: 1rem;
