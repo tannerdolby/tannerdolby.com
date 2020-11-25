@@ -479,7 +479,7 @@ main-container .main-content .about-banner {
 
 .main-container .projects .project-grid {
     display: grid;
-    padding: 1rem 0rem;
+    padding: 1rem 0.1rem;
     grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
     gap: 2rem;
     overflow: hidden;
@@ -499,6 +499,10 @@ main-container .main-content .about-banner {
     border-radius: .4rem;
     transform-origin: 50% 50%;
     /* box-shadow: 0px 2px 3px 0px rgb(201, 202, 202); */
+}
+
+.main-container .projects .project-grid .project-tile:hover {
+    box-shadow: 0px 2px 3px 0px rgb(201, 202, 202);
 }
 
 .main-container .projects .project-tile picture {
