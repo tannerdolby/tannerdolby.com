@@ -5,6 +5,7 @@ module.exports = {
     eleventyComputed: {
         title: data => data.title,
         subheadings: (data) => {
+            // to be continued (using client-side js for this now)
             const posts = data.collections.posts;
 
             let arr = [];
@@ -15,20 +16,14 @@ module.exports = {
                 
                 const postData = post.template.frontMatter; // returns an object { content: 'markdown content' and data: { title: ..}
 
-                // match headings 
-                const headings = markdownContent.match(/[##]+/gm) || [];
                 arr.push({
-                    title: postData.data.title,
+                    title: post.data.title,
                     url: postData.data.permalink,
-                    heading: [...headings]
+                    heading: "test"
                 });
-                console.log(arr);
+
                 return arr;
             }
-
-            console.log(arr);
-            return arr;
-            
         }
     }
 }

@@ -839,8 +839,12 @@ main-container .main-content .about-banner {
 .footer-content .footer-nav {
     display: flex;
     /* flex-direction: column; */
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
+}
+
+.footer-content .footer-nav .column:first-child {
+    margin-right: 5rem;
 }
 
 .footer-content .footer-flex .pad-left {
@@ -877,6 +881,7 @@ main-container .main-content .about-banner {
 
 .copyright {
     font-size: 1rem;
+    text-align: right;
 }
 
 .column {
