@@ -1,5 +1,5 @@
 --- 
-pageName: Tanner Dolby's Website
+title: Tanner Dolby's Website
 about: I'm a front-end developer, designer, and mathematician. I enjoy building things for the web that are accessible and performant.
 layout: base.njk
 eleventyExcludeFromCollections: true
