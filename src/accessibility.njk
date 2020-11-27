@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% metagen 
+        title="Accessibility - tannerdolby.com",
+        desc="Tanner Dolby's commitment to accessibility",
+        url="https://tannerdolby.com/accessibility/",
+        img="https://tannerdolby.com/images/arch-spiral-large.jpg",
+        img_alt="An Archimedean Spiral",
+        twitterHandle="@tannerdolby",
+        name="Tanner Dolby"    
+    %}
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    {% set css %}
+        {% include "css/style.css" %}
+    {% endset %}
+    <style>
+        {{ css | cssmin | safe }}
+    </style>
+</head>
+<body>
+    <a href="#main-about" class="skip-link">Skip to main content</a>
+        {% include "layouts/nav.njk" %}
+        <main class="main-container" id="main-about" tabindex="-1">
+            <header class="banner-container">
+                <h1>My Commitment to Accessibility</h1>
+            </header>
+            <p>I am committed to making this websites content accessible and user friendly to everyone. If you are experiencing any accessibility issues or are having difficulty viewing or navigating the content on this website, or notice anything that you believe is not fully accessible to people with disabilities, please send an email to tannercdolby@gmail.com with the subject heading "Accessibility Concern" and a brief description of the content or feature that is in need of an accessibility improvement.</p>
+            <p>I care deeply about my website being accessible and viewable for all users so please don't hesitate to reach out if you have any suggestions or notice something that needs improvements.</p>
+        </main>
+        {% include "layouts/footer.njk" %}
+</body>
+</html>
