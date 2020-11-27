@@ -1,29 +1,16 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{ pageName }}</title>
-        <meta name="author" content="Tanner Dolby">
-        <meta name="description" content="{{ site.doc_metadata.home }}">
+        {% metagen 
+            title="Tanner Dolby's Website",
+            desc="Tanner Dolby is a software engineer and mathematician.",
+            url="https://tannerdolby.com",
+            img="https://tannerdolby.com/images/arch-spiral-large.jpg",
+            img_alt="An Archimedean Spiral.",
+            twitterHandle="@tannerdolby",
+            name="Tanner Dolby"
+        %}
         <meta name="keywords" content="{{ site.doc_metadata.keywords }}">
-        <!-- Twitter Metadata -->
-        <meta name="twitter:card" content="{{ site.doc_metadata.twitter.card }}">
-        <meta name="twitter:title" content="{{ site.doc_metadata.twitter.title }}">
-        <meta name="twitter:creator" content="{{ site.doc_metadata.twitter.creator }}">
-        <meta name="twitter:site" content="{{ site.doc_metadata.twitter.site }}">
-        <meta name="twitter:desc" content="{{ site.doc_metadata.twitter.desc }}">
-        <meta name="twitter:image" content="{{ site.doc_metadata.image }} ">
-        <meta name="twitter:image:alt" content="{{ site.doc_metadata.alt }} ">
-        <!-- OpenGraph Metadata -->
-        <meta name="og:title" content="{{ site.doc_metadata.open_graph.title }}">
-        <meta name="og:type" content="{{ site.doc_metadata.open_graph.type }}">
-        <meta name="og:url" content="{{ page.url }}">
-        <meta name="og:img" content="{{ site.doc_metadata.image }}">
-        <meta name="og:img:alt" content="{{ site.doc_metadata.alt }} ">
-        <meta name="og:description" content="{{ site.doc_metadata.open_graph.description }}">
-        <link rel="canonical" href="https://tannerdolby.com{{ page.url }}">
         <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
