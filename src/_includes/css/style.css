@@ -267,6 +267,7 @@ a:hover {
     padding: 2.25rem 0 2.8rem;
     background: inherit;
     background:rgb(242, 242, 242);
+    background: #f6f6f6;
     border-top: .12rem solid lightgray;
     border-bottom: .12rem solid lightgray;
 } 
@@ -373,7 +374,20 @@ a:hover {
 .prev-next {
     padding-left: 0; 
     list-style: none; 
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80ch;
     margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.prev-next h3 {
+    font-size: 1.35rem;
 }
 
 .prev-next li a {
@@ -403,8 +417,6 @@ a:hover {
 }
 
 #post-content {
-    padding-left: 1rem;
-    padding-right: 1rem;
     margin-bottom: 6rem;
 }
 
@@ -431,8 +443,6 @@ a:hover {
 .main-container .main-content {
     margin-left: auto;
     margin-right: auto;
-    /* max-width: 80ch; */
-    margin-top: 1.25rem;
 }
 
 main-container .main-content .about-banner {
@@ -820,10 +830,9 @@ main-container .main-content .about-banner {
     padding-top: 1rem;
     padding-bottom: 1rem;
     background: inherit;
-    border-top: .3rem solid lightgray;
+    border-top: .2rem solid lightgray;
     background: #f5f5f5;
     background: #f6f6f6;
-    /* background: inherit; */
 }
 
 .footer-content {
@@ -839,12 +848,8 @@ main-container .main-content .about-banner {
 .footer-content .footer-nav {
     display: flex;
     /* flex-direction: column; */
-    justify-content: flex-start;
+    justify-content: space-between;
     flex-wrap: wrap;
-}
-
-.footer-content .footer-nav .column:first-child {
-    margin-right: 5rem;
 }
 
 .footer-content .footer-flex .pad-left {
@@ -854,7 +859,6 @@ main-container .main-content .about-banner {
 .footer-content .footer-flex a {
     color: #212121;
     color: #333;
-    color: #fff;
     text-decoration: none;
 }
 
@@ -892,7 +896,7 @@ main-container .main-content .about-banner {
 }
 
 .column h3 {
-    color: rgb(53, 53, 53);
+    color: rgb(48, 47, 47);
     margin-bottom: .4rem;
     font-size: clamp(1rem, 4vw, 1.15rem);
 }
@@ -926,13 +930,11 @@ main-container .main-content .about-banner {
 
 .footer-info a {
     color: #212121;
-    /* color: #333; */
 }
 
 .footer-info .powered {
     text-decoration: underline;
 }
-
 
 .footer-info .powered:hover {
     text-decoration: none;
@@ -970,24 +972,6 @@ main-container .main-content .about-banner {
     text-decoration: none;
 }
 
-/*
-#post .post-heading .direct-link::before {
-    content: "\1F517";
-    width: 10px;
-    height: 10px;
-    padding-left: .5rem;
-    opacity: 0;
-    outline: 0;
-    text-decoration: none !important;
-}
-
-#post .post-heading .direct-link:hover::before {
-    color: #334;
-    opacity: 1;
-    text-decoration: none !important;
-}
-*/
-
 #post h2:hover .direct-link,
 #post h3:hover .direct-link,
 #post h4:hover .direct-link,
@@ -1004,8 +988,11 @@ main-container .main-content .about-banner {
 }
 
 #post {
-    margin-top: 3.5rem;
     margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
     max-width: 80ch;
 }
 
@@ -1015,16 +1002,29 @@ main-container .main-content .about-banner {
     margin-bottom: .75rem;
 }
 
+.post-header {
+    margin-top: 0;
+    padding-top: 1.5rem;
+    padding-bottom: .8rem;
+    background: #f6f6f6;
+    border-bottom: .1rem solid lightgray;
+    border-top: .1rem solid lightgray;
+}
+
+.post-wrap {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: 80ch;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .clear-filter-btn {
     margin-left: 2rem;
     text-decoration: none;
     padding: .25rem .5rem;
     font-weight: 500;
     font-size: .95rem;
-    /* background: rgb(26, 32, 36);
-    background: rgb(37, 45, 51);
-    background: rgb(54, 60, 63);
-    background: hsl(0, 0%, 23%); */
     background: hsl(0, 0%, 23%);
     color: #ffffff !important;
     border: .12rem solid rgb(54, 60, 63);
@@ -1131,12 +1131,12 @@ main .art img {
     /* background: hsl(0, 0%, 19%); */
     /* background: rgb(46, 54, 59); */
     background: hsl(0, 0%, 20%);
+    background: inherit;
     border: .125rem solid rgb(37, 43, 48);
     border: .124rem solid hsl(0, 0%, 20%);
     padding: .7rem .8rem;
     border-radius: .1rem;
     color: #212121;
-    color: #fff;
     text-decoration: none;
     margin: 2rem auto;
     font-size: 1rem;
@@ -1229,6 +1229,7 @@ main .art img {
 .r {
     display: flex;
     margin-top: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 #search_svg {

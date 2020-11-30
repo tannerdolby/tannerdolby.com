@@ -29,11 +29,16 @@
         <a href="#post-content" class="skip-link">Skip to main content</a>
         {% include "layouts/nav.njk" %}
         <main class="main-container" id="post-content">
-            <div id="post" class="main-content">
-                <h1 style="margin-top: .25rem;" class="h1" id="post-title">{{ title }}</h1>
-                <p class="date" style="margin-bottom: 1.5rem; margin-top: 1.5rem;">Posted on&nbsp;<time style="margin-bottom: 0;" datetime="{{ datetime | date('YYYY-MM-DD') }}">{{ datetime | date('MMMM DD, YYYY') }}</time>&nbsp;&bull; tagged with&nbsp;{% for tag in tags %}<a href="/writing?filter={{ tag }}" aria-label="Link to {{ tag }} posts" style="margin-right: .35rem;">#{{ tag }}</a>{% endfor %}</p>
-                {{ content | safe }}
-
+            <div class="main-content">
+                <header class="post-header">
+                    <div class="post-wrap">
+                        <h1 style="margin-top: .25rem;" class="h1" id="post-title">{{ title }}</h1>
+                        <p class="date" style="margin-bottom: 1.5rem; margin-top: 1.5rem;">Posted on&nbsp;<time style="margin-bottom: 0;" datetime="{{ datetime | date('YYYY-MM-DD') }}">{{ datetime | date('MMMM DD, YYYY') }}</time>&nbsp;&bull; tagged with&nbsp;{% for tag in tags %}<a href="/writing?filter={{ tag }}" aria-label="Link to {{ tag }} posts" style="margin-right: .35rem;">#{{ tag }}</a>{% endfor %}</p>
+                    </div>
+                </header>
+                <div id="post">
+                    {{ content | safe }}
+                </div>
                 {% set previousPost = collections.posts | getPreviousCollectionItem(page) %}
                 {% set nextPost = collections.posts | getNextCollectionItem(page) %}
                 <ul class="prev-next">
