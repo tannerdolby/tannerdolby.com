@@ -12,7 +12,7 @@ permalink: "/writing/{{ title | slug }}/"
 
 If you've built sites using Eleventy before, you're probably familiar with [collections](https://www.11ty.dev/docs/collections/). Collections are a great feature to show blog posts on your site. If your posts are written inside of markdown files, you can give each post the `tags` key as front matter data to create a collection. 
 
-Front matter in 11ty is placed inside opening and closing document seperators `---` and uses YAML syntax. Two markdown files `post-one.md` and `post-two.md` will be the blog posts contained in the `posts` collection.
+Front matter in 11ty is placed inside opening and closing document separators `---` and uses YAML syntax. Two markdown files `post-one.md` and `post-two.md` will be the blog posts contained in the `posts` collection.
 
 {% filename "post-one.md" %}
 

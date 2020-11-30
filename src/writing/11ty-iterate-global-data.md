@@ -133,9 +133,9 @@ If you wanted to iterate over the array of card objects in `_data/cards.json` an
 
 <h2 id="using-markdown" class="post-heading">Using Markdown</h2>
 
-Let's say you wanted to write an introduction paragraph in markdown underneath the main page title. To start, you would create a `.md` file and add some [front matter data](https://www.11ty.dev/docs/data-frontmatter/) at the top of `cardBanner.md` inside the opening and closing document seperators, `---`. 
+Let's say you wanted to write an introduction paragraph in markdown underneath the main page title. To start, you would create a `.md` file and add some [front matter data](https://www.11ty.dev/docs/data-frontmatter/) at the top of `cardBanner.md` inside the opening and closing document separators, `---`. 
 
-Front matter in 11ty uses [YAML](https://yaml.org/spec/1.2/spec.html) syntax. The `permalink` is called a [quoted scalar](https://yaml.org/spec/1.2/spec.html#id2760844) where the `title` and `layout` are scalars in the plain style. All the content outside of the document seperators within a `.md` file are rendered as regular Markdown. 
+Front matter in 11ty uses [YAML](https://yaml.org/spec/1.2/spec.html) syntax. The `permalink` is called a [quoted scalar](https://yaml.org/spec/1.2/spec.html#id2760844) where the `title` and `layout` are scalars in the plain style. All the content outside of the document separators within a `.md` file are rendered as regular Markdown. 
 
 Including a [permalink](https://www.11ty.dev/docs/permalinks/) in front matter data when using 11ty allows for URIs to leave out filename extensions. The page `cardBanner.md` will be written to the sites output as `/employees-page/index.html` and accessible from the `/employees-page/` URI.
 

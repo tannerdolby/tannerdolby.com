@@ -11,8 +11,6 @@ permalink: /writing/{{ title | slug }}/
 demo_link: https://browserjs-intro.netlify.app/
 ---
 
-<p>{{ subheadings }}</p>
-
 {{ preview }} 
 
 Maybe you've been tasked with writing a function that creates multiple `<li>` list elements. If you wanted to programmaticlly set attributes and apply styles, this is where the power client-side JavaScript really shines! 
