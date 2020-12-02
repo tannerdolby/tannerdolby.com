@@ -352,7 +352,7 @@ a:hover {
     /* color: #111; */
     /* background: #ddd; */
     background: inherit;
-    color: #212121;
+    color: #212121 !important;
     text-decoration: none;
     border: .125rem solid #333;
 }
