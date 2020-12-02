@@ -341,7 +341,7 @@ a:hover {
     border: .125rem solid transparent;
     padding: .6rem .8rem;
     background: hsl(0, 0%, 23%);
-    color: #fff;
+    color: #fff !important;
     /* color: #212121; */
     /* color: #111; */
     /* color: #ddd; */
