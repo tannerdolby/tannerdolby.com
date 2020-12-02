@@ -5,19 +5,29 @@ const headings = [...document.getElementsByClassName("post-heading")];
 console.log(headings);
 
 let stack = [];
-const helper = headings.forEach(item => {
+
+function getHeadings(collection) {
+    let arr = [];
+    collection.forEach(heading => {
+        let headingData = {
+            
+        }
+    });
+}
+
+let help = headings.forEach(item => {
     let data = {
         "title": item.textContent,
         "id": item.id,
         "href": `#${item.id}`
     }
-    return data;
+    stack.push(data);
+    return stack;
 });
 // console.log(helper.title);
 // stack.push(helper.title);
 
-console.log(stack);
-
+console.log(headers);
 const div = document.createElement("div");
 div.setAttribute("class", "table-of-contents");
 
