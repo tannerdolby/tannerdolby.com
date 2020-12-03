@@ -49,7 +49,7 @@ code {
     padding: .15rem .25rem .1rem .25rem;
     border-radius: .1rem;
     margin: 0 .1rem;
-    background: rgb(235, 235, 235);
+    background: rgb(236, 236, 236);
 }
 
 pre {
@@ -1004,7 +1004,7 @@ main-container .main-content .about-banner {
 }
 
 #post {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     margin-left: auto;
     margin-right: auto;
     padding-left: 1rem;
@@ -1321,9 +1321,11 @@ main .art img {
         font-size: 1.65rem;
     }
     p, #post p, .preview, code, pre code, .post pre code, p code, ol li, ul li, .copyright, 
-    .post .date,
-    #post .date {
+    .post .date {
         font-size: 1.0625rem;
+    }
+    .post-wrap .date {
+        font-size: 1rem !important;
     }
 }
 @media (max-width: 900px) {
