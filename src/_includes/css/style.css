@@ -49,11 +49,7 @@ code {
     padding: .15rem .25rem .1rem .25rem;
     border-radius: .1rem;
     margin: 0 .1rem;
-    background: #eeeded;
-    background: #f3f3f3;
-    background: #dfd9d9;
-    background: #ececec;
-    background: rgb(238, 238, 238);
+    background: rgb(235, 235, 235);
 }
 
 pre {
@@ -342,21 +338,17 @@ a:hover {
 }
 
 .welcome-container .home-banner .work-with-me {
-    border: .125rem solid #444;
+    border: .125rem solid transparent;
     padding: .6rem .8rem;
     background: #fff;
     background: inherit;
     background: hsl(0, 0%, 20%);
     color: #212121;
-    color: #eee;
-    /* color: #111; */
-    /* color: #ddd; */
+    color: #fff;
     font-weight: 500;
 }
 
 .welcome-container .home-banner .work-with-me:hover {
-    /* color: #111; */
-    /* background: #ddd; */
     background: inherit;
     color: #212121 !important;
     text-decoration: none;
@@ -442,6 +434,7 @@ a:hover {
 
 #post-content {
     margin-bottom: 6rem;
+    overflow-x: hidden;
 }
 
 #main-contact {
@@ -465,15 +458,13 @@ a:hover {
     padding-top: .5rem;
     padding-bottom: 2rem;
     padding-left: 1.5rem;
-    padding-right: 3rem;
-    border: .15rem solid transparent;
-    border: .15rem solid lightgray;
-    
+    padding-right: 1.5rem;
+    border: .15rem solid transparent; 
 }
 
+/* Credit to a11yproject.com for white background with border on hover */
 .main-container .main-content .my-posts article:hover {
     border: .15rem solid lightgray;
-    border: .15rem solid transparent;
 }
 
 .main-container .main-content .my-posts h2 a {
@@ -1221,7 +1212,7 @@ main .art img {
     align-items: center;
     margin-left: 0;
     margin-right: 0;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
 }
 
 #search {
@@ -1258,6 +1249,7 @@ main .art img {
 
 .search-style {
     border: none;
+    background: #eee;
 }
 
 .search-page-style {
@@ -1341,13 +1333,10 @@ main .art img {
     .post h3 {
         font-size: 1.65rem;
     }
-    p, #post p, .preview, code, pre code, .post pre code, p code, ol li, ul li, .copyright {
-        font-size: 1rem;
-    }
+    p, #post p, .preview, code, pre code, .post pre code, p code, ol li, ul li, .copyright, 
     .post .date,
     #post .date {
-        font-size: 1.25rem;
-        font-size: 1.25rem;
+        font-size: 1.0625rem;
     }
 }
 @media (max-width: 900px) {
