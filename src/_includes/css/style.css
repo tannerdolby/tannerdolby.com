@@ -435,9 +435,13 @@ a:hover {
     list-style: none;
 }
 
-.main-container .main-content .my-posts li {
+.main-container .main-content .my-posts li:first-child {
     margin-bottom: 2.5rem;
-    border: .15rem solid transparent; 
+    border: none;
+}
+
+.main-container .main-content .my-posts li:first-child:hover {
+    border: none;
 }
 
 .main-container .main-content .my-posts article {
@@ -446,11 +450,12 @@ a:hover {
     padding-bottom: 1.25rem;
     padding-left: 1rem;
     padding-right: 1rem;
-    /* border: .15rem solid transparent;  */
+    margin-bottom: 2rem;
+    border: .15rem solid transparent; 
 }
 
 /* Credit to a11yproject.com for white background with border on hover */
-.main-container .main-content .my-posts li:hover {
+.main-container .main-content .my-posts article:hover {
     border: .15rem solid lightgray;
 }
 
