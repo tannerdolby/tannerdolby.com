@@ -263,7 +263,7 @@ a:hover {
     padding: 2.75rem 0 3.25rem;
     background: inherit;
     /* background: hsl(0, 0%, 14%); */
-    background: rgb(238, 238, 238);
+    background: rgb(240, 240, 240);
     border-top: .1rem solid lightgray;
     border-bottom: .1rem solid lightgray;
     
@@ -342,13 +342,13 @@ a:hover {
 }
 
 .welcome-container .home-banner .work-with-me {
-    border: .125rem solid transparent;
+    border: .125rem solid #444;
     padding: .6rem .8rem;
     background: #fff;
     background: inherit;
     background: hsl(0, 0%, 20%);
-    color: #fff;
-    /* color: #212121; */
+    color: #212121;
+    color: #eee;
     /* color: #111; */
     /* color: #ddd; */
     font-weight: 500;
