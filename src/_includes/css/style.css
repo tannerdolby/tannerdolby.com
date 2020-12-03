@@ -263,6 +263,10 @@ a:hover {
     padding: 2.75rem 0 3.25rem;
     background: inherit;
     /* background: hsl(0, 0%, 14%); */
+    background: rgb(238, 238, 238);
+    border-top: .1rem solid lightgray;
+    border-bottom: .1rem solid lightgray;
+    
 } 
 
 .about-main {
@@ -337,18 +341,20 @@ a:hover {
     color: #ddd; */
 }
 
-.work-with-me {
+.welcome-container .home-banner .work-with-me {
     border: .125rem solid transparent;
     padding: .6rem .8rem;
-    background: hsl(0, 0%, 23%);
-    color: #fff !important;
+    background: #fff;
+    background: inherit;
+    background: hsl(0, 0%, 20%);
+    color: #fff;
     /* color: #212121; */
     /* color: #111; */
     /* color: #ddd; */
     font-weight: 500;
 }
 
-.work-with-me:hover {
+.welcome-container .home-banner .work-with-me:hover {
     /* color: #111; */
     /* background: #ddd; */
     background: inherit;
@@ -645,7 +651,7 @@ main-container .main-content .about-banner {
     background: #fff;
     border: 2px solid #272643;
     border: 2px solid rgb(25, 32, 36);
-    padding: 1rem 1.5rem;
+    padding: .9rem 1.35rem;
     font-size: 1rem;
     transition: box-shadow 100ms ease-in-out, background 200ms ease-in-out, color 200ms ease-in;
     box-shadow: 4px 4px 0px 0px rgb(25, 32, 36);
