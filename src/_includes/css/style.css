@@ -437,19 +437,20 @@ a:hover {
 
 .main-container .main-content .my-posts li {
     margin-bottom: 2.5rem;
+    border: .15rem solid transparent; 
 }
 
 .main-container .main-content .my-posts article {
     background: #fff;
     padding-top: .5rem;
-    padding-bottom: 2rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    border: .15rem solid transparent; 
+    padding-bottom: 1.25rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    /* border: .15rem solid transparent;  */
 }
 
 /* Credit to a11yproject.com for white background with border on hover */
-.main-container .main-content .my-posts article:hover {
+.main-container .main-content .my-posts li:hover {
     border: .15rem solid lightgray;
 }
 
