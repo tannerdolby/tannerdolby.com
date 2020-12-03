@@ -9,6 +9,6 @@ eleventyExcludeFromCollections: true
     <div class="home-banner">
         <h1>Hi, I'm {{ site.page_info.name }}.</h1>
         <p>{{ about }}</p>
-        <a class="work-with-me" href="/contact/">Work with me</a>
+        <a class="reach-me button hero" href="mailto:tannercdolby@gmail.com">Work with me</a>
     </div>
 </header>

@@ -337,22 +337,8 @@ a:hover {
     color: #ddd; */
 }
 
-.welcome-container .home-banner .work-with-me {
-    border: .125rem solid transparent;
-    padding: .6rem .8rem;
-    background: #fff;
-    background: inherit;
-    background: hsl(0, 0%, 20%);
-    color: #212121;
-    color: #fff;
-    font-weight: 500;
-}
-
-.welcome-container .home-banner .work-with-me:hover {
-    background: inherit;
-    color: #212121 !important;
-    text-decoration: none;
-    border: .125rem solid #333;
+.welcome-container .home-banner .hero {
+    padding: .75rem 1.25rem;
 }
 
 .main-container .banner-container .page-banner h2 {
