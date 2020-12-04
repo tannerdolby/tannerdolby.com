@@ -35,7 +35,7 @@ p {
     font-family: var(--system-font);
     color: #212121;
     color: #222;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     font-weight: 400;
 }
 
@@ -49,7 +49,7 @@ code {
     padding: .15rem .25rem .1rem .25rem;
     border-radius: .1rem;
     margin: 0 .1rem;
-    background: rgb(236, 236, 236);
+    background: rgb(237, 237, 237);
 }
 
 pre {
@@ -380,7 +380,7 @@ a:hover {
     padding-right: 1rem;
     margin-left: auto;
     margin-right: auto;
-    max-width: 80ch;
+    max-width: 75ch;
     margin-top: 3rem;
     display: flex;
     align-items: center;
@@ -435,28 +435,9 @@ a:hover {
     list-style: none;
 }
 
-.main-container .main-content .my-posts li:first-child {
-    margin-bottom: 2.5rem;
-    border: none;
-}
-
-.main-container .main-content .my-posts li:first-child:hover {
-    border: none;
-}
-
 .main-container .main-content .my-posts article {
-    background: #fff;
     padding-top: .5rem;
     padding-bottom: 1.25rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    margin-bottom: 2rem;
-    border: .15rem solid transparent; 
-}
-
-/* Credit to a11yproject.com for white background with border on hover */
-.main-container .main-content .my-posts article:hover {
-    border: .15rem solid lightgray;
 }
 
 .main-container .main-content .my-posts h2 a {
@@ -1014,7 +995,7 @@ main-container .main-content .about-banner {
     margin-right: auto;
     padding-left: 1rem;
     padding-right: 1rem;
-    max-width: 80ch;
+    max-width: 75ch;
 }
 
 #post h2,
@@ -1031,7 +1012,7 @@ main-container .main-content .about-banner {
 .post-wrap {
     padding-left: 1rem;
     padding-right: 1rem;
-    max-width: 80ch;
+    max-width: 75ch;
     margin-left: auto;
     margin-right: auto;
 }
