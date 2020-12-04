@@ -39,10 +39,10 @@ module.exports = async function() {
     try {
         const eleventyGallery = await fetchData("https://api.github.com/repos/tannerdolby/eleventy-photo-gallery");
         const pluginMetaGen = await fetchData("https://api.github.com/repos/tannerdolby/eleventy-plugin-metagen");
+        const pluginSharpRespImg = await fetchData("https://api.github.com/repos/tannerdolby/eleventy-plugin-sharp-respimg");
         const whatToWatch = await fetchData("https://api.github.com/repos/tannerdolby/what-to-watch");
-        const reactStrTable = await fetchData("https://api.github.com/repos/tannerdolby/react-string-table");
         // return the promise for each project <Promise{ title: ... }>
-        return { eleventyGallery, pluginMetaGen, whatToWatch, reactStrTable };
+        return { eleventyGallery, pluginMetaGen, pluginSharpRespImg, whatToWatch };
     } catch (e) {
         console.log("Error returning multiple projects cached API data");
     } 

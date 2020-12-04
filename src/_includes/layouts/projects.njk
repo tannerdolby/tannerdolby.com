@@ -41,6 +41,24 @@
             <li class="project-tile">
                 <div class="project-details">
                     <div class="top-level">
+                        <h3 class="h2-5"><a href="{{ github.pluginSharpRespImg.homepage }}">{{ github.pluginSharpRespImg.title }}</a></h3>
+                        <div class="stars">
+                            <a class="star-row" href="{{ github.pluginSharpRespImg.stargazers_url }}">
+                                {% include "star-icon.svg" %}
+                                <span>{{ github.pluginSharpRespImg.stargazers }}</span>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="project-desc">{{ github.pluginSharpRespImg.desc }}</p>
+                    <ul class="links">
+                        <li><a class="tile-link" href="{{ github.pluginSharpRespImg.homepage }}" aria-label="View the live demo for {{ github.pluginSharpRespImg.title }}">Live demo</a></li>
+                        <li><a class="tile-link" href="{{ github.pluginSharpRespImg.repo_url }}" aria-label="View the source code for {{ github.pluginSharpRespImg.title }}">Source code</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="project-tile">
+                <div class="project-details">
+                    <div class="top-level">
                         <h3 class="h2-5"><a href="{{ github.whatToWatch.homepage }}">{{ github.whatToWatch.title }}</a></h3>
                         <div class="stars">
                             <a class="star-row" href="{{ github.whatToWatch.stargazers_url }}">
@@ -53,24 +71,6 @@
                     <ul class="links">
                         <li><a class="tile-link" href="{{ github.whatToWatch.homepage }}" aria-label="View the live demo for {{ github.whatToWatch.title }}">Live demo</a></li>
                         <li><a class="tile-link" href="{{ github.whatToWatch.repo_url }}" aria-label="View the source code for {{ github.whatToWatch.title }}">Source code</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li class="project-tile">
-                <div class="project-details">
-                    <div class="top-level">
-                        <h3 class="h2-5"><a href="{{ github.reactStrTable.homepage }}">{{ github.reactStrTable.title }}</a></h3>
-                        <div class="stars">
-                            <a class="star-row" href="{{ github.reactStrTable.stargazers_url }}">
-                                {% include "star-icon.svg" %}
-                                <span>{{ github.reactStrTable.stargazers }}</span>
-                            </a>
-                        </div>
-                    </div>
-                    <p class="project-desc">{{ github.reactStrTable.desc }}</p>
-                    <ul class="links">
-                        <li><a class="tile-link" href="{{ github.reactStrTable.homepage }}" aria-label="View the live demo for {{ github.reactStrTable.title }}">Live demo</a></li>
-                        <li><a class="tile-link" href="{{ github.reactStrTable.repo_url }}" aria-label="View the source code for {{ github.reactStrTable.title }}">Source code</a></li>
                     </ul>
                 </div>
             </li>
