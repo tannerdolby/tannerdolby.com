@@ -380,7 +380,7 @@ a:hover {
     padding-right: 1rem;
     margin-left: auto;
     margin-right: auto;
-    max-width: 75ch;
+    max-width: 80ch;
     margin-top: 3rem;
     display: flex;
     flex-direction: column;
@@ -994,7 +994,7 @@ main-container .main-content .about-banner {
     margin-right: auto;
     padding-left: 1rem;
     padding-right: 1rem;
-    max-width: 75ch;
+    max-width: 80ch;
 }
 
 #post h2,
@@ -1011,7 +1011,7 @@ main-container .main-content .about-banner {
 .post-wrap {
     padding-left: 1rem;
     padding-right: 1rem;
-    max-width: 75ch;
+    max-width: 80ch;
     margin-left: auto;
     margin-right: auto;
 }
