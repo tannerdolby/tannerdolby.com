@@ -1211,6 +1211,7 @@ main .art img {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 0;
+    margin-bottom: 1rem;
     border-top: .1rem solid lightgray;
     border-bottom: .1rem solid lightgray;
 }
@@ -1230,6 +1231,7 @@ main .art img {
 .search-page-style {
     background: rgb(238, 238, 238);
     background: rgb(230, 228, 228);
+    background: #eee;
     border-radius: .1rem;
     border: .1rem solid lightgray;
     display: flex;
@@ -1248,8 +1250,8 @@ main .art img {
 
 .r {
     display: flex;
-    margin-top: 2.75rem;
-    margin-bottom: 3rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2.25rem;
 }
 
 #search_svg {
