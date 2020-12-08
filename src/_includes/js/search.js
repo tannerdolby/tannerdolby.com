@@ -70,7 +70,11 @@ searchBar.addEventListener("input", (e) => {
     } else {
         placeholder.classList.remove("sr-only");
         placeholder.classList.add("search-result");
-        res.innerText = `${matchingPost.length} result for posts matching "${userInput}"`;
+        if (matchingPost.length === 1) {
+            res.innerText = `${matchingPost.length} result for posts matching "${userInput}"`;
+        } else {
+            res.innerText = `${matchingPost.length} results for posts matching "${userInput}"`;
+        }
         placeholder.appendChild(res);
         placeholder.appendChild(clearSearch);
     }
