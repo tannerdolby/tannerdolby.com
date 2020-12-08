@@ -9,10 +9,9 @@ const postList = document.querySelector(".my-posts");
 const filterMsg = document.createElement("p");
 const clearBtn = document.createElement("a");
 const listItem = document.createElement("li");
-const em = document.createElement("em");
 
 filterMsg.setAttribute("class", "filter-msg")
-clearBtn.innerText = "clear filter";
+clearBtn.innerText = "Clear filter";
 clearBtn.setAttribute("class", "clear-filter-btn");
 clearBtn.setAttribute("href", "/writing/");
 
@@ -43,7 +42,6 @@ if (postTag) {
     }
     
     listItem.append(filterMsg);
-    em.append(clearBtn);
-    filterMsg.append(em);
+    filterMsg.append(clearBtn);
     postList.prepend(listItem);
 }
