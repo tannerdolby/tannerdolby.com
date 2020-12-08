@@ -650,8 +650,11 @@ main-container .main-content .about-banner {
 
 .filter-msg {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
+    padding: 1rem 0;
+    border-top: .1rem solid lightgray;
+    border-bottom: .1rem solid lightgray;
 }
 
 .rp-container {
@@ -1016,22 +1019,24 @@ main-container .main-content .about-banner {
     margin-right: auto;
 }
 
+.main-content .my-posts .clear-filter-btn,
 .clear-filter-btn {
     margin-left: 2rem;
     text-decoration: none;
     padding: .25rem .5rem;
     font-weight: 500;
     font-size: .95rem;
+    background: inherit;
     background: hsl(0, 0%, 23%);
-    color: #222 !important;
-    color: #fff !important;
+    color: #222;
+    color: #fff;
     border: .12rem solid rgb(54, 60, 63);
 }
 
-.main-content .my-posts .clear-filter-btn:hover {
+.main-content .my-posts .clear-filter-btn:hover,
+.clear-filter-btn:hover {
     background: inherit;
-    background: hsl(0, 0%, 25%);
-    color: #fff !important;
+    color: #222;
     text-decoration: none;
 }
 .tagged-title {
@@ -1184,7 +1189,7 @@ main .art img {
     align-items: center;
     margin-left: 0;
     margin-right: 0;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
 }
 
 #search {
@@ -1199,6 +1204,19 @@ main .art img {
     border-left: none;
     border: .1rem solid lightgray;
     border-radius: .1rem;
+}
+
+.search-result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-top: .1rem solid lightgray;
+    border-bottom: .1rem solid lightgray;
+}
+
+.search-result p {
+    margin: 0;
 }
 
 .contain {
@@ -1230,7 +1248,7 @@ main .art img {
 
 .r {
     display: flex;
-    margin-top: 2rem;
+    margin-top: 2.75rem;
     margin-bottom: 3rem;
 }
 
