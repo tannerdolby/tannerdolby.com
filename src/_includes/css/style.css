@@ -618,6 +618,7 @@ main-container .main-content .about-banner {
     font-size: 1rem;
     transition: box-shadow 100ms ease-in-out, background 200ms ease-in-out, color 200ms ease-in;
     box-shadow: 4px 4px 0px 0px rgb(25, 32, 36);
+    border-radius: .1rem;
     font-weight: 500;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
