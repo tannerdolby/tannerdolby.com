@@ -34,7 +34,6 @@ module.exports = (eleventyConfig) => {
                 }
             })
         });
-        
 
     eleventyConfig.setLibrary("md", md);
 
