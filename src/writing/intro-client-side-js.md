@@ -38,6 +38,7 @@ After watching the video, I was captivated by the fact you could virtually creat
 [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) or HyperText Markup Language is the most rudimentary building block in web development. Using HTML allows developers to define the meaning and structure of web content through semantic HTML DOM elements.
 
 <h2 class="post-heading">What is the DOM?</h2>
+
 From [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction), The Document Object Model (DOM) is the data representation of the objects that comprise the structure and content of a document on the web. The DOM represents the HTML or XML document so that programming languages can easily connect to the page.
 
 <h2 class="post-heading">Build the DOM Tree</h2>
