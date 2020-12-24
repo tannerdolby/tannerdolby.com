@@ -95,18 +95,18 @@ twitterShare: https://twitter.com/share?
                 {% set previousPost = collections.posts | getPreviousCollectionItem(page) %}
                 {% set nextPost = collections.posts | getNextCollectionItem(page) %}
                 <ul class="prev-next">
-                    <li>
-                        {% if previousPost %}
-                        <h3 style="margin-bottom: .75rem;">Previous Post</h3>
-                        <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
-                        {% endif %}
-                    </li>
-                    <li>
-                        {% if nextPost %}
-                        <h3 style="margin-bottom: .75rem;">Next Post</h3>
-                        <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
-                        {% endif %}
-                    </li>
+                    {% if previousPost %}
+                        <li>
+                            <h3 style="margin-bottom: .75rem;">Previous Post</h3>
+                            <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
+                        </li>
+                    {% endif %}
+                    {% if nextPost %}
+                        <li>
+                            <h3 style="margin-bottom: .75rem;">Next Post</h3>
+                            <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
+                        </li>
+                    {% endif %}
                 </ul>
             </div>
         </main>
