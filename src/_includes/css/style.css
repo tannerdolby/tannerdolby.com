@@ -780,8 +780,6 @@ main-container .main-content .about-banner {
 }
 
 .featured-art .feat-art-list li:hover {
-    -webkit-transform: translate(0, -.15rem);
-    transform: translate(0, -.15rem);
     -webkit-filter: contrast(93%);
     filter: contrast(93%);
 }
