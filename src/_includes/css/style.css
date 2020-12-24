@@ -362,37 +362,47 @@ a:hover {
     padding: .2rem .5rem;
     margin-right: .5rem; 
     border: 1px solid lightgray;
-    border: 1px solid rgb(170, 170, 170);
+    border: .1rem solid rgb(170, 170, 170);
     color: #212121;
 }
 
 .tags-list li .post-label:hover {
-    border: 1px solid transparent;
+    border: .1rem solid transparent;
     text-decoration: none;
     background: rgb(54, 60, 63);
     color: #fff;
 }
 
 .prev-next {
-    padding-left: 0; 
+    margin-top: 3rem;
     list-style: none; 
     padding-left: 1rem;
     padding-right: 1rem;
     margin-left: auto;
     margin-right: auto;
     max-width: 80ch;
-    margin-top: 3rem;
     display: flex;
-    flex-direction: column;
     align-items: flex-start;
+    justify-content: space-between;
+    gap: 1.5rem;
 }
 
 .prev-next h3 {
+    margin-top: .25rem;
     font-size: 1.35rem;
+}
+
+.prev-next li {
+    border-top: .45rem solid #4a4d53;
+    background: #fff;
+    padding: 1rem;
+    margin: 1rem 0;
+    max-width: 20em;
 }
 
 .prev-next li a {
     font-size: 1.1rem;
+    display: block;
 }
 
 .contact-detail {
@@ -406,6 +416,36 @@ a:hover {
     justify-content: flex-start;
     align-items: flex-start;
     margin-bottom: 2rem;
+}
+
+.share {
+    margin-top: 1.5rem;
+    max-width: 80ch;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1rem;
+}
+
+.share .strong-share {
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+}
+
+.share .twitter-share {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+}
+
+.share .twitter-share span {
+    padding-left: .5rem;
+    color: #4a4d52;
+    color: #212121;
+}
+
+.share .twitter-share:hover span {
+    color: var(--link-blue-accessible);
 }
 
 #main-about,
@@ -1387,6 +1427,12 @@ main .art img {
     }
     .copyright {
         text-align: left;
+    }
+}
+
+@media (max-width: 450px) {
+    .prev-next {
+        flex-direction: column;
     }
 }
 
