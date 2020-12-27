@@ -81,24 +81,20 @@ Here is the full code snippet for adding search functionality to your static sit
 const posts = [...document.getElementsByClassName("post")];
 const searchBar = document.getElementById("#search-bar");
 
-// get user input from search bar
 function getInput(e) {
     return e.target.value;
 }
 
-// add event listener for the input event
 searchBar.addEventListener("input", (e) => {
     let userInput = getInput(e);
-
     let searchQuery = [];
+
     searchQuery.push(userInput.toLowerCase());
 
-    // posts with title that matches each character in search query
     const matchingPost = posts.filter(post => {
         return post.dataset.postTitle.toLowerCase().includes(searchQuery);
     });
 
-    // posts with title that doesn't match the search query
     const nonMatchingPost = posts.filter(post => {
         return !post.dataset.postTitle.toLowerCase().includes(searchQuery);
     });
@@ -111,8 +107,8 @@ searchBar.addEventListener("input", (e) => {
         });
     }
 
-    // if the matching post is hidden from a previous query 
-    // and matches search query, show it
+    /* if the matching post is hidden from a previous query 
+    and matches search query, show it */
     matchingPost.forEach(post => {
         if (post.classList.value.includes("sr-only")) {
             post.classList.remove("sr-only");
