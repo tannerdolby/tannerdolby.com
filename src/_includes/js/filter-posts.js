@@ -35,7 +35,7 @@ if (postTag) {
         post.setAttribute("class", "sr-only");
     });
 
-    if (postsWithTag & postsWithTag.length === 1) {
+    if (postsWithTag && postsWithTag.length === 1) {
         filterMsg.innerText = `${postsWithTag.length} post tagged "${postTag}"`;
     } else {
         filterMsg.innerText = `${postsWithTag.length} posts tagged "${postTag}"`;
