@@ -8,7 +8,7 @@ const headers = [...document.getElementsByClassName("post-heading")]; // convert
  * @returns {String} The unique ID string.
  */
 function uniqueID(id) {
-    return id.toLowerCase().split(" ").join("_");
+    return id.toLowerCase().split(" ").join("-");
 };
 
 /**
