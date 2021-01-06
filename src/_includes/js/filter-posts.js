@@ -11,7 +11,7 @@ const clearBtn = document.createElement("a");
 const listItem = document.createElement("li");
 
 filterMsg.setAttribute("class", "filter-msg")
-clearBtn.innerText = "Clear filter";
+clearBtn.innerText = "Clear";
 clearBtn.setAttribute("class", "clear-filter-btn");
 clearBtn.setAttribute("href", "/writing/");
 
