@@ -113,6 +113,11 @@ module.exports = (eleventyConfig) => {
         return `<img width="210" height="210" src="${src}" alt="Headshot of Tanner's face (a bit outdated)" class="about-headshot" loading="lazy">`
     });
 
+    eleventyConfig.addShortcode("getYear", function() {
+        const year = new Date().getFullYear();
+        return `${year}`;
+    });
+
     return {
         dir: {
           input: "src",
