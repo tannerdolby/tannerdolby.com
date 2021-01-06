@@ -363,12 +363,12 @@ a:hover {
     padding: .2rem .5rem;
     margin-right: .5rem; 
     border: 1px solid lightgray;
-    border: .1rem solid rgb(170, 170, 170);
+    border: .08rem solid rgb(170, 170, 170);
     color: #212121;
 }
 
 .tags-list li .post-label:hover {
-    border: .1rem solid transparent;
+    border: .08rem solid transparent;
     text-decoration: none;
     background: rgb(54, 60, 63);
     color: #fff;
