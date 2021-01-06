@@ -21,16 +21,16 @@
   "license": "MIT",
   "dependencies": {
     "@11ty/eleventy": "^0.11.1",
-    "@11ty/eleventy-cache-assets": "^2.0.3",
-    "@types/jest": "^26.0.15",
-    "cheerio": "^1.0.0-rc.3",
+    "@11ty/eleventy-cache-assets": "^2.0.4",
+    "@types/jest": "^26.0.19",
+    "cheerio": "^1.0.0-rc.5",
     "clean-css": "^4.2.3",
     "elasticlunr": "^0.9.5",
-    "eleventy-plugin-metagen": "^1.0.2",
-    "markdown-it": "^12.0.2",
+    "eleventy-plugin-metagen": "^1.0.3",
+    "markdown-it": "^12.0.4",
     "nunjucks-date-filter": "^0.1.1",
     "speedlify-score": "^2.0.1",
-    "terser": "^5.5.0"
+    "terser": "^5.5.1"
   },
   "repository": {
     "type": "git",
