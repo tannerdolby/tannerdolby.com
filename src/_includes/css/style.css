@@ -309,7 +309,6 @@ a:hover {
     margin-top: 2rem;
     padding-left: 0;
     padding-right: 0;
-    /* max-width: 80ch; */
 }
 
 .main-container .welcome-container .home-banner h1,
@@ -381,7 +380,7 @@ a:hover {
     padding-right: 1rem;
     margin-left: auto;
     margin-right: auto;
-    max-width: 80ch;
+    max-width: 75ch;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -407,7 +406,7 @@ a:hover {
 }
 
 .contact-detail {
-    max-width: 85ch;
+    max-width: 75ch;
     margin-bottom: 2.75rem;
 }
 
@@ -421,7 +420,7 @@ a:hover {
 
 .share {
     margin-top: 1.5rem;
-    max-width: 80ch;
+    max-width: 75ch;
     margin-left: auto;
     margin-right: auto;
     padding: 0 1rem;
@@ -710,11 +709,11 @@ main-container .main-content .about-banner {
 }
 
 .main-content article {
-    max-width: 80ch;
+    max-width: 75ch;
 }
 
 .recent-posts article {
-    max-width: 85ch;
+    max-width: 80ch;
     padding-top: .5rem;
     padding-bottom: .5rem;
 }
@@ -759,7 +758,7 @@ main-container .main-content .about-banner {
 }
 
 .wrap {
-    max-width: 80ch;
+    max-width: 75ch;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 6rem;
@@ -1037,7 +1036,7 @@ main-container .main-content .about-banner {
     margin-right: auto;
     padding-left: 1rem;
     padding-right: 1rem;
-    max-width: 80ch;
+    max-width: 75ch;
 }
 
 #post h2,
@@ -1054,7 +1053,7 @@ main-container .main-content .about-banner {
 .post-wrap {
     padding-left: 1rem;
     padding-right: 1rem;
-    max-width: 80ch;
+    max-width: 75ch;
     margin-left: auto;
     margin-right: auto;
 }
