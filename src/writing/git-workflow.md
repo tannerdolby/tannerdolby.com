@@ -1,5 +1,5 @@
 ---
-title: Using Git for contributing to Open Source
+title: Using Git for Contributing to Open Source
 date: 2020-12-27
 datetime: 2020-12-27 00:00:00 Z
 tags: 

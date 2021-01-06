@@ -1,5 +1,5 @@
 ---
-title: "Create an object from an array of key and value like strings"
+title: "Create Objects From an Array of Key and Value like Strings"
 date: 2020-12-31
 datetime: 2020-12-31 00:00:00 Z
 tags: 
