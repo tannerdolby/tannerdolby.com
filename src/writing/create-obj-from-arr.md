@@ -14,16 +14,12 @@ While working on the [Day 4](https://adventofcode.com/2020/day/4) challenge for 
 
 {% filename "input.txt" %}
 
-```markup
+```text
 ecl:#eef340 eyr:2023 hcl:#c0946f pid:244684338 iyr:2020 cid:57 byr:1969 hgt:152cm
 
 pid:303807545 cid:213 ecl:gry hcl:#fffffd
 eyr:2038 byr:1951
 hgt:171cm iyr:2011
-
-hcl:#c0946f byr:1933 eyr:2025 pid:517067213 hgt:173cm
-ecl:hzl
-iyr:2018
 ```
 
 Where each piece of passport data is separated by empty space newlines (`\n`). The input file contained 257 entries, but I only showed a few for readability. Some of the data is formatted all in one line where others span multiple lines but ultimately each entry is separated by the empty space new line.
@@ -89,14 +85,12 @@ I created a helper function to handle the converting. It accepts one parameter, 
 ```js
 function convertToObj(arr) {
   const obj = {};
-
   for (const s of arr) {
     const data = s.split(":");
     let key = data[0];
     let value = data[1].trim();
     obj[key] = value;
   }
-
   return obj;
 }
 ```
