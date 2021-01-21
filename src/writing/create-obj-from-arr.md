@@ -37,7 +37,7 @@ eyr:2038 byr:1951
 hgt:171cm iyr:2011`;
 ```
 
-Now since the input is a `String` data type, we have access to `String.prototype` methods such as `.split`. This way, it's going to be much easier to put the data from the text file into a data structure, such as an `Array` for manipulation. 
+Now since the input is a `String` data type, we have access to `String.prototype` methods such as `.split`. Therefore, it's going to be much easier to put the data from the text file into a data structure, such as an `Array` for manipulation. 
 
 {% filename "passports.js" %}
 
@@ -45,17 +45,7 @@ Now since the input is a `String` data type, we have access to `String.prototype
 const passportData = input.split("\n\n");
 ```
 
-The above code separates each passport entry from the text file by two consecutive newlines and creates an array of strings. Remember, some of the inputs are multi-line entries. Therefore, separating the entries by only one newline entity using `.split("\n")` will create an array of strings with each entry separated by a newline. This isn't ideal as we want every full passport entry to be its own string as a value in the array.
-
-```js
-0: "ecl:#eef340 eyr:2023 hcl:#c0946f pid:244684338 iyr:2020 cid:57 byr:1969 hgt:152cm"
-1: ""
-2: "pid:303807545 cid:213 ecl:gry hcl:#fffffd"
-3: "eyr:2038 byr:1951"
-4: "hgt:171cm iyr:2011"
-```
-
-Using `.split("\n\n")` is the more efficient method for transforming the input data in `input.txt`. This way, each passports data is stored as an array of passport strings. The multi-line entries still contain `\n` entities so the formatting work is not yet complete.
+Using `.split("\n\n")` is the best method for transforming the input data in `input.txt`. This way, each passports data is stored as an array of passport strings. The multi-line entries still contain `\n` entities so the formatting work is not yet complete.
 
 ```js
 0: "ecl:#eef340 eyr:2023 hcl:#c0946f pid:244684338 iyr:2020 cid:57 byr:1969 hgt:152cm"
