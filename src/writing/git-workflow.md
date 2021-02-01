@@ -21,7 +21,7 @@ To create a local copy of a repository, you will click the `Fork` button in the 
 
 <h2 class="post-heading">Clone your fork</h2>
 
-Copy the SSH URL (or HTTPS) of your own organization’s fork of the project and clone the project. The URL can be found by clicking the large green button that says "Code". Below is an example of my Github user account ([@tannerdolby](https://github.com/tannerdolby)) cloning [11ty/11ty-website](https://github.com/11ty/11ty-website).
+Copy the SSH URL (or HTTPS) of your own organization’s fork of the project and clone the project. The URL can be found by clicking the large green button on GitHub that says "Code". Below is an example of my Github user account ([@tannerdolby](https://github.com/tannerdolby)) cloning my users fork of [11ty/11ty-website](https://github.com/11ty/11ty-website).
 
 ```git
 git clone git@github.com:tannerdolby/11ty-website.git
