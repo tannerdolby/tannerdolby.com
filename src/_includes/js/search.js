@@ -11,7 +11,7 @@ const res = document.createElement("p");
 const searchMsg = document.createElement("p");
 const clearSearch = document.createElement("a");
 
-clearSearch.innerText = "Clear search";
+clearSearch.innerText = "Clear";
 clearSearch.setAttribute("class", "clear-filter-btn");
 clearSearch.setAttribute("href", "/search/");
 
