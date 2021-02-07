@@ -27,6 +27,13 @@ body {
     flex-direction: column;
 }
 
+blockquote {
+    border-left: .35rem solid #f06;
+    background: #eee;
+    padding: .2rem 1rem;
+    margin: 0 auto;
+}
+
 img {
     max-width: 100%;
 }
