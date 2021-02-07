@@ -10,7 +10,7 @@ preview: This article will discuss how to solve the "diagonal difference" proble
 
 {{ preview }}
 
-This problem can be found on [Hackerrank](https://www.hackerrank.com/), a website for practicing common technical interview algorithm questions. 
+This problem can be found on [HackerRank](https://www.hackerrank.com/), a website for practicing common technical interview algorithm questions. 
 
 <h2 class="post-heading">Getting Started</h2>
 
@@ -75,7 +75,9 @@ Now we have a good grasp of what the 2D array looks like in terms of the array i
 
 If you study the above square matrix, you will notice the left diagonal values occur when the first index equals the second index. That is, when `i == j` (if you use i and j as loop control variables). Each value within the left diagonal occurs at (0, 0), (1, 1), (2, 2), (3, 3). Now that we have an idea of how to sum each of the left diagonal values, let's move onto to finding the right diagonal (which is a bit more involved). 
 
-Remember this 4 x 4 square matrix is a 2D array and holds 4 inner arrays within the outer array. Therefore, the length of the outer array is `4` like we stated earlier. If you look closely, each of the indexes in the right diagonal sum to 3. 
+> Remember this 4 x 4 square matrix is a 2D array and holds 4 inner arrays within the outer array. 
+
+Therefore, the length of the outer array is `4` like we stated earlier. If you look closely, each of the indexes in the right diagonal sum to 3. 
 
 ```js
 (0, 3) = 0 + 3 = 3
