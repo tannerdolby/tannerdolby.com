@@ -4,10 +4,10 @@ date: 2021-02-07
 datetime: 2021-02-07 00:00:00 Z
 tags:
   - javascript
-preview: The Fibonacci sequence is a series of numbers where a number in the sequence is the sum of the preceding numbers. This sequence begins with 0 and 1. In mathematics, the Fibonacci numbers form the sequence, where numbers (n) are greater than 1 (n > 1).
+preview: The Fibonacci sequence is a series of numbers where each number in the sequence is the sum of the two preceding numbers. This sequence begins with 0 and 1.
 ---
 
-{{ preview }}
+{{ preview }} In mathematics, the Fibonacci numbers form the sequence, where numbers (n) are greater than 1 (n > 1).
 
 To better understand how the fibonacci numbers are created in the sequence, view the below equation for generating any number in the [fibonacci sequence](https://en.wikipedia.org/wiki/Fibonacci_number).
 
