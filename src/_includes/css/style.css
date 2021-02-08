@@ -34,6 +34,10 @@ blockquote {
     margin: 0 auto;
 }
 
+blockquote p {
+    margin: .8rem auto;
+}
+
 img {
     max-width: 100%;
 }
