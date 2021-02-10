@@ -11,7 +11,9 @@ preview: In JavaScript, arrays are predefined objects, where the indexes are the
 
 <h2 class="post-heading">Is JavaScript Object Oriented?</h2>
 
-JavaScript is indeed an Object Oriented Programming language, but the one difference between OOP languages like Java or C++ and JavaScript, is the fact the JavaScript doesn't use classes to define objects. In Java and C++, we define the "template" for objects by using the Class, where we define the objects state (member variables) and behavior (methods). In JavaScript, arrays can more closely resemble a Map with key/value pairs. 
+JavaScript is indeed an Object Oriented Programming language, but the one difference between OOP languages like Java or C++ and JavaScript, is the fact the JavaScript doesn't explicitly use classes to define objects. We can define an object inline by simply using `let square = { x: 20, y: 40 };` instead of defining a class like `Class Square { constructor(x, y) {}; };`.
+
+In Java and C++, we create the "template" for objects by using the Class, where we define the objects state (member variables) and behavior (methods). In JavaScript, arrays can more closely resemble a Map with key/value pairs. JavaScript does have a `Class` reserved keyword for creating classes but it's not required to use in creating objects. 
 
 > Arrays are predefined objects, where its indexes are the properties. 
 
