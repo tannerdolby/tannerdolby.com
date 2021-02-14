@@ -83,9 +83,7 @@ Because the property names for an array object are it's indexes, when we access 
 
 <h2 class="post-heading">Arrays are objects in JavaScript?</h2>
 
-You might be asking yourself, so are arrays objects in JavaScript? And the answer is **yes**. We discussed at the beginning of the article, arrays are predefined objects. 
-
-It becomes very clear arrays are objects when we use the `length` property of an array like `arr.length` to return the length. The way we access the length property using dot notation is exactly the same as how we would access the property of any object like `Object.property`. 
+You might be asking yourself, so are arrays objects in JavaScript? And the answer is **yes**. We discussed at the beginning of the article, arrays are predefined objects. It becomes very clear arrays are objects when we use the `length` property of an array like `arr.length` to return the length. The way we access the length property using dot notation is exactly the same as how we would access the property of any object like `Object.property`. 
 
 To further solidify that arrays are objects, the indexes in an array are the properties, so when we access a value such as `arr["2"]` we are accessing the `Object["2"]` value. The value stored at index 2 can be accessed from the array object by using the property `"2"`.
 
