@@ -13,18 +13,18 @@
 }
 
 body {
-    font-family: var(--system-font);
+    font-family: "Noto Serif", var(--system-font);
     background: #f6f6f6;
     overflow-x: hidden;
     overflow-y: auto;
     line-height: 1.65;
     font-size: 100%;
-    min-height: 100vh;
     margin: 0;
     padding: 0;
     -webkit-font-smoothing: antialiased;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 blockquote {
@@ -43,7 +43,6 @@ img {
 }
 
 p {
-    font-family: var(--system-font);
     color: #212121;
     color: #222;
     font-size: 1.15rem;
@@ -96,7 +95,7 @@ pre code {
 }
 
 h1,h2,h3,h4 {
-    font-family: var(--system-font);
+    font-family: "Noto Serif", var(--system-font);
     color: #212121;
     font-weight: 700;
 }
@@ -386,34 +385,58 @@ a:hover {
 
 .prev-next {
     margin-top: 3rem;
-    list-style: none; 
     padding-left: 1rem;
     padding-right: 1rem;
     margin-left: auto;
     margin-right: auto;
     max-width: 75ch;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 1.5rem;
+    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
 }
 
 .prev-next h3 {
     margin-top: .25rem;
+    padding-bottom: .35rem;
     font-size: 1.35rem;
+    color: #ff2626;
+    color: #212121;
+    color: #212a2f;
+    border-bottom: 2px dashed #212121;
 }
 
-.prev-next li {
+.prev-next a {
     border-top: .45rem solid #4a4d53;
+    border-top: .45rem solid #ff2626;
+    border-top: .45rem solid #212a2f;
     background: #fff;
-    padding: 1rem;
-    margin: 1rem 0;
-    max-width: 20em;
+    padding: 1.25rem;
+    max-width: 30ch;
+    width: fit-content;
 }
 
-.prev-next li a {
+.prev-next a:hover, .prev-next a:focus {
+    background: #4a4d53;
+    background: #ff2626;
+    background: #212a2f;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.prev-next a:hover h3, .prev-next a:focus h3 {
+    color: #fff;
+    border-bottom: 2px dashed #fff !important;
+}
+
+.prev-next a:hover span, .prev-next a:focus span {
+    color: #fff;
+}
+
+.prev-next a span {
     font-size: 1.1rem;
     display: block;
+    color: #353535;
 }
 
 .contact-detail {
@@ -525,10 +548,6 @@ main-container .main-content .about-banner {
     transform-origin: 60% 50%;
     height: 200px;
     width: 200px;
-}
-
-.main-container .main-content p {
-    font-family: var(--system-font);
 }
 
 .main-container .projects .projects-wrapper {
@@ -716,7 +735,6 @@ main-container .main-content .about-banner {
     margin-top: 2rem;
     padding: .25rem 1.1rem;
     max-width: 1000px;
-    font-family: var(--system-font);
 }
 
 .main-content article {
@@ -1050,6 +1068,10 @@ main-container .main-content .about-banner {
     max-width: 75ch;
 }
 
+#post p {
+    font-size: 1.2rem;
+}
+
 #post h2,
 #post h3,
 #post h4 {
@@ -1290,7 +1312,7 @@ main .art img {
 }
 
 .search-style {
-    border: none;
+    border: .1rem solid lightgray;
     background: #eee;
 }
 
