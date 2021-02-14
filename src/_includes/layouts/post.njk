@@ -94,20 +94,20 @@ name: Tanner Dolby
                 </div>
                 {% set previousPost = collections.posts | getPreviousCollectionItem(page) %}
                 {% set nextPost = collections.posts | getNextCollectionItem(page) %}
-                <ul class="prev-next">
+                <nav class="prev-next">
                     {% if previousPost %}
-                        <li>
+                        <a href="{{ previousPost.url }}">
                             <h3 style="margin-bottom: .75rem;">Previous Post</h3>
-                            <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
-                        </li>
+                            <span>{{ previousPost.data.title }}</span>
+                        </a>
                     {% endif %}
                     {% if nextPost %}
-                        <li>
+                        <a href="{{ nextPost.url }}">
                             <h3 style="margin-bottom: .75rem;">Next Post</h3>
-                            <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
-                        </li>
+                            <span>{{ nextPost.data.title }}</span>
+                        </a>
                     {% endif %}
-                </ul>
+                </nav>
             </div>
         </main>
         {% include "layouts/footer.njk" %}
