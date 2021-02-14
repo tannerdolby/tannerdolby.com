@@ -399,7 +399,6 @@ a:hover {
     margin-top: .25rem;
     padding-bottom: .35rem;
     font-size: 1.35rem;
-    color: #ff2626;
     color: #212121;
     color: #212a2f;
     border-bottom: 2px dashed #212121;
@@ -407,7 +406,6 @@ a:hover {
 
 .prev-next a {
     border-top: .45rem solid #4a4d53;
-    border-top: .45rem solid #ff2626;
     border-top: .45rem solid #212a2f;
     background: #fff;
     padding: 1.25rem;
@@ -417,7 +415,6 @@ a:hover {
 
 .prev-next a:hover, .prev-next a:focus {
     background: #4a4d53;
-    background: #ff2626;
     background: #212a2f;
     color: #fff;
     cursor: pointer;
