@@ -41,7 +41,7 @@ In Java and C++, we create the "template" for objects by using the Class, where 
 
 > Arrays are predefined objects, where its indexes are the properties. 
 
-That means the first value of an array at index 0 would be displayed as `0: 15` where the 0th (first index) holds a value of 15. One of my favorite things about JavaScript arrays compared to other languages arrays (like Java) is the fact that JS arrays can hold a collection of values with different data types. Where in Java, a generic array can only hold values of the same data type.
+That means the first value of an array at index 0 would be displayed as `0: 15` where the 0th (first index) holds a value of 15. One of my favorite things about JavaScript arrays compared to other languages arrays (like Java) is the fact that JS arrays can hold a collection of values with different data types and grow dynamically. Where in Java, a generic array can only hold values of the same data type and cannot grow dynamically. This is where an `ArrayList` in Java comes in handy because it's size can be dynamic and doesn't need to be "predefined".
 
 ```js
 let myArr = [10, "foo", true, { prop: "bar" }]
