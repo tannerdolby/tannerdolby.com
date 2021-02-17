@@ -43,8 +43,7 @@ img {
 }
 
 p {
-    color: #212121;
-    color: #222;
+    color: #333;
     font-size: 1.15rem;
     font-weight: 400;
 }
@@ -56,11 +55,10 @@ code {
     font-weight: 400;
     white-space: nowrap;
     color: #212121;;
-    padding: .15rem .25rem .1rem .25rem;
+    padding: .2rem .2rem .05rem .2rem;
     border-radius: .1rem;
     margin: 0 .1rem;
-    background: rgb(237, 237, 237);
-    background: rgb(235, 235, 235);
+    background: rgb(230, 230, 230);
 }
 
 pre {
@@ -97,6 +95,7 @@ pre code {
 h1,h2,h3,h4 {
     font-family: "Noto Serif", var(--system-font);
     color: #212121;
+    color: #333;
     font-weight: 700;
 }
 
@@ -401,6 +400,7 @@ a:hover {
     font-size: 1.35rem;
     color: #212121;
     color: #212a2f;
+    color: #333;
     border-bottom: 2px dashed #212121;
 }
 
@@ -1066,7 +1066,12 @@ main-container .main-content .about-banner {
 }
 
 #post p {
-    font-size: 1.2rem;
+    font-size: 1.185rem;
+    line-height: 1.85;
+}
+
+#post h1 {
+    color: #222;
 }
 
 #post h2,
