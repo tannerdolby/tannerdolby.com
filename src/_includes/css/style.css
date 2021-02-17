@@ -92,7 +92,11 @@ pre code {
     width: 1px;
 }
 
-h1,h2,h3,h4 {
+h1 {
+    color: #222;
+}
+
+h2,h3,h4 {
     font-family: "Noto Serif", var(--system-font);
     color: #212121;
     color: #333;
@@ -1368,7 +1372,7 @@ main .art img {
 }
 
 .top-level a {
-    color: #222;
+    color: #333;
 }
 
 .top-level a span {
