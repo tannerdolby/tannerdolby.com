@@ -72,6 +72,10 @@ Now all the formatting is done and all passport data is stored as an array of si
 
 I created a helper function to handle the converting. It accepts one parameter, a string, or an array of strings and splits the incoming string by a colon `:`. Then using a [for..of](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of) statement it's quite straightforward to assign the key and value chunks to variables. The utility function looks like this:
 
+{% filename "script.js" %}
+
+{% raw %}
+
 ```js
 function convertToObj(arr) {
   const obj = {};
@@ -84,6 +88,7 @@ function convertToObj(arr) {
   return obj;
 }
 ```
+{% endraw %}
 
 The function could use some testing and refined logic to handle more use-cases, but to demonstrate how the utility works for an array of strings:
 
