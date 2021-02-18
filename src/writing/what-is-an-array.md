@@ -52,7 +52,7 @@ console.log(ar[3]); // Object { prop: "bar" }
 console.log(ar[3].prop) // "bar" (access object properties)
 ```
 
-There are many [data structures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures) in JavaScript and like shown above, arrays can hold any of the primitive types (undefined, String, Number, Boolean, BigInt, Symbol) and structural types (Objects and functions).
+There are many [data structures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures) in JavaScript and like shown above, arrays can hold any of the primitive types (undefined, String, Number, Boolean, BigInt, Symbol) and structural types.
 
 <h2 class="post-heading">How can I create an Array?</h2>
 
