@@ -11,7 +11,7 @@ preview: In JavaScript, arrays are predefined objects, where the indexes are the
 
 <h2 class="post-heading">Is JavaScript Object Oriented?</h2>
 
-JavaScript is indeed an Object Oriented Programming language, but the one difference between OOP languages like Java or C++ and JavaScript, is the fact the JavaScript doesn't explicitly use classes to define objects. We can define an object in multiple ways:
+JavaScript is indeed an Object Oriented Programming language, but the one difference between OOP languages like Java or C++ and JavaScript, is the fact the JavaScript doesn't explicitly use classes to define objects. We can define an [`Object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) in multiple ways:
 
 ```js
 // Create an object literal 
@@ -37,11 +37,13 @@ Class Square {
 };
 ```
 
-In Java and C++, we create the "template" for objects by using the Class, where we define the objects state (member variables) and behavior (methods). In JavaScript, arrays can more closely resemble a Map with key/value pairs. JavaScript does have a `Class` reserved keyword for creating classes but it's not required to use in creating objects. 
+In Java and C++, we create the "template" for objects by using the Class, where we define the objects state (member variables) and behavior (methods). In JavaScript, arrays can more closely resemble a Map with key/value pairs. JavaScript does have a [`Class`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes) reserved keyword for creating classes but it's not required to use in creating objects. 
 
 > Arrays are predefined objects, where its indexes are the properties. 
 
-That means the first value of an array at index 0 would be displayed as `0: 15` where the 0th (first index) holds a value of 15. One of my favorite things about JavaScript arrays compared to other languages arrays (like Java) is the fact that JS arrays can hold a collection of values with different data types and grow dynamically. Where in Java, a generic array can only hold values of the same data type and cannot grow dynamically. This is where an `ArrayList` in Java comes in handy because it's size can be dynamic and doesn't need to be "predefined".
+That means the first value of an array at index 0 would be displayed as `0: 15` where the 0th (first index) holds a value of 15. One of my favorite things about JavaScript arrays compared to other languages arrays (like Java) is the fact that JavaScript arrays can hold a collection of values with different data types and grow dynamically. 
+
+In Java, a generic array can only hold values of the same data type and cannot grow dynamically. This is where an [`ArrayList`](https://www.geeksforgeeks.org/arraylist-in-java/) in Java comes in handy because it's size can be dynamic and doesn't need to be "predefined".
 
 ```js
 let myArr = [10, "foo", true, { prop: "bar" }]
@@ -102,7 +104,7 @@ You might be asking yourself, so are arrays objects in JavaScript? And the answe
 
 To further solidify that arrays are objects, the indexes in an array are the properties, so when we access a value such as `arr["2"]` we are accessing the `Object["2"]` value. The value stored at index 2 can be accessed from the array object by using the property `"2"`.
 
-One last interesting note about arrays involves `Array.length`, which is essentially `Object.length`. When you have used the `length` property to count the number of values in an array, you might think it is counting each index that has a value. This is actually not the case. The length property returns the greatest number value index and increments it by one (due to 0-base indexing). Some people might look at this as a flaw, but I think it's a good way for us as developers to define arrays with logical and sequential numeric indexes to make sure when we use `Object.length` it returns the expected array length.
+One last interesting note about arrays involves [`Array.prototype.length`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length), which is essentially `Object.length`. When you have used the `length` property to count the number of values in an array, you might think it is counting each index that has a value. This is actually not the case. The length property returns the greatest number value index and increments it by one (due to 0-base indexing). Some people might look at this as a flaw, but I think it's a good way for us as developers to define arrays with logical and sequential numeric indexes to make sure when we use `Object.length` it returns the expected array length.
 
 ```js
 let arr = [1, 2, 3];
