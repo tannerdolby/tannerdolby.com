@@ -9,7 +9,7 @@ preview: Removing duplicate values from an array is quite a common task in progr
 
 {{ preview }}
 
-A [Set](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) data structure is commonly used in programming languages to store unique values. The `Set` object in JavaScript allows you to store "unique" values of any data type. For a value in the `Set` to be unique, it may only occur once, otherwise duplicate values are removed from the collection. This makes removing duplicate values from an array trivial by transferring the array values into a `Set`.
+A [`Set`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) data structure is commonly used in programming languages to store unique values. The Set object in JavaScript allows you to store "unique" values of any data type. For a value in the Set to be unique, it may only occur once, otherwise duplicate values are removed from the collection. This makes removing duplicate values from an array trivial by transferring the array values into a Set.
 
 Below is an example of removing duplicate values from an array by converting the `Array` to a `Set`.
 
@@ -25,11 +25,11 @@ Output:
 [2, 4, 6, 8]
 ```
 
-There is quite a bit going on in the above code block. We declare an array `arr` with two duplicate values. To remove those duplicate values, we add the array values into a `Set` called `unique`. Next, we can convert the `Set` into an `Array` by wrapping the `new Set()` instance inside brackets `[]` and using the (`...`) [spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax). 
+There is quite a bit going on in the above code block. We declare an array `arr` with two duplicate values. To remove those duplicate values, we add the array values into a Set called `unique`. Next, we can convert the Set into an [`Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) by wrapping the `new Set()` instance inside brackets `[]` and using the (`...`) [spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax). 
 
 <h2 class="post-heading">Other Options</h2>
 
-Using a `Set` is my go-to way of removing duplicate values in an Array, but there is also a few other options for this task. Utilizing `Array.prototype.indexOf` and the `Array.prototype.filter` method allows us to filter an Array for duplicate values and return the filtered array which only contains unique values.
+Using a `Set` is my go-to way of removing duplicate values in an Array, but there is also a few other options for this task. Utilizing [`Array.prototype.indexOf`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) and the [`Array.prototype.filter`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) method allows us to filter an Array for duplicate values and return the filtered array which only contains unique values.
 
 ```js
 const arr = ["a", "b", "c", "b", "a"];
@@ -45,9 +45,9 @@ Output:
 ["a", "b", "c"]
 ```
 
-Using [Array.prototype.indexOf](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) returns the first index at which a given element can be found in the array. If the element isn't present it returns `-1`. The way the above logic works for removing duplicates is by iterating over the array `arr` and checking each value to see if the `arr.indexOf(item)` index matches the position of the element being processed in the `filter()` method. 
+`Array.prototype.indexOf` returns the first index at which a given element can be found in the array. If the element isn't present it returns `-1`. The way the above logic works for removing duplicates is by iterating over the array `arr` and checking each value to see if the `arr.indexOf(item)` index matches the position of the element being processed in the `filter()` method. 
 
-Using [Array.prototype.filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) creates and returns a new array with all values that pass the test provided in the callback function. Similar to a `forEach()` method, the `filter()` method calls the provided callback function once for each element in the array. The difference between `forEach` and `filter` is that `filter()` creates a new array with all the values for which the callback function returns a ["truthy"](https://developer.mozilla.org/en-US/docs/Glossary/Truthy) value.
+`Array.prototype.filter` creates and returns a new array with all values that pass the test provided in the callback function. Similar to a `forEach()` method, the `filter()` method calls the provided callback function once for each element in the array. The difference between `forEach` and `filter` is that `filter()` creates a new array with all the values for which the callback function returns a ["truthy"](https://developer.mozilla.org/en-US/docs/Glossary/Truthy) value.
 
 To better understand the logic, the first iteration would look something like:
 
@@ -68,7 +68,7 @@ index = 3; // fourth element being processed
 
 And the same logic is applied to the remaining elements to be processed, if they return true after being processed by the callback function, the values are added to the constructed filtered array. Hopefully the above examples explain how using `indexOf` and `filter` to remove duplicates from an array is clear. 
 
-Lastly, you could use `Array.prototype.forEach` and `Array.prototype.includes` to check for duplicate values and then push the unique values into a new array. Using [forEach()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) performs similiar to `filter()` by performing the callback function for each element in the array. The [includes()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) method returns `true` or `false` depending on the value exists in the array or not.
+Lastly, you could use [`Array.prototype.forEach`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) and [`Array.prototype.includes`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) to check for duplicate values and then push the unique values into a new array. Using `forEach` behaves similiar to `filter` by performing the callback function for each element in the array. The `includes` method returns `true` or `false` depending on the value exists in the array or not.
 
 ```js
 const arr = [1, 2, 4, 4, 2, 6];
