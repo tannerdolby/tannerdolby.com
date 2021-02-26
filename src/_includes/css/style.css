@@ -58,7 +58,12 @@ code {
     padding: .2rem .15rem .05rem .2rem;
     border-radius: .1rem;
     margin: 0 .1rem;
-    background: rgb(230, 230, 230);
+    background: rgb(232, 232, 232);
+}
+
+a code {
+    text-decoration: underline;
+    text-decoration-color: var(--link-blue-accessible);
 }
 
 pre {
