@@ -37,7 +37,7 @@ eyr:2038 byr:1951
 hgt:171cm iyr:2011`;
 ```
 
-Now since the input is a `String` data type, we have access to `String.prototype` methods such as `.split`. Therefore, it's going to be much easier to put the data from the text file into a data structure, such as an `Array` for manipulation. 
+Now since the input is a `String` data type, we have access to [`String.prototype.split`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split). Therefore, it's going to be much easier to put the data from the text file into a data structure, such as an [`Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) for manipulation. 
 
 {% filename "passports.js" %}
 
@@ -53,7 +53,7 @@ Using `.split("\n\n")` is the best method for transforming the input data in `in
 2: "hcl:#c0946f byr:1933 eyr:2025 pid:517067213 hgt:173cm↵ecl:hzl↵iyr:2018"
 ```
 
-Since not all the values in the input data were single line entries, they still contain a `↵` which is equivalent to the `Enter` key or more commonly, a newline `\n`. To handle this last formatting task, I thought it would be best to use `Array.prototype.map` since the underlying data structure is an array after using `.split()`.
+Since not all the values in the input data were single line entries, they still contain a `↵` which is equivalent to the `Enter` key or more commonly, a newline `\n`. To handle this last formatting task, I thought it would be best to use [`Array.prototype.map`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) since the underlying data structure is an array after using `split`. Then we can join together the array of strings using [`Array.prototype.join`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join) and leave an empty space between each string in the array.
 
 ```js
 const passportData = input.split("\n\n");
@@ -70,7 +70,7 @@ Now all the formatting is done and all passport data is stored as an array of si
 
 <h2 class="post-heading">Convert an array of strings to an object</h2>
 
-I created a helper function to handle the converting. It accepts one parameter, a string, or an array of strings and splits the incoming string by a colon `:`. Then using a [for..of](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of) statement it's quite straightforward to assign the key and value chunks to variables. The utility function looks like this:
+I created a helper function to handle the converting. It accepts one parameter, a string, or an array of strings and splits the incoming string by a colon `:`. Then using a [`for..of`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of) statement it's quite straightforward to assign the key and value chunks to variables. The utility function looks like this:
 
 {% filename "script.js" %}
 
