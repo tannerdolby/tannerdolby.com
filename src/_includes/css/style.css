@@ -15,6 +15,7 @@
 body {
     font-family: "Noto Serif", var(--system-font);
     background: #f6f6f6;
+    background: #f7f7f7;
     overflow-x: hidden;
     overflow-y: auto;
     line-height: 1.65;
