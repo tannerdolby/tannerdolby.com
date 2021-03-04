@@ -43,7 +43,7 @@ img {
     max-width: 100%;
 }
 
-p {
+p, ol li {
     color: #333;
     font-size: 1.15rem;
     font-weight: 400;
