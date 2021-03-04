@@ -23,9 +23,7 @@ I'm guilty of not using combinators as often as I should in my own web applicati
 
 The first combinator selector is the Descendant Combinator. It selects all HTML elements that are descendants of the specific element. The specified element is followed by a space and then by the descendant elements to be selected.
 
-```css
-div img /* Selects all <img> tags that are children of a <div> */
-```
+`div img` selects all `<img>` tags that are children of a `<div>`.
 
 ```html
 <style>
@@ -46,9 +44,7 @@ The descendant selector only styles the `<a>` element here and makes it's color 
 
 The second combinator selector is the Child Combinator. This combinator selects all HTML elements that are direct children of the specified element. The specified element is followed by a `>` symbol and then the child elements to be selected.
 
-```css
-div > p /* Selects all <p> tags that are direct children of a <div> */
-```
+`div > p` selects all `<p>` tags that are direct children of a `<div>`.
 
 ```html
 <style>
@@ -69,9 +65,7 @@ The first `<p>` tag will take the `color: #f06` and the second `<p>` won't be ta
 
 The third combinator selector is the Adjacent Sibiling Combinator. This combinator selects all HTML elements that are a direct adjacent sibiling to the specified element. The specified element is followed by a `+` sign. To better understand how this combinator works, elements that are sitting right next to eachother (not nested) on the page are considered adjacent sibilings.
 
-```css
-h2 + p /* Selects all <p> tags that are adjacent sibilings of <h2> tags */
-```
+`h2 + p` selects all `<p>` tags that are adjacent sibilings of `<h2>` tags.
 
 ```html
 <style>
@@ -94,6 +88,8 @@ The first `<h2>` subheading will be be styled with `color: #f06` and the nested 
 <h3 class="post-heading">General sibiling combinator</h3>
 
 The fourth and final combinator selector is the General Sibiling Combinator. This combinator selects all HTML elements that come after the specified element.
+
+`h2 ~ p` selects all `<p>` tags that come after an `<h2>` tag.
 
 ```html
 <style>
