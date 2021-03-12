@@ -209,7 +209,7 @@ textarea:focus {
 
 a:hover {
     cursor: pointer;
-    text-decoration: underline;
+    text-decoration: underline solid var(--link-blue-accessible) 2px;
 }
 
 .top-nav .nav-wrapper {
