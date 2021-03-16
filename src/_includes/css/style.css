@@ -204,7 +204,6 @@ a:focus,
 input:focus,
 textarea:focus {
     outline-offset: .1rem;
-    
 }
 
 a:hover {
