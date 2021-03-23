@@ -1110,16 +1110,14 @@ main-container .main-content .about-banner {
     font-weight: 500;
     font-size: .95rem;
     background: inherit;
-    background: hsl(0, 0%, 23%);
     color: #222;
-    color: #fff;
     border: .12rem solid rgb(54, 60, 63);
 }
 
 .main-content .my-posts .clear-filter-btn:hover,
 .clear-filter-btn:hover {
-    background: inherit;
-    color: #222;
+    background: hsl(0, 0%, 23%);
+    color: #fff;
     text-decoration: none;
 }
 .tagged-title {
