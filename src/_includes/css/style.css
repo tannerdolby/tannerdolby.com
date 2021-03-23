@@ -186,7 +186,7 @@ h3,
 }
 
 .ffr-content {
-    max-width: 85ch;
+    max-width: 80ch;
     margin: 2rem auto;
 }
 
@@ -397,7 +397,7 @@ a:hover {
     padding-right: 1rem;
     margin-left: auto;
     margin-right: auto;
-    max-width: 75ch;
+    max-width: 80ch;
     gap: 2rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
@@ -446,7 +446,7 @@ a:hover {
 }
 
 .contact-detail {
-    max-width: 75ch;
+    max-width: 80ch;
     margin-bottom: 2.75rem;
 }
 
@@ -460,7 +460,7 @@ a:hover {
 
 .share {
     margin-top: 1.5rem;
-    max-width: 75ch;
+    max-width: 80ch;
     margin-left: auto;
     margin-right: auto;
     padding: 0 1rem;
@@ -744,7 +744,7 @@ main-container .main-content .about-banner {
 }
 
 .main-content article {
-    max-width: 75ch;
+    max-width: 80ch;
 }
 
 .recent-posts article {
@@ -793,7 +793,7 @@ main-container .main-content .about-banner {
 }
 
 .wrap {
-    max-width: 75ch;
+    max-width: 80ch;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 6rem;
@@ -836,7 +836,7 @@ main-container .main-content .about-banner {
 }
 
 .contact-wrapper {
-    max-width: 85ch;
+    max-width: 80ch;
 }
 
 .contact-wrapper .socials-list {
@@ -1071,7 +1071,7 @@ main-container .main-content .about-banner {
     margin-right: auto;
     padding-left: 1rem;
     padding-right: 1rem;
-    max-width: 75ch;
+    max-width: 80ch;
 }
 
 #post p {
@@ -1097,7 +1097,7 @@ main-container .main-content .about-banner {
 .post-wrap {
     padding-left: 1rem;
     padding-right: 1rem;
-    max-width: 75ch;
+    max-width: 80ch;
     margin-left: auto;
     margin-right: auto;
 }
@@ -1268,7 +1268,7 @@ main .art img {
     display: flex; 
     flex-direction: row; 
     justify-content: space-between; 
-    max-width: 85ch;
+    max-width: 80ch;
     align-items: center;
     margin-left: 0;
     margin-right: 0;
