@@ -19,12 +19,13 @@ Now that the underlying mathematical equation for generating the Fibonacci seque
 
 ```js
 function fibonacciSeq(n) {
-    let sequence = [0, 1];
+    let arr = [0, 1];
+    let sum = 0;
     for (var i = 1; i < n; i++) {
-        let num = arr[i] + arr[i-1];
-        sequence.push(num);
+        sum = arr[i] + arr[i-1];
+        arr.push(sum);
     }
-    return num;
+    return arr;
 }
 ```
 
