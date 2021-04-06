@@ -20,10 +20,10 @@ Now that the underlying mathematical equation for generating the Fibonacci seque
 ```js
 function fibonacciSeq(n) {
     let arr = [0, 1];
-    let sum = 0;
+    let num = 0;
     for (var i = 1; i < n; i++) {
-        sum = arr[i] + arr[i-1];
-        arr.push(sum);
+        num = arr[i] + arr[i-1];
+        arr.push(num);
     }
     return arr;
 }
@@ -34,4 +34,20 @@ The above function `fibonacciSeq` accepts one parameter, the amount of fibonacci
 ```js
 console.log(fibonacciSeq(7));
 // [0, 1, 1, 2, 3, 5, 8, 13]
+```
+
+<h3 class="post-heading">Sum the sequence</h3>
+
+You can sum the values in a fibonacci sequence fairly quickly with [`reduce`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce). Using a `for` loop would also work (and in some cases is more performant than `reduce`).
+
+```js
+function fibonacciSum(n) {
+    let arr = [0, 1];
+    let num = 0;
+    for (var i = 1; i < n; i++) {
+        num = arr[i] + arr[i-1];
+        arr.push(num);
+    }
+    return arr.reduce((a, b) => a + b);
+}
 ```
