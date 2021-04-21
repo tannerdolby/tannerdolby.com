@@ -7,7 +7,8 @@
             url="https://tannerdolby.com",
             img="https://tannerdolby.com/images/arch-spiral-large.jpg",
             img_alt="An Archimedean Spiral.",
-            twitterHandle="@tannerdolby",
+            twitter_card_type="summary_large_image",
+            twitter_handle="tannerdolby",
             name="Tanner Dolby"
         %}
         <meta name="keywords" content="{{ site.doc_metadata.keywords }}">
@@ -26,8 +27,8 @@
         {% include "layouts/nav.njk" %}
         <main class="main-container" id="main" tabindex="-1">
             {{ content | safe }}
-            <section class="recent-posts">
-                <div class="rp-container">
+            <section class="posts-container">
+                <div class="recent-posts">
                     <h2>Recent Posts</h2>
                     {% for post in collections.recentPosts %}
                     <article class="post">
@@ -40,6 +41,7 @@
                         <a class="see-more" style="font-size: 17px; text-decoration: underline;" href="/writing/">See more posts &RightArrow;</a>
                     </div>
                 </div>
+                {% include "layouts/sidebar.njk" %}
             </section>
             {% include "layouts/projects.njk" %}
             <section class="featured-art" id="feat-art">
