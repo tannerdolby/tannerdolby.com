@@ -27,7 +27,7 @@
         {% include "layouts/nav.njk" %}
         <main class="main-container" id="main" tabindex="-1">
             {{ content | safe }}
-            <section class="posts-container">
+            <section class="posts-container" style="max-width: 1000px; margin: 3rem auto; padding: .5rem 1rem;">
                 <div class="recent-posts">
                     <h2>Recent Posts</h2>
                     {% for post in collections.recentPosts %}
