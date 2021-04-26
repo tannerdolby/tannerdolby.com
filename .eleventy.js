@@ -78,8 +78,9 @@ module.exports = (eleventyConfig) => {
 
     eleventyConfig.addCollection("allContent", function(collections) {
         // exlcuding the 3 most recent posts
-        const allSorted = collections.getAllSorted().reverse().slice(3, 9);
-        return allSorted;
+        const allSorted = collections.getAllSorted().reverse();
+        let rand = random(3, 8)
+        return allSorted.slice(rand, rand + 7);
     })
 
     // Minify JS with terser
