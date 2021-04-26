@@ -5,6 +5,7 @@ datetime: 2021-02-17 00:00:00 Z
 tags:
   - javascript
 preview: Removing duplicate values from an array is quite a common task in programming. Sometimes, specific scenarios require a collection of data to only store unique values. That is, no repeated values.
+permalink: "/writing/{{ title | slug }}/"
 ---
 
 {{ preview }}

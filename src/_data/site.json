@@ -46,6 +46,7 @@
     "page_info": {
         "name": "Tanner",
         "full_name": "Tanner Dolby",
+        "rss_feed": "https://tannerdolby.com/feed.xml",
         "socials": {
             "github": "https://github.com/tannerdolby",
             "twitter": "https://twitter.com/tannerdolby",

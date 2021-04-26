@@ -2,10 +2,11 @@
 title: Using Modules in Node.js
 date: 2021-03-24
 datetime: 2021-03-24 00:00:00 Z
+permalink: "/writing/{{ title | slug }}/"
 tags:
   - nodejs
   - javascript
-preview: Sometimes files can become quite large in a Node.js project. Modules provide developers a way to put related code into separate files and then export them to be used elsewhere.
+preview: Files can become quite large in a Node.js project. Modules provide developers a "modular" approach by putting related code into separate files and then exporting them to be used elsewhere.
 ---
 
 {{ preview }}
@@ -16,7 +17,7 @@ Modules in Node.js are essentially just files. They provide a place for related 
 
 > If you don't want code in a file to be used elsewhere or shared between files, simply don't use `module.exports` as you don't wish to export any code from that file.
 
-Below is a simple line chart outlining one large file `server.js`, which will have it's code separated into "modules". These modules will contain related code extracted from `server.js` that can be exported and reused throughout the application. 
+Below is a demo of sorts outlining one large file `server.js`, which will have it's code separated into "modules". These modules will contain related code extracted from `server.js` that can be exported and reused throughout the application. 
 
 
 ```js

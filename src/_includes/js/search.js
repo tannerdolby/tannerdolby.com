@@ -1,10 +1,5 @@
-/* 
-*   Creating Search Functionality for a static site
-* 
-*   1. Try out my idea with custom data attributes (works!)
-*   2. Try Phil Hawksworths article from the eleventy tutorials section (haven't read yet)
-*
-*/
+let urlParams = new URLSearchParams(window.location.search); // search?post=splat
+let searchBarQuery = urlParams.get("post");
 
 const placeholder = document.querySelector(".result");
 const res = document.createElement("p");
@@ -17,9 +12,47 @@ clearSearch.setAttribute("href", "/search/");
 
 // grab blog posts on document and convert HTMLCollection to an Array with the spread operator
 const posts = [...document.getElementsByClassName("post")];
+const hiddenPosts = [...document.querySelectorAll("article.sr-only")];
 
 // grab search bar to add keyup and click event handlers
 const searchBar = document.getElementById("search");
+
+/* Sidebar search functionality */
+if (searchBarQuery !== null) {
+    console.log(searchBarQuery);
+    const posts = [...document.querySelectorAll("article.post")];
+
+    let matchingPosts = posts.filter(p => {
+        return p.dataset.postTitle.toLowerCase().includes(searchBarQuery.toLowerCase());
+    });
+
+    let nonMatchingPosts = posts.filter(p => {
+        return !p.dataset.postTitle.toLowerCase().includes(searchBarQuery.toLowerCase());
+    });
+
+    matchingPosts.forEach(p => {
+        p.classList.remove("sr-only"); 
+        p.removeAttribute("aria-hidden");
+    });
+    nonMatchingPosts.forEach(p => {
+        p.classList.add("sr-only");
+        p.setAttribute("aria-hidden", "true");
+    });
+
+    if (matchingPosts.length === 1) {
+        placeholder.classList.remove("sr-only");
+        placeholder.classList.remove("result");
+        placeholder.classList.add("search-result");
+        res.textContent = `${matchingPosts.length} result for posts matching "${searchBarQuery}"`;
+    } else {
+        placeholder.classList.remove("sr-only");
+        placeholder.classList.add("search-result");
+        res.textContent = `${matchingPosts.length} results for posts matching "${searchBarQuery}"`;
+
+    }
+    placeholder.appendChild(res);
+    placeholder.appendChild(clearSearch);
+}
 
 /**
  * Returns the text entered into an input search bar and injects it into an HTML element.
@@ -30,6 +63,7 @@ function getInput(e) {
     return e.target.value;
 }
 
+// handles typing directly into search bar on search page
 searchBar.addEventListener("input", (e) => {
     let userInput = getInput(e);
 
@@ -71,9 +105,9 @@ searchBar.addEventListener("input", (e) => {
         placeholder.classList.remove("sr-only");
         placeholder.classList.add("search-result");
         if (matchingPost.length === 1) {
-            res.innerText = `${matchingPost.length} result for posts matching "${userInput}"`;
+            res.textContent = `${matchingPost.length} result for posts matching "${userInput}"`;
         } else {
-            res.innerText = `${matchingPost.length} results for posts matching "${userInput}"`;
+            res.textContent = `${matchingPost.length} results for posts matching "${userInput}"`;
         }
         placeholder.appendChild(res);
         placeholder.appendChild(clearSearch);

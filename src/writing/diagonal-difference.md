@@ -5,6 +5,7 @@ datetime: 2021-01-31 00:00:00 Z
 tags:
   - javascript
   - hackerrank
+permalink: "/writing/{{ title | slug }}/"
 preview: This article will discuss how to solve the "diagonal difference" problem which involves calculating the diagonal difference of a n x n size square matrix.
 ---
 

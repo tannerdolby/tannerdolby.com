@@ -1,0 +1,19 @@
+<div class="right-sidebar">
+    <input class="side-search" type="text" name="Search box" placeholder="Search">
+    <h4>Other posts</h4>
+    <ul>
+    {% for item in collections.allContent %}
+            <li><a href="{{ item.url }}">{{ item.data.title }}</a></li>
+    {% endfor %}
+    </ul>
+    <h4>Around the web</h4>
+    <div class="around-web">
+        <ul>
+            <li><a href="https://github.com/tannerdolby">GitHub</a></li>
+            <li><a href="https://twitter.com/tannerdolby">Twitter</a></li>
+            <li><a href="https://codepen.com/tannerdolby">CodePen</a></li>
+            <li><a href="https://www.linkedin.com/in/tanner-dolby/">LinkedIn</a></li>
+            <li><a href="https://stackoverflow.com/users/11389581/tanner-dolby">StackOverflow</a></li>
+        </ul>
+    </div>
+</div>

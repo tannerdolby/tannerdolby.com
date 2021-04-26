@@ -34,15 +34,3 @@ div.setAttribute("class", "table-of-contents");
 const ul = document.createElement("ul");
 
 div.appendChild(ul);
-
-// headings.forEach(item => {
-//     console.log(item);
-//     const li = document.createElement("li");
-//     const link = document.createElement("a");
-//     ul.appendChild(li);
-//     li.appendChild(link);
-//     link.appendChild(item);
-//     post.appendChild(div);
-// });
-
-

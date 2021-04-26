@@ -4,6 +4,7 @@ date: 2021-02-06
 datetime: 2021-02-06 00:00:00 Z
 tags:
   - javascript
+permalink: "/writing/{{ title | slug }}/"
 preview: In JavaScript, arrays are predefined objects, where the indexes are the arrays properties. They can hold a collection of values with differing data types. The array is a go-to data structure for common list related tasks.
 ---
 

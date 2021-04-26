@@ -9,20 +9,12 @@ headshot:
 layout: about.njk
 ---
 
-Hi there! My name is Tanner Dolby. I'm a Software Engineer and Mathematician based in Sacramento, CA. I enjoy using JavaScript and accessible HTML paired with modern CSS to build fast websites. Recently, I've been spending the majority of my time learning how to develop applications using the MEAN stack. I started to learn web development using [freeCodeCamp.org](https://freecodecamp.org) in 2017. Ever since then, I've been hooked on building things for the web. I also enjoy creating fun CSS illustrations and front-end demos on [CodePen](https://codepen.io/tannerdolby) in my free time. 
+Hi there! My name is Tanner Dolby. I'm a Software Engineer and Mathematician based in Sacramento, CA. I enjoy working with HTML, CSS, JavaScript, Angular, Node.js, Java, Go, MongoDB, and Eleventy. I started to learn web development using [freeCodeCamp.org](https://freecodecamp.org) in 2017. Ever since then, I've been hooked on building things for the web. 
 
-With the JAMstack movement on the rise, I've taken an interest in Static Site Generators (SSG). In particular [Eleventy](https://11ty.dev), which this website is built with.
+I focus on using semantic HTML paired with modern CSS to build responsive and fast websites. Recently, I've been spending the majority of my time learning how to develop applications using the MEAN stack. I spend my free time learning, building side-projects, creating fun CSS illustrations or making front-end demos on [CodePen](https://codepen.io/tannerdolby). With the JAMstack movement on the rise, I've taken an interest in Static Site Generators (SSG). In particular [Eleventy](https://11ty.dev), which this website is built with.
 
 ## Interests
-I like to write about technology and web development. I'm currently fixated on learning more about the MEAN stack, Static Site Generators, JavaScript and Web performance. If you want to see me write about a specific topic or concept, feel free to message me about it. Lately, I've been very interested in CSS illustrations and SVG. I may write about these hobbies in future posts.
-
-<h2 style="margin-top: 3rem;">Around the Web</h2>
-
-<div class="around-the-web">
-{% for link in socials %}
-- [{{ link.name }}]({{ link.url }})
-{% endfor %}
-</div>
+I like to write about technology and web development. I'm currently fixated on learning more about the MEAN stack, Static Site Generators, JavaScript, Go Lang, and Web performance. If you want to see me write about a specific topic or concept, feel free to message me about it. Lately, I've been very interested in CSS illustrations and SVG. I may write about these hobbies in future posts.
 
 ## Education
 I received my Bachelor of Science in Applied Mathematics from Arizona State University on May 11, 2020. Due to a [global pandemic](https://www.cdc.gov/coronavirus/2019-ncov/index.html), the university didn't conduct an in-person commencement ceremenony. Feel free to take a look at the [virtual ceremonies](https://vgradasu.z4.web.core.windows.net/asu/III/#811351). 

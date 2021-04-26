@@ -1,9 +1,8 @@
 // convert iterable object (NodeList) to array using the ... spread operator
 const allPosts = [...document.querySelectorAll(".post")];
 
-// search the location (broswer window) to search the URL for ?filter=tag 
-// use slice to grab only the characters after the equal sign ie (=nunjucks)
-const postTag = location.search.slice(location.search.indexOf("=") + 1);
+const urlQueryParams = new URLSearchParams(window.location.search);
+const postTag = urlQueryParams.get("filter");
 
 const postList = document.querySelector(".my-posts");
 const filterMsg = document.createElement("p");

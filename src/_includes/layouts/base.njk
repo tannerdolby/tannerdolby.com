@@ -1,16 +1,18 @@
+---
+metadata:
+  title: Tanner Dolby's Website
+  desc: Hi, I'm Tanner. A software engineer and mathematician with a passion for building things for the web. I enjoy solving problems and you can usually find me on StackOverflow in my free time answering questions, or on GitHub working on a side project.
+  url: https://tannerdolby.com
+  img: https://tannerdolby.com/images/arch-spiral-large.jpg
+  img_alt: An Archimedean Spiral
+  twitter_card_type: summary_large_image
+  twitter_handle: tannerdolby
+  name: Tanner Dolby
+---
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
     <head>
-        {% metagen 
-            title="Tanner Dolby's Website",
-            desc="Tanner Dolby is a software engineer and mathematician.",
-            url="https://tannerdolby.com",
-            img="https://tannerdolby.com/images/arch-spiral-large.jpg",
-            img_alt="An Archimedean Spiral.",
-            twitter_card_type="summary_large_image",
-            twitter_handle="tannerdolby",
-            name="Tanner Dolby"
-        %}
+        {% metagen metadata %}
         <meta name="keywords" content="{{ site.doc_metadata.keywords }}">
         <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
@@ -27,7 +29,7 @@
         {% include "layouts/nav.njk" %}
         <main class="main-container" id="main" tabindex="-1">
             {{ content | safe }}
-            <section class="posts-container" style="max-width: 1000px; margin: 3rem auto; padding: .5rem 1rem;">
+            <section class="posts-container">
                 <div class="recent-posts">
                     <h2>Recent Posts</h2>
                     {% for post in collections.recentPosts %}
@@ -41,7 +43,7 @@
                         <a class="see-more" style="font-size: 17px; text-decoration: underline;" href="/writing/">See more posts &RightArrow;</a>
                     </div>
                 </div>
-                
+                {% include "layouts/sidebar.njk" %}
             </section>
             {% include "layouts/projects.njk" %}
             <section class="featured-art" id="feat-art">
@@ -96,5 +98,11 @@
             </section>
         </main>
         {% include "layouts/footer.njk" %}
+        {% set js %}
+            {% include "js/sidebar-search.js" %}
+        {% endset %}
+        <script>
+            {{ js | jsmin | safe}}
+        </script>
     </body>
 </html>

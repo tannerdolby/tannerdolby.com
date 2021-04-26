@@ -44,6 +44,7 @@ name: Tanner Dolby
                 <div id="post">
                     {{ content | safe }}
                 </div>
+                {% include "layouts/sidebar.njk" %}
                 <div class="share">
                     <strong class="strong-share">Share</strong>
     
@@ -58,36 +59,6 @@ name: Tanner Dolby
                             c13.6,41.568,52.192,72.128,98.08,73.12c-35.712,27.936-81.056,44.768-130.144,44.768c-8.608,0-16.864-0.384-25.12-1.44
                             C46.496,446.88,101.6,464,161.024,464c193.152,0,298.752-160,298.752-298.688c0-4.64-0.16-9.12-0.384-13.568
                             C480.224,136.96,497.728,118.496,512,97.248z"/>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
                         </svg>
                         <span>Twitter</span>
                     </a>
@@ -102,7 +73,7 @@ name: Tanner Dolby
                         </a>
                     {% endif %}
                     {% if nextPost %}
-                        <a href="{{ nextPost.url }}">
+                        <a class="next-post" href="{{ nextPost.url }}">
                             <h3 style="margin-bottom: .75rem;">Next Post</h3>
                             <span>{{ nextPost.data.title }}</span>
                         </a>
@@ -117,6 +88,7 @@ name: Tanner Dolby
             {% include "js/focus-blocks.js" %}
             {% include "js/heading-highlight.js" %}
             {% include "js/toc.js" %}
+            {% include "js/sidebar-search.js" %}
         {% endset %}
         <script>
             {{ js | jsmin | safe }}

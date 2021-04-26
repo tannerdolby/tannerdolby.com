@@ -4,6 +4,7 @@ date: 2021-02-07
 datetime: 2021-02-07 00:00:00 Z
 tags:
   - javascript
+permalink: "/writing/{{ title | slug }}/"
 preview: The Fibonacci sequence is a series of numbers where each number in the sequence is the sum of the two preceding numbers. This sequence begins with 0 and 1.
 ---
 

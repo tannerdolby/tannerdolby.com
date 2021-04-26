@@ -7,7 +7,7 @@ tags:
     - html
     - javascript
 preview: Have you ever thought to yourself while building a website, how could I create HTML elements and bind them to the DOM? This article explains some of the fundamentals for interacting with the DOM tree using client-side JavaScript.
-permalink: /writing/{{ title | slug }}/
+permalink: "/writing/{{ title | slug }}/"
 demo_link: https://browserjs-intro.netlify.app/
 ---
 

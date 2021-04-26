@@ -25,13 +25,20 @@
         <a href="#main-about" class="skip-link">Skip to main content</a>
         {% include "layouts/nav.njk" %}
         <main class="main-container" id="main-about" tabindex="-1">
-            <header class="banner-container">
+            <header class="banner-container about-header">
                 <h1>{{ title }}</h1>
             </header>
             <section class="main-content" id="about-me">
                 {{content | safe}}
             </section>
+            {% include "layouts/sidebar.njk" %}
         </main>
         {% include "layouts/footer.njk" %}
+        {% set js %}
+            {% include "js/sidebar-search.js" %}
+        {% endset %}
+        <script>
+            {{ js | jsmin | safe}}
+        </script>
     </body>
 </html>

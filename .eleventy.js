@@ -58,15 +58,29 @@ module.exports = (eleventyConfig) => {
         return new CleanCSS({}).minify(code).styles;
     });
 
+    // max is exclusive, min is inclusive
+    function random(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        
+        return Math.floor(Math.random() * (max - min) + min);
+    }
+
     // Retrieve 3 of the most recent blog posts
     eleventyConfig.addCollection("recentPosts", function(collection) {
         return collection.getFilteredByGlob("src/writing/*.md").reverse().slice(0, 3);
     });
-
+    
     // create a custom collection "posts"
     eleventyConfig.addCollection("posts", function(collection) {
         return collection.getFilteredByGlob("src/writing/*.md");
     });
+
+    eleventyConfig.addCollection("allContent", function(collections) {
+        // exlcuding the 3 most recent posts
+        const allSorted = collections.getAllSorted().reverse().slice(3, 9);
+        return allSorted;
+    })
 
     // Minify JS with terser
     eleventyConfig.addNunjucksAsyncFilter("jsmin", async function (
@@ -84,7 +98,6 @@ module.exports = (eleventyConfig) => {
     // adding tags to data-tags for search feature
     eleventyConfig.addFilter("stringify", function(tags) {
         let tagsArr = tags;
-        // tried .forEach() and need to come back and update this, it works but ya
         for (var i = 0; i < tagsArr.length; i++) {
             var dataTags = [];
             if (tagsArr[i]) {
@@ -122,7 +135,7 @@ module.exports = (eleventyConfig) => {
         dir: {
           input: "src",
           output: "_site",
-          layouts: "_includes/layouts/",
+          layouts: "_includes/layouts",
           data: "_data",
           includes: "_includes"
         },

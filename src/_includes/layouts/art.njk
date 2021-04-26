@@ -23,7 +23,7 @@
     <body>
         <a href="#main-art" class="skip-link">Skip to main content</a>
         {% include "layouts/nav.njk" %}
-        <main class="main-container" id="main-art">
+        <main class="main-container art-main" id="main-art">
             <header class="banner-container">
                 <h1 class="h1">{{ title }}</h1>
                 {{ content | safe }}
@@ -49,8 +49,8 @@
                         </picture>
                     </a>
                     <div class="drawing-info">
-                        <h2 class="h3 featured-info">{{ drawing.name }}</h2>
-                        <p class="created">{{ drawing.date_created }} - <a href="{{ drawing.credit }}" aria-label="Link to photo credit for {{ drawing.name }}">Photo Credit</a></p>
+                        {# <h2 class="h3 featured-info">{{ drawing.name }}</h2> #}
+                        {# <p class="created">{{ drawing.date_created }} - <a href="{{ drawing.credit }}" aria-label="Link to photo credit for {{ drawing.name }}">Photo Credit</a></p> #}
                         {# <p>{{ drawing.desc }}</p> #}
                     </div>
                 </div>

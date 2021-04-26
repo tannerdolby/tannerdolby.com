@@ -5,6 +5,7 @@ datetime: 2020-11-13 00:00:00 Z
 tags:
   - css
   - html
+permalink: "/writing/{{ title | slug }}/"
 preview: Sometimes you need to select elements from the page for styling but don't want to write the class or ID selector many times in your stylesheet. This is where CSS combinators come into play.
 ---
 

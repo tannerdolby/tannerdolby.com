@@ -14,10 +14,14 @@ eleventyExcludeFromCollections: true
 
 The DOM represents the document as nodes and objects. This allows programming languages, such as JavaScript to connect to the page and manipulate DOM nodes. Using `document.getElementsByClassName` returns a live [HTMLCollection](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCollection) interface.
 
-You can think of the `HTMLCollection` as an array-like object, but to be clear it is not a generic array. That means it will not have access to array methods such as: `filter` or `forEach` like a normal array would. You can still use array methods by utilizing `Array.prototype`
+You can think of the `HTMLCollection` as an array-like object, but to be clear it is not a generic array. This means it will not have access to generic array methods such as: `filter` or `forEach` like a normal array would. 
+
+You can still use array methods by utilizing `Array.prototype.filter` but simply calling `HTMLCollection.filter` will not work since the data type is a `HTMLCollection` and not a `Array`.
 
 
 ```js
-Array.prototype.filter.call(HTMLCollection, () => {}); // ok for HTMLCollection
+Array.prototype.filter.call(HTMLCollection, (item) => {}); // ok for HTMLCollection
+
 HTMLCollection.filter(post => {}); // not ok 
 ``` 
+

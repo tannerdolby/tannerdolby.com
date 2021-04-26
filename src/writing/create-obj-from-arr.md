@@ -5,6 +5,7 @@ datetime: 2020-12-06 00:00:00 Z
 tags: 
   - javascript
   - advent-of-code
+permalink: "/writing/{{ title | slug }}/"
 preview: Have you ever had an array of values that you needed to convert to an object? I've run into this scenario quite a few times and wanted to write about it.
 ---
 
