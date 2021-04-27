@@ -18,7 +18,9 @@ Coming from a background of using Static Site Generators (Eleventy), I've missed
 
 With Angular, I thought it wouldn't make much sense to create a component for every blog post, that just seems like unecessary work as the only part that really matters is the Markup or `name.component.html` template file. Unless you needed the HTML files to have specific metadata then it might make sense to have each post be a full blown component. 
 
-In this project, the `/assets/pages` directory is where all the blog post `.html` files are stored and the `/assets/blog.json` file is where all post metadata lives. The `pages` directory will hold every blog posts `.html` file. If you were thinking about writing a new post, you would first create the file in `/assets/pages` as `some-new-post.html` and give the file some content,
+The `/assets/pages` directory in the Angular project is where all the blog post `.html` files are stored and post metadata lives in `/assets/blog.json`. 
+
+The `/pages` directory will hold every blog posts `.html` file. If you were thinking about writing a new post, you would first create the file in `/assets/pages` as `some-new-post.html` and give the file some content,
 
 ```html
 <h1>Welcome to my post!</h1>
@@ -45,6 +47,8 @@ and provide metadata for that post in `/assets/blog.json` by creating a new post
 ```
 
 Now you can sit back and let Node.js do the work of reading the blog post files in `/assets/pages` to extract the HTML content. Then send the metadata and post HTML to the Angular service to be rendered on the page. The [GitHub REST API](https://docs.github.com/en/rest) is used to grab the `blog.json` metadata file and blog posts in the `/pages` directory. This file reading job was originally handled by the File System Module but since Netlify lambda functions don't bring along static assets with them in the `functions` folder, I was forced to fallback to fetching files and their contents using the GitHub API endpoints.
+
+Using a service within the Angular code, we can fetch data from the API endpoints created by the lambda functions which store the responses from hitting the GitHub REST API.
 
 <h2 class="post-heading">Updating API endpoints</h2>
 
@@ -112,6 +116,8 @@ The GitHub REST API does have a limited rate for hitting the endpoints. This cau
 
 Netlify starter accounts provide really great features for hosting your own website or blog. I've usually only used [Netlify](https://netlify.com) for hosting static sites, but since they introduced [Netlify Lambda functions](), which are essentially AWS Lambda functions. We are now able to host full stack applications through Netlify. The netlify functions we create are deployed as API endpoints which is really cool.
 
-[Pricing is metered](https://www.netlify.com/blog/2018/03/20/netlifys-aws-lambda-functions-bring-the-backend-to-your-frontend-workflow/) for the Netlify Lambda functions so keep that in mind if you choose to host this full stack app with Netlify. Unless you expect alot of site traffic, the Netlify starter account limits are plenty for a personal website. 
+[Pricing is metered](https://www.netlify.com/blog/2018/03/20/netlifys-aws-lambda-functions-bring-the-backend-to-your-frontend-workflow/) for the Netlify Lambda functions so keep that in mind if you choose to host this full stack app with Netlify. Unless you expect alot of site traffic, the Netlify starter account limits are plenty for a personal website.
+
+You can view the [source code](https://github.com/tannerdolby/angular-node-blog) over on GitHub.
 
 Thanks for reading! 🚀

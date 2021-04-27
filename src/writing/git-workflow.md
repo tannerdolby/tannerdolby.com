@@ -14,15 +14,15 @@ preview: To begin contributing to open-source software, you might want to become
 
 <h2 class="post-heading">Local Setup</h2>
 
-Before you can start submitting a Pull Request (PR) in someone elses project, you will usually want to copy the project files to your local system. This can be done by performing a `git clone` on a public repository from GitHub. Before cloning another project, you need to create your own local copy by forking it.
+Before you can start submitting a Pull Request (PR) to a public repository, you will usually want to copy the project files to your local system. This can be done by performing a `git clone` on a forked public repository from GitHub. Before cloning, you need to create your own local copy by forking it. Then you can setup your upstream repository (e.g. the repo you forked from) and any other branch or environment setup.
 
 <h2 class="post-heading">Fork</h2>
 
-To create a local copy of a repository, you will click the `Fork` button in the top right corner of the public repository webpage on GitHub. After forking a repository, the project will be apart of your users account as `your-username/repository-name`.
+To create a local copy of a repository, use the `Fork` button in the top right corner of the public repository webpage on GitHub. After forking a repository, the project will be part of your users account as `your-username/repository-name`.
 
 <h2 class="post-heading">Clone your fork</h2>
 
-Copy the SSH URL (or HTTPS) of your own organization’s fork of the project and clone the project. The URL can be found by clicking the large green button on GitHub that says "Code". Below is an example of my Github user account ([@tannerdolby](https://github.com/tannerdolby)) cloning my users fork of [11ty/11ty-website](https://github.com/11ty/11ty-website).
+Copy the SSH URL (or HTTPS) of your own organization’s fork of the project and then clone the project. The URL can be found by clicking the large green button on GitHub that says "Code". Below is an example of my GitHub account ([@tannerdolby](https://github.com/tannerdolby)) cloning my fork of [11ty/11ty-website](https://github.com/11ty/11ty-website).
 
 ```git
 git clone git@github.com:tannerdolby/11ty-website.git
@@ -30,7 +30,7 @@ git clone git@github.com:tannerdolby/11ty-website.git
 
 <h2 class="post-heading">Setup tracking of remote upstream repository</h2>
 
-To make sure your local copy of the project (the fork) is up to date with the original upstream repository. Grab the `.git` URL from the original repository [11ty/11ty-website](https://github.com/11ty/11ty-website). This URL will have the original project organization name followed by the repository like `11ty/11ty-website`.
+To make sure your local copy of the project (the fork) is up to date with the original upstream repository. Grab the `.git` SSH/HTTPS URL from the original repository [11ty/11ty-website](https://github.com/11ty/11ty-website). This URL will have the original project organization name followed by the repository like `11ty/11ty-website`.
 
 Add the upstream repository as a remote:
 
@@ -126,4 +126,4 @@ The above code snippet is an example of what title and description I would typic
 
 Ignore the "Title:" and "Desc:" as I only included those only as a helpful reminder of what you will see on GitHub.
 
-After you submit the PR, you have sucessfully completed creating and submitting a pull request. Congrats! Now all you can do is wait to hear back from the project maintainer. If the PR needs changes, the maintainer will "Request Changes". If not, your PR will be sucessfully merged into the project. This might seem like quite the process, but these are the preliminary steps to becoming comfortable with contributing to open-source software.
+After you submit the PR, you have sucessfully completed creating and submitting a pull request. Congrats! Now all you can do is wait to hear back from the project maintainer. If the PR needs changes, the maintainer will "Request Changes". If not, your PR will be sucessfully merged into the project. This might seem like quite the process, but these are the necessary steps to becoming comfortable with contributing to open-source software.
