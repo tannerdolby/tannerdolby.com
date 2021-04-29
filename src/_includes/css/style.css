@@ -1306,6 +1306,10 @@ main-container .main-content .about-banner {
     max-width: 85ch;
 }
 
+.post-wrap .date {
+    margin-bottom: .5rem;
+}
+
 .main-content .my-posts .clear-filter-btn,
 .clear-filter-btn {
     margin-left: 2rem;
