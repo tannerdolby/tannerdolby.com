@@ -23,7 +23,6 @@ body {
     /* background: #fdf0de; */
     background: #fff;
     background: rgb(252, 252, 252);
-    /* color: #3e3355 !important; */
     overflow-x: hidden;
     overflow-y: auto;
     line-height: 1.65;
@@ -548,6 +547,7 @@ a:hover {
 }
 
 #post-content .main-content {
+    display: grid;
     margin-left: auto;
     margin-right: auto;
     grid-template-columns: repeat(6, 1fr);
@@ -625,7 +625,6 @@ a:hover {
 }
 
 .main-container .main-content {
-    display: grid;
     max-width: 1150px;
 }
 
@@ -753,7 +752,7 @@ main-container .main-content .about-banner {
 
 .main-container .projects .project-tile .project-details .links .tile-link {
     padding: .5rem;
-    border-radius: .2rem;
+    border-radius: .15rem;
     text-decoration: none;
     color: #444;
     border: .05rem solid lightgray;
@@ -767,7 +766,7 @@ main-container .main-content .about-banner {
     cursor: pointer;
     color: #222;
     border: .05rem solid transparent;
-    background: hsl(0, 0%, 21%);
+    background: hsl(0, 0%, 23%);
     color: #fff;
 }
 
@@ -1086,6 +1085,27 @@ main-container .main-content .about-banner {
     background: rgb(13, 103, 206);
 }
 
+.social-icons ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 0;
+}
+
+.social-icons ul li:first-child {
+    margin-right: .5rem;
+}
+
+.social-icons ul li:not(:first-child) {
+    margin: 0 .5rem;
+}
+
+.social-icons img {
+    width: 1.7rem;
+    height: 1.7rem;
+}
+
 .footer-main {
     margin-top: auto;
     position: relative;
@@ -1368,7 +1388,7 @@ table {
 main .art {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
-    gap: 1rem;
+    gap: .5rem;
     margin: 3rem auto 1rem auto;
 }
 

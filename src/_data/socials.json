@@ -1,30 +1,37 @@
 [
     {
-        "name": "GitHub",
-        "url": "https://github.com/tannerdolby",
-        "src": "/images/github.svg",
-        "alt": "Link to my Github account"
-    },
-    {
         "name": "Twitter",
         "url": "https://twitter.com/tannerdolby",
         "src": "/images/twitter.svg",
-        "alt": "Link to my Twitter account"
+        "alt": "Link to my Twitter account",
+        "order": 1
+    },
+    {
+        "name": "GitHub",
+        "url": "https://github.com/tannerdolby",
+        "src": "/images/github.svg",
+        "alt": "Link to my Github account", 
+        "order": 2
     },
     {
         "name": "CodePen",
         "url": "https://codepen.io/tannerdolby",
         "src": "/images/codepen-logo.svg",
-        "alt": "Link to my CodePen account"
+        "alt": "Link to my CodePen account",
+        "order": 3
     },
     {
         "name": "LinkedIn",
         "url": "https://linkedin.com/in/tanner-dolby",
         "src": "/images/linkedinFooter.svg",
-        "alt": "Link to my LinkedIn account"
+        "alt": "Link to my LinkedIn account",
+        "order": 4
     },
     {
         "name": "StackOverflow",
-        "url": "https://stackoverflow.com/users/11389581/tanner-dolby"
+        "url": "https://stackoverflow.com/users/11389581/tanner-dolby",
+        "src": "/images/stack-overflow.svg",
+        "alt": "Link to my StackOverflow account",
+        "order": 5
     }
 ]
