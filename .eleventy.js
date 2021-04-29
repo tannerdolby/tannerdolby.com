@@ -79,7 +79,7 @@ module.exports = (eleventyConfig) => {
         // exlcuding the 3 most recent posts
         const allSorted = collections.getAllSorted().reverse();
         let rand = random(3, 8)
-        return allSorted.slice(rand, rand + 7);
+        return allSorted.slice(4, 9);
     })
 
     // Minify JS with terser
