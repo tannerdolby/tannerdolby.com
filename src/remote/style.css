@@ -1,0 +1,8 @@
+/* Remote CSS file to be fetched for socialImg eleventy plugin demo */
+body {
+    background: #222;
+}
+
+h1 {
+    color: #fff;
+}
