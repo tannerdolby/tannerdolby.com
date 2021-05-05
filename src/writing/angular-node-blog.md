@@ -54,6 +54,9 @@ Using a service within the Angular code, we can fetch data from the API endpoint
 
 When you deploy your own site using this template on Netlify, you must update the `/assets/endpoints.ts` file which holds all of the API endpoint URLs. The `prod` fields take the highest priority where the other two can be left out in terms of the app running in production after deployment.
 
+{% filename "endpoints.ts" %}
+
+{% raw %}
 ```ts
 export const endpoints = {
     "prod": {
@@ -75,6 +78,7 @@ export const endpoints = {
     }
 };
 ```
+{% endraw %}
 
 <h2 class="post-heading">What endpoints are available?</h2>
 
