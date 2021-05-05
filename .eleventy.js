@@ -41,6 +41,7 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.addPassthroughCopy("./src/_includes/css");
     eleventyConfig.addPassthroughCopy("./src/images");
     eleventyConfig.addPassthroughCopy("./src/_includes/js");
+    eleventyConfig.addPassthroughCopy("./src/remote");
     
     // add RSS feed 11ty plugin
     eleventyConfig.addPlugin(pluginRSS);
@@ -75,6 +76,7 @@ module.exports = (eleventyConfig) => {
         return collection.getFilteredByGlob("src/writing/*.md");
     });
 
+    // replace this
     eleventyConfig.addCollection("allContent", function(collections) {
         // exlcuding the 3 most recent posts
         const allSorted = collections.getAllSorted().reverse();
