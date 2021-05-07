@@ -76,14 +76,6 @@ module.exports = (eleventyConfig) => {
         return collection.getFilteredByGlob("src/writing/*.md");
     });
 
-    // replace this
-    eleventyConfig.addCollection("allContent", function(collections) {
-        // exlcuding the 3 most recent posts
-        const allSorted = collections.getAllSorted().reverse();
-        let rand = random(3, 8)
-        return allSorted.slice(4, 11);
-    })
-
     // Minify JS with terser
     eleventyConfig.addNunjucksAsyncFilter("jsmin", async function (
         code,
