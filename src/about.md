@@ -13,13 +13,6 @@ Hi there! My name is Tanner Dolby. I'm a Software Engineer and Mathematician bas
 
 I focus on using semantic HTML paired with modern CSS to build responsive and fast websites. Recently, I've been spending the majority of my time learning how to develop applications using the MEAN stack. I spend my free time learning, building side-projects, creating fun CSS illustrations or making front-end demos on [CodePen](https://codepen.io/tannerdolby). With the JAMstack movement on the rise, I've taken an interest in Static Site Generators (SSG). In particular [Eleventy](https://11ty.dev), which this website is built with.
 
-<div class="social-icons">
-{% for icon in socials %}
-- [![{{ icon.name }}]({{ icon.src }})]({{ icon.url }})
-{% endfor %}
-</div>
-
-
 <h2 style="margin-top: .5rem;">Interests</h2>
 
 I like to write about technology and web development. I'm currently fixated on learning more about the MEAN stack, Static Site Generators, JavaScript, Go Lang, and Web performance. If you want to see me write about a specific topic or concept, feel free to message me about it. Lately, I've been very interested in CSS illustrations and SVG. I may write about these hobbies in future posts.
@@ -34,3 +27,9 @@ During my time at ASU, I worked as an Undergraduate Researcher and Supplemental 
 ## Need More?
 
 I'm available for all things web related: web development, technical writing, static sites, JAMstack, accessibility, UI design and more. Feel free to [contact me](/contact/) if you'd like to chat!
+
+<div class="social-icons">
+{% for icon in socials %}
+- [![{{ icon.name }}]({{ icon.src }})]({{ icon.url }})
+{% endfor %}
+</div>

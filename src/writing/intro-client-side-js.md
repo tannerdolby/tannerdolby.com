@@ -39,7 +39,7 @@ After watching the video, I was captivated by the fact you could virtually creat
 
 <h2 class="post-heading">What is the DOM?</h2>
 
-From [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction), The Document Object Model (DOM) is the data representation of the objects that comprise the structure and content of a document on the web. The DOM represents the HTML or XML document so that programming languages can easily connect to the page.
+From [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction), The Document Object Model (DOM) is the data representation of the objects that comprise the structure and content of a document on the web. The DOM represents the HTML or XML document so that programming languages can easily connect to the page. Think of the DOM as a large tree like structure with the `document` (root node) at the top of the tree with the `<html>` (root element) on the next branch and the rest of the HTML elements to follow.
 
 <h2 class="post-heading">Build the DOM Tree</h2>
 
