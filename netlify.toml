@@ -1,5 +1,6 @@
 [build]
-    # Directory (relative to root of your repo) that contains the deploy-ready HTML files
+
+    # Build output directory
     publish = "_site"
 
     # Build command
