@@ -68,7 +68,8 @@ code {
     white-space: nowrap;
     color: #212121;;
     padding: .2rem .15rem .05rem .2rem;
-    border-radius: .1rem;
+    padding: 3px 4px 1px 4px;
+    border-radius: 3px;
     margin: 0 .1rem;
     background: rgb(232, 232, 232);
     background: #eee;
@@ -1102,8 +1103,8 @@ main-container .main-content .about-banner {
 }
 
 .social-icons img {
-    width: 1.7rem;
-    height: 1.7rem;
+    width: 25px;
+    height: 25px;
 }
 
 .footer-main {
@@ -1653,7 +1654,6 @@ main .art img {
 }
 @media (max-width: 900px) {
     .featured-art .feat-art-list li {
-        /* margin-bottom: 1rem; */
         transform: none !important;
     }
 }
@@ -1694,17 +1694,18 @@ main .art img {
         gap: .5rem;
     }
 
-    .featured-art  h2 {
-        text-align: center;
-    }
-
     .featured-art .feat-art-wrapper {
         padding: 0;
+    }
+
+    .feat-art-wrapper h2 {
+        padding-left: 1rem;
     }
 
     .featured-art .feat-art-list li {
         padding-right: 0;
     }
+
     p, .prev-next li a {
         font-size: 1.0625rem;
     }
