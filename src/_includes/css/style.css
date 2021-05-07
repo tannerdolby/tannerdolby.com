@@ -638,6 +638,7 @@ a:hover {
     grid-template-columns: repeat(6, 1fr);
     margin: 2rem auto 1rem auto;
     max-width: 1150px;
+    max-width: 85ch;
     padding: 0 1rem;
 }
 
@@ -1103,8 +1104,8 @@ main-container .main-content .about-banner {
 }
 
 .social-icons img {
-    width: 25px;
-    height: 25px;
+    width: 26px;
+    height: 26px;
 }
 
 .footer-main {
@@ -1115,7 +1116,7 @@ main-container .main-content .about-banner {
     padding-bottom: 1rem;
     background: inherit;
     border-top: .275rem solid lightgray;
-    border-top: .235rem solid lightgray;
+    border-top: .25rem solid lightgray;
     background: inherit;
 }
 
@@ -1550,7 +1551,7 @@ main .art img {
     margin-top: 2.5rem;
     margin-bottom: 2.75rem;
     width: 100%;
-    max-width: 65ch;
+    max-width: 50ch;
 }
 
 #search_svg {
