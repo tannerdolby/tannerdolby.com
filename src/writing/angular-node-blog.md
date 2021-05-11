@@ -14,7 +14,7 @@ preview: I wanted to use Angular and Node.js for creating a blog template simila
 
 <h2 class="post-heading">How does it work?</h2>
 
-Coming from a background of using Static Site Generators (Eleventy), I've missed being able to write a bunch of blog posts and put their contents in a *single* post template. Where you have one directory of blog posts, could be Markdown files, HTML files, etc. Then those pages are fed to a "layout", which is essentially just an HTML page which acts as a template or base layout for content that will be added to the page.
+Coming from a background of using Static Site Generators (Eleventy), I've missed being able to write a bunch of blog posts and put their contents in a *single* post template. Where you have one directory of blog posts, could be Markdown files, HTML files, etc. Then those pages are fed to a "layout", which is essentially just an HTML page which acts as a template or base layout for template content that will be added to the page.
 
 With Angular, I thought it wouldn't make much sense to create a component for every blog post, that just seems like unecessary work as the only part that really matters is the Markup or `name.component.html` template file. Unless you needed the HTML files to have specific metadata then it might make sense to have each post be a full blown component. 
 
