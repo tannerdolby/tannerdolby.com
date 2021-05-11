@@ -292,7 +292,7 @@ a:hover {
 
 .main-container .welcome-container {
     padding: 2.75rem 0 3.25rem;
-    background: inherit;
+    background: #eee;
     margin: 0 auto;
 } 
 
@@ -548,14 +548,9 @@ a:hover {
 }
 
 #post-content .main-content {
-    display: grid;
     margin-left: auto;
     margin-right: auto;
-    grid-template-columns: repeat(6, 1fr);
-}
-
-#post-content .right-sidebar {
-    grid-column: 5 / 7;
+    max-width: 90ch;
 }
 
 #main-contact {
