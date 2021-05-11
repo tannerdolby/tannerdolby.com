@@ -406,7 +406,7 @@ a:hover {
 }
 
 .prev-next {
-    grid-column: 1 / 7;
+    /* grid-column: 1 / 7; */
     margin-top: 3rem;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -474,7 +474,7 @@ a:hover {
     margin-top: 1.5rem;
     max-width: 80ch;
     padding: 0 1rem;
-    grid-column: 1 / 6;
+    /* grid-column: 1 / 6; */
 }
 
 .share .strong-share {
@@ -633,7 +633,6 @@ a:hover {
     grid-template-columns: repeat(6, 1fr);
     margin: 2rem auto 1rem auto;
     max-width: 1150px;
-    max-width: 85ch;
     padding: 0 1rem;
 }
 
@@ -1274,7 +1273,6 @@ main-container .main-content .about-banner {
     padding-left: 1rem;
     padding-right: 1rem;
     max-width: 90ch;
-    grid-column: 1 / 5;
 }
 
 #post p {
