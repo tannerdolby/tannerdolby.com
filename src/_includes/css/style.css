@@ -544,7 +544,7 @@ a:hover {
 
 #post-content {
     margin-bottom: 6rem;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 #post-content .main-content {
@@ -1636,12 +1636,7 @@ main .art img {
         display: none;
     }
 
-    #post-content {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    #post, .main-content .post-header, .share {
+    .main-content .post-header, .share {
         grid-column: 1 / 7;
     }
 
