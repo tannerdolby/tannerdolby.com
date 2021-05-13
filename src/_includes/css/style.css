@@ -550,7 +550,7 @@ a:hover {
 #post-content .main-content {
     margin-left: auto;
     margin-right: auto;
-    max-width: 90ch;
+    max-width: 85ch;
 }
 
 #main-contact {
@@ -1272,7 +1272,7 @@ main-container .main-content .about-banner {
 #post {
     padding-left: 1rem;
     padding-right: 1rem;
-    max-width: 90ch;
+    max-width: 85ch;
 }
 
 #post p {
