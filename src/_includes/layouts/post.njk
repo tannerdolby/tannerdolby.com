@@ -74,7 +74,6 @@ name: Tanner Dolby
                         <span>Twitter</span>
                     </a>
                 </div>
-                {{ collections.posts.length }}
                 {% set previousPost = collections.posts | getPreviousCollectionItem(page) %}
                 {% set nextPost = collections.posts | getNextCollectionItem(page) %}
                 <nav class="prev-next">
