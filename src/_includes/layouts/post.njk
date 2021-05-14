@@ -1,21 +1,32 @@
 ---
 twitterShare: https://twitter.com/share?
-image: https://tannerdolby.com/images/arch-spiral-large.jpg
-image_alt: An Archimedean Spiral
+image: https://tannerdolby.com/images/headshot3.png
+image_alt: Headshot of Tanner
 url: https://tannerdolby.com
-twitter: "@tannerdolby"
+twitter: tannerdolby
 name: Tanner Dolby
 ---
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
+    {% set imgUrl %}
+        {% socialImg 
+            theme=1,
+            title=title,
+            img=image,
+            initials="TD",
+            inputDir="./src",
+            outputPath="/social-share/",
+            overwrite=true
+        %}
+    {% endset %}
     <head>
         {% metagen 
             title=title,
             desc=preview,
             url=url + page.url,
-            img=image,
+            img=imgUrl,
             img_alt=image_alt,
-            twitterHandle=twitter,
+            twitter_handle=twitter,
             name=name
         %}
         <meta name="keywords" content="{{ site.doc_metadata.keywords }}">
@@ -62,6 +73,7 @@ name: Tanner Dolby
                         <span>Twitter</span>
                     </a>
                 </div>
+                {{ collections.posts.length }}
                 {% set previousPost = collections.posts | getPreviousCollectionItem(page) %}
                 {% set nextPost = collections.posts | getNextCollectionItem(page) %}
                 <nav class="prev-next">
