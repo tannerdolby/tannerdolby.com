@@ -28,7 +28,7 @@ git checkout 563-some-bug-fix
 That's it. Fetch changes from a local or remote feature branch and switch branches to the newly created branch from the fetch.
 
 
-<h2 class="post-head">Fetch a remote PR</h2>
+<h2 class="post-heading">Fetch a remote branch</h2>
 
 If your pulling into a feature branch from a remote repository, use `upstream` instead of `origin`.
 
