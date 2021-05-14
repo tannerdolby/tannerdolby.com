@@ -1,6 +1,6 @@
 ---
 title: Creating a blog template with Angular and Node.js
-date: 2021-04-02
+date: 2021-02-10
 datetime: 2021-04-02 00:00:00
 permalink: "/writing/{{ title | slug }}/"
 tags:
