@@ -5,10 +5,9 @@ const dateFilter = require("nunjucks-date-filter");
 const pluginRSS = require("@11ty/eleventy-plugin-rss");
 const markdownIt = require("markdown-it");
 const metagen = require("eleventy-plugin-metagen");
+const socialImg = require("eleventy-plugin-social-img");
 
 module.exports = (eleventyConfig) => {
-
-    eleventyConfig.addPlugin(metagen);
 
     const markdownOptions = {
         html: true,
@@ -42,6 +41,10 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.addPassthroughCopy("./src/images");
     eleventyConfig.addPassthroughCopy("./src/_includes/js");
     eleventyConfig.addPassthroughCopy("./src/remote");
+
+    // Add metadata and social share plugins
+    eleventyConfig.addPlugin(metagen);
+    eleventyConfig.addPlugin(socialImg);
     
     // add RSS feed 11ty plugin
     eleventyConfig.addPlugin(pluginRSS);
