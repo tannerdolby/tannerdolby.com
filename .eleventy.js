@@ -41,6 +41,7 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.addPassthroughCopy("./src/images");
     eleventyConfig.addPassthroughCopy("./src/_includes/js");
     eleventyConfig.addPassthroughCopy("./src/remote");
+    eleventyConfig.addPassthroughCopy("./src/social-share/");
 
     // Add metadata and social share plugins
     eleventyConfig.addPlugin(metagen);
