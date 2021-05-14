@@ -13,7 +13,7 @@ Hi there! My name is Tanner Dolby. I'm a Software Engineer and Mathematician bas
 
 I focus on building responsive and fast websites. Recently, I've been learning about Cloud computing and how to develop applications using the MEAN stack. I spend my free time building side-projects, reading, creating fun CSS illustrations or making front-end demos on [CodePen](https://codepen.io/tannerdolby). With the JAMstack movement on the rise, I've taken an interest in Static Site Generators (SSG). In particular [Eleventy](https://11ty.dev), which this website is built with.
 
-<h2 style="margin-top: .5rem;">Interests</h2>
+<h2>Interests</h2>
 
 I like to write about technology and web development. I'm currently fixated on learning more about the MEAN stack, JavaScript, Go Lang, Cloud computing, and Web performance. If you want to see me write about a specific topic or concept, feel free to message me about it. Lately, I've been very interested in CSS illustrations and SVG. I may write about these hobbies in future posts.
 
