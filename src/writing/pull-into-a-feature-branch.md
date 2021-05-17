@@ -51,4 +51,4 @@ git checkout 323-fix-async
 Switched to branch '323-fix-async'
 ```
 
-Now you have a local copy of the changes in a upstream feature branch. Now its time to start revewing and approve or reject those changes! If you want to see what branch your currently on, use `git branch`. 
+Now you have a local copy of the changes in a upstream feature branch, its time to start revewing and approve or reject those changes! If you want to see what branch your currently on, use `git branch`.
