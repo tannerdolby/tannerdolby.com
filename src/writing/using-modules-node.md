@@ -11,7 +11,7 @@ preview: Files can become quite large in a Node.js project. Modules provide deve
 
 {{ preview }}
 
-<h2>What is a module?</h2>
+<h2 class="post-heading">What is a module?</h2>
 
 Modules in Node.js are essentially just files. They provide a place for related code to be stored and exported for reuse throughout the application. Each module will usually have it's own context (ie data, code). The reason why every module has it's own context is because it can't interfere with other modules or pollute the global scope by defining too many variables that are globally accessible.
 
