@@ -1051,6 +1051,7 @@ main-container .main-content .about-banner {
 
 .contact-wrapper .socials-list li:nth-child(n) {
     margin-right: 1rem;
+    margin-bottom: 1rem;
 }
 
 .twitter-block {
