@@ -1583,6 +1583,7 @@ main .art img {
 .top-level .stars {
     display: flex; 
     align-items: center;
+    margin-left: 1rem;
 }
 
 .top-level .stars .star-row {
@@ -1750,6 +1751,12 @@ main .art img {
 @media (max-width: 550px) {
     .footer-content .footer-flex ul {
         flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 375px) {
+    .main-container .projects .project-grid {
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     }
 }
 
