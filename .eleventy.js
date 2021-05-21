@@ -6,6 +6,7 @@ const pluginRSS = require("@11ty/eleventy-plugin-rss");
 const markdownIt = require("markdown-it");
 const metagen = require("eleventy-plugin-metagen");
 const socialImg = require("eleventy-plugin-social-img");
+const respimg = require("eleventy-plugin-sharp-respimg");
 
 module.exports = (eleventyConfig) => {
 
@@ -46,6 +47,7 @@ module.exports = (eleventyConfig) => {
     // Add metadata and social share plugins
     eleventyConfig.addPlugin(metagen);
     eleventyConfig.addPlugin(socialImg);
+    eleventyConfig.addPlugin(respimg);
     
     // add RSS feed 11ty plugin
     eleventyConfig.addPlugin(pluginRSS);
@@ -127,6 +129,10 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.addShortcode("getYear", function() {
         const year = new Date().getFullYear();
         return `${year}`;
+    });
+
+    eleventyConfig.addFilter("sortRecent", function(arr) {
+        return arr.filter(a => a.recent).sort((a,b) => a.order - b.order);
     });
 
     return {
