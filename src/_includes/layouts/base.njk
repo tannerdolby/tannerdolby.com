@@ -8,6 +8,16 @@ metadata:
   twitter_card_type: summary_large_image
   twitter_handle: tannerdolby
   name: Tanner Dolby
+images:
+  inputDir: ./src
+  imgDir: /images/
+  widths:
+   - 320
+   - 640
+   - 1024
+  sizes: "(min-width: 450px) 33.3vw, 100vw"
+  width: 640
+  height: 400
 ---
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
@@ -50,22 +60,23 @@ metadata:
                 <div class="feat-art-wrapper">
                     <h2>Latest Art</h2>
                     <ul class="feat-art-list" style="padding-left: 0; list-style: none;">
-                        {% for drawing in art %}
-                            {% if drawing.recent %}
+                        {% for drawing in art | sortRecent(art) %}
                             <li>
                                 <a href="/art/#{{ drawing.id }}" aria-label="{{ drawing.name }}">
-                                    <picture>
-                                        <source 
-                                            type="image/webp" 
-                                            srcset="{{ drawing.image.large.webp }} {{ drawing.image.large.width }},
-                                                    {{ drawing.image.med.webp }} {{ drawing.image.med.width }},
-                                                    {{ drawing.image.small.webp }} {{ drawing.image.small.width }}"
-                                            sizes="(min-width: 450px) 33.3vw, 100vw">
-                                        <img src="{{ drawing.image.fallback_src }}" alt="{{ drawing.image.alt }}" loading="lazy" width="640" height="400">
-                                    </picture>
+                                    {% respimg 
+                                        src=drawing.image.filename,
+                                        alt=drawing.image.alt,
+                                        widths=images.widths,
+                                        sizes=images.sizes,
+                                        inputDir=images.inputDir,
+                                        imgDir=images.imgDir,
+                                        className="featured-art-item",
+                                        id=images.id,
+                                        width=images.width,
+                                        height=images.height
+                                    %}
                                 </a>
                             </li>
-                            {% endif %}
                         {% endfor %}
                     </ul>
                 </div>

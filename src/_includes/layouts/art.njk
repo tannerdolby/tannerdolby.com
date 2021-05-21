@@ -1,3 +1,12 @@
+---
+widths:
+- 320
+- 640
+- 1024
+sizes: "(min-width: 450px) 33.3vw, 100vw"
+class: art-item
+imgDir: "/images/"
+---
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
     <head>
@@ -29,10 +38,23 @@
                 {{ content | safe }}
             </header>
             <section class="art">
+           
             {% for drawing in art %}
                 <div class="art-details">
                     <a href="{{ drawing.url }}" aria-label="{{ drawing.aria_label }}">
-                        <picture>
+                    {% respimg
+                        src=drawing.image.filename,
+                        alt=drawing.image.alt,
+                        inputDir="./src",
+                        imgDir=imgDir,
+                        widths=widths,
+                        sizes=sizes,
+                        className=class,
+                        id=drawing.id,
+                        width=1024,
+                        height=768
+                    %}
+                        <!-- <picture>
                             <source 
                                 type="image/webp"
                                 srcset="{{ drawing.image.large.webp }} {{ drawing.image.large.width }},
@@ -46,13 +68,13 @@
                                 loading="lazy"
                                 width="750"
                                 height="600">
-                        </picture>
+                        </picture> -->
                     </a>
-                    <div class="drawing-info">
-                        {# <h2 class="h3 featured-info">{{ drawing.name }}</h2> #}
-                        {# <p class="created">{{ drawing.date_created }} - <a href="{{ drawing.credit }}" aria-label="Link to photo credit for {{ drawing.name }}">Photo Credit</a></p> #}
-                        {# <p>{{ drawing.desc }}</p> #}
-                    </div>
+                    <!-- <div class="drawing-info">
+                        <h2 class="h3 featured-info">{{ drawing.name }}</h2>
+                        <p class="created">{{ drawing.date_created }} - <a href="{{ drawing.credit }}" aria-label="Link to photo credit for {{ drawing.name }}">Photo Credit</a></p>
+                        <p>{{ drawing.desc }}</p> 
+                    </div> -->
                 </div>
             {% endfor %}
             </section>
