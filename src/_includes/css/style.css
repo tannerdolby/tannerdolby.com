@@ -1021,6 +1021,7 @@ main-container .main-content .about-banner {
     list-style: none;
     padding-left: 0;
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
 }
@@ -1761,10 +1762,6 @@ main .art img {
 }
 
 @media (max-width: 365px) {
-    .socials-list {
-        flex-direction: column;
-    }
-
     .socials-list li a {
         margin: 1rem 0;
     }
