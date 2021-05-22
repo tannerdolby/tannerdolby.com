@@ -15,7 +15,7 @@ preview: Files can become quite large in a Node.js project. Modules provide deve
 
 Modules in Node.js are essentially just files. They provide a place for related code to be stored and exported for reuse throughout the application. Each module will usually have it's own context (ie data, code). The reason why every module has it's own context is because it can't interfere with other modules or pollute the global scope by defining too many variables that are globally accessible.
 
-> If you don't want code in a file to be used elsewhere or shared between files, simply don't use `module.exports` as you don't wish to export any code from that file.
+If you don't want code in a file to be used elsewhere or shared between files, simply don't use `module.exports` as you don't wish to export any code from that file.
 
 Below is a demo of sorts outlining one large file `server.js`, which will have it's code separated into "modules". These modules will contain related code extracted from `server.js` that can be exported and reused throughout the application. 
 
@@ -35,7 +35,7 @@ Each of the files connected to `server.js` in the diagram are considered "module
 
 Another file, `file2.js` might contain code for authenticating logged in users. This file would have `jsonwebtoken` (JWT) and potentially `bcrypt` to verify users JWT token and compare hashed passwords.
 
-The great thing about developing with Node.js, is that we can make our code "modular" with the help [modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules). Instead of having one gigantic server file, create modules containing specific functionalities for the server and then export that module into the giant server file. Potentially reducing the main files size and making your code more modular. 
+The great thing about developing with Node.js, is that we can make our code "modular" with the help [modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules). Instead of having one gigantic server file, create modules containing specific functionalities for the server and then import that module into the server file. Potentially reducing the main files size and making your code more modular. 
 
 <h2 class="post-heading">How to create a module</h2>
 
