@@ -545,7 +545,7 @@ a:hover {
 #post-content .main-content {
     margin-left: auto;
     margin-right: auto;
-    max-width: 90ch;
+    max-width: 85ch;
 }
 
 #main-contact {
@@ -755,7 +755,6 @@ main-container .main-content .about-banner {
 .main-container .projects .project-tile .project-details .links .tile-link:hover,
 .main-container .projects .project-tile .project-details .links .tile-link:focus  {
     cursor: pointer;
-    color: #222;
     border: .05rem solid transparent;
     background: hsl(0, 0%, 23%);
     color: #fff;
@@ -1552,10 +1551,7 @@ main .art img {
 
 .grid-layout {
     display: grid;
-    /* grid: auto-flow dense / 15rem 80ch 1fr; */
     grid: 15rem 80ch 1fr / auto-flow;
-    /* grid-template-rows: repeat(auto-fit, 1fr);
-    grid-template-columns: 20rem 15rem 1fr; */
 }
 
 .top-nav {
@@ -1754,6 +1750,16 @@ main .art img {
 @media (max-width: 450px) {
     main .art {
         grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+    }
+}
+
+@media (max-width: 400px) {
+    nav .nav-menu {
+        flex-wrap: wrap;
+    }
+
+    nav .nav-menu li {
+        margin-bottom: .75rem;
     }
 }
 
