@@ -1,19 +1,6 @@
 const post = document.querySelector("#post");
-// console.log(post);
-
 const headings = [...document.getElementsByClassName("post-heading")];
-console.log(headings);
-
 let stack = [];
-
-function getHeadings(collection) {
-    let arr = [];
-    collection.forEach(heading => {
-        let headingData = {
-            
-        }
-    });
-}
 
 let help = headings.forEach(item => {
     let data = {
@@ -24,10 +11,7 @@ let help = headings.forEach(item => {
     stack.push(data);
     return stack;
 });
-// console.log(helper.title);
-// stack.push(helper.title);
 
-console.log(headers);
 const div = document.createElement("div");
 div.setAttribute("class", "table-of-contents");
 
