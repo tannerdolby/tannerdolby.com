@@ -1050,7 +1050,6 @@ main-container .main-content .about-banner {
 
 .contact-wrapper .socials-list li:nth-child(n) {
     margin-right: 1rem;
-    margin-bottom: 1rem;
 }
 
 .twitter-block {
@@ -1133,6 +1132,10 @@ main-container .main-content .about-banner {
     flex-wrap: wrap;
 }
 
+.footer-nav .column.front {
+    margin-bottom: 1rem;
+}
+
 .footer-content .footer-flex .pad-left {
     padding-left: .5rem;
 }
@@ -1174,6 +1177,7 @@ main-container .main-content .about-banner {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    margin-bottom: 1rem;
 }
 
 .column:first-child {
@@ -1211,8 +1215,6 @@ main-container .main-content .about-banner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 1rem;
-    /* background-color: #1d1e1f; */
 }
 
 
@@ -1385,7 +1387,7 @@ table {
 }
 
 #main {
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
     overflow: auto;
 }
 
@@ -1561,10 +1563,6 @@ main .art img {
 .grid-layout {
     display: grid;
     grid: 15rem 80ch 1fr / auto-flow;
-}
-
-.top-nav {
-    margin-top: .15rem;
 }
 
 .side-nav {
@@ -1759,6 +1757,13 @@ main .art img {
 @media (max-width: 450px) {
     main .art {
         grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+    }
+}
+
+@media (max-width: 425px) {
+    .top-nav .nav-wrapper .nav-menu li a {
+        margin-left: 0;
+        margin-right: 1rem;
     }
 }
 
