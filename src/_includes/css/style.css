@@ -115,12 +115,12 @@ h1 {
     color: #222;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5,
+.h1, .h2, .h3, .h4, .h5 {
     font-family: "Open Sans", "Source Sans Pro", Helvetica,Arial, sans-serif;
 }
 
 h2,h3,h4 {
-    /* font-family: "Noto Serif", var(--system-font); */
     color: #212121;
     color: #333;
     font-weight: 700;
@@ -402,10 +402,12 @@ a:hover {
 }
 
 .prev-next {
-    /* grid-column: 1 / 7; */
     margin-top: 3rem;
     padding-left: 1rem;
     padding-right: 1rem;
+    max-width: 90ch;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     flex-wrap: wrap;
 }
@@ -425,7 +427,7 @@ a:hover {
     border-top: .45rem solid #212a2f;
     background: #fff;
     padding: 1.25rem;
-    max-width: 33.5ch;
+    width: 16rem;
 }
 
 .prev-next .next-post {
@@ -468,7 +470,9 @@ a:hover {
 
 .share {
     margin-top: 1.5rem;
-    max-width: 80ch;
+    max-width: 90ch;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0 1rem;
     /* grid-column: 1 / 6; */
 }
@@ -545,7 +549,8 @@ a:hover {
 #post-content .main-content {
     margin-left: auto;
     margin-right: auto;
-    max-width: 85ch;
+    /* max-width: 85ch; */
+
 }
 
 #main-contact {
@@ -1113,6 +1118,7 @@ main-container .main-content .about-banner {
 .footer-content {
     display: flex;
     flex-direction: column;
+    margin-top: .5rem;
     margin-left: auto;
     margin-right: auto;
     max-width: 1150px;
@@ -1174,10 +1180,11 @@ main-container .main-content .about-banner {
     margin-right: 1.5rem;
 }
 
-.column h3 {
+.column .ft-nav {
     color: rgb(48, 47, 47);
     margin-bottom: .4rem;
     font-size: clamp(1rem, 4vw, 1.15rem);
+    font-weight: 700;
 }
 
 .column .links {
@@ -1268,7 +1275,8 @@ main-container .main-content .about-banner {
 #post {
     padding-left: 1rem;
     padding-right: 1rem;
-    max-width: 85ch;
+    margin: 0 auto;
+    max-width: 90ch;
 }
 
 #post p {
@@ -1294,6 +1302,7 @@ main-container .main-content .about-banner {
 .post-wrap {
     padding-left: 1rem;
     padding-right: 1rem;
+    margin: 0 auto;
     max-width: 90ch;
 }
 
