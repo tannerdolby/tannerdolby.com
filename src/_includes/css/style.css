@@ -17,7 +17,6 @@ html {
 }
 
 body {
-    /* font-family: "Noto Serif", var(--system-font); */
     background: #f6f6f6;
     background: #f7f7f7;
     /* background: #fdf0de; */
@@ -43,7 +42,7 @@ blockquote {
 }
 
 p {
-    font-family: 'Helvetica Neue', sans-serif !important;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
 }
 
 blockquote p {
@@ -356,7 +355,6 @@ a:hover {
 .main-container .welcome-container .home-banner h1 {
     font-size: 3em;
     font-size: clamp(2.5em, 10vw, 3em);
-    /* color: #ddd; */
 }
 .main-container .welcome-container .home-banner p {
     font-size: 1.4em;
@@ -365,8 +363,6 @@ a:hover {
     margin-top: .75rem;
     margin-bottom: 2.5rem;
     max-width: 60ch;
-    /* color: rgb(252, 250, 250);
-    color: #ddd; */
 }
 
 .home-banner .hero-content .hero {
@@ -544,7 +540,6 @@ a:hover {
 
 #post-content {
     margin-bottom: 6rem;
-    /* overflow-x: hidden; */
 }
 
 #post-content .main-content {
@@ -1279,7 +1274,7 @@ main-container .main-content .about-banner {
 
 #post p {
     font-size: 1.185rem;
-    line-height: 1.85;
+    line-height: 1.8;
 }
 
 #post h1 {
