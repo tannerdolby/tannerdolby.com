@@ -1404,6 +1404,12 @@ main .art .art-details .drawing-info {
     height: 100%;
 }
 
+.art-details img:hover,
+.art-details img:focus {
+    -webkit-filter: contrast(93%);
+    filter: contrast(93%);
+}
+
 main .art img {
     object-fit: cover;
     height: 100%;
@@ -1748,6 +1754,12 @@ main .art img {
 @media (max-width: 550px) {
     .footer-content .footer-flex ul {
         flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 450px) {
+    main .art {
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     }
 }
 
