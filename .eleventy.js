@@ -10,6 +10,8 @@ const respimg = require("eleventy-plugin-sharp-respimg");
 
 module.exports = (eleventyConfig) => {
 
+    markdownTemplateEngine: "njk";
+
     const markdownOptions = {
         html: true,
         breaks: true,
@@ -43,6 +45,8 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.addPassthroughCopy("./src/_includes/js");
     eleventyConfig.addPassthroughCopy("./src/remote");
     eleventyConfig.addPassthroughCopy("./src/social-share/");
+
+    eleventyConfig.addWatchTarget("./src/_includes/sass");
 
     // Add metadata and social share plugins
     eleventyConfig.addPlugin(metagen);
@@ -133,6 +137,18 @@ module.exports = (eleventyConfig) => {
 
     eleventyConfig.addFilter("sortRecent", function(arr) {
         return arr.filter(a => a.recent).sort((a,b) => a.order - b.order);
+    });
+
+    eleventyConfig.addShortcode("taglist", function(collection) {
+        let tags = [];
+        collection.forEach(item => {
+            tags.push(...item.data.tags); 
+        });
+
+        const uniqueTags = [...new Set(tags)];
+        console.log(uniqueTags);
+
+        return uniqueTags;
     });
 
     return {
