@@ -29,6 +29,7 @@ images:
         <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
         {% set css %}
             {% include "css/style.css" %}
+            {% include "css/cube-demo.css" %}
         {% endset %}
         <style>
            {{ css | cssmin | safe }}
@@ -38,7 +39,13 @@ images:
         <a href="#main" class="skip-link">Skip to main content</a>
         {% include "layouts/nav.njk" %}
         <main class="main-container" id="main" tabindex="-1">
-            {{ content | safe }}
+            <div class="hero-section">
+                {{ content | safe }}
+                {% include "layouts/cube-demo.njk" %}
+            </div>
+            <div class="support">
+                {% include "layouts/cube-demo.njk" %}
+            </div>
             <section class="posts-container">
                 <div class="recent-posts">
                     <h2>Recent Posts</h2>
@@ -106,6 +113,7 @@ images:
                         </li>
                     </ul>
                 </div>
+                
             </section>
         </main>
         {% include "layouts/footer.njk" %}
