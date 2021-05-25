@@ -91,8 +91,8 @@
           transform: rotateY(180deg) translateX(-$x);
 }
 
-$cube-h: 10vw;
-$cube-w: 12vw;
+$cube-h: 11vw;
+$cube-w: 13vw;
 $cube-z: 6vw;
 
 .face {
@@ -105,13 +105,9 @@ $cube-z: 6vw;
   height: $cube-h;
   -webkit-transform: perspective(1000000px) rotateX(70deg) rotateZ(-45deg) scale3d(.6, .6, .6);
           transform: perspective(1000000px) rotateX(70deg) rotateZ(-45deg) scale3d(.6, .6, .6);
-  // top: 80%;
-  // left: -50%;
-  // position: fixed;
-  left: 75%;
+  margin: 0 auto;
   margin-top: 1.5rem;
-  margin-left: auto;
-  margin-right: auto;
+  --b: .3;
   
   &.front, &.back,
   &.right, &.left,
@@ -119,7 +115,7 @@ $cube-z: 6vw;
     background-color: #f06;
     background-color: #13D1C6;
     background-color: #f06;
-    border: .1rem solid #333;
+    border: calc(var(--b) * 1vmin) solid #333;
     background: #eee;
     background: #6eeadb;
     background-color: #f06;
@@ -133,14 +129,14 @@ $cube-z: 6vw;
           transform: perspective(1000000px) rotateX(00deg) rotateZ(0deg) translateZ(12.5vw);
   top: 85%;
   left: -50%;
-  
+  --b: .3;
   &.front, &.back,
   &.right, &.left,
   &.top, &.bottom {
     background-color: #f06;
     background-color: #13D1C6;
     background-color: #f06;
-    border: .1rem solid #333;
+    border: calc(var(--b) *1vmin) solid #333;
     background: #eee;
     background-color: #f06;
   }
@@ -153,9 +149,6 @@ $cube-z: 6vw;
     &.top {
       background: #a374b7;
       background: #f06;
-      // background: #6eeadb;
-      // background: #a41a4d;
-      // background: #3e096f;
     }
     &.front {
       background: #a41a4d;
@@ -172,6 +165,7 @@ $cube-z: 6vw;
   top: 190%;
   left: -90%;
   
+  --b: .3;
   &.front, &.back,
   &.right, &.left,
   &.top, &.bottom {
@@ -179,6 +173,7 @@ $cube-z: 6vw;
     background-color: #13D1C6;
     background-color: #f06;
     border: .1rem solid #333;
+    border: calc(var(--b) * 1vmin) solid #333;
     background: #eee;
     background-color: #f06;
   }
@@ -206,7 +201,7 @@ $cube-z: 6vw;
           transform: perspective(1000000px) rotateX(0deg) rotateZ(0deg) translateZ(0vw);
   top: 40%;
   left: -50%;
-  
+  --b: .3;
   &.front, &.back,
   &.right, &.left,
   &.top, &.bottom {
@@ -214,6 +209,7 @@ $cube-z: 6vw;
     background-color: #13D1C6;
     background-color: #f06;
     border: .1rem solid #333;
+    border: calc(var(--b) * 1vmin) solid #333;
     background: #eee;
   }
     &.top {
@@ -240,6 +236,7 @@ $cube-z: 6vw;
           transform: perspective(1000000px) rotateX(0deg) rotateZ(0deg) translateZ(0vw);
   top: -210%;
   left: -180%;
+  --b: .3;
   
   &.front, &.back,
   &.right, &.left,
@@ -248,6 +245,7 @@ $cube-z: 6vw;
     background-color: #13D1C6;
     background-color: #f06;
     border: .1rem solid #333;
+    border: calc(var(--b) * 1vmin) solid #333;
     background: #160920;
   }
     &.front {
@@ -268,7 +266,7 @@ $cube-z: 6vw;
           transform: perspective(1000000px) rotateX(0deg) rotateZ(0deg) translateZ(15.5vw);
   top: -260%;
   left: -220%;
-  
+  --b: .3;
   &.front, &.back,
   &.right, &.left,
   &.top, &.bottom {
@@ -276,6 +274,7 @@ $cube-z: 6vw;
     background-color: #13D1C6;
     background-color: #f06;
     border: .1rem solid #333;
+    border: calc(var(--b) * 1vmin) solid #333;
     background: #eee;
     background: #d9eef7;
   }
@@ -306,7 +305,7 @@ $cube-z: 6vw;
           transform: perspective(1000000px) rotateX(0deg) rotateZ(0deg) translateZ(0vw);
   top: -250%;
   left: -190%;
-  
+  --b: .3;
   &.front, &.back,
   &.right, &.left,
   &.top, &.bottom {
@@ -314,6 +313,7 @@ $cube-z: 6vw;
     background-color: #13D1C6;
     background-color: #f06;
     border: .1rem solid #333;
+    border: calc(var(--b) * 1vmin) solid #333;
     background: #eee;
   }
     &.top {
@@ -343,6 +343,7 @@ $cube-z: 6vw;
   top: -300%;
   left: -230%;
   
+  --b: .3;
   &.front, &.back,
   &.right, &.left,
   &.top, &.bottom {
@@ -350,6 +351,7 @@ $cube-z: 6vw;
     background-color: #13D1C6;
     background-color: #f06;
     border: .1rem solid #333;
+    border: calc(var(--b) * 1vmin) solid #333;
     background: #fff;
     background-color: #13D1C6;
     
@@ -359,7 +361,6 @@ $cube-z: 6vw;
       background: #eee;
       background: #e9de94;
       background: #212121;
-      
     }
     
     &.left {
@@ -372,7 +373,6 @@ $cube-z: 6vw;
       background-image: radial-gradient(#222 20%, #fefefc 20%);
       background-position: 0 0;
       background-size: 5% 5%;
-      
     }
   }
 }
