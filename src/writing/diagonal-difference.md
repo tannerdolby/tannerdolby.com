@@ -9,9 +9,7 @@ permalink: "/writing/{{ title | slug }}/"
 preview: This article will discuss how to solve the "diagonal difference" problem which involves calculating the diagonal difference of a n x n size square matrix.
 ---
 
-{{ preview }}
-
-This problem can be found on [HackerRank](https://www.hackerrank.com/), a website for practicing common technical interview algorithm questions. 
+{{ preview }} This problem can be found on [HackerRank](https://www.hackerrank.com/), a website for practicing common technical interview algorithm questions. 
 
 <h2 class="post-heading">Getting Started</h2>
 
