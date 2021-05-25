@@ -4,7 +4,7 @@ date: 2021-03-24
 datetime: 2021-03-24 00:00:00 Z
 permalink: "/writing/{{ title | slug }}/"
 tags:
-  - nodejs
+  - node
   - javascript
 preview: Files can become quite large in a Node.js project. Modules provide developers a "modular" approach by putting related code into separate files and then exporting them to be used elsewhere.
 ---
