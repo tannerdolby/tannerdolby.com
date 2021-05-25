@@ -5,7 +5,7 @@ datetime: 2021-04-02 00:00:00
 permalink: "/writing/{{ title | slug }}/"
 tags:
   - angular
-  - nodejs
+  - node
   - javascript
 preview: I wanted to use Angular and Node.js for creating a blog template similar to how I would do things in Eleventy. Create one base template that each of the blog posts content can be displayed on. 
 ---
