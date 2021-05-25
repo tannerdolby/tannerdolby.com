@@ -11,7 +11,7 @@ tags:
 
 > Can you pull into my feature branch and review the changes locally to provide review?
 
-I saw this phrase appear again and again while contributing to Open Source. Before I knew the `git` commands for handling this, I tried thinking about how I would actually get the changes from a remote branch. It seemed straightforward, fetch changes from that upstream branch associated with a specific pull request ID. Turns out it was really quite simple. 
+I saw this phrase appear again and again while contributing to Open Source. Before I knew the `git` commands to accomplish pulling into a feature branch, I tried thinking about how I would actually get the changes from a remote branch. It seemed straightforward, fetch changes from an upstream branch and checkout your own local branch with those fetched changes. Turns out it was really quite simple, but we need to specify an associated pull request ID when fetching the remote branch.
 
 ```git
 git fetch origin pull/id/head:$BRANCHNAME
