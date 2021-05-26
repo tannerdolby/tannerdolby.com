@@ -91,6 +91,9 @@
           transform: rotateY(180deg) translateX(-$x);
 }
 
+// $cube-h: 11vw;
+// $cube-w: 13vw;
+// $cube-z: 6vw;
 $cube-h: 11vw;
 $cube-w: 13vw;
 $cube-z: 6vw;
@@ -107,6 +110,7 @@ $cube-z: 6vw;
           transform: perspective(1000000px) rotateX(70deg) rotateZ(-45deg) scale3d(.6, .6, .6);
   margin: 0 auto;
   margin-top: 1.5rem;
+  max-width: 200px;
   --b: .3;
   
   &.front, &.back,
@@ -375,4 +379,26 @@ $cube-z: 6vw;
       background-size: 5% 5%;
     }
   }
+}
+
+
+@media only screen and (min-width: 1500px) {
+  .hero-section .cube {
+       -webkit-transform: perspective(1000000px) rotateX(70deg) rotateZ(-45deg) scale3d(.5, .5, .5);
+         transform: perspective(1000000px) rotateX(70deg) rotateZ(-45deg) scale3d(.5, .5, .5);
+   }
+}
+
+@media only screen and (min-width: 1700px) {
+  .hero-section .cube {
+       -webkit-transform: perspective(1000000px) rotateX(70deg) rotateZ(-45deg) scale3d(.4, .4, .4);
+        transform: perspective(1000000px) rotateX(70deg) rotateZ(-45deg) scale3d(.4, .4, .4);
+   }
+}
+
+@media only screen and (min-width: 2100px) {
+  .hero-section .cube {
+       -webkit-transform: perspective(1000000px) rotateX(70deg) rotateZ(-45deg) scale3d(.3, .3, .3);
+        transform: perspective(1000000px) rotateX(70deg) rotateZ(-45deg) scale3d(.3, .3, .3);
+   }
 }
