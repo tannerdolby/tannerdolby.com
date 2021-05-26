@@ -11,7 +11,7 @@ layout: about.njk
 
 Hi there! My name is Tanner Dolby. I'm a Software Engineer and Mathematician based in Sacramento, CA. I enjoy working with HTML, CSS, JavaScript, Node, React, Angular, Java, Go, WebGL, MongoDB, and Eleventy. I started to learn web development using [freeCodeCamp.org](https://freecodecamp.org) in 2017. Ever since then, I've been hooked on building things for the web.
 
-I focus on building responsive and fast websites. Recently, I've been learning about Cloud computing and how to develop applications using the MEAN stack. I spend my free time building side-projects, tinkering with graphics using WebGL and Three.js, reading, creating fun CSS illustrations or making front-end demos on [CodePen](https://codepen.io/tannerdolby). With the JAMstack movement on the rise, I've taken an interest in Static Site Generators (SSG). In particular [Eleventy](https://11ty.dev), which this website is built with.
+I focus on building responsive and fast websites. Recently, I've been learning about Cloud computing and how to develop applications using the MEAN/MERN stack. I spend my free time building side-projects, reading, tinkering with graphics using WebGL and Three.js, creating fun CSS illustrations and making front-end demos on [CodePen](https://codepen.io/tannerdolby). With the JAMstack movement on the rise, I've taken an interest in Static Site Generators (SSG). In particular [Eleventy](https://11ty.dev), which this website is built with.
 
 <h2>Interests</h2>
 
