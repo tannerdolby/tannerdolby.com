@@ -379,7 +379,7 @@ a:hover {
 }
 
 .home-banner .hero-content .hero {
-    padding: 1rem 1.25rem;
+    padding: 1rem 1.5rem;
 }
 
 .main-container .banner-container .page-banner h2 {
@@ -556,6 +556,7 @@ a:hover {
 
 #post-content {
     margin-bottom: 6rem;
+    overflow: auto;
 }
 
 #post-content .main-content {
@@ -1392,6 +1393,7 @@ main-container .main-content .about-banner {
 table {
     border-collapse: collapse;
     border: .1rem solid lightgray;
+    overflow: scroll;
 }
 
 .main-content table th {
