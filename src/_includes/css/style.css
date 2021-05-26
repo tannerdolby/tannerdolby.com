@@ -293,7 +293,8 @@ a:hover {
 .main-container .welcome-container {
     padding: 2.5rem 0 3.75rem;
     background: inherit;
-    max-width: 65ch;
+    max-width: 70ch;
+    margin-left: .5rem;
     /* background: #eee; */
     border-radius: .5rem;
 } 
@@ -306,6 +307,7 @@ a:hover {
     margin-top: .5rem;
     background: #eee;
     border-radius: .5rem;
+    overflow: hidden;
 }
 
 .about-main {
@@ -1681,7 +1683,7 @@ main .art img {
     }
 }
 
-@media (max-width: 1000px) {
+@media screen and (max-width: 1000px) {
     #post-content .right-sidebar {
         display: none;
     }
@@ -1723,7 +1725,7 @@ main .art img {
     display: none;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 915px) {
     .hide-cube {
         display: none;
     }
