@@ -1,0 +1,41 @@
+.pop-over {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: .6rem 1rem;
+    text-align: center;
+    background: rgb(24, 23, 23);
+
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        a {
+            color: #fff;
+            font-weight: 800;
+            font-size: 1.04rem;
+            margin-right: 1rem;
+            margin-left: auto;
+        }
+    }
+
+    .close {
+        margin-left: auto;
+        border: none;
+        color: #fff;
+        font-size: 1.1rem;
+        font-weight: 800;
+        background: inherit;
+    }
+
+    .close:hover {
+        color: #eee;
+        cursor: pointer;
+    }
+}
+
+.hide {
+    display: none;
+}
