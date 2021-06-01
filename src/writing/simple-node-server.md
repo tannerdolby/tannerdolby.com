@@ -1,5 +1,5 @@
 ---
-title: Build a basic HTTP server with Node
+title: Build a minimal HTTP server with Node
 tags:
   - node
   - javascript
