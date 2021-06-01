@@ -14,7 +14,7 @@ preview: I wanted to use Angular and Node.js for creating a blog template simila
 
 <h2 class="post-heading">How does it work?</h2>
 
-Coming from a background of using Static Site Generators (Eleventy), I've missed being able to write a bunch of blog posts and put their contents in a *single* post template. Where you have one directory of blog posts, could be Markdown files, HTML files, etc. Then those pages are fed to a "layout", which is essentially just an HTML page which acts as a template or base layout for template content that will be added to the page.
+Coming from a background of using Static Site Generators (Eleventy), I've missed being able to write a bunch of blog posts and put their contents in a *single* post template. Where you have one directory of blog posts, could be Markdown files, HTML files, etc. Then those pages are fed to a "layout", which is essentially just an HTML page that acts as a template or base layout for template content that will be added to the page.
 
 With Angular, I thought it wouldn't make much sense to create a component for every blog post, that just seems like unecessary work as the only part that really matters is the Markup or `name.component.html` template file. Unless you needed the HTML files to have specific metadata then it might make sense to have each post be a full blown component. 
 
@@ -118,7 +118,7 @@ It would be really nice to add some sort of Caching mechanism to this template. 
 
 The GitHub REST API does have a limited rate for hitting the endpoints. This causes a small problem as the app relies on the REST API's endpoints for fetching file data. The rate is relatively high per hour but if your site was quite busy this would lead to a problem. I think one way around this is caching the first API requests for metadata and the posts directory then simply reuse that data throughout the app. Making only 1-2 API calls no matter the traffic instead of a call for everytime the a new page is navigated too. Using NgRx for state management would be nice to update the intial store state with the cached API response.
 
-Netlify starter accounts provide really great features for hosting your own website or blog. I've usually only used [Netlify](https://netlify.com) for hosting static sites, but since they introduced [Netlify Lambda functions](), which are essentially AWS Lambda functions. We are now able to host full stack applications through Netlify. The netlify functions we create are deployed as API endpoints which is really cool.
+Netlify starter accounts provide really great features for hosting your own website or blog. I've usually only used [Netlify](https://netlify.com) for hosting static sites, but since they introduced [Netlify Lambda functions](https://www.netlify.com/products/functions/), which are essentially AWS Lambda functions. We are now able to host full stack applications through Netlify. The netlify functions we create are deployed as API endpoints which is really cool.
 
 [Pricing is metered](https://www.netlify.com/blog/2018/03/20/netlifys-aws-lambda-functions-bring-the-backend-to-your-frontend-workflow/) for the Netlify Lambda functions so keep that in mind if you choose to host this full stack app with Netlify. Unless you expect alot of site traffic, the Netlify starter account limits are plenty for a personal website.
 
