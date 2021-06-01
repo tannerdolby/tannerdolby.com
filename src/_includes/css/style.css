@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
 *,
 *::before,
 *::after {
@@ -13,7 +15,7 @@
 }
 
 html {
-    font: normal normal normal 1rem/1.6 "Source Sans Pro",Helvetica,Arial,sans-serif;
+    font: normal normal normal 1rem/1.6 -apple-system, "Source Sans Pro",Helvetica,Arial,sans-serif;
 }
 
 body {
@@ -173,6 +175,7 @@ h3,
     padding: .5rem;
     background: rgb(255, 255, 255);
     color: #212121;
+    z-index: 999;
 }
 
 .skip-link:focus {
@@ -249,7 +252,9 @@ a:hover {
 
 .top-nav .nav-wrapper .nav-menu li a {
     color: #212121;
-    color: #fff;
+    padding: .5rem 0;
+    margin: 0 1rem;
+    font-size: 1.0625rem;
     text-decoration: none;
     font-weight: 500;
 }
@@ -275,13 +280,6 @@ a:hover {
     font-size: 1rem;
 }
 
-.top-nav .nav-wrapper .nav-menu li a {
-    padding: 0.5rem 0;
-    margin: 0 1rem;
-    color: #212121;
-    font-size: 1.0625rem;
-}
-
 .top-nav .nav-wrapper .nav-home li .home {
     font-weight: 500;
     font-size: 1.15rem;
@@ -295,7 +293,6 @@ a:hover {
     background: inherit;
     max-width: 70ch;
     margin-left: 1rem;
-    /* background: #eee; */
     border-radius: .5rem;
 } 
 
@@ -304,9 +301,10 @@ a:hover {
     align-items: center;
     max-width: 1150px;
     margin: 0 auto;
-    margin-top: .5rem;
     background: #eee;
+    background: rgb(240, 240, 240);
     border-radius: .5rem;
+    margin-top: .5rem;
     overflow: hidden;
 }
 
@@ -490,7 +488,7 @@ a:hover {
 }
 
 .share .strong-share {
-    font-size: 1.2rem;
+    font-size: 1.35rem;
     padding-bottom: 1rem;
 }
 
@@ -499,6 +497,7 @@ a:hover {
     display: flex;
     align-items: center;
     width: fit-content;
+    font-size: 1.0625rem;
 }
 
 .share .twitter-share span {
@@ -556,7 +555,7 @@ a:hover {
 
 #post-content {
     margin-bottom: 6rem;
-    overflow: auto;
+    overflow: hidden;
 }
 
 #post-content .main-content {
@@ -601,6 +600,7 @@ a:hover {
     border: .1rem solid lightgray;
     padding: .5rem;
     border-radius: .15rem;
+    font-size: 16px;
 }
 
 .contact-form textarea {
@@ -754,27 +754,41 @@ main-container .main-content .about-banner {
     align-items: center;
 }
 
-.main-container .projects .project-tile .project-details .project-desc {
+.projects .project-tile .project-details .project-desc {
     margin-bottom: 1.75rem;
 }
 
-.main-container .projects .project-tile .project-details .links .tile-link {
+.project-tile .project-details .links .tile-link {
+    text-decoration: none;
+    font-size: .9rem;
+    margin-right: .65rem;
+}
+
+.projects .project-tile .project-details .links li .tile-link {
+    text-decoration: none;
+    font-size: .9rem;
+    padding: .5rem;
+}
+
+.project-details .links li .tile-link {
+    border: .05rem solid lightgray;
     padding: .5rem;
     border-radius: .15rem;
-    text-decoration: none;
-    color: #444;
-    border: .05rem solid lightgray;
+    border-radius: 2px;
+    color: #333;
     background: inherit;
-    font-size: .9rem;
-    margin-right: .75rem;
+}
+
+.project-details .links li .tile-link:hover,
+.project-details .links li .tile-link:focus {
+    border: .05rem solid transparent;
+    background: hsl(0, 0%, 23%);
+    color: #fff;
 }
 
 .main-container .projects .project-tile .project-details .links .tile-link:hover,
 .main-container .projects .project-tile .project-details .links .tile-link:focus  {
     cursor: pointer;
-    border: .05rem solid transparent;
-    background: hsl(0, 0%, 23%);
-    color: #fff;
 }
 
 .splat {
@@ -903,6 +917,7 @@ main-container .main-content .about-banner {
 
 .right-sidebar h4 {
     margin-bottom: 0;
+    padding-bottom: 1px;
     border-bottom: .1rem solid lightgray;
 }
 
@@ -1025,8 +1040,8 @@ main-container .main-content .about-banner {
 
 .contact-wrapper {
     max-width: 90ch;
-    padding: 1rem 2rem 2rem 2rem;
-    background: #eee;
+    padding: .5rem 1.55rem 1rem 1.5rem;
+    background: rgb(240, 240, 240);
     border-radius: 8px;
 }
 
@@ -1299,7 +1314,12 @@ main-container .main-content .about-banner {
 
 #post-title {
     margin-bottom: .5rem;
-    font-size: clamp(2.2rem, 6vw, 3rem);
+    font-size: clamp(2.2rem, 7vw, 3.2rem);
+    line-height: 1.3;
+    letter-spacing: -.5px;
+    color: #212121;
+    font-family: -apple-system, 'Helvetica Neue', sans-serif;
+    font-weight: 700;
 }
 
 #post {
@@ -1578,21 +1598,20 @@ main .art img {
     padding: .75rem;
 }
 
+#search,
+.contact-form input,
+.contact-form textarea {
+    -webkit-appearance: none;
+}
+
 .search-style,
 .search-page-style {
-    background: rgb(238, 238, 238);
-    background: rgb(230, 228, 228);
-    background: #eee;
+    background: rgb(240, 240, 240);
     border-radius: .1rem;
-    border: .1rem solid lightgray;
+    border: .05rem solid lightgray;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.search-style {
-    border: .1rem solid lightgray;
-    background: #eee;
 }
 
 .search-page-style {
@@ -1670,18 +1689,9 @@ main .art img {
 
 /* Media queries - START */
 
-/* This is a bit sketchy for handling iPhone landscape mode */
-@media (min-width: 321px) and (max-height: 500px) and (orientation:landscape) {
-    .post h2, 
-    .post h3 {
-        font-size: 1.65rem;
-    }
-    p, #post p, .preview, code, pre code, .post pre code, p code, ol li, ul li, .copyright, 
-    .post .date {
-        font-size: 1.0625rem;
-    }
-    .post-wrap .date {
-        font-size: 1rem !important;
+@media screen and (max-width: 1155px) {
+    .hero-section {
+        border-radius: 0;
     }
 }
 
@@ -1760,7 +1770,6 @@ main .art img {
 }
 
 @media (max-width: 800px) {
-
     .featured-art .feat-art-list {
         display: flex;
         flex-direction: column;
@@ -1807,6 +1816,11 @@ main .art img {
         justify-content: flex-start;
         align-items: flex-start;
         overflow-x: auto;
+        border-bottom: .05rem solid lightgray;
+    }
+
+    .hero-section {
+        margin-top: 0;
     }
 
     .top-nav .nav-wrapper .nav-home {
@@ -1891,5 +1905,23 @@ main .art img {
 @media (max-width: 350px) {
     .main-container .projects .project-grid {
         grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    }
+}
+
+/* This is a bit sketchy for handling iPhone landscape mode */
+@media (min-width: 321px) and (max-height: 500px) and (orientation:landscape) {
+    .post h2, 
+    .post h3 {
+        font-size: 1.7rem;
+    }
+    p, #post p, .preview, code, pre code, .post pre code, p code, ol li, ul li, .copyright, 
+    .post .date {
+        font-size: 1rem;
+    }
+    .post-wrap .date {
+        font-size: 1rem !important;
+    }
+    html code {
+        font-size: .9rem;
     }
 }
