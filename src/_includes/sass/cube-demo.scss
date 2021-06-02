@@ -109,7 +109,8 @@ $cube-z: 6vw;
   -webkit-transform: perspective(1000000px) rotateX(70deg) rotateZ(-45deg) scale3d(.6, .6, .6);
           transform: perspective(1000000px) rotateX(70deg) rotateZ(-45deg) scale3d(.6, .6, .6);
   margin: 0 auto;
-  margin-top: 2.9rem;
+  margin-top: 3rem;
+  margin-right: 100px;
   max-width: 200px;
   --b: .3;
   
@@ -378,6 +379,12 @@ $cube-z: 6vw;
       background-position: 0 0;
       background-size: 5% 5%;
     }
+  }
+}
+
+@media only screen and (max-width: 915px) {
+  .cube {
+    margin-right: auto;
   }
 }
 
