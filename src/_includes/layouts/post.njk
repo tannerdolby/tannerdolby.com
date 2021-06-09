@@ -57,9 +57,9 @@ name: Tanner Dolby
                 <div id="post">
                     {{ content | safe }}
                 </div>
+                
                 <div class="share">
                     <strong class="strong-share">Share</strong>
-    
                     <a class="twitter-share" href="{{ twitterShare }}text={{ title }}&amp;url=https://tannerdolby.com{{ page.url }}" target="_blank" rel="noopener noreferrer">
                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px"
                             viewBox="0 0 512 512" xml:space="preserve">
@@ -75,6 +75,7 @@ name: Tanner Dolby
                         <span>Twitter</span>
                     </a>
                 </div>
+                {% include "layouts/posts-related.njk" %}
                 {% set previousPost = collections.posts | getPreviousCollectionItem(page) %}
                 {% set nextPost = collections.posts | getNextCollectionItem(page) %}
                 <nav class="prev-next">
