@@ -18,7 +18,7 @@
   -webkit-transform: perspective(1000000px) rotateX(70deg) rotateZ(-45deg) scale3d(0.6, 0.6, 0.6);
   transform: perspective(1000000px) rotateX(70deg) rotateZ(-45deg) scale3d(0.6, 0.6, 0.6);
   margin: 0 auto;
-  margin-top: 3rem;
+  margin-top: 2.7rem;
   margin-right: 100px;
   max-width: 200px;
   --b: .3;
