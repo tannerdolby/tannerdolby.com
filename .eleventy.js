@@ -69,7 +69,12 @@ module.exports = (eleventyConfig) => {
         return new CleanCSS({}).minify(code).styles;
     });
 
-    // max is exclusive, min is inclusive
+    /**
+     * 
+     * @param {int} min Inclusive minimum value
+     * @param {int} max Exclusive maxiumum value
+     * @returns {int} A random number in the range [min, max)
+     */
     function random(min, max) {
         min = Math.ceil(min);
         max = Math.floor(max);
@@ -137,6 +142,27 @@ module.exports = (eleventyConfig) => {
 
     eleventyConfig.addFilter("sortRecent", function(arr) {
         return arr.filter(a => a.recent).sort((a,b) => a.order - b.order);
+    });
+
+    eleventyConfig.addShortcode("relatedPosts", function(data) {
+        const randomNum = random(0, data.tagsArr.length);
+        const currentPage = data.currPage;
+
+        const posts = data.arr.filter((post) => {
+            return post.data.tags.includes(data.tagsArr[randomNum]) && post.data.title != currentPage;
+        });
+
+        
+        const allPosts = data.arr.filter(post => post.data.title != currentPage);
+
+        if (posts.length != 0 && posts.length > 4) {
+            return `<ul class="related-posts">${posts.slice(0, 4).map(p => `<li><a href='${p.url}'>${p.data.title}</a></li>`).join("\n")}`;
+        } else if (posts.length != 0 && posts.length >= 3) {
+            return `<ul class="related-posts">${posts.slice(0, 3).map(p => `<li><a href='${p.url}'>${p.data.title}</a></li>`).join("\n")}`;
+        } else {
+            return `<ul class="related-posts">${allPosts.slice(0, 4).map(p => `<li><a href='${p.url}'>${p.data.title}</a></li>`).join("\n")}`;
+        }
+    
     });
 
     eleventyConfig.addShortcode("taglist", function(collection) {
