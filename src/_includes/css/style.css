@@ -55,7 +55,7 @@ p {
     color: #212121;
     font-size: 1.14rem;
     font-weight: 400;
-    font-family: -apple-system,'Helvetica Neue',Helvetica,sans-serif;
+    font-family: -apple-system, arial, 'Helvetica Neue',Helvetica,sans-serif;
 }
 
 code {
@@ -1768,11 +1768,18 @@ main .art img {
     .main-container .welcome-container {
         max-width: 100%;
         margin-left: initial;
+        /* padding: 2.5rem 0 3.75rem; */
+    }
+
+    .main-container .welcome-container .home-banner p {
+        max-width: 50ch;
     }
 
     .hero-section {
         background: #f5f5f5;
         background-color: rgb(239, 239, 239);
+        background: #f6f6f6;
+        background: #eee;
     }
 
     .support {
