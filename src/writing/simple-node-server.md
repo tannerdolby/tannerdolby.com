@@ -317,4 +317,4 @@ Executing 'message' handler
 
 <img src="/images/node-demo-ffzz.png" alt="Demo image of data posted to server" class="demo-img">
 
-If you read this far, you should have a solid understanding of setting up a basic HTTP server with Node.js. Now go forth and build cool stuff with Node! You can view the [source code](https://github.com/tannerdolby/basic-node-server) for this demo over on GitHub. Oh ya, don't forget to go give [Express.js](https://expressjs.com/) a try! 🛠️
+If you read this far, you should have a solid understanding of setting up a basic HTTP server with Node.js. Now go forth and build cool stuff with Node! You can view the [source code](https://github.com/tannerdolby/basic-node-server) for this demo over on GitHub. Oh ya, don't forget to go give [Express.js](https://expressjs.com/) a try!
