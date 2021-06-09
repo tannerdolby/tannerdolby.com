@@ -152,15 +152,15 @@ module.exports = (eleventyConfig) => {
             return post.data.tags.includes(data.tagsArr[randomNum]) && post.data.title != currentPage;
         });
 
-        
+
         const allPosts = data.arr.filter(post => post.data.title != currentPage);
 
         if (posts.length != 0 && posts.length > 4) {
-            return `<ul class="related-posts">${posts.slice(0, 4).map(p => `<li><a href='${p.url}'>${p.data.title}</a></li>`).join("\n")}`;
+            return `<ul class="related-posts">${posts.slice(0, 3).map(p => `<li><a href='${p.url}'>${p.data.title}</a></li>`).join("\n")}`;
         } else if (posts.length != 0 && posts.length >= 3) {
             return `<ul class="related-posts">${posts.slice(0, 3).map(p => `<li><a href='${p.url}'>${p.data.title}</a></li>`).join("\n")}`;
         } else {
-            return `<ul class="related-posts">${allPosts.slice(0, 4).map(p => `<li><a href='${p.url}'>${p.data.title}</a></li>`).join("\n")}`;
+            return `<ul class="related-posts">${allPosts.slice(0, 3).map(p => `<li><a href='${p.url}'>${p.data.title}</a></li>`).join("\n")}`;
         }
     
     });
