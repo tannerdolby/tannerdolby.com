@@ -2087,16 +2087,16 @@ main .art img {
     .post h3 a {
         font-size: 1.7rem;
     }
-    p, #post p, .preview, code, pre code, .post pre code, p code, ol li, ul li, .copyright,
-    .post .date, .post-sidebar ul li a {
+    /* p, #post p, .preview, code, pre code, .post pre code, p code, ol li, ul li, .copyright {
         font-size: 1rem;
-    }
+    } */
+    /* .post-wrap .date {
+        font-size: 1rem !important;
+    } */
     .post-sidebar ul li a {
         font-size: 1em;
     }
-    .post-wrap .date {
-        font-size: 1rem !important;
-    }
+    
     html code {
         font-size: .9rem;
     }
