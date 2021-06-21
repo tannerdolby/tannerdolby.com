@@ -1,51 +1,68 @@
-// Get all <h2>, <h3> and <h4> tags for direct links
+// Get all <h2>, <h3> and <h4> .. <h6> tags for direct links
 const headers = [...document.getElementsByClassName("post-heading")]; // converting the iterable collection to an array
 
 /**
- * Returns a unique ID string.
+ * Returns a slugified unique ID string.
  * 
  * @param {String} id The string used to generate a unique ID.
- * @returns {String} The unique ID string.
+ * @returns {String} The unique slug.
  */
-function uniqueID(id) {
-    return id.toLowerCase().split(" ").join("-");
+function uniqueIs(id) {
+    return removeChars(id).toLowerCase().split(" ").join("-");
 };
+
 
 /**
  * Removes any whitespace or non-word characters from 
- * manually created id attributes for a sub heading.
+ * manually created id attributes for a subheading.
  * 
  * @param {String} id The manually created id value from HTML element. 
  * @returns {String} The ID with unwanted characters removed.
  */
-function removeChars(id) {
+function uniqueId(id) {
     const regex = new RegExp(/[\s\W]+/, "gm");
-    return regex.test(id) ? id.replace(regex, " ") : id;
+    let unique = id.toLowerCase().replace(regex, " ").split(" ").join("-");
+    if (unique[unique.length - 1] === "-") {
+        unique = unique.substr(0, unique.length - 1);
+    }
+    return regex.test(id) ? unique : id;
 }
 
-/**
- * Adds a direct permalink to sub heading tags.
- * 
- * @param {Array} headerArr The array of sub headings.
- * @returns The highlighted sub headings and creates a direct permalink.
- */
 function headingHighlight(headerArr) {
-    headerArr.forEach(heading => {
+    headerArr = headerArr.map(heading => {
         const permalink = document.createElement("a");
+        let id = "";
         permalink.setAttribute("class", "direct-link");
         permalink.textContent = "#";
-    
+
         if (heading.id) {
-            var id = uniqueID(removeChars(heading.id));
+            id = uniqueId(heading.id);
             heading.setAttribute("id", `${id}`);
             permalink.setAttribute("href", `#${id}`);
             heading.append(permalink);
         } else {
-            var id = uniqueID(heading.textContent);
+            id = uniqueId(heading.textContent);
             heading.setAttribute("id", `${id}`);
             permalink.setAttribute("href", `#${id}`);
             heading.append(permalink);
         }
+
+        // add class to signal highlighting has started
+        // and ready for toc.js to grab the subheadings from DOM
+        heading.classList.add("toc-process");
+
+        let dupeIds = [...document.querySelectorAll(`#${uniqueId(id)}`)];
+
+        if (dupeIds.length > 1) {
+            dupeIds = dupeIds.map((node, index) => {
+                if (index !== 0) {
+                    node.setAttribute("id", `${id}-${index}`);
+                    permalink.setAttribute("href", `#${id}-${index}`);
+                }
+                return node;
+            });
+        }
+
         // Set class names to handle font-sizing
         switch(heading.tagName) {
             case "H2":
@@ -57,15 +74,13 @@ function headingHighlight(headerArr) {
             case "H4":
                 heading.classList.add("h4");
                 break;
+            case "H5":
+                heading.classList.add("h5");
             default:
                 break;
         }
+        return heading;
     });
 }
 
 headingHighlight(headers);
-
-// module.exports = {
-//     uniqueID,
-//     removeChars
-// };
