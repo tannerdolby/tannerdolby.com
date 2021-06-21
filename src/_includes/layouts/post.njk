@@ -93,10 +93,7 @@ name: Tanner Dolby
                         <span>Twitter</span>
                     </a>
                 </div>
-               
                 {% include "layouts/posts-related.njk" %}
-                
-                
             </div>
         </main>
         {% include "layouts/footer.njk" %}
@@ -106,7 +103,6 @@ name: Tanner Dolby
             {% include "js/focus-blocks.js" %}
             {% include "js/heading-highlight.js" %}
             {% include "js/toc.js" %}
-            {% include "js/copy-to-clipboard.js" %}
         {% endset %}
         <script>
             {{ js | jsmin | safe }}
