@@ -54,10 +54,28 @@ name: Tanner Dolby
                         <p class="date">Posted on&nbsp;<time style="margin-bottom: 0;" datetime="{{ datetime | date('YYYY-MM-DD') }}">{{ datetime | date('MMMM DD, YYYY') }}</time>&nbsp;&bull; tagged with&nbsp;{% for tag in tags %}<a href="/writing?filter={{ tag }}" aria-label="Link to {{ tag }} posts" style="margin-right: .35rem;">#{{ tag }}</a>{% endfor %}</p>
                     </div>
                 </header>
+                <div class="post-sidebar">
+                    <div class="toc"></div>
+                </div>
                 <div id="post">
                     {{ content | safe }}
                 </div>
-                
+                {% set previousPost = collections.posts | getPreviousCollectionItem(page) %}
+                {% set nextPost = collections.posts | getNextCollectionItem(page) %}
+                <nav class="prev-next">
+                    {% if previousPost %}
+                        <a href="{{ previousPost.url }}">
+                            <h3 style="margin-bottom: .75rem;">Previous Post</h3>
+                            <span>{{ previousPost.data.title }}</span>
+                        </a>
+                    {% endif %}
+                    {% if nextPost %}
+                        <a class="next-post" href="{{ nextPost.url }}">
+                            <h3 style="margin-bottom: .75rem;">Next Post</h3>
+                            <span>{{ nextPost.data.title }}</span>
+                        </a>
+                    {% endif %}
+                </nav>
                 <div class="share">
                     <strong class="strong-share">Share</strong>
                     <a class="twitter-share" href="{{ twitterShare }}text={{ title }}&amp;url=https://tannerdolby.com{{ page.url }}" target="_blank" rel="noopener noreferrer">
@@ -75,23 +93,10 @@ name: Tanner Dolby
                         <span>Twitter</span>
                     </a>
                 </div>
+               
                 {% include "layouts/posts-related.njk" %}
-                {% set previousPost = collections.posts | getPreviousCollectionItem(page) %}
-                {% set nextPost = collections.posts | getNextCollectionItem(page) %}
-                <nav class="prev-next">
-                    {% if previousPost %}
-                        <a href="{{ previousPost.url }}">
-                            <h3 style="margin-bottom: .75rem;">Previous Post</h3>
-                            <span>{{ previousPost.data.title }}</span>
-                        </a>
-                    {% endif %}
-                    {% if nextPost %}
-                        <a class="next-post" href="{{ nextPost.url }}">
-                            <h3 style="margin-bottom: .75rem;">Next Post</h3>
-                            <span>{{ nextPost.data.title }}</span>
-                        </a>
-                    {% endif %}
-                </nav>
+                
+                
             </div>
         </main>
         {% include "layouts/footer.njk" %}
@@ -101,6 +106,7 @@ name: Tanner Dolby
             {% include "js/focus-blocks.js" %}
             {% include "js/heading-highlight.js" %}
             {% include "js/toc.js" %}
+            {% include "js/copy-to-clipboard.js" %}
         {% endset %}
         <script>
             {{ js | jsmin | safe }}
