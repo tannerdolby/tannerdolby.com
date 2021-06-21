@@ -1,20 +1,38 @@
-const post = document.querySelector("#post");
-const headings = [...document.getElementsByClassName("post-heading")];
-let stack = [];
+const subheadingArr = [...document.querySelectorAll(".toc-process")];
+const tocWrap = document.querySelector(".toc");
+const ul = document.createElement("ul");
+const h2 = document.createElement("h2");
+const showBtn = document.createElement("button");
 
-let help = headings.forEach(item => {
-    let data = {
-        "title": item.textContent,
-        "id": item.id,
-        "href": `#${item.id}`
-    }
-    stack.push(data);
-    return stack;
+showBtn.setAttribute("class", "unfold-toc");
+h2.setAttribute("class", "toc-heading");
+h2.textContent = "Table of contents";
+showBtn.textContent = "+";
+
+subheadingArr.forEach(heading => {
+    const link = document.createElement("a");
+    const li = document.createElement("li");
+    li.setAttribute("class", "toc-link");
+    link.textContent = heading.textContent.substr(0, heading.textContent.length - 1);
+    link.setAttribute("href", `#${heading.id}`);
+    li.appendChild(link);
+    ul.appendChild(li);
 });
 
-const div = document.createElement("div");
-div.setAttribute("class", "table-of-contents");
+tocWrap.appendChild(h2);
+tocWrap.appendChild(showBtn);
+tocWrap.appendChild(ul);
 
-const ul = document.createElement("ul");
+// Unfolding TOC
+const plusBtn = document.querySelector(".unfold-toc");
+const tocList = document.querySelector(".toc ul");
 
-div.appendChild(ul);
+function unfold() {
+    tocList.classList.toggle("show-toc");
+    if (plusBtn.textContent === "-") {
+        plusBtn.textContent = "+";
+    } else {
+        plusBtn.textContent = "-";
+    }
+}
+plusBtn.addEventListener("click", unfold);
