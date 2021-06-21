@@ -5,7 +5,7 @@ datetime: 2020-12-27 00:00:00 Z
 tags: 
   - git
 permalink: "/writing/{{ title | slug }}/"
-preview: To begin contributing to open-source software, you might want to become familiar with Git. Understanding the workflow of creating your own local copy of a repository and keeping it up to date with the upstream repository is integral to start creating PRs in public projects.
+preview: 'To begin contributing to open-source software, you might want to become familiar with Git. Understanding the workflow of creating your own local copy of a repository and keeping it up to date with the upstream repository is integral to start creating PRs in public projects.'
 ---
 
 {{ preview }}

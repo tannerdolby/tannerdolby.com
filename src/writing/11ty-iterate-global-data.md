@@ -13,7 +13,7 @@ permalink: "/writing/{{ title | slug }}/"
 
 {{ preview }} 
 
-In 11ty, when you create [global data files](https://www.11ty.dev/docs/data-global/) place them inside the `_data` directory. The data files can then be accessed by any template in the project structure. Global data files can be stored as JSON `.json` or values from `module.exports` in a JavaScript `.js` file.
+In 11ty, you can create [global data files](https://www.11ty.dev/docs/data-global/) and place them inside the `_data` directory. The data files can then be accessed by any template in the project structure. Global data files can be stored as JSON `.json` or values from `module.exports` in a JavaScript `.js` file.
 
 <h2 class="post-heading">Use Cases</h2>
 

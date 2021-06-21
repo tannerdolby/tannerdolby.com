@@ -11,7 +11,7 @@ datetime: 2021-05-23 00:00:00 Z
 
 {{ preview }}
 
-Building Node.js applications doesn't have to be intimidating. Sure, large applications will have much greater complexity than a simple API but the underlying logic of how Node apps work won't change much. You need a web server to allow web clients to send requests, a view or page to display the servers response, a router to route specific requests, and lastly request handlers to handle requests sent to the server which have been routed by the router.
+Developing a Node app doesn't have to be intimidating. Sure, large applications will have much greater complexity than a simple API but the underlying logic of how Node apps work won't change much. You need a web server to allow web clients to send requests, a view or page to display the servers response, a router to route specific requests, and lastly request handlers to handle requests sent to the server which have been routed by the router.
 
 <h2 class="post-heading">What is a Node.js app?</h2>
 
@@ -147,7 +147,7 @@ When you make a request to the `/` route on the HTTP server we have created, you
 
 <h2 class="post-heading">Create Request Handlers</h2>
 
-All of this articles code could be written in a single JavaScript file but to keep things organized, reusable and readable. We will be separating the functionality into modules and requiring them in the entrypoint to our application `app.js`. There will be two endpoints in this article:
+All of this articles code could be written in a single JavaScript file but to keep things organized, reusable and readable. We will be separating the functionality into modules and requiring them in the entrypoint to our application `app.js`. There will be two API endpoints in this article:
 
 - The home page: `/`
 - The message submitted by form: `/message`
