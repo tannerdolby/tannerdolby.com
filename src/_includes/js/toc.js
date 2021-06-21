@@ -3,7 +3,11 @@ const tocWrap = document.querySelector(".toc");
 const ul = document.createElement("ul");
 const h2 = document.createElement("h2");
 const showBtn = document.createElement("button");
+const postTitle = document.getElementById("post-title");
+const postDate = document.querySelector("#post-content .date");
+const sidebar = document.querySelector(".post-sidebar");
 
+ul.setAttribute("class", "toc-links");
 showBtn.setAttribute("class", "unfold-toc");
 h2.setAttribute("class", "toc-heading");
 h2.textContent = "Table of contents";
@@ -27,6 +31,18 @@ tocWrap.appendChild(ul);
 const plusBtn = document.querySelector(".unfold-toc");
 const tocList = document.querySelector(".toc ul");
 
+// If toc is super long just hide it and let 
+// users choose to display it, I wasn't very 
+// aware in my first blog posts of how many section headings
+// exist so this will help clean up things when that happens
+const tocLinks = [...document.querySelectorAll(".toc-links li")];
+console.log(tocLinks.length);
+
+if (tocLinks.length >= 9) {
+    sidebar.querySelector(".toc-links").classList.add("hide");
+    plusBtn.style.visibility = "visible";
+}
+
 function unfold() {
     tocList.classList.toggle("show-toc");
     if (plusBtn.textContent === "-") {
@@ -36,3 +52,33 @@ function unfold() {
     }
 }
 plusBtn.addEventListener("click", unfold);
+
+
+/* Using the "scroll" event might not be a bad idea */
+
+// ScrollTrigger type event for displaying sidebar if
+// a certain element is "in view" ie "wholly visible" similiar
+// to how browser hash links behave
+
+
+// function isVisible(element) {
+//     const el = element.getBoundingClientRect();
+//     var top = el.top;
+//     var bottom = el.bottom;
+//     console.log(el);
+//     console.log(top);
+//     console.log(bottom);
+//     if (top <= 0) {
+//         console.log("YEPPERS");
+//         sidebar.classList.add("toc.show-toc");
+//         sidebar.style.display = "block";
+//     } else {
+//         sidebar.style.display = "none";
+//     }
+// }
+
+/*
+window.addEventListener("scroll", () => {
+    isVisible(postDate);
+});
+*/
