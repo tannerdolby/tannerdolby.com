@@ -518,8 +518,9 @@ a:hover {
 
 .related .related-posts {
     margin-top: 0;
-    padding-left: 0;
     padding-top: 1rem;
+    padding-left: 0;
+    line-height:1.5;
     list-style: none;
     border-top: 1px solid lightgray;
 }
@@ -608,9 +609,7 @@ a:hover {
 
 .post-sidebar .toc-heading {
     font-size: 1.25em;
-    padding-right: 18px;
     padding-bottom: 5px;
-    border-bottom: 1px solid lightgray;
     color: #333;
 }
 
@@ -1402,8 +1401,6 @@ main-container .main-content .about-banner {
 }
 
 #post {
-    /* padding-left: 1rem;
-    padding-right: 1rem; */
     max-width: 80ch;
     margin: 0 auto;
     grid-column: 2;
@@ -1708,6 +1705,14 @@ main .art img {
     max-width: 50ch;
 }
 
+.row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgray;
+    position: relative;
+}
+
 #search_svg {
     width: 1.25rem;
     height: 1.25rem;
@@ -1715,21 +1720,22 @@ main .art img {
 }
 
 .toc .unfold-toc {
-    display: flex;
-    align-items: center;
-    visibility: hidden;
-    font-size: 1.6em;
+    display: none;
+    font-size: 1.9em;
     background: #fff;
+    padding: 0;
     color: #333;
     font-weight: 500;
-    padding: 2px;
-    right: 0;
-    position: absolute;
-    top: 0;
-    height: 25px;
-    vertical-align: middle;
+    height: auto;
+    width: auto;
     background: inherit;
+    position: absolute;
+    right: 0;
+    bottom: -6px;
     border: none;
+    will-change: transform;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -moz-tap-highlight-color: rgba(0,0,0,0);
 }
 
 .unfold-toc:hover {
@@ -1815,18 +1821,6 @@ main .art img {
     }
 }
 
-@media screen and (max-width: 1080px) {
-    html, body {
-        font-size: 15.75px; /* change the parent element font size for em/rem sizings */
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    #post-content .right-sidebar {
-        display: none;
-    }
-}
-
 @media screen and (max-width: 1100px) {
     .post-header {
         grid-column: 1/3;
@@ -1834,7 +1828,7 @@ main .art img {
     }
 
     .toc .unfold-toc {
-        visibility: visible;
+        display: block;
     }
 
     .post-header .post-wrap {
@@ -1868,6 +1862,18 @@ main .art img {
         grid-column: 1/3;
         width: 100%;
         padding: 0;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    html, body {
+        font-size: 15.75px; /* change the parent element font size for em/rem sizings */
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #post-content .right-sidebar {
+        display: none;
     }
 }
 
@@ -1959,7 +1965,7 @@ main .art img {
         font-size: .9rem;
     }
 
-    p, .prev-next li a {
+    p, .prev-next li a, .toc .toc-link {
         font-size: 1.0625rem;
     }
 } 
@@ -2038,6 +2044,9 @@ main .art img {
         margin: .8rem auto;
         width: 100%;
     }
+    .toc .unfold-toc {
+        top: -5px;
+    }
 }
 
 @media (max-width: 425px) {
@@ -2050,7 +2059,7 @@ main .art img {
         height: auto;
     }
     .support .cube {
-        margin-top: 1rem;
+        margin-top: 1.5rem;
         display: block;
         -webkit-transform: perspective(1000000px) rotateX(70deg) rotateZ(-45deg) scale3d(.8, .8, .8);
           transform: perspective(1000000px) rotateX(70deg) rotateZ(-45deg) scale3d(.8, .8, .8);
@@ -2087,9 +2096,9 @@ main .art img {
     .post h3 a {
         font-size: 1.7rem;
     }
-    /* p, #post p, .preview, code, pre code, .post pre code, p code, ol li, ul li, .copyright {
+    p, #post p, .preview, code, pre code, .post pre code, p code, ol li, ul li, .copyright {
         font-size: 1rem;
-    } */
+    }
     /* .post-wrap .date {
         font-size: 1rem !important;
     } */
