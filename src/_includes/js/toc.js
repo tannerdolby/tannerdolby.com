@@ -53,12 +53,5 @@ function unfold() {
         plusBtn.style.transform = "rotate(0)";
         tocList.classList.remove("show-toc");
     }
-    // plusBtn.style.transform = "rotate(45deg)";
-    // tocList.classList.toggle("show-toc");
-    // if (plusBtn.textContent === "-") {
-    //     plusBtn.textContent = "+";
-    // } else {
-    //     plusBtn.textContent = "-";
-    // }
 }
 plusBtn.addEventListener("click", unfold);
