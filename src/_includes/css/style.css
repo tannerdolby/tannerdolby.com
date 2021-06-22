@@ -290,14 +290,13 @@ a:hover {
 } 
 
 .main-container .hero-wrap {
-    margin: 2rem auto;
+    margin: 1.5rem auto;
 }
 
 .hero-section {
     display: flex;
     align-items: center;
     margin: 0 auto;
-    margin-top: .75rem;
     border-radius: 5px;
     border-radius: 0;
     padding: 0 1.1rem;
@@ -520,13 +519,18 @@ a:hover {
     margin-top: 0;
     padding-top: 1rem;
     padding-left: 0;
-    line-height:1.5;
     list-style: none;
     border-top: 1px solid lightgray;
 }
 
+.related-posts li a:first-child {
+    margin-top: 0;
+}
+
 .related-posts li a {
     font-size: .8em;
+    margin: 8px auto;
+    display: block;
 }
 
 #main-writing {
@@ -1731,7 +1735,7 @@ main .art img {
     background: inherit;
     position: absolute;
     right: 0;
-    bottom: -6px;
+    bottom: -5px;
     border: none;
     will-change: transform;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -2043,9 +2047,6 @@ main .art img {
         max-width: 100%;
         margin: .8rem auto;
         width: 100%;
-    }
-    .toc .unfold-toc {
-        top: -5px;
     }
 }
 
