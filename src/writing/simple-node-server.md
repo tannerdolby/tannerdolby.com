@@ -276,7 +276,7 @@ function startServer(route, handlerObj) {
 module.exports = startServer;
 ```
 
-Not very much changes in the server code, except for the addition of a `startServer` function and a named function `handleReq`. Aside from the new functions and organization, we begin listening for `data` events on the `req` object and assign the value of that `POST` data to a variable `payload` which is passed to the router.
+Not a whole lot changes in the server code, except for the addition of a `startServer` function and a named function `handleReq`. Aside from the new functions and organization, we begin listening for `data` events on the `req` object and assign the value of that `POST` data to a variable `payload` which is passed to the router.
 
 <h2 class="post-heading">Setup an Entrypoint</h2>
 
@@ -307,7 +307,7 @@ Executing 'home' handler
 
 <img src="/images/node-demo-ffr.png" alt="Demo image of homepage with form" class="demo-img">
 
-After hitting the submit button, we are navigated to the `/message` route and the querystring from the form is sent to the server in a `POST` request. Have a look at the Network tab in Developer Tools to verify the response.
+After hitting the submit button, we are redirected to the `/message` route and the data from the form submission is sent to the server in a `POST` request. Have a look at the Network tab in Developer Tools to verify the response.
 
 ```text
 Request received for '/message'
