@@ -6,7 +6,9 @@ const showBtn = document.createElement("button");
 const postTitle = document.getElementById("post-title");
 const postDate = document.querySelector("#post-content .date");
 const sidebar = document.querySelector(".post-sidebar");
+const wrapper = document.createElement("div");
 
+wrapper.setAttribute("class", "row");
 ul.setAttribute("class", "toc-links");
 showBtn.setAttribute("class", "unfold-toc");
 h2.setAttribute("class", "toc-heading");
@@ -23,8 +25,9 @@ subheadingArr.forEach(heading => {
     ul.appendChild(li);
 });
 
-tocWrap.appendChild(h2);
-tocWrap.appendChild(showBtn);
+wrapper.appendChild(h2);
+wrapper.appendChild(showBtn);
+tocWrap.appendChild(wrapper);
 tocWrap.appendChild(ul);
 
 // Unfolding TOC
@@ -36,7 +39,6 @@ const tocList = document.querySelector(".toc ul");
 // aware in my first blog posts of how many section headings
 // exist so this will help clean up things when that happens
 const tocLinks = [...document.querySelectorAll(".toc-links li")];
-console.log(tocLinks.length);
 
 if (tocLinks.length >= 9) {
     sidebar.querySelector(".toc-links").classList.add("hide");
@@ -44,41 +46,19 @@ if (tocLinks.length >= 9) {
 }
 
 function unfold() {
-    tocList.classList.toggle("show-toc");
-    if (plusBtn.textContent === "-") {
-        plusBtn.textContent = "+";
+    if (!tocList.classList.contains("show-toc")) {
+        plusBtn.style.transform = "rotate(45deg)";
+        tocList.classList.add("show-toc");
     } else {
-        plusBtn.textContent = "-";
+        plusBtn.style.transform = "rotate(0)";
+        tocList.classList.remove("show-toc");
     }
+    // plusBtn.style.transform = "rotate(45deg)";
+    // tocList.classList.toggle("show-toc");
+    // if (plusBtn.textContent === "-") {
+    //     plusBtn.textContent = "+";
+    // } else {
+    //     plusBtn.textContent = "-";
+    // }
 }
 plusBtn.addEventListener("click", unfold);
-
-
-/* Using the "scroll" event might not be a bad idea */
-
-// ScrollTrigger type event for displaying sidebar if
-// a certain element is "in view" ie "wholly visible" similiar
-// to how browser hash links behave
-
-
-// function isVisible(element) {
-//     const el = element.getBoundingClientRect();
-//     var top = el.top;
-//     var bottom = el.bottom;
-//     console.log(el);
-//     console.log(top);
-//     console.log(bottom);
-//     if (top <= 0) {
-//         console.log("YEPPERS");
-//         sidebar.classList.add("toc.show-toc");
-//         sidebar.style.display = "block";
-//     } else {
-//         sidebar.style.display = "none";
-//     }
-// }
-
-/*
-window.addEventListener("scroll", () => {
-    isVisible(postDate);
-});
-*/
