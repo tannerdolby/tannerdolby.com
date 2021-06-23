@@ -406,7 +406,9 @@ a:hover {
     max-width: 80ch;
     display: flex;
     flex-wrap: wrap;
-    grid-column: 1;
+    grid-column: 2;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .prev-next h3 {
@@ -473,15 +475,9 @@ a:hover {
     max-width: 56ch;
     width: 100%;
     font-size: 1.4em;
-    grid-column: 1;
-}
-
-.share {
-    grid-column: 1;
-}
-
-.related {
-    grid-column: 1;
+    grid-column: 2;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .share .strong-share {
@@ -583,7 +579,7 @@ a:hover {
 #post-content .main-content {
     margin-bottom: 6rem;
     display: grid;
-    grid-template-columns: 82% 18%;
+    grid-template-columns: 18% 82%;
     gap: 0px;
     padding: 0 1.1rem;
 }
@@ -591,7 +587,7 @@ a:hover {
 .post-sidebar {
     max-width: 20ch;
     width: 100%;
-    grid-column: 2;
+    grid-column: 1;
     height: 100vh;
     grid-row: 2;
     margin: 0 auto;
@@ -1411,7 +1407,8 @@ main-container .main-content .about-banner {
 
 #post {
     max-width: 80ch;
-    grid-column: 1;
+    margin: 0 auto;
+    grid-column: 2;
 }
 
 #post p,
@@ -1432,14 +1429,14 @@ main-container .main-content .about-banner {
 }
 
 .post-header {
-    margin-top: 0;
     padding-top: 1.5rem;
     margin-top: 1rem;
-    grid-column: 1;
+    grid-column: 2;
 }
 
 .post-wrap {
     max-width: 80ch;
+    margin: 0 auto;
 }
 
 .post-wrap .date {
