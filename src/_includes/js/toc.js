@@ -40,11 +40,6 @@ const tocList = document.querySelector(".toc ul");
 // exist so this will help clean up things when that happens
 const tocLinks = [...document.querySelectorAll(".toc-links li")];
 
-if (tocLinks.length >= 9) {
-    sidebar.querySelector(".toc-links").classList.add("hide");
-    plusBtn.style.visibility = "visible";
-}
-
 function unfold() {
     if (!tocList.classList.contains("show-toc")) {
         plusBtn.style.transform = "rotate(45deg)";
@@ -55,3 +50,46 @@ function unfold() {
     }
 }
 plusBtn.addEventListener("click", unfold);
+
+
+// Use IntersectionObserver for table of contents progress
+// window.addEventListener("DOMContentLoaded", () => {
+//     const link = document.querySelector(".toc li a");
+//     const observer = new IntersectionObserver(headings => {
+//         headings.forEach(heading => {
+//             const id = heading.target.getAttribute("id");
+
+//             console.log(heading.intersectionRatio);
+//             console.log(heading.isIntersecting);
+//             if (heading.intersectionRatio > 0) {
+//                 //console.log(heading, "GOT ME");
+//                 var e = document.querySelector(`.toc-link a[href="#${id}"]`);
+//                 e.classList.add("section-active");
+//             } else if (heading.isIntersecting) {
+//                 console.log("ha");
+//             } else {
+//                 var e = document.querySelector(`.toc-link a[href="#${id}"]`);
+//                 //e.classList.remove("section-active");
+//             }
+//         })
+//     })
+//     // track all headings on posts layout with an id attribute
+//     const el = document.querySelectorAll(".post-heading[id]");
+//     el.forEach(heading => {
+//         observer.observe(heading);
+//     });
+// });
+
+// window.addEventListener('DOMContentLoaded', () => {
+
+//     const observer = new IntersectionObserver(entries => {
+//       entries.forEach(entry => {
+//         const id = entry.target.getAttribute('id');
+//         if (entry.intersectionRatio > 0) {
+//           document.querySelector(`nav li a[href="#${id}"]`).parentElement.classList.add('active');
+//         } else {
+//           document.querySelector(`nav li a[href="#${id}"]`).parentElement.classList.remove('active');
+//         }
+//       });
+//     });
+  
