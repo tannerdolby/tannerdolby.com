@@ -25,6 +25,7 @@ body {
     background: rgb(252, 252, 252);
     background: #fff;
     background: #fbfbfb;
+    /* background: #fdfdfd; */
     overflow-x: hidden;
     overflow-y: auto;
     font-size: 100%;
@@ -40,7 +41,7 @@ blockquote {
     border-left: .35rem solid #f06;
     background: rgb(244, 244, 244);
     background: #eee;
-    background: #f3f3f3;
+    /* background: #f6f6f6; */
     padding: .2rem 1rem;
     margin: 0 auto;
 }
@@ -69,7 +70,7 @@ code {
     white-space: nowrap;
     color: #212121;;
     padding: .2rem .15rem .05rem .2rem;
-    padding: 3px 4px 1px 4px;
+    padding: 5px 4px 3px 4px;
     border-radius: 3px;
     margin: 0 .1rem;
     background: rgb(232, 232, 232);
