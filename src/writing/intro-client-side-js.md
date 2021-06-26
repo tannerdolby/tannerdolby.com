@@ -111,7 +111,7 @@ p.classList.remove("first-class"); // <p class="second-class"></p>
 
 <h2 class="post-heading">Binding elements to the DOM</h2>
 
-The final step in this low-level workflow is to bind the HTML elements to our DOM tree using `appendChild()`. This step in the process truly improved my overall web content structuring and DOM experience. I highly recommend if you cannot structure a web page with an appropriate DOM tree then practice this low-level JS and in no time you will feel noticeably stronger at understanding each level in your DOM structure.
+The final step in this workflow is to bind the HTML elements to our DOM tree using `appendChild()`. This step in the process truly improved my overall web content structuring and DOM understanding. I highly recommend if you cannot structure a web page with a valid DOM tree then practice this low-level JS and in no time you will feel noticeably stronger at understanding each level in your DOM structure.
 
 You can utilize the `appendChild()` method and bind the virtually created HTML element to the DOM within the document as a child of the `body` tag.
 
