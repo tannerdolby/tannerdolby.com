@@ -74,6 +74,24 @@
                     </ul>
                 </div>
             </li>
+            <li class="project-tile">
+                <div class="project-details">
+                    <div class="top-level">
+                        <h3 class="h2-5"><a href="{{ github.cipherNews.homepage }}">{{ github.cipherNews.title }}</a></h3>
+                        <div class="stars">
+                            <a class="star-row" href="{{ github.cipherNews.stargazers_url }}">
+                                {% include "star-icon.svg" %}
+                                <span>{{ github.cipherNews.stargazers }}</span>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="project-desc">{{ github.cipherNews.desc }}</p>
+                    <ul class="links">
+                        <li><a class="tile-link" href="{{ github.cipherNews.homepage }}" aria-label="View the live demo for {{ github.cipherNews.title }}">Live demo</a></li>
+                        <li><a class="tile-link" href="{{ github.cipherNews.repo_url }}" aria-label="View the source code for {{ github.cipherNews.title }}">Source code</a></li>
+                    </ul>
+                </div>
+            </li>
         </ul>
     </div>
 </section>
