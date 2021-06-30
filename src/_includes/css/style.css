@@ -829,6 +829,7 @@ main-container .main-content .about-banner {
 .project-details .links li .tile-link:focus {
     border: .05rem solid transparent;
     background: hsl(0, 0%, 23%);
+    background: rgb(33, 42, 47);
     color: #fff;
 }
 
