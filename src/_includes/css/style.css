@@ -894,6 +894,7 @@ main-container .main-content .about-banner {
     background: #212421;
     background: #2f312f;
     background: rgb(33, 42, 47);
+    border: 2px solid transparent;
     color: inherit;
     cursor: pointer;
     color: #fff;
@@ -903,6 +904,7 @@ main-container .main-content .about-banner {
 
 .reach-me.submit-contact {
     background: rgb(27, 110, 226);
+    background: rgb(26, 107, 221);
     padding: .95rem 1.35rem;
     border: none;
     color: #fff;
@@ -913,6 +915,7 @@ main-container .main-content .about-banner {
 
 .reach-me.submit-contact:hover {
     background: inherit;
+    border: none;
     background: rgb(33, 42, 47);
     background: rgb(14, 88, 192);
     background: rgb(23, 100, 209);
