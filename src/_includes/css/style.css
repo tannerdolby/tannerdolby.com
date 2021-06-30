@@ -657,7 +657,7 @@ a:hover {
 
 .contact-form input, .contact-form textarea {
     margin: .2rem 0;
-    border: .1rem solid lightgray;
+    border: 1px solid lightgray;
     padding: .5rem;
     border-radius: .15rem;
     font-size: 16px;
@@ -874,33 +874,15 @@ main-container .main-content .about-banner {
 
 .reach-me.button {
     text-decoration: none;
-    color: #212121;
     width: auto;
     font-size: 1rem;
-    background: #fff;
-    background: #212121;
-    background: rgb(33, 42, 47);
-    background: rgb(27, 35, 39);
-    /* background: #26292b; */
     background: inherit;
     color: inherit;
-    /* background: linear-gradient(45deg, #212121 10%, #eee 10% 90%, #212121 90%); */
-    /* color: #fff; */
     border-radius: 5px;
     border: 2px solid #272643;
-    border: 2.5px solid rgb(25, 32, 36);
-    padding: 1rem 1.25rem;
-    padding: .85rem 1rem;
-    padding: .95rem 1.5rem;
+    border: 2.5px solid rgb(33, 42, 47);
     padding: .8rem 1.5rem;
     white-space: nowrap;
-    /* color: #fff; */
-    /* padding: .5rem 1rem; */
-    /* font-size: 1rem; */
-    /* transition: box-shadow 100ms ease-in-out, background 200ms ease-in-out, color 200ms ease-in; */
-    /* box-shadow: 4px 4px 0px 0px rgb(25, 32, 36);
-    box-shadow: 4px 4px 0px 0px #fff; */
-    /* border-radius: 2px; */
     font-weight: 600;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
@@ -911,8 +893,6 @@ main-container .main-content .about-banner {
     background: #212421;
     background: #2f312f;
     background: rgb(33, 42, 47);
-    background: #222;
-    /* background: #111; */
     color: inherit;
     cursor: pointer;
     color: #fff;
@@ -999,14 +979,14 @@ main-container .main-content .about-banner {
 
 .right-sidebar h4 {
     margin-bottom: 0;
-    padding-bottom: 1px;
-    border-bottom: .1rem solid lightgray;
+    padding-bottom: 2px;
+    border-bottom: 1px solid lightgray;
 }
 
 .right-sidebar .side-search {
     padding: .75rem .5rem;
     padding-left: 2.1rem;
-    border: .1rem solid lightgray;
+    border: 1px solid lightgray;
     border-radius: .25rem;
     width: 100%;
     background-image: url("/images/loupe.svg");
