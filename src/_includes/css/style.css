@@ -882,7 +882,7 @@ main-container .main-content .about-banner {
     border-radius: 5px;
     border: 2px solid #272643;
     border: 2px solid rgb(33, 42, 47);
-    padding: .8rem 1.5rem;
+    padding: .85rem 1.5rem;
     white-space: nowrap;
     font-weight: 600;
     backface-visibility: hidden;
