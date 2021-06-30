@@ -492,7 +492,7 @@ a:hover {
     display: flex;
     align-items: center;
     width: fit-content;
-    -moz-fit-content: fit-content;
+    width: -moz-fit-content;
     font-size: 1.1rem;
 }
 
@@ -927,7 +927,7 @@ main-container .main-content .about-banner {
     color: #fff;
     font-weight: 600;
     max-width: fit-content;
-    -moz-fit-content: fit-content;
+    max-width: -moz-fit-content;
 }
 
 .reach-me.submit-contact:hover {
