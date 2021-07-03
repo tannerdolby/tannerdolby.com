@@ -5,6 +5,7 @@
         "url": "https://codepen.io/tannerdolby/full/vYxyVLV",
         "recent": true,
         "id": "cats-playing-in-box",
+        "aria_label": "Link to cats playing in a box illustration on Codepen",
         "image": {
             "filename": "cats-in-box.png",
             "fallback_src": "/images/cats-in-box.png",
@@ -16,6 +17,7 @@
         "recent": true,
         "order": 2,
         "id": "css-shipping-truck",
+        "aria_label": "Link to CSS shipping truck on Codepen",
         "url": "https://codepen.io/tannerdolby/full/RwKybqL",
         "image": {
             "filename": "css-truck.png",
@@ -25,6 +27,7 @@
     },
     {
         "name": "Window during nighttime",
+        "desc": "An interactive window made with CSS that displays two backgrounds, day and night. Based on this dribble shot",
         "aria_label": "Link to nighttime window on Codepen",
         "id": "window-nighttime",
         "url": "https://codepen.io/tannerdolby/full/ZEWKEvR",
@@ -32,7 +35,6 @@
         "order": 3,
         "recent": true,
         "credit": "https://dribbble.com/shots/11283947-Taking-it-slow",
-        "desc": "While scrolling through designs over on dribbble, I came across this illustration of a woman sitting in front a window. I tried recreating it using a bit of HTML and CSS. This drawing in particular was alot of fun because I've really enjoyed creating lamps and lighting effects lately.",
         "image": {
             "filename": "css-window-night-large.jpg",
             "fallback_src": "/images/css-window-night-large.jpg",
@@ -87,6 +89,7 @@
         "name": "CSS Movie Camera - Hide and Reveal",
         "url": "https://codepen.io/tannerdolby/full/YzNgveQ",
         "id": "css-movie-camera",
+        "aria_label": "Link to CSS movie camera on Codepen",
         "image": {
             "filename": "css-movie-camera.png",
             "fallback_src": "/images/css-movie-camera.png",
