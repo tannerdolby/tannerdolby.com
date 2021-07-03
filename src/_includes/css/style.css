@@ -434,8 +434,7 @@ a:hover {
     border: 2px solid #212a2f;
     border-radius: 2px;
     padding: 1rem 1.25rem;
-    /* width: 16rem; */
-    max-width: 25ch;
+    max-width: 29ch;
 }
 
 .prev-next .next-post {
@@ -1417,7 +1416,13 @@ main-container .main-content .about-banner {
 #post h2,
 #post h3,
 #post h4 {
-    margin: .8rem 0 1rem 0;
+    margin: 1rem 0;
+}
+
+#post pre + h2,
+#post pre + h3,
+#post pre + h4 {
+    margin-top: 1.75rem;
 }
 
 .post-header {
