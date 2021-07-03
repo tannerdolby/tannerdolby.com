@@ -23,9 +23,8 @@ html, body {
 
 body {
     background: rgb(252, 252, 252);
-    background: #fff;
     background: #fbfbfb;
-    /* background: #fdfdfd; */
+    background: #fcfcfc;
     overflow-x: hidden;
     overflow-y: auto;
     font-size: 100%;
@@ -62,6 +61,16 @@ p {
     font-weight: 400;
 }
 
+a code {
+    text-decoration: underline;
+    text-decoration-color: var(--link-blue-accessible);
+}
+
+.code-link:hover,
+a code:hover {
+    text-decoration: none;
+}
+
 code {
     font-family: "Consolas", monospace;
     font-size: inherit;
@@ -75,11 +84,6 @@ code {
     margin: 0 .1rem;
     background: rgb(232, 232, 232);
     background: #eee;
-}
-
-a code {
-    text-decoration: underline;
-    text-decoration-color: var(--link-blue-accessible);
 }
 
 pre {
@@ -1413,7 +1417,7 @@ main-container .main-content .about-banner {
 #post h2,
 #post h3,
 #post h4 {
-    margin-bottom: .75rem;
+    margin: .8rem 0 1rem 0;
 }
 
 .post-header {
@@ -1685,6 +1689,10 @@ main .art img {
 
 .search-page-style {
     padding: .75rem;
+}
+
+.search-style:hover {
+    background: rgb(235, 235, 235);
 }
 
 .r {
