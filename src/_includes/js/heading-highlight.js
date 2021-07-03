@@ -7,10 +7,21 @@ const headers = [...document.getElementsByClassName("post-heading")]; // convert
  * @param {String} id The string used to generate a unique ID.
  * @returns {String} The unique slug.
  */
-function uniqueIs(id) {
+function uniqueId(id) {
     return removeChars(id).toLowerCase().split(" ").join("-");
 };
 
+/* Grab <code><a>..</a></code> */
+function grabCodeLinks() {
+    [...document.querySelectorAll("#post a")].filter(node => {
+        return node.childNodes[0].nodeName === "CODE";
+    }).map(node => {
+        node.setAttribute("class", "code-link") 
+        return node;
+    });
+}
+
+grabCodeLinks();
 
 /**
  * Removes any whitespace or non-word characters from 
