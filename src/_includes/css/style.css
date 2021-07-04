@@ -670,6 +670,7 @@ a:hover {
 
 .contact-form textarea {
     resize: vertical;
+    min-height: 9rem;
 }
 
 .contact-form button {
@@ -705,6 +706,18 @@ a:hover {
     margin: 3rem auto 1rem auto;
     max-width: 80ch;
     padding: 0 1rem;
+}
+
+.wrap .search-result a {
+    color: inherit;
+}
+
+.footer-flex {
+    margin-top: 1rem;
+}
+
+.wrap .search-result a:hover {
+    color: #fff;
 }
 
 .wrap .banner-container {
@@ -1207,22 +1220,66 @@ main-container .main-content .about-banner {
     height: 26px;
 }
 
+.bar {
+    border-top: .3rem solid lightgray;
+}
+
 .footer-main {
     margin-top: auto;
-    position: relative;
-    bottom: 0;
     padding-top: 1rem;
     padding-bottom: 1rem;
     background: inherit;
-    border-top: .275rem solid lightgray;
-    border-top: .25rem solid lightgray;
-    border-top: .3rem solid lightgray;
     background: inherit;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 1rem;
+    max-width: 1150px;
+    margin: .75em auto;
+    width: 100%;
+}
+
+.ft-left {
+    grid-column: 1;
+}
+
+.ft-right {
+    grid-column: 2;
+    margin-left: auto;
+}
+
+.footer-info {
+    grid-column: 1 / 3;
+}
+
+footer div ul {
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+    position: relative;
+}
+
+.footer-main span {
+    font-size: 1.1rem;
+    font-size: clamp(1rem,4vw,1.15rem);
+    font-weight: 700;
+}
+
+footer div ul li {
+    margin: 0 .5rem;
+}
+
+footer div ul li:first-child {
+    margin-left: 0;
+}
+
+.footer-main div ul li a {
+    color: #333;
 }
 
 .footer-content {
     display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 50% 50%;
     margin-top: .5rem;
     margin-left: auto;
     margin-right: auto;
@@ -1271,7 +1328,7 @@ main-container .main-content .about-banner {
 
 .copyright {
     font-size: 1rem;
-    margin-right: 1rem;
+    margin-right: 2rem;
     text-align: right;
 }
 
@@ -1289,9 +1346,9 @@ main-container .main-content .about-banner {
 
 .column .ft-nav {
     color: rgb(48, 47, 47);
-    margin-bottom: .4rem;
     font-size: clamp(1rem, 4vw, 1.15rem);
     font-weight: 700;
+    margin: 0;
 }
 
 .column .links {
@@ -1328,15 +1385,24 @@ main-container .main-content .about-banner {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 1.5rem;
 }
 
 
 .footer-info a {
     color: #212121;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .footer-info a:hover {
+    text-decoration: underline;
+}
+
+.footer-info .back-top {
+  text-decoration: underline;
+}
+
+.footer-info .back-top:hover {
     text-decoration: none;
 }
 
@@ -1985,7 +2051,26 @@ main .art img {
     }
 } 
 
-@media (max-width: 650px) {
+@media screen and (max-width: 750px) {
+    .ft-left {
+        grid-column: 1 / 3;
+        margin: .5em 0;
+    }
+    .ft-right {
+        grid-column: 1/ 3;
+        margin: .5em 0 0 0;
+    }
+
+    .footer-row div:last-child {
+        margin-top: 1rem;
+    }
+
+    .footer-info {
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
     .prev-next {
         display: flex;
         flex-direction: column;
@@ -2091,6 +2176,18 @@ main .art img {
 @media (max-width: 375px) {
     .main-container .projects .project-grid {
         grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
+
+    .footer-row div ul {
+        flex-wrap: wrap;
+    }
+
+    .footer-row div ul li {
+        margin-top: .5rem;
+    }
+
+    .footer-row div ul li:last-child {
+        margin-left: 0;
     }
 }
 
