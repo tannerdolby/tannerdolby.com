@@ -45,6 +45,7 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.addPassthroughCopy("./src/_includes/js");
     eleventyConfig.addPassthroughCopy("./src/remote");
     eleventyConfig.addPassthroughCopy("./src/social-share/");
+    eleventyConfig.addPassthroughCopy("./src/resume/");
 
     eleventyConfig.addWatchTarget("./src/_includes/sass");
 
