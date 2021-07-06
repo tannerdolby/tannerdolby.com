@@ -233,7 +233,7 @@ a:hover {
 }
 
 .top-nav .nav-wrapper {
-    max-width: 1150px;
+    max-width: 1200px;
     padding: 1rem 1.1rem .5rem 1.1rem;
     margin: 0 auto 0 auto;
     display: flex;
@@ -307,7 +307,7 @@ a:hover {
     border-radius: 0;
     padding: 0 1.1rem;
     overflow: hidden;
-    max-width: 1150px;
+    max-width: 1200px;
 }
 
 .about-main {
@@ -340,7 +340,7 @@ a:hover {
 .main-container .banner-container {
     margin-left: auto;
     margin-right: auto;
-    max-width: 1150px;
+    max-width: 1200px;
     margin-right: 1rem;
 }
 
@@ -545,7 +545,7 @@ a:hover {
 
 #main-about,
 #main-art {
-    max-width: 1150px;
+    max-width: 1200px;
     margin: 0 auto 5rem auto;
     overflow: hidden;
 }
@@ -629,7 +629,7 @@ a:hover {
 }
 
 #main-contact {
-    max-width: 1150px;
+    max-width: 1200px;
     padding: 0 1rem;
     margin: 3rem auto 2rem auto;
     padding-bottom: 1.5rem;
@@ -697,7 +697,7 @@ a:hover {
 }
 
 .main-container .main-content {
-    max-width: 1150px;
+    max-width: 1200px;
 }
 
 .wrap {
@@ -757,7 +757,7 @@ main-container .main-content .about-banner {
 }
 
 .main-container .projects .projects-wrapper {
-    max-width: 1150px;
+    max-width: 1200px;
     display: flex;
     flex-direction: column;
     margin: 1rem auto;
@@ -767,7 +767,7 @@ main-container .main-content .about-banner {
 .main-container .projects .project-grid {
     display: grid;
     padding: 1rem 0.1rem;
-    grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
     gap: 1.5rem;
     overflow: hidden;
     list-style: none;
@@ -938,11 +938,16 @@ main-container .main-content .about-banner {
     background: rgb(33, 42, 47);
     background: rgb(14, 88, 192);
     background: rgb(23, 100, 209);
-    /* background: rgb(27, 110, 226); */
 }
 
 .see-more:hover {
     text-decoration: none !important;
+}
+
+main.a11y-page {
+    max-width: 85ch; 
+    margin: 0 auto 6rem auto; 
+    padding: 0 1.1rem;
 }
 
 .filename-title {
@@ -968,7 +973,6 @@ main-container .main-content .about-banner {
     margin-bottom: 2rem;
     margin-top: 2rem;
     padding: .25rem 1.1rem;
-    max-width: 1150px;
     grid-column: 1 / 5;
     grid-row: 1 / 7;
 }
@@ -988,7 +992,7 @@ main-container .main-content .about-banner {
     grid-template-columns: repeat(6, 1fr);
     grid-auto-rows: minmax(5rem, 1fr);
     gap: .75rem;
-    max-width: 1150px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -1064,7 +1068,7 @@ main-container .main-content .about-banner {
     padding: .5rem 0;
     margin: 0 auto;
     padding: 1rem 1.1rem;
-    max-width: 1150px;
+    max-width: 1200px;
 }
 
 .featured-art .feat-art-list {
@@ -1125,7 +1129,7 @@ main-container .main-content .about-banner {
     padding: 1rem 1.25rem;
     background: inherit;
     margin: 2rem auto;
-    max-width: 1150px;
+    max-width: 1200px;
 }
 
 .contact-wrapper {
@@ -1233,7 +1237,7 @@ main-container .main-content .about-banner {
     display: grid;
     grid-template-columns: 50% 50%;
     padding: 1rem;
-    max-width: 1150px;
+    max-width: 1200px;
     margin: .75em auto;
     width: 100%;
 }
@@ -1276,6 +1280,11 @@ footer div ul li:first-child {
     color: #333;
 }
 
+.footer-main div ul li a:hover,
+.footer-info a:hover {
+    color: var(--link-blue-accessible-hover);
+}
+
 .footer-content {
     display: flex;
     display: grid;
@@ -1283,7 +1292,7 @@ footer div ul li:first-child {
     margin-top: .5rem;
     margin-left: auto;
     margin-right: auto;
-    max-width: 1150px;
+    max-width: 1200px;
     padding-left: 1.25rem;
     padding-right: 1.25rem;
 }
@@ -1625,6 +1634,11 @@ main .art .art-details .drawing-info {
 
 .art-details a {
     height: 100%;
+}
+
+.art-details a:hover {
+    -webkit-filter: contrast(93%);
+    filter: contrast(93%);
 }
 
 main .art img {
