@@ -230,6 +230,7 @@ textarea:focus {
 a:hover {
     cursor: pointer;
     text-decoration: underline;
+    color: var(--link-blue-accessible-hover);
 }
 
 .top-nav .nav-wrapper {
@@ -604,12 +605,17 @@ a:hover {
     padding-left: 0;
 }
 .post-sidebar ul li {
-    margin: 5px 0;
+    margin: 6px 0;
 }
 
 .post-sidebar ul li a {
     color: #333;
     padding: 2px 0;
+    line-height: 1.4;
+}
+
+.post-sidebar ul li a:hover {
+    color: var(--link-blue-accessible-hover);
 }
 
 .post-sidebar .toc-heading {
@@ -1702,6 +1708,10 @@ main .art img {
     color: #333;
 }
 
+.around-web li a:hover {
+    color: var(--link-blue-accessible-hover);
+}
+
 .around-the-web ul li p {
     padding: 0;
     margin: .3rem 0;
@@ -2222,9 +2232,6 @@ main .art img {
     p, #post p, .preview, code, pre code, .post pre code, p code, ol li, ul li, .copyright {
         font-size: 1rem;
     }
-    /* .post-wrap .date {
-        font-size: 1rem !important;
-    } */
     .post-sidebar ul li a {
         font-size: 1em;
     }
