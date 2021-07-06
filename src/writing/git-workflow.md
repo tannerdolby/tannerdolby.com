@@ -5,7 +5,7 @@ datetime: 2020-12-27 00:00:00 Z
 tags: 
   - git
 permalink: "/writing/{{ title | slug }}/"
-preview: 'To begin contributing to open-source software, you might want to become familiar with Git. Understanding the workflow of creating your own local copy of a repository and keeping it up to date with the upstream repository is integral to start creating PRs in public projects.'
+preview: 'To begin contributing to open-source software, you might want to become familiar with Git. Understanding the workflow of creating your own local copy of a repository and keeping it up to date with the upstream repository is integral to start contributing in public projects.'
 ---
 
 {{ preview }}
@@ -54,6 +54,26 @@ From github.com:11ty/11ty-website
  * [new branch]        opencollective-update-opencollective-integration -> upstream/opencollective-update-opencollective-integration
    e8fed377..70951217  production-dev -> upstream/production-dev
 ```
+
+<h2 class="post-heading">Stay up to date</h2>
+
+Let's say a contributor submitted a pull request to fix a bug in your project. You review the PR and decide to approve the changes and merge them into the `master` branch (or whatever branch your working on). Now your `origin/master` is "behind" by the remote `master` by 'X' commits depending on the number of commits in the merged PR. 
+
+To remedy this, you just need to "sync" with the remote repository to make sure your local project is up-to-date and has the newly added changes. In Git, `origin` is a shorthand name for the remote repository where you want to publish commits.
+
+Once you [pull](https://git-scm.com/docs/git-pull) on the `master` branch and get those changes, your project `origin/master` will be "even" with remote `master` and the message of "ahead/behind by 'X' commits" will have gone away.
+
+```git
+git pull origin master
+```
+
+If you need to stay up to date with some branch in a public remote repository, simply use `upstream` instead of `origin` and you can use the same syntax to pull on the branch and get the changes.
+
+```git
+git pull upstream <BRANCHNAME>
+```
+
+Note: Using `git fetch upstream` is always helpful to use before pulling on branches in a public repository to sync with the latest changes.
 
 <h2 class="post-heading">Making changes</h2>
 
