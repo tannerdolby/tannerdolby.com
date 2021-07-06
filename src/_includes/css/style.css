@@ -68,6 +68,7 @@ a code {
 
 .code-link:hover,
 a code:hover {
+    color: var(--link-blue-accessible-hover);
     text-decoration: none;
 }
 
@@ -1218,11 +1219,11 @@ main.a11y-page {
 }
 
 .social-icons ul li:first-child {
-    margin-right: .5rem;
+    margin-right: 10px;
 }
 
 .social-icons ul li:not(:first-child) {
-    margin: 0 .5rem;
+    margin: 0 10px;
 }
 
 .social-icons img {
