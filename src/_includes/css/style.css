@@ -1448,14 +1448,13 @@ footer div ul li:first-child {
 
 #post .post-heading .direct-link {
     text-decoration: none;
-    color: transparent !important;
+    color: transparent;
     vertical-align: top;
     margin-left: .5rem;
 }
 
 #post .post-heading .direct-link:hover {
-    color: #444 !important;
-    text-decoration: none;
+    color: #333;
 }
 
 #post h2:hover .direct-link,
@@ -1464,7 +1463,7 @@ footer div ul li:first-child {
 #post .direct-link:focus,
 #post .direct-link:focus,
 #post .direct-link:focus {
-    color: #444 !important;
+    color: #444;
     cursor: pointer;
 }
 
