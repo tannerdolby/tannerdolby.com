@@ -47,7 +47,7 @@ blockquote {
 }
 
 blockquote p {
-    margin: .8rem auto;
+    margin: .8rem 0;
 }
 
 img {
