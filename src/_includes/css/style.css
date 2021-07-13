@@ -43,6 +43,7 @@ blockquote {
     /* background: #f6f6f6; */
     padding: .2rem 1rem;
     margin: 0 auto;
+    margin-bottom: 24px;
 }
 
 blockquote p {
@@ -1497,13 +1498,22 @@ footer div ul li:first-child {
 #post h2,
 #post h3,
 #post h4 {
-    margin: 1rem 0;
+    margin: 1.75rem 0 1.75rem 0;
 }
 
 #post pre + h2,
 #post pre + h3,
 #post pre + h4 {
     margin-top: 1.75rem;
+}
+
+/* need to update this h2-5 with posts layout, but not anywhere else */
+#post .h2-5 {
+    --min-font-size: 1.6rem;
+    --flex-unit: 5vw;
+    --max-font-size: 1.75rem;
+    font-size: 1.75rem;
+    font-size: clamp(var(--min-font-size),var(--flex-unit),var(--max-font-size));
 }
 
 .post-header {
