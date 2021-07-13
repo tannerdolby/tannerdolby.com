@@ -25,7 +25,7 @@ The first thing you need to implement in a Node.js application, is a server. The
              (Response)               
 ```
 
-<h3 class="post-heading">Create a basic server</h3>
+<h2 class="post-heading h2-5">Setup a basic server using the HTTP module</h2>
 
 Creating a basic HTTP server only takes a few steps. Require the HTTP module and then call the `createServer` function on the HTTP module to create the server. This function returns a `Server` object which has a method called `listen` that allows us to specify the port which the server should listen to requests on.
 
@@ -111,7 +111,7 @@ The above example will serve a file called `index.html` from the current directo
 
 The docs use `res.end()` to send data in the response body, but using `res.send(data)` or `res.write(data)` followed by `res.end()` would accomplish the same goal. The `.send()` method will send the HTTP response and looks like `.send([body])`, where the `body` parameter can be a Buffer object, a String, an object, or an Array. The `.end()` method will end the response process.
 
-*Note: Read more about the difference between `res.end()` and `res.send()` [here](https://stackoverflow.com/questions/29555290/what-is-the-difference-between-res-end-and-res-send)*
+*Note: Read more about the difference between `res.end()` and `res.send()` on [StackOverflow](https://stackoverflow.com/questions/29555290/what-is-the-difference-between-res-end-and-res-send)*
 
 
 {% filename "index.html" %}
@@ -152,7 +152,7 @@ All of this articles code could be written in a single JavaScript file but to ke
 - The home page: `/`
 - The message submitted by form: `/message`
 
-To start writing the request handlers, create a file called `handlers.js` in your root directory. We will define two functions, `home` and `message` to handle the request for each respective route and send back a response. The home page serves a static file (`index.html`) and the `/message` page will display JSON with the form submission contents. Also, define a route handler object `handlerObj` with properties which match the available routes. Each route is a property in the object and will store its corresponding request handler function. Lastly, make the file a module by using `module.exports` to export the object and handler functions. 
+To start writing the request handlers, create a file called `handlers.js` in your root directory. We will define two functions, `home` and `message` to handle the request for each respective route and send back a response. The home page serves a static file `index.html` and the `/message` page will display JSON with the form submission contents. Also, define a route handler object `handlerObj` with properties which match the available routes. Each route is a property in the object and will store its corresponding request handler function. Lastly, make the file a module by using `module.exports` to export the object and handler functions. 
 
 {% filename "handlers.js" %}
 
