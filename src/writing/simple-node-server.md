@@ -11,7 +11,7 @@ datetime: 2021-05-23 00:00:00 Z
 
 {{ preview }}
 
-Developing a Node app doesn't have to be intimidating. Sure, large applications will have much greater complexity than a simple API but the underlying logic of how Node apps work won't change much. You need a web server to allow web clients to send requests, a view or page to display the servers response, a router to route specific requests, and lastly request handlers to handle requests sent to the server which have been routed by the router.
+Developing applications with Node.js doesn't have to be intimidating. Sure, large apps will have much greater complexity than a simple API but the underlying logic of how they work won't change much. You need a web server to allow web clients to send requests, a view or page to display the servers response, a router to route specific requests, and lastly request handlers to handle requests sent to the server which have been routed by the router.
 
 <h2 class="post-heading">What is a Node.js app?</h2>
 
@@ -70,7 +70,7 @@ Having a look at the "Headers" tab, we can see an HTTP `GET` request is being ma
 
 <h2 class="post-heading">Displaying the Response</h2>
 
-Instead of sending plain text to the root URL (`http://localhost:8000`) of the Node app, let's send static HTML in the response. For testing and local development, its fine to create a template literal string containing the HTML you want to send. That can be accomplished like this:
+Instead of sending plain text to the root URL (`http://localhost:8000`) ie the `/` endpoint, let's send static HTML in the response. For testing and local development, its fine to create a template literal string containing the HTML you want to send. That can be accomplished like this:
 
 ```js
 const http = require("http");
