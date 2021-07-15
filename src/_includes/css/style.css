@@ -56,10 +56,9 @@ img {
 
 p {
     color: #212121;
-    color: #333;
-    font-size: 1.14rem;
     font-size: 1.175rem;
     font-weight: 400;
+    margin-bottom: 25px;
 }
 
 a code {
@@ -1389,7 +1388,7 @@ footer div ul li:first-child {
 }
 
 .demo-img {
-    margin: 1rem auto;
+    margin: 0;
     border: .05rem solid lightgray;
     border-radius: .2rem;
     object-fit: cover;
@@ -1499,12 +1498,7 @@ footer div ul li:first-child {
 #post h3,
 #post h4 {
     margin: 1.6rem 0 1.4rem 0;
-}
-
-#post pre + h2,
-#post pre + h3,
-#post pre + h4 {
-    margin-top: 1.6rem;
+    margin: 30px 0 28px 0;
 }
 
 /* need to update this h2-5 with posts layout, but not anywhere else */
