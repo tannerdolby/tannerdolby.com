@@ -20,7 +20,7 @@ async function fetchData(url) {
         }
     }
     catch (e) {
-        console.log(`Error caching: ${url}`);
+        console.log(`Error caching: ${url}`, e);
         return {
             title: "A Github Project by Tanner",
             desc: "This project was created by @tannerdolby",
@@ -45,6 +45,6 @@ module.exports = async function() {
         // return the promise for each project <Promise{ title: ... }>
         return { eleventyGallery, pluginMetaGen, pluginSharpRespImg, whatToWatch, cipherNews };
     } catch (e) {
-        console.log("Error returning multiple projects cached API data");
+        console.log("Error returning multiple projects cached API data", e);
     } 
 };
