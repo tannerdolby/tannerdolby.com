@@ -9,17 +9,18 @@ tags:
     - nunjucks
     - html
 permalink: "/writing/{{ title | slug }}/"
+templateEngineOverride: njk, md
 ---
 
 {{ preview }} 
 
-In 11ty, you can create [global data files](https://www.11ty.dev/docs/data-global/) and place them inside the `_data` directory. The data files can then be accessed by any template in the project structure. Global data files can be stored as JSON `.json` or values from `module.exports` in a JavaScript `.js` file.
+When building sites with Eleventy, you can create [global data files](https://www.11ty.dev/docs/data-global/) and place them inside the `_data` directory. The data files can then be accessed by any template in the project structure. Global data files can be stored as JSON `.json` or values from `module.exports` in a `.js` custom data file. The possibilites with global data files are endless.
 
 <h2 class="post-heading">Use Cases</h2>
 
-I think its safe to say when building a website, you might be faced with creating a large grid of repeating card elements (with different data) or a long listing column of values. This could be menu items on a restaurant menu, profiles on a main page, the list goes on and on. 
+I think its safe to say when building a website, you might be faced with creating a large grid of repeating card elements (with different data) or a long listing column of values. This could be menu items on a restaurant menu, profiles on a main page, the list goes on and on. CSS grid provides a way to style nice looking grids, but the underlying HTML still needs to be added one way or another.
 
-Why sit there and type out 30 different `.card` containers when you can store each card elements data inside a global data file. To then iterate through that global card data and generate 30 elements from only one card containers markup. This could be data fetched from an API and stored in a `.json` file or by simply typing in the data needed by hand into a `_data/*.json` file. 
+Why sit there and type out 100+ different `.card` containers when you can store each card elements data inside a global data file. To then iterate over that global card data and generate multiple elements from only one card containers markup. This could be data fetched from an API and stored in a `.js` file or by simply typing in the data needed by hand into a `_data/*.json` file. 
 
 <h2 id="cascade-note" class="post-heading">The Data Cascade</h2>
 
@@ -36,11 +37,11 @@ Here are a few options for data sources:
 
 <h2 id="create-global-data" class="post-heading">Creating a Global Data File</h2>
 
-The global data folder in Eleventy is decided by the [dir.data](https://www.11ty.dev/docs/config/#directory-for-global-data-files) configuration. For this article I will only focus on `.json` global data but you can read more about [other global data](https://www.11ty.dev/docs/data-global/) available to templates if you'd like.
+The global data folder in Eleventy is decided by the [dir.data](https://www.11ty.dev/docs/config/#directory-for-global-data-files) configuration. For this article I will only focus on `.json` global data but you can read more about [other global data](https://www.11ty.dev/docs/data-global/) available to templates if you'd like. The example below creates an array of objects inside the `cards.json` global data file. Each employee object in the array has some filler data to mimic a large page of profile cards or something of that nature.
 
-The example below creates an array of objects inside the `cards.json` global data file. Each employee card object in the array has some filler data to mimic a large page of profile cards or something of that nature.
+Let's say company XYZ has 500+ employees and you don't want to sequentially write out the HTML for each employee profile card. If there was an internal data source or API endpoint that contained the data, you could populate a global data file `cards.js` with some JavaScript code to fetch data and export it to be used just as you would `.json` data file. Otherwise, manually inserting data to `cards.json` without performing any data fetching or computing will work just as well.
 
-Let's say company XYZ has many employees and you don't want to sequentially write out the HTML for each employee profile card. You can create a layout `profiles.njk` inside a new directory called `_includes/layouts/` and begin iterating over the array of card objects in cards.json. You could also just create a `profiles.html` file to iterate over the global data and not use any `.md` files.
+Next, we need a place where all this employee data can be utilized and rendered. You can create a layout `profiles.njk` inside a new directory called `_includes/layouts/` and begin iterating over the array of card objects in cards.json. You could also just create a `profiles.html` file to iterate over the global data and not use any `.md` files, as the templates are being transformed to HTML at build time.
 
 {% filename "cards.json" %}
 
@@ -100,7 +101,7 @@ You can access global data files in a markdown file or within a template by usin
 
 If you wanted to iterate over the array of card objects in `_data/cards.json` and generate HTML. You can inject global data into a template file. Use something like this,
 
-{% filename "profiles.liquid" %}
+{% filename "profiles.njk" %}
 
 {% raw %}
 ```html
@@ -160,10 +161,50 @@ The employee cards contain the data fields:
 ```
 {% endraw %}
 
-To include the markdown in `cardBanner.md`, we can reference it inside the template file `profiles.njk` using {% raw %}`{{ content }}`{% endraw %} and the `safe` filter. 
+To include the markdown in `cardBanner.md` within the layout file `global-data-demo.njk`, we can reference it inside the template file `profiles.njk` using {% raw %}`{{ content }}`{% endraw %} and the `safe` filter. 
+
+{% filename "profiles.njk" %}
+
+{% raw %}
+```liquid
+<body>
+    <main>
+        <h1>{{ title }}</h1>
+        {{ content | safe }}
+        <div class="card-grid">
+        {% for card in cards %}
+            ...
+        {% endfor %}
+        </div>
+    </main>
+</body>
+```
+{% endraw %}
+
+Now that everything is setup, build with `eleventy` and then serve locally using `eleventy --serve`. The employee grid should look like this:
+
+{% respimg 
+   src="profile-grid-demo.png",
+   alt="Employee Grid demo page",
+   inputDir="./src",
+   imgDir="/images/",
+   widths=[320, 480, 640, 1024],
+   sizes="(max-width: 400px) 33.3vw, 100vw",
+   className="demo-img",
+   width="640",
+   height="400"
+%}
 
 <h2 id="conclusion" class="post-heading">Conclusion</h2>
 
-This is just one method of merging data in Eleventy and if you'd like to learn more. I suggest taking a look at some of the great features Eleventy has to offer such as [Collections](https://www.11ty.dev/docs/collections/), [Pagination](https://www.11ty.dev/docs/pagination/) and [Pages from Data](https://www.11ty.dev/docs/pages-from-data/). 
+This is just one method of merging data in Eleventy and if you'd like to learn more, I suggest taking a look at some of the great features Eleventy has to offer such as [Collections](https://www.11ty.dev/docs/collections/), [Pagination](https://www.11ty.dev/docs/pagination/) and [Pages from Data](https://www.11ty.dev/docs/pages-from-data/). The sky is the limit with global data files.
 
-Here is a link to <a href="{{ page.url}}demo/">the live demo</a>.
+Here is a link to <a href="{{ page.url}}demo/">the live demo</a>
+
+<details>
+<summary>View the Source Code</summary>
+
+- [`cards.json`](https://github.com/tannerdolby/tannerdolby.com/blob/master/src/_data/cards.json) (Global data file)
+- [`cardBanner.md`](https://github.com/tannerdolby/tannerdolby.com/blob/master/src/_includes/layouts/global-data-demo.njk) (Markdown)
+- [`profiles.njk`](https://github.com/tannerdolby/tannerdolby.com/blob/master/src/_includes/layouts/global-data-demo.njk) (Layout)
+</details>
