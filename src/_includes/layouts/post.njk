@@ -50,7 +50,7 @@ name: Tanner Dolby
             <div class="main-content">
                 <header class="post-header">
                     <div class="post-wrap">
-                        <h1 style="margin-top: .25rem;" class="h1" id="post-title">{{ title }}</h1>
+                        <h1 class="h1" id="post-title">{{ title }}</h1>
                         <p class="date">Posted on&nbsp;<time style="margin-bottom: 0;" datetime="{{ datetime | date('YYYY-MM-DD') }}">{{ datetime | date('MMMM DD, YYYY') }}</time>&nbsp;&bull; tagged with&nbsp;{% for tag in tags %}<a href="/writing?filter={{ tag }}" aria-label="Link to {{ tag }} posts" style="margin-right: .35rem;">#{{ tag }}</a>{% endfor %}</p>
                     </div>
                 </header>
