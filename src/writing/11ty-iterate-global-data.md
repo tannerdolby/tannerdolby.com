@@ -285,6 +285,7 @@ Here is a link to <a href="{{ page.url}}demo/">the live demo</a>
 <summary>View the Source Code</summary>
 
 - [`cards.json`](https://github.com/tannerdolby/tannerdolby.com/blob/master/src/_data/cards.json) (Global data file)
+- [customData.js](https://github.com/tannerdolby/tannerdolby.com/blob/master/src/_data/testData.js) (Custom global data file)
 - [`cardBanner.md`](https://github.com/tannerdolby/tannerdolby.com/blob/master/src/iterate-global-data-demo.md) (Markdown)
 - [`profiles.njk`](https://github.com/tannerdolby/tannerdolby.com/blob/master/src/_includes/layouts/global-data-demo.njk) (Layout)
 </details>
