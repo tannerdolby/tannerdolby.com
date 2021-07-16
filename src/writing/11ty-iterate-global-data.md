@@ -14,7 +14,7 @@ templateEngineOverride: njk, md
 
 {{ preview }} 
 
-When building sites with Eleventy, you can create [global data files](https://www.11ty.dev/docs/data-global/) and place them inside the `_data` directory. The data files can then be accessed by any template in the project structure. Global data files can be stored as JSON `.json` or values from `module.exports` in a `.js` custom data file. The possibilites with global data files are endless.
+You can create [global data files](https://www.11ty.dev/docs/data-global/) and place them inside the `_data` directory. The data files can then be accessed by any template in the project structure. Global data files can be stored as JSON `.json` or values from `module.exports` in a `.js` custom data file. The possibilites with global data files are endless.
 
 <h2 class="post-heading">Use Cases</h2>
 
@@ -31,6 +31,7 @@ Before going any further, I should mention that when building webpages using the
 One of my favorite things about Eleventy is the fact that there isn't a prescribed way of merging data within the cascade. There is an [order of priority](https://www.11ty.dev/docs/data-cascade/#sources-of-data) for sources of data in the cascade but that data can defined however you would like. 
 
 Here are a few options for data sources:
+- [Global data files](https://www.11ty.dev/docs/data-global/)
 - [Computed Data](https://www.11ty.dev/docs/data-computed/)
 - [Front Matter Data](https://www.11ty.dev/docs/data-frontmatter/)
 - [Template and Directory](https://www.11ty.dev/docs/data-template-dir/)
