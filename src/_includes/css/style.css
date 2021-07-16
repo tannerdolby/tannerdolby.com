@@ -1596,7 +1596,7 @@ table {
 
 #post-content #post ul li,
 #post-content #post ol li {
-    padding: .3rem 0;
+    margin: 8px 0;
 }
 .main-content .post .preview {
     margin-top: .75rem;
