@@ -70,6 +70,86 @@ Next, we need a place where all this employee data can be utilized and rendered.
 ]
 ```
 
+If you wanted more freedom to pull in data from another source, or compute it, then using a custom global data file will be what you want. Whatever is exported using `module.exports` will be available in the same fashion as data from `.json` global data. Below is a basic example of creating a custom global data file for use in templates.
+
+{% filename "customData.js" %}
+
+```js
+const fetch = require("node-fetch");
+
+// Fetch some data from the GitHub API
+async function getData(url) {
+    try {
+        repo = await fetch(url).then(data => data.json());
+        return {
+            ...repo,
+            title: repo.name,
+            desc: repo.description,
+            stars: repo.stargazers_count,
+            issues: repo.open_issues
+        }
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+function random(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min)
+}
+
+module.exports = async function() {
+    try {
+        const apiData = await getData("https://api.github.com/repos/tannerdolby/eleventy-photo-gallery");
+        return {
+            title: "My custom blog post",
+            metadata: {
+                date: "2021-03-16",
+                tags: [
+                    "11ty",
+                    "JavaScript"
+                ]
+            },
+            trending: random(1, 10) > 7 ? true : false,
+            repo: apiData
+        }
+    } catch (err) {
+        console.log(err);
+    }
+}
+```
+
+This is a contrived example, but the sky is the limit with global data files. They provide a blank "data" canvas for you to do whatever youwant with your data, which is another reason why 11ty is really cool. You can use the custom global data universally in your project either in a template or markdown file just as you would with a `.json` data file. By using the global data filename like {% raw %}`{{ customData }}`{% endraw %} and then accessing the object properties as necessary.
+
+<details>
+<summary>Using Nunjucks in Markdown Files</summary>
+
+If you intend on using templating language syntax like liquid or nunjucks in a Markdown file, make sure to set `templateEngineOverride: njk, md` in front matter to allow nunjucks to be handled first then markdown.
+
+</details>
+
+{% raw %}
+```html
+<body>
+  <h1>{{ customData.title }}</h1>
+  <p>{{ customData.metadata.date }}</p>
+  <ul>
+    {% for tag in customData.metadata.tags %}
+    <li>{{ tag }}</li>
+    {% endfor %}
+  </ul>
+  <p>{{ customData.trending }}</p>
+
+  <div class="github">
+    <p>GitHub Repostory: {{ customData.repo.name }}</p>
+    <p>Stars: {{ customData.repo.stars }}</p>
+    <p>Issues: {{ customData.repo.issues }}</p>
+  </div>
+</body>
+```
+{% endraw %}
+
 <h2 id="using-global-data" class="post-heading">Using Global Data</h2>
 
 Below is an example of the `for` loop syntax in Nunjucks.
@@ -82,11 +162,11 @@ Below is an example of the `for` loop syntax in Nunjucks.
 ```
 {% endraw %}
 
-This way, you only write a small amount of template HTML for one profile container. Allowing the `for` loop to generate the rest of the card containers markup from your global data. 
+Using an iteration statement like the `for` loop, you only have to write a small amount of template HTML for one profile container. Allowing the loop to generate the rest of the card containers markup from your global data. I'm using [Nunjucks](https://mozilla.github.io/nunjucks/) as the templating language for examples in this article, but everything could be done in a `.liquid` template as well. 
 
-I'm using [Nunjucks](https://mozilla.github.io/nunjucks/) as the templating language for examples in this article, but everything could be done in a `.liquid` template as well. Liquid is the default templating engine in Eleventy. 
+> Liquid is the default templating engine in Eleventy. 
 
-To create a loop or conditional statement use {% raw %}`{% code %}`{% endraw %}. If you simply want to access data from front matter or in global data, use {% raw %}`{{ variable }}`{% endraw %}. 
+To create a loop or conditional statement in [Nunjucks](https://mozilla.github.io/nunjucks/) use {% raw %}`{% code %}`{% endraw %}. If you simply want to access data from front matter or in global data, use {% raw %}`{{ variable }}`{% endraw %}. 
 
 {% raw %}
 ```html
@@ -99,7 +179,7 @@ To create a loop or conditional statement use {% raw %}`{% code %}`{% endraw %}.
 
 You can access global data files in a markdown file or within a template by using the filename without its file extension. When you have a global data file thats an object, you can access the content by using {% raw %}`{{ cards.title }}`{% endraw %} without any `for` loop. 
 
-If you wanted to iterate over the array of card objects in `_data/cards.json` and generate HTML. You can inject global data into a template file. Use something like this,
+If you wanted to iterate over the array of card objects in `_data/cards.json` and generate HTML for a nice grid of employee cards. You can inject global data into a template file using {% raw %}`{{ item }}`{% endraw %} and access the objects we have defined in global data.
 
 {% filename "profiles.njk" %}
 
