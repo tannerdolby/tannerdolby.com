@@ -61,6 +61,10 @@ p {
     margin-bottom: 25px;
 }
 
+details {
+    margin-bottom: 25px;
+}
+
 a code {
     text-decoration: underline;
     text-decoration-color: var(--link-blue-accessible);
@@ -1485,7 +1489,8 @@ footer div ul li:first-child {
 
 #post p,
 #post ul li,
-#post ol li {
+#post ol li,
+#post details summary {
     font-size: 1.175rem;
     line-height: 1.8;
 }
