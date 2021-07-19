@@ -73,7 +73,8 @@ searchBar.addEventListener("input", (e) => {
     // posts with title that matches each character in search query
     const matchingPost = posts.filter(post => {
         const title = post.dataset.postTitle;
-        return title.toLowerCase().includes(searchQuery);
+        const tags = post.dataset.tags;
+        return title.toLowerCase().includes(searchQuery) || tags.includes(searchQuery);
     });
 
     // posts with title that does not match the search query
