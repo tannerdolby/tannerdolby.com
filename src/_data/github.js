@@ -42,8 +42,16 @@ module.exports = async function() {
         const pluginSharpRespImg = await fetchData("https://api.github.com/repos/tannerdolby/eleventy-plugin-sharp-respimg");
         const whatToWatch = await fetchData("https://api.github.com/repos/tannerdolby/what-to-watch");
         const cipherNews = await fetchData("https://api.github.com/repos/tannerdolby/cipher-news");
-        // return the promise for each project <Promise{ title: ... }>
-        return { eleventyGallery, pluginMetaGen, pluginSharpRespImg, whatToWatch, cipherNews };
+        const sassVarConverter = await fetchData("https://api.github.com/repos/tannerdolby/sass-variable-converter");
+
+        return [ 
+            eleventyGallery, 
+            pluginMetaGen, 
+            pluginSharpRespImg, 
+            whatToWatch, 
+            cipherNews, 
+            sassVarConverter 
+        ];
     } catch (e) {
         console.log("Error returning multiple projects cached API data", e);
     } 
