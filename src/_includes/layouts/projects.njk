@@ -6,7 +6,7 @@
             <li class="project-tile">
                 <div class="project-details">
                     <div class="top-level" style="display: flex; justify-content: space-between; align-items: center;">
-                        <h3 class="h2-5"><a href="{{ repo.eleventyGallery.homepage }}">{{ repo.title }}</a></h3>
+                        <h3 class="h2-5"><a href="{{ repo.homepage }}">{{ repo.title }}</a></h3>
                         <div class="stars">
                             <a class="star-row" href="{{ repo.stargazers_url }}">
                                 {% include "star-icon.svg" %}
@@ -17,7 +17,7 @@
                     <p class="project-desc">{{ repo.desc }}</p>
                     <ul class="links">
                         <li><a class="tile-link" href="{{ repo.homepage }}" aria-label="View the live demo for {{ repo.title }}">Live demo</a></li>
-                        <li><a class="tile-link" href="{{ repo.eleventyGallery.repo_url }}" aria-label="View the source code for {{ repo.name }}">Source code</a></li>
+                        <li><a class="tile-link" href="{{ repo.repo_url }}" aria-label="View the source code for {{ repo.name }}">Source code</a></li>
                     </ul>
                 </div>
             </li>
