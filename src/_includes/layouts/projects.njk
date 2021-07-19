@@ -2,96 +2,27 @@
     <div class="projects-wrapper">
         <h2 class="section-title">Featured Projects</h2>
         <ul class="project-grid">
+            {% for repo in github %}
             <li class="project-tile">
                 <div class="project-details">
                     <div class="top-level" style="display: flex; justify-content: space-between; align-items: center;">
-                        <h3 class="h2-5"><a href="{{ github.eleventyGallery.homepage }}">{{ github.eleventyGallery.title }}</a></h3>
+                        <h3 class="h2-5"><a href="{{ repo.eleventyGallery.homepage }}">{{ repo.title }}</a></h3>
                         <div class="stars">
-                            <a class="star-row" href="{{ github.eleventyGallery.stargazers_url }}">
+                            <a class="star-row" href="{{ repo.stargazers_url }}">
                                 {% include "star-icon.svg" %}
-                                <span>{{ github.eleventyGallery.stargazers }}</span>
+                                <span>{{ repo.stargazers }}</span>
                             </a>
                         </div>
                     </div>
-                    <p class="project-desc">{{ github.eleventyGallery.desc }}</p>
+                    <p class="project-desc">{{ repo.desc }}</p>
                     <ul class="links">
-                        <li><a class="tile-link" href="{{ github.eleventyGallery.homepage }}" aria-label="View the live demo for {{ github.eleventyGallery.title }}">Live demo</a></li>
-                        <li><a class="tile-link" href="{{ github.eleventyGallery.repo_url }}" aria-label="View the source code for {{ project.name }}">Source code</a></li>
+                        <li><a class="tile-link" href="{{ repo.homepage }}" aria-label="View the live demo for {{ repo.title }}">Live demo</a></li>
+                        <li><a class="tile-link" href="{{ repo.eleventyGallery.repo_url }}" aria-label="View the source code for {{ repo.name }}">Source code</a></li>
                     </ul>
                 </div>
             </li>
-            <li class="project-tile">
-                <div class="project-details">
-                    <div class="top-level">
-                        <h3 class="h2-5"><a href="https://www.npmjs.com/package/eleventy-plugin-metagen">{{ github.pluginMetaGen.title }}</a></h3>
-                        <div class="stars">
-                            <a class="star-row" href="{{ github.pluginMetaGen.stargazers_url }}">
-                                {% include "star-icon.svg" %}
-                                <span>{{ github.pluginMetaGen.stargazers }}</span>
-                            </a>
-                        </div>
-                    </div>
-                    <p class="project-desc">{{ github.pluginMetaGen.desc }}</p>
-                    <ul class="links">
-                        <li><a class="tile-link" href="https://www.npmjs.com/package/eleventy-plugin-metagen" aria-label="View the live demo for {{ github.pluginMetaGen.title }}">Live demo</a></li>
-                        <li><a class="tile-link" href="{{ github.pluginMetaGen.repo_url }}" aria-label="View the source code for {{ github.pluginMetaGen.name }}">Source code</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li class="project-tile">
-                <div class="project-details">
-                    <div class="top-level">
-                        <h3 class="h2-5"><a href="https://www.npmjs.com/package/eleventy-plugin-sharp-respimg">{{ github.pluginSharpRespImg.title }}</a></h3>
-                        <div class="stars">
-                            <a class="star-row" href="{{ github.pluginSharpRespImg.stargazers_url }}">
-                                {% include "star-icon.svg" %}
-                                <span>{{ github.pluginSharpRespImg.stargazers }}</span>
-                            </a>
-                        </div>
-                    </div>
-                    <p class="project-desc">{{ github.pluginSharpRespImg.desc }}</p>
-                    <ul class="links">
-                        <li><a class="tile-link" href="https://www.npmjs.com/package/eleventy-plugin-sharp-respimg" aria-label="View the live demo for {{ github.pluginSharpRespImg.title }}">Live demo</a></li>
-                        <li><a class="tile-link" href="{{ github.pluginSharpRespImg.repo_url }}" aria-label="View the source code for {{ github.pluginSharpRespImg.title }}">Source code</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li class="project-tile">
-                <div class="project-details">
-                    <div class="top-level">
-                        <h3 class="h2-5"><a href="{{ github.whatToWatch.homepage }}">{{ github.whatToWatch.title }}</a></h3>
-                        <div class="stars">
-                            <a class="star-row" href="{{ github.whatToWatch.stargazers_url }}">
-                                {% include "star-icon.svg" %}
-                                <span>{{ github.whatToWatch.stargazers }}</span>
-                            </a>
-                        </div>
-                    </div>
-                    <p class="project-desc">{{ github.whatToWatch.desc }}</p>
-                    <ul class="links">
-                        <li><a class="tile-link" href="{{ github.whatToWatch.homepage }}" aria-label="View the live demo for {{ github.whatToWatch.title }}">Live demo</a></li>
-                        <li><a class="tile-link" href="{{ github.whatToWatch.repo_url }}" aria-label="View the source code for {{ github.whatToWatch.title }}">Source code</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li class="project-tile">
-                <div class="project-details">
-                    <div class="top-level">
-                        <h3><a href="{{ github.cipherNews.homepage }}">{{ github.cipherNews.title }}</a></h3>
-                        <div class="stars">
-                            <a class="star-row" href="{{ github.cipherNews.stargazers_url }}">
-                                {% include "star-icon.svg" %}
-                                <span>{{ github.cipherNews.stargazers }}</span>
-                            </a>
-                        </div>
-                    </div>
-                    <p class="project-desc">{{ github.cipherNews.desc }}</p>
-                    <ul class="links">
-                        <li><a class="tile-link" href="{{ github.cipherNews.homepage }}" aria-label="View the live demo for {{ github.cipherNews.title }}">Live demo</a></li>
-                        <li><a class="tile-link" href="{{ github.cipherNews.repo_url }}" aria-label="View the source code for {{ github.cipherNews.title }}">Source code</a></li>
-                    </ul>
-                </div>
-            </li>
+            {% endfor %}
+            
         </ul>
     </div>
 </section>
