@@ -411,15 +411,12 @@ a:hover {
 }
 
 .prev-next {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
     width: 100%;
     max-width: 80ch;
     display: flex;
     flex-wrap: wrap;
     grid-column: 2;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 3rem auto 3rem 2.5rem;
 }
 
 .prev-next h3 {
@@ -481,13 +478,11 @@ a:hover {
 
 .share,
 .related {
-    margin-top: 1.5rem;
     max-width: 56ch;
     width: 100%;
     font-size: 1.4em;
     grid-column: 2;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 1.5rem 0 auto 2.5rem;
 }
 
 .share .strong-share {
@@ -1479,7 +1474,7 @@ footer div ul li:first-child {
 
 #post {
     max-width: 80ch;
-    margin: 0 auto;
+    margin: 0 auto 0 2.5rem;
     grid-column: 2;
 }
 
@@ -1519,7 +1514,7 @@ footer div ul li:first-child {
 
 .post-wrap {
     max-width: 80ch;
-    margin: 0 auto;
+    margin: 0 auto 0 2.5rem;
 }
 
 .post-wrap .date {
@@ -1920,6 +1915,7 @@ main .art img {
 @media screen and (max-width: 1050px) {
 
     .post-header,
+    .post-wrap,
     #post,
     .prev-next,
     .share,
