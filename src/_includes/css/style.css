@@ -1731,9 +1731,7 @@ main .art img {
     flex-direction: row; 
     justify-content: space-between; 
     align-items: center;
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 1.75rem;
+    margin: 0 0 2rem;
 }
 
 #search {
