@@ -21,10 +21,12 @@ This way the user input inside the search bar (ie search query) will be checked 
 <label for="search-bar">Search the Blog</label>
 <input id="search-bar" type="text" name="search" placeholder="Search...">
 <!-- Blog post -->
-<article class="post" data-post-title="Blog Post">..</article>
+<article class="post" data-post-title="Blog Post" data-post-tags="['eleventy', 'ssg']">..</article>
 ```
 
-Blog post titles in the data attribute `data-post-title` can be accessed from the DOM via `HTMLElement.dataset.postTitle`. After checking the query against post titles, we can then visually hide the posts with titles not matching the search query. I'm using a `sr-only` class and `aria-hidden="true"` attribute to visually hide non-matching posts from the document and accessibility API.
+Blog post titles in the custom data attribute `data-post-title` can be accessed from the DOM via `HTMLElement.dataset.postTitle` (keep in mind the stuff after the asterisk in `data-*` which is hyphen separated will be camelCased). We can also access the tags array for a post by using `HTMLElement.dataset.postTags`. 
+
+After checking the search query against post titles and post tags, we can then visually hide the posts with titles and/or tags not matching the search query. I'm using a `sr-only` class and `aria-hidden="true"` attribute to visually hide non-matching posts from the document and accessibility API.
 
 {% filename "style.css" %}
 
@@ -92,7 +94,9 @@ searchBar.addEventListener("input", (e) => {
     searchQuery.push(userInput.toLowerCase());
 
     const matchingPost = posts.filter(post => {
-        return post.dataset.postTitle.toLowerCase().includes(searchQuery);
+        const title = post.dataset.postTitle;
+        const tags = post.dataset.tags;
+        return title.toLowerCase().includes(searchQuery) || tags.includes(searchQuery);
     });
 
     const nonMatchingPost = posts.filter(post => {
@@ -121,4 +125,4 @@ searchBar.addEventListener("input", (e) => {
 
 <h2 class="post-heading">Conclusion</h2>
 
-I'm using this functionality for my websites [search feature](/search/) if you wanna see it in action. I would like to improve upon this by adding more data attributes to allow the search query to compare text in the blog posts preview or other data. Potentially introducing weights for search queries where if the title and preview text both contain a match, then the logic will place title matches higher than preview text. Stay tuned!
+I'm using this functionality for my websites [search feature](/search/) if you wanna see it in action. I would like to improve upon this by adding more data attributes to allow the search query to compare text in the blog posts preview or other data. Potentially introducing weights for search queries where if the title and preview text both contain a match, then the logic will place title matches higher than preview text. Thanks for reading. Stay tuned!
