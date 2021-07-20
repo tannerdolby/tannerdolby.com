@@ -1876,12 +1876,12 @@ main .art img {
     color: var(--link-blue-accessible);
     text-decoration: none;
 }
-.top-level a:hover #github-star {
+.top-level a:hover .github-star {
     /* fill: #ffc107; */
     fill: var(--link-blue-accessible);
 }
 
-#github-star {
+.github-star {
     padding-right: .3rem;
     padding-bottom: .15rem;
     width: 22px;
