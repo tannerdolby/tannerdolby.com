@@ -1,5 +1,6 @@
 /* Fonts */
 /* Palette */
+/* Sidebar within post.njk template */
 .post-sidebar {
   max-width: 20ch;
   width: 100%;
@@ -16,14 +17,14 @@
   padding-left: 0;
 }
 .post-sidebar ul li {
-  margin: 5px 0;
-  border-radius: 2.5px;
+  margin: 3px 0;
 }
 .post-sidebar ul li a {
   display: block;
   color: #333;
-  padding: 2px 4px;
+  padding: 3px 5px;
   line-height: 1.4;
+  border-radius: 2px;
 }
 .post-sidebar ul li a:hover {
   color: #1836AF;
@@ -1919,6 +1920,8 @@ table {
   border-collapse: collapse;
   border: 1px solid lightgray;
   overflow: scroll;
+  width: 100%;
+  max-width: 85ch;
 }
 
 .main-content table th {
