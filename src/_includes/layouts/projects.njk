@@ -5,7 +5,7 @@
             {% for repo in github %}
             <li class="project-tile">
                 <div class="project-details">
-                    <div class="top-level" style="display: flex; justify-content: space-between; align-items: center;">
+                    <div class="top-level">
                         <h3 class="h2-5"><a href="{{ repo.homepage }}">{{ repo.title }}</a></h3>
                         <div class="stars">
                             <a class="star-row" href="{{ repo.stargazers_url }}">
