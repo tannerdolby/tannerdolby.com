@@ -16,6 +16,7 @@
         <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
         {% set css %}
             {% include "css/style.css" %}
+            {% include "css/reset.css" %}
         {% endset %}
         <style>
             {{ css | cssmin | safe }}
