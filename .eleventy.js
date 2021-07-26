@@ -170,6 +170,12 @@ module.exports = (eleventyConfig) => {
         return uniqueTags;
     });
 
+    // Add %20 to url encode title strings for share on Twitter
+    eleventyConfig.addFilter("urlencode", function(value) {
+        value = value.replace(/\s+/gm, "%20");
+        return value;
+    });
+
     return {
         dir: {
           input: "src",
