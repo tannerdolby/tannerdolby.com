@@ -1,0 +1,29 @@
+.toc {
+    position: relative;
+
+    .show-toc {
+        display: block;
+    }
+
+    .unfold-toc {
+        display: none;
+        font-size: 1.9em;
+        background: #fff;
+        padding: 0;
+        color: #333;
+        font-weight: 500;
+        height: auto;
+        width: auto;
+        background: inherit;
+        position: absolute;
+        right: 0;
+        bottom: -5px;
+        border: none;
+        will-change: transform;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        -moz-tap-highlight-color: rgba(0,0,0,0);
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,46 @@
+.twitter-block {
+    background: #2179B0;
+    background: #1273E2;
+    background: #0F73E6;
+    &:hover {
+        background: rgb(22, 123, 238);
+    }
+    
+}
+.github-block {
+    background: hsl(0, 0%, 18%);
+    &:hover {
+        background: hsl(0, 0%, 13%);
+    }
+}
+
+.linkedin-block {
+    background: #1885c9;
+    background: rgb(16, 108, 212);
+    &:hover {
+        background: rgb(19, 120, 235);
+        background: rgb(13, 103, 206);
+    }
+}
+
+.social-icons {
+    ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 0;
+        li {
+            &:first-child {
+                margin-right: 10px;
+            }
+            &:not(:first-child) {
+                margin: 0 10px;
+            }
+        }
+    }
+    img {
+        width: 26px;
+        height: 26px;
+    }
+}

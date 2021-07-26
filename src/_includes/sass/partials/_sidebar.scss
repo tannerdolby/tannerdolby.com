@@ -1,0 +1,74 @@
+@use "../vars" as *;
+
+.post-sidebar {
+    max-width: 20ch;
+    width: 100%;
+    grid-column: 1;
+    height: 100vh;
+    grid-row: 2;
+    margin: 0 auto 0 0;
+
+    .toc-links {
+        margin-top: .75rem;
+    }
+
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+
+        li {
+            margin: 5px 0;
+            border-radius: 2.5px;
+
+            a {
+                display: block;
+                color: #333;
+                padding: 2px 4px;
+                line-height: 1.4;
+
+                &:hover {
+                    color: $link-blue-accessible-hover;
+                    text-decoration: none;
+                    background: #eee;
+                }
+
+                &.section-active {
+                    color: #f06;
+                    background: #eee;
+                }
+            }
+        }
+    }
+}
+
+.toc-heading {
+    font-size: 1.25em;
+    padding-bottom: 5px;
+    color: #333;
+    margin: 0;
+}
+
+.around-web {
+    margin-top: .75rem;
+    ul {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        
+        li {
+            p {
+                padding: 0;
+                margin: .3rem 0;
+            }
+            a {
+                color: #333;
+                &:hover {
+                    color: $link-blue-accessible-hover;
+                    text-decoration: underline;
+                }
+            }
+        }
+    } 
+}
