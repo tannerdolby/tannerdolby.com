@@ -31,8 +31,8 @@ pre[class*="language-"] {
 
 /* Code blocks */
 pre[class*="language-"] {
-    padding: 1em;
-    margin: 1em 0 1.4em 0;
+    padding: 1rem 1.1rem;
+    margin: 1em 0 24px 0;
     overflow: auto;
     border-radius: 0.2em;
 }
@@ -127,7 +127,7 @@ pre[class*="language-"] {
 @media (max-width: 775px) {
     pre[class*="language-"] {
         padding: 1em;
-        margin: .5em 0;
+        margin: .5em 0 24px 0;
         margin-left: -1.1rem;
         margin-right: -1.1rem;
         overflow: auto;
