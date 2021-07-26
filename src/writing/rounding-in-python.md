@@ -61,6 +61,15 @@ print('The formatted/rounded value is {:0.2f}'.format(value))
 
 _Note: Read more about rounding/formatting decimals on [StackOverflow](https://stackoverflow.com/questions/20457038/how-to-round-to-2-decimals-with-python)_
 
+You could also use [f-strings](https://realpython.com/python-f-strings/) which is a much quicker way to format strings as an alternative to the longhand `format()` usage. Simply place the letter `f` before your string and use curly braces `{}` to interpolate variables inside a string just as we would do with backticks and string interpolation syntax `${}` in JavaScript.
+
+```python
+name = "Root"
+size = 250
+print(f"I Am {Root}. I have {size} GB of storage.")
+# I am Root. I have 250 GB of storage.
+```
+
 <h2 class="post-heading h2-5">Extreme precision rounding</h2>
 
 If your building a complex financial system or application that requires very precise calculations, using the [decmimal](https://docs.python.org/3/library/decimal.html) module will be the recommended course of action. The Python docs provide a great quick start example for anyone interested in using this module for precise floating point calculations.
