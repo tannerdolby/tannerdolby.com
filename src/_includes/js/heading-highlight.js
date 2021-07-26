@@ -36,7 +36,7 @@ function uniqueId(id) {
     if (unique[unique.length - 1] === "-") {
         unique = unique.substr(0, unique.length - 1);
     }
-    return regex.test(id) ? unique : id;
+    return regex.test(id) ? unique : id.toLowerCase();
 }
 
 function headingHighlight(headerArr) {
