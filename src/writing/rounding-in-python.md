@@ -107,4 +107,4 @@ val = Decimal(5.05362) + Decimal(2.61589)
 print(val) # 7.66950
 ```
 
-There is much more to be discovered in the [decimal]() module, but I will leave that up to you. I hope this article shed some light on floating point numbers in Python and the options you have for dealing with extremely precise decimal calculations.
+There is much more to be discovered in the [decimal](https://docs.python.org/3/library/decimal.html) module, but I will leave that up to you. I hope this article shed some light on floating point numbers in Python and the options you have for dealing with extremely precise decimal calculations.
