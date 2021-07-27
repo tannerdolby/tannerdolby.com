@@ -57,7 +57,7 @@ code {
     font-family: $code-font;
     font-size: 95%;
     font-weight: 400;
-    white-space: nowrap;
+    white-space: pre-wrap;
     color: #212121;;
     padding: 4px 4px 2px 4px;
     border-radius: 3px;
@@ -424,6 +424,10 @@ textarea {
     &:first-child {
         margin-right: 1.5rem;
     }
+}
+
+.share, .related {
+    max-width: 80ch;
 }
 
 .demo-img {
@@ -924,13 +928,27 @@ textarea {
 /* This is a bit sketchy for handling iPhone landscape mode */
 @media (min-width: 321px) and (max-height: 500px) and (orientation:landscape) {
     .post h2, 
-    .post h3, 
+    .post h3,
+    .post h4,
     .post h2 a, 
-    .post h3 a {
+    .post h3 a,
+    .post h4 a {
         font-size: 1.7rem;
     }
-    p, #post p, .preview, code, pre code, .post pre code, p code, ol li, ul li, .copyright {
+    p, #post p, .preview, code, #post pre code, .post pre code, 
+    p code, #post ol li, #post ul li, .copyright,
+    .related .related-posts li a, #post summary, .share .twitter-share,
+    .related .share  {
         font-size: 1rem;
+    }
+
+    .share .twitter-share {
+        font-size: 1.1rem;
+    }
+
+    .related-posts li a {
+        margin: 1rem 0;
+        display: block;
     }
     .post-sidebar {
         ul {

@@ -39,8 +39,9 @@ main {
         font-size: clamp(1.6rem,5vw,1.75rem);
     }
     p, ul li,
-    ol li, details summary,
-    pre code {
+    ol li, summary,
+    pre code, .related-posts li a,
+    .share .twitter-share, .related, .share {
         font-size: 1.175rem;
         line-height: 1.8;
     }
@@ -56,11 +57,6 @@ main {
             .direct-link {
                 color: #444;
                 cursor: pointer;
-                
-                &:focus {
-                    color: #444;
-                    cursor: pointer;
-                }
             }
         }
     }
@@ -69,10 +65,6 @@ main {
             .direct-link {
                 color: #444;
                 cursor: pointer;
-                &:focus {
-                    color: #444;
-                    cursor: pointer;
-                }
             }
         }
     }
@@ -81,11 +73,6 @@ main {
             .direct-link {
                 color: #444;
                 cursor: pointer;
-                
-                &:focus {
-                    color: #444;
-                    cursor: pointer;
-                }
             }
         }
     }
@@ -97,6 +84,9 @@ main {
             margin-left: .5rem;
             &:hover {
                 color: #333;
+            }
+            &:focus {
+                color: #444;
             }
         }
     }
@@ -259,6 +249,14 @@ main {
     }
 }
 
+.share {
+    strong {
+        display: block;
+        font-size: 1.35rem;
+        margin-bottom: 5px;
+    }
+}
+
 .related {
 
     strong {
@@ -275,9 +273,12 @@ main {
         border-top: 1px solid lightgray;
 
         li {
+            line-height: 1.25;
+            margin: 1rem 0;
+            &:first-child {
+                margin-top: .5rem;
+            }
             a {
-                font-size: .8em;
-
                 &:first-child {
                     margin-top: 0;
                 }
@@ -290,7 +291,7 @@ main {
 .related {
     max-width: 56ch;
     width: 100%;
-    font-size: 1.4em;
+    // font-size: 1.4em;
     grid-column: 2;
     margin: 1.5rem 0 auto 2.5rem;
 }
@@ -311,6 +312,10 @@ main {
         width: -moz-fit-content;
         font-size: 1.1rem;
 
+        svg {
+            width: 23px;
+            height: 23px;
+        }
         &:hover {
             span {
                 color: var(--link-blue-accessible);
@@ -322,6 +327,10 @@ main {
             color: #333;
         }
     }
+}
+
+.related ul li a {
+    font-size: 1.1rem;
 }
 
 .prev-next {
