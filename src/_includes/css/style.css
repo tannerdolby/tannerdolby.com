@@ -1219,10 +1219,11 @@ table {
 
 .main-content table th {
   background: #eee;
+  background: #ddd;
 }
 .main-content table th, .main-content table td {
   padding: 0.5rem;
-  border: 0.1rem solid lightgray;
+  border: 1px solid lightgray;
 }
 
 .toc {
