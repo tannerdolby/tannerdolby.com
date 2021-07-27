@@ -1,3 +1,5 @@
+@use "../vars/" as *;
+
 table {
     border-collapse: collapse;
     border: 1px solid lightgray;
@@ -9,11 +11,12 @@ table {
 .main-content {
     table {
         th {
-            background: #eee;
+            background: $lightgray;
+            background: $gray-200;
         }
         th, td {
             padding: .5rem;
-            border: .1rem solid lightgray;
+            border: 1px solid lightgray;
         }
     }
 }
