@@ -23,6 +23,7 @@ main {
             }
             text-align: left;
             display: flex;
+            display: -webkit-flex;
             flex-direction: column;
             height: 25rem;
             width: 100%;

@@ -20,11 +20,12 @@
 
 .contact-form {
     display: flex;
+    display: -webkit-flex;
     flex-direction: column;
     max-width: 60ch;
 
     label {
-        &:not(label:first-child) {
+        &.form-label {
             margin-top: .5rem;
         }
     }
