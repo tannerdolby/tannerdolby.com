@@ -12,11 +12,11 @@ preview: In JavaScript, arrays are predefined objects, where the indexes are the
 
 <h2 class="post-heading">Is JavaScript Object Oriented?</h2>
 
-JavaScript is [prototype based](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#class-based_vs._prototype-based_languages), multi-paradigm, single threaded, dynamic language which supports object oriented, imperative, and declarative styles. 
+JavaScript is a [prototype based](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#class-based_vs._prototype-based_languages), multi-paradigm, single threaded, dynamic language which supports object oriented, imperative, and declarative styles. 
 
-The one difference between other OOP languages like Java or C++ and JavaScript, is the fact that JavaScript isn't class based, its prototype based and doesn't require explicit use classes to define objects. It uses prototype based object constructions. Within a prototype based language like JavaScript, the prototypical object is an object used as a template to get the initial properties for a new object. 
+The one difference between other OOP languages like Java or C++ and JavaScript, is the fact that JavaScript isn't class based, its prototype based and doesn't require explicit `class` usage to define objects. It uses prototype based object constructions. Within a prototype based language like JavaScript, the prototypical object is an object used as a template to get the initial properties for a new object. We can use [function declarations](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function), [class declarations](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#class_declarations) and [class expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#class_expressions) for defining a template for objects.
 
-Instead of defining a class for every object like we would in Java: 
+Instead of defining a class declaration for every object like we would in Java: 
 
 ```java
 public class Shape { 
@@ -32,13 +32,56 @@ public class Shape {
 };
 ```
 
-the equivalent in JavaScript would look like this:
+the equivalent `function` declaration in JavaScript would look like this:
 
 ```js
 function Shape() {
   this.x = 0;
   this.y = 0;
   this.currShape = "";
+}
+```
+
+The reason why sometimes choosing a "function declaration" will be preferred is because of [hoisting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#hoisting). Function declarations are [hoisted](https://developer.mozilla.org/en-US/docs/Glossary/Hoisting) where class declarations are not. Which in short, means that with function declarations the compiler allocates memory for the function declarations prior to the execution of code, so we can access the object "before" its declaration like this:
+
+```js
+const el = new Foo(); // OK!
+
+function Foo() {
+  this.bar = "foobar";
+}
+```
+
+The above is possible thanks to hoisting, which makes variables and function declarations able to be accessed before their definition. Hoisting only works for declarations and not initializations.
+
+<h3 class="post-heading">Can I still use ES6 style classes</h3>
+
+You can most definitely still create the template for objects (classes) using ES6 style class syntax, which has been described as "class declartions" above. Just as shown earlier in the article, we can define classes in JavaScript with the ES6 style (class declaration) like this:
+
+```js
+class MyClass {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+  }
+}
+```
+
+using named or unnamed class expressions works too:
+
+```js
+// unnamed
+const MyOtherClass = class {
+  constructor(foo) {
+    this.foo = foo;
+  }
+}
+
+// named
+const SomeOtherClass = class SomeOther {
+  constructor(foo) {
+    this.foo = foo;
+  }
 }
 ```
 
