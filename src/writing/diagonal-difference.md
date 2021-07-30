@@ -125,9 +125,9 @@ function diagonalDiff(arr) {
 
 If we wanted to pass in a 2D array to the above `diagonalDiff` function and have it return the diagonal difference, it wouldn't play nicely as the inputs for test cases on Hackerrank are not array data types. The following function should be used for calculating the diagonal difference of a square matrix when the argument passed into the function is a 2D array representing a square matrix.
 
-This actually is far less code to write, which is pretty cool considering its handling what you would actually see "in the wild", a 2D array representing a square matrix. 
+This more realistic implementation makes a lot more sense from a math standpoint, which is pretty cool considering its handling what you would actually see "in the wild", a 2D array representing a `n x n` square matrix. 
 
-Instead of two iteration statements, like used in the HackerRank solution. We can utilize a single `for` loop with two control variables defined. Then we iterate over the 2D array representing a square matrix and "pluck" out the diagonal values to perform arithmetic. This same logic I used in a Matrix calculator side project I'm working on. We start at the first index in the first inner array, and then jump to the next inner array while also jumping to the right a position. 
+Instead of two iteration statements, like used in the HackerRank solution. We can utilize a single `for` loop with three control variables defined. Then we iterate over the 2D array representing a square matrix and "pluck" out the diagonal values to perform arithmetic. Start at the first index in the first inner array, and then jump to the next inner array while also jumping to the right a position. 
 
 In short, move down one and right one position and we can traverse the diagonal values in a 2D array. Start at (0, 0) then jump to (1, 1) and (2, 2) and so on. This logic is pretty sturdy as long as the 2D array represents a square matrix, meaning the outer arrays length equals the length of each inner array.
 
