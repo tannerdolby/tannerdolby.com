@@ -101,7 +101,17 @@ tanner.about();
 // My name is Tanner. Am I hungry? true
 ```
 
-You can create a normal empty object simply by using `Object.create({})`.
+You can create a normal empty object simply by using `Object.create({})`. If you need to create a `null` object instance, like `Object.create(null)`, keep in mind its not a normal object and won't have access to almost all expected methods like "generic" objects will. There seem to be some ways around this, but the most fullproof option is setting the generic prototype as the new `null` objects prototype with [`setPrototypeOf`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf).
+
+```js
+let oddball = Object.create(null); // a "null" object (not standard)
+oddball.toString(); // Error! toString is not a function
+
+// Set the object instance to be a "generic" prototype
+Object.setPrototypeOf(oddball, Object.prototype);
+
+oddball.toString(); // [object Object]
+```
 
 In Java and C++, we create the "template" for objects by using the `class` keyword as these are "class-based" languages, where we define the objects state (member variables) and behavior (methods). JavaScript does have a [`Class`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes) reserved keyword for creating classes but it's usually best to use functions and prototypical objects to build out the inheritance chain like we would define a superclass and child classes in Java.
 
