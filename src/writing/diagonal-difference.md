@@ -164,8 +164,8 @@ function diagonalDiff(arr) {
         right.list.push(arr[i][k]);
     }
 
-    left.list.map(num => left.sum += num);
-    right.list.map(num => right.sum += num);
+    left.sum = left.list.reduce((a, b) => a + b);
+    right.sum = right.list.reduce((a, b) => a + b);
     
     diff = Math.abs(left.sum - right.sum);
     return diff;
@@ -239,8 +239,8 @@ function diagonalDiff(arr): number {
     }
 
     // add up each of the diagonal arrays
-    left.list.map(num => left.sum += num);
-    right.list.map(num => right.sum += num);
+    left.sum = left.list.reduce((a, b) => a + b);
+    right.sum = right.list.reduce((a, b) => a + b);
     
     // Calculate diagonal difference
     diff = Math.abs(left.sum - right.sum);
