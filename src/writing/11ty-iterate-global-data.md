@@ -71,7 +71,7 @@ Next, we need a place where all this employee data can be utilized and rendered.
 ]
 ```
 
-If you wanted more freedom to pull in data from another source, or compute it, then using a custom global data file will be what you want. Whatever is exported using `module.exports` will be available in the same fashion as data from `.json` global data. Below is a basic example of creating a custom global data file for use in templates.
+If you wanted more freedom to pull in data from another source, or compute it, then using a custom global data file will be what you want. Any data that is exported using `module.exports` will be available in the same fashion as data from a `.json` global data file. Below is a basic example of creating a custom global data file for use in templates.
 
 {% filename "customData.js" %}
 
@@ -99,7 +99,11 @@ function random(min, max) {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min) + min)
 }
+```
 
+Then at the end of the file, you can either export an object like `module.exports = { foo: "bar" }` or export a function and return the object or data you wish to use globally.
+
+```js
 module.exports = async function() {
     try {
         const apiData = await getData("https://api.github.com/repos/tannerdolby/eleventy-photo-gallery");
@@ -121,7 +125,7 @@ module.exports = async function() {
 }
 ```
 
-This is a contrived example, but the sky is the limit with global data files. They provide a blank "data" canvas for you to do whatever youwant with your data, which is another reason why 11ty is really cool. You can use the custom global data universally in your project either in a template or markdown file just as you would with a `.json` data file. By using the global data filename like {% raw %}`{{ customData }}`{% endraw %} and then accessing the object properties as necessary.
+This is a contrived example, but the sky is the limit with global data files. They provide a blank "data" canvas for you to do whatever you want with your data, which is another reason why 11ty is really cool. You can use the custom global data universally in your project either in a template or markdown file just as you would with a `.json` data file. By using the global data filename like {% raw %}`{{ customData }}`{% endraw %} and then accessing the object properties as necessary.
 
 <details>
 <summary>Using Nunjucks in Markdown Files</summary>
