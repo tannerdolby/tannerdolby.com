@@ -10,9 +10,9 @@ preview: With @import rules slowly being phased out of the main implementation o
 
 {{ preview }}
 
-The main implementation of [Sass](https://sass-lang.com/) is [`dart-sass`](https://sass-lang.com/dart-sass). For the sake of this article, I will be using the `dart-sass` implementation as it gets new features before any of the other implementations. Before jumping into the details of [index files](https://sass-lang.com/documentation/at-rules/import#index-files), I want to make a note that `@import` rules in Sass are slowly being phased out and will eventually be deprecated in the next few years.
+The main implementation of [Sass](https://sass-lang.com/) is [`dart-sass`](https://sass-lang.com/dart-sass) and for the sake of this article, I will be using the `dart-sass` implementation as it gets new features before any of the other implementations. Before jumping into the details of [`@use`](https://sass-lang.com/documentation/at-rules/use) and [index files](https://sass-lang.com/documentation/at-rules/import#index-files). I want to make a note that `@import` rules in Sass are slowly being phased out and will eventually be deprecated in the next few years.
 
-The Sass team discourages the continued use of the @import rule. Sass will gradually phase it out over the next few years, and eventually remove it from the language entirely. Prefer the @use rule instead. 
+The Sass team discourages the continued use of the @import rule. Sass will gradually phase it out over the next few years, and eventually remove it from the language entirely. Prefer the [@use](https://sass-lang.com/documentation/at-rules/use) rule instead. 
 
 > (Note that only Dart Sass currently supports @use. Users of other implementations must use the @import rule instead.) - _[@import](https://sass-lang.com/documentation/at-rules/import)_
 
@@ -26,7 +26,7 @@ Before the `@use` at-rule was introduced to Sass, we relied on importing mixins,
 
 Due to all of these flaws, the Sass team introduced a brand new and improved way to import your Sass stylesheets (mixins, functions, and variables) with `@use`. And honestly, it is so darn good. The old `@import` usage made everything globally accessible and now with `@use` the default namespace is the last component of the URL unless otherwise specified.
 
-<h3 class="post-heading">The @use at-rule</h3>
+<h3 class="post-heading">Using @import</h3>
 
 Before `@use` was introduced in `dart-sass`, if we had a directory mixins (or variables, or functions) like this:
 
@@ -56,7 +56,7 @@ Before `@use` was introduced in `dart-sass`, if we had a directory mixins (or va
 }
 ```
 
-then the only means of importing this mixins mean't using `@import` at-rules and one-by-one importing the partial files to our main file for compilation.
+The only means of importing these mixins mean't using `@import` at-rules and one-by-one importing the partial files to our main file for compilation.
 
 {% filename "style.scss" %}
 
@@ -79,7 +79,7 @@ then the only means of importing this mixins mean't using `@import` at-rules and
 
 If you only had a few mixins or files to import, this implementation wouldn't be that bad. But if the `mixins` directory had 30-40 or more [partial files](https://sass-lang.com/documentation/at-rules/use#partials), then writing each `@import` line-by-line would start to be overwhelming in large codebases.
 
-<h3 class="post-heading">@use to the rescue</h3>
+<h3 class="post-heading">The power of @use at-rules</h3>
 
 With the introduction of `@use` at-rules, we have the ability to use [index files](https://sass-lang.com/documentation/at-rules/use#index-files). Using these index files allow us to use [`@forward`](https://sass-lang.com/documentation/at-rules/forward) rules in a `_index.scss` file so that when we load the URL of the directory `./mixins/`, all of the partial files will be loaded with it. Giving us access to an entire directory of sass files with a single `@use` at-rule.
 
