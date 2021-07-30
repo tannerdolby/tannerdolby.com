@@ -806,6 +806,13 @@ main .post h3 {
   margin: 0 auto 0 2.5rem;
   grid-column: 2;
 }
+#post a.code-link:hover {
+  text-decoration: none;
+}
+#post a.code-link:hover code {
+  color: #1836AF;
+  text-decoration: none;
+}
 #post .demo-img {
   margin: 1.5rem 0;
 }
@@ -1345,10 +1352,6 @@ a:hover {
 a code {
   text-decoration: underline;
   text-decoration-color: #2540AD;
-}
-a.code-link:hover code {
-  color: #1836AF;
-  text-decoration: none !important;
 }
 
 pre {
