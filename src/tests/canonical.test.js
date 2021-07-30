@@ -1,1 +1,0 @@
-// simulate test for <link rel="canonical" href="">
