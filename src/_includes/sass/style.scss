@@ -83,15 +83,6 @@ a {
         text-decoration: underline;
         text-decoration-color: $link-blue-accessible;
     }
-
-    &.code-link {
-        &:hover {
-            code {
-                color: $link-blue-accessible-hover;
-                text-decoration: none !important;
-            }
-        }
-    }
 }
 
 

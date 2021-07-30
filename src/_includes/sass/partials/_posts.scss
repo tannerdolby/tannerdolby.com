@@ -1,3 +1,5 @@
+@use "../vars/" as *;
+
 main {
     .post {
         .date {
@@ -16,6 +18,16 @@ main {
     max-width: 80ch;
     margin: 0 auto 0 2.5rem;
     grid-column: 2;
+
+    a.code-link {
+        &:hover {
+            text-decoration: none;
+            code {
+                color: $link-blue-accessible-hover;
+                text-decoration: none;
+            }
+        }
+    }
 
     .demo-img {
         margin: 1.5rem 0;
