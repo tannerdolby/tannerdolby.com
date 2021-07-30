@@ -12,7 +12,63 @@ preview: In JavaScript, arrays are predefined objects, where the indexes are the
 
 <h2 class="post-heading">Is JavaScript Object Oriented?</h2>
 
-JavaScript is indeed an Object Oriented Programming language, but the one difference between OOP languages like Java or C++ and JavaScript, is the fact the JavaScript doesn't explicitly use classes to define objects. We can define an [`Object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) in multiple ways:
+JavaScript is [prototype based](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#class-based_vs._prototype-based_languages), multi-paradigm, single threaded, dynamic language which supports object oriented, imperative, and declarative styles. 
+
+The one difference between other OOP languages like Java or C++ and JavaScript, is the fact that JavaScript isn't class based, its prototype based and doesn't require explicit use classes to define objects. It uses prototype based object constructions. Within a prototype based language like JavaScript, the prototypical object is an object used as a template to get the initial properties for a new object. 
+
+Instead of defining a class for every object like we would in Java: 
+
+```java
+public class Shape { 
+  public int x;
+  public int y;
+  public string currShape;
+
+  constructor(x: int, y: int, currShape: string) {
+    this.x = x;
+    this.y = y;
+    this.currShape = currShape;
+  };
+};
+```
+
+the equivalent in JavaScript would look like this:
+
+```js
+function Shape() {
+  this.x = 0;
+  this.y = 0;
+  this.currShape = "";
+}
+```
+
+If you want to specify the "next" object in the inheritance chain. Like we would by defining a class as a child of some superclass `class Foo extends Bar`. We add a prototypical instance as the value of the `prototype` property within the constructor, then simply override the prototypes constructor to the constructor function.
+
+```js
+function Square() {
+  Shape.call(this);
+  this.currShape = "Square";
+};
+// Pass in the prototypical instance to Object.create()
+// and assign it to the prototype property of Square defintion
+Square.prototype = Object.create(Shape.prototype);
+// Override the constructor with our constructor function Shape
+Square.prototype.constructor = Square;
+```
+
+Now we have a inheritance chain, where the `Shape` definition descends from `Square`. The hierarchy would look like this in Java:
+
+```java
+public class Square extends Shape {
+  public string currShape = "Square";
+}
+```
+
+If your coming from a C or Java background which is class-based, it might take a little bit of practice and reading to get the hang of prototype-based languages and Object model along with the inheritance chain. You can read more on [MDN - Details of the Object model](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#class-based_vs._prototype-based_languages).
+
+<h2 class="post-heading">Defining Objects</h2>
+
+We can define an [`Object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) in multiple ways:
 
 ```js
 // Create an object literal 
@@ -27,18 +83,31 @@ let myObj = new Object();
 myObj.foo = "bar";
 ```
 
-Instead of defining a class for every object like: 
+We can also utilize `Object.create()` to create a new object from an existing object by using it as the prototype for our newly created object.
 
 ```js
-Class Square { 
-  constructor(x, y) {
-    this.x = x;
-    this.y = y;
-  }; 
-};
+const Human = {
+  name: "",
+  isHungry: false,
+  about: () => {
+    console.log(`My name is ${this.name}. Am I hungry? ${this.isHungry}`);
+  }
+}
+
+const tanner = Object.create(Human);
+tanner.name = "Tanner";
+tanner.isHungry = true;
+tanner.about();
+// My name is Tanner. Am I hungry? true
 ```
 
-In Java and C++, we create the "template" for objects by using the Class, where we define the objects state (member variables) and behavior (methods). In JavaScript, arrays can more closely resemble a Map with key/value pairs. JavaScript does have a [`Class`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes) reserved keyword for creating classes but it's not required to use in creating objects. 
+You can create a normal empty object simply by using `Object.create({})`.
+
+In Java and C++, we create the "template" for objects by using the `class` keyword as these are "class-based" languages, where we define the objects state (member variables) and behavior (methods). JavaScript does have a [`Class`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes) reserved keyword for creating classes but it's usually best to use functions and prototypical objects to build out the inheritance chain like we would define a superclass and child classes in Java.
+
+<h3 class="post-heading">Now back to Arrays!</h3>
+
+In JavaScript, arrays can more closely resemble a Map with name/value pairs.
 
 > Arrays are predefined objects, where its indexes are the properties. 
 
