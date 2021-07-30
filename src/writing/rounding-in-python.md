@@ -16,7 +16,7 @@ During chemistry class in college, I frequently heard and used the term "signifi
 
 Outside of "sig figs", rounding decimal values to a certain precision and determining the type of rounding that occurs is quite important for extremely precise calculations like those in banking/financial software.
 
-<h2 class="post-heading h2-5">How does Python really handle floating point numbers?</h2>
+<h2 class="post-heading h2-5">How does Python handle floating point numbers?</h2>
 
 Python at the lowest level, is built on top of C. That means that when floating point values undergo operations, the values that are being calculated by C (for Python) are converted to binary fractions and not floating point numbers. Unfortunately, the fractions are not as accurate as floating point numbers. When you see a floating point value, remember it is indeed a fraction (or two). 
 
