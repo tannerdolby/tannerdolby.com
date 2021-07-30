@@ -281,6 +281,13 @@ textarea {
     }
 }
 
+.error pre[class*=language] {
+    code {
+        background: #f82f36;
+        padding: 6px 8px;
+    }
+}
+
 .email-container {
     display: flex;
     flex-direction: column;
