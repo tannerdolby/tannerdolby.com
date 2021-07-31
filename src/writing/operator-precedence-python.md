@@ -7,7 +7,7 @@ tags:
 preview: The order of operations in an expression is very important to understand. With more complex expressions, operator precedence isn't always straightforward and if not used correctly leads to unexpected values.
 ---
 
-{{ preview }} and understanding which operators and groups take the highest precedence in an expression will help tremendously.
+{{ preview }} Understanding which operators and groups take the highest precedence in an expression will help tremendously.
 
 As someone with a background in mathematics, the acronym "PEMDAS" was spoken quite often. Not as much in my higher level math studies (Differential Equations & Linear Algebra) as we were expected to have memorized or fully understood which operations would "happen first" in complex algebraic expressions. Understanding which operators take the highest precedence in an expression is extremely important regardless of the level of math. 
 
