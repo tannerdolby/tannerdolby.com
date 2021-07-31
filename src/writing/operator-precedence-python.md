@@ -4,7 +4,7 @@ date: 2021-07-25
 datetime: 2021-07-25 00:00:00 Z
 tags:
  - python
-preview: The order of operations in an expression is extremely important to understand. With more complex expressions, operator precedence isn't always extremely straightforward and if not used correctly leads to unexpected values.
+preview: The order of operations in an expression is very important to understand. With more complex expressions, operator precedence isn't always straightforward and if not used correctly leads to unexpected values.
 ---
 
 {{ preview }} and understanding which operators and groups take the highest precedence in an expression will help tremendously.

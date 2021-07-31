@@ -5,10 +5,10 @@ datetime: 2021-07-30 00:00:00 Z
 tags:
  - typescript
  - javascript
-preview: "I've seen time and time again, developers resort to using 'foo: any = bar;' instead of defining an explicit type for the value. Using 'any' is not safe (at all) and that's the whole point of TypeScript, to write 'safer' code."
+preview: "I've seen time and time again, developers resort to using 'foo: any = bar;' instead of defining an explicit type for the value. Using 'any' is not safe (at all) and that's the whole point of TypeScript, to write safe code."
 ---
 
-{{ preview }} If your not sure what the data type will be for a value ahead of time. DO NOT use `any` (unless you absolutely have to), simply let TypeScript infer the values type for you through [Type Inference](https://www.typescriptlang.org/docs/handbook/type-inference.html).
+{{ preview }} If your not sure what the data type will be for a value ahead of time. Try not to use `any` (unless you absolutely have to) as your type annotation, simply let TypeScript infer the values type for you through [Type Inference](https://www.typescriptlang.org/docs/handbook/type-inference.html).
 
 
 I answered a question on StackOverflow describing exactly why we shouldn't be using `any` when defining types and what to do instead. 
@@ -62,8 +62,6 @@ const obj: MyObj {
 
 <h2 class="post-heading">Closing thoughts</h2>
 
-I usually tend to define an interface anytime there is a variable or function that requires explicit type definitions that cannot be made from the primitive data types. Another option outside of interfaces, is using generics. If you programmed in Java, you might be familiar with generics. They are super powerful and really help us to write safe code. If you want to read more about using Generic Types, head over to the TypeScript [documentation](https://www.typescriptlang.org/docs/handbook/2/generics.html).
-
-If anything were to stick with you from this article, I hope that it will be: "Please don't use type `any` in TypeScript unless its absolutely required (which doesn't happen that often)"
+I usually tend to define an interface anytime there is a variable or function that requires explicit type definitions that cannot be made from the primitive data types. Another option outside of interfaces, is using generics. If you programmed in Java, you might be familiar with generics. They are super powerful and really help us to write safe code. If you want to read more about using Generic Types, head over to the TypeScript [documentation](https://www.typescriptlang.org/docs/handbook/2/generics.html). If anything were to stick with you from this article, I hope that it will be: "Please don't use type `any` in TypeScript unless its absolutely required (which doesn't happen that often)"
 
 I like to say, when in doubt, don't reach for `any` but define an interface so TypeScript better understands what types to expect. Generics are also a great option!

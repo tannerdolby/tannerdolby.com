@@ -5,16 +5,16 @@ datetime: 2021-07-30 00:00:00 Z
 tags:
  - scss
  - css
-preview: With @import rules slowly being phased out of the main implementation of Sass (dart-sass) and eventually deprecated, its time to learn how to use @use rules and the neat features that comes along with it.
+preview: With @import at-rules slowly being phased out of the main implementation of Sass (dart-sass) and eventually deprecated, its time to learn how to use @use rules and the neat features that comes along with it.
 ---
 
 {{ preview }}
 
 The main implementation of [Sass](https://sass-lang.com/) is [`dart-sass`](https://sass-lang.com/dart-sass) and for the sake of this article, I will be using the `dart-sass` implementation as it gets new features before any of the other implementations. Before jumping into the details of [`@use`](https://sass-lang.com/documentation/at-rules/use) and [index files](https://sass-lang.com/documentation/at-rules/import#index-files). I want to make a note that `@import` rules in Sass are slowly being phased out and will eventually be deprecated in the next few years.
 
-The Sass team discourages the continued use of the @import rule. Sass will gradually phase it out over the next few years, and eventually remove it from the language entirely. Prefer the [@use](https://sass-lang.com/documentation/at-rules/use) rule instead. 
+The Sass team discourages the continued use of the [@import](https://sass-lang.com/documentation/at-rules/import) rule. Sass will gradually phase it out over the next few years, and eventually remove it from the language entirely. Prefer the [@use](https://sass-lang.com/documentation/at-rules/use) rule instead. 
 
-> (Note that only Dart Sass currently supports @use. Users of other implementations must use the @import rule instead.) - _[@import](https://sass-lang.com/documentation/at-rules/import)_
+> Only Dart Sass currently supports @use. Users of other implementations must use the @import rule instead.
 
 <h2 class="post-heading">A new way to import</h2>
 
@@ -56,7 +56,7 @@ Before `@use` was introduced in `dart-sass`, if we had a directory mixins (or va
 }
 ```
 
-The only means of importing these mixins mean't using `@import` at-rules and one-by-one importing the partial files to our main file for compilation.
+This means the only way of importing the mixins mean't using numerous `@import` at-rules and one-by-one importing the partial files to our main file for compilation.
 
 {% filename "style.scss" %}
 
@@ -66,7 +66,6 @@ The only means of importing these mixins mean't using `@import` at-rules and one
 @import "./mixins/_invert";
 @import "./mixins/_square";
 
-/* Use them */
 .hidden {
     @include sr-only();
 } 
@@ -85,7 +84,7 @@ With the introduction of `@use` at-rules, we have the ability to use [index file
 
 Building on the example above, instead of writing three separate `@import` calls to load the URLs of the mixins we need. Simply load the URL representing the directory of partial files with a defined index file. Not only is this usage super clean and maintainable but saves quite a bit of time when many partial files need to be loaded. 
 
-_Note: The `@use` at-rules must be placed at the top of the file, before any other content._
+Note: The `@use` at-rules must be placed at the top of the file, before any other content.
 
 {% filename "style.scss" %}
 
@@ -93,7 +92,7 @@ _Note: The `@use` at-rules must be placed at the top of the file, before any oth
 @use "./mixins/";
 
 .hidden {
-  @include mixins.sr-only():
+    @include mixins.sr-only():
 }
 
 .demo {
@@ -110,7 +109,7 @@ Sometimes you don't want to have a namespace attached to the loaded folder. Sass
 @use "./mixins/" as m;
 
 .hidden {
-  @include m.sr-only():
+    @include m.sr-only():
 }
 
 .demo {
@@ -124,7 +123,7 @@ or completely disregard a namespace by not defining one with `@use "<URL>" as *`
 @use "./mixins/" as *;
 
 .hidden {
-  @include sr-only():
+    @include sr-only():
 }
 
 .demo {
