@@ -1,12 +1,12 @@
 [
     {
-        "title": "An Introduction to Client-side JavaScript"
-    },
-    {
         "title": "Solving the Diagonal Difference Problem"
     },
     {
         "title": "What is an Array in JavaScript?"
+    },
+    {
+        "title": "An Introduction to Client-side JavaScript"
     },
     {
         "title": "Generate Page Content From a Global Data File Using Eleventy"
