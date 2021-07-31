@@ -35,6 +35,7 @@ Hopefully its clear that using the `any` type in TypeScript sort of defeats the 
 Let's look at a bad example and how to fix it by defining object types using an interface:
 
 ```ts
+// BAD
 const obj: any = {
     colors: ["#f06", "#000"],
     lengths: [1,2,3],
@@ -47,7 +48,7 @@ Using `any` to define the object type for this `obj` variable is just downright 
 ```ts
 interface MyObj {
     colors: string[],
-    legnths: int[],
+    legnths: number[],
     name: string
 }
 
