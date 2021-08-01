@@ -1505,6 +1505,11 @@ textarea:focus {
   list-style: none;
   margin: 0.5rem 0;
 }
+.tags-list li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
 .tags-list li .post-label {
   margin: 0.75rem 0;
   padding: 0.2rem 0.5rem;
