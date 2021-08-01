@@ -262,6 +262,9 @@ textarea {
     margin: .5rem 0;
 
     li {
+        display: flex; 
+        flex-wrap: wrap; 
+        align-items: center;
         .post-label {
             margin: .75rem 0; 
             padding: .2rem .5rem;
