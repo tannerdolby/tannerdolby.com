@@ -72,7 +72,11 @@ tagList:
                     </ul>
                     <h3 style="margin-top: 3rem;">Filter Posts by Tag</h3>
                     <ul class="tags-list">
-                        <li style="display: flex; flex-wrap: wrap; align-items: center;">{% for tag in tagList %}<a class="post-label" href="/writing/?filter={{ tag }}">{{ tag }}</a>{% endfor %}</li>
+                        {% for tag in tagList %}
+                        <li>
+                            <a class="post-label" href="/writing/?filter={{ tag }}">{{ tag }}</a>
+                        </li>
+                        {% endfor %}
                     </ul>
                 </div>
             </div>
