@@ -13,7 +13,7 @@ preview: "I've seen time and time again, developers resort to using 'foo: any = 
 
 I answered a question on StackOverflow describing exactly why we shouldn't be using `any` when defining types and what to do instead. 
 
-> [What can I replace 'any' with while declaring an object type in Typescript?](https://stackoverflow.com/questions/66594670/what-can-i-replace-any-with-while-declaring-an-object-type-in-typescript/66595023#66595023)
+> What can I replace 'any' with while declaring an object type in Typescript? [StackOverflow](https://stackoverflow.com/questions/66594670/what-can-i-replace-any-with-while-declaring-an-object-type-in-typescript/66595023#66595023)
 
 
 <h2 class="post-heading">When in doubt, don't reach for any</h2>
