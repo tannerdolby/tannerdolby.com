@@ -1,22 +1,38 @@
 .nav-wrapper {
-    max-width: 1200px;
-    padding: 1rem 1.1rem .5rem 1.1rem;
+    max-width: 1225px;
+    padding: 1rem 1.5rem .5rem;
     margin: 0 auto 0 auto;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    flex-direction: column;
 
     .nav-home {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         list-style: none;
         padding-left: 0;
         margin: 1rem 0;
+        width: 100%;
+
+        .reach-out {
+            background: #212121;
+            color: #fff;
+            padding: 10px;
+            border-radius: 3px;
+            font-size: 1rem;
+            display: block;
+            &:hover {
+                background: #111;
+                text-decoration: none;
+            }
+        }
 
         .home {
             font-weight: 500;
             font-size: 1.15rem;
+            font-size: 1.2rem;
             color: #212121;
             text-decoration: none;
         }
@@ -34,20 +50,37 @@
     }
 
     .nav-menu {
-        padding-left: 0;
         list-style: none;
         display: flex;
         align-items: center;
-        margin: 1rem 0;
+        justify-content: flex-start;
+        margin: 1rem auto;
+        padding: 15px 1rem;
+        border-top: 1px solid lightgray;
+        border-bottom: 1px solid lightgray;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
 
         li {
+            &.stl {
+                margin-right: auto;
+            }
+            &:last-child {
+                position: relative;
+                right: 0;
+                margin-left: auto;
+            }
             a {
                 color: #212121;
                 padding: .5rem 0;
-                margin: 0 1rem;
+                margin: 0 1.7rem;
                 font-size: 1.0625rem;
                 text-decoration: none;
                 font-weight: 500;
+                &:first-child {
+                    margin-left: 0;
+                }
 
                 &:hover {
                     text-decoration: underline;

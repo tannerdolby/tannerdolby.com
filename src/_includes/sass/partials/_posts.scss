@@ -132,7 +132,7 @@ main {
 
 .recent-posts {
     margin: 2.5rem auto 2rem;
-    padding: .25rem 1.1rem;
+    padding: .25rem 1.5rem;
     grid-column: 1 / 5;
     grid-row: 1 / 7;
 }
@@ -142,7 +142,7 @@ main {
     grid-template-columns: repeat(6, 1fr);
     grid-auto-rows: minmax(5rem, 1fr);
     gap: .75rem;
-    max-width: 1200px;
+    max-width: 1225px;
     margin: 0 auto;
 
     .read-more {
@@ -248,7 +248,7 @@ main {
         display: grid;
         grid-template-columns: 18% 82%;
         gap: 0px;
-        padding: 0 1.1rem;
+        padding: 0 1.5rem;
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 6rem;
