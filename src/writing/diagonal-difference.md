@@ -131,7 +131,7 @@ Instead of two iteration statements, like used in the HackerRank solution. We ca
 
 In short, move down one and right one position and we can traverse the diagonal values in a 2D array. Start at (0, 0) then jump to (1, 1) and (2, 2) and so on. This logic is pretty sturdy as long as the 2D array represents a square matrix, meaning the outer arrays length equals the length of each inner array.
 
-_Linear algebra 101: When a square matrix has its left diagonal values equaling `1` and the other values (everything but the left diagonal) equaling `0`, the matrix is said to be Linearly Independent. To obtain only 1s and 0s in your square matrix, you will need to perform row-reduction which is outside the scope of this article but food for thought!_
+> Linear algebra 101: When a square matrix has its left diagonal values equaling `1` and the other values (everything but the left diagonal) equaling `0`, the matrix is said to be Linearly Independent. To obtain only 1s and 0s in your square matrix, you will need to perform row-reduction which is outside the scope of this article but food for thought!
 
 <h3 class="post-heading">Plain JavaScript Implementation</h3>
 
