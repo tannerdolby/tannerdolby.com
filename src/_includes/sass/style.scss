@@ -954,6 +954,13 @@ textarea {
             }
         }
     }
+    .main-container {
+        .projects {
+            .project-grid {
+                grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+            }
+        }
+    }
 }
 
 @media (max-width: 425px) {
@@ -988,14 +995,6 @@ textarea {
 }
 
 @media (max-width: 375px) {
-    .main-container {
-        .projects {
-            .project-grid {
-                grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-            }
-        }
-    }
-
     .nav-wrapper {
         .nav-home {
             align-items: flex-start;
@@ -1023,11 +1022,11 @@ textarea {
     }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 375px) {
     .main-container {
         .projects {
             .project-grid {
-                grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+                grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
             }
         }
     }

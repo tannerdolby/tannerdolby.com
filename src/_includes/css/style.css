@@ -2188,6 +2188,10 @@ textarea:focus {
     margin: 0.8rem auto;
     width: 100%;
   }
+
+  .main-container .projects .project-grid {
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  }
 }
 @media (max-width: 425px) {
   .top-nav .nav-wrapper .nav-menu li a {
@@ -2211,10 +2215,6 @@ textarea:focus {
   }
 }
 @media (max-width: 375px) {
-  .main-container .projects .project-grid {
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  }
-
   .nav-wrapper .nav-home {
     align-items: flex-start;
   }
@@ -2241,9 +2241,9 @@ textarea:focus {
     margin-left: 0;
   }
 }
-@media (max-width: 350px) {
+@media (max-width: 375px) {
   .main-container .projects .project-grid {
-    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   }
 }
 /* This is a bit sketchy for handling iPhone landscape mode */
