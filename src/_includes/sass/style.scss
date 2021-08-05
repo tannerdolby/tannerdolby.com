@@ -562,11 +562,11 @@ textarea {
 }
 
 .support .cube {
-    display: none;
+    @include visually-hidden();
 }
 
 .hide {
-    display: none;
+    @include visually-hidden();
 }
 
 @media screen and (max-width: 1200px) {
@@ -647,7 +647,7 @@ textarea {
     .toc {
         position: relative;
         ul {
-            display: none;
+            @include visually-hidden();
         }
     }
 
@@ -661,7 +661,7 @@ textarea {
 @media screen and (max-width: 1000px) {
     #post-content {
         .right-sidebar {
-            display: none;
+            @include visually-hidden();
         }
     }
     #main-about {
@@ -675,7 +675,7 @@ textarea {
 
 @media screen and (max-width: 985px) {
     .right-sidebar {
-        display: none !important;
+        @include visually-hidden();
     }
 
     #main-about section, .contact-container,
@@ -693,7 +693,7 @@ textarea {
 
 @media screen and (max-width: 915px) {
     .hide-cube {
-        display: none;
+        @include visually-hidden();
     }
     .main-container {
         .welcome-container {
@@ -831,10 +831,6 @@ textarea {
             justify-content: flex-start;
             align-items: flex-start;
             overflow-x: auto;
-
-            .nav-home {
-                margin-bottom: 1.5rem;
-            }
         }
     }
 
@@ -880,7 +876,7 @@ textarea {
                 margin-top: .25rem;
                 margin-bottom: .25rem;
                 &:last-child {
-                   display: none;
+                   @include visually-hidden();
                 }
             }
         }
@@ -921,7 +917,7 @@ textarea {
             li {
                 a {
                     margin-left: 0;
-                    margin-right: 1.5rem;
+                    margin-right: 1rem;
                     &.stl {
                         margin-top: .5rem;
                     }
@@ -966,7 +962,7 @@ textarea {
             .reach-out {
                 padding: 8px 10px;
                 margin-top: 1.5rem;
-                display: none;
+               @include visually-hidden();
             }
         }
     }
