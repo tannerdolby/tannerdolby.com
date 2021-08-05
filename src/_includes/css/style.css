@@ -116,8 +116,11 @@
 }
 
 .reach-me.button {
+  display: block;
+  margin: 0;
+  width: fit-content;
+  width: -moz-fit-content;
   text-decoration: none;
-  width: auto;
   font-size: 1rem;
   background: inherit;
   color: inherit;
@@ -125,6 +128,7 @@
   border: 2px solid #272643;
   border: 2px solid #212a2f;
   padding: 0.825rem 1.5rem;
+  padding: 0.7rem 1.5rem;
   white-space: nowrap;
   font-weight: 600;
   backface-visibility: hidden;
@@ -149,6 +153,7 @@
   padding: 0.8rem 1.35rem;
   border: none;
   color: #fff;
+  margin-top: 1.35rem;
   font-weight: 600;
   max-width: fit-content;
   max-width: -moz-fit-content;
