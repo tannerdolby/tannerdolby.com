@@ -66,7 +66,7 @@
 }
 
 #main-contact {
-  max-width: 1225px;
+  max-width: 1200px;
   padding: 0 1.5rem;
   margin: 2.75rem auto 2rem auto;
   padding-bottom: 1.5rem;
@@ -171,7 +171,7 @@
   padding: 1rem 1.25rem;
   background: inherit;
   margin: 2rem auto;
-  max-width: 1225px;
+  max-width: 1200px;
 }
 
 .contact-wrapper {
@@ -249,7 +249,7 @@ main .art .art-details .drawing-info {
   padding: 0.5rem 0;
   margin: 0 auto;
   padding: 1rem 1.5rem;
-  max-width: 1225px;
+  max-width: 1200px;
 }
 .featured-art .feat-art-list {
   display: grid;
@@ -296,7 +296,7 @@ main .art .art-details .drawing-info {
   display: grid;
   grid-template-columns: 50% 50%;
   padding: 1rem 1.5rem;
-  max-width: 1225px;
+  max-width: 1200px;
   margin: 0.75em auto 1.75rem auto;
   width: 100%;
 }
@@ -344,7 +344,7 @@ main .art .art-details .drawing-info {
   margin-top: 0.5rem;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1225px;
+  max-width: 1200px;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
 }
@@ -462,7 +462,7 @@ main blockquote {
   text-decoration: none;
 }
 .main-container .projects .projects-wrapper {
-  max-width: 1225px;
+  max-width: 1200px;
   display: flex;
   flex-direction: column;
   margin: 1rem auto;
@@ -552,7 +552,7 @@ main blockquote {
   cursor: pointer;
 }
 .main-container .main-content {
-  max-width: 1225px;
+  max-width: 1200px;
 }
 .main-container .main-content table th {
   background: #eee;
@@ -615,7 +615,7 @@ main blockquote {
 .main-container .home-banner {
   margin-left: auto;
   margin-right: auto;
-  max-width: 1225px;
+  max-width: 1200px;
   margin-right: 1rem;
 }
 .main-container .home-banner p {
@@ -661,7 +661,7 @@ main blockquote {
   margin: 0;
 }
 .main-container .banner-container {
-  max-width: 1225px;
+  max-width: 1200px;
   padding-left: 0;
   padding-right: 0;
   margin: 2.75rem auto 0 auto;
@@ -716,10 +716,10 @@ main blockquote {
   justify-content: space-between;
   align-items: center;
   list-style: none;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
   margin: 1rem auto 1.5rem auto;
   width: 100%;
-  max-width: 1225px;
+  max-width: 1200px;
 }
 .nav-wrapper .nav-home .reach-out {
   background: #212121;
@@ -755,11 +755,11 @@ main blockquote {
   align-items: center;
   justify-content: flex-start;
   margin: 0.8rem auto 0 auto;
-  padding: 15px 1rem;
+  padding: 15px 1.5rem;
   width: 100%;
-  max-width: 1225px;
   position: relative;
   overflow: hidden;
+  max-width: 1200px;
 }
 .nav-wrapper .nav-menu li.stl {
   margin-right: auto;
@@ -936,7 +936,7 @@ main .post h3 {
   grid-template-columns: repeat(6, 1fr);
   grid-auto-rows: minmax(5rem, 1fr);
   gap: 0.75rem;
-  max-width: 1225px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 .posts-container .read-more .see-more-btn:hover {
@@ -1514,7 +1514,7 @@ textarea:focus {
   border-radius: 0;
   padding: 0 1.5rem;
   overflow: hidden;
-  max-width: 1225px;
+  max-width: 1200px;
 }
 
 .about-main {
@@ -1586,7 +1586,7 @@ textarea:focus {
 
 #main-about,
 #main-art {
-  max-width: 1225px;
+  max-width: 1200px;
   margin: 0 auto 5rem auto;
   overflow: hidden;
 }
@@ -1843,7 +1843,7 @@ textarea:focus {
   width: 1px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1250px) {
   .nav-wrapper {
     padding-left: 0;
     padding-right: 0;

@@ -232,7 +232,7 @@ textarea {
     border-radius: 0;
     padding: 0 1.5rem;
     overflow: hidden;
-    max-width: 1225px;
+    max-width: 1200px;
 }
 
 .about-main {
@@ -309,7 +309,7 @@ textarea {
 
 #main-about,
 #main-art {
-    max-width: 1225px;
+    max-width: 1200px;
     margin: 0 auto 5rem auto;
     overflow: hidden;
 }
@@ -574,7 +574,7 @@ textarea {
     @include visually-hidden();
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1250px) {
     .nav-wrapper {
         padding-left: 0;
         padding-right: 0;
