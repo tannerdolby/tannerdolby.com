@@ -1,11 +1,24 @@
 [
     {
+        "name": "Rock Lee",
+        "order": 2,
+        "url": "https://codepen.io/tannerdolby/full/LYyQvjJ",
+        "recent": true,
+        "id": "rock-lee-css",
+        "aria_label": "Link to CSS Rock Lee illustration on CodePen",
+        "image": {
+            "filename": "rock-lee-css.png",
+            "fallback_src": "/images/rock-lee-css.png",
+            "alt": "Rock Lee, a shinobi of the Hidden Leaf Village in the anime series Naruto."
+        }
+    },
+    {
         "name": "Cats Playing In a Box",
         "order": 1,
         "url": "https://codepen.io/tannerdolby/full/vYxyVLV",
         "recent": true,
         "id": "cats-playing-in-box",
-        "aria_label": "Link to cats playing in a box illustration on Codepen",
+        "aria_label": "Link to cats playing in a box illustration on CodePen",
         "image": {
             "filename": "cats-in-box.png",
             "fallback_src": "/images/cats-in-box.png",
@@ -15,9 +28,9 @@
     {
         "name": "3D CSS Shipping Truck",
         "recent": true,
-        "order": 2,
+        "order": 3,
         "id": "css-shipping-truck",
-        "aria_label": "Link to CSS shipping truck on Codepen",
+        "aria_label": "Link to CSS shipping truck on CodePen",
         "url": "https://codepen.io/tannerdolby/full/RwKybqL",
         "image": {
             "filename": "css-truck.png",
@@ -28,7 +41,7 @@
     {
         "name": "Window during nighttime",
         "desc": "An interactive window made with CSS that displays two backgrounds, day and night. Based on this dribble shot",
-        "aria_label": "Link to nighttime window on Codepen",
+        "aria_label": "Link to nighttime window on CodePen",
         "id": "window-nighttime",
         "url": "https://codepen.io/tannerdolby/full/ZEWKEvR",
         "date_created": "August 26, 2020",
@@ -60,11 +73,10 @@
         "name": "CSS Boombox",
         "id": "css-boombox",
         "desc": "I saw this illustration while scrolling through dribbble and wanted to try recreating it with CSS. I'm thinking about coming back to this drawing and adding some animation in the future.",
-        "aria_label": "Link to CSS Boombox on Codepen",
+        "aria_label": "Link to CSS Boombox on CodePen",
         "url": "https://codepen.io/tannerdolby/full/abZYOMN",
         "date_created": "October 29, 2020",
-        "order": 4,
-        "recent": true,
+        "recent": false,
         "credit": "https://dribbble.com/shots/14159520-Boombox",
         "image": {
             "filename": "css-boombox-large.jpg",
@@ -89,7 +101,7 @@
         "name": "CSS Movie Camera - Hide and Reveal",
         "url": "https://codepen.io/tannerdolby/full/YzNgveQ",
         "id": "css-movie-camera",
-        "aria_label": "Link to CSS movie camera on Codepen",
+        "aria_label": "Link to CSS movie camera on CodePen",
         "image": {
             "filename": "css-movie-camera.png",
             "fallback_src": "/images/css-movie-camera.png",
@@ -100,7 +112,7 @@
         "name": "Archimedean spiral with randomized path",
         "id": "archimedean-spiral",
         "desc": "I've always been interested in spirals and the underlying mathematical equations that produce the spiral itself. This is my attempt at drawing a Archimedean Spiral using the Canvas API. Click the spiral to randomize its stroke path.",
-        "aria_label": "Link to archimedean spiral on Codepen",
+        "aria_label": "Link to archimedean spiral on CodePen",
         "url": "https://codepen.io/tannerdolby/full/KKzrOEv",
         "date_created": "September 22, 2020",
         "credit": "https://en.wikipedia.org/wiki/Archimedean_spiral",
@@ -129,7 +141,7 @@
         "name": "UPS Building",
         "id": "ups-building",
         "desc": "I saw this UPS store in a commercial while watching TV. It really caught my eye, so I attempted to recreate it with CSS. Really simplistic but I had fun watching this come to life.",
-        "aria_label": "Link to UPS building on Codepen",
+        "aria_label": "Link to UPS building on CodePen",
         "url": "https://codepen.io/tannerdolby/full/NWNEBYV",
         "date_created": "September 21, 2020",
         "credit": "https://ups.com",
@@ -155,7 +167,7 @@
     {
         "name": "Telephone booth",
         "id": "telephone-booth",
-        "aria_label": "Link to telephone booth on Codepen",
+        "aria_label": "Link to telephone booth on CodePen",
         "url": "https://codepen.io/tannerdolby/full/JjXYPQL",
         "date_created": "August 10, 2020",
         "credit": "https://dribbble.com/shots/11454238-Telephone-London",
@@ -184,7 +196,7 @@
     {
         "name": "Cassette Tape",
         "id": "cassette-tape",
-        "aria_label": "Link to cassette tape on Codepen",
+        "aria_label": "Link to cassette tape on CodePen",
         "url": "https://codepen.io/tannerdolby/full/ExPqqVZ",
         "date_created": "August 2, 2020",
         "credit": "https://depositphotos.com/vector-images/cassette-tape.html",
@@ -213,7 +225,7 @@
     {
         "name": "Blue crayon",
         "id": "blue-crayon",
-        "aria_label": "Link to blue crayon on Codepen",
+        "aria_label": "Link to blue crayon on CodePen",
         "url": "https://codepen.io/tannerdolby/full/PoZyXqB",
         "credit": "https://hacks.mozilla.org/2014/09/single-div-drawings-with-css/",
         "date_created": "July 16, 2020",
@@ -241,7 +253,7 @@
     },
     {
         "name": "Pixel art ghost",
-        "aria_label": "Link to pixel ghost on Codepen",
+        "aria_label": "Link to pixel ghost on CodePen",
         "desc": "Created this image of a ghost on the pixel drawing application PxL created by @jh3y. I animated the pixel ghosts eyes using CSS keyframes. Image also available as an SVG or PNG.",
         "id": "pixel-ghost",
         "url": "https://codepen.io/tannerdolby/full/dyGjMEN",
