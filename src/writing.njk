@@ -1,17 +1,5 @@
----
-tagList: 
-    - html
-    - javascript
-    - eleventy
-    - node
-    - python
-    - nunjucks
-    - security
-    - shell
-    - git
-    - advent-of-code
-    - hackerrank
----
+{% set sortedTags = collections.posts | taglist %}
+
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
     <head>
@@ -72,7 +60,7 @@ tagList:
                     </ul>
                     <h3 style="margin-top: 3rem;">Filter Posts by Tag</h3>
                     <ul class="tags-list">
-                        {% for tag in tagList %}
+                        {% for tag in sortedTags %}
                         <li>
                             <a class="post-label" href="/writing/?filter={{ tag }}">{{ tag }}</a>
                         </li>
