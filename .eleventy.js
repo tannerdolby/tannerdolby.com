@@ -158,16 +158,13 @@ module.exports = (eleventyConfig) => {
     
     });
 
-    eleventyConfig.addShortcode("taglist", function(collection) {
-        let tags = [];
-        collection.forEach(item => {
-            tags.push(...item.data.tags); 
+    eleventyConfig.addFilter("taglist", function(collection) {
+        const tags = [];
+        collection.forEach(tag => {
+            tags.push(...tag.data.tags);
         });
-
-        const uniqueTags = [...new Set(tags)];
-        console.log(uniqueTags);
-
-        return uniqueTags;
+        const sorted = [...new Set(tags)].sort((a, b) => a.localeCompare(b));
+        return sorted;
     });
 
     // Add %20 to url encode title strings for share on Twitter
