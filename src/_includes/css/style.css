@@ -10,7 +10,7 @@
   margin: 0 auto 0 0;
 }
 .post-sidebar .toc-links {
-  margin-top: 0.75rem;
+  margin-top: 0.5rem;
 }
 .post-sidebar ul {
   list-style-type: none;
@@ -754,7 +754,7 @@ main blockquote {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin: 1rem auto 0 auto;
+  margin: 0.8rem auto 0 auto;
   padding: 15px 1rem;
   width: 100%;
   max-width: 1225px;
@@ -1278,6 +1278,12 @@ table {
 }
 .toc .show-toc {
   display: block;
+  clip: auto;
+  clip-path: none;
+  white-space: pre-wrap;
+  width: auto;
+  height: auto;
+  position: static;
 }
 .toc .unfold-toc {
   display: none;
@@ -1457,6 +1463,10 @@ h3, .h3 {
 }
 .skip-link:focus {
   transform: translateY(0);
+}
+
+.cube-wrapper {
+  margin-left: auto;
 }
 
 /* ya, you read this right */
@@ -1811,7 +1821,7 @@ textarea:focus {
   align-items: center;
 }
 
-.support .cube {
+.support .hide-cube {
   clip: rect(1px, 1px, 1px, 1px);
   clip-path: inset(1px);
   display: block;
@@ -1951,6 +1961,25 @@ textarea:focus {
     width: 1px;
   }
 
+  .main-container .welcome-container {
+    max-width: 100%;
+    max-width: 100%;
+    margin-left: initial;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-section {
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: visible;
+    border-bottom: 1.5px solid #212121;
+    margin-bottom: 3.5rem;
+  }
+  .hero-section .cube {
+    margin-right: auto;
+    margin-bottom: -0.5rem;
+  }
+
   #main-about section, .contact-container,
 .recent-posts {
     grid-column: 1/7;
@@ -1965,6 +1994,15 @@ textarea:focus {
   }
 }
 @media screen and (max-width: 915px) {
+  .main-container .welcome-container {
+    max-width: 100%;
+    margin-left: initial;
+    margin-bottom: 2.5rem;
+  }
+  .main-container .welcome-container .home-banner p {
+    max-width: 50ch;
+  }
+
   .hide-cube {
     clip: rect(1px, 1px, 1px, 1px);
     clip-path: inset(1px);
@@ -1974,14 +2012,6 @@ textarea:focus {
     position: absolute;
     white-space: nowrap;
     width: 1px;
-  }
-
-  .main-container .welcome-container {
-    max-width: 100%;
-    margin-left: initial;
-  }
-  .main-container .welcome-container .home-banner p {
-    max-width: 50ch;
   }
 
   .support {
@@ -1994,6 +2024,16 @@ textarea:focus {
     display: block;
     -webkit-transform: perspective(1000000px) rotateX(70deg) rotateZ(-45deg) scale3d(0.7, 0.7, 0.7);
     transform: perspective(1000000px) rotateX(70deg) rotateZ(-45deg) scale3d(0.7, 0.7, 0.7);
+    width: 13vw;
+    height: 11vw;
+    margin: 0 auto;
+    overflow: auto;
+    margin-top: 2.7rem;
+    margin-right: 100px;
+    max-width: 200px;
+    --b: .3;
+    clip: auto;
+    clip-path: none;
   }
 }
 @media (max-width: 900px) {
@@ -2046,6 +2086,11 @@ textarea:focus {
 
   p, .prev-next li a, .toc .toc-link, #post pre code {
     font-size: 1.0625rem;
+  }
+
+  .hero-section .cube {
+    -webkit-transform: perspective(1000000px) rotateX(70deg) rotateZ(-45deg) scale3d(0.7, 0.7, 0.7);
+    transform: perspective(1000000px) rotateX(70deg) rotateZ(-45deg) scale3d(0.7, 0.7, 0.7);
   }
 }
 @media screen and (max-width: 750px) {
@@ -2147,20 +2192,17 @@ textarea:focus {
 @media (max-width: 425px) {
   .top-nav .nav-wrapper .nav-menu li a {
     margin-left: 0;
-    margin-right: 1rem;
+    margin-right: 1.5rem;
   }
   .top-nav .nav-wrapper .nav-menu li a.stl {
     margin-top: 0.5rem;
   }
 
-  .support {
-    height: auto;
-  }
-  .support .cube {
+  .cube {
     margin-top: 1.5rem;
     display: block;
     -webkit-transform: perspective(1000000px) rotateX(70deg) rotateZ(-45deg) scale3d(0.8, 0.8, 0.8);
-    transform: perspective(1000000px) rotateX(70deg) rotateZ(-45deg) scale3d(0.8, 0.8, 0.8);
+    transform: perspective(1000000px) rotateX(70deg) rotateZ(-45deg) scale3d(0.8, 0.8, 0.8s);
   }
 }
 @media screen and (max-width: 400px) {

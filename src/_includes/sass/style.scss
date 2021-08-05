@@ -85,7 +85,6 @@ a {
     }
 }
 
-
 pre {
     word-wrap: normal;
     background: $code-bg;
@@ -173,6 +172,10 @@ h3, .h3 {
     &:focus {
         transform: translateY(0);
     }
+}
+
+.cube-wrapper {
+    margin-left: auto;
 }
 
 /* ya, you read this right */
@@ -561,8 +564,10 @@ textarea {
     }
 }
 
-.support .cube {
-    @include visually-hidden();
+.support {
+    .hide-cube {
+        @include visually-hidden();
+    }
 }
 
 .hide {
@@ -678,6 +683,28 @@ textarea {
         @include visually-hidden();
     }
 
+    .main-container {
+        .welcome-container {
+            max-width: 100%;
+            max-width: 100%;
+            margin-left: initial;
+            margin-bottom: 2.5rem;
+        }
+    }
+
+    .hero-section {
+        flex-direction: column;
+        align-items: flex-start;
+        overflow: visible;
+        border-bottom: 1.5px solid #212121;
+        margin-bottom: 3.5rem;
+
+        .cube {
+            margin-right: auto;
+            margin-bottom: -.5rem;
+        }
+    }
+
     #main-about section, .contact-container,
     .recent-posts {
         grid-column: 1 / 7;
@@ -692,13 +719,11 @@ textarea {
 }
 
 @media screen and (max-width: 915px) {
-    .hide-cube {
-        @include visually-hidden();
-    }
     .main-container {
         .welcome-container {
             max-width: 100%;
             margin-left: initial;
+            margin-bottom: 2.5rem;
             .home-banner {
                 p {
                     max-width: 50ch;
@@ -706,6 +731,10 @@ textarea {
             }
         
         }
+    }
+
+    .hide-cube {
+        @include visually-hidden();
     }
 
     .support {
@@ -716,7 +745,17 @@ textarea {
         .cube {
             display: block;
             -webkit-transform: perspective(1000000px) rotateX(70deg) rotateZ(-45deg) scale3d(.7, .7, .7);
-              transform: perspective(1000000px) rotateX(70deg) rotateZ(-45deg) scale3d(.7, .7, .7);
+            transform: perspective(1000000px) rotateX(70deg) rotateZ(-45deg) scale3d(.7, .7, .7);
+            width: 13vw;
+            height: 11vw;
+            margin: 0 auto;
+            overflow: auto;
+            margin-top: 2.7rem;
+            margin-right: 100px;
+            max-width: 200px;
+            --b: .3;
+            clip: auto;
+            clip-path: none;
         }
     }
 }
@@ -784,6 +823,12 @@ textarea {
 
     p, .prev-next li a, .toc .toc-link, #post pre code {
         font-size: 1.0625rem;
+    }
+    .hero-section {
+        .cube {
+            -webkit-transform: perspective(1000000px) rotateX(70deg) rotateZ(-45deg) scale3d(.7, .7, .7);
+            transform: perspective(1000000px) rotateX(70deg) rotateZ(-45deg) scale3d(.7, .7, .7);
+        }
     }
 } 
 
@@ -917,7 +962,7 @@ textarea {
             li {
                 a {
                     margin-left: 0;
-                    margin-right: 1rem;
+                    margin-right: 1.5rem;
                     &.stl {
                         margin-top: .5rem;
                     }
@@ -925,16 +970,12 @@ textarea {
             }
         }
     }
-
-
-    .support {
-        height: auto;
-        .cube {
-            margin-top: 1.5rem;
-            display: block;
-            -webkit-transform: perspective(1000000px) rotateX(70deg) rotateZ(-45deg) scale3d(.8, .8, .8);
-            transform: perspective(1000000px) rotateX(70deg) rotateZ(-45deg) scale3d(.8, .8, .8);
-        }
+ 
+    .cube {
+        margin-top: 1.5rem;
+        display: block;
+        -webkit-transform: perspective(1000000px) rotateX(70deg) rotateZ(-45deg) scale3d(.8, .8, .8);
+        transform: perspective(1000000px) rotateX(70deg) rotateZ(-45deg) scale3d(.8, .8, .8s);
     }
 }
 

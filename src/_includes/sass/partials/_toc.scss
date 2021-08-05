@@ -3,6 +3,13 @@
 
     .show-toc {
         display: block;
+        clip: auto;
+        clip-path: none;
+        white-space: pre-wrap;
+        width: auto;
+        height: auto;
+        position: static;
+
     }
 
     .unfold-toc {

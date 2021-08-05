@@ -685,6 +685,12 @@
   background-size: 5% 5%;
 }
 
+@media only screen and (max-width: 1100px) {
+  .cube {
+    -webkit-transform: perspective(1000000px) rotateX(70deg) rotateZ(-45deg) scale3d(0.6, 0.6, 0.6);
+    transform: perspective(1000000px) rotateX(70deg) rotateZ(-45deg) scale3d(0.6, 0.6, 0.6);
+  }
+}
 @media only screen and (max-width: 915px) {
   .cube {
     margin-right: auto;
