@@ -162,6 +162,10 @@ main {
     .main-content {
         max-width: 1200px;
 
+        .filter-by-tag {
+            margin-top: 3rem;
+        }
+
         table {
             th {
                 background: #eee;

@@ -1,3 +1,5 @@
+{% set sortedTags = collections.posts | taglist %}
+
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
     <head>
@@ -26,6 +28,7 @@
         {% include "layouts/nav.njk" %}
         <main class="main-container" id="main-writing">
             <div class="wrap">
+                <strong class="category-small"><a href="#taglist">Categories</a></strong>
                 <header class="banner-container">
                     <h1 class="h1">Looking For a Post?</h1>
                     <label class="sr-only" for="search">Search the blog</label>
@@ -55,6 +58,14 @@
                                 <p class="date">Posted on&nbsp;<time datetime="{{ post.data.datetime | date('YYYY-MM-DD') }}">{{ post.data.datetime | date('MMMM DD, YYYY') }}</time>&nbsp;&bull; tagged with&nbsp;{% for tag in post.data.tags %}<a style="margin-right: .35rem;" href="/writing?filter={{ tag }}">#{{ tag }}</a>{% endfor %}</p>
                                 <p class="preview">{{ post.data.preview }}</p>
                             </article>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    <h3 class="filter-by-tag">Filter Posts by Tag</h3>
+                    <ul id="taglist" class="tags-list">
+                        {% for tag in sortedTags %}
+                        <li>
+                            <a class="post-label" href="/writing/?filter={{ tag }}">{{ tag }}</a>
                         </li>
                         {% endfor %}
                     </ul>

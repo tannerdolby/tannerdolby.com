@@ -255,14 +255,15 @@ textarea {
     align-items: center;
 }
 
-.tags-list {
+.wrap .tags-list {
     display: flex; 
     justify-content: flex-start; 
     align-items: center; 
     flex-wrap: wrap; 
     padding-left: 0; 
     list-style: none;
-    margin: .5rem 0;
+    margin: .5rem 0 1rem 0;
+    grid-column: 1 / 7;
 
     li {
         display: flex; 
@@ -274,10 +275,12 @@ textarea {
             margin-right: .5rem; 
             border: 1px solid lightgray;
             border: .08rem solid rgb(170, 170, 170);
+            border: 1px solid #666;
             color: $paragraph-text;
 
             &:hover {
                 border: .08rem solid transparent;
+                border: 1px solid transparent;
                 text-decoration: none;
                 background: rgb(54, 60, 63);
                 background: #363c3f;

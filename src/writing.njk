@@ -29,6 +29,7 @@
         {% include "layouts/nav.njk" %}
         <main class="main-container" id="main-writing">
             <div class="wrap">
+                <strong class="category-small"><a href="#taglist">Categories</a></strong>
                 <header class="banner-container search-box">
                     <h1 class="h1">Writing</h1>
                     <div class="search-style">
@@ -58,8 +59,8 @@
                         </li>
                         {% endfor %}
                     </ul>
-                    <h3 style="margin-top: 3rem;">Filter Posts by Tag</h3>
-                    <ul class="tags-list">
+                    <h3 class="filter-by-tag">Filter Posts by Tag</h3>
+                    <ul id="taglist" class="tags-list">
                         {% for tag in sortedTags %}
                         <li>
                             <a class="post-label" href="/writing/?filter={{ tag }}">{{ tag }}</a>
