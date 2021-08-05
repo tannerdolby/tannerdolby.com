@@ -34,7 +34,7 @@ pre[class*="language-"] {
     padding: 1rem 1.5rem;
     margin: 1em 0 24px 0;
     overflow: auto;
-    border-radius: 0.2em;
+    border-radius: 4px;
 }
 
 :not(pre) > code[class*="language-"],
@@ -126,10 +126,10 @@ pre[class*="language-"] {
 
 @media (max-width: 775px) {
     pre[class*="language-"] {
-        padding: 1em;
+        padding: 1em 1.5rem;
         margin: .5em 0 24px 0;
-        margin-left: -1.1rem;
-        margin-right: -1.1rem;
+        margin-left: -1.5rem;
+        margin-right: -1.5rem;
         overflow: auto;
         border-radius: 0em;
     }

@@ -68,7 +68,7 @@
 #main-contact {
   max-width: 1200px;
   padding: 0 1.5rem;
-  margin: 2.75rem auto 2rem auto;
+  margin: 3rem auto 2rem auto;
   padding-bottom: 1.5rem;
   overflow: hidden;
   display: grid;
@@ -647,7 +647,7 @@ main blockquote {
 .main-container .wrap {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  margin: 3rem auto 1rem;
+  margin: 4rem auto 1rem;
   max-width: 80ch;
   padding: 0 1.5rem;
 }
@@ -670,7 +670,7 @@ main blockquote {
   max-width: 1200px;
   padding-left: 0;
   padding-right: 0;
-  margin: 2.75rem auto 0 auto;
+  margin: 3rem auto 0 auto;
 }
 .main-container .banner-container:not(.search-box) h1 {
   margin-bottom: 1rem;
