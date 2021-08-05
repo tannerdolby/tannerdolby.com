@@ -48,7 +48,7 @@ Something to keep in mind. When a division operator appears before multiplicatio
 
 Now that we have the above table to reference and [Python docs](https://docs.python.org/3/reference/expressions.html), lets look at a few expressions. I will start off with a few "basic" expressions where the order of operations is straightforward, then the difficulty will increase and it will take a moment to scan the expression and make a note of which operations will occur first.
 
-_Note: An expression can be represented as `2 + 5 - 2` where the operators are `+`, `-` and the operands (or values) are `2`, `5`, `2`._
+> Note: An expression can be represented as `2 + 5 - 2` where the operators are `+`, `-` and the operands (or values) are `2`, `5`, `2`.
 
 ```python
 a = 5 + 4 - 3 + 2 + 1
@@ -94,7 +94,7 @@ There is alot going in the above expression. Lets break down the order of operat
 4. The operand 5 shares two operators `% 5 -` and the modulo operator takes higher precedence so things can be rewritten as `(11 % 5) - 10` which equals `1 - 10 = -9`. Updating the original expression to be `16 - 9 + 18`
 5. Lastly handle the addition and subtraction, the operand `9` shares two operators and the subtraction appears first in the expression (even though addition takes higher precedence) so we can write `(16 - 9) + 18` which equals `7 + 18 = 25`
 
-_Note: Typically, in everyday programming you won't encounter such expressions but they could potentially show up from time to time._
+> Note: Typically, in everyday programming you won't encounter such expressions but they could potentially show up from time to time.
 
 <h2 class="post-heading">Conclusion</h2>
 

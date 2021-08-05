@@ -42,7 +42,7 @@ After checking the search query against post titles and post tags, we can then v
 }
 ```
 
-_Note: Using a service like [Algolia](https://www.algolia.com/) will provide a more rich search functionality with all the bells and whistles. But if your search needs are minimal (like mine) this implementation could work great for you._
+Note: Using a service like [Algolia](https://www.algolia.com/) will provide a more rich search functionality with all the bells and whistles. But if your search needs are minimal (like mine) this implementation could work great for you.
 
 <h2 class="post-heading">Creating the Search</h2>
 

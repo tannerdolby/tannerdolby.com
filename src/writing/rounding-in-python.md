@@ -59,7 +59,7 @@ print('The formatted/rounded value is {:0.2f}'.format(value))
 # The formatted/rounded value is 7.97
 ```
 
-_Note: Read more about rounding/formatting decimals on [StackOverflow](https://stackoverflow.com/questions/20457038/how-to-round-to-2-decimals-with-python)_
+> Note: Read more about rounding/formatting decimals on [StackOverflow](https://stackoverflow.com/questions/20457038/how-to-round-to-2-decimals-with-python)
 
 You could also use [f-strings](https://realpython.com/python-f-strings/) which is a much quicker way to format strings as an alternative to the longhand `format()` usage. Simply place the letter `f` before your string and use curly braces `{}` to interpolate variables inside a string just as we would do with backticks and string interpolation syntax `${}` in JavaScript.
 
