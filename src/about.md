@@ -26,7 +26,7 @@ During my time at ASU, I worked as an Undergraduate Researcher and Supplemental 
 
 ## Need More?
 
-I'm available for all things web related: web development, technical writing, static sites, JAMstack, accessibility, UI design and more. Have a look at my [resume](/resume/tanner-dolby-resume.pdf) and feel free to [contact me](/contact/) if you'd like to chat!
+I'm available for all things web related: web development, technical writing, static sites, JAMstack, accessibility, UI design and more. Have a look at my [resume](/resume/tanner-dolby-resume-public.pdf) and feel free to [contact me](/contact/) if you'd like to chat!
 
 <div class="social-icons">
 {% for icon in socials %}
