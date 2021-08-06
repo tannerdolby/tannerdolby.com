@@ -920,21 +920,18 @@ textarea {
 
 @media (max-width: 480px) {
     .nav-wrapper {
+        position: static;
+        top: 0;
         .nav-menu {
             li {
                 margin-top: .25rem;
                 margin-bottom: .25rem;
+                &.stl {
+                    margin-right: 2rem;
+                }
                 &:last-child {
                    @include visually-hidden();
                 }
-            }
-        }
-    }
-    .nav-wrapper {
-        .nav-menu {
-            li.stl {
-                margin-right: 2rem;
-
             }
         }
     }

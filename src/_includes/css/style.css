@@ -2189,9 +2189,16 @@ textarea:focus {
   }
 }
 @media (max-width: 480px) {
+  .nav-wrapper {
+    position: static;
+    top: 0;
+  }
   .nav-wrapper .nav-menu li {
     margin-top: 0.25rem;
     margin-bottom: 0.25rem;
+  }
+  .nav-wrapper .nav-menu li.stl {
+    margin-right: 2rem;
   }
   .nav-wrapper .nav-menu li:last-child {
     clip: rect(1px, 1px, 1px, 1px);
@@ -2202,10 +2209,6 @@ textarea:focus {
     position: absolute;
     white-space: nowrap;
     width: 1px;
-  }
-
-  .nav-wrapper .nav-menu li.stl {
-    margin-right: 2rem;
   }
 }
 @media (max-width: 450px) {
