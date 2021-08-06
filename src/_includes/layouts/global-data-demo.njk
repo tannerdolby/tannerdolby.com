@@ -1,3 +1,5 @@
+{% set days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday' ] %}
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -32,15 +34,15 @@
                     {% endfor %}
                 </ul>
                 <h3>Schedule</h3>
-                <ol>
-                    <li>Sunday: {{ card.scheduled.sunday }}</li>
+                <ul>
                     <li>Monday: {{ card.scheduled.monday }}</li>
                     <li>Tuesday: {{ card.scheduled.tuesday }}</li>
                     <li>Wednesday: {{ card.scheduled.wednesday }}</li>
                     <li>Thursday: {{ card.scheduled.thursday }}</li>
                     <li>Friday: {{ card.scheduled.friday }}</li>
                     <li>Saturday: {{ card.scheduled.saturday }}</li>
-                </ol>
+                    <li>Sunday: {{ card.scheduled.sunday }}</li>
+                </ul>
             </div>
         {% endfor %}
         </main>

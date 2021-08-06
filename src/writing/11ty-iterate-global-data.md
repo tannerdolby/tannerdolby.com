@@ -44,6 +44,43 @@ Let's say company XYZ has 500+ employees and you don't want to sequentially writ
 
 Next, we need a place where all this employee data can be utilized and rendered. You can create a layout `profiles.njk` inside a new directory called `_includes/layouts/` and begin iterating over the array of card objects in cards.json. You could also just create a `profiles.html` file to iterate over the global data and not use any `.md` files, as the templates are being transformed to HTML at build time.
 
+As a JavaScript data file, similiar to how we would expose our public API through a Node package using `module.exports`. Whatever is exported from a `.js` global data file is accessible anywhere in your project just as it would with JSON. Here is a short example:
+
+{% filename "card.js" %}
+
+```js
+module.exports = {
+    name: "11ty Fan Club",
+    labels: [
+        "11ty",
+        "is",
+        "cool"
+    ],
+    members: 11
+}
+```
+
+and the data exported from `card.js` would be have the following template usage, using the global data filename and accessing properties with dot notation:
+
+{% filename "index.njk" %}
+
+{% raw %}
+
+```html
+<h1>{{ card.name }}</h1>
+<p>Current members: {{ card.members }}</p>
+
+<ul>
+    {% for label in card.labels %}
+    <li>{{ label }}</li>
+    {% endfor %}
+</ul>
+```
+
+{% endraw %}
+
+If you wanted to only use JSON in your global data file, you could do something like:
+
 {% filename "cards.json" %}
 
 ```json
@@ -202,15 +239,7 @@ If you wanted to iterate over the array of card objects in `_data/cards.json` an
             {% endfor %}
         </ul>
         <h3>Schedule</h3>
-        <ol>
-            <li>Sunday: {{ card.scheduled.sunday }}</li>
-            <li>Monday: {{ card.scheduled.monday }}</li>
-            <li>Tuesday: {{ card.scheduled.tuesday }}</li>
-            <li>Wednesday: {{ card.scheduled.wednesday }}</li>
-            <li>Thursday: {{ card.scheduled.thursday }}</li>
-            <li>Friday: {{ card.scheduled.friday }}</li>
-            <li>Saturday: {{ card.scheduled.saturday }}</li>
-        </ol>
+        <p>On call: {{ card.on-call }}</p>
     </div>
 {% endfor %}
 </main>
