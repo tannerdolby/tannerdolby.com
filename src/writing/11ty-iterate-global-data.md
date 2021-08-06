@@ -1,8 +1,8 @@
 ---
 title: Generate Page Content From a Global Data File Using Eleventy
 shortname: 11ty Iterate Global Data
-date: 2020-10-08
-datetime: 2020-10-08 00:00:00 Z
+date: 2021-07-29
+datetime: 2021-07-29 00:00:00 Z
 preview: There are many great features to choose from when building websites with Eleventy. One feature in particular that I find very useful is the ability to iterate over a global data file and generate page content using Nunjucks.
 tags: 
     - eleventy
@@ -44,7 +44,9 @@ Let's say company XYZ has 500+ employees and you don't want to sequentially writ
 
 Next, we need a place where all this employee data can be utilized and rendered. You can create a layout `profiles.njk` inside a new directory called `_includes/layouts/` and begin iterating over the array of card objects in cards.json. You could also just create a `profiles.html` file to iterate over the global data and not use any `.md` files, as the templates are being transformed to HTML at build time.
 
-As a JavaScript data file, similiar to how we would expose our public API through a Node package using `module.exports`. Whatever is exported from a `.js` global data file is accessible anywhere in your project just as it would with JSON. Here is a short example:
+<h3 class="post-heading">JavaScript files</h3>
+
+When using `.js` global data files, you have the option to export an object or a function using `module.exports`. If you have worked with modules before or have exposed the public API of a Node package on npm, your probably familiar with exporting. Whatever is exported from a `.js` global data file is globally accessible anywhere in your project just as it would with JSON. Here is a short example:
 
 {% filename "card.js" %}
 
@@ -60,7 +62,7 @@ module.exports = {
 }
 ```
 
-and the data exported from `card.js` would be have the following template usage, using the global data filename and accessing properties with dot notation:
+The data exported from `card.js` would be have the following template usage. Using the global data filename and accessing properties within the exported object using dot notation:
 
 {% filename "index.njk" %}
 
@@ -78,35 +80,6 @@ and the data exported from `card.js` would be have the following template usage,
 ```
 
 {% endraw %}
-
-If you wanted to only use JSON in your global data file, you could do something like:
-
-{% filename "cards.json" %}
-
-```json
-[
-    {
-        "title": "Card One",
-        "name": "Larry",
-        "id": 1,
-        "posititon": "Systems",
-        "scheduled": {
-            "monday": true,
-            "tuesday": true,
-            "wednesday": true,
-            "thursday": true,
-            "friday": false,
-            "saturday": false,
-            "sunday": false
-        },
-        "interests": [
-            "Some rad stuff",
-            "reading rad blog posts",
-            "eleventy"
-        ]
-    }
-]
-```
 
 If you wanted more freedom to pull in data from another source, or compute it, then using a custom global data file will be what you want. Any data that is exported using `module.exports` will be available in the same fashion as data from a `.json` global data file. Below is a basic example of creating a custom global data file for use in templates.
 
@@ -164,12 +137,38 @@ module.exports = async function() {
 
 This is a contrived example, but the sky is the limit with global data files. They provide a blank "data" canvas for you to do whatever you want with your data, which is another reason why 11ty is really cool. You can use the custom global data universally in your project either in a template or markdown file just as you would with a `.json` data file. By using the global data filename like {% raw %}`{{ customData }}`{% endraw %} and then accessing the object properties as necessary.
 
-<details>
-<summary>Using Nunjucks in Markdown Files</summary>
+<h3 class="post-heading">JSON files</h3>
 
-If you intend on using templating language syntax like liquid or nunjucks in a Markdown file, make sure to set `templateEngineOverride: njk, md` in front matter to allow nunjucks to be handled first then markdown.
+If you wanted to only use JSON in your global data file, you could do something like:
 
-</details>
+{% filename "cards.json" %}
+
+```json
+[
+    {
+        "title": "Card One",
+        "name": "Larry",
+        "id": 1,
+        "posititon": "Systems",
+        "scheduled": {
+            "monday": true,
+            "tuesday": true,
+            "wednesday": true,
+            "thursday": true,
+            "friday": false,
+            "saturday": false,
+            "sunday": false
+        },
+        "interests": [
+            "Some rad stuff",
+            "reading rad blog posts",
+            "eleventy"
+        ]
+    }
+]
+```
+
+and using the data in a template would look like this:
 
 {% raw %}
 ```html
@@ -192,7 +191,7 @@ If you intend on using templating language syntax like liquid or nunjucks in a M
 ```
 {% endraw %}
 
-<h2 id="using-global-data" class="post-heading">Using Global Data</h2>
+<h2 id="using-global-data" class="post-heading">Iterating Global Data</h2>
 
 Below is an example of the `for` loop syntax in Nunjucks.
 
@@ -222,6 +221,13 @@ To create a loop or conditional statement in [Nunjucks](https://mozilla.github.i
 You can access global data files in a markdown file or within a template by using the filename without its file extension. When you have a global data file thats an object, you can access the content by using {% raw %}`{{ cards.title }}`{% endraw %} without any `for` loop. 
 
 If you wanted to iterate over the array of card objects in `_data/cards.json` and generate HTML for a nice grid of employee cards. You can inject global data into a template file using {% raw %}`{{ item }}`{% endraw %} and access the objects we have defined in global data.
+
+<details>
+<summary>Using Nunjucks in Markdown Files</summary>
+
+If you intend on using templating language syntax like liquid or nunjucks in a Markdown file, make sure to set `templateEngineOverride: njk, md` in front matter to allow nunjucks to be handled first then markdown.
+
+</details>
 
 {% filename "profiles.njk" %}
 
@@ -287,7 +293,18 @@ To include the markdown in `cardBanner.md` within the layout file `global-data-d
         {{ content | safe }}
         <div class="card-grid">
         {% for card in cards %}
-            ...
+            <div class="card">
+                <h2>{{ card.title }} - #{{ card.id }}</h2>
+                <p>Hi, I'm {{ card.name }} and I work in {{ card.position }}.</p>
+                <h3>Interests</h3>
+                <ul>
+                    {% for interest in card.interests %}
+                    <li>{{ interest }}</li>
+                    {% endfor %}
+                </ul>
+                <h3>Schedule</h3>
+                <!-- Extra: Index the card.scheduled days -->
+            </div>
         {% endfor %}
         </div>
     </main>
@@ -295,7 +312,7 @@ To include the markdown in `cardBanner.md` within the layout file `global-data-d
 ```
 {% endraw %}
 
-Now that everything is setup, build with `eleventy` and then serve locally using `eleventy --serve`. The employee grid should look like this:
+Now that everything is setup, build with `eleventy` and then serve the app locally using `eleventy --serve`. The employee grid should look like this:
 
 {% respimg 
    src="profile-grid-demo.png",
