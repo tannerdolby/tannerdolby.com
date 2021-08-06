@@ -1,7 +1,9 @@
 @use "../vars/" as *;
 
 main {
-
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+    
     &.a11y-page {
         max-width: 85ch; 
         margin: 0 auto 6rem auto; 

@@ -423,6 +423,8 @@ main .art .art-details .drawing-info {
 }
 
 main {
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
   /* Address this - TODO */
 }
 main.a11y-page {
@@ -719,52 +721,20 @@ main blockquote {
   align-items: flex-start;
   flex-direction: column;
   border-bottom: 1px solid lightgray;
-}
-.nav-wrapper .nav-home {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  list-style: none;
-  padding: 0 1.5rem;
-  margin: 1rem auto 1.5rem auto;
+  overflow: hidden;
+  position: sticky;
+  top: -20px;
   width: 100%;
-  max-width: 1200px;
-}
-.nav-wrapper .nav-home .reach-out {
-  background: #212121;
-  color: #fff;
-  padding: 11px 10px;
-  border-radius: 3px;
-  font-size: 1rem;
-}
-.nav-wrapper .nav-home .reach-out:hover {
-  background: #111;
-  text-decoration: none;
-}
-.nav-wrapper .nav-home .home {
-  font-weight: 500;
-  font-size: 1.15rem;
-  font-size: 1.2rem;
-  color: #212121;
-  text-decoration: none;
-}
-.nav-wrapper .nav-home span {
-  background: inherit;
-  border: 0.12rem solid #212121;
-  color: #212121;
-  border-radius: 0;
-  padding: 0.5rem;
-  margin-right: 0.75rem;
-  font-weight: 700;
-  font-size: 1rem;
+  z-index: 9999;
+  background: #fbfbfb;
 }
 .nav-wrapper .nav-menu {
   list-style: none;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin: 0.8rem auto 0 auto;
-  padding: 10px 1.5rem;
+  margin: 0.6rem auto 0 auto;
+  padding: 6px 1.5rem 5px;
   width: 100%;
   position: relative;
   overflow: hidden;
@@ -777,6 +747,7 @@ main blockquote {
   position: relative;
   right: 0;
   margin-left: auto;
+  height: 29px;
 }
 .nav-wrapper .nav-menu li a {
   color: #212121;
@@ -791,6 +762,47 @@ main blockquote {
 }
 .nav-wrapper .nav-menu li a:hover {
   text-decoration: underline;
+}
+
+.top-nav .nav-home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 0 1.5rem;
+  margin: 2rem auto 1.25rem auto;
+  width: 100%;
+  max-width: 1200px;
+  background: #fbfbfb;
+  position: relative;
+}
+.top-nav .nav-home .reach-out {
+  background: #212121;
+  color: #fff;
+  padding: 11px 10px;
+  border-radius: 3px;
+  font-size: 1rem;
+}
+.top-nav .nav-home .reach-out:hover {
+  background: #111;
+  text-decoration: none;
+}
+.top-nav .nav-home .home {
+  font-weight: 500;
+  font-size: 1.15rem;
+  font-size: 1.2rem;
+  color: #212121;
+  text-decoration: none;
+}
+.top-nav .nav-home span {
+  background: inherit;
+  border: 0.12rem solid #212121;
+  color: #212121;
+  border-radius: 0;
+  padding: 0.5rem;
+  margin-right: 0.75rem;
+  font-weight: 700;
+  font-size: 1rem;
 }
 
 .pop-over {

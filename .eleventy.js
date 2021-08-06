@@ -160,8 +160,8 @@ module.exports = (eleventyConfig) => {
 
     eleventyConfig.addFilter("taglist", function(collection) {
         const tags = [];
-        collection.forEach(tag => {
-            tags.push(...tag.data.tags);
+        collection.forEach(post => {
+            tags.push(...post.data.tags);
         });
         const sorted = [...new Set(tags)].sort((a, b) => a.localeCompare(b));
         return sorted;

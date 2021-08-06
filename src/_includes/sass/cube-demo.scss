@@ -110,6 +110,7 @@ $cube-z: 6vw;
   margin-top: 2.7rem;
   margin-right: 100px;
   max-width: 200px;
+  z-index: 2;
   --b: .3;
   
   &.front, &.back,

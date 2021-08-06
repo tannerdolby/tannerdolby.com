@@ -6,16 +6,66 @@
     align-items: flex-start;
     flex-direction: column;
     border-bottom: 1px solid lightgray;
+    overflow: hidden;
+    position: sticky;
+    top: -20px;
+    width: 100%;
+    z-index: 9999;
+    background: #fbfbfb;
 
+    .nav-menu {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin: .6rem auto 0 auto;
+        padding: 6px 1.5rem 5px;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        max-width: 1200px;
+
+        li {
+            &.stl {
+                margin-right: auto;
+            }
+            &:last-child {
+                position: relative;
+                right: 0;
+                margin-left: auto;
+                height: 29px;
+            }
+            a {
+                color: #212121;
+                padding: .5rem 0;
+                margin: 0 1.7rem;
+                font-size: 1.0625rem;
+                text-decoration: none;
+                font-weight: 500;
+                &:first-child {
+                    margin-left: 0;
+                }
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+.top-nav {
     .nav-home {
         display: flex;
         justify-content: space-between;
         align-items: center;
         list-style: none;
         padding: 0 1.5rem;
-        margin: 1rem auto 1.5rem auto;
+        margin: 2rem auto 1.25rem auto;
         width: 100%;
         max-width: 1200px;
+        background: #fbfbfb;
+        position: relative;
 
         .reach-out {
             background: #212121;
@@ -46,45 +96,6 @@
             margin-right: .75rem;
             font-weight: 700;
             font-size: 1rem;
-        }
-    }
-
-    .nav-menu {
-        list-style: none;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        margin: .8rem auto 0 auto;
-        padding: 10px 1.5rem;
-        width: 100%;
-        position: relative;
-        overflow: hidden;
-        max-width: 1200px;
-
-        li {
-            &.stl {
-                margin-right: auto;
-            }
-            &:last-child {
-                position: relative;
-                right: 0;
-                margin-left: auto;
-            }
-            a {
-                color: #212121;
-                padding: .5rem 0;
-                margin: 0 1.7rem;
-                font-size: 1.0625rem;
-                text-decoration: none;
-                font-weight: 500;
-                &:first-child {
-                    margin-left: 0;
-                }
-
-                &:hover {
-                    text-decoration: underline;
-                }
-            }
         }
     }
 }
