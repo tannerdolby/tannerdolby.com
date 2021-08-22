@@ -1,7 +1,7 @@
 ---
 title: Using index files when working with Sass and @use rules
-date: 2021-07-30
-datetime: 2021-07-30 00:00:00 Z
+date: 2021-08-22
+datetime: 2021-08-22 00:00:00 Z
 tags:
  - scss
  - css
@@ -15,6 +15,8 @@ The main implementation of [Sass](https://sass-lang.com/) is [`dart-sass`](https
 The Sass team discourages the continued use of the [@import](https://sass-lang.com/documentation/at-rules/import) rule. Sass will gradually phase it out over the next few years, and eventually remove it from the language entirely. Prefer the [@use](https://sass-lang.com/documentation/at-rules/use) rule instead. 
 
 > Only Dart Sass currently supports @use. Users of other implementations must use the @import rule instead.
+
+On GitHub, I [helped drive](https://github.com/mdn/mdn-minimalist/pull/712) the transition from `@import` to `@use` at-rules for [`mdn/mdn-minimalist`](https://github.com/mdn/mdn-minimalist) which is the base Sass that powers [MDN Web Docs](https://developer.mozilla.org/en-US/). This conversion required me to study the Sass docs for transitioning from @import to @use and the details in this article are things I think are important when getting started with using `@use` and or working towards replacing your `@import` at-rules.
 
 <h2 class="post-heading">A new way to import</h2>
 
