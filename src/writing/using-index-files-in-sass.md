@@ -62,9 +62,9 @@ This means the only way of importing the mixins mean't using numerous `@import` 
 
 ```scss
 /* Import the mixins */
-@import "./mixins/_sr-only";
-@import "./mixins/_invert";
-@import "./mixins/_square";
+@import "./mixins/sr-only";
+@import "./mixins/invert";
+@import "./mixins/square";
 
 .hidden {
     @include sr-only();
@@ -81,6 +81,14 @@ If you only had a few mixins or files to import, this implementation wouldn't be
 <h3 class="post-heading">The power of @use at-rules</h3>
 
 With the introduction of `@use` at-rules, we have the ability to use [index files](https://sass-lang.com/documentation/at-rules/use#index-files). Using these index files allow us to use [`@forward`](https://sass-lang.com/documentation/at-rules/forward) rules in a `_index.scss` file so that when we load the URL of the directory `./mixins/`, all of the partial files will be loaded with it. Giving us access to an entire directory of sass files with a single `@use` at-rule.
+
+{% filename "./mixins/_index.scss" %}
+
+```scss
+@forward "./mixins/sr-only";
+@forward "./mixins/invert";
+@forward "./mixins/square";
+```
 
 Building on the example above, instead of writing three separate `@import` calls to load the URLs of the mixins we need. Simply load the URL representing the directory of partial files with a defined index file. Not only is this usage super clean and maintainable but saves quite a bit of time when many partial files need to be loaded. 
 
