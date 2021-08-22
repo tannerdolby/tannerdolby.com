@@ -66,7 +66,7 @@
         font-size: 1rem;
         background: inherit;
         color: inherit;
-        border-radius: 5px;
+        border-radius: 4px;
         border: 2px solid #272643;
         border: 2px solid rgb(33, 42, 47);
         padding: .825rem 1.5rem;
@@ -127,6 +127,10 @@
 .contact-wrapper {
     max-width: 80ch;
     border-radius: 8px;
+    padding: 1.75rem 1.5rem;
+    box-shadow: 2px 2px 0 1px #222;
+    border: 2px solid #222;
+    margin: 2.5rem auto 1rem;
 
     .socials-list {
         margin-top: 2.5rem;
