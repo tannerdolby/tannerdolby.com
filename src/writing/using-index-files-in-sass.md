@@ -5,7 +5,7 @@ datetime: 2021-08-22 00:00:00 Z
 tags:
  - scss
  - css
-preview: With @import at-rules slowly being phased out of the main implementation of Sass (dart-sass) and eventually deprecated, its time to learn how to use @use rules and the neat features that comes along with it.
+preview: With @import at-rules slowly being phased out of the main implementation of Sass (dart-sass) and eventually deprecated, its time to learn how to use @use rules and the neat features that come along with it.
 ---
 
 {{ preview }}

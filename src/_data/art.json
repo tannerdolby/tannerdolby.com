@@ -1,5 +1,17 @@
 [
     {
+        "name": "Purple Cube and Crawly Critter",
+        "url": "https://dribbble.com/shots/16417334-Purple-Cube-and-Crawly-Critter",
+        "id": "purple-cube-and-crawly-critter",
+        "vectornator": true,
+        "aria_label": "Link to illustration of purple cube and crawly critter on dribbble",
+        "image": {
+            "filename": "vectornator-one.jpeg",
+            "fallback_src": "/images/vectornator-one.jpeg",
+            "alt": "Vector illustration of Purple Cube and Crawly Critter created using iPad and Vectornator."
+        }
+    },
+    {
         "name": "Rock Lee",
         "order": 2,
         "url": "https://codepen.io/tannerdolby/full/LYyQvjJ",
@@ -36,6 +48,17 @@
             "filename": "css-truck.png",
             "fallback_src": "/images/css-truck.png",
             "alt": "A 3D CSS Shipping Truck with green loading cubes"
+        }
+    },
+    {
+        "name": "Itachi Uchiha (Whimsical)",
+        "url": "https://codepen.io/tannerdolby/full/ExmRVxM",
+        "id": "itachi-uchiha-whimsical",
+        "aria_label": "Link to CSS illustration of Itachi Uchiha on CodePen",
+        "image": {
+            "filename": "itachi-whimsical.png",
+            "fallback_src": "/images/itachi-whimsical.png",
+            "alt": "CSS illustration of a whimsical Itachi Uchiha from the a anime series Naruto."
         }
     },
     {

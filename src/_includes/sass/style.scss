@@ -40,7 +40,7 @@ img {
 
 p {
     color: $paragraph-text;
-    font-size: 1.175rem;
+    font-size: 1.15rem;
     font-weight: 400;
     line-height: 1.6;
 }
@@ -58,7 +58,7 @@ code {
     font-size: 95%;
     font-weight: 400;
     white-space: pre-wrap;
-    color: #212121;;
+    color: #212121;
     padding: 4px 4px 2px 4px;
     border-radius: 3px;
     margin: 0 .1rem;
@@ -104,7 +104,7 @@ pre {
 }
 
 blockquote {
-    border-left: .35rem solid #f06;
+    border-left: .4rem solid #f06;
     background: $blockquote-gray;
     padding: .2rem 1rem;
 
@@ -152,7 +152,7 @@ h2, .h2 {
 h3, .h3 {
     $min-font-size: 1.35rem;
     $flex-unit: 5vw;
-    $max-font-size: 1.55rem;
+    $max-font-size: 1.485rem;
     font-size: 1.75rem;
     font-size: clamp(#{$min-font-size}, #{$flex-unit}, #{$max-font-size});
     margin-bottom: .5rem;
@@ -293,7 +293,6 @@ textarea {
 
 .error pre[class*=language] {
     code {
-
         background: $error;
         padding: 6px 8px;
     }
@@ -924,13 +923,15 @@ textarea {
         top: 0;
         .nav-menu {
             li {
-                margin-top: .25rem;
-                margin-bottom: .25rem;
+                margin-top: 8px;
+                margin-bottom: 8px;
                 &.stl {
                     margin-right: 2rem;
                 }
                 &:last-child {
                    @include visually-hidden();
+                   width: inherit;
+                   height: inherit;
                 }
             }
         }

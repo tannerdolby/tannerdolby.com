@@ -39,7 +39,6 @@ imgDir: "/images/"
                 {{ content | safe }}
             </header>
             <section class="art">
-           
             {% for drawing in art %}
                 <div class="art-details">
                     <a href="{{ drawing.url }}" aria-label="{{ drawing.aria_label }}">
