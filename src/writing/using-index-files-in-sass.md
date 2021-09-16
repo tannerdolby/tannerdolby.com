@@ -127,7 +127,7 @@ Sometimes you don't want to have a namespace attached to the loaded folder. Sass
 }
 ```
 
-Or completely disregard a namespace by not defining one with `@use "<URL>" as *;`. This makes it so you can reference loaded members without referencing namespace and without using dot notation, just as you would if they were defined in the same file.
+Or completely disregard a namespace by not defining one with `@use "<URL>" as *;`. This makes it so you can reference loaded members without a namespace and without using dot notation, just as you would if they were defined in the same file.
 
 Only do this if you know there won't be any naming conflicts with other loaded members.
 
