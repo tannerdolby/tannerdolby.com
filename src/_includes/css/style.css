@@ -761,7 +761,7 @@ main blockquote {
   text-decoration: underline;
 }
 
-.top-nav .nav-home {
+.top-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -772,7 +772,7 @@ main blockquote {
   max-width: 1200px;
   position: relative;
 }
-.top-nav .nav-home .reach-out {
+.top-nav .reach-out {
   background: #212121;
   color: #fff;
   padding: 11px 10px;
@@ -780,18 +780,18 @@ main blockquote {
   font-size: 1rem;
   white-space: nowrap;
 }
-.top-nav .nav-home .reach-out:hover {
+.top-nav .reach-out:hover {
   background: #111;
   text-decoration: none;
 }
-.top-nav .nav-home .home {
+.top-nav .home {
   font-weight: 500;
   white-space: nowrap;
   font-size: 1.2rem;
   color: #212121;
   text-decoration: none;
 }
-.top-nav .nav-home span {
+.top-nav span {
   background: inherit;
   border: 1.75px solid #212121;
   color: #212121;
@@ -803,7 +803,7 @@ main blockquote {
 }
 
 @media screen and (max-width: 775px) {
-  .top-nav .nav-home {
+  .top-nav {
     margin-top: 2rem;
     flex-direction: column;
   }
@@ -821,8 +821,8 @@ main blockquote {
     position: absolute;
     white-space: nowrap;
     width: 1px;
-    width: inherit;
-    height: inherit;
+    width: 29px;
+    height: 29px;
   }
 }
 .pop-over {
@@ -1937,7 +1937,7 @@ textarea:focus {
     padding-left: 0;
     padding-right: 0;
   }
-  .nav-wrapper .nav-home,
+  .nav-wrapper .top-nav,
 .nav-wrapper .nav-menu {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
@@ -2283,10 +2283,10 @@ textarea:focus {
   }
 }
 @media (max-width: 375px) {
-  .nav-wrapper .nav-home {
+  .nav-wrapper {
     align-items: flex-start;
   }
-  .nav-wrapper .nav-home .reach-out {
+  .nav-wrapper .reach-out {
     padding: 8px 10px;
     margin-top: 1.5rem;
     clip: rect(1px, 1px, 1px, 1px);

@@ -53,7 +53,6 @@
 }
 
 .top-nav {
-    .nav-home {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -95,11 +94,10 @@
             font-weight: 700;
             font-size: 1.0625rem;
         }
-    }
 }
 
 @media screen and (max-width: 775px) {
-    .top-nav .nav-home {
+    .top-nav {
         margin-top: 2rem;
         flex-direction: column;
     }
@@ -108,8 +106,8 @@
         border-bottom: 1px solid lightgray;
         .nav-menu li:last-child {
             @include visually-hidden();
-            width: inherit;
-            height: inherit;
+            width: 29px;
+            height: 29px;
         }
     }
 }
