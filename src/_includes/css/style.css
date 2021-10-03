@@ -67,7 +67,7 @@
 
 #main-contact {
   max-width: 1200px;
-  padding: 0 1.5rem;
+  padding: 0 1.25rem;
   margin: 3rem auto 2rem auto;
   padding-bottom: 1.5rem;
   overflow: hidden;
@@ -125,13 +125,13 @@
   background: inherit;
   color: inherit;
   border-radius: 4px;
-  border: 2px solid #272643;
   border: 2px solid #212a2f;
-  padding: 0.825rem 1.5rem;
-  padding: 0.7rem 1.5rem;
+  padding: 0.7rem 1.275rem;
   white-space: nowrap;
+  box-shadow: 2px 2px 0 0 #212a2f;
   font-weight: 600;
   backface-visibility: hidden;
+  transition: 150ms all ease-in-out;
   -webkit-backface-visibility: hidden;
 }
 .reach-me:hover {
@@ -147,16 +147,16 @@
   -webkit-backface-visibility: hidden;
 }
 .reach-me.submit-contact {
-  background: #1b6ee2;
   background: #1a6bdd;
-  padding: 0.95rem 1.35rem;
-  padding: 0.8rem 1.35rem;
+  padding: 0.75rem 1.35rem;
   border: none;
   color: #fff;
   margin-top: 1.35rem;
   font-weight: 600;
   max-width: fit-content;
   max-width: -moz-fit-content;
+  box-shadow: none;
+  transition: none;
 }
 .reach-me.submit-contact:hover {
   border: none;
@@ -182,7 +182,7 @@
 .contact-wrapper {
   max-width: 80ch;
   border-radius: 8px;
-  padding: 1.75rem 1.5rem;
+  padding: 1.75rem 1.25rem;
   box-shadow: 2px 2px 0 1px #222;
   border: 2px solid #222;
   margin: 2.5rem auto 1rem;
@@ -257,7 +257,7 @@ main .art .art-details .drawing-info {
 .featured-art .feat-art-wrapper {
   padding: 0.5rem 0;
   margin: 0 auto;
-  padding: 1rem 1.5rem;
+  padding: 1rem 1.25rem;
   max-width: 1200px;
 }
 .featured-art .feat-art-list {
@@ -304,7 +304,7 @@ main .art .art-details .drawing-info {
   background: inherit;
   display: grid;
   grid-template-columns: 50% 50%;
-  padding: 1rem 1.5rem;
+  padding: 1rem 1.25rem;
   max-width: 1200px;
   margin: 0.75em auto 1.75rem auto;
   width: 100%;
@@ -434,7 +434,7 @@ main {
 main.a11y-page {
   max-width: 85ch;
   margin: 0 auto 6rem auto;
-  padding: 0 1.5rem;
+  padding: 0 1.25rem;
 }
 main:focus {
   outline: none;
@@ -477,7 +477,7 @@ main blockquote {
   display: flex;
   flex-direction: column;
   margin: 1rem auto;
-  padding: 1rem 1.5rem;
+  padding: 1rem 1.25rem;
 }
 .main-container .projects .project-grid {
   display: grid;
@@ -657,7 +657,7 @@ main blockquote {
   grid-template-columns: repeat(6, 1fr);
   margin: 4rem auto 1rem;
   max-width: 80ch;
-  padding: 0 1.5rem;
+  padding: 0 1.25rem;
 }
 .main-container .wrap .search-result a {
   color: inherit;
@@ -717,25 +717,20 @@ main blockquote {
 }
 
 .nav-wrapper {
-  padding: 0.75rem 1.5rem 0.5rem;
-  margin: 0 auto 0 auto;
+  padding: 0.75rem 1.25rem 0.5rem;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   flex-direction: column;
-  border-bottom: 1px solid lightgray;
   overflow: hidden;
-  width: 100%;
-  z-index: 9999;
+  z-index: 999;
 }
 .nav-wrapper .nav-menu {
   list-style: none;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin: 0.6rem auto 0 auto;
-  padding: 6px 1.5rem 5px;
-  width: 100%;
+  margin: 0 auto 0 auto;
   position: relative;
   overflow: hidden;
   max-width: 1200px;
@@ -746,16 +741,18 @@ main blockquote {
 .nav-wrapper .nav-menu li:last-child {
   position: relative;
   right: 0;
-  margin-left: auto;
   height: 29px;
+  margin-left: 1rem;
 }
 .nav-wrapper .nav-menu li a {
   color: #212121;
-  padding: 0.5rem 0;
-  margin: 0 1.7rem;
+  padding: 0.6rem 0;
+  margin: 0 1.75rem;
   font-size: 1.0625rem;
   text-decoration: none;
+  border-radius: 3px;
   font-weight: 500;
+  display: block;
 }
 .nav-wrapper .nav-menu li a:first-child {
   margin-left: 0;
@@ -769,8 +766,8 @@ main blockquote {
   justify-content: space-between;
   align-items: center;
   list-style: none;
-  padding: 0 1.5rem;
-  margin: 2rem auto 1.25rem auto;
+  padding: 0 1.25rem;
+  margin: 1.25rem auto 1.25rem auto;
   width: 100%;
   max-width: 1200px;
   position: relative;
@@ -789,22 +786,45 @@ main blockquote {
 }
 .top-nav .nav-home .home {
   font-weight: 500;
-  font-size: 1.15rem;
+  white-space: nowrap;
   font-size: 1.2rem;
   color: #212121;
   text-decoration: none;
 }
 .top-nav .nav-home span {
   background: inherit;
-  border: 0.12rem solid #212121;
+  border: 1.75px solid #212121;
   color: #212121;
-  border-radius: 0;
+  border-radius: 1px;
   padding: 0.5rem;
   margin-right: 0.75rem;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.0625rem;
 }
 
+@media screen and (max-width: 775px) {
+  .top-nav .nav-home {
+    margin-top: 2rem;
+    flex-direction: column;
+  }
+
+  .nav-wrapper {
+    margin-top: 1.5rem;
+    border-bottom: 1px solid lightgray;
+  }
+  .nav-wrapper .nav-menu li:last-child {
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(1px);
+    display: block;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    width: inherit;
+    height: inherit;
+  }
+}
 .pop-over {
   position: relative;
   top: 0;
@@ -946,7 +966,7 @@ main .post h3 {
 
 .recent-posts {
   margin: 2.5rem auto 2rem;
-  padding: 0.25rem 1.5rem;
+  padding: 0.25rem 1.25rem;
   grid-column: 1/5;
   grid-row: 1/7;
 }
@@ -1035,7 +1055,7 @@ main .post h3 {
   display: grid;
   grid-template-columns: 18% 82%;
   gap: 0px;
-  padding: 0 1.5rem;
+  padding: 0 1.25rem;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 6rem;
@@ -1540,9 +1560,46 @@ textarea:focus {
   margin: 0 auto;
   border-radius: 5px;
   border-radius: 0;
-  padding: 0 1.5rem;
+  padding: 0 1.25rem;
   overflow: hidden;
   max-width: 1200px;
+}
+
+.pg-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 0 2rem;
+}
+
+.camera-block,
+.lens-block {
+  border: 2px solid #212a2f;
+  margin: 1rem 0;
+  height: 100%;
+  width: 100%;
+}
+.camera-block h4,
+.lens-block h4 {
+  background: #000;
+  color: #fff;
+  display: block;
+  width: 100%;
+  padding: 4px 8px;
+}
+.camera-block p,
+.lens-block p {
+  padding: 0 0.85rem;
+}
+.camera-block p span,
+.lens-block p span {
+  margin-right: 1rem;
+  font-size: 1.4rem;
+  vertical-align: baseline;
+}
+
+.camera-block {
+  margin-right: 1.5rem;
 }
 
 .about-main {
@@ -1626,7 +1683,7 @@ textarea:focus {
 #main-about {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  padding-left: 1.5rem;
+  padding-left: 1.25rem;
 }
 #main-about .right-sidebar {
   grid-column: 5/7;
@@ -1882,8 +1939,8 @@ textarea:focus {
   }
   .nav-wrapper .nav-home,
 .nav-wrapper .nav-menu {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
 }
 @media screen and (max-width: 1155px) {
@@ -1975,7 +2032,7 @@ textarea:focus {
 
   #main-about {
     margin-left: 0;
-    padding-right: 1.5rem;
+    padding-right: 1.25rem;
   }
   #main-about section {
     max-width: 100%;
@@ -2088,7 +2145,7 @@ textarea:focus {
   }
 
   #main-about {
-    padding-right: 1.5rem;
+    padding-right: 1.25rem;
   }
 }
 @media screen and (max-width: 847px) {
@@ -2153,16 +2210,6 @@ textarea:focus {
   }
 }
 @media (max-width: 670px) {
-  .top-nav .nav-wrapper {
-    padding-top: 1rem;
-    padding-bottom: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    overflow-x: auto;
-  }
-
   .hero-section {
     margin-top: 0;
   }
@@ -2193,22 +2240,6 @@ textarea:focus {
   }
   .nav-wrapper .nav-menu li {
     margin-top: 8px;
-    margin-bottom: 8px;
-  }
-  .nav-wrapper .nav-menu li.stl {
-    margin-right: 2rem;
-  }
-  .nav-wrapper .nav-menu li:last-child {
-    clip: rect(1px, 1px, 1px, 1px);
-    clip-path: inset(1px);
-    display: block;
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-    width: inherit;
-    height: inherit;
   }
 }
 @media (max-width: 450px) {

@@ -230,9 +230,44 @@ textarea {
     margin: 0 auto;
     border-radius: 5px;
     border-radius: 0;
-    padding: 0 1.5rem;
+    padding: 0 1.25rem;
     overflow: hidden;
     max-width: 1200px;
+}
+
+.pg-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0 2rem;
+}
+
+.camera-block,
+.lens-block {
+    border: 2px solid #212a2f;
+    margin: 1rem 0;
+    height: 100%;
+    width: 100%;
+    h4 {
+        background: #000;
+        color: #fff;
+        display: block;
+        width: 100%;
+        padding: 4px 8px;
+    }
+    p {
+        padding: 0 .85rem;
+
+        span {
+            margin-right: 1rem;
+            font-size: 1.4rem;
+            vertical-align: baseline;
+        }
+    }
+}
+
+.camera-block {
+    margin-right: 1.5rem;
 }
 
 .about-main {
@@ -320,7 +355,7 @@ textarea {
 #main-about {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    padding-left: 1.5rem;
+    padding-left: 1.25rem;
 
     .right-sidebar {
         grid-column: 5 / 7;
@@ -584,8 +619,8 @@ textarea {
 
         .nav-home,
         .nav-menu {
-            padding-left: 1.5rem;
-            padding-right: 1.5rem;
+            padding-left: 1.25rem;
+            padding-right: 1.25rem;
         }
     }
 }
@@ -674,7 +709,7 @@ textarea {
     }
     #main-about {
         margin-left: 0;
-        padding-right: 1.5rem;
+        padding-right: 1.25rem;
         section {
             max-width: 100%;
         }
@@ -788,7 +823,7 @@ textarea {
     }
 
     #main-about {
-        padding-right: 1.5rem;
+        padding-right: 1.25rem;
     }
 }
 
@@ -870,17 +905,6 @@ textarea {
 }
 
 @media (max-width: 670px) {
-    .top-nav {
-        .nav-wrapper {
-            padding-top: 1rem;
-            padding-bottom: .5rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: flex-start;
-            overflow-x: auto;
-        }
-    }
 
     .hero-section {
         margin-top: 0;
@@ -924,15 +948,7 @@ textarea {
         .nav-menu {
             li {
                 margin-top: 8px;
-                margin-bottom: 8px;
-                &.stl {
-                    margin-right: 2rem;
-                }
-                &:last-child {
-                   @include visually-hidden();
-                   width: inherit;
-                   height: inherit;
-                }
+                // margin-bottom: 8px;
             }
         }
     }

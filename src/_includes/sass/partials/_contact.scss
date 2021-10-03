@@ -1,6 +1,6 @@
 #main-contact {
     max-width: 1200px;
-    padding: 0 1.5rem;
+    padding: 0 1.25rem;
     margin: 3rem auto 2rem auto;
     padding-bottom: 1.5rem;
     overflow: hidden;
@@ -67,13 +67,13 @@
         background: inherit;
         color: inherit;
         border-radius: 4px;
-        border: 2px solid #272643;
         border: 2px solid rgb(33, 42, 47);
-        padding: .825rem 1.5rem;
-        padding: .7rem 1.5rem;
+        padding: .7rem 1.275rem;
         white-space: nowrap;
+        box-shadow: 2px 2px 0 0 rgb(33, 42, 47);
         font-weight: 600;
         backface-visibility: hidden;
+        transition: 150ms all ease-in-out;
         -webkit-backface-visibility: hidden;
     }
 
@@ -90,16 +90,16 @@
         -webkit-backface-visibility: hidden;
     }
     &.submit-contact {
-        background: rgb(27, 110, 226);
         background: rgb(26, 107, 221);
-        padding: .95rem 1.35rem;
-        padding: .8rem 1.35rem;
+        padding: .75rem 1.35rem;
         border: none;
         color: #fff;
         margin-top: 1.35rem;
         font-weight: 600;
         max-width: fit-content;
         max-width: -moz-fit-content;
+        box-shadow: none;
+        transition: none;
 
         &:hover {
             border: none;
@@ -127,7 +127,7 @@
 .contact-wrapper {
     max-width: 80ch;
     border-radius: 8px;
-    padding: 1.75rem 1.5rem;
+    padding: 1.75rem 1.25rem;
     box-shadow: 2px 2px 0 1px #222;
     border: 2px solid #222;
     margin: 2.5rem auto 1rem;

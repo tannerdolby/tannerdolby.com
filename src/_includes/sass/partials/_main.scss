@@ -7,7 +7,7 @@ main {
     &.a11y-page {
         max-width: 85ch; 
         margin: 0 auto 6rem auto; 
-        padding: 0 1.5rem;
+        padding: 0 1.25rem;
     }
 
     /* Address this - TODO */
@@ -60,7 +60,7 @@ main {
             display: flex;
             flex-direction: column;
             margin: 1rem auto;
-            padding: 1rem 1.5rem;
+            padding: 1rem 1.25rem;
         }
 
         .project-grid {
@@ -277,7 +277,7 @@ main {
         grid-template-columns: repeat(6, 1fr);
         margin: 4rem auto 1rem;
         max-width: 80ch;
-        padding: 0 1.5rem;
+        padding: 0 1.25rem;
     
         .search-result {
             a {

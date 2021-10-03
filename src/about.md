@@ -9,17 +9,34 @@ headshot:
 layout: about.njk
 ---
 
-Hi there! My name is Tanner Dolby. I'm a Software Engineer and Mathematician based in Roseville, CA. I enjoy working with HTML, CSS, JavaScript, Node, React, Python, Java, C++ and Eleventy. I started programming and learning web development using [freeCodeCamp.org](https://freecodecamp.org) in 2017. Ever since then, I've been hooked on writing code and building things for the web.
+Hi there! My name is Tanner Dolby. I'm a Software Engineer and Mathematician currently based in California. I enjoy working with HTML, CSS, JavaScript, Node, React, Python, Java, C++ and Eleventy. I started programming and learning web development using [freeCodeCamp.org](https://freecodecamp.org) in 2017. Ever since then, I've been hooked on writing code and building things for the web.
 
 I focus on building responsive and fast websites. I spend most of my free time contributing to open source, learning new things, creating illustrations, building side projects, running, and making front-end demos on [CodePen](https://codepen.io/tannerdolby). With the JAMstack movement on the rise, I've taken an interest in Static Site Generators (SSG). In particular [Eleventy](https://11ty.dev), which this website is built with.
 
-<h2>Interests</h2>
+## Interests
 
-I like to write about technology and web development. I'm currently fixated on learning more about Python, C++, and Web performance. If you want to see me write about a specific topic or concept, feel free to message me about it. Lately, I've been interested in creating illustrations using [Vectornator](https://www.vectornator.io/). I may write about these hobbies in future posts.
+I like to write about technology and web development. I'm currently fixated on learning more about Python, C++, and Web performance. If you would like to see me write about a specific topic or concept, feel free to message me on Twitter about it. Lately, I've been interested in creating illustrations using [Vectornator](https://www.vectornator.io/). I enjoy writing documentation (and referencing it) so when I'm learning new things, I tend to take notes and write a blog post or something to document what I had learned. 
 
-When I'm not on the computer, you can find me creating illustrations on my iPad, reading, running, traveling, skateboarding and trying to become a better photographer.
+When I'm not on the computer, you can find me creating illustrations on my iPad, reading, running, skateboarding, finding the best slice of pizza, and trying to become a better photographer.
+
+### Photography
+
+I'm currently using a Sony A7s II camera with a Sony FE 50mm lens. This is my first real deal camera with all the bells and whistles so I'm still trying to figure out how exactly to use it. Once I do, the photos taken will be added to a gallery here on my website to document my journey as a photographer.
+
+<div class="pg-row">
+    <div class="camera-block">
+        <h4>My Specs</h4>
+        <p><span>📸</span> Camera: Sony A7s II</p>
+        <p><span>🔍</span> Lens: Sony FE 50mm F1.8</p>
+    </div>
+    <!-- <div class="lens-block">
+        <h4>Lens</h4>
+        <p>Sony FE 50mm F1.8</p>
+    </div> -->
+</div>
 
 ## Education
+
 I received my Bachelor of Science in Applied Mathematics from Arizona State University on May 11, 2020. Due to a [global pandemic](https://www.cdc.gov/coronavirus/2019-ncov/index.html), the university didn't conduct an in-person commencement ceremenony. Feel free to take a look at the [virtual ceremonies](https://vgradasu.z4.web.core.windows.net/asu/III/#811351). 
 
 During my time at ASU, I worked as an Undergraduate Researcher and Supplemental Instruction leader for Differential Equations. My passion for mathematics and computing became most apparent to me after completing discrete math and linear algebra. At the moment, I don't have plans for attending grad school but I'm interested in pursuing a graduate degree in Computer Science at some point.

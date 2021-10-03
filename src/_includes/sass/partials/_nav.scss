@@ -1,23 +1,20 @@
+@use "../mixins" as *;
+
 .nav-wrapper {
-    padding: .75rem 1.5rem .5rem;
-    margin: 0 auto 0 auto;
+    padding: .75rem 1.25rem .5rem;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     flex-direction: column;
-    border-bottom: 1px solid lightgray;
     overflow: hidden;
-    width: 100%;
-    z-index: 9999;
+    z-index: 999;
 
     .nav-menu {
         list-style: none;
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        margin: .6rem auto 0 auto;
-        padding: 6px 1.5rem 5px;
-        width: 100%;
+        margin: 0 auto 0 auto;
         position: relative;
         overflow: hidden;
         max-width: 1200px;
@@ -29,16 +26,20 @@
             &:last-child {
                 position: relative;
                 right: 0;
-                margin-left: auto;
                 height: 29px;
+                margin-left: 1rem;
+                // width: 29px;
             }
             a {
                 color: #212121;
-                padding: .5rem 0;
-                margin: 0 1.7rem;
+                padding: .6rem 0;
+                margin: 0 1.75rem;
                 font-size: 1.0625rem;
                 text-decoration: none;
+                border-radius: 3px;
                 font-weight: 500;
+                display: block;
+
                 &:first-child {
                     margin-left: 0;
                 }
@@ -57,8 +58,8 @@
         justify-content: space-between;
         align-items: center;
         list-style: none;
-        padding: 0 1.5rem;
-        margin: 2rem auto 1.25rem auto;
+        padding: 0 1.25rem;
+        margin: 1.25rem auto 1.25rem auto;
         width: 100%;
         max-width: 1200px;
         position: relative;
@@ -78,7 +79,7 @@
 
         .home {
             font-weight: 500;
-            font-size: 1.15rem;
+            white-space: nowrap;
             font-size: 1.2rem;
             color: #212121;
             text-decoration: none;
@@ -86,13 +87,30 @@
 
         span {
             background: inherit;
-            border: .12rem solid #212121;
+            border: 1.75px solid #212121;
             color: #212121;
-            border-radius: 0;
+            border-radius: 1px;
             padding: .5rem;
             margin-right: .75rem;
             font-weight: 700;
-            font-size: 1rem;
+            font-size: 1.0625rem;
         }
     }
 }
+
+@media screen and (max-width: 775px) {
+    .top-nav .nav-home {
+        margin-top: 2rem;
+        flex-direction: column;
+    }
+    .nav-wrapper {
+        margin-top: 1.5rem;
+        border-bottom: 1px solid lightgray;
+        .nav-menu li:last-child {
+            @include visually-hidden();
+            width: inherit;
+            height: inherit;
+        }
+    }
+}
+
