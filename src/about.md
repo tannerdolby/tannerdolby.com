@@ -25,7 +25,7 @@ I'm currently using a Sony A7s II camera with a Sony FE 50mm lens. This is my fi
 
 <div class="pg-row">
     <div class="camera-block">
-        <h4>My Specs</h4>
+        <h4>Specifications</h4>
         <p><span>📸</span> Camera: Sony A7s II</p>
         <p><span>🔍</span> Lens: Sony FE 50mm F1.8</p>
     </div>
