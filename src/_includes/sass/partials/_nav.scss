@@ -106,8 +106,8 @@
         border-bottom: 1px solid lightgray;
         .nav-menu li:last-child {
             @include visually-hidden();
-            width: 29px;
-            height: 29px;
+            width: 100%;
+            height: 100%;
         }
     }
 }
