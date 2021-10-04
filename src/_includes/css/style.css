@@ -265,6 +265,8 @@ main .art .art-details .drawing-info {
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(6, minmax(2rem, auto));
   margin: 2.5rem auto 0 auto;
+  padding-left: 0;
+  list-style: none;
   gap: 10px;
 }
 .featured-art .feat-art-list li {
@@ -718,21 +720,14 @@ main blockquote {
 
 .nav-wrapper {
   padding: 0.75rem 1.25rem 0.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-direction: column;
-  overflow: hidden;
-  z-index: 999;
 }
 .nav-wrapper .nav-menu {
   list-style: none;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin: 0 auto 0 auto;
-  position: relative;
-  overflow: hidden;
+  margin: 0 auto;
+  padding-left: 0;
   max-width: 1200px;
 }
 .nav-wrapper .nav-menu li.stl {
@@ -746,13 +741,11 @@ main blockquote {
 }
 .nav-wrapper .nav-menu li a {
   color: #212121;
-  padding: 0.6rem 0;
+  padding: 4px 0;
   margin: 0 1.75rem;
   font-size: 1.0625rem;
   text-decoration: none;
-  border-radius: 3px;
   font-weight: 500;
-  display: block;
 }
 .nav-wrapper .nav-menu li a:first-child {
   margin-left: 0;
@@ -770,7 +763,6 @@ main blockquote {
   margin: 1.25rem auto 1.25rem auto;
   width: 100%;
   max-width: 1200px;
-  position: relative;
 }
 .top-nav .reach-out {
   background: #212121;
@@ -803,16 +795,14 @@ main blockquote {
 }
 
 @media screen and (max-width: 775px) {
-  .top-nav {
-    margin-top: 2rem;
-    flex-direction: column;
+  *,
+*::before,
+*::after {
+    -webkit-transform-style: flat !important;
+    transform-style: flat !important;
   }
 
-  .nav-wrapper {
-    margin-top: 1.5rem;
-    border-bottom: 1px solid lightgray;
-  }
-  .nav-wrapper .nav-menu li:last-child {
+  .cube {
     clip: rect(1px, 1px, 1px, 1px);
     clip-path: inset(1px);
     display: block;
@@ -821,8 +811,49 @@ main blockquote {
     position: absolute;
     white-space: nowrap;
     width: 1px;
-    width: 29px;
-    height: 29px;
+  }
+
+  .top-nav {
+    margin-top: 2rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .welcome-container {
+    margin-bottom: 0 !important;
+  }
+
+  .main-container .hero-section {
+    border-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .nav-wrapper {
+    margin-top: 2.25rem;
+    border-bottom: 1px solid lightgray;
+    width: 100%;
+    padding-bottom: 0;
+  }
+  .nav-wrapper .nav-menu {
+    padding-left: 8px;
+  }
+  .nav-wrapper .nav-menu li a {
+    padding-bottom: 10px;
+    padding-right: 3px;
+    padding-left: 3px;
+    display: block;
+    border-bottom: 2.5px solid transparent;
+  }
+  .nav-wrapper .nav-menu li a:hover {
+    text-decoration: none;
+    color: #333;
+    border-radius: 50% 50%/0% 0% 0 0;
+    border-bottom: 2.5px solid #000;
+  }
+  .nav-wrapper .nav-menu li:last-child {
+    position: absolute;
+    top: 1.75rem;
+    right: 1.5rem;
   }
 }
 .pop-over {
@@ -1937,11 +1968,6 @@ textarea:focus {
     padding-left: 0;
     padding-right: 0;
   }
-  .nav-wrapper .top-nav,
-.nav-wrapper .nav-menu {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
 }
 @media screen and (max-width: 1155px) {
   .hero-section {
@@ -2235,7 +2261,6 @@ textarea:focus {
 }
 @media (max-width: 480px) {
   .nav-wrapper {
-    position: static;
     top: 0;
   }
   .nav-wrapper .nav-menu li {

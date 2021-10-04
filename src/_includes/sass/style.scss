@@ -616,12 +616,6 @@ textarea {
     .nav-wrapper {
         padding-left: 0;
         padding-right: 0;
-
-        .top-nav,
-        .nav-menu {
-            padding-left: 1.25rem;
-            padding-right: 1.25rem;
-        }
     }
 }
 
@@ -943,12 +937,10 @@ textarea {
 
 @media (max-width: 480px) {
     .nav-wrapper {
-        position: static;
         top: 0;
         .nav-menu {
             li {
                 margin-top: 8px;
-                // margin-bottom: 8px;
             }
         }
     }

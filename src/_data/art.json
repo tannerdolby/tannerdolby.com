@@ -1,5 +1,18 @@
 [
     {
+        "name": "Single div CSS Pumpkin",
+        "url": "https://codepen.io/tannerdolby/full/jOwomNZ",
+        "id": "single-div-css-pumpkin",
+        "vectornator": false,
+        "order": 4,
+        "aria_label": "Link to illustration of single div CSS pumpkin on CodePen",
+        "image": {
+            "filename": "single-div-pumpkin.png",
+            "fallback_src": "/images/single-div-pumpkin.png",
+            "alt": "Single div CSS drawing of a Pumpkin"
+        }
+    },
+    {
         "name": "Purple Cube and Crawly Critter",
         "url": "https://dribbble.com/shots/16417334-Purple-Cube-and-Crawly-Critter",
         "id": "purple-cube-and-crawly-critter",
@@ -40,10 +53,10 @@
     {
         "name": "3D CSS Shipping Truck",
         "recent": true,
-        "order": 3,
         "id": "css-shipping-truck",
         "aria_label": "Link to CSS shipping truck on CodePen",
         "url": "https://codepen.io/tannerdolby/full/RwKybqL",
+        "order": 3,
         "image": {
             "filename": "css-truck.png",
             "fallback_src": "/images/css-truck.png",
@@ -68,7 +81,6 @@
         "id": "window-nighttime",
         "url": "https://codepen.io/tannerdolby/full/ZEWKEvR",
         "date_created": "August 26, 2020",
-        "order": 3,
         "recent": true,
         "credit": "https://dribbble.com/shots/11283947-Taking-it-slow",
         "image": {

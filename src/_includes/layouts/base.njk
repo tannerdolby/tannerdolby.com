@@ -67,7 +67,8 @@ images:
             <section class="featured-art" id="feat-art">
                 <div class="feat-art-wrapper">
                     <h2>Latest Art</h2>
-                    <ul class="feat-art-list" style="padding-left: 0; list-style: none;">
+                    <ul class="feat-art-list">
+                        <!-- Todo: Fix sortRecent(arr) usage in .eleventy.js -->
                         {% for drawing in art | sortRecent(art) %}
                             <li>
                                 <a href="/art/#{{ drawing.id }}" aria-label="{{ drawing.name }}">

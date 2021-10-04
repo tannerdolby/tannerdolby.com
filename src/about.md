@@ -29,11 +29,13 @@ I'm currently using a Sony A7s II camera with a Sony FE 50mm lens. This is my fi
         <p><span>📸</span> Camera: Sony A7s II</p>
         <p><span>🔍</span> Lens: Sony FE 50mm F1.8</p>
     </div>
-    <!-- <div class="lens-block">
-        <h4>Lens</h4>
-        <p>Sony FE 50mm F1.8</p>
-    </div> -->
 </div>
+
+### Good Reads
+
+Introduction to Algorithms by Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein.
+
+Cracking the Coding Interview by Gayle Laakmann McDowell.
 
 ## Education
 
@@ -45,7 +47,7 @@ During my time at ASU, I worked as an Undergraduate Researcher and Supplemental 
 
 ## Need More?
 
-I'm available for all things software related: web development, technical writing, static sites, JAMstack, accessibility, illustration and more. Have a look at my [resume](/resume/resume.pdf) and feel free to [contact me](/contact/) if you'd like to chat!
+I'm interested in all things software related: operating systems, web development, technical writing, static sites, JAMstack, accessibility, illustration and more. Have a look at my [resume](/resume/resume.pdf) and feel free to [contact me](/contact/) if you'd like to chat!
 
 <div class="social-icons">
 {% for icon in socials %}
