@@ -96,7 +96,7 @@
         @include visually-hidden();
     }
     .top-nav {
-        margin-top: 2rem;
+        margin-top: 1.5rem;
         flex-direction: column;
         align-items: flex-start;
     }
@@ -121,8 +121,6 @@
             li {
                 a {
                     padding-bottom: 10px;
-                    padding-right: 3px;
-                    padding-left: 3px;
                     display: block;
                     border-bottom: 2.5px solid transparent;
                     &:hover {
@@ -134,6 +132,7 @@
                 }
                 &:last-child {
                     position: absolute;
+                    margin-top: 0;
                     top: 1.75rem;
                     right: 1.5rem;
                 }

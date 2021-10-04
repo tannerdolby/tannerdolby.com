@@ -46,6 +46,8 @@ main {
         grid-template-columns: repeat(7, 1fr);
         grid-template-rows: repeat(6, minmax(2rem, auto));
         margin: 2.5rem auto 0 auto;
+        padding-left: 0; 
+        list-style: none;
         gap: 10px;
 
         li {
