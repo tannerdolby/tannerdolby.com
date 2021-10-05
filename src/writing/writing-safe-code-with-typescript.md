@@ -5,7 +5,7 @@ datetime: 2021-07-30 00:00:00 Z
 tags:
  - typescript
  - javascript
-preview: "In general, its usually best to define a type annotation or let TS infer the variables type for you through type inference."
+preview: "It is usually best to define a type annotation or let TypeScript infer the variables type for you through type inference rather than using type 'any'."
 ---
 
 {{ preview }} Otherwise, if your unsure what the data type will be for a value ahead of time, this is where [type inference][1] is quite nice.
