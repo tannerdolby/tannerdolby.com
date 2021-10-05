@@ -48,7 +48,7 @@
         align-items: center;
         list-style: none;
         padding: 0 1.25rem;
-        margin: 1.25rem auto 1.25rem auto;
+        margin: 2rem auto 1.25rem auto;
         width: 100%;
         max-width: 1200px;
 
@@ -96,9 +96,15 @@
         @include visually-hidden();
     }
     .top-nav {
-        margin-top: 1.5rem;
+        margin-top: 2.6rem;
         flex-direction: column;
         align-items: flex-start;
+        padding-left: 0;
+        padding-right: 0;
+
+        .home {
+            padding-left: 1.25rem;
+        }
     }
     .welcome-container {
         margin-bottom: 0 !important;
@@ -117,6 +123,8 @@
 
         .nav-menu {
             padding-left: 8px;
+            padding-right: 1.25rem;
+            padding-left: 1.25rem;
 
             li {
                 a {
@@ -124,16 +132,13 @@
                     display: block;
                     border-bottom: 2.5px solid transparent;
                     &:hover {
-                        text-decoration: none;
-                        color: #333;
-                        border-radius: 50% 50% / 0% 0% 0 0;
-                        border-bottom: 2.5px solid #000;
+                        text-decoration: underline;
                     }
                 }
                 &:last-child {
                     position: absolute;
                     margin-top: 0;
-                    top: 1.75rem;
+                    top: 2.6rem;
                     right: 1.5rem;
                 }
             }
