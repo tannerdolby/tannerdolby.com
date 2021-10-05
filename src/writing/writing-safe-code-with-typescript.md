@@ -10,7 +10,7 @@ preview: "There are some situations when using type 'any' can be useful. But usu
 
 {{ preview }} Try using type annotations or ff your not sure what the data type will be for a value ahead of time, let TypeScript infer the type through [Type Inference][1].
 
-> What can I replace 'any' with while declaring an object type in Typescript? [StackOverflow](https://stackoverflow.com/questions/66594670/what-can-i-replace-any-with-while-declaring-an-object-type-in-typescript/66595023#66595023)
+> What can I replace 'any' with while declaring an object type in Typescript? [StackOverflow][2]
 
 
 <h2 class="post-heading">When in doubt, don't reach for any</h2>
@@ -22,7 +22,7 @@ Type inference is a great feature of TypeScript, but its also perfectly fine to 
 - boolean
 - symbol
 
-If you can't use one of the primitive types, then its time to define some [object types](https://www.typescriptlang.org/docs/handbook/2/objects.html) with an interface, a `type` or [generics](https://www.typescriptlang.org/docs/handbook/2/generics.html) to better let TypeScript understand the "allowed" values for a certain variable, function etc.
+If you can't use one of the primitive types, then its time to define some [object types][3] with an interface, a `type` or [generics][4] to better let TypeScript understand the "allowed" values for a certain variable, function etc.
 
 <h2 class="post-heading">Do's and Dont's</h2>
 
@@ -121,8 +121,11 @@ const objArr: MyObj[] = [
 
 <h2 class="post-heading">Closing thoughts</h2>
 
-I usually tend to define an interface or `type` annotation anytime there is a variable or function that requires explicit type definitions which cannot be made from the primitive data types. Another option outside of interfaces, is using generics. If you programmed in Java, you might be familiar with generics. They are super powerful and really help us to write safe code. If you want to read more about using Generic Types, head over to the generics [documentation](https://www.typescriptlang.org/docs/handbook/2/generics.html). 
+I usually tend to define an interface or `type` annotation anytime there is a variable or function that requires explicit type definitions which cannot be made from the primitive data types. Another option outside of interfaces, is using generics. If you programmed in Java, you might be familiar with generics. They are super powerful and really help us to write safe code. If you want to read more about using Generic Types, head over to the generics [documentation][4]. 
 
 If anything were to stick with you from this article, I hope that it will be: Please don't use type `any` in TypeScript unless its absolutely required (which doesn't happen that often). I like to say, when in doubt, try not to reach for `any` but instead define an interface so TypeScript better understands what types to expect. Generics are also a great option!
 
 [1]: https://www.typescriptlang.org/docs/handbook/type-inference.html
+[2]: https://stackoverflow.com/questions/66594670/what-can-i-replace-any-with-while-declaring-an-object-type-in-typescript/66595023#66595023
+[3]: https://www.typescriptlang.org/docs/handbook/2/objects.html
+[4]: https://www.typescriptlang.org/docs/handbook/2/generics.html
