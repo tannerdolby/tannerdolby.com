@@ -5,10 +5,10 @@ datetime: 2021-07-30 00:00:00 Z
 tags:
  - typescript
  - javascript
-preview: "There are some situations when using type 'any' can be useful. But usually its best to define a type annotation or let TypeScript infer the variables type for you through type inference."
+preview: "In TypeScript, its usually best to define a type annotation or let TypeScript infer the variables type for you through type inference."
 ---
 
-{{ preview }} If your unsure what the data type will be for a value ahead of time, I'd recommend letting TypeScript infer the type with [Type Inference][1] or use a type annotation.
+{{ preview }} Otherwise, if your unsure what the data type will be for a value ahead of time, this is where [type inference][1] is quite nice.
 
 > What can I replace 'any' with while declaring an object type in Typescript? [StackOverflow][2]
 
