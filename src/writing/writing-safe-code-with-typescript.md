@@ -5,10 +5,12 @@ datetime: 2021-07-30 00:00:00 Z
 tags:
  - typescript
  - javascript
-preview: "It is usually best to define a type annotation or let TypeScript infer the variables type for you through type inference rather than using type 'any'."
+preview: "The 'any' type isn't something I use very often in my own development. But I have seen it occasionally used out in the wild."
 ---
 
-{{ preview }} Otherwise, if your unsure what the data type will be for a value ahead of time, this is where [type inference][1] is quite nice.
+{{ preview }} A good rule is, if your unsure of a data type for a variable, its best to let TypeScript infer the variables type for you through [type inference][type inference] rather than using type `any`. Only resort to using `any` if you absolutely have to.
+
+When you can, try using a type annotation to explicitly tell the compiler what data type to expect. But when your unsure what the data type will be ahead of time, this is where type inference is quite nice.
 
 > What can I replace 'any' with while declaring an object type in Typescript? [StackOverflow][2]
 
@@ -28,6 +30,8 @@ If you can't use one of the primitive types, then its time to define some [objec
 Hopefully its clear that using the `any` type in TypeScript sort of defeats the purpose of writing TS code in the first place. When we use `any`, the TypeScript compiler allows for the type to literally be any data type, which is not "safe" and can lead to unexpected values if you aren't careful. The idea of TypeScript is to provide "strictly-typed" JS code so that its durable and safer than plain ole JS which is "loosely-typed".
 
 A few examples of writing type annotations with the primitive types:
+
+{% filename "types.ts" %}
 
 ```ts
 const s: string = "Yo";
@@ -65,6 +69,8 @@ const obj: any = {
 ```
 
 Using `any` to define the object type for this `obj` variable is just downright bad practice (unless you need it to not have any type checks, which may sometimes happen). If were going to loosely type an object like this, there really isn't a point in writing it in TypeScript to begin with. Now lets fix this by getting rid of the `any` type and define a more appropriate object type using an interface. This will make our code much safer as TypeScript knows what data types each value is "allowed" and the compile-time checks will be much stricter.
+
+{% filename "types.ts" %}
 
 ```ts
 interface MyObj {
@@ -124,7 +130,7 @@ I usually tend to define an interface or `type` annotation anytime there is a va
 
 If anything were to stick with you from this article, I hope that it will be: Please don't use type `any` in TypeScript unless its absolutely required (which doesn't happen that often). I like to say, when in doubt, try not to reach for `any` but instead define an interface so TypeScript better understands what types to expect. Generics are also a great option!
 
-[1]: https://www.typescriptlang.org/docs/handbook/type-inference.html
+[type inference]: https://www.typescriptlang.org/docs/handbook/type-inference.html
 [2]: https://stackoverflow.com/questions/66594670/what-can-i-replace-any-with-while-declaring-an-object-type-in-typescript/66595023#66595023
 [3]: https://www.typescriptlang.org/docs/handbook/2/objects.html
 [4]: https://www.typescriptlang.org/docs/handbook/2/generics.html							
