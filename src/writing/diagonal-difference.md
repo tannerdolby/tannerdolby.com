@@ -140,7 +140,7 @@ Although the code in the TypeScript section is much safer and more sturdy, here 
 ```js
 function diagonalDiff(arr) {
     const n = arr.length;
-    let { left, right, diff } = {
+    let data = {
       left: {
         list: [],
         sum: 0
@@ -160,14 +160,14 @@ function diagonalDiff(arr) {
         if (arr[i].length > arr.length) {
             throw new Error("Function argument is not a square matrix");
         }
-        left.list.push(arr[i][j]);
-        right.list.push(arr[i][k]);
+        data.left.list.push(arr[i][j]);
+        data.right.list.push(arr[i][k]);
     }
 
-    left.sum = left.list.reduce((a, b) => a + b);
-    right.sum = right.list.reduce((a, b) => a + b);
+    data.left.sum = data.left.list.reduce((a, b) => a + b);
+    data.right.sum = data.right.list.reduce((a, b) => a + b);
     
-    diff = Math.abs(left.sum - right.sum);
+    data.diff = Math.abs(data.left.sum - data.right.sum);
     return diff;
 }
 ```
@@ -202,18 +202,14 @@ interface Diagonals {
 }
 ```
 
-On a side note, I'm using [destructuring assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) and specifically [object destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring) so I don't have to write `diagonals.someProp` a bunch (I know this is lazy, but for the current use case, I don't need access to the entire object just certain properties)
+With the `Diagonals` interface defined, we can use it as a type annotation for the `data` variable below:
 
 {% filename "diagonal-diff.ts" %}
 
 ```ts
 function diagonalDiff(arr): number {
     const n: number = arr.length;
-    let { left, right, diff }: {
-      left: Diagonals.left,
-      right: Diagonals.right,
-      diff: Diagonals.diff
-    } = {
+    let data: Diagonals = {
       left: {
         list: [],
         sum: 0
@@ -234,16 +230,16 @@ function diagonalDiff(arr): number {
             throw new Error("Function argument is not a square matrix");
         }
         // populate object properties with data
-        left.list.push(arr[i][j]);
-        right.list.push(arr[i][k]);
+        data.left.list.push(arr[i][j]);
+        data.right.list.push(arr[i][k]);
     }
 
     // add up each of the diagonal arrays
-    left.sum = left.list.reduce((a, b) => a + b);
-    right.sum = right.list.reduce((a, b) => a + b);
+    data.left.sum = data.left.list.reduce((a, b) => a + b);
+    data.right.sum = data.right.list.reduce((a, b) => a + b);
     
     // Calculate diagonal difference
-    diff = Math.abs(left.sum - right.sum);
+    diff = Math.abs(data.left.sum - data.right.sum);
     return diff;
 }
 ```
