@@ -1,7 +1,7 @@
 ---
 title: Should I define a type as 'any' in TypeScript?
-date: 2021-07-30
-datetime: 2021-07-30 00:00:00 Z
+date: 2021-08-03
+datetime: 2021-08-03 00:00:00 Z
 tags:
  - typescript
  - javascript
