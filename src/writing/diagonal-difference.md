@@ -1,7 +1,7 @@
 ---
 title: Solving the Diagonal Difference Problem
-date: 2021-07-30
-datetime: 2021-07-30 00:00:00 Z
+date: 2021-08-03
+datetime: 2021-08-03 00:00:00 Z
 tags:
   - javascript
   - hackerrank
@@ -168,7 +168,8 @@ function diagonalDiff(arr) {
     data.right.sum = data.right.list.reduce((a, b) => a + b);
     
     data.diff = Math.abs(data.left.sum - data.right.sum);
-    return diff;
+
+    return data.diff;
 }
 ```
 
@@ -239,8 +240,9 @@ function diagonalDiff(arr): number {
     data.right.sum = data.right.list.reduce((a, b) => a + b);
     
     // Calculate diagonal difference
-    diff = Math.abs(data.left.sum - data.right.sum);
-    return diff;
+    data.diff = Math.abs(data.left.sum - data.right.sum);
+
+    return data.diff;
 }
 ```
 and the usage for both TypeScript and JavaScript code snippets looks like this:
