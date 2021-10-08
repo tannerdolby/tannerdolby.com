@@ -18,6 +18,8 @@ The one difference between other OOP languages like Java or C++ and JavaScript, 
 
 Instead of defining a class declaration for every object like we would in Java: 
 
+{% filename "Shape.java" %}
+
 ```java
 public class Shape { 
   public int x;
@@ -33,6 +35,8 @@ public class Shape {
 ```
 
 the equivalent `function` declaration in JavaScript would look like this:
+
+{% filename "Shape.js" %}
 
 ```js
 function Shape() {
@@ -57,6 +61,8 @@ The above is possible thanks to hoisting, which makes variables and function dec
 <h3 class="post-heading">Can I still use ES6 style classes</h3>
 
 You can most definitely still create the template for objects (classes) using ES6 style class syntax, which has been described as "class declartions" above. Just as shown earlier in the article, we can define classes in JavaScript with the ES6 style (class declaration) like this:
+
+{% filename "myclass.js" %}
 
 ```js
 class MyClass {
@@ -111,7 +117,7 @@ If your coming from a C or Java background which is class-based, it might take a
 
 <h2 class="post-heading">Defining Objects</h2>
 
-We can define an [`Object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) in multiple ways:
+We can define an [`Object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) in multiple ways in JavaScript:
 
 ```js
 // Create an object literal 
@@ -158,15 +164,13 @@ oddball.toString(); // [object Object]
 
 In Java and C++, we create the "template" for objects by using the `class` keyword as these are "class-based" languages, where we define the objects state (member variables) and behavior (methods). JavaScript does have a [`Class`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes) reserved keyword for creating classes but it's usually best to use functions and prototypical objects to build out the inheritance chain like we would define a superclass and child classes in Java.
 
-<h3 class="post-heading">Now back to Arrays!</h3>
+<h3 class="post-heading">Anatomy of an Array</h3>
 
 In JavaScript, arrays can more closely resemble a Map with name/value pairs.
 
 > Arrays are predefined objects, where its indexes are the properties. 
 
 That means the first value of an array at index 0 would be displayed as `0: 15` where the 0th (first index) holds a value of 15. One of my favorite things about JavaScript arrays compared to other languages arrays (like Java) is the fact that JavaScript arrays can hold a collection of values with different data types and grow dynamically. 
-
-In Java, a generic array can only hold values of the same data type and cannot grow dynamically. This is where an [`ArrayList`](https://www.geeksforgeeks.org/arraylist-in-java/) in Java comes in handy because it's size can be dynamic and doesn't need to be "predefined".
 
 ```js
 let myArr = [10, "foo", true, { prop: "bar" }]
@@ -179,9 +183,13 @@ console.log(ar[3].prop) // "bar" (access object properties)
 
 There are many [data structures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures) in JavaScript and like shown above, arrays can hold any of the primitive types (undefined, String, Number, Boolean, BigInt, Symbol) and structural types.
 
+> Note: In Java, a generic array can only hold values of the same data type and cannot grow dynamically. This is where an [`ArrayList`](https://www.geeksforgeeks.org/arraylist-in-java/) comes in handy because it's size can be dynamic and doesn't need to be "predefined" similiar to arrays in JavaScript.
+
 <h2 class="post-heading">How can I create an Array?</h2>
 
-Create an empty array and then assign it's values:
+There are a few ways to go about creating an [`Array`][Array - MDN] in JavaScript.
+
+You can create an empty array and then assign it's values:
 
 ```js
 let arr = [];
@@ -237,3 +245,5 @@ console.log(arr.length); // 8
 ```
 
 You might think the above array `arr` would have a length of 4. But it actually has a length of 8. This is because the `arr.length` call returns the highest index in the array (7) and increments it by one (7+1=8). The way this works is that since the indexes `arr[3]-arr[6]` were not provided values, they are simply filled with `undefined`.
+
+[Array - MDN]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array

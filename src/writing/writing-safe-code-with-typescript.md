@@ -127,4 +127,4 @@ If anything were to stick with you from this article, I hope that it will be: Pl
 [1]: https://www.typescriptlang.org/docs/handbook/type-inference.html
 [2]: https://stackoverflow.com/questions/66594670/what-can-i-replace-any-with-while-declaring-an-object-type-in-typescript/66595023#66595023
 [3]: https://www.typescriptlang.org/docs/handbook/2/objects.html
-[4]: https://www.typescriptlang.org/docs/handbook/2/generics.html
+[4]: https://www.typescriptlang.org/docs/handbook/2/generics.html							

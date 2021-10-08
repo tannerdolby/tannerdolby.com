@@ -29,10 +29,6 @@ main {
         }
     }
 
-    .demo-img {
-        margin: 1.5rem 0;
-    }
-
     ol, ul {
         li {
             margin: 8px 0;
@@ -358,22 +354,17 @@ main {
         border-radius: 2px;
         padding: 1rem 1.25rem;
         max-width: 29ch;
+        box-shadow: -2px 2px 0 0 transparent;
+        // transition: 100ms box-shadow ease-in;
 
         &:hover,
         &:focus {
             background: #212a2f;
+            background: inherit;
+            background: #fff;
+            box-shadow: -2px 3px 0 0 #212121;
             cursor: pointer;
             text-decoration: none;
-            color: #fff;
-
-            h3 {
-                color: #fff;
-                border-bottom: 2px dashed #fff;
-            }
-
-            span {
-                color: #fff;
-            }
         }
 
         span {

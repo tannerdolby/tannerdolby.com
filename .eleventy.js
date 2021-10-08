@@ -122,8 +122,8 @@ module.exports = (eleventyConfig) => {
     });
 
     // Inspired by @zachleat and his code title shortcode - credit: https://github.com/11ty/11ty-website/blob/master/.eleventy.js#L107-L109
-    eleventyConfig.addShortcode("filename", function(title, header = "Filename") {
-        return `<div class="filename-title"><span><b>${header}</b></span>: <em>${title}</em></div>`;
+    eleventyConfig.addShortcode("filename", function(title, header="Filename") {
+        return `<div class="filename-title"><span>${header}</span>: <em>${title}</em></div>`;
     });
 
     // shortcode for creating my headshot <img> in markdown

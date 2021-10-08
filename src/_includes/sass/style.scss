@@ -405,9 +405,17 @@ textarea {
 
 .filename-title {
     font-size: 14px;
+    width: fit-content;
+    width: -moz-fit-content;
+    padding: 3px 10px;
+    border: 1px solid #333;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom: none;
+    color: #212121;
 
     span {
-        color: #333;
+        color: #212121;
     }
 }
 
@@ -474,13 +482,13 @@ textarea {
 }
 
 .demo-img {
-    margin: 0;
+    margin: 3rem 0;
     border: .05rem solid lightgray;
-    border-radius: .2rem;
     object-fit: cover;
     width: 100%;
     height: auto;
     max-width: 100%;
+    box-shadow: 0 0 50px 0 #ccc;
 }
 
 .support {

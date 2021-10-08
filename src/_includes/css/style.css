@@ -27,7 +27,7 @@
   border-radius: 2px;
 }
 .post-sidebar ul li a:hover {
-  color: #1836AF;
+  color: #000;
   text-decoration: none;
   background: #eee;
 }
@@ -919,9 +919,6 @@ main .post h3 {
   color: #1836AF;
   text-decoration: none;
 }
-#post .demo-img {
-  margin: 1.5rem 0;
-}
 #post ol li, #post ul li {
   margin: 8px 0;
 }
@@ -1179,19 +1176,15 @@ main .post h3 {
   border-radius: 2px;
   padding: 1rem 1.25rem;
   max-width: 29ch;
+  box-shadow: -2px 2px 0 0 transparent;
 }
 .prev-next a:hover, .prev-next a:focus {
   background: #212a2f;
+  background: inherit;
+  background: #fff;
+  box-shadow: -2px 3px 0 0 #212121;
   cursor: pointer;
   text-decoration: none;
-  color: #fff;
-}
-.prev-next a:hover h3, .prev-next a:focus h3 {
-  color: #fff;
-  border-bottom: 2px dashed #fff;
-}
-.prev-next a:hover span, .prev-next a:focus span {
-  color: #fff;
 }
 .prev-next a span {
   font-size: 1.1rem;
@@ -1761,9 +1754,17 @@ textarea:focus {
 
 .filename-title {
   font-size: 14px;
+  width: fit-content;
+  width: -moz-fit-content;
+  padding: 3px 10px;
+  border: 1px solid #333;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom: none;
+  color: #212121;
 }
 .filename-title span {
-  color: #333;
+  color: #212121;
 }
 
 .filter-msg {
@@ -1826,13 +1827,13 @@ textarea:focus {
 }
 
 .demo-img {
-  margin: 0;
+  margin: 3rem 0;
   border: 0.05rem solid lightgray;
-  border-radius: 0.2rem;
   object-fit: cover;
   width: 100%;
   height: auto;
   max-width: 100%;
+  box-shadow: 0 0 50px 0 #ccc;
 }
 
 .support {
