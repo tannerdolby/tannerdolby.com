@@ -3,7 +3,7 @@
     <h4>Other Posts</h4>
     <ul>
     {% for item in popular %}
-        <li><a href="/writing/{{ item.title | slug }}">{{ item.title }}</a></li>
+        <li><a href="/writing/{{ item | slug }}">{{ item }}</a></li>
     {% endfor %}
     </ul>
     <h4>Around the Web</h4>
