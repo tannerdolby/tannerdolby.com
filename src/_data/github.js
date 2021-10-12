@@ -40,7 +40,7 @@ module.exports = async function() {
         const eleventyGallery = await fetchData("https://api.github.com/repos/tannerdolby/eleventy-photo-gallery");
         const pluginMetaGen = await fetchData("https://api.github.com/repos/tannerdolby/eleventy-plugin-metagen");
         const pluginSharpRespImg = await fetchData("https://api.github.com/repos/tannerdolby/eleventy-plugin-sharp-respimg");
-        const whatToWatch = await fetchData("https://api.github.com/repos/tannerdolby/what-to-watch");
+        const cppGoFish = await fetchData("https://api.github.com/repos/tannerdolby/cpp-go-fish");
         const cipherNews = await fetchData("https://api.github.com/repos/tannerdolby/cipher-news");
         const randoma11yExtension = await fetchData("https://api.github.com/repos/tannerdolby/randoma11y-chrome-extension");
 
@@ -48,7 +48,7 @@ module.exports = async function() {
             eleventyGallery, 
             pluginMetaGen, 
             pluginSharpRespImg, 
-            whatToWatch, 
+            cppGoFish, 
             cipherNews, 
             randoma11yExtension
         ];
