@@ -42,7 +42,7 @@ module.exports = async function() {
         const pluginSharpRespImg = await fetchData("https://api.github.com/repos/tannerdolby/eleventy-plugin-sharp-respimg");
         const whatToWatch = await fetchData("https://api.github.com/repos/tannerdolby/what-to-watch");
         const cipherNews = await fetchData("https://api.github.com/repos/tannerdolby/cipher-news");
-        const matrixLibrary = await fetchData("https://api.github.com/repos/tannerdolby/matrmath");
+        const randoma11yExtension = await fetchData("https://api.github.com/repos/tannerdolby/randoma11y-chrome-extension");
 
         return [ 
             eleventyGallery, 
@@ -50,7 +50,7 @@ module.exports = async function() {
             pluginSharpRespImg, 
             whatToWatch, 
             cipherNews, 
-            matrixLibrary
+            randoma11yExtension
         ];
     } catch (e) {
         console.log("Error returning multiple projects cached API data", e);
