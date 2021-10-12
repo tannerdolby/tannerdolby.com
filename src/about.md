@@ -9,7 +9,7 @@ headshot:
 layout: about.njk
 ---
 
-Hi there! My name is Tanner Dolby. I'm a Software Engineer and Mathematician based in California. I enjoy working with HTML, CSS, JavaScript, Node, React, Python, Java, and C++. I'm interested in in contributing to open source and exploring web technologies. I started programming and learning web development using [freeCodeCamp.org](https://freecodecamp.org) in 2017. Ever since then, I've been hooked on writing code and building things for the web.
+Hi there! My name is Tanner Dolby. I'm a Software Engineer and Mathematician based in California. I enjoy working with HTML, CSS, JavaScript, Node, React, Python, Java, and C++. I started programming in 2016 with Swift and started learning web development using [freeCodeCamp.org](https://freecodecamp.org) in 2017. Ever since then, I've been hooked on writing code and building things for the web.
 
 I spend most of my free time contributing to open source projects on GitHub, learning new things, creating illustrations, building side projects, running, and making front-end demos on [CodePen](https://codepen.io/tannerdolby). With the JAMstack movement on the rise, I've taken an interest in Static Site Generators (SSG). In particular [Eleventy](https://11ty.dev), which this website is built with.
 
