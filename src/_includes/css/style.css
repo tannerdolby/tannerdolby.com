@@ -1,5 +1,5 @@
 /* Fonts */
-/* Palette */
+/* Tokens */
 /* Sidebar within post.njk template */
 .post-sidebar {
   max-width: 20ch;
@@ -639,7 +639,7 @@ main blockquote {
   line-height: 1.5;
   margin-top: 0.75rem;
   margin-bottom: 2.5rem;
-  color: #333;
+  color: #212121;
   max-width: 50ch;
 }
 .main-container .home-banner h1 {
