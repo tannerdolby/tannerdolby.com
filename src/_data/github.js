@@ -36,19 +36,20 @@ async function fetchData(url) {
 }
 
 module.exports = async function() {
+    let apiUrl = "https://api.github.com/repos/tannerdolby";
     try {
-        const eleventyGallery = await fetchData("https://api.github.com/repos/tannerdolby/eleventy-photo-gallery");
-        const pluginMetaGen = await fetchData("https://api.github.com/repos/tannerdolby/eleventy-plugin-metagen");
-        const pluginSharpRespImg = await fetchData("https://api.github.com/repos/tannerdolby/eleventy-plugin-sharp-respimg");
-        const cppGoFish = await fetchData("https://api.github.com/repos/tannerdolby/cpp-go-fish");
-        const cipherNews = await fetchData("https://api.github.com/repos/tannerdolby/cipher-news");
-        const randoma11yExtension = await fetchData("https://api.github.com/repos/tannerdolby/randoma11y-chrome-extension");
+        const eleventyGallery = await fetchData(`${apiUrl}/eleventy-photo-gallery`);
+        const pluginMetaGen = await fetchData(`${apiUrl}/eleventy-plugin-metagen`);
+        const pluginSharpRespImg = await fetchData(`${apiUrl}/eleventy-plugin-sharp-respimg`);
+        const openLibrary = await fetchData(`${apiUrl}/openlibrary`);
+        const cipherNews = await fetchData(`${apiUrl}/cipher-news`);
+        const randoma11yExtension = await fetchData(`${apiUrl}/randoma11y-chrome-extension`);
 
         return [ 
             eleventyGallery, 
             pluginMetaGen, 
             pluginSharpRespImg, 
-            cppGoFish, 
+            openLibrary, 
             cipherNews, 
             randoma11yExtension
         ];
