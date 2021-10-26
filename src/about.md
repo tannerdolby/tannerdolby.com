@@ -47,7 +47,7 @@ During my time at ASU, I worked as an Undergraduate Researcher and Supplemental 
 
 ## Need More?
 
-I'm interested in all things software related: web development, chrome browser extensions, technical writing, static sites, JAMstack, accessibility, illustration and more. Have a look at my [resume](/resume/resume.pdf) and feel free to [contact me](/contact/) if you'd like to chat!
+I'm interested in all things software related: web development, Java/C++ applications, chrome extensions, technical writing, static sites, JAMstack, accessibility, illustration and more. Have a look at my [resume](/resume/resume.pdf) and feel free to [contact me](/contact/) if you'd like to chat!
 
 <div class="social-icons">
 {% for icon in socials %}
