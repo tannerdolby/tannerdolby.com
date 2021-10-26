@@ -9,13 +9,13 @@ headshot:
 layout: about.njk
 ---
 
-Hi there! My name is Tanner Dolby. I'm a Software Engineer and Mathematician based in California. I enjoy working with HTML, CSS, JavaScript, Node, React, Python, Java, and C++. I'm intersted in applying my skills to build software that positvely impacts the lives of others. I started programming in 2018 with Swift and began learning web development using [freeCodeCamp.org](https://freecodecamp.org) in 2019. Ever since then, I've been hooked on writing code and building things for the web.
+Hi there! My name is Tanner Dolby. I'm a Software Engineer and Mathematician based in California. I enjoy working with HTML, CSS, JavaScript, Node, React, Python, Java, and C++. I'm interested in applying my skills to build software that positvely impacts the lives of others. I started programming in 2018 with Swift and began learning web development using [freeCodeCamp.org](https://freecodecamp.org) in 2019. Ever since then, I've been hooked on writing code and building things for the web.
 
 I spend most of my free time contributing to open source projects on GitHub, learning new things, creating illustrations, building side projects, running, and making front-end demos on [CodePen](https://codepen.io/tannerdolby). With the JAMstack movement on the rise, I've taken an interest in Static Site Generators (SSG). In particular [Eleventy](https://11ty.dev), which this website is built with.
 
 ## Interests
 
-I like to write about programming and technology. I'm currently fixated on learning more about Chrome extensions, Compilers, C++, and Web performance. If you would like to see me write about a specific topic or concept, feel free to message me on Twitter about it. Lately, I've been interested in developing Chrome Extensions and spending time creating illustrations using [Vectornator](https://www.vectornator.io/). I enjoy writing documentation (and referencing it) so when I'm learning new content, I tend to take notes and write a blog post or something to document and reinforce what I learned. 
+I like to write about programming and technology. I'm currently fixated on learning more about C++, C#, chrome extensions, and Web performance. If you would like to see me write about a specific topic or concept, feel free to message me on Twitter about it. Lately, I've been interested in developing Chrome Extensions and spending time creating illustrations using [Vectornator](https://www.vectornator.io/). I enjoy writing documentation (and referencing it) so when I'm learning new content, I tend to take notes and write a blog post or something to document and reinforce what I learned. 
 
 When I'm not on the computer, you can find me creating illustrations on my iPad, reading a good book, running, skateboarding, finding the best slice of pizza, and trying to become a better photographer.
 
