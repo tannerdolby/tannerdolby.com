@@ -80,7 +80,7 @@ interface MyObj {
 }
 
 // OR
-type MyObj = {
+type MyObjUsingType = {
     colors: string[];
     lengths: number[];
     name: string;
