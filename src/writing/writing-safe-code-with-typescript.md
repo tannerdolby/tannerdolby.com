@@ -8,7 +8,7 @@ tags:
 preview: "The 'any' type isn't something I use very often in my own development. But I have seen it occasionally used out in the wild."
 ---
 
-{{ preview }} A good rule is, if your unsure of a data type for a variable, its best to let TypeScript infer the variables type for you through [type inference][type inference] rather than using type `any`. Only resort to using `any` if you absolutely have to.
+{{ preview }} A good rule is, if your unsure of a data type for a variable, its best to let TypeScript infer the variables type for you through [type inference][1] rather than using type `any`. Only resort to using `any` if you absolutely have to.
 
 When you can, try using a type annotation to explicitly tell the compiler what data type to expect. But when your unsure what the data type will be ahead of time, this is where type inference is quite nice.
 
@@ -128,9 +128,9 @@ const objArr: MyObj[] = [
 
 I usually tend to define an interface or use a `type` annotation anytime there is a variable or function that could benefit from explicit type definitions. Another option outside of interfaces, is using generics. If you programmed in Java, you might be familiar with generics. They are super powerful and really help us to write safe code. If you want to read more about using Generic Types, head over to the generics [documentation][4]. 
 
-If anything were to stick with you from this article, I hope that it will be: Please don't use type `any` in TypeScript unless its absolutely required (which doesn't happen that often). I like to say, when in doubt, try not to reach for `any` but instead define an interface so TypeScript better understands what types to expect. Generics are also a great option!
+If anything were to stick with you from this article, I hope that it will be: Please try not to use type `any` in TypeScript unless its absolutely required (which doesn't happen that often). I like to say, when in doubt, don't reach for `any` but instead let TypeScript infer the type for you through type inference or if you require object types, define an interface or type annotation so TypeScript better understands what types to expect when it compiles the TS code to plain JavaScript.
 
-[type inference]: https://www.typescriptlang.org/docs/handbook/type-inference.html
+[1]: https://www.typescriptlang.org/docs/handbook/type-inference.html
 [2]: https://stackoverflow.com/questions/66594670/what-can-i-replace-any-with-while-declaring-an-object-type-in-typescript/66595023#66595023
 [3]: https://www.typescriptlang.org/docs/handbook/2/objects.html
 [4]: https://www.typescriptlang.org/docs/handbook/2/generics.html							
