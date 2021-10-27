@@ -74,16 +74,16 @@ Using `any` to define the object type for this `obj` variable is just downright 
 
 ```ts
 interface MyObj {
-    colors: string[],
-    lengths: number[],
-    name: string
+    colors: string[];
+    lengths: number[];
+    name: string;
 }
 
 // OR
-type MyObj {
-    colors: string[],
-    lengths: number[],
-    name: string
+type MyObj = {
+    colors: string[];
+    lengths: number[];
+    name: string;
 }
 
 // safe
@@ -97,9 +97,9 @@ const obj: MyObj = {
 ```ts
 // also safe (without explicitly defining an interface)
 const myObj: {
-    colors: string[],
-    lengths: number[],
-    name: string
+    colors: string[];
+    lengths: number[];
+    name: string;
 } = {
     colors: ["#f06", "#000"],
     lengths: [1,2,3],
