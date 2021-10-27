@@ -79,8 +79,8 @@ interface MyObj {
     name: string;
 }
 
-// OR
-type MyObjUsingType = {
+// or using a type annotation
+type MyObject = {
     colors: string[];
     lengths: number[];
     name: string;
@@ -95,7 +95,7 @@ const obj: MyObj = {
 ```
 
 ```ts
-// also safe (without explicitly defining an interface)
+// also safe
 const myObj: {
     colors: string[];
     lengths: number[];
@@ -126,7 +126,7 @@ const objArr: MyObj[] = [
 
 <h2 class="post-heading">Closing thoughts</h2>
 
-I usually tend to define an interface or `type` annotation anytime there is a variable or function that requires explicit type definitions which cannot be made from the primitive data types. Another option outside of interfaces, is using generics. If you programmed in Java, you might be familiar with generics. They are super powerful and really help us to write safe code. If you want to read more about using Generic Types, head over to the generics [documentation][4]. 
+I usually tend to define an interface or use a `type` annotation anytime there is a variable or function that could benefit from explicit type definitions. Another option outside of interfaces, is using generics. If you programmed in Java, you might be familiar with generics. They are super powerful and really help us to write safe code. If you want to read more about using Generic Types, head over to the generics [documentation][4]. 
 
 If anything were to stick with you from this article, I hope that it will be: Please don't use type `any` in TypeScript unless its absolutely required (which doesn't happen that often). I like to say, when in doubt, try not to reach for `any` but instead define an interface so TypeScript better understands what types to expect. Generics are also a great option!
 
