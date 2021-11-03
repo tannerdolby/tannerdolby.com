@@ -1,6 +1,6 @@
 --- 
 title: Tanner Dolby's Website
-about: I'm a software engineer and mathematician. I enjoy building things for the web that are accessible and performant.
+about: I'm a software engineer and mathematician. I enjoy solving problems and building things for the web.
 layout: base.njk
 eleventyExcludeFromCollections: true
 templateEngineOverride: njk, md
