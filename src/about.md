@@ -59,11 +59,11 @@ I'm interested in all things software related: web development, Java/C++ applica
 {% endfor %}
 </div>
 
-- [github]: https://github.com/tannerdolby
-- [codepen]: https://codepen.io/tannerdolby
-- [eleventy]: https://11ty.dev
-- [vectornator]: https://www.vectornator.io/
-- [contact]: /contact/
-- [resume]: /resume/resume.pdf
-- [grad ceremony]: https://vgradasu.z4.web.core.windows.net/asu/III/#811351
-- [pandemic]: https://www.cdc.gov/coronavirus/2019-ncov/index.html
+[github]: https://github.com/tannerdolby
+[codepen]: https://codepen.io/tannerdolby
+[eleventy]: https://11ty.dev
+[vectornator]: https://www.vectornator.io/
+[contact]: /contact/
+[resume]: /resume/resume.pdf
+[grad ceremony]: https://vgradasu.z4.web.core.windows.net/asu/III/#811351
+[pandemic]: https://www.cdc.gov/coronavirus/2019-ncov/index.html
