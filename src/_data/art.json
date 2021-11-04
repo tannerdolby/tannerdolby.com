@@ -1,5 +1,17 @@
 [
     {
+        "name": "3D CSS Books",
+        "url": "https://codepen.io/tannerdolby/full/MWvyjQQ",
+        "id": "3d-css-books",
+        "vectornator": false,
+        "aria_label": "Link to demo of 3D CSS Books on CodePen",
+        "image": {
+            "filename": "3d-css-books.png",
+            "fallback_src": "/images/3d-css-books.png",
+            "alt": "3D CSS books animated with GreenSock Animation Platform (GSAP)"
+        }
+    },
+    {
         "name": "Single div CSS Pumpkin",
         "url": "https://codepen.io/tannerdolby/full/jOwomNZ",
         "id": "single-div-css-pumpkin",
