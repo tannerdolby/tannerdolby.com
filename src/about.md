@@ -17,7 +17,7 @@ I spend most of my free time contributing to open source projects on [GitHub][gi
 
 ## Interests
 
-I like to write about programming and technology. I'm currently fixated on learning more about C++, Chrome extensions, and Web performance. If you would like to see me write about a specific topic or concept, feel free to message me on Twitter about it. Lately, I've been spending most of my free time learning about C++, developing Chrome Extensions and creating illustrations using [Vectornator][vectornator]. I enjoy writing documentation (and referencing it) so when I'm learning new content, I tend to take notes and write a blog post or something to document and reinforce what I learned. 
+I like to write about programming and technology. I'm currently fixated on learning more about game development with Phaser, Java, Chrome extensions, and Web performance. If you would like to see me write about a specific topic or concept, feel free to message me on Twitter about it. Lately, I've been spending most of my free time learning about Phaser, developing Chrome Extensions and creating illustrations using [Vectornator][vectornator]. I enjoy writing documentation (and referencing it) so when I'm learning new content, I tend to take notes and write a blog post or something to document and reinforce what I learned. 
 
 When I'm not on the computer, you can find me creating illustrations on my iPad, reading a good book, running, skateboarding, finding the best slice of pizza, and trying to become a better photographer.
 
