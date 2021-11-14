@@ -37,22 +37,22 @@ async function fetchData(url) {
 
 module.exports = async function() {
     let apiUrl = "https://api.github.com/repos/tannerdolby";
+    
     try {
-        const eleventyGallery = await fetchData(`${apiUrl}/eleventy-photo-gallery`);
-        const pluginMetaGen = await fetchData(`${apiUrl}/eleventy-plugin-metagen`);
-        const pluginSharpRespImg = await fetchData(`${apiUrl}/eleventy-plugin-sharp-respimg`);
-        const openLibrary = await fetchData(`${apiUrl}/openlibrary`);
-        const cipherNews = await fetchData(`${apiUrl}/cipher-news`);
-        const randoma11yExtension = await fetchData(`${apiUrl}/randoma11y-chrome-extension`);
-
-        return [ 
-            eleventyGallery, 
-            pluginMetaGen, 
-            pluginSharpRespImg, 
-            openLibrary, 
-            cipherNews, 
-            randoma11yExtension
+        let repos = [
+            "eleventy-photo-gallery",
+            "eleventy-plugin-metagen",
+            "eleventy-plugin-sharp-respimg",
+            "bug-saves-world",
+            "cipher-news",
+            "randoma11y-chrome-extension"
         ];
+        repos = repos.map(async (repo) => {
+            return await fetchData(`${apiUrl}/${repo}`);
+        });
+
+        return await Promise.all(repos);
+
     } catch (e) {
         console.log("Error returning multiple projects cached API data", e);
     } 
