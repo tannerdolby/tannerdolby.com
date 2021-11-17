@@ -176,6 +176,9 @@ main {
             padding-top: .5rem;
             padding-bottom: .5rem;
             margin: .6rem 0;
+            h2,h3 {
+                margin-bottom: .75rem;
+            }
         }
         .clear-filter-btn {
             margin-left: 2rem;
@@ -305,6 +308,7 @@ main {
         max-width: 1200px;
         padding-left: 0;
         padding-right: 0;
+        padding: 0 1.25rem;
         margin: 3rem auto 0 auto;
 
         &:not(.search-box) {
@@ -349,5 +353,40 @@ main {
         background: hsl(0, 0%, 23%);
         color: #fff;
         text-decoration: none;
+    }
+}
+
+#post-content {
+    .post-tag {
+        padding: 3px 10px;
+        font-size: .9rem;
+    }
+}
+
+.post-tag {
+    margin-right: .35rem;
+    border-radius: 500px;
+    font-size: .8rem;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    -moz-width: fit-content;
+    background: $tag-bg;
+    color: $paragraph-text;
+    text-decoration: none;
+}
+
+.post-tag:hover {
+    background: #d3e3f3;
+    color: #222;
+    cursor: pointer;
+}
+
+.a11y-wrap {
+    max-width: 85ch;
+    margin: 0 auto 4rem auto;
+    .banner-container {
+        padding: 0;
     }
 }

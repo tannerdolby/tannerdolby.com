@@ -1,7 +1,5 @@
-.toc {
-    position: relative;
-
-    .show-toc {
+.toc-links {
+    &.show-toc {
         display: block;
         clip: auto;
         clip-path: none;
@@ -9,28 +7,31 @@
         width: auto;
         height: auto;
         position: static;
-
     }
+}
 
-    .unfold-toc {
-        display: none;
-        font-size: 1.9em;
-        background: #fff;
-        padding: 0;
-        color: #333;
-        font-weight: 500;
-        height: auto;
-        width: auto;
-        background: inherit;
-        position: absolute;
-        right: 0;
-        bottom: -5px;
-        border: none;
-        will-change: transform;
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-        -moz-tap-highlight-color: rgba(0,0,0,0);
-        &:hover {
-            cursor: pointer;
-        }
+.unfold-toc {
+    display: none;
+    font-size: 1.9em;
+    background: #fff;
+    padding: 0;
+    color: #333;
+    font-weight: 500;
+    height: auto;
+    width: auto;
+    background: inherit;
+    position: absolute;
+    right: 0;
+    bottom: -5px;
+    border: none;
+    will-change: transform;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -moz-tap-highlight-color: rgba(0,0,0,0);
+    &:hover {
+        cursor: pointer;
     }
+}
+
+.toc {
+    position: relative;
 }

@@ -7,7 +7,7 @@
     grid-column: 1;
     height: 100vh;
     grid-row: 2;
-    margin: 0 auto 0 0;
+    margin: 0;
 
     .toc-links {
         margin-top: .5rem;
@@ -28,7 +28,7 @@
                 border-radius: 2px;
 
                 &:hover {
-                    color: #000;
+                    color: $link-blue-accessible;
                     text-decoration: none;
                     background: #eee;
                 }

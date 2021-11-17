@@ -152,7 +152,7 @@ h2, .h2 {
 h3, .h3 {
     $min-font-size: 1.35rem;
     $flex-unit: 5vw;
-    $max-font-size: 1.485rem;
+    $max-font-size: 1.45rem;
     font-size: 1.75rem;
     font-size: clamp(#{$min-font-size}, #{$flex-unit}, #{$max-font-size});
     margin-bottom: .5rem;
@@ -320,7 +320,7 @@ textarea {
                 background: rgb(54, 60, 63);
                 background: #363c3f;
                 background: #212a2f;
-                color: $purewhite;
+                color: $white;
             }
         }
     }
@@ -341,13 +341,15 @@ textarea {
     margin-bottom: 2rem;
 }
 
-#main-writing {
+#main-writing,
+#main-search {
     margin-bottom: 4rem;
 }
 
 #main-about,
 #main-art {
     max-width: 1200px;
+    padding: 0;
     margin: 0 auto 5rem auto;
     overflow: hidden;
 }
@@ -355,18 +357,21 @@ textarea {
 #main-about {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    padding-left: 1.25rem;
+    padding: 0 1.25rem;
 
     .right-sidebar {
         grid-column: 5 / 7;
         margin-left: auto;
+        margin-right: 0;
         margin-top: 0;
         grid-row: 2;
         max-width: 25ch;
-        padding-right: 1rem;
+        padding-right: 0;
     }
 
     .about-header {
+        padding-left: 0;
+        padding-right: 0;
         margin-left: 0;
         margin-right: 0;
     }
@@ -561,7 +566,7 @@ textarea {
     margin-bottom: .75rem;
 
     .github-star {
-        fill: $lightblack;
+        fill: $black-200;
         padding-right: .3rem;
         padding-bottom: .15rem;
         width: 22px;
@@ -573,7 +578,7 @@ textarea {
         }
     }
     a {
-        color: $lightblack;
+        color: $black-200;
         span {
             color: $paragraph-text;
             margin-bottom: 2px;
@@ -683,10 +688,14 @@ textarea {
         ul {
             li {
                 a {
-                    color: $link-blue-accessible;
+                    color: $paragraph-text;
                 }
             }
         }
+    }
+
+    .toc-links {
+        @include visually-hidden();
     }
 
     .toc {

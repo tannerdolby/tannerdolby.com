@@ -4,6 +4,9 @@
 }
 
 .main-container {
+    .search-banner {
+        padding: 0;
+    }
     .wrap {
         .category-small {
             font-size: 1rem;
@@ -20,6 +23,7 @@
             justify-content: space-between; 
             align-items: center;
             margin: 0 0 2.5rem;
+            padding: 0;
         }
     }
 }

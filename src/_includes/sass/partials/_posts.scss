@@ -10,7 +10,7 @@ main {
         }
 
         h3 {
-            margin-bottom: .5rem;
+            margin-bottom: .6rem;
         }
     }
 }
@@ -120,8 +120,10 @@ main {
     max-width: 80ch;
     margin: 0 auto 0 2.5rem;
     .date {
-        margin-top: 1.25rem;
+        margin-top: 1.5rem;
         margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
     }
 }
 
@@ -353,8 +355,8 @@ main {
         border: 2px solid #212a2f;
         border-radius: 2px;
         padding: 1rem 1.25rem;
-        max-width: 29ch;
         box-shadow: -2px 2px 0 0 transparent;
+        max-width: 29ch;
         // transition: 100ms box-shadow ease-in;
 
         &:hover,
@@ -384,5 +386,8 @@ main {
 
     .next-post {
         margin-left: auto;
+        h3 {
+            margin-bottom: .75rem;
+        }
     }
 }
