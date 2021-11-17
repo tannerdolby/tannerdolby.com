@@ -1,81 +1,57 @@
+---
+layout: main.njk
+pageId: main-writing
+metadata:
+    title: Writing - tannerdolby.com
+    desc: Posts by Tanner Dolby
+    url: https://tannerdolby.com/writing/
+    img: https://tannerdolby.com/images/arch-spiral-large.jpg
+    img_alt: An Archimedean Spiral
+    twitterHandle: "@tannerdolby"
+    name: Tanner Dolby
+    generator: eleventy
+    comments: true
+---
 {% set sortedTags = collections.posts | taglist %}
 
-<!DOCTYPE html>
-<html dir="ltr" lang="en">
-    <head>
-        {% metagen 
-            title="Writing - tannerdolby.com",
-            desc="Posts by Tanner Dolby",
-            url="https://tannerdolby.com/writing/",
-            img="https://tannerdolby.com/images/arch-spiral-large.jpg",
-            img_alt="An Archimedean Spiral",
-            twitterHandle="@tannerdolby",
-            name="Tanner Dolby"
-        %}
-        <meta name="keywords" content="{{ site.doc_metadata.keywords }}">
-        <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-        {% set css %}
-            {% include "css/style.css" %}
-            {% include "css/reset.css" %}
-        {% endset %}
-        <style>
-            {{ css | cssmin | safe }}
-        </style>
-    </head>
-    <body>
-        <a href="#main-writing" class="skip-link">Skip to main content</a>
-        {% include "layouts/nav.njk" %}
-        <main class="main-container" id="main-writing">
-            <div class="wrap">
-                <strong class="category-small"><a href="#taglist">Categories</a></strong>
-                <header class="banner-container search-box">
-                    <h1 class="h1">Writing</h1>
-                    <div class="search-style">
-                        <a href="/search/" class="contain" aria-label="Search button">
-                            <svg version="1.1" id="search_svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.999 511.999" xml:space="preserve">
-                            <g>
-                                <g>
-                                    <path d="M508.874,478.708L360.142,329.976c28.21-34.827,45.191-79.103,45.191-127.309c0-111.75-90.917-202.667-202.667-202.667
-                                        S0,90.917,0,202.667s90.917,202.667,202.667,202.667c48.206,0,92.482-16.982,127.309-45.191l148.732,148.732
-                                        c4.167,4.165,10.919,4.165,15.086,0l15.081-15.082C513.04,489.627,513.04,482.873,508.874,478.708z M202.667,362.667
-                                        c-88.229,0-160-71.771-160-160s71.771-160,160-160s160,71.771,160,160S290.896,362.667,202.667,362.667z"/>
-                                </g>
-                            </g>
-                            </svg>
-                        </a>
-                    </div>
-                </header>
-                <div class="main-content">
-                    <ul class="my-posts">
-                        {% for post in collections.posts | reverse %}
-                        <li>
-                            <article class="post" data-post-title="{{ post.data.title }}" data-tags="[{{ post.data.tags | stringify }}]">
-                                <h2 class="h3" style="margin-bottom: .5rem;"><a class="post-title-link" href="{{ post.url }}">{{ post.data.title }}</a></h2>
-                                <p class="date">Posted on&nbsp;<time datetime="{{ post.data.datetime | date('YYYY-MM-DD') }}">{{ post.data.datetime | date('MMMM DD, YYYY') }}</time>&nbsp;&bull; tagged with&nbsp;{% for tag in post.data.tags %}<a style="margin-right: .35rem;" href="/writing?filter={{ tag }}">#{{ tag }}</a>{% endfor %}</p>
-                                <p class="preview">{{ post.data.preview }}</p>
-                            </article>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                    <h3 class="filter-by-tag">Filter Posts by Tag</h3>
-                    <ul id="taglist" class="tags-list">
-                        {% for tag in sortedTags %}
-                        <li>
-                            <a class="post-label" href="/writing/?filter={{ tag }}">{{ tag }}</a>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            </div>
-        </main>
-        {% include "layouts/footer.njk" %}
-        {% set js %}
-            {% include "js/filter-posts.js" %}
-        {% endset %}
-        <script>
-            {{ js | jsmin | safe }}
-        </script>
-    </body>
-</html>
+<div class="wrap">
+    <strong class="category-small"><a href="#taglist">Categories</a></strong>
+    <header class="banner-container search-box">
+        <h1 class="h1">Writing</h1>
+        <div class="search-style">
+            <a href="/search/" class="contain" aria-label="Search button">
+                <svg version="1.1" id="search_svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.999 511.999" xml:space="preserve">
+                <g>
+                    <g>
+                        <path d="M508.874,478.708L360.142,329.976c28.21-34.827,45.191-79.103,45.191-127.309c0-111.75-90.917-202.667-202.667-202.667
+                            S0,90.917,0,202.667s90.917,202.667,202.667,202.667c48.206,0,92.482-16.982,127.309-45.191l148.732,148.732
+                            c4.167,4.165,10.919,4.165,15.086,0l15.081-15.082C513.04,489.627,513.04,482.873,508.874,478.708z M202.667,362.667
+                            c-88.229,0-160-71.771-160-160s71.771-160,160-160s160,71.771,160,160S290.896,362.667,202.667,362.667z"/>
+                    </g>
+                </g>
+                </svg>
+            </a>
+        </div>
+    </header>
+    <div class="main-content">
+        <ul class="my-posts">
+            {% for post in collections.posts | reverse %}
+            <li>
+                <article class="post" data-post-title="{{ post.data.title }}" data-tags="[{{ post.data.tags | stringify }}]">
+                    <h2 class="h3"><a class="post-title-link" href="{{ post.url }}">{{ post.data.title }}</a></h2>
+                    <p class="date">Posted on&nbsp;<time datetime="{{ post.data.datetime | date('YYYY-MM-DD') }}">{{ post.data.datetime | date('MMMM DD, YYYY') }}</time>&nbsp;&bull; tagged with&nbsp;{% for tag in post.data.tags %}<a class="post-tag" href="/writing?filter={{ tag }}">{{ tag }}</a>{% endfor %}</p>
+                    <p class="preview">{{ post.data.preview }}</p>
+                </article>
+            </li>
+            {% endfor %}
+        </ul>
+        <h3 class="filter-by-tag">Filter Posts by Tag</h3>
+        <ul id="taglist" class="tags-list">
+            {% for tag in sortedTags %}
+            <li>
+                <a class="post-label" href="/writing/?filter={{ tag }}">{{ tag }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>

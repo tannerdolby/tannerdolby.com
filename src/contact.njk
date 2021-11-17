@@ -1,56 +1,31 @@
-<!DOCTYPE html>
-<html dir="ltr" lang="en">
-    <head>
-        {% metagen 
-            title="Contact - tannerdolby.com",
-            desc="Contact Tanner Dolby",
-            url="https://tannerdolby.com/contact/",
-            img="https://tannerdolby.com/images/arch-spiral-large.jpg",
-            img_alt="An Archimedean Spiral",
-            twitterHandle="@tannerdolby",
-            name="Tanner Dolby"
-        %}
-        <meta name="keywords" content="{{ site.doc_metadata.keywords }}">
-        <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-        {% set css %}
-            {% include "css/style.css" %}
-            {% include "css/reset.css" %}
-        {% endset %}
-        <style>
-            {{ css | cssmin | safe }}
-        </style>
-    </head>
-    <body>
-        <a href="#main-contact" class="skip-link">Skip to main content</a>
-        {% include "layouts/nav.njk" %}
-        <main class="main-container" id="main-contact" tabindex="-1">
-            <div class="contact-container">
-                <h1>Contact Tanner</h1>
-                <div class="contact-detail"> 
-                    <p>Thanks for the interest! Feel free to reach out on Twitter or by <a href="mailto:tannercdolby@gmail.com">sending me an email</a>. I will usually take about 1-3 days to reply.</p>
-                    <p>Sometimes I'm not able to respond within my usual time frame. If you have contacted me and not heard back, I welcome you to email me again as a friendly reminder. You can also <a href="https://calendly.com/tannerdolby">schedule a meeting</a> if you would like to discuss things in more detail.</p>
-                </div>
-                <form class="contact-form" onsubmit="sendMail()">
-                    <label for="name">What's Your Name?</label>
-                    <input type="text" name="name" id="name" required>
-                    <label class="form-label" for="subject">Subject</label>
-                    <input class="email-subject" type="text" name="subject" id="subject" required>
-                    <label class="form-label" for="message">Message</label>
-                    <textarea class="email-msg" rows="5" cols="30" name="message" id="message" required></textarea>
-                    <button type="submit" class="reach-me button submit-contact">Message me</button>
-                </form>
-            </div>
-            {% include "layouts/sidebar.njk" %}
-        </main>
-        {% include "layouts/footer.njk" %}
-        {% set js %}
-            {% include "js/email.js" %}
-            {% include "js/sidebar-search.js" %}
-        {% endset %}
-        <script>
-            {{ js | jsmin | safe }}
-        </script>
-    </body>
-</html>
+---
+layout: main.njk
+pageId: main-contact
+metadata:
+  title: Contact - tannerdolby.com
+  desc: Contact Tanner Dolby
+  url: https://tannerdolby.com/contact/
+  img: https://tannerdolby.com/images/arch-spiral-large.jpg
+  img_alt: An Archimedean Spiral
+  twitterHandle: "@tannerdolby"
+  name: Tanner Dolby
+  generator: eleventy
+  comments: true
+---
+<div class="contact-container">
+    <h1>Contact Tanner</h1>
+    <div class="contact-detail"> 
+        <p>Thanks for the interest! Feel free to reach out on Twitter or by <a href="mailto:tannercdolby@gmail.com">sending me an email</a>. I will usually take about 1-3 days to reply.</p>
+        <p>Sometimes I'm not able to respond within my usual time frame. If you have contacted me and not heard back, I welcome you to email me again as a friendly reminder. You can also <a href="https://calendly.com/tannerdolby">schedule a meeting</a> if you would like to discuss things in more detail.</p>
+    </div>
+    <form class="contact-form" onsubmit="sendMail()">
+        <label for="name">What's Your Name?</label>
+        <input type="text" name="name" id="name" required>
+        <label class="form-label" for="subject">Subject</label>
+        <input class="email-subject" type="text" name="subject" id="subject" required>
+        <label class="form-label" for="message">Message</label>
+        <textarea class="email-msg" rows="5" cols="30" name="message" id="message" required></textarea>
+        <button type="submit" class="reach-me button submit-contact">Message me</button>
+    </form>
+</div>
+{% include "sidebar.njk" %}
