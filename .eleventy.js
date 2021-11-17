@@ -175,7 +175,7 @@ module.exports = (eleventyConfig) => {
         return value;
     });
 
-    // Generate TOC for a given page at build-time
+    // Generate TOC for a given page (or all) at build-time
     eleventyConfig.addShortcode("toc", function(data) {
         let post = data.post;
         let headings = [];
@@ -215,6 +215,12 @@ module.exports = (eleventyConfig) => {
             Object.keys(data).forEach(key => data[key] == undefined ? delete data[key] : {});
         }
         return data;
+    });
+
+    eleventyConfig.addFilter("getCollectionItemUrl", function(data) {
+        if (data && typeof data == "object") {
+            return data.url;
+        }
     });
 
     return {
