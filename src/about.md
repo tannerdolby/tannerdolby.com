@@ -7,11 +7,12 @@ headshot:
     src: "/images/headshot3.png"
     srcSmall: "/images/headshot3-small.jpg"
 layout: about.njk
+pageId: main-about
 ---
 
-Hi there! My name is Tanner Dolby. I'm a Software Engineer and Mathematician based in California. I enjoy working with HTML, CSS, JavaScript, Node, React, Python, Java, and C++. I'm interested in applying my skills to build software that positvely impacts the lives of others. I started programming in 2018 with Swift and began learning web development using [freeCodeCamp.org](https://freecodecamp.org) in 2019. Ever since then, I've been hooked on writing code and building things for the web. 
+Hi there! My name is Tanner Dolby. I am a software engineer and mathematician based out of California. I enjoy working with HTML, CSS, JavaScript, Node, Python, Java, and C++. I'm interested in applying my skills to build software that positvely impacts the lives of others. I started programming in 2018 with Swift and began learning web development using [freeCodeCamp.org](https://freecodecamp.org) in 2019. Ever since then, I've been hooked on writing code and building things for the web. 
 
-My academic background is in mathematics, that is I'm a self taught programmer. I like reading books and technical documentation then going and building things. This has proved to be a really surefire way to fully understand a topic or concept. Throughout my life I've always been a problem solver and enjoyed puzzles or logic games like Sudoku. I like to think of programming as a lifelong journey where there is always something more to learn or master, meaning there are always problems to be solved.
+My academic background is in mathematics, that is I'm a self taught programmer. I like reading books and technical documentation then going and building things. This has proved to be a really surefire way to fully understand a topic or concept. Throughout my life I've always been a problem solver and enjoyed puzzles or logic games like Sudoku. I like to think of programming as a lifelong journey where there is always something more to learn or become better at.
 
 I spend most of my free time contributing to open source projects on [GitHub][github], learning new things, creating illustrations, building side projects, running, and making front-end demos on [CodePen][codepen]. With the JAMstack movement on the rise, I've taken an interest in Static Site Generators (SSG). In particular [Eleventy][eleventy], which this website is built with.
 
