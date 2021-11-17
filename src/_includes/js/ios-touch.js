@@ -1,30 +1,17 @@
-// HTML collections for direct link heading/anchor pairs
 const headingList = [...document.getElementsByClassName("post-heading")];
 const links = document.getElementsByClassName("direct-link");
 
-// Iterate over the HTML collection and apply the direct link color change on touchstart event (iOS, safari, iphone)
-
-function touchStart() {
+function touch(color) {
     headingList.forEach(heading => {
         var links = heading.childNodes[1];
-        links.style.color = "#444 !important";
-    });
-};
-
-function touchLeave() {
-    headingList.forEach(heading => {
-        var links = heading.childNodes[1];
-        links.style.color = "transparent !important";
+        links.style.color = color;
     });
 }
 
-
 headingList.forEach(heading => {
-    
     // Handling iOS/iPhone :hover for touch event 
-    heading.addEventListener("touchstart", touchStart, false);
-    
+    heading.addEventListener("touchstart", touch("#444 !important"), false);
     // fixes :hover issue on iPhone/safari for direct links in article (scroll each heading to toggle the link)
-    heading.addEventListener("touchmove", touchLeave, false);
-    heading.addEventListener("touchend", touchLeave, false);
+    heading.addEventListener("touchmove", touch("transparent !important"), false);
+    heading.addEventListener("touchend", touch("transparent !important"), false);
 });
