@@ -7,6 +7,16 @@ const markdownIt = require("markdown-it");
 const metagen = require("eleventy-plugin-metagen");
 const socialImg = require("eleventy-plugin-social-img");
 const respimg = require("eleventy-plugin-sharp-respimg");
+const cheerio = require("cheerio");
+const fs = require("fs");
+
+function toKebabCase(id) {
+    let result = id.toLowerCase().replace(/[\s\W]+/gm, " ").split(" ").join("-");
+    if (result[result.length - 1] === "-") {
+        result = result.slice(0, -1);
+    }
+    return result;
+};
 
 module.exports = (eleventyConfig) => {
 
@@ -19,14 +29,6 @@ module.exports = (eleventyConfig) => {
     };
     
     const md = markdownIt(markdownOptions)
-        .use(function(md) {
-            md.linkify.add("##", {
-                validate: /^[##]+/g,
-                normalize: headingLink => {
-                    headingLink.url = "/writing/";
-                }
-            })
-        })
         // Recognize # for links to post tags 
         .use(function(md) {
             md.linkify.add("#", {
@@ -35,7 +37,7 @@ module.exports = (eleventyConfig) => {
                     match.url = "/writing/?filter=".concat(match.raw.slice(1));
                 }
             })
-        });
+        })
 
     eleventyConfig.setLibrary("md", md);
 
@@ -171,6 +173,48 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.addFilter("urlencode", function(value) {
         value = value.replace(/\s+/gm, "%20");
         return value;
+    });
+
+    // Generate TOC for a given page at build-time
+    eleventyConfig.addShortcode("toc", function(data) {
+        let post = data.post;
+        let headings = [];
+        let links = "";
+
+        // accessing templateContent early error happens
+        // when trying to use data.post.templateContent, if the 'toc'
+        // shortcode is used in the Markdown file being compiled
+        let fileContent = "";
+        if (post) {
+            try {
+                fileContent = fs.readFileSync(post.inputPath, "utf8");
+            } catch (e) {
+                console.error(e);
+            }
+        }
+
+        const $ = cheerio.load(md.render(fileContent));
+
+        // traverse heading elements
+        $(".post-heading").each((i, heading) => {
+            headings.push(heading.children[0].data)
+        });
+
+        headings.forEach(heading => {
+            links += `<li class="toc-link"><a href="#${toKebabCase(heading)}">${heading}</a></li>`
+        });
+
+        return `<div class="post-sidebar"><div class="toc"><div class="row">
+                <h2 class="toc-heading">Table of contents</h2>
+                <button class="unfold-toc">+</button></div></div>
+                <ul class="toc-links">${links}</ul></div>`;
+    });
+
+    eleventyConfig.addFilter("pruneObj", function(data) {
+        if (data && typeof data == "object") {
+            Object.keys(data).forEach(key => data[key] == undefined ? delete data[key] : {});
+        }
+        return data;
     });
 
     return {
