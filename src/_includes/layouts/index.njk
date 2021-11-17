@@ -1,0 +1,25 @@
+---
+layout: main.njk
+pageId: main
+metadata:
+  title: Tanner Dolby
+  desc: Hi, I'm Tanner. A software engineer and mathematician with a passion for building things for the web.
+  url: https://tannerdolby.com
+  img: https://tannerdolby.com/images/arch-spiral-large.jpg
+  img_alt: An Archimedean Spiral generated with JavaScript
+  twitter_card_type: summary_large_image
+  twitter_handle: tannerdolby
+  name: Tanner Dolby
+  generator: eleventy
+  comments: true
+---
+<div class="hero-wrap">
+    <div class="hero-section">
+        {{ content | safe }}
+        {% include "cube-demo.html" %}
+    </div>
+</div>
+{% include "recent-posts.njk" %}
+{% include "featured-projects.njk" %}
+{% include "latest-art.njk" %}
+{% include "homepage-contact.njk" %}

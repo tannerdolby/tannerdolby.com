@@ -6,9 +6,9 @@ widths:
 sizes: "(min-width: 450px) 33.3vw, 100vw"
 class: art-item
 imgDir: "/images/"
+layout: main.njk
+pageId: main-art
 ---
-<!DOCTYPE html>
-<html dir="ltr" lang="en">
     <head>
         {% metagen 
             title="Art - tannerdolby.com",
@@ -30,10 +30,7 @@ imgDir: "/images/"
             {{ css | cssmin | safe }}
         </style>
     </head>
-    <body>
-        <a href="#main-art" class="skip-link">Skip to main content</a>
-        {% include "layouts/nav.njk" %}
-        <main class="main-container art-main" id="main-art">
+
             <header class="banner-container">
                 <h1 class="h1">{{ title }}</h1>
                 {{ content | safe }}
@@ -63,7 +60,3 @@ imgDir: "/images/"
                 </div>
             {% endfor %}
             </section>
-        </main>
-        {% include "layouts/footer.njk" %}
-    </body>
-</html>

@@ -1,5 +1,7 @@
-<!DOCTYPE html>
-<html dir="ltr" lang="en">
+---
+layout: main.njk
+pageId: main-about
+---
     <head>
         {% metagen 
             title="About - tannerdolby.com",
@@ -22,24 +24,10 @@
             {{ css | cssmin | safe }}
         </style>
     </head>
-    <body>
-        <a href="#main-about" class="skip-link">Skip to main content</a>
-        {% include "layouts/nav.njk" %}
-        <main class="main-container" id="main-about" tabindex="-1">
             <header class="banner-container about-header">
                 <h1>{{ title }}</h1>
             </header>
             <section class="main-content" id="about-me">
-                {{content | safe}}
+                {{ content | safe }}
             </section>
-            {% include "layouts/sidebar.njk" %}
-        </main>
-        {% include "layouts/footer.njk" %}
-        {% set js %}
-            {% include "js/sidebar-search.js" %}
-        {% endset %}
-        <script>
-            {{ js | jsmin | safe}}
-        </script>
-    </body>
-</html>
+            {% include "sidebar.njk" %}
