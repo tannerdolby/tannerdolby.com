@@ -1,96 +1,46 @@
 ---
-twitterShare: https://twitter.com/share?
-image: https://tannerdolby.com/images/headshot3.png
-image_alt: Headshot of Tanner
-url: https://tannerdolby.com
-twitter: tannerdolby
-name: Tanner Dolby
+layout: main.njk
+pageId: post-content
+metadata:
+  twitterShare: https://twitter.com/share?
+  image: https://tannerdolby.com/images/headshot3.png
+  image_alt: Headshot of Tanner
+  url: https://tannerdolby.com
+  twitter: tannerdolby
+  twitter_card_type: summary_large_image
+  name: Tanner Dolby
+  generator: eleventy
+  comments: true
 ---
-<!DOCTYPE html>
-<html dir="ltr" lang="en">
-    {% set imgUrl %}
-        {% socialImg 
-            theme=1,
-            title=title,
-            img=image,
-            initials="TD",
-            inputDir="./src",
-            outputPath="/social-share/",
-            overwrite=false
-        %}
-    {% endset %}
-    <head>
-        {% metagen 
-            title=title,
-            desc=preview,
-            url=url + page.url,
-            img=imgUrl,
-            img_alt=image_alt,
-            twitter_card_type="summary_large_image",
-            twitter_handle=twitter,
-            name=name
-        %}
-        <meta name="keywords" content="{{ site.doc_metadata.keywords }}">
-        <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-        {% set css %}
-            {% include "css/style.css" %}
-            {% include "css/prism.css" %}
-            {% include "css/popover.css" %}
-            {% include "css/reset.css" %}
-        {% endset %}
-        <style>
-            {{ css | cssmin | safe }}
-        </style>
-    </head>
-    <body>
-        <a href="#post-content" class="skip-link">Skip to main content</a>
-        {% include "layouts/nav.njk" %}
-        <main class="main-container" id="post-content">
-            <div class="main-content">
-                <header class="post-header">
-                    <div class="post-wrap">
-                        <h1 class="h1" id="post-title">{{ title }}</h1>
-                        <p class="date">Posted on&nbsp;<time style="margin-bottom: 0;" datetime="{{ datetime | date('YYYY-MM-DD') }}">{{ datetime | date('MMMM DD, YYYY') }}</time>&nbsp;&bull; tagged with&nbsp;{% for tag in tags %}<a href="/writing?filter={{ tag }}" aria-label="Link to {{ tag }} posts" style="margin-right: .35rem;">#{{ tag }}</a>{% endfor %}</p>
-                    </div>
-                </header>
-                <div class="post-sidebar">
-                    <div class="toc"></div>
-                </div>
-                <div id="post">
-                    {{ content | safe }}
-                </div>
-                {% set previousPost = collections.posts | getPreviousCollectionItem(page) %}
-                {% set nextPost = collections.posts | getNextCollectionItem(page) %}
-                <nav class="prev-next">
-                    {% if previousPost %}
-                        <a href="{{ previousPost.url }}">
-                            <h3 style="margin-bottom: .75rem;">Previous Post</h3>
-                            <span>{{ previousPost.data.title }}</span>
-                        </a>
-                    {% endif %}
-                    {% if nextPost %}
-                        <a class="next-post" href="{{ nextPost.url }}">
-                            <h3 style="margin-bottom: .75rem;">Next Post</h3>
-                            <span>{{ nextPost.data.title }}</span>
-                        </a>
-                    {% endif %}
-                </nav>
-                {% include "layouts/share.njk" %}
-                {% include "layouts/posts-related.njk" %}
-            </div>
-        </main>
-        {% include "layouts/footer.njk" %}
-        
-        {% set js %}
-            {% include "js/ios-touch.js" %}
-            {% include "js/focus-blocks.js" %}
-            {% include "js/heading-highlight.js" %}
-            {% include "js/toc.js" %}
-        {% endset %}
-        <script>
-            {{ js | jsmin | safe }}
-        </script>
-    </body>
-</html>
+
+<div class="main-content">
+    <header class="post-header">
+        <div class="post-wrap">
+            <h1 class="h1" id="post-title">{{ title }}</h1>
+            <p class="date">Posted on&nbsp;<time style="margin-bottom: 0;" datetime="{{ datetime | date('YYYY-MM-DD') }}">{{ datetime | date('MMMM DD, YYYY') }}</time>&nbsp;&bull; tagged with&nbsp;{% for tag in tags %}<a class="post-tag" href="/writing?filter={{ tag }}" aria-label="Link to {{ tag }} posts" style="margin-right: .35rem;">{{ tag }}</a>{% endfor %}</p>
+        </div>
+    </header>
+    <div id="post">
+        {{ content | safe }}
+    </div>
+    {% set currentPost = collections.posts | getCollectionItem(page) %}
+    {% toc post=currentPost %}
+    {% set previousPost = collections.posts | getPreviousCollectionItem(page) %}
+    {% set nextPost = collections.posts | getNextCollectionItem(page) %}
+    <nav class="prev-next">
+        {% if previousPost %}
+            <a href="{{ previousPost.url }}">
+                <h3>Previous Post</h3>
+                <span>{{ previousPost.data.title }}</span>
+            </a>
+        {% endif %}
+        {% if nextPost %}
+            <a class="next-post" href="{{ nextPost.url }}">
+                <h3>Next Post</h3>
+                <span>{{ nextPost.data.title }}</span>
+            </a>
+        {% endif %}
+    </nav>
+    {% include "share.njk" %}
+    {% include "related-posts.njk" %}
+</div>
