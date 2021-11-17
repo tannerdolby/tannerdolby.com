@@ -1,15 +1,4 @@
 ---
-metadata:
-  title: Tanner Dolby
-  desc: Hi, I'm Tanner. A software engineer and mathematician with a passion for building things for the web.
-  url: https://tannerdolby.com
-  img: https://tannerdolby.com/images/arch-spiral-large.jpg
-  img_alt: An Archimedean Spiral generated with JavaScript
-  twitter_card_type: summary_large_image
-  twitter_handle: tannerdolby
-  name: Tanner Dolby
-  generator: eleventy
-  comments: true
 images:
   inputDir: ./src
   imgDir: /images/
@@ -24,15 +13,49 @@ images:
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
     <head>
-        {% metagen metadata %}
-        <meta name="keywords" content="{{ site.doc_metadata.keywords }}">
+        {% if pageId == "post-content" %}
+            {% set socialImgUrl %}
+                {% socialImg 
+                    theme=1,
+                    title=title,
+                    img=metadata.image,
+                    initials="TD",
+                    inputDir="./src",
+                    outputPath="/social-share/",
+                    overwrite=false
+                %}
+            {% endset %}
+
+            {% metagen
+                title=title,
+                desc=preview,
+                url=metadata.url + page.url,
+                img=socialImgUrl,
+                img_alt=metadata.img_alt,
+                twitter_card_type=metadata.twitter_card_type,
+                twitter_handle=metadata.twitter,
+                name=metadata.name,
+                generator=metadata.generator,
+                comments=metadata.comments
+            %}
+            
+        {% else %}
+
+            {% set metagenData = metadata | pruneObj %}
+            {% metagen metagenData %}
+
+        {% endif %}
         <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
         {% set css %}
-            {% include "css/style.css" %}
-            {% include "css/cube-demo.css" %}
+            {% if pageId == "post-content" %}
+                {% include "css/prism.css" %}
+            {% elif pageId == "main" %}
+                {% include "css/cube-demo.css" %}
+            {% endif %}
             {% include "css/reset.css" %}
+            {% include "css/style.css" %}
         {% endset %}
         <style>
            {{ css | cssmin | safe }}
@@ -40,87 +63,28 @@ images:
     </head>
     <body>
         <a href="#main" class="skip-link">Skip to main content</a>
-        {% include "layouts/nav.njk" %}
-        <main class="main-container" id="main" tabindex="-1">
-            <div class="hero-wrap">
-                <div class="hero-section">
-                    {{ content | safe }}
-                    {% include "layouts/cube-demo.njk" %}
-                </div>
-            </div>
-            <section class="posts-container">
-                <div class="recent-posts">
-                    <h2>Recent Posts</h2>
-                    {% for post in collections.recentPosts %}
-                    <article class="post">
-                        <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
-                        <p class="date">Posted on&nbsp;<time datetime="{{ post.data.datetime | date('YYYY-MM-DD') }}">{{ post.data.datetime | date('MMMM DD, YYYY') }}</time>&nbsp;&bull; tagged with&nbsp;{% for tag in post.data.tags %}<a style="margin-right: .35rem;" href="/writing?filter={{ tag }}">#{{ tag }}</a>{% endfor %}</p>
-                        <p class="preview">{{ post.data.preview }}</p>
-                    </article>
-                    {% endfor %}
-                    <div style="margin-top: 1.75rem;">
-                        <a class="see-more" style="font-size: 17px; text-decoration: underline;" href="/writing/">See more posts &RightArrow;</a>
-                    </div>
-                </div>
-                {% include "layouts/sidebar.njk" %}
-            </section>
-            {% include "layouts/projects.njk" %}
-            <section class="featured-art" id="feat-art">
-                <div class="feat-art-wrapper">
-                    <h2>Latest Art</h2>
-                    <ul class="feat-art-list">
-                        <!-- Todo: Fix sortRecent(arr) usage in .eleventy.js -->
-                        {% for drawing in art | sortRecent(art) %}
-                            <li>
-                                <a href="/art/#{{ drawing.id }}" aria-label="{{ drawing.name }}">
-                                    {% respimg 
-                                        src=drawing.image.filename,
-                                        alt=drawing.image.alt,
-                                        widths=images.widths,
-                                        sizes=images.sizes,
-                                        inputDir=images.inputDir,
-                                        imgDir=images.imgDir,
-                                        className="featured-art-item",
-                                        id=images.id,
-                                        width=images.width,
-                                        height=images.height
-                                    %}
-                                </a>
-                            </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            </section>
-            <section class="contact" id="contact-me">
-                <div class="contact-wrapper">
-                    <h2>Contact Me</h2>
-                    <p>I'm always interested in having a chat about software development. If you think my skills would align with your projects needs, I'd love to hear from you. I'm available at any of the social links below or by navigating to my <a href="/contact/">contact page</a>.</p>
-                    <ul class="socials-list">
-                        <li>
-                            <a class="github-block" href="{{ site.page_info.socials.github }}">
-                                <img width="18" height="18" src="/images/githubLight.svg" alt="Github logo">
-                                Github
-                            </a>
-                        </li>
-                        <li>
-                            <a class="twitter-block" href="{{ site.page_info.socials.twitter }}">
-                                <img width="18" height="18" src="/images/twitterLight.svg" alt="Link to my Twitter">
-                                Twitter
-                            </a>
-                        </li>
-                        <li>
-                            <a class="linkedin-block" href="{{ site.page_info.socials.linkedin }}">
-                                <img width="18" height="18" src="/images/linkedinLight.svg" alt="Link to my LinkedIn">
-                                LinkedIn
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-        </main>
-        {% include "layouts/footer.njk" %}
+        {% include "nav.njk" %}
+
+        {{ content | safe }}
+
+        {% include "footer.njk" %}
+
         {% set js %}
-            {% include "js/sidebar-search.js" %}
+            {% if pageId == "main-writing" %}
+                {% include "js/filter-posts.js" %}
+            {% elif pageId == "main-search" %}
+                {% include "js/search.js" %}
+            {% elif pageId == "post-content" %}
+                {% include "js/toc.js" %}
+                {% include "js/heading-highlight.js" %}
+                {% include "js/focus-blocks.js" %}
+                {% include "js/ios-touch.js" %}
+            {% elif pageId == "main-contact" %}
+                {% include "js/email.js" %}
+                {% include "js/sidebar-search.js" %}
+            {% elif pageId in ["main", "main-about"] %}
+                {% include "js/sidebar-search.js" %}
+            {% endif %}
         {% endset %}
         <script>
             {{ js | jsmin | safe}}
