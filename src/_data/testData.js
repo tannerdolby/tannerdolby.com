@@ -1,6 +1,6 @@
 const fetch = require("node-fetch");
 
-// Fetch some data from the GitHub API
+// Example of fetching some data from the GitHub API
 async function getData(url) {
     try {
         repo = await fetch(url).then(data => data.json());
@@ -20,7 +20,6 @@ async function getData(url) {
 function random(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
-
     return Math.floor(Math.random() * (max - min) + min)
 }
 
