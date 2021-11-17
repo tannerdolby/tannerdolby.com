@@ -430,11 +430,6 @@ main .art .art-details .drawing-info {
   height: 23px;
 }
 
-/* Referenced selector from https://webaim.org/resources/contrastchecker/ */
-article *::selection {
-  background: #fff2a8;
-}
-
 main {
   transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);
