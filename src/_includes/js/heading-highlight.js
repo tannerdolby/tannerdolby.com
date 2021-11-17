@@ -1,16 +1,6 @@
 // Get all <h2>, <h3> and <h4> .. <h6> tags for direct links
 const headers = [...document.getElementsByClassName("post-heading")]; // converting the iterable collection to an array
 
-/**
- * Returns a slugified unique ID string.
- * 
- * @param {String} id The string used to generate a unique ID.
- * @returns {String} The unique slug.
- */
-function uniqueId(id) {
-    return removeChars(id).toLowerCase().split(" ").join("-");
-};
-
 /* Grab <code><a>..</a></code> */
 function grabCodeLinks() {
     [...document.querySelectorAll("#post a")].filter(node => {
