@@ -360,6 +360,8 @@ main {
     .post-tag {
         padding: 3px 10px;
         font-size: .9rem;
+        display: inline-block;
+        vertical-align: middle;
     }
 }
 
@@ -367,9 +369,9 @@ main {
     margin-right: .35rem;
     border-radius: 500px;
     font-size: .8rem;
-    padding: 0 12px;
-    display: flex;
-    align-items: center;
+    padding: 2px 12px;
+    display: inline-block;
+    vertical-align: middle;
     width: fit-content;
     -moz-width: fit-content;
     background: $tag-bg;

@@ -727,15 +727,17 @@ main blockquote {
 #post-content .post-tag {
   padding: 3px 10px;
   font-size: 0.9rem;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .post-tag {
   margin-right: 0.35rem;
   border-radius: 500px;
   font-size: 0.8rem;
-  padding: 0 12px;
-  display: flex;
-  align-items: center;
+  padding: 2px 12px;
+  display: inline-block;
+  vertical-align: middle;
   width: fit-content;
   -moz-width: fit-content;
   background: #e7f0fa;
@@ -1032,8 +1034,6 @@ main .post h3 {
 .post-wrap .date {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
-  display: flex;
-  align-items: center;
 }
 
 .recent-posts {
