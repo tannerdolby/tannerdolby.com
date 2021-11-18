@@ -38,7 +38,7 @@ images:
                 generator=metadata.generator,
                 comments=metadata.comments
             %}
-            
+
         {% else %}
 
             {% set metagenData = metadata | pruneObj %}
@@ -62,7 +62,7 @@ images:
         </style>
     </head>
     <body>
-        <a href="#main" class="skip-link">Skip to main content</a>
+        <a href="#{{ pageId }}" class="skip-link">Skip to main content</a>
         {% include "nav.njk" %}
 
         {{ content | safe }}
