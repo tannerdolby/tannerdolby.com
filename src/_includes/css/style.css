@@ -734,8 +734,8 @@ main blockquote {
 .post-tag {
   margin-right: 0.35rem;
   border-radius: 500px;
-  font-size: 0.8rem;
-  padding: 2px 12px;
+  font-size: 0.775rem;
+  padding: 3px 12px;
   display: inline-block;
   vertical-align: middle;
   width: fit-content;
