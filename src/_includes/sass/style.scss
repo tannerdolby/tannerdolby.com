@@ -105,7 +105,9 @@ pre {
 
 blockquote {
     border-left: .4rem solid #f06;
+    border-left: .4rem solid #819cbb;
     background: $blockquote-gray;
+    background: $tag-bg;
     padding: .2rem 1rem;
 
     p {

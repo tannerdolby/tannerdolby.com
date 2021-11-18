@@ -741,13 +741,13 @@ main blockquote {
   vertical-align: top;
   width: fit-content;
   -moz-width: fit-content;
-  background: #e7f0fa;
+  background: #eee;
   color: #212121;
   text-decoration: none;
 }
 
 .post-tag:hover {
-  background: #d3e3f3;
+  background: #e0e0e0;
   color: #222;
   text-decoration: none;
   cursor: pointer;
@@ -1534,7 +1534,9 @@ pre code {
 
 blockquote {
   border-left: 0.4rem solid #f06;
+  border-left: 0.4rem solid #819cbb;
   background: #f1f1f1;
+  background: #e7f0fa;
   padding: 0.2rem 1rem;
 }
 blockquote p {
