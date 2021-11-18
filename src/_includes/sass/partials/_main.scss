@@ -375,13 +375,14 @@ main {
     vertical-align: top;
     width: fit-content;
     -moz-width: fit-content;
-    background: $tag-bg;
+    background: $lightgray;
     color: $paragraph-text;
     text-decoration: none;
 }
 
 .post-tag:hover {
     background: #d3e3f3;
+    background: rgb(235,235,235);
     color: #222;
     text-decoration: none;
     cursor: pointer;
