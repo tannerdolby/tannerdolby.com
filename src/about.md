@@ -56,7 +56,9 @@ I'm interested in all things software related: web development, C++ or Java appl
 
 <div class="social-icons">
 {% for icon in socials %}
+{% if icon.name != "LeetCode" %}
 - [![{{ icon.name }}]({{ icon.src }})]({{ icon.url }})
+{% endif %}
 {% endfor %}
 </div>
 
