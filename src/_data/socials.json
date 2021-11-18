@@ -3,35 +3,36 @@
         "name": "Twitter",
         "url": "https://twitter.com/tannerdolby",
         "src": "/images/twitter.svg",
-        "alt": "Link to my Twitter account",
-        "order": 1
+        "alt": "Link to my Twitter account"
     },
     {
         "name": "GitHub",
         "url": "https://github.com/tannerdolby",
         "src": "/images/github.svg",
-        "alt": "Link to my Github account", 
-        "order": 2
+        "alt": "Link to my Github account"
     },
     {
         "name": "CodePen",
         "url": "https://codepen.io/tannerdolby",
         "src": "/images/codepen-logo.svg",
-        "alt": "Link to my CodePen account",
-        "order": 3
+        "alt": "Link to my CodePen account"
     },
     {
         "name": "LinkedIn",
         "url": "https://linkedin.com/in/tanner-dolby",
         "src": "/images/linkedinFooter.svg",
-        "alt": "Link to my LinkedIn account",
-        "order": 4
+        "alt": "Link to my LinkedIn account"
     },
     {
         "name": "StackOverflow",
         "url": "https://stackoverflow.com/users/11389581/tanner-dolby",
         "src": "/images/stack-overflow.svg",
-        "alt": "Link to my StackOverflow account",
-        "order": 5
+        "alt": "Link to my StackOverflow account"
+    },
+    {
+        "name": "LeetCode",
+        "url": "https://leetcode.com/gnaare/",
+        "src": "",
+        "alt": "Link to my LeetCode account"
     }
 ]
