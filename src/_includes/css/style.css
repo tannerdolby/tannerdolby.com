@@ -733,9 +733,10 @@ main blockquote {
 
 .post-tag {
   margin-right: 0.35rem;
+  margin-bottom: 5px;
   border-radius: 500px;
   font-size: 0.775rem;
-  padding: 3px 12px;
+  padding: 4px 10px;
   display: inline-block;
   vertical-align: middle;
   width: fit-content;
@@ -748,6 +749,7 @@ main blockquote {
 .post-tag:hover {
   background: #d3e3f3;
   color: #222;
+  text-decoration: none;
   cursor: pointer;
 }
 
@@ -940,8 +942,6 @@ main blockquote {
 
 main .post .date {
   margin: 0 0 0.75rem;
-  display: flex;
-  flex-wrap: wrap;
   font-size: 1.03rem;
 }
 main .post h3 {
