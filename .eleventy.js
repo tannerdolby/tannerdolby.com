@@ -187,7 +187,10 @@ module.exports = (eleventyConfig) => {
         let fileContent = "";
         if (post) {
             try {
-                fileContent = fs.readFileSync(post.inputPath, "utf8");
+                fs.readFile(post.inputPath, "utf8", (err, data) => {
+                    if (err) console.error(err);
+                    fileContent = data;
+                });
             } catch (e) {
                 console.error(e);
             }
