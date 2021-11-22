@@ -49,7 +49,7 @@ public:
 
 <h2 class="post-heading">One-pass hash table (Fastest Solution)</h2>
 
-This algorithm performs at O(N) by performing a single pass of an [hash table][hash-table]. That is, while iterating and inserting elements into the `unordered_map<int, int>`, we check if the current elements [complement][complement] e.g. `target - nums[i]` already exists in the map. If it does exist, the solution has been found and we return the indices of the pair. The improvement from O(N^2) to O(N) is quite a big improvement, going from a 96ms runtime to 4ms runtime. 
+The algorithm can be improved to run at O(N) by performing a single pass of a [hash table][hash-table]. That is, while iterating and inserting elements into the `unordered_map<int, int>`, we check if the current elements [complement][complement] e.g. `target - nums[i]` already exists in the map. If it does exist, the solution has been found and we return the indices of the pair. The improvement from O(N^2) to O(N) is quite a big improvement, going from a 96ms runtime to 4ms runtime. 
 
 [View submission on LeetCode](https://leetcode.com/submissions/detail/590712005/)
 
