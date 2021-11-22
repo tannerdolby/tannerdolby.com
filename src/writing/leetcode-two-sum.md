@@ -12,7 +12,7 @@ preview: Given a list of integers and a target integer, find which pair of value
 
 The [Two Sum][two-sum] problem description is below:
 
-> Given an array of integers `nums` and an integer `target`, return indices of the two numbers such that they add up to target. You may assume that each input would have exactly one solution, and you may not use the same element twice. You can return the answer in any order.
+Given an array of integers `nums` and an integer `target`, return indices of the two numbers such that they add up to target. You may assume that each input would have exactly one solution, and you may not use the same element twice. You can return the answer in any order.
 
 <h3 class="post-heading">First Approach (Brute Force)</h3>
 
