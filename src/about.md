@@ -10,7 +10,7 @@ layout: about.njk
 pageId: main-about
 ---
 
-Hi there! My name is Tanner Dolby. I am a software engineer and mathematician based out of California. I enjoy working with HTML, CSS, JavaScript, Node, Python, Java, and C++. I'm interested in applying my skills to build software that positvely impacts the lives of others. I started programming in 2018 with Swift and began learning web development using [freeCodeCamp.org](https://freecodecamp.org) in 2019. Ever since then, I've been hooked on writing code and building things for the web. 
+Hi there! My name is Tanner Dolby. I am a software engineer and mathematician based out of California. I enjoy working with HTML, CSS, JavaScript, Node, Python, Java, and C++. I'm interested in applying my skills to build performant software. I started to learn about programming in 2018 with Swift and discovered web development using [freeCodeCamp.org](https://freecodecamp.org) in 2019. Ever since then, I've been hooked on writing code and building things for the web. 
 
 My academic background is in mathematics, that is I'm a self taught programmer. I like reading books and technical documentation then going and building things. This has proved to be a really surefire way to fully understand a topic or concept. Throughout my life I've always been a problem solver and enjoyed puzzles or logic games like Sudoku. I like to think of programming as a lifelong journey where there is always something more to learn or become better at.
 
@@ -18,7 +18,9 @@ I spend most of my free time contributing to open source projects on [GitHub][gi
 
 ## Interests
 
-I like to write about programming and technology. I'm currently fixated on learning more about game development with Phaser, Java, Chrome extensions, and Web performance. If you would like to see me write about a specific topic or concept, feel free to message me on Twitter about it. Lately, I've been spending most of my free time learning about Phaser, developing Chrome Extensions and creating illustrations using [Vectornator][vectornator]. I enjoy writing documentation (and referencing it) so when I'm learning new content, I tend to take notes and write a blog post or something to document and reinforce what I learned. 
+I like to write about programming and technology. I'm currently fixated on learning more about C++, game development with Phaser, Chrome extensions, and Web performance. If you would like to see me write about a specific topic or concept, feel free to message me on Twitter about it. 
+
+Lately, I've been spending most of my free time learning about Phaser, building projects with C++ and creating illustrations using [Vectornator][vectornator]. I enjoy writing documentation (and referencing it) so when I'm learning new content, I tend to take notes and write a blog post or something to document and reinforce what I learned. 
 
 When I'm not on the computer, you can find me creating illustrations on my iPad, reading a good book, running, skateboarding, finding the best slice of pizza, and trying to become a better photographer.
 

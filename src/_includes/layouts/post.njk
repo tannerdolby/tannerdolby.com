@@ -17,7 +17,14 @@ metadata:
     <header class="post-header">
         <div class="post-wrap">
             <h1 class="h1" id="post-title">{{ title }}</h1>
-            <p class="date">Posted on&nbsp;<time style="margin-bottom: 0;" datetime="{{ datetime | date('YYYY-MM-DD') }}">{{ datetime | date('MMMM DD, YYYY') }}</time>&nbsp;&bull; tagged with&nbsp;{% for tag in tags %}<a class="post-tag" href="/writing?filter={{ tag }}" aria-label="Link to {{ tag }} posts" style="margin-right: .35rem;">{{ tag }}</a>{% endfor %}</p>
+            <p class="date">Posted on&nbsp;<time style="margin-bottom: 0;" datetime="{{ datetime | date('YYYY-MM-DD') }}">
+            {{ datetime | date('MMMM DD, YYYY') }}</time>&nbsp;&bull; tagged with&nbsp;
+            {% for tag in tags %}
+            <a class="post-tag" href="/writing?filter={{ tag }}" aria-label="Link to {{ tag }} posts">
+                {{ tag }}
+            </a>
+            {% endfor %}
+            </p>
         </div>
     </header>
     <div id="post">

@@ -1533,10 +1533,8 @@ pre code {
 }
 
 blockquote {
-  border-left: 0.4rem solid #f06;
-  border-left: 0.4rem solid #819cbb;
-  background: #f1f1f1;
-  background: #e7f0fa;
+  border-left: 0.4rem solid #658dbb;
+  background: #e5f1ff;
   padding: 0.2rem 1rem;
 }
 blockquote p {
@@ -1700,7 +1698,7 @@ textarea:focus {
   align-items: center;
 }
 
-.wrap .tags-list {
+.tags-list {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -1708,14 +1706,13 @@ textarea:focus {
   padding-left: 0;
   list-style: none;
   margin: 0.5rem 0 1rem 0;
-  grid-column: 1/7;
 }
-.wrap .tags-list li {
+.tags-list li {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
-.wrap .tags-list li .post-label {
+.tags-list li .post-label {
   margin: 0.75rem 0;
   padding: 0.2rem 0.5rem;
   margin-right: 0.5rem;
@@ -1724,7 +1721,7 @@ textarea:focus {
   border: 1px solid #666;
   color: #212121;
 }
-.wrap .tags-list li .post-label:hover {
+.tags-list li .post-label:hover {
   border: 0.08rem solid transparent;
   border: 1px solid transparent;
   text-decoration: none;

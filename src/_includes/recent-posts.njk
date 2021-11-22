@@ -6,7 +6,7 @@
             <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
             <p class="date">Posted on&nbsp;<time datetime="{{ post.data.datetime | date('YYYY-MM-DD') }}">
             {{ post.data.datetime | date('MMMM DD, YYYY') }}</time>&nbsp;&bull; tagged with&nbsp;
-            {% for tag in post.data.tags %}<a class="post-tag {% if tag == 'c++' %}cpp{% else %}{{ tag }}{% endif %}" href="/writing?filter={{ tag }}">{{ tag }}</a>{% endfor %}</p>
+            {% for tag in post.data.tags %}<a class="post-tag {{ tag }}" href="/writing?filter={{ tag }}">{{ tag }}</a>{% endfor %}</p>
             <p class="preview">{{ post.data.preview }}</p>
         </article>
         {% endfor %}

@@ -18,6 +18,13 @@ function toKebabCase(id) {
     return result;
 };
 
+function fileReader(filePath, callback) {
+    fs.readFile(filePath, "utf8", (err, data) => {
+        if (err) console.error(err);
+        callback(null, data);
+    });
+};
+
 module.exports = (eleventyConfig) => {
 
     markdownTemplateEngine: "njk";
@@ -160,19 +167,22 @@ module.exports = (eleventyConfig) => {
     
     });
 
+
+    // Add %20 to url encode title strings for share on Twitter
+    eleventyConfig.addFilter("urlencode", function(value) {
+        value = value.replace(/\s+/gm, "%20");
+        return value;
+    });
+
+    // Generate taglist from a collection
     eleventyConfig.addFilter("taglist", function(collection) {
         const tags = [];
         collection.forEach(post => {
             tags.push(...post.data.tags);
         });
         const sorted = [...new Set(tags)].sort((a, b) => a.localeCompare(b));
+        
         return sorted;
-    });
-
-    // Add %20 to url encode title strings for share on Twitter
-    eleventyConfig.addFilter("urlencode", function(value) {
-        value = value.replace(/\s+/gm, "%20");
-        return value;
     });
 
     // Generate TOC for a given page (or all) at build-time
@@ -184,9 +194,13 @@ module.exports = (eleventyConfig) => {
         // accessing templateContent early error happens
         // when trying to use data.post.templateContent, if the 'toc'
         // shortcode is used in the Markdown file being compiled
-        let fileContent = "";
+        var fileContent = "";
+        
         if (post) {
             try {
+                // this blocking part is not ideal, but returning the
+                // result of async readFile without eleventyConfig being
+                // async is causing me some issues
                 fileContent = fs.readFileSync(post.inputPath, "utf8");
             } catch (e) {
                 console.error(e);
@@ -203,7 +217,6 @@ module.exports = (eleventyConfig) => {
         headings.forEach(heading => {
             links += `<li class="toc-link"><a href="#${toKebabCase(heading)}">${heading}</a></li>`
         });
-
         return `<div class="post-sidebar"><div class="toc"><div class="row">
                 <h2 class="toc-heading">Table of contents</h2>
                 <button class="unfold-toc">+</button></div></div>
