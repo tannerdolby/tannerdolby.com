@@ -411,7 +411,7 @@ textarea {
 .filename-title {
     font-size: 14px;
     width: fit-content;
-    -moz-width: fit-content;
+    width: -moz-fit-content;
     padding: 3px 10px;
     border: 1px solid #333;
     border-top-left-radius: 3px;

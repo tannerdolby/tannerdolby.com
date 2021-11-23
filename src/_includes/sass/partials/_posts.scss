@@ -316,7 +316,7 @@ main {
         display: flex;
         align-items: center;
         width: fit-content;
-        -moz-width: fit-content;
+        width: -moz-fit-content;
         font-size: 1.1rem;
 
         svg {

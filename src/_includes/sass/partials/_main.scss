@@ -374,7 +374,7 @@ main {
     display: inline-block;
     vertical-align: top;
     width: fit-content;
-    -moz-width: fit-content;
+    width: -moz-fit-content;
     background: $lightgray;
     color: $paragraph-text;
     text-decoration: none;
