@@ -61,7 +61,7 @@
         display: block;
         margin: 0;
         width: fit-content;
-        width: -moz-fit-content;
+        -moz-width: fit-content;
         text-decoration: none;
         font-size: 1rem;
         background: inherit;
@@ -97,7 +97,7 @@
         margin-top: 1.35rem;
         font-weight: 600;
         max-width: fit-content;
-        max-width: -moz-fit-content;
+        -moz-max-width: fit-content;
         box-shadow: none;
         transition: none;
 

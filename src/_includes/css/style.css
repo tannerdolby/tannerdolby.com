@@ -120,7 +120,7 @@
   display: block;
   margin: 0;
   width: fit-content;
-  width: -moz-fit-content;
+  -moz-width: fit-content;
   text-decoration: none;
   font-size: 1rem;
   background: inherit;
@@ -155,7 +155,7 @@
   margin-top: 1.35rem;
   font-weight: 600;
   max-width: fit-content;
-  max-width: -moz-fit-content;
+  -moz-max-width: fit-content;
   box-shadow: none;
   transition: none;
 }
@@ -1184,7 +1184,7 @@ main .post h3 {
   display: flex;
   align-items: center;
   width: fit-content;
-  width: -moz-fit-content;
+  -moz-width: fit-content;
   font-size: 1.1rem;
 }
 .share .twitter-share svg {
@@ -1808,7 +1808,7 @@ textarea:focus {
 .filename-title {
   font-size: 14px;
   width: fit-content;
-  width: -moz-fit-content;
+  -moz-width: fit-content;
   padding: 3px 10px;
   border: 1px solid #333;
   border-top-left-radius: 3px;
