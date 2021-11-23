@@ -4,6 +4,7 @@ tags:
   - leetcode
   - cpp
 preview: Given a list of integers and a target integer, find which pair of values in the list sum to equal the target value and then return the indices of the pair.
+templateEngineOverride: njk, md
 ---
 
 {{ preview }}
@@ -51,7 +52,17 @@ public:
 
 The algorithm can be improved to run at O(N) by performing a single pass of a [hash table][hash-table]. That is, while iterating and inserting elements into the `unordered_map<int, int>`, we check if the current elements [complement][complement] e.g. `target - nums[i]` already exists in the map. If it does exist, the solution has been found and we return the indices of the pair. The improvement from O(N^2) to O(N) is quite a big improvement, going from a 96ms runtime to 4ms runtime. 
 
-[View submission on LeetCode](https://leetcode.com/submissions/detail/590712005/)
+{% respimg 
+    src="two-sum-submission.png",
+    alt="A screenshot of my best performing submission on LeetCode for the Two Sum problem",
+    inputDir="./src",
+    imgDir="/images/",
+    widths=[320, 480, 640, 1024],
+    width="100%",
+    height="100%",
+    sizes="(max-width: 450px) 33.3vw, 100vw",
+    className="demo-img"
+%}
 
 _O(N) runtime (4ms) with 10.9mb memory usage_
 
