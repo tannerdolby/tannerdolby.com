@@ -756,6 +756,7 @@ main blockquote {
 .a11y-wrap {
   max-width: 85ch;
   margin: 0 auto 4rem auto;
+  padding: 0 1.25rem;
 }
 .a11y-wrap .banner-container {
   padding: 0;
