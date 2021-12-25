@@ -22,29 +22,35 @@ Naturally, my first thought was to reach for loops and traverse the array of int
 _O(N^2) runtime (96ms) with 10.1mb memory usage_
 
 ```cpp
-class Solution {
-public:
-    // O(N*N)=O(N^2) runtime
-    // An outer loop with nested loop, so we multiply the runtimes O(A * B)
-    vector<int> twoSum(vector<int>& nums, int target) {
-        int sum = 0;
-        int i = 0;
-        int j = 0;
-        // Using iterators to traverse `nums`
-        for (auto it = nums.begin(); it != nums.end(); ++it) {
-            // Do B for each time you do A
-            j = i + 1;
-            for (auto itr = nums.begin() + j; itr != nums.end(); ++itr) {
-                sum = *it + *itr;
-                if (sum == target) {
-                    return {i, j};
-                }
-                j++;
-            }
-            i++;
-        };
-        return {0, 0};
-    }
+// time complexity = O(N^2) quadratic (not great)
+// space complexity = O(1) constant
+vector<int> twoNumberSum(vector<int> array, int targetSum) {
+	// iterate through the array, and for each element
+	// iterate the full array again checking if any pair 
+	// sums to the target sum (except for the number and itself)
+	// e.g. do B work for each A
+	// O(A*B)=O(N^2) time complexity for two nested for loops
+	for (int i = 0; i < array.size(); i++) {
+		for (int j = 0; j < array.size(); j++) {
+			int sum = 0;
+			// the target sum has to be obtained by summing two different
+			// integers, you cant add a single integer to itself to obtain target sum
+			if (array[j] == array[i]) {
+				// continue to next iteration of loop
+				continue;
+			} else {
+				sum = array[i] + array[j];
+			}
+			
+			// check if any two numbers in the array
+			// sum to equal the target sum
+			if (sum == targetSum) {
+				// return the vector if we find any pair of numbers summing the target
+				return {array[i], array[j]};
+			}
+		}
+	}
+	return {};
 };
 ```
 
