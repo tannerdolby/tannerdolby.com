@@ -24,29 +24,11 @@ _O(N^2) runtime (96ms) with 10.1mb memory usage_
 ```cpp
 // time complexity = O(N^2) quadratic (not great)
 // space complexity = O(1) constant
-vector<int> twoNumberSum(vector<int> array, int targetSum) {
-	// iterate through the array, and for each element
-	// iterate the full array again checking if any pair 
-	// sums to the target sum (except for the number and itself)
-	// e.g. do B work for each A
-	// O(A*B)=O(N^2) time complexity for two nested for loops
-	for (int i = 0; i < array.size(); i++) {
-		for (int j = 0; j < array.size(); j++) {
-			int sum = 0;
-			// the target sum has to be obtained by summing two different
-			// integers, you cant add a single integer to itself to obtain target sum
-			if (array[j] == array[i]) {
-				// continue to next iteration of loop
-				continue;
-			} else {
-				sum = array[i] + array[j];
-			}
-			
-			// check if any two numbers in the array
-			// sum to equal the target sum
-			if (sum == targetSum) {
-				// return the vector if we find any pair of numbers summing the target
-				return {array[i], array[j]};
+vector<int> twoNumberSum(vector<int> nums, int target) {
+	for (int i = 0; i < nums.size(); i++) {
+		for (int j = 0; j < nums.size(); j++) {
+			if (array[i] + array[j] == target) {
+				return {nums[i], nums[j]};
 			}
 		}
 	}
@@ -75,26 +57,20 @@ _O(N) runtime (4ms) with 10.9mb memory usage_
 ```cpp
 class Solution {
 public:
-    // O(N) runtime - one-pass through an unordered map
+    // O(n) time and O(1) space
     vector<int> twoSum(vector<int>& nums, int target) {
-        // where Key = nums[i] (the value at each iteration)
-        // and Value = i (control variable, representing position of item in `nums`)
         unordered_map<int, int> umap;
-        
+
         for (int i = 0; i < nums.size(); ++i) {
-            // search the map
-            auto it = umap.find(target - nums[i]);
             
-            // Ensure iterator is not pointing
-            // at the last element outside the container
+            auto it = umap.find(target - nums[i]);
+        
             if (it != umap.end()) {
                 // search was successful, return indicies
                 return vector<int> {i, it->second};
+            } else {
+                umap[nums[i]] = i;
             }
-            // populate the map, where the keys are each number
-            // in `nums` and value is the position
-            // e.g. control variable `i` as the value
-            umap[nums[i]] = i;
         }
         return {0, 0};
     }
