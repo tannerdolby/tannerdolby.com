@@ -27,7 +27,7 @@ _O(N^2) runtime (96ms) with 10.1mb memory usage_
 vector<int> twoNumberSum(vector<int> nums, int target) {
 	for (int i = 0; i < nums.size(); i++) {
 		for (int j = 0; j < nums.size(); j++) {
-			if (array[i] + array[j] == target) {
+			if (nums[i] + nums[j] == target) {
 				return {nums[i], nums[j]};
 			}
 		}
