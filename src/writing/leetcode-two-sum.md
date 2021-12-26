@@ -60,14 +60,10 @@ public:
     // O(n) time and O(1) space
     vector<int> twoSum(vector<int>& nums, int target) {
         unordered_map<int, int> umap;
-
         for (int i = 0; i < nums.size(); ++i) {
-            
             auto it = umap.find(target - nums[i]);
-        
             if (it != umap.end()) {
-                // search was successful, return indicies
-                return vector<int> {i, it->second};
+                return {i, it->second};
             } else {
                 umap[nums[i]] = i;
             }
