@@ -25,12 +25,7 @@ git fetch origin pull/2/head:563-some-bug-fix
 git checkout 563-some-bug-fix
 ```
 
-That's it. Fetch changes from a local or remote feature branch and switch branches to the newly created branch from the fetch.
-
-
-<h2 class="post-heading">Fetch a remote branch</h2>
-
-If your pulling into a feature branch from a remote repository, use `upstream` instead of `origin`.
+That's it. Fetch changes from a local or remote feature branch and switch branches to the newly created branch from the fetch. If your pulling into a feature branch from a remote repository, use `upstream` instead of `origin`.
 
 ```git
 git fetch upstream pull/id/head:$BRANCHNAME
@@ -52,3 +47,13 @@ Switched to branch '323-fix-async'
 ```
 
 Now you have a local copy of the changes in a upstream feature branch, its time to start revewing and approve or reject those changes! If you want to see what branch your currently on, use `git branch`.
+
+<h2 class="post-heading">Pulling on a branch</h2>
+
+Let's say we had a feature branch named `112-fix-buffer` that we submitted some changes on in a public repository called `the-buffer-proj`. When someone else pulls into your feature branch 112-fix-buffer and makes changes then pushes those changes. Your branch locally will be "behind" as there are changes proposed by others that you haven't synced with yet. To get up-to-date (merge) with your own branch just pull on it to get the latest changes.
+
+```cpp
+git pull origin 112-fix-buffer
+```
+
+This will perform a fetch and merge of remote commits.
