@@ -18,8 +18,7 @@ async function fetchData(url) {
             homepage: json.homepage,
             repo_url: json.html_url
         }
-    }
-    catch (e) {
+    } catch (e) {
         console.log(`Error caching: ${url}`, e);
         return {
             title: "A Github Project by Tanner",
@@ -37,14 +36,14 @@ async function fetchData(url) {
 
 module.exports = async function() {
     let apiUrl = "https://api.github.com/repos/tannerdolby";
-    
+
     try {
         let repos = [
             "eleventy-photo-gallery",
             "eleventy-plugin-metagen",
             "eleventy-plugin-sharp-respimg",
             "bug-saves-world",
-            "cipher-news",
+            "cpp-markdown-parser",
             "randoma11y-chrome-extension"
         ];
         repos = repos.map(async (repo) => {
