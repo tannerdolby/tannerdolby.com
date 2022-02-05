@@ -10,7 +10,7 @@ datetime: 2022-02-05 00:00:00 Z
 
 {{ preview }}
 
-The [sizeof](https://en.cppreference.com/w/cpp/language/sizeof) will return the size in bytes of a variable or data structure. Given the fact that arrays are linear data structures for sequentially storing elements of the same type, we can get the size of the underlying array data structure and then divide it by the size of a single element in the array.
+The [sizeof](https://en.cppreference.com/w/cpp/language/sizeof) will yield the size in bytes of a variable or data structure. Given the fact that arrays are linear data structures for sequentially storing elements of the same type, we can get the size of the underlying array data structure and then divide it by the size of a single element in the array.
 
 <h2 class="post-heading">Why does this work?</h2>
 
