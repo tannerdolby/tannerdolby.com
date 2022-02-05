@@ -15,10 +15,6 @@
                         </div>
                     </div>
                     <p class="project-desc">{{ repo.desc }}</p>
-                    <ul class="links">
-                        <li><a class="tile-link" href="{{ repo.homepage or repo.repo_url }}" aria-label="View the live demo for {{ repo.title }}">Live demo</a></li>
-                        <li><a class="tile-link" href="{{ repo.repo_url }}" aria-label="View the source code for {{ repo.name }}">Source code</a></li>
-                    </ul>
                 </div>
             </li>
             {% endfor %}
