@@ -40,7 +40,7 @@ Therefore `32 = numBytes * byteSize` and we know a byte equals 8 bits so the equ
 32 = numBytes * 8 
 ```
 
-and solving for the number of bytes `numBytes`, we can conclude `numBytes = 32 / 8` which equals 4 bytes. For another common fixed-width integer, the 64-bit integer, it would be represented as 8 bytes. Now let's get back to the code and calculate the size of the array to iterate all of the elements:
+Solving for the number of bytes `numBytes`, we can conclude `numBytes = 32 / 8` which equals 4 bytes. For another common fixed-width integer, the 64-bit integer, it would be represented as 8 bytes. Now let's get back to the code and calculate the size of the array to iterate all of the elements:
 
 ```cpp
 #include <iostream>
