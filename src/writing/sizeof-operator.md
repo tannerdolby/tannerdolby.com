@@ -28,7 +28,7 @@ int main() {
 
 Since we are not working with a dynamic array which has variable size, the size of the integer array `arr` must be specified at initialization. To avoid simply remebering that number, we can utilize `sizeof()` to calculate the arrays size. For context, typically in computer architecture a `byte` equals 8 or more `bit`'s.
 
-In C++, and when working on a 32/64 bit machine. An `int` is "usually" a signed fixed-width (32-bit) integer which is represented as 4 bytes. Any fixed-width integer value can have its size broken down into bytes and bits based on the definition of a `byte` for your computers architecture.
+In C++, and when working on a 32/64 bit machine. An `int` is "usually" a fixed-width (32-bit) integer which is represented as 4 bytes. Any fixed-width integer value can have its size broken down into bytes and bits based on the definition of a `byte` for your computers architecture.
 
 ```text
 fixedWidth = numBytes * byteSize
