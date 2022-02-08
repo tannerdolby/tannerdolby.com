@@ -1,7 +1,7 @@
 ---
 title: Generate a Fibonacci sequence
-date: 2021-02-07
-datetime: 2021-02-07 00:00:00 Z
+date: 2021-08-13
+datetime: 2021-08-13 00:00:00 Z
 tags:
   - javascript
 permalink: "/writing/{{ title | slug }}/"
@@ -16,39 +16,35 @@ To better understand how the fibonacci numbers are created in the sequence, view
 
 <h2 class="post-heading">Generate the sequence</h2>
 
-Now that the underlying mathematical equation for generating the Fibonacci sequence is known, let's write a JavaScript function to create it.
+Now that the underlying mathematical equation for generating the sequence is known, let's write a solution using an iterative approach.
 
 ```js
 function fibonacciSeq(n) {
+    if (n == 1) return [0];
+    if (n == 2) return [0,1];
     let arr = [0, 1];
-    let num = 0;
-    for (var i = 1; i < n; i++) {
-        num = arr[i] + arr[i-1];
-        arr.push(num);
+    for (let i = 2; i < n; i++) {
+        arr.push(arr[i-1] + arr[i-2]);
     }
     return arr;
 }
 ```
 
-The above function `fibonacciSeq` accepts one parameter, the amount of fibonacci numbers to generate in the sequence and returns an array containing the fibonacci sequence. For example, passing in `n = 7` will generate the following sequence:
+The above function `fibonacciSeq` accepts one parameter, the amount of fibonacci numbers to generate in the sequence and returns an array containing the fibonacci sequence from (0, n). For example, passing in `n = 7` will generate the following sequence:
 
 ```js
 console.log(fibonacciSeq(7));
-// [0, 1, 1, 2, 3, 5, 8, 13]
+// [0, 1, 1, 2, 3, 5, 8]
 ```
 
-<h3 class="post-heading">Sum the sequence</h3>
-
-You can sum the values in a fibonacci sequence fairly quickly with [`reduce`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce). Using a `for` loop would also work (and in some cases is more performant than `reduce`).
+Using a recursive approach we can accomplish the same:
 
 ```js
-function fibonacciSum(n) {
-    let arr = [0, 1];
-    let num = 0;
-    for (var i = 1; i < n; i++) {
-        num = arr[i] + arr[i-1];
-        arr.push(num);
-    }
-    return arr.reduce((a, b) => a + b);
+function recursiveFibSeq(n) {
+    if (n == 2) return [0,1];
+    if (n == 1) return [0];
+    let arr = recursiveFibSeq(n-1);
+    arr.push(arr[n-2] + arr[n-3]);
+    return arr;
 }
 ```
