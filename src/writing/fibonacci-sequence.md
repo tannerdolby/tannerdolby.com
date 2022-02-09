@@ -1,11 +1,11 @@
 ---
 title: Generate a Fibonacci sequence
-date: 2021-08-13
-datetime: 2021-08-13 00:00:00 Z
+date: 2022-02-08
+datetime: 2022-02-08 00:00:00 Z
 tags:
-  - javascript
+  - cpp
 permalink: "/writing/{{ title | slug }}/"
-preview: The Fibonacci sequence is a series of numbers where each number in the sequence is the sum of the two preceding numbers. This sequence begins with 0 and 1.
+preview: The Fibonacci sequence is a series of numbers where each number in the sequence is the sum of the two preceding numbers, with the sequence beginning with 0 and 1.
 ---
 
 {{ preview }} In mathematics, the Fibonacci numbers form the sequence, where numbers (n) are greater than 1 (n > 1).
@@ -16,28 +16,38 @@ To better understand how the fibonacci numbers are created in the sequence, view
 
 <h2 class="post-heading">Generate the sequence</h2>
 
-Now that the underlying mathematical equation for generating the sequence is known, let's write a solution using an iterative approach.
+Now that the underlying mathematical equation is known, let's write an iterative solution that generates a `vector<int>` containing the fibonacci sequence.
 
-```js
-function fibonacciSeq(n) {
-    if (n == 1) return [0];
-    if (n == 2) return [0,1];
-    let arr = [0, 1];
-    for (let i = 2; i < n; i++) {
-        arr.push(arr[i-1] + arr[i-2]);
+```cpp
+#include <vector>
+using namespace std;
+// O(n) time and O(n) space
+vector<int> fibSeq(int n) {
+    if (n == 0) return 0;
+    if (n <= 2) return 1;
+    vector<int> nums = {0,1};
+    for (int i = 2; i <= n; i++) {
+        nums.push_back(nums[i-1] + nums[i-2]);
     }
-    return arr;
+    return nums;
 }
 ```
 
 The above function `fibonacciSeq` accepts one parameter, the amount of fibonacci numbers to generate in the sequence and returns an array containing the fibonacci sequence from (0, n). For example, passing in `n = 7` will generate the following sequence:
 
-```js
-console.log(fibonacciSeq(7));
-// [0, 1, 1, 2, 3, 5, 8]
+```cpp
+vector<int> seq = fibSeq(7);
+int lastFib = seq[7];
+cout << "F(7) = " << lastFib << endl;
+// F(7) = 13
+for (auto num : seq) {
+    cout << num << " ";
+}
+cout << endl;
+// 0 1 1 2 3 5 8 13
 ```
 
-Using a recursive approach we can accomplish the same:
+Using a recursive approach to generate the sequence:
 
 ```js
 function recursiveFibSeq(n) {
@@ -47,4 +57,38 @@ function recursiveFibSeq(n) {
     arr.push(arr[n-2] + arr[n-3]);
     return arr;
 }
+```
+
+<h2 class="post-heading">Returning the Nth fibonacci number</h2>
+
+Now that we know how to generate a fibonacci sequence from the above functions. In order to get the Nth fibonacci, we can get the last value from the generated sequence.
+
+```cpp
+// O(n) time and O(n) space
+int nthFib(int n) {
+    if (n == 0) return 0;
+    if (n <= 2) return 1;
+    vector<int> nums = {0,1};
+    for (int i = 2; i <= n; i++) {
+        nums.push_back(nums[i-1] + nums[i-2]);
+    }
+    return nums[n];
+}
+cout << "F(4) = " << nthFib(4) << endl;
+// F(4) = 3
+```
+
+The above code iterates the inclusive range `(i, n)` which takes O(n) time and stores each fibonacci number in a resultant vector, then we simply index the last value. 
+
+We can also take a recursive approach to avoid creating a resultant `vector<int>` data structure. The recurisve calls will be added to the call stack, which occupies O(n) space in memory but we avoid using any other variables.
+
+```cpp
+// // O(n^2) time and O(n) space
+int recursiveNthFib(int n) {
+    if (n == 0) return 0;
+    if (n <= 2) return 1;
+    return recursiveNthFib(n-1) + recursiveNthFib(n-2);
+}
+cout << "F(7) = " << nthFib(7) << endl;
+// F(7) = 13
 ```
