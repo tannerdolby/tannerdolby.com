@@ -1656,6 +1656,12 @@ textarea:focus {
   height: 100%;
   width: 100%;
 }
+.camera-block .camera-info,
+.lens-block .camera-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .camera-block h4,
 .lens-block h4 {
   background: #000;
