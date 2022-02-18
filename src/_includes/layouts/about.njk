@@ -2,32 +2,32 @@
 layout: main.njk
 pageId: main-about
 ---
-    <head>
-        {% metagen 
-            title="About - tannerdolby.com",
-            desc="A page about Tanner Dolby.",
-            url="https://tannerdolby.com/about/",
-            img="https://tannerdolby.com/images/arch-spiral-large.jpg",
-            img_alt="An Archimedean Spiral",
-            twitterHandle="@tannerdolby",
-            name="Tanner Dolby"
-        %}
-        <meta name="keywords" content="{{ site.doc_metadata.keywords }}">
-        <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-        {% set css %}
-            {% include "css/style.css" %}
-            {% include "css/reset.css" %}
-        {% endset %}
-        <style>
-            {{ css | cssmin | safe }}
-        </style>
-    </head>
-            <header class="banner-container about-header">
-                <h1>{{ title }}</h1>
-            </header>
-            <section class="main-content" id="about-me">
-                {{ content | safe }}
-            </section>
-            {% include "sidebar.njk" %}
+<head>
+    {% metagen 
+        title="About - tannerdolby.com",
+        desc="A page about Tanner Dolby.",
+        url="https://tannerdolby.com/about/",
+        img="https://tannerdolby.com/images/arch-spiral-large.jpg",
+        img_alt="An Archimedean Spiral",
+        twitterHandle="@tannerdolby",
+        name="Tanner Dolby"
+    %}
+    <meta name="keywords" content="{{ site.doc_metadata.keywords }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    {% set css %}
+        {% include "css/style.css" %}
+        {% include "css/reset.css" %}
+    {% endset %}
+    <style>
+        {{ css | cssmin | safe }}
+    </style>
+</head>
+<header class="banner-container about-header">
+    <h1>{{ title }}</h1>
+</header>
+<section class="main-content" id="about-me">
+    {{ content | safe }}
+</section>
+{% include "sidebar.njk" %}
