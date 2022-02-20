@@ -40,8 +40,11 @@ I'm using a Sony DSLR camera. This is my first real deal camera with all the bel
 ### Good Reads
 
 - Java A Beginner's Guide (Eighth Edition) by Herbert Schildt
+
 - Cracking the Coding Interview by Gayle Laakmann McDowell.
+
 - Software Architecture Patterns by Mark Richards.
+
 - Introduction to Algorithms by Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein.
 
 ## Education
