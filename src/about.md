@@ -21,9 +21,7 @@ I spend most of my free time contributing to open source projects on [GitHub][gi
 
 I like to write about programming and technology. I'm currently fixated on learning more about Java, game dev with Phaser, Chrome extensions, and Web Performance. If you would like to see me write about a specific topic or concept, feel free to message me on Twitter about it. 
 
-I enjoy writing documentation (and referencing it) so when I'm learning new content, I tend to take notes and write a blog post or something to document and reinforce what I learned. 
-
-When I'm not on the computer, you can find me creating illustrations on my iPad, reading a good book, running, skateboarding, and trying to become a better photographer.
+I enjoy writing documentation (and referencing it) so when I'm learning new content, I tend to take notes and write a blog post or something to document and reinforce what I learned. When I'm not on the computer, you can find me creating illustrations on my iPad, reading a good book, running, skateboarding, and trying to become a better photographer.
 
 ### Photography
 
