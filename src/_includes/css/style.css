@@ -741,7 +741,7 @@ main blockquote {
   vertical-align: top;
   width: fit-content;
   width: -moz-fit-content;
-  background: #eee;
+  background: #f2f1f1;
   color: #212121;
   text-decoration: none;
 }
