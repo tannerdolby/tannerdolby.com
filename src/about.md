@@ -11,7 +11,7 @@ layout: about.njk
 pageId: main-about
 ---
 
-Hi there! My name is Tanner Dolby. I am a software engineer and mathematician based out of California. I enjoy working with Java, HTML, CSS, JavaScript, Node, and Python. I'm interested in applying my skills to build performant software. I started to learn about programming in 2018 with Swift and discovered web development using [freeCodeCamp.org](https://freecodecamp.org) in 2019. Ever since then, I've been hooked on writing code and building things for the web. 
+Hi there! My name is Tanner Dolby. I am a software engineer and mathematician based out of California. I enjoy working with C++, JavaScript, HTML, CSS, Node, Java and Python. I'm interested in applying my skills to build performant software.
 
 My academic background is in mathematics, that is I'm a self taught programmer. I like reading books and technical documentation then going and building things. This has proved to be a really surefire way to fully understand a topic or concept. Throughout my life I've always been a problem solver and enjoyed puzzles or logic games like Sudoku. I like to think of programming as a lifelong journey where there is always something to learn or become better at.
 
