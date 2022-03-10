@@ -11,9 +11,9 @@ layout: about.njk
 pageId: main-about
 ---
 
-Hi there! My name is Tanner Dolby. I am a software engineer and mathematician based out of California. I enjoy working with C++, JavaScript, HTML, CSS, Node, Java and Python. I'm interested in applying my skills to build performant software.
+Hi there! My name is Tanner Dolby. I'm a software engineer and mathematician based out of California. I enjoy working with JavaScript, C++, HTML, CSS, Node.js, TypeScript, and Python. I'm interested in applying my skills to build performant software. My academic background is in mathematics, that is I'm a self taught programmer.
 
-My academic background is in mathematics, that is I'm a self taught programmer. I like reading books and technical documentation then going and building things. This has proved to be a really surefire way to fully understand a topic or concept. Throughout my life I've always been a problem solver and enjoyed puzzles or logic games like Sudoku. I like to think of programming as a lifelong journey where there is always something to learn or become better at.
+I like contributing to open source projects on GitHub and learning new things along the way. I also enjoy reading books and technical documentation then building things. This has proved to be a really surefire way to better understand a topic or concept. Throughout my life I've always been a problem solver, which I think is the part of the reason why I enjoy playing Sudoku and Chess. I tend to think of programming as a lifelong journey where there is always something to learn or become better at.
 
 I spend most of my free time contributing to open source projects on [GitHub][github], learning new things, creating illustrations, building side projects, running, and making front-end demos on [CodePen][codepen]. With the JAMstack movement on the rise, I've taken an interest in Static Site Generators (SSG). In particular [Eleventy][eleventy], which this website is built with.
 
@@ -31,8 +31,8 @@ I'm using a Sony DSLR camera. This is my first real deal camera with all the bel
     <div class="camera-block">
         <h4>Specifications</h4>
         <div class="camera-info">
-            <p>Camera: Sony A7s II</p>
-            <p>Lens: Sony FE 50mm F1.8</p>
+            <p><span>📷</span>Camera: Sony A7s II</p>
+            <p><span>🔍</span>Lens: Sony FE 50mm F1.8</p>
         </div>
     </div>
 </div>
@@ -57,7 +57,7 @@ During my time at ASU, I worked as an Undergraduate Researcher and Supplemental 
 
 ## Need More?
 
-I'm interested in all things software related: web development, C++, technical writing, static sites, JAMstack, system design, chrome extensions and more. Have a look at my [resume][resume] and feel free to [contact me][contact] if you'd like to chat!
+I'm interested in all things software related: Web development, open source, C++, technical writing, static sites, JAMstack, system design, chrome extensions and more. Have a look at my [resume][resume] and feel free to [contact me][contact] if you'd like to chat!
 
 <div class="social-icons">
 {% for icon in socials %}
