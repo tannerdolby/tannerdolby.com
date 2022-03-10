@@ -1659,8 +1659,7 @@ textarea:focus {
 .camera-block .camera-info,
 .lens-block .camera-info {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
 }
 .camera-block h4,
 .lens-block h4 {
