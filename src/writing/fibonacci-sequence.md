@@ -50,7 +50,7 @@ cout << endl;
 Using a recursive approach to generate the sequence:
 
 ```cpp
-vector<int> fibonacciSeq(n) {
+vector<int> fibonacciSeq(int n) {
     if (n == 1) return {0};
     if (n == 2) return {0,1};
     vector<int> sequence = fibonacciSeq(n-1);
@@ -85,8 +85,8 @@ We can also take a recursive approach to avoid creating a resultant `vector<int>
 ```cpp
 // // O(n^2) time and O(n) space
 int recursiveNthFib(int n) {
-    if (n == 0) return 0;
-    if (n <= 2) return 1;
+    if (n == 1) return 0;
+    if (n == 2) return 1;
     return recursiveNthFib(n-1) + recursiveNthFib(n-2);
 }
 cout << "F(7) = " << nthFib(7) << endl;
