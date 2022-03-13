@@ -23,8 +23,8 @@ Now that the underlying mathematical equation is known, let's write an iterative
 using namespace std;
 // O(n) time and O(n) space
 vector<int> fibSeq(int n) {
-    if (n == 0) return 0;
-    if (n <= 2) return 1;
+    if (n == 1) return {0};
+    if (n == 2) return {0,1};
     vector<int> nums = {0,1};
     for (int i = 2; i <= n; i++) {
         nums.push_back(nums[i-1] + nums[i-2]);
@@ -66,8 +66,8 @@ Now that we know how to generate a fibonacci sequence from the above functions. 
 ```cpp
 // O(n) time and O(n) space
 int nthFib(int n) {
-    if (n == 0) return 0;
-    if (n <= 2) return 1;
+    if (n == 1) return 0;
+    if (n == 2) return 1;
     vector<int> nums = {0,1};
     for (int i = 2; i <= n; i++) {
         nums.push_back(nums[i-1] + nums[i-2]);
