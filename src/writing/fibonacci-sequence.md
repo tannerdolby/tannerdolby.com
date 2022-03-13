@@ -49,13 +49,13 @@ cout << endl;
 
 Using a recursive approach to generate the sequence:
 
-```js
-function recursiveFibSeq(n) {
-    if (n == 2) return [0,1];
-    if (n == 1) return [0];
-    let arr = recursiveFibSeq(n-1);
-    arr.push(arr[n-2] + arr[n-3]);
-    return arr;
+```cpp
+vector<int> fibonacciSeq(n) {
+    if (n == 1) return {0};
+    if (n == 2) return {0,1};
+    vector<int> sequence = fibonacciSeq(n-1);
+    sequence.push_back(sequence[n-2] + sequence[n-3]);
+    return sequence;
 }
 ```
 

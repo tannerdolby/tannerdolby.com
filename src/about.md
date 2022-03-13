@@ -11,17 +11,17 @@ layout: about.njk
 pageId: main-about
 ---
 
-Hi there! My name is Tanner Dolby. I'm a software engineer and mathematician based out of California. I enjoy working with JavaScript, C++, HTML, CSS, Node.js, TypeScript, and Python. I'm interested in applying my skills to build performant software. My academic background is in mathematics, that is I'm a self taught programmer.
+Hi there! My name is Tanner Dolby. I'm a software engineer and mathematician based out of California. My academic background is in Applied Mathematics. That is, I'm a self taught programmer. I enjoy working with JavaScript, C++, HTML, CSS, Node.js, TypeScript, Java, and Python. I'm interested in applying my skills to build performant software and help others.
 
-I like contributing to open source projects on GitHub and learning new things along the way. I also enjoy reading books and technical documentation then building things. This has proved to be a really surefire way to better understand a topic or concept. Throughout my life I've always been a problem solver, which I think is the part of the reason why I enjoy playing Sudoku and Chess. I tend to think of programming as a lifelong journey where there is always something to learn or become better at.
+I like contributing to open source projects on GitHub and learning new things along the way. I also enjoy reading technical content, whether it's in book form or documentation on the web and then starting to build things from what I learned. This has proved to be a really surefire way to better understand a topic or concept. Throughout my life I've always liked solving problems, and I think this is why I'm still interested in games like Chess and Sudoku. I tend to think of programming as a lifelong journey where there is always something to learn or become better at.
 
-I spend most of my free time contributing to open source projects on [GitHub][github], learning new things, creating illustrations, building side projects, running, and making front-end demos on [CodePen][codepen]. With the JAMstack movement on the rise, I've taken an interest in Static Site Generators (SSG). In particular [Eleventy][eleventy], which this website is built with.
+I spend most of my free time contributing to open source projects on [GitHub][github], learning new things, creating illustrations, playing Chess, running, and making fun experiments on [CodePen][codepen]. With the JAMstack movement on the rise, I've taken an interest in Static Site Generators (SSG). In particular [Eleventy][eleventy], which this website is built with.
 
 ## Interests
 
-I like to write about programming and technology. I'm currently fixated on learning more about C++, game dev with Phaser, Chrome extensions, and Web Performance. If you would like to see me write about a specific topic or concept, feel free to message me on Twitter about it. 
+I like to write about programming and technology. I'm currently fixated on learning more about C++, game dev with Phaser, Chess, and Web Performance. If you would like to see me write about a specific topic or concept, feel free to message me on Twitter about it. 
 
-I enjoy writing documentation (and referencing it) so when I'm learning new content, I tend to take notes and write a blog post or something to document and reinforce what I learned. When I'm not on the computer, you can find me creating illustrations on my iPad, reading a good book, running, skateboarding, and trying to become a better photographer.
+I enjoy writing documentation (and referencing it) so when I'm learning new content, I tend to take notes and write a blog post or something to document and reinforce what I learned. When I'm not on the computer, you can find me creating illustrations on my iPad, playing Chess, reading a good book, running, skateboarding, and trying to become a better photographer.
 
 ### Photography
 

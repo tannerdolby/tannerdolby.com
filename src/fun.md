@@ -2,8 +2,8 @@
 page_name: Art - Tanner Dolby 
 title: Art & Fun
 eleventyExcludeFromCollections: true
-permalink: "/art/"
-layout: art.njk
+permalink: "/fun/"
+layout: fun.njk
 ---
 
 I enjoy creating illustrations with [Vectornator](https://www.vectornator.io/) and making other neat things with HTML, CSS and JavaScript. I've always been interested in illustration and design but my CSS art journey began when I read [this article](https://hacks.mozilla.org/2014/09/single-div-drawings-with-css/) on Mozilla Hacks about single div drawings. I was instantly hooked on making illustrations with CSS and that has led me to pursue other avenues for drawing like Vectornator.
