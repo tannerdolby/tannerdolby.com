@@ -22,7 +22,7 @@ Now that the underlying mathematical equation is known, let's write an iterative
 #include <vector>
 using namespace std;
 // O(n) time and O(n) space
-vector<int> fibSeq(int n) {
+vector<int> fibonacciSequence(int n) {
     if (n == 1) return {0};
     if (n == 2) return {0,1};
     vector<int> nums = {0,1};
@@ -33,14 +33,14 @@ vector<int> fibSeq(int n) {
 }
 ```
 
-The above function `fibonacciSeq` accepts one parameter, the amount of fibonacci numbers to generate in the sequence and returns an array containing the fibonacci sequence from (0, n). For example, passing in `n = 7` will generate the following sequence:
+The above function `fibonacciSequence` accepts one parameter, the amount of fibonacci numbers to generate in the sequence and returns an array containing the fibonacci sequence from (0, n). For example, passing in `n = 7` will generate the following sequence:
 
 ```cpp
-vector<int> seq = fibSeq(7);
-int lastFib = seq[7];
+vector<int> sequence = fibonacciSequence(7);
+int lastFib = sequence[7];
 cout << "F(7) = " << lastFib << endl;
 // F(7) = 13
-for (auto num : seq) {
+for (auto num : sequence) {
     cout << num << " ";
 }
 cout << endl;

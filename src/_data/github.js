@@ -3,7 +3,7 @@ const Cache = require("@11ty/eleventy-cache-assets");
 async function fetchData(url) {
     console.log(`Caching: ${url}`);
     try {
-        let json = await Cache(url, {
+        const json = await Cache(url, {
             duration: "1d",
             type: "json",
         });
@@ -35,16 +35,16 @@ async function fetchData(url) {
 }
 
 module.exports = async function() {
-    let apiUrl = "https://api.github.com/repos/tannerdolby";
+    const apiUrl = "https://api.github.com/repos/tannerdolby";
 
     try {
         let repos = [
             "eleventy-photo-gallery",
             "eleventy-plugin-metagen",
-            "eleventy-plugin-sharp-respimg",
             "bug-saves-world",
             "cpp-markdown-parser",
-            "randoma11y-chrome-extension"
+            "randoma11y-chrome-extension",
+            "openlibrary"
         ];
         repos = repos.map(async (repo) => {
             return await fetchData(`${apiUrl}/${repo}`);
