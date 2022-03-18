@@ -67,24 +67,21 @@ To provide a more efficient algorithm. We can take a dynamic programming approac
 // recursive fibonacci sequence (without memoization)
 // O(2^n) time and O(n) space
 int fib(int n) {
-	if (n == 0) {
-		return 0;
-	} else if (n == 1) {
-		return 1;
-	}
+	if (n == 1) return 0;
+	if (n == 2) return 1;
 	return fib(n-1) + fib(n-2);
 }
 ```
 
-Using a tree to better visualize how the recursive calls are happening when we attempt to call `fib(n)`.
+Using a tree to better visualize how the recursive calls are happening when we attempt to call `fib(n)`, view the example below. At each root node, the algorithm requires two operations in order to compute the `fib(n-1)` and `fib(n-2)` values. That is, if there is `n` nodes in the tree, we will require `2^n` operations to compute each root nodes left and right child node.
 
 ```txt
-// 2^n operations as we recompute the same values many times
+// 2^n operations
 // for example fib(2) is computed twice and fib(1) computed three times
 // Ex.
-// 			     fib(4)
-//  		    /      \
-// 		    fib(3)     fib(2)
+// 			      fib(4)
+//  		  	/       \
+// 		     fib(3)    fib(2)
 //           /  \	    /   \
 //      fib(2) fib(1) fib(1) fib(0)
 //        /  \
@@ -97,15 +94,24 @@ Instead of recomputing values throughout the tree of recursive calls we can inst
 ```cpp
 // improving time complexity from O(2^n) to O(n) time
 // O(n) time and O(n) space
-int fib(int n) {
-	unordered_map<int,int> memo;
-	if (n == 0) {
-		return 0;
-	} else if (n == 1) {
-		return 1;
-	} else if (!memo[n]) {
-		memo[n] = fib(n-1) + fib(n-2);
+int getNthFib(int n) {
+	// memoization with the simple recursive solution
+	unordered_map<int, int> memo;
+	memo[1] = 0;
+	memo[2] = 1;
+	return fibHelper(n, memo);
+}
+
+int fibHelper(int n, unordered_map<int, int> &memo) {
+	if (n == 1) return 0;
+	if (n == 2) return 1;
+	if (memo.find(n) == memo.end()) {
+		// value doesn't exist in table yet, 
+		// so we compute it and store it in the table
+		memo[n] = fibHelper(n-1, memo) + fibHelper(n-2, memo);
 	}
+	// otherwise we have stored the value already in table
+	// so simple return the stored value instead of recomputing
 	return memo[n];
 }
 ```
