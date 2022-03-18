@@ -77,7 +77,7 @@ Using a tree to better visualize how the recursive calls are happening when we a
 
 ```txt
 // 2^n operations
-// for example fib(2) is computed twice and fib(1) computed three times
+// for example fib(2) is computed twice and fib(1) and fib(3) computed thrice
 // Ex.
 // 			      fib(4)
 //  		  	/       \
@@ -86,7 +86,10 @@ Using a tree to better visualize how the recursive calls are happening when we a
 //      fib(2) fib(1) fib(1) fib(0)
 //        /  \
 //    fib(1) fib(0)
-//
+//     /
+//  fib(0)
+// 
+// Trees not fully completed for readability
 ```
 
 Instead of recomputing values throughout the tree of recursive calls we can instead use memoization to compute the values once and store them in a hash table. That way, when we need to compute the value again, we instead return the stored value from table and greatly improve the time complexity of the recursive algorithm.
@@ -114,6 +117,23 @@ int fibHelper(int n, unordered_map<int, int> &memo) {
 	// so simple return the stored value instead of recomputing
 	return memo[n];
 }
+```
+
+```txt
+// 2^n operations
+// for example fib(2) is computed twice and fib(1) and fib(3) computed thrice
+// Ex.
+// 			      fib(4)
+//  		  	/       \
+// 		     fib(3)     m[2]
+//           /  \	    /   \
+//      fib(2)  m[1]  m[1]  m[0]
+//        /  \
+//    fib(1) m[0]
+//     /
+//  fib(0)
+// 
+// Trees not fully completed for readability
 ```
 
 If you're having trouble understanding the recursive algorithms, go ahead and watch [Algorithms: Memoization and Dynamic Programming](https://www.youtube.com/watch?v=P8Xa2BitN3I) by the HackerRank channel on Youtube. Gayle Laakmann McDowell (author of Cracking the Coding Interview) does an incredible job of explaining recursion, dynamic programming and memoization.
