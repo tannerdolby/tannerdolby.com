@@ -1,7 +1,7 @@
 ---
 title: Generate a Fibonacci sequence
-date: 2022-02-08
-datetime: 2022-02-08 00:00:00 Z
+date: 2022-03-17
+datetime: 2022-03-17 00:00:00 Z
 tags:
   - cpp
 permalink: "/writing/{{ title | slug }}/"
@@ -61,34 +61,56 @@ vector<int> fibonacciSeq(int n) {
 
 <h2 class="post-heading">Returning the Nth fibonacci number</h2>
 
-Now that we know how to generate a fibonacci sequence from the above functions. In order to get the Nth fibonacci, we can get the last value from the generated sequence.
+To provide a more efficient algorithm. We can take a dynamic programming approach as this problem is easily broken into smaller subproblems. The recurisve calls will be added to the recursion stack, which occupies O(n) space in memory as the depth of the tree will determine the number of recursive calls on the stack at a given time.
 
 ```cpp
+// recursive fibonacci sequence (without memoization)
+// O(2^n) time and O(n) space
+int fib(int n) {
+	if (n == 0) {
+		return 0;
+	} else if (n == 1) {
+		return 1;
+	}
+	return fib(n-1) + fib(n-2);
+}
+
+cout << "F(4) = " << fib(4) << endl;
+// F(4) = 13
+```
+
+We can use a Tree to better visualize how the recursive calls are happening when we attempt to call `fib(n)`.
+
+```txt
+// 2^n operations as we recompute the same values many times
+// for example fib(2) is computed twice and fib(1) computer three times
+// Ex.
+// 			     fib(4)
+//  		    /      \
+// 		    fib(3)     fib(2)
+//           /  \	    /   \
+//      fib(2) fib(1) fib(1) fib(0)
+//        /  \
+//    fib(1) fib(0)
+//
+```
+
+Instead of recomputing values throughout the tree of recursive calls we can instead use memoization to compute the values once and store them in a hash table. That way, when we need to compute the value again, we instead return the stored value from table and greatly improve the time complexity of the recursive algorithm.
+
+```cpp
+// improving time complexity from O(2^n) to O(n) time
 // O(n) time and O(n) space
-int nthFib(int n) {
-    if (n == 1) return 0;
-    if (n == 2) return 1;
-    vector<int> nums = {0,1};
-    for (int i = 2; i <= n; i++) {
-        nums.push_back(nums[i-1] + nums[i-2]);
-    }
-    return nums[n];
+int fibb(int n) {
+	unordered_map<int,int> memo;
+	if (n == 0) {
+		return 0;
+	} else if (n == 1) {
+		return 1;
+	} else if (!memo[n]) {
+		memo[n] = fibb(n-1) + fibb(n-2);
+	}
+	return memo[n];
 }
-cout << "F(4) = " << nthFib(4) << endl;
-// F(4) = 3
 ```
 
-The above code iterates the inclusive range `(i, n)` which takes O(n) time and stores each fibonacci number in a resultant vector, then we simply index the last value. 
-
-We can also take a recursive approach to avoid creating a resultant `vector<int>` data structure. The recurisve calls will be added to the call stack, which occupies O(n) space in memory but we avoid using any other variables.
-
-```cpp
-// // O(n^2) time and O(n) space
-int recursiveNthFib(int n) {
-    if (n == 1) return 0;
-    if (n == 2) return 1;
-    return recursiveNthFib(n-1) + recursiveNthFib(n-2);
-}
-cout << "F(7) = " << nthFib(7) << endl;
-// F(7) = 13
-```
+If you're having trouble understanding the recursive algorithms, go ahead and watch [Algorithms: Memoization and Dynamic Programming](https://www.youtube.com/watch?v=P8Xa2BitN3I) by the HackerRank channel on Youtube. Gayle Laakmann McDowell (author of Cracking the Coding Interview) does an incredible job of explaining recursion, dynamic programming and memoization.
