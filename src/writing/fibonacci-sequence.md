@@ -61,7 +61,7 @@ vector<int> fibonacciSeq(int n) {
 
 <h2 class="post-heading">Returning the Nth fibonacci number</h2>
 
-To provide a more efficient algorithm. We can take a dynamic programming approach as this problem is easily broken into smaller subproblems. The recurisve calls will be added to the recursion stack, which occupies O(n) space in memory as the depth of the tree will determine the number of recursive calls on the stack at a given time.
+To provide a more efficient algorithm. We can take a dynamic programming approach as this problem is easily broken into smaller subproblems. The recursive calls will be added to the recursion stack, which occupies O(n) space in memory as the depth of the tree will determine the number of recursive calls on the stack at a given time.
 
 ```cpp
 // recursive fibonacci sequence (without memoization)
@@ -79,11 +79,11 @@ cout << "F(4) = " << fib(4) << endl;
 // F(4) = 13
 ```
 
-We can use a Tree to better visualize how the recursive calls are happening when we attempt to call `fib(n)`.
+Using a tree to better visualize how the recursive calls are happening when we attempt to call `fib(n)`.
 
 ```txt
 // 2^n operations as we recompute the same values many times
-// for example fib(2) is computed twice and fib(1) computer three times
+// for example fib(2) is computed twice and fib(1) computed three times
 // Ex.
 // 			     fib(4)
 //  		    /      \
@@ -100,14 +100,14 @@ Instead of recomputing values throughout the tree of recursive calls we can inst
 ```cpp
 // improving time complexity from O(2^n) to O(n) time
 // O(n) time and O(n) space
-int fibb(int n) {
+int fib(int n) {
 	unordered_map<int,int> memo;
 	if (n == 0) {
 		return 0;
 	} else if (n == 1) {
 		return 1;
 	} else if (!memo[n]) {
-		memo[n] = fibb(n-1) + fibb(n-2);
+		memo[n] = fib(n-1) + fib(n-2);
 	}
 	return memo[n];
 }
