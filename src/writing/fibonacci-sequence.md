@@ -74,9 +74,6 @@ int fib(int n) {
 	}
 	return fib(n-1) + fib(n-2);
 }
-
-cout << "F(4) = " << fib(4) << endl;
-// F(4) = 13
 ```
 
 Using a tree to better visualize how the recursive calls are happening when we attempt to call `fib(n)`.
