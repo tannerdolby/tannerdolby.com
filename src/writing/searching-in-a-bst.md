@@ -55,7 +55,7 @@ struct TreeNode {
 
 <h3 class="post-heading">Recursive</h3>
 
-A Depth-first Search (DFS) algorithm to traverse the tree searching for the target value. This approach does add frames to the recursion stack which needs to be kept in mind when working with extremely large BSTs, as you need to make sure the frames on the stack don't result in a stack overflow. The iterative approach would be preferred for larger inputs as it runs in O(1) constant space and doesn't add calls to the recursion stack.
+A Depth-first Search (DFS) algorithm to traverse the tree searching for a target value. This approach does add frames to the recursion stack which needs to be kept in mind when working with extremely large BSTs, as you need to make sure the frames on the stack don't result in a stack overflow. The iterative approach would be preferred for larger inputs as it runs in O(1) constant space and doesn't add calls to the recursion stack.
 
 ```cpp
 // Average: O(log(N)) time and O(log(N)) space
@@ -93,3 +93,6 @@ TreeNode *searchBST(TreeNode *root, int target) {
 }
 ```
 
+<h3 class="post-heading">Notes</h3>
+
+For practice, have a look at [700. Search in a Binary Search Tree](https://leetcode.com/problems/search-in-a-binary-search-tree/) on LeetCode, and to better understand how we traverse the BST when searching for the target value, checkout [Applied CS Skills - Binary Search Tree](https://www.youtube.com/watch?v=YEZo8n2y2v4) by the Google Students channel on YouTube.
