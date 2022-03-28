@@ -67,8 +67,8 @@ To provide a more efficient algorithm. We can take a dynamic programming approac
 // recursive fibonacci sequence (without memoization)
 // O(2^n) time and O(n) space
 int fib(int n) {
-	if (n == 1) return 0;
-	if (n == 2) return 1;
+	if (n == 0) return 0;
+	if (n == 1) return 1;
 	return fib(n-1) + fib(n-2);
 }
 ```
@@ -98,14 +98,14 @@ Instead of recomputing values throughout the tree of recursive calls we can inst
 int getNthFib(int n) {
 	// memoization with the simple recursive solution
 	unordered_map<int, int> memo;
-	memo[1] = 0;
-	memo[2] = 1;
+	memo[0] = 0;
+	memo[1] = 1;
 	return fibHelper(n, memo);
 }
 
 int fibHelper(int n, unordered_map<int, int> &memo) {
-	if (n == 1) return 0;
-	if (n == 2) return 1;
+	if (n == 0) return 0;
+	if (n == 1) return 1;
 	if (memo.find(n) == memo.end()) {
 		// value doesn't exist in table yet, 
 		// so we compute it and store it in the table
