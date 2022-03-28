@@ -120,8 +120,6 @@ int fibHelper(int n, unordered_map<int, int> &memo) {
 ```
 
 ```txt
-// 2^n operations
-// for example fib(2) is computed twice and fib(1) and fib(3) computed thrice
 // Ex.
 // 			      fib(4)
 //  		  	/       \
