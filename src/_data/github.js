@@ -44,7 +44,7 @@ module.exports = async function() {
             "bug-saves-world",
             "cpp-markdown-parser",
             "randoma11y-chrome-extension",
-            "openlibrary"
+            "word-counts"
         ];
         repos = repos.map(async (repo) => {
             return await fetchData(`${apiUrl}/${repo}`);
