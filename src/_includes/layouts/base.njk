@@ -13,38 +13,38 @@ images:
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
     <head>
-        {% if pageId == "post-content" %}
-            {% set socialImgUrl %}
-                {% socialImg 
-                    theme=1,
-                    title=title,
-                    img=metadata.image,
-                    initials="TD",
-                    inputDir="./src",
-                    outputPath="/social-share/",
-                    overwrite=false
-                %}
-            {% endset %}
-
-            {% metagen
+    {% if pageId == "post-content" %}
+        {% set socialImgUrl %}
+            {% socialImg 
+                theme=1,
                 title=title,
-                desc=preview,
-                url=metadata.url + page.url,
-                img=socialImgUrl,
-                img_alt=metadata.img_alt,
-                twitter_card_type=metadata.twitter_card_type,
-                twitter_handle=metadata.twitter,
-                name=metadata.name,
-                generator=metadata.generator,
-                comments=metadata.comments
+                img=metadata.image,
+                initials="TD",
+                inputDir="./src",
+                outputPath="/social-share/",
+                overwrite=false
             %}
+        {% endset %}
 
-        {% else %}
+        {% metagen
+            title=title,
+            desc=preview,
+            url=metadata.url + page.url,
+            img=socialImgUrl,
+            img_alt=metadata.img_alt,
+            twitter_card_type=metadata.twitter_card_type,
+            twitter_handle=metadata.twitter,
+            name=metadata.name,
+            generator=metadata.generator,
+            comments=metadata.comments
+        %}
 
-            {% set metagenData = metadata | pruneObj %}
-            {% metagen metagenData %}
+    {% else %}
 
-        {% endif %}
+        {% set metagenData = metadata | pruneObj %}
+        {% metagen metagenData %}
+
+    {% endif %}
         <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
@@ -63,11 +63,12 @@ images:
     </head>
     <body>
         <a href="#{{ pageId }}" class="skip-link">Skip to main content</a>
-        {% include "nav.njk" %}
+        
+        {% include "components/nav.njk" %}
 
         {{ content | safe }}
 
-        {% include "footer.njk" %}
+        {% include "components/footer.njk" %}
 
         {% set js %}
             {% if pageId == "main-writing" %}

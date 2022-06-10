@@ -1,5 +1,5 @@
 ---
-layout: main.njk
+layout: base.njk
 pageId: post-content
 metadata:
   twitterShare: https://twitter.com/share?
@@ -13,7 +13,7 @@ metadata:
   comments: true
 ---
 
-<div class="main-content">
+<div class="main-content post-page">
     <header class="post-header">
         <div class="post-wrap">
             <h1 class="h1" id="post-title">{{ title }}</h1>
@@ -48,6 +48,6 @@ metadata:
             </a>
         {% endif %}
     </nav>
-    {% include "share.njk" %}
-    {% include "related-posts.njk" %}
+    {% include "components/share.njk" %}
+    {% include "components/related-posts.njk" %}
 </div>

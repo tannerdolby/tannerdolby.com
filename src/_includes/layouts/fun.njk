@@ -6,57 +6,36 @@ widths:
 sizes: "(min-width: 450px) 33.3vw, 100vw"
 class: art-item
 imgDir: "/images/"
-layout: main.njk
+layout: base.njk
 pageId: main-art
 ---
-    <head>
-        {% metagen 
-            title="Art - tannerdolby.com",
-            desc="CSS art by Tanner Dolby.",
-            url="https://tannerdolby.com/art/",
-            img="https://tannerdolby.com/images/arch-spiral-large.jpg",
-            img_alt="An Archimedean Spiral",
-            twitterHandle="@tannerdolby",
-            name="Tanner Dolby"
-        %}
-        <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-        {% set css %}
-            {% include "css/style.css" %}
-            {% include "css/reset.css" %}
-        {% endset %}
-        <style>
-            {{ css | cssmin | safe }}
-        </style>
-    </head>
 
-            <header class="banner-container">
-                <h1 class="h1">{{ title }}</h1>
-                {{ content | safe }}
-            </header>
-            <section class="art">
-            {% for drawing in art %}
-                <div class="art-details">
-                    <a href="{{ drawing.url }}" aria-label="{{ drawing.aria_label }}">
-                    {% respimg
-                        src=drawing.image.filename,
-                        alt=drawing.image.alt,
-                        inputDir="./src",
-                        imgDir=imgDir,
-                        widths=widths,
-                        sizes=sizes,
-                        className=class,
-                        id=drawing.id,
-                        width=1024,
-                        height=768
-                    %}
-                    </a>
-                    <!-- <div class="drawing-info">
-                        <h2 class="h3 featured-info">{{ drawing.name }}</h2>
-                        <p class="created">{{ drawing.date_created }} - <a href="{{ drawing.credit }}" aria-label="Link to photo credit for {{ drawing.name }}">Photo Credit</a></p>
-                        <p>{{ drawing.desc }}</p> 
-                    </div> -->
-                </div>
-            {% endfor %}
-            </section>
+<header class="banner-container">
+    <h1 class="h1">{{ title }}</h1>
+    {{ content | safe }}
+</header>
+<section class="art">
+{% for drawing in art %}
+    <div class="art-details">
+        <a href="{{ drawing.url }}" aria-label="{{ drawing.aria_label }}">
+        {% respimg
+            src=drawing.image.filename,
+            alt=drawing.image.alt,
+            inputDir="./src",
+            imgDir=imgDir,
+            widths=widths,
+            sizes=sizes,
+            className=class,
+            id=drawing.id,
+            width=1024,
+            height=768
+        %}
+        </a>
+        <!-- <div class="drawing-info">
+            <h2 class="h3 featured-info">{{ drawing.name }}</h2>
+            <p class="created">{{ drawing.date_created }} - <a href="{{ drawing.credit }}" aria-label="Link to photo credit for {{ drawing.name }}">Photo Credit</a></p>
+            <p>{{ drawing.desc }}</p> 
+        </div> -->
+    </div>
+{% endfor %}
+</section>
