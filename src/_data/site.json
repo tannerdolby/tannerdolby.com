@@ -38,8 +38,8 @@
         "twitter": {
             "card": "summary",
             "title": "Tanner Dolby",
-            "creator": "@tannerdolby",
-            "site": "@tannerdolby",
+            "creator": "tannerdolby",
+            "site": "tannerdolby",
             "desc": "Tanner Dolby is an applied mathematician and self taught web developer."
         }
     },
