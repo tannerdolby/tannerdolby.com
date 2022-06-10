@@ -171,12 +171,15 @@
   margin-bottom: 4rem;
   grid-column: 1/5;
 }
+.contact-container p {
+  margin: revert;
+}
 
 .contact {
   background: #202d3d;
   padding: 1rem 1.25rem;
   background: inherit;
-  margin: 2rem auto;
+  margin: 4rem auto 6rem auto;
   max-width: 1200px;
 }
 
@@ -225,19 +228,21 @@
   padding: 0 1.25rem;
 }
 
-main .art {
+.art {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
   gap: 0.5rem;
-  margin: 3rem auto 1rem auto;
+  margin: 3rem auto 10rem auto;
   padding: 0 1.25rem;
+  width: 100%;
+  max-width: 1200px;
 }
-main .art img {
+.art img {
   object-fit: cover;
   height: 100%;
   width: 100%;
 }
-main .art .art-details {
+.art .art-details {
   text-align: left;
   display: flex;
   display: -webkit-flex;
@@ -245,14 +250,14 @@ main .art .art-details {
   height: 25rem;
   width: 100%;
 }
-main .art .art-details a {
+.art .art-details a {
   height: 100%;
 }
-main .art .art-details a:hover {
+.art .art-details a:hover {
   -webkit-filter: contrast(93%);
   filter: contrast(93%);
 }
-main .art .art-details .drawing-info {
+.art .art-details .drawing-info {
   padding-left: 0.2rem;
 }
 
@@ -458,7 +463,7 @@ main blockquote {
   overflow: auto;
 }
 
-.main-container .message-me {
+.message-me {
   background: inherit;
   border: 0.124rem solid #333333;
   padding: 0.7rem 0.8rem;
@@ -469,21 +474,22 @@ main blockquote {
   font-size: 1rem;
   transition: 100ms linear;
 }
-.main-container .message-me:hover {
+.message-me:hover {
   background: #384047;
   background: #3d3d3d;
   border: 0.125rem solid #3d3d3d;
   color: #fff;
   text-decoration: none;
 }
-.main-container .projects .projects-wrapper {
+
+.projects .projects-wrapper {
   max-width: 1200px;
   display: flex;
   flex-direction: column;
   margin: 1rem auto;
   padding: 1rem 1.25rem;
 }
-.main-container .projects .project-grid {
+.projects .project-grid {
   display: grid;
   padding: 1rem 0;
   grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
@@ -491,7 +497,7 @@ main blockquote {
   overflow: hidden;
   list-style: none;
 }
-.main-container .projects .project-grid .project-tile {
+.projects .project-grid .project-tile {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -505,37 +511,37 @@ main blockquote {
   transform-origin: 50% 50%;
   background: #fff;
 }
-.main-container .projects .project-grid .project-tile .project-details {
+.projects .project-grid .project-tile .project-details {
   padding: 1rem 1rem 0.75rem 1rem;
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
 }
-.main-container .projects .project-grid .project-tile .project-details .project-link {
+.projects .project-grid .project-tile .project-details .project-link {
   display: block;
   position: relative;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
-.main-container .projects .project-grid .project-tile .project-details .project-link a {
+.projects .project-grid .project-tile .project-details .project-link a {
   padding-left: 1.5rem;
 }
-.main-container .projects .project-grid .project-tile .project-details h3 {
+.projects .project-grid .project-tile .project-details h3 {
   margin-top: 0rem;
   margin-bottom: 0;
 }
-.main-container .projects .project-grid .project-tile .project-details h3 a {
+.projects .project-grid .project-tile .project-details h3 a {
   text-decoration: none;
 }
-.main-container .projects .project-grid .project-tile .project-details h3 a:hover {
+.projects .project-grid .project-tile .project-details h3 a:hover {
   text-decoration: underline;
   color: #1836AF;
 }
-.main-container .projects .project-grid .project-tile .project-details .project-desc {
+.projects .project-grid .project-tile .project-details .project-desc {
   margin-bottom: 1.75rem;
 }
-.main-container .projects .project-grid .project-tile .project-details .links {
+.projects .project-grid .project-tile .project-details .links {
   margin-top: auto;
   margin-bottom: 1rem;
   padding-left: 0;
@@ -544,7 +550,7 @@ main blockquote {
   justify-content: flex-start;
   align-items: center;
 }
-.main-container .projects .project-grid .project-tile .project-details .links li .tile-link {
+.projects .project-grid .project-tile .project-details .links li .tile-link {
   text-decoration: none;
   font-size: 0.9rem;
   padding: 0.5rem;
@@ -557,7 +563,7 @@ main blockquote {
   color: #333;
   background: inherit;
 }
-.main-container .projects .project-grid .project-tile .project-details .links li .tile-link:hover, .main-container .projects .project-grid .project-tile .project-details .links li .tile-link:focus {
+.projects .project-grid .project-tile .project-details .links li .tile-link:hover, .projects .project-grid .project-tile .project-details .links li .tile-link:focus {
   border: 0.05rem solid transparent;
   background: #3b3b3b;
   background: #212a2f;
@@ -565,24 +571,25 @@ main blockquote {
   color: #fff;
   cursor: pointer;
 }
-.main-container .main-content {
+
+.main-content {
   max-width: 1200px;
 }
-.main-container .main-content .filter-by-tag {
+.main-content .filter-by-tag {
   margin-top: 3rem;
 }
-.main-container .main-content table th {
+.main-content table th {
   background: #eee;
 }
-.main-container .main-content .post {
+.main-content .post {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   margin: 0.6rem 0;
 }
-.main-container .main-content .post h2, .main-container .main-content .post h3 {
+.main-content .post h2, .main-content .post h3 {
   margin-bottom: 0.75rem;
 }
-.main-container .main-content .clear-filter-btn {
+.main-content .clear-filter-btn {
   margin-left: 2rem;
   text-decoration: none;
   padding: 0.25rem 0.5rem;
@@ -592,20 +599,20 @@ main blockquote {
   color: #222;
   border: 1px solid #363c3f;
 }
-.main-container .main-content .clear-filter-btn:hover {
+.main-content .clear-filter-btn:hover {
   background: #3b3b3b;
   color: #fff;
   text-decoration: none;
 }
-.main-container .main-content article {
+.main-content article {
   max-width: 85ch;
 }
-.main-container .main-content .about-banner {
+.main-content .about-banner {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.main-container .main-content .about-banner .about-headshot {
+.main-content .about-banner .about-headshot {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -618,27 +625,28 @@ main blockquote {
   height: 200px;
   width: 200px;
 }
-.main-container .main-content .writing-about {
+.main-content .writing-about {
   padding-bottom: 2rem;
 }
-.main-container .main-content .my-posts {
+.main-content .my-posts {
   padding-left: 0;
-  margin: 0;
+  margin-top: 5rem;
   list-style: none;
 }
-.main-container .main-content .my-posts h2 a {
+.main-content .my-posts h2 a {
   text-decoration: underline;
 }
-.main-container .main-content .my-posts h2 a:hover {
+.main-content .my-posts h2 a:hover {
   text-decoration: none;
 }
-.main-container .home-banner {
+
+.home-banner {
   margin-left: auto;
   margin-right: auto;
   max-width: 1200px;
   margin-right: 1rem;
 }
-.main-container .home-banner p {
+.home-banner p {
   font-size: 1.35rem;
   font-size: clamp(1.35rem, 3vw, 1.38rem);
   line-height: 1.5;
@@ -647,64 +655,62 @@ main blockquote {
   color: #212121;
   max-width: 50ch;
 }
-.main-container .home-banner h1 {
+.home-banner h1 {
   font-size: 2.7em;
   font-size: clamp(2.7em, 10vw, 3.5em);
 }
-.main-container .home-banner h1, .main-container .home-banner h2 {
+.home-banner h1, .home-banner h2 {
   margin: 0;
 }
-.main-container .home-banner .banner-links a {
+.home-banner .banner-links a {
   text-decoration: none;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
-.main-container .wrap {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  margin: 4rem auto 1rem;
+
+.wrap {
+  margin: 4rem auto 5rem;
   max-width: 80ch;
   padding: 0 1.25rem;
 }
-.main-container .wrap .search-result a {
+.wrap .search-result a {
   color: inherit;
 }
-.main-container .wrap .search-result a:hover {
+.wrap .search-result a:hover {
   color: #fff;
 }
-.main-container .wrap .result, .main-container .wrap .main-content {
+.wrap .result, .wrap .main-content {
   grid-column: 1/7;
 }
-.main-container .wrap .banner-container {
+.wrap .banner-container {
   flex-direction: column;
   grid-column: 1/7;
   align-items: flex-start;
   margin: 0;
 }
-.main-container .banner-container {
+
+.banner-container {
   max-width: 1200px;
-  padding-left: 0;
-  padding-right: 0;
   padding: 0 1.25rem;
   margin: 3rem auto 0 auto;
 }
-.main-container .banner-container:not(.search-box) h1 {
+.banner-container p {
+  margin: revert;
+}
+.banner-container:not(.search-box) h1 {
   margin-bottom: 1rem;
 }
-.main-container .banner-container .page-banner h2 {
+.banner-container .page-banner h2 {
   text-align: left;
   padding-bottom: 0.5rem;
   margin: 0;
 }
-.main-container .welcome-container {
+
+.welcome-container {
   padding: 2.5rem 0 3.75rem;
   background: inherit;
-  max-width: 70ch;
   max-width: 60ch;
   border-radius: 0.5rem;
-}
-.main-container .hero-wrap {
-  margin: 1rem auto;
 }
 
 .clear-filter-btn {
@@ -872,7 +878,7 @@ main blockquote {
     margin-bottom: 0 !important;
   }
 
-  .main-container .hero-section {
+  .hero-section {
     border-bottom: 0;
     margin-bottom: 0;
   }
@@ -960,6 +966,9 @@ main .post h3 {
 #post a.code-link:hover code {
   color: #1836AF;
   text-decoration: none;
+}
+#post p {
+  margin: revert;
 }
 #post ol li, #post ul li {
   margin: 8px 0;
@@ -1124,16 +1133,15 @@ main .post h3 {
   font-family: -apple-system, "Helvetica Neue", Helvetica, sans-serif;
 }
 
-#post-content .main-content {
+.main-content.post-page {
   display: grid;
   grid-template-columns: 18% 82%;
   gap: 0px;
   padding: 0 1.25rem;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 6rem;
+  margin: auto auto 6rem auto;
+  width: 100%;
 }
-#post-content .main-content .post .preview {
+.main-content.post-page .post .preview {
   margin-top: 0.75rem;
   margin-bottom: 0.5rem;
 }
@@ -1252,18 +1260,19 @@ main .post h3 {
   font-size: 16px;
 }
 
-.main-container .search-banner {
+.search-banner {
   padding: 0;
 }
-.main-container .wrap .category-small {
+
+.wrap .category-small {
   font-size: 1rem;
   margin-bottom: 0.4rem;
   grid-column: 1/3;
 }
-.main-container .wrap .category-small a {
+.wrap .category-small a {
   color: #333;
 }
-.main-container .wrap .search-box {
+.wrap .search-box {
   display: flex;
   display: -webkit-flex;
   flex-direction: row;
@@ -1634,12 +1643,12 @@ textarea:focus {
 .hero-section {
   display: flex;
   align-items: center;
-  margin: 0 auto;
-  border-radius: 5px;
+  margin: 1rem auto;
   border-radius: 0;
   padding: 0 1.25rem;
   overflow: hidden;
   max-width: 1200px;
+  width: 100%;
 }
 
 .pg-row {
@@ -1676,7 +1685,7 @@ textarea:focus {
 .camera-block p span,
 .lens-block p span {
   margin-right: 1rem;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   vertical-align: baseline;
 }
 
@@ -1763,6 +1772,21 @@ textarea:focus {
   overflow: hidden;
 }
 
+#main-art .banner-container {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.about-header {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
+  grid-column: 1/7;
+  grid-row: 1;
+  text-align: left;
+}
+
 #main-about {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -1777,18 +1801,7 @@ textarea:focus {
   max-width: 25ch;
   padding-right: 0;
 }
-#main-about .about-header {
-  padding-left: 0;
-  padding-right: 0;
-  margin-left: 0;
-  margin-right: 0;
-}
-#main-about header {
-  grid-column: 1/7;
-  grid-row: 1;
-  text-align: left;
-}
-#main-about section {
+#main-about main {
   grid-column: 1/5;
   grid-row: 2;
   max-width: 90ch;
@@ -2150,7 +2163,7 @@ textarea:focus {
     width: 1px;
   }
 
-  .main-container .welcome-container {
+  .welcome-container {
     max-width: 100%;
     max-width: 100%;
     margin-left: initial;
@@ -2169,7 +2182,7 @@ textarea:focus {
     margin-bottom: -0.5rem;
   }
 
-  #main-about section, .contact-container,
+  #main-about main, .contact-container,
 .recent-posts {
     grid-column: 1/7;
   }
@@ -2183,12 +2196,12 @@ textarea:focus {
   }
 }
 @media screen and (max-width: 915px) {
-  .main-container .welcome-container {
+  .welcome-container {
     max-width: 100%;
     margin-left: initial;
     margin-bottom: 2.5rem;
   }
-  .main-container .welcome-container .home-banner p {
+  .welcome-container .home-banner p {
     max-width: 50ch;
   }
 
@@ -2231,7 +2244,7 @@ textarea:focus {
   }
 }
 @media screen and (max-width: 875px) {
-  #main-about section, .contact-container,
+  #main-about main, .contact-container,
 .recent-posts {
     grid-column: 1/7;
   }
@@ -2282,6 +2295,11 @@ textarea:focus {
     transform: perspective(1000000px) rotateX(70deg) rotateZ(-45deg) scale3d(0.7, 0.7, 0.7);
   }
 }
+@media screen and (max-width: 775px) {
+  .hero-section {
+    border-bottom: none;
+  }
+}
 @media screen and (max-width: 750px) {
   .ft-left {
     grid-column: 1/3;
@@ -2310,10 +2328,6 @@ textarea:focus {
   }
 }
 @media (max-width: 670px) {
-  .hero-section {
-    margin-top: 0;
-  }
-
   .nav-main .nav-list .nav-item a {
     padding-left: 0.5rem;
     margin-left: 0;
@@ -2356,7 +2370,7 @@ textarea:focus {
     width: 100%;
   }
 
-  .main-container .projects .project-grid {
+  .projects .project-grid {
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   }
 }
