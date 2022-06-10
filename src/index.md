@@ -4,6 +4,17 @@ about: I'm a software engineer and mathematician. I enjoy solving problems and b
 layout: index.njk
 eleventyExcludeFromCollections: true
 templateEngineOverride: njk, md
+metadata:
+  title: Tanner Dolby
+  desc: Hi, I'm Tanner. A software engineer and mathematician with a passion for building things for the web.
+  url: https://tannerdolby.com
+  img: https://tannerdolby.com/images/arch-spiral-large.jpg
+  img_alt: An Archimedean Spiral generated with JavaScript
+  twitter_card_type: summary_large_image
+  twitter_handle: tannerdolby
+  name: Tanner Dolby
+  generator: eleventy
+  comments: true
 ---
 
 <header class="welcome-container">

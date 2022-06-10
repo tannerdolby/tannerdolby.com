@@ -1,5 +1,5 @@
 ---
-layout: main.njk
+layout: base.njk
 pageId: main-writing
 metadata:
     title: Writing - tannerdolby.com
@@ -7,11 +7,12 @@ metadata:
     url: https://tannerdolby.com/writing/
     img: https://tannerdolby.com/images/arch-spiral-large.jpg
     img_alt: An Archimedean Spiral
-    twitterHandle: "@tannerdolby"
+    twitter_handle: tannerdolby
     name: Tanner Dolby
     generator: eleventy
     comments: true
 ---
+
 {% set sortedTags = collections.posts | taglist %}
 
 <div class="wrap">
@@ -33,7 +34,7 @@ metadata:
             </a>
         </div>
     </header>
-    <div class="main-content">
+    <main class="main-content">
         <ul class="my-posts">
             {% for post in collections.posts | reverse %}
             <li>
@@ -57,5 +58,5 @@ metadata:
             </li>
             {% endfor %}
         </ul>
-    </div>
+    </main>
 </div>

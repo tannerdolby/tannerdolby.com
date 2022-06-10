@@ -1,5 +1,5 @@
 ---
-layout: main.njk
+layout: base.njk
 pageId: main-contact
 metadata:
   title: Contact - tannerdolby.com
@@ -7,11 +7,12 @@ metadata:
   url: https://tannerdolby.com/contact/
   img: https://tannerdolby.com/images/arch-spiral-large.jpg
   img_alt: An Archimedean Spiral
-  twitterHandle: "@tannerdolby"
+  twitter_handle: tannerdolby
   name: Tanner Dolby
   generator: eleventy
   comments: true
 ---
+<div id="main-contact">
 <div class="contact-container">
     <h1>Contact Tanner</h1>
     <div class="contact-detail"> 
@@ -28,4 +29,5 @@ metadata:
         <button type="submit" class="reach-me button submit-contact">Message me</button>
     </form>
 </div>
-{% include "sidebar.njk" %}
+{% include "components/sidebar.njk" %}
+</div>

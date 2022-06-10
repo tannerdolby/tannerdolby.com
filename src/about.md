@@ -9,23 +9,31 @@ headshot:
     src: "/images/tanner-casual-4.png"
 layout: about.njk
 pageId: main-about
+metadata:
+  title: About - tannerdolby.com
+  desc: About Tanner Dolby
+  url: https://tannerdolby.com/about/
+  img: https://tannerdolby.com/images/arch-spiral-large.jpg
+  img_alt: An Archimedean Spiral
+  twitter_handle: tannerdolby
+  name: Tanner Dolby
+  generator: eleventy
+  comments: true
 ---
 
-Hi there! My name is Tanner Dolby. I'm a software engineer and mathematician based out of California. My academic background is in Applied Mathematics. That is, I'm a self taught programmer. I enjoy working with JavaScript, C++, HTML, CSS, Node.js, TypeScript, Java, and Python. I'm interested in applying my skills to build performant software and help others.
+Hi there! My name is Tanner Dolby. I'm a Software Engineer and Mathematician based out of California. My academic background is in Applied Mathematics. I like working with Python, JavaScript, HTML, CSS, Node, C++, and Java. I'm interested in applying my skills to build performant software and help others.
 
-I like contributing to open source projects on GitHub and learning new things along the way. I also enjoy reading technical content, whether it's in book form or documentation on the web and then starting to build things from what I learned. This has proved to be a really surefire way to better understand a topic or concept. Throughout my life I've always liked solving problems, and I think this is why I'm still interested in games like Chess and Sudoku. I tend to think of programming as a lifelong journey where there is always something to learn or become better at.
+I like contributing to open source projects on GitHub and learning new things along the way. I quite often find myself reading technical content, whether it's in book form or documentation on the web and then starting to build things from what I learned. This has proved to be a really surefire way to better understand a topic or concept. Throughout my life I've always liked solving problems, and I think this is why I'm still interested in games like Chess and Sudoku.
 
-I spend most of my free time contributing to open source projects on [GitHub][github], learning new things, creating illustrations, playing Chess, running, and making fun experiments on [CodePen][codepen]. With the JAMstack movement on the rise, I've taken an interest in Static Site Generators (SSG). In particular [Eleventy][eleventy], which this website is built with.
+I spend most of my free time contributing to open source projects on [GitHub][github], running on a local trail, playing Chess, and making fun experiments on [CodePen][codepen]. With the JAMstack movement on the rise, I've taken an interest in Static Site Generators (SSG). In particular [Eleventy][eleventy], which this website is built with.
 
 ## Interests
 
-I like to write about programming and technology. I'm currently fixated on learning more about C++, game dev with Phaser, Chess, and Web Performance. If you would like to see me write about a specific topic or concept, feel free to message me on Twitter about it. 
-
-I enjoy writing documentation (and referencing it) so when I'm learning new content, I tend to take notes and write a blog post or something to document and reinforce what I learned. When I'm not on the computer, you can find me creating illustrations on my iPad, playing Chess, reading a good book, running, skateboarding, and trying to become a better photographer.
+I enjoy the outdoors and like to go running. I also like writing about programming and technology. I'm currently fixated on learning more about Python, Chess, and Web Performance. If you would like to see me write about a specific topic or concept, feel free to message me on Twitter about it.
 
 ### Photography
 
-I'm using a Sony DSLR camera. This is my first real deal camera with all the bells and whistles so I'm still trying to figure out how exactly to use it. Once I do, the photos taken will be added to a gallery here on my website to document my journey as a photographer.
+I have a Sony DSLR camera. This is my first real deal camera with all the bells and whistles so I'm still trying to figure out how exactly to use it. Once I do, the photos taken will be added to a gallery here on the site.
 
 <div class="pg-row">
     <div class="camera-block">
@@ -57,15 +65,16 @@ During my time at ASU, I worked as an Undergraduate Researcher and Supplemental 
 
 ## Need More?
 
-I'm interested in all things software related: Web development, open source, C++, technical writing, static sites, JAMstack, system design, chrome extensions and more. Have a look at my [resume][resume] and feel free to [contact me][contact] if you'd like to chat!
+I'm interested in all things math or software related: Python, Web Development, Open Source, Technical Writing, Static Sites, System Design, and more. Have a look at my [resume][resume] and feel free to [contact me][contact] if you'd like to chat!
 
 <div class="social-icons">
 {% for icon in socials %}
-{% if icon.name != "LeetCode" %}
+    {% if icon.name != "LeetCode" %}
 - [![{{ icon.name }}]({{ icon.src }})]({{ icon.url }})
-{% endif %}
+    {% endif %}
 {% endfor %}
 </div>
+
 
 [github]: https://github.com/tannerdolby
 [codepen]: https://codepen.io/tannerdolby
