@@ -1,9 +1,9 @@
-const Cache = require("@11ty/eleventy-cache-assets");
+const EleventyFetch = require("@11ty/eleventy-fetch")
 
 async function fetchData(url) {
     console.log(`Caching: ${url}`);
     try {
-        const json = await Cache(url, {
+        const json = await EleventyFetch(url, {
             duration: "1d",
             type: "json",
         });
