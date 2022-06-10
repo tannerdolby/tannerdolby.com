@@ -30,6 +30,7 @@
   "license": "MIT",
   "dependencies": {
     "@11ty/eleventy-cache-assets": "^2.3.0",
+    "@11ty/eleventy-fetch": "^3.0.0",
     "@types/jest": "^26.0.24",
     "capture-website": "^1.4.0",
     "cheerio": "^1.0.0-rc.10",
