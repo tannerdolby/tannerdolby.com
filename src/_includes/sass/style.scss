@@ -227,12 +227,12 @@ textarea {
 .hero-section {
     display: flex;
     align-items: center;
-    margin: 0 auto;
-    border-radius: 5px;
+    margin: 1rem auto;
     border-radius: 0;
     padding: 0 1.25rem;
     overflow: hidden;
     max-width: 1200px;
+    width: 100%;
 }
 
 .pg-row {
@@ -248,12 +248,12 @@ textarea {
     margin: 1rem 0;
     height: 100%;
     width: 100%;
+
     .camera-info {
         display: flex;
         flex-direction: column;
-        // justify-content: space-between;
-        // align-items: center;
     }
+
     h4 {
         background: #000;
         color: #fff;
@@ -266,7 +266,7 @@ textarea {
 
         span {
             margin-right: 1rem;
-            font-size: 1.4rem;
+            font-size: 1.6rem;
             vertical-align: baseline;
         }
     }
@@ -304,7 +304,6 @@ textarea {
     padding-left: 0; 
     list-style: none;
     margin: .5rem 0 1rem 0;
-    // grid-column: 1 / 7;
 
     li {
         display: flex; 
@@ -360,6 +359,23 @@ textarea {
     overflow: hidden;
 }
 
+#main-art {
+    .banner-container {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+}
+
+.about-header {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    grid-column: 1 / 7;
+    grid-row: 1;
+    text-align: left;
+}
+
 #main-about {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -375,20 +391,7 @@ textarea {
         padding-right: 0;
     }
 
-    .about-header {
-        padding-left: 0;
-        padding-right: 0;
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    header {
-        grid-column: 1 / 7;
-        grid-row: 1;
-        text-align: left;
-    }
-
-    section {
+    main {
         grid-column: 1 / 5;
         grid-row: 2;
         max-width: 90ch;
@@ -738,14 +741,13 @@ textarea {
         @include visually-hidden();
     }
 
-    .main-container {
-        .welcome-container {
-            max-width: 100%;
-            max-width: 100%;
-            margin-left: initial;
-            margin-bottom: 2.5rem;
-        }
+    .welcome-container {
+        max-width: 100%;
+        max-width: 100%;
+        margin-left: initial;
+        margin-bottom: 2.5rem;
     }
+    
 
     .hero-section {
         flex-direction: column;
@@ -760,7 +762,7 @@ textarea {
         }
     }
 
-    #main-about section, .contact-container,
+    #main-about main, .contact-container,
     .recent-posts {
         grid-column: 1 / 7;
     }
@@ -774,19 +776,18 @@ textarea {
 }
 
 @media screen and (max-width: 915px) {
-    .main-container {
-        .welcome-container {
-            max-width: 100%;
-            margin-left: initial;
-            margin-bottom: 2.5rem;
-            .home-banner {
-                p {
-                    max-width: 50ch;
-                }
+    .welcome-container {
+        max-width: 100%;
+        margin-left: initial;
+        margin-bottom: 2.5rem;
+        .home-banner {
+            p {
+                max-width: 50ch;
             }
-        
         }
+    
     }
+    
 
     .hide-cube {
         @include visually-hidden();
@@ -827,7 +828,7 @@ textarea {
 
 @media screen and (max-width: 875px) {
 
-    #main-about section, .contact-container,
+    #main-about main, .contact-container,
     .recent-posts {
         grid-column: 1 / 7;
     }
@@ -885,7 +886,13 @@ textarea {
             transform: perspective(1000000px) rotateX(70deg) rotateZ(-45deg) scale3d(.7, .7, .7);
         }
     }
-} 
+}
+
+@media screen and (max-width: 775px) {
+    .hero-section {
+        border-bottom: none;
+    }
+}
 
 @media screen and (max-width: 750px) {
     .ft-left {
@@ -922,11 +929,6 @@ textarea {
 }
 
 @media (max-width: 670px) {
-
-    .hero-section {
-        margin-top: 0;
-    }
-
     .nav-main {
         .nav-list {
             .nav-item {
@@ -987,11 +989,10 @@ textarea {
             }
         }
     }
-    .main-container {
-        .projects {
-            .project-grid {
-                grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-            }
+
+    .projects {
+        .project-grid {
+            grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
         }
     }
 }

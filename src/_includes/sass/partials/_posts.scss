@@ -12,6 +12,7 @@ main {
         }
     }
 }
+
 #post {
     max-width: 80ch;
     margin: 0 auto 0 2.5rem;
@@ -25,6 +26,10 @@ main {
                 text-decoration: none;
             }
         }
+    }
+
+    p {
+        margin: revert;
     }
 
     ol, ul {
@@ -238,23 +243,23 @@ main {
     }
 }
 
-#post-content {
-    .main-content {
-        display: grid;
-        grid-template-columns: 18% 82%;
-        gap: 0px;
-        padding: 0 1.25rem;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 6rem;
-        .post {
-            .preview {
-                margin-top: .75rem;
-                margin-bottom: .5rem;
-            }
+
+.main-content.post-page {
+    display: grid;
+    grid-template-columns: 18% 82%;
+    gap: 0px;
+    padding: 0 1.25rem;
+    margin: auto auto 6rem auto;
+    width: 100%;
+
+    .post {
+        .preview {
+            margin-top: .75rem;
+            margin-bottom: .5rem;
         }
     }
 }
+
 
 .share {
     strong {

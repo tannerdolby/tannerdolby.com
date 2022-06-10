@@ -114,13 +114,17 @@
     margin-right: auto;
     margin-bottom: 4rem;
     grid-column: 1 / 5;
+
+    p {
+        margin: revert;
+    }
 }
 
 .contact {
     background: #202d3d;
     padding: 1rem 1.25rem;
     background: inherit;
-    margin: 2rem auto;
+    margin: 4rem auto 6rem auto;
     max-width: 1200px;
 }
 
