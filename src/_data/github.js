@@ -39,13 +39,14 @@ module.exports = async function() {
 
     try {
         let repos = [
-            "eleventy-photo-gallery",
             "eleventy-plugin-metagen",
+            "eleventy-photo-gallery",
             "bug-saves-world",
+            "pydetails",
             "cpp-markdown-parser",
-            "randoma11y-chrome-extension",
-            "word-counts"
+            "randoma11y-chrome-extension"
         ];
+
         repos = repos.map(async (repo) => {
             return await fetchData(`${apiUrl}/${repo}`);
         });
