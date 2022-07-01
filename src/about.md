@@ -21,7 +21,7 @@ metadata:
   comments: true
 ---
 
-Hi there! My name is Tanner Dolby. I'm a Software Engineer and Mathematician based out of California. My academic background is in Applied Mathematics. I like working with Python, JavaScript, HTML, CSS, Node, C++, and Java. I'm interested in applying my skills to build performant software and help others.
+Hi there! My name is Tanner Dolby. I'm a Software Engineer and Mathematician based out of California. My academic background is in Applied Mathematics. I like working with Java, Python, JavaScript, HTML, CSS, Node, and C++. I'm interested in applying my skills to build performant software and help others.
 
 I like contributing to open source projects on GitHub and learning new things along the way. I quite often find myself reading technical content, whether it's in book form or documentation on the web and then starting to build things from what I learned. This has proved to be a really surefire way to better understand a topic or concept. Throughout my life I've always liked solving problems, and I think this is why I'm still interested in games like Chess and Sudoku.
 
@@ -81,6 +81,6 @@ I'm interested in all things math or software related: Python, Web Development, 
 [eleventy]: https://11ty.dev
 [vectornator]: https://www.vectornator.io/
 [contact]: /contact/
-[resume]: /resume/resume.pdf
+[resume]: /resume.pdf
 [grad ceremony]: https://vgradasu.z4.web.core.windows.net/asu/III/#811351
 [pandemic]: https://www.cdc.gov/coronavirus/2019-ncov/index.html
