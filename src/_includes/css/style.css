@@ -694,6 +694,9 @@ main blockquote {
   padding: 0 1.25rem;
   margin: 3rem auto 0 auto;
 }
+.banner-container.error-page {
+  margin-bottom: 4rem;
+}
 .banner-container p {
   margin: revert;
 }

@@ -307,6 +307,10 @@ main {
     padding: 0 1.25rem;
     margin: 3rem auto 0 auto;
 
+    &.error-page {
+        margin-bottom: 4rem;
+    }
+
     p {
         margin: revert;
     }
