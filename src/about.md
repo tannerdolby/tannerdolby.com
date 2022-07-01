@@ -65,7 +65,7 @@ During my time at ASU, I worked as an Undergraduate Researcher and Supplemental 
 
 ## Need More?
 
-I'm interested in all things math or software related: Python, Web Development, Open Source, Technical Writing, Static Sites, System Design, and more. Have a look at my [resume][resume] and feel free to [contact me][contact] if you'd like to chat!
+I'm interested in all things math or software related: Java, Python, Web Development, Open Source, Technical Writing, Static Sites, System Design, and more. Have a look at my [resume][resume] and feel free to [contact me][contact] if you'd like to chat!
 
 <div class="social-icons">
 {% for icon in socials %}
