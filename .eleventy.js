@@ -54,7 +54,7 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.addPassthroughCopy("./src/_includes/js");
     eleventyConfig.addPassthroughCopy("./src/remote");
     eleventyConfig.addPassthroughCopy("./src/social-share/");
-    eleventyConfig.addPassthroughCopy("./src/resume/");
+    eleventyConfig.addPassthroughCopy("./src/resume.*");
 
     eleventyConfig.addWatchTarget("./src/_includes/sass");
 
@@ -112,7 +112,7 @@ module.exports = (eleventyConfig) => {
     // adding tags to data-tags for search feature
     eleventyConfig.addFilter("stringify", function(tags) {
         let tagsArr = tags;
-        for (var i = 0; i < tagsArr.length; i++) {
+        for (let i = 0; i < tagsArr.length; i++) {
             var dataTags = [];
             if (tagsArr[i]) {
                 dataTags.push(`"${tags[i]}"`);
