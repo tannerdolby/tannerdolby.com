@@ -43,7 +43,7 @@ module.exports = async function() {
             "eleventy-photo-gallery",
             "bug-saves-world",
             "pydetails",
-            "cpp-markdown-parser",
+            "frametools",
             "randoma11y-chrome-extension"
         ];
 
