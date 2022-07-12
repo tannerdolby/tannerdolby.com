@@ -21,15 +21,15 @@ metadata:
   comments: true
 ---
 
-Hi there! My name is Tanner Dolby. I'm a Software Engineer and Mathematician based out of California. My academic background is in Applied Mathematics. I like working with Java, Python, JavaScript, HTML, CSS, Node, and C++. I'm interested in applying my skills to build performant software and help others.
+Hi there! My name is Tanner Dolby. I'm a Software Engineer and Mathematician based out of California. My academic background is in Applied Mathematics and I received my degree from ASU in 2020. I like working with JavaScript, Python, Node.js, HTML, CSS, and Java. I'm interested in applying my skills to build performant software and help others.
 
-I like contributing to open source projects on GitHub and learning new things along the way. I quite often find myself reading technical content, whether it's in book form or documentation on the web and then starting to build things from what I learned. This has proved to be a really surefire way to better understand a topic or concept. Throughout my life I've always liked solving problems, and I think this is why I'm still interested in games like Chess and Sudoku.
-
-I spend most of my free time contributing to open source projects on [GitHub][github], running on a local trail, playing Chess, and making fun experiments on [CodePen][codepen]. With the JAMstack movement on the rise, I've taken an interest in Static Site Generators (SSG). In particular [Eleventy][eleventy], which this website is built with.
+I like contributing to open source projects on GitHub and learning new things along the way. I quite often find myself reading technical content, whether it's in book form or documentation on the web and then starting to build things from what I learned. This has proved to be a really surefire way to better understand a topic or concept.
 
 ## Interests
 
-I enjoy the outdoors and like to go running. I also like writing about programming and technology. I'm currently fixated on learning more about Python, Chess, and Web Performance. If you would like to see me write about a specific topic or concept, feel free to message me on Twitter about it.
+I really enjoy the outdoors! I like to go running, hiking, and mountain biking. I also like reading books and learning new things. I'm currently fixated on learning more about System Architecture Patterns, Chess, and Web Performance. If you would like to see me write about a specific topic or concept, feel free to message me on Twitter about it.
+
+Throughout my life I've always liked solving problems, and I think this is why I still really enjoy playing Chess and Sudoku. When I'm not doing something outside, I spend most of my time reading, contributing to open source projects on [GitHub][github], playing Chess, and making fun experiments on [CodePen][codepen]. With the JAMstack movement on the rise, I've taken an interest in Static Site Generators (SSG). In particular [Eleventy][eleventy], which this website is built with.
 
 ### Photography
 
