@@ -7,6 +7,7 @@ async function fetchData(url) {
             duration: "1d",
             type: "json",
         });
+
         return {
             title: json.name,
             desc: json.description,
