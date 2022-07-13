@@ -9,11 +9,11 @@
   "scripts": {
     "watch:sass": "sass --watch src/_includes/sass:src/_includes/css",
     "build:sass": "sass src/_includes/sass:src/_includes/css",
-    "watch:eleventy": "ELEVENTY_ENV=development eleventy --serve",
-    "build:eleventy": "ELEVENTY_ENV=production eleventy",
-    "dev": "npm-run-all build:sass --parallel watch:*",
+    "watch:eleventy": "ELEVENTY_ENV=development npx @11ty/eleventy --serve",
+    "build:eleventy": "ELEVENTY_ENV=production npx @11ty/eleventy",
+    "dev": "npm-run-all watch:*",
     "build": "npm-run-all build:*",
-    "debug": "DEBUG=* eleventy",
+    "debug": "DEBUG=* @11ty/eleventy",
     "lint": "stylelint src/_includes/sass/*.scss",
     "test:scripts": "jest"
   },
@@ -24,7 +24,6 @@
   ],
   "author": {
     "name": "Tanner Dolby",
-    "email": "dolb.tanner@gmail.com",
     "url": "https://github.com/tannerdolby"
   },
   "license": "MIT",
