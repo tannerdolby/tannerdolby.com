@@ -5,7 +5,7 @@
             <!-- TODO: Fix sortRecent(arr) usage in .eleventy.js -->
             {% for drawing in art | sortRecent(art) %}
                 <li>
-                    <a href="/art/#{{ drawing.id }}" aria-label="{{ drawing.name }}">
+                    <a href="/fun/#{{ drawing.id }}" aria-label="{{ drawing.name }}">
                         {% respimg 
                             src=drawing.image.filename,
                             alt=drawing.image.alt,
