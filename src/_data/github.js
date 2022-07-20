@@ -45,7 +45,7 @@ module.exports = async function() {
             "eleventy-photo-gallery",
             "bug-saves-world",
             "pydetails",
-            "frametools",
+            "eleventy-plugin-sharp-respimg",
             "randoma11y-chrome-extension"
         ];
 
