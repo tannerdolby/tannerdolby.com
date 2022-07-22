@@ -3,6 +3,7 @@ const EleventyFetch = require("@11ty/eleventy-fetch")
 // todo: update caching logic here with EleventyFetch
 async function fetchData(url) {
     console.log(`Caching: ${url}`);
+
     try {
         const json = await EleventyFetch(url, {
             duration: "1d",
