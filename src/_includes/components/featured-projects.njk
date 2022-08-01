@@ -3,6 +3,7 @@
         <h2 class="section-title">Featured Projects</h2>
         <ul class="project-grid">
             {% for repo in github %}
+            {% if repo.title %}
             <li class="project-tile">
                 <div class="project-details">
                     <div class="top-level">
@@ -17,6 +18,7 @@
                     <p class="project-desc">{{ repo.desc }}</p>
                 </div>
             </li>
+            {% endif %}
             {% endfor %}
         </ul>
     </div>
