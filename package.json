@@ -11,9 +11,9 @@
     "build:sass": "sass src/_includes/sass:src/_includes/css",
     "watch:eleventy": "ELEVENTY_ENV=development npx @11ty/eleventy --serve",
     "build:eleventy": "ELEVENTY_ENV=production npx @11ty/eleventy",
-    "dev": "npm-run-all watch:*",
+    "dev": "npm run watch:sass & npm run watch:eleventy",
     "build": "npm-run-all build:*",
-    "debug": "DEBUG=* @11ty/eleventy",
+    "debug": "DEBUG=* npx @11ty/eleventy",
     "lint": "stylelint src/_includes/sass/*.scss",
     "test:scripts": "jest"
   },
