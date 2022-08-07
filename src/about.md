@@ -6,7 +6,8 @@ permalink: "/about/"
 headshot:
     small: "/images/headshot3-small.jpg"
     med: "/images/tanner-casual-medium.jpg"
-    src: "/images/tanner-casual-4.png"
+    oldSrc: "/images/tanner-casual-4.png"
+    src: "/images/test-grad-3.png"
 layout: about.njk
 pageId: main-about
 metadata:
