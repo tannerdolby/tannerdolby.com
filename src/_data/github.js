@@ -7,7 +7,7 @@ const repoUrls = [
     "eleventy-plugin-metagen",
     "eleventy-photo-gallery",
     "bug-saves-world",
-    "pydetails",
+    "break0ut",
     "eleventy-plugin-sharp-respimg",
     "randoma11y-chrome-extension"
 ];
