@@ -1,12 +1,12 @@
 [
   {
-    "timeUpdated": "Sun, 07 Aug 2022 08:45:56 GMT",
-    "cacheSize": 8
+    "timeUpdated": "Mon, 15 Aug 2022 22:05:32 GMT",
+    "cacheSize": 9
   },
   {
     "title": "eleventy-plugin-metagen",
     "desc": "An Eleventy shortcode that generates document metadata.",
-    "stargazers": 31,
+    "stargazers": 32,
     "subscribers": 1,
     "forks": 3,
     "issues": 1,
@@ -17,7 +17,7 @@
   {
     "title": "eleventy-photo-gallery",
     "desc": "A starter site for creating a responsive image gallery using the Eleventy static site generator.",
-    "stargazers": 91,
+    "stargazers": 94,
     "subscribers": 3,
     "forks": 5,
     "issues": 0,
@@ -50,7 +50,7 @@
   {
     "title": "eleventy-plugin-sharp-respimg",
     "desc": "An Eleventy paired shortcode which performs build-time image transformations and generates responsive image markup.",
-    "stargazers": 8,
+    "stargazers": 9,
     "subscribers": 1,
     "forks": 3,
     "issues": 0,
@@ -79,5 +79,16 @@
     "stargazers_url": "https://github.com/tannerdolby/binary-messenger/stargazers/",
     "homepage": null,
     "repo_url": "https://github.com/tannerdolby/binary-messenger"
+  },
+  {
+    "title": "break0ut",
+    "desc": "A remake of the 1970s arcade game Breakout.",
+    "stargazers": 0,
+    "subscribers": 1,
+    "forks": 0,
+    "issues": 0,
+    "stargazers_url": "https://github.com/tannerdolby/break0ut/stargazers/",
+    "homepage": "",
+    "repo_url": "https://github.com/tannerdolby/break0ut"
   }
 ]
