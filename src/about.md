@@ -70,7 +70,7 @@ I have a Sony DSLR camera. This is my first real deal camera with all the bells 
 </div>
 
 ### Good Reads
-Reading has become an integral part of my life. Whether I'm reading for fun or to learn something new, I always find happiness when reading because there's always a new story I can dive into. Lately, I've been into fantasy/adventure/sci-fi books, but I'm always open to book recommendations of any genre!
+Reading has become an integral part of my life. Whether I'm reading for fun or to learn something new, it brings me alot of happiness because there's always a new story I can dive into. Lately, I've been into fantasy, adventure, and sci-fi books, but I'm always open to book recommendations of any genre!
 
 <h4 class="h3-5">My Picks</h4>
 
