@@ -14,7 +14,8 @@ pageId: main-art
     <h1 class="h1">{{ title }}</h1>
     {{ content | safe }}
 </header>
-<section class="art">
+
+<main class="art">
 {% for drawing in art %}
     <div class="art-details">
         <a href="{{ drawing.url }}" aria-label="{{ drawing.aria_label }}">
@@ -38,4 +39,4 @@ pageId: main-art
         </div> -->
     </div>
 {% endfor %}
-</section>
+</main>

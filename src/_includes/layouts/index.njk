@@ -3,12 +3,14 @@ layout: base.njk
 pageId: main
 ---
 
-<div class="hero-section">
+<header class="hero-section">
     {{ content | safe }}
     {% include "components/cube-demo.html" %}
-</div>
+</header>
 
+<main>
 {% include "components/recent-posts.njk" %}
 {% include "components/featured-projects.njk" %}
 {% include "components/latest-art.njk" %}
 {% include "components/homepage-contact.njk" %}
+</main>

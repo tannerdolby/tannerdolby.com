@@ -17,7 +17,7 @@ metadata:
   comments: true
 ---
 
-<header class="welcome-container">
+<div class="welcome-container">
     <div class="home-banner">
         <div class="hero-content">
             <h1>Hi, I'm {{ site.page_info.name }}.</h1>
@@ -25,4 +25,4 @@ metadata:
             <a class="reach-me button hero" href="/contact">Work with me</a>
         </div>
     </div>
-</header>
+</div>
