@@ -159,7 +159,7 @@ module.exports = (eleventyConfig) => {
 
     // Generate TOC for a given page (or all) at build-time
     eleventyConfig.addNunjucksAsyncShortcode("toc", async function(data) {
-        if (!data) return '';
+        if (!data || !data.post) return '';
 
         const post = data.post;
         const fileContent = await readFile(post.inputPath);
