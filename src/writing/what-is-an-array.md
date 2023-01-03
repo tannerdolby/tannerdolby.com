@@ -173,12 +173,12 @@ In JavaScript, arrays can more closely resemble a Map with name/value pairs.
 That means the first value of an array at index 0 would be displayed as `0: 15` where the 0th (first index) holds a value of 15. One of my favorite things about JavaScript arrays compared to other languages arrays (like Java) is the fact that JavaScript arrays can hold a collection of values with different data types and grow dynamically. 
 
 ```js
-let myArr = [10, "foo", true, { prop: "bar" }]
-console.log(ar[0]); // 10 (Number)
-console.log(ar[1]); // "foo" (String)
-console.log(ar[2]); // true (Boolean)
-console.log(ar[3]); // Object { prop: "bar" }
-console.log(ar[3].prop) // "bar" (access object properties)
+let arr = [10, "foo", true, { prop: "bar" }]
+console.log(arr[0]); // 10 (Number)
+console.log(arr[1]); // "foo" (String)
+console.log(arr[2]); // true (Boolean)
+console.log(arr[3]); // Object { prop: "bar" }
+console.log(arr[3].prop) // "bar" (access object properties)
 ```
 
 There are many [data structures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures) in JavaScript and like shown above, arrays can hold any of the primitive types (undefined, String, Number, Boolean, BigInt, Symbol) and structural types.

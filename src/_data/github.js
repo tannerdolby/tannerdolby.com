@@ -1,41 +1,28 @@
 const EleventyFetch = require("@11ty/eleventy-fetch");
-const fs = require("fs");
-
+const { readFile, writeFile } = require('./util');
+const GITHUB_PROFILE_URL = process.env.GITHUB_PROFILE_URL;
 const cachedReposPath = __dirname + "/cachedRepos.json";
-const githubUrl = "https://github.com/tannerdolby";
 const repoUrls = [
     "eleventy-plugin-metagen",
     "eleventy-photo-gallery",
     "bug-saves-world",
     "break0ut",
     "eleventy-plugin-sharp-respimg",
-    "randoma11y-chrome-extension"
+    "rotation-cipher"
 ];
 
-
-function updateLastCacheEntryTime(cache) {
-    cache[0]["cacheSize"] = cache.length;
-    return cache[0]["timeUpdated"] = new Date().toUTCString();
-}
-
-/**
- * Perform a lookup in the cache for a GitHub repo object.
- * @param {Array<Object>} cache an array of objects representing a cache.
- * @param {String} projectName a GitHub repo name
- */
+// Perform a cache lookup for a GitHub repo object.
 function checkCache(cache, projectName) {
+    if (!cache) return [];
     let idx = 0;
     const cacheRecord = cache.find((repo, i) => {
         idx = i;
         return repo.title == projectName;
     });
-    return cacheRecord ? [cacheRecord, idx] : [];
+    return [cacheRecord, idx];
 }
 
-/**
- * Return an object containing a "minimal" repo object.
- * @param {Object} repo an object representing the GitHub repo response from GitHub API
- */
+// Return an object containing a "minimal" github repo response.
 function pruneGitHubResponse(repo) {
     return {
         title: repo.name,
@@ -44,7 +31,7 @@ function pruneGitHubResponse(repo) {
         subscribers: repo.subscribers_count,
         forks: repo.forks_count,
         issues: repo.open_issues,
-        stargazers_url: repo.html_url.concat("/stargazers/"),
+        stargazers_url: `${repo.html_url}/stargazers/`,
         homepage: repo.homepage,
         repo_url: repo.html_url
     }
@@ -52,13 +39,10 @@ function pruneGitHubResponse(repo) {
 
 async function fetchAndStoreData(url, projectName, cache) {
     let cacheUpdated = false;
-    cache[0]["cacheSize"] = cache.length;
-
-    console.log(`Caching: ${url}`);
 
     /* Search cache for existing repo data.
     - if it exists, update the entry in the cache with new data
-    - if it doesn't exist, we will add new data entry from API to cache
+    - if it doesn't exist, add new data entry from API to cache
     */
     let [cacheRecord, idx] = checkCache(cache, projectName);
 
@@ -73,35 +57,31 @@ async function fetchAndStoreData(url, projectName, cache) {
         // then we update the "local" file representing the cache
         if (cacheRecord && json) {
             cacheUpdated = true;
-            updateLastCacheEntryTime(cache);
             cache[idx] = pruneGitHubResponse(json);
         }
 
         // 2. if the repo name doesn't already exist in the cache, add the new data
         if (!cacheRecord && json) {
             cacheUpdated = true;
-            updateLastCacheEntryTime(cache);
             cache.push(pruneGitHubResponse(json));
         }
 
         // if the original cache has new records added or updated,
         // write to the cachedRepos.json file representing the "local" cache
         if (cacheUpdated) {
-            fs.writeFile(cachedReposPath, JSON.stringify(cache, null, 2), (err) => {
-                if (err) throw err;
-            });
+            const cacheStr = JSON.stringify(cache, null, 2);
+            await writeFile(cachedReposPath, cacheStr);
         }
 
         return pruneGitHubResponse(json);
 
     } catch (e) {
-        console.log(`Unable to cache: '${url}'. Checking cache for existing record.`, e);
-        /* 
-        if the API call fails - most commonly from too many requests to
-        the GitHub API because of low ceiling for requests per hour,
-        grab existing cache date before ultimately falling back to the "template"
-        repo info 
-        */
+        console.error(`Unable to cache request: '${url}'. Checking cache for existing record.`, e);
+       
+        // if the API call fails - most commonly from too many requests to
+        // the GitHub API because of low ceiling for requests per hour,
+        // grab existing cache date before ultimately falling back to the "template"
+        // repo info 
         const cacheData = checkCache(cache, projectName);
 
         return cacheData ? cacheData[0] : {
@@ -111,30 +91,32 @@ async function fetchAndStoreData(url, projectName, cache) {
             subscribers: 0,
             forks: 0,
             issues: 0,
-            stargazers_url: githubUrl,
-            homepage: githubUrl,
-            repo_url: githubUrl
+            stargazers_url: GITHUB_PROFILE_URL,
+            homepage: GITHUB_PROFILE_URL,
+            repo_url: GITHUB_PROFILE_URL
         }
     }         
 }
 
 module.exports = async function() {
-    const apiUrl = "https://api.github.com/repos/tannerdolby";
+    const cacheFile = await readFile(cachedReposPath)
+    const cacheList = cacheFile ? JSON.parse(cacheFile) : [];
 
-    try {
-        let repos = repoUrls;
-        // Read the existing local file cache
-        let cache = JSON.parse(fs.readFileSync(cachedReposPath, "utf8"));
+    if (process.env.ELEVENTY_ENV === 'dev') {
+        return cacheList;
+    }
 
-        // Fetch repo object from GitHub API and update existing cache
-        // or if API call fails, use existing cached repo data
-        repos = repos.map(async (repo) => {
-            return await fetchAndStoreData(`${apiUrl}/${repo}`, repo, cache);
-        });
-
-        return await Promise.all(repos);
-
-    } catch (e) {
-        console.log("Error returning multiple projects cached API data", e);
-    } 
+    if (process.env.ELEVENTY_ENV === 'prod') {
+        try {
+            // Fetch repo object from GitHub API and update existing cache
+            // or if API call fails, use existing cached repo data
+            const repos = repoUrls.map(async (repo) => {
+                return await fetchAndStoreData(`${process.env.GITHUB_API_URL}/${repo}`, repo, cacheList);
+            });
+    
+            return await Promise.all(repos);
+        } catch (e) {
+            console.error("Error returning cached GitHub repository data", e);
+        } 
+    }
 };

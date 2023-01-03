@@ -1590,6 +1590,12 @@ h3, .h3 {
   margin-bottom: 0.5rem;
 }
 
+.h3-5 {
+  font-size: 1.65rem;
+  font-size: clamp(1.2rem, 4vw, 1.3rem);
+  margin-bottom: 0.5rem;
+}
+
 .skip-link {
   position: fixed;
   top: 0;
@@ -2043,6 +2049,19 @@ textarea:focus {
   position: absolute;
   white-space: nowrap;
   width: 1px;
+}
+
+.experience-container {
+  margin-bottom: 2rem;
+}
+.experience-container div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.experience-container h3, .experience-container p {
+  margin-bottom: 0;
 }
 
 @media screen and (max-width: 1250px) {

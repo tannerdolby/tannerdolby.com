@@ -9,3 +9,6 @@ _site
 
 # DS_Store
 .DS_Store
+
+# Environment Variables
+.env

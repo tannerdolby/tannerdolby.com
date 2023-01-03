@@ -1,4 +1,5 @@
 const fetch = require("node-fetch");
+const { random } = require('./util');
 
 // Example of fetching some data from the GitHub API
 async function getData(url) {
@@ -16,16 +17,9 @@ async function getData(url) {
     }
 }
 
-
-function random(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min) + min)
-}
-
 module.exports = async function() {
     try {
-        const apiData = await getData("https://api.github.com/repos/tannerdolby/eleventy-photo-gallery");
+        const apiData = await getData(`${process.env.GITHUB_API_URL}/eleventy-photo-gallery`);
         return {
             title: "My custom blog post",
             metadata: {
@@ -39,6 +33,6 @@ module.exports = async function() {
             apiData: apiData
         }
     } catch (err) {
-        console.log(err);
+        console.error(err);
     }
 }

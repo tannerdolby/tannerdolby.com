@@ -1,5 +1,17 @@
 [
     {
+        "name": "Christmas Scene",
+        "url": "https://codepen.io/tannerdolby/pen/PoBZONx",
+        "id": "christmas-scene-2022",
+        "vectornator": false,
+        "aria_label": "Link to demo of Christmas scene on CodePen",
+        "image": {
+            "filename": "css-christmas-scene-2022.png",
+            "fallback_src": "/images/css-christmas-scene-2022.png",
+            "alt": "Christmas tree and presents with a cat climbing on the biggest present. It's been awhile since I tinkered with CSS art so I'm a bit rusty :)"
+        }
+    },
+    {
         "name": "3D CSS Books",
         "url": "https://codepen.io/tannerdolby/full/MWvyjQQ",
         "id": "3d-css-books",
@@ -16,7 +28,6 @@
         "url": "https://codepen.io/tannerdolby/full/jOwomNZ",
         "id": "single-div-css-pumpkin",
         "vectornator": false,
-        "order": 4,
         "aria_label": "Link to illustration of single div CSS pumpkin on CodePen",
         "image": {
             "filename": "single-div-pumpkin.png",
@@ -38,7 +49,7 @@
     },
     {
         "name": "Rock Lee",
-        "order": 2,
+        "order": 4,
         "url": "https://codepen.io/tannerdolby/full/LYyQvjJ",
         "recent": true,
         "id": "rock-lee-css",
@@ -51,7 +62,7 @@
     },
     {
         "name": "Cats Playing In a Box",
-        "order": 1,
+        "order": 3,
         "url": "https://codepen.io/tannerdolby/full/vYxyVLV",
         "recent": true,
         "id": "cats-playing-in-box",
@@ -64,11 +75,11 @@
     },
     {
         "name": "3D CSS Shipping Truck",
-        "recent": true,
         "id": "css-shipping-truck",
+        "recent": true,
+        "order": 1,
         "aria_label": "Link to CSS shipping truck on CodePen",
         "url": "https://codepen.io/tannerdolby/full/RwKybqL",
-        "order": 3,
         "image": {
             "filename": "css-truck.png",
             "fallback_src": "/images/css-truck.png",
@@ -94,6 +105,7 @@
         "url": "https://codepen.io/tannerdolby/full/ZEWKEvR",
         "date_created": "August 26, 2020",
         "recent": true,
+        "order": 2,
         "credit": "https://dribbble.com/shots/11283947-Taking-it-slow",
         "image": {
             "filename": "css-window-night-large.jpg",
