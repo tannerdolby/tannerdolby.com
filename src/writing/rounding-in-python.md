@@ -69,8 +69,8 @@ You could also use [f-strings](https://realpython.com/python-f-strings/) which i
 ```python
 name = "Root"
 size = 250
-print(f"I Am {Root}. I have {size} GB of storage.")
-# I am Root. I have 250 GB of storage.
+print(f"I am {name}. I have {size}GB of storage.")
+# I am Root. I have 250GB of storage.
 ```
 
 <h2 class="post-heading h2-5">Extreme precision rounding</h2>
