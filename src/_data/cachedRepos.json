@@ -2,8 +2,8 @@
   {
     "title": "eleventy-plugin-metagen",
     "desc": "An Eleventy shortcode that generates document metadata.",
-    "stargazers": 33,
-    "subscribers": 1,
+    "stargazers": 34,
+    "subscribers": 2,
     "forks": 3,
     "issues": 2,
     "stargazers_url": "https://github.com/tannerdolby/eleventy-plugin-metagen/stargazers/",
@@ -13,10 +13,10 @@
   {
     "title": "eleventy-photo-gallery",
     "desc": "A starter site for creating a responsive image gallery using the Eleventy static site generator.",
-    "stargazers": 102,
-    "subscribers": 2,
+    "stargazers": 108,
+    "subscribers": 3,
     "forks": 6,
-    "issues": 1,
+    "issues": 3,
     "stargazers_url": "https://github.com/tannerdolby/eleventy-photo-gallery/stargazers/",
     "homepage": "https://eleventy-gallery.netlify.app",
     "repo_url": "https://github.com/tannerdolby/eleventy-photo-gallery"
@@ -25,7 +25,7 @@
     "title": "bug-saves-world",
     "desc": "A platformer game built with Phaser. Your a bug and you must collect all stars without taking damage.",
     "stargazers": 6,
-    "subscribers": 2,
+    "subscribers": 3,
     "forks": 0,
     "issues": 0,
     "stargazers_url": "https://github.com/tannerdolby/bug-saves-world/stargazers/",
@@ -33,21 +33,10 @@
     "repo_url": "https://github.com/tannerdolby/bug-saves-world"
   },
   {
-    "title": "break0ut",
-    "desc": "A remake of the 1970s arcade game Breakout.",
-    "stargazers": 0,
-    "subscribers": 1,
-    "forks": 0,
-    "issues": 0,
-    "stargazers_url": "https://github.com/tannerdolby/break0ut/stargazers/",
-    "homepage": "",
-    "repo_url": "https://github.com/tannerdolby/break0ut"
-  },
-  {
     "title": "eleventy-plugin-sharp-respimg",
     "desc": "An Eleventy paired shortcode which performs build-time image transformations and generates responsive image markup.",
     "stargazers": 9,
-    "subscribers": 1,
+    "subscribers": 2,
     "forks": 3,
     "issues": 1,
     "stargazers_url": "https://github.com/tannerdolby/eleventy-plugin-sharp-respimg/stargazers/",
@@ -58,11 +47,22 @@
     "title": "rotation-cipher",
     "desc": "caesar cipher utility",
     "stargazers": 0,
-    "subscribers": 1,
+    "subscribers": 2,
     "forks": 0,
     "issues": 0,
     "stargazers_url": "https://github.com/tannerdolby/rotation-cipher/stargazers/",
     "homepage": "https://www.npmjs.com/package/rotation-cipher",
     "repo_url": "https://github.com/tannerdolby/rotation-cipher"
+  },
+  {
+    "title": "cipher-news",
+    "desc": "A news site built with React, Node, and serverless functions. Content from the NY Times Top Stories API.",
+    "stargazers": 0,
+    "subscribers": 2,
+    "forks": 0,
+    "issues": 0,
+    "stargazers_url": "https://github.com/tannerdolby/cipher-news/stargazers/",
+    "homepage": "https://ciphernews.netlify.app",
+    "repo_url": "https://github.com/tannerdolby/cipher-news"
   }
 ]

@@ -10,24 +10,24 @@ preview: "The 'any' type isn't something I use very often in my own development.
 
 {{ preview }} A good rule is, if your unsure of a data type for a variable, its best to let TypeScript infer the variables type for you through [type inference][1] rather than using type `any`. Only resort to using `any` if you absolutely have to.
 
-When you can, try using a type annotation to explicitly tell the compiler what data type to expect. But when your unsure what the data type will be ahead of time, this is where type inference is quite nice.
+When you can, try using a type annotation to explicitly tell the compiler what data type to expect. But when your not sure what the data type will be ahead of time, this is where type inference is quite nice.
 
 > What can I replace 'any' with while declaring an object type in Typescript? [StackOverflow][2]
 
 <h2 class="post-heading">When in doubt, don't reach for any</h2>
 
-Type inference is a great feature of TypeScript, but its also perfectly fine to explictly define types if you know they will be one of the primitive types:
+Type inference is a great feature of TypeScript, but it's also perfectly fine to explictly define types if you know they will be one of the primitive types:
 
 - string
 - number
 - boolean
 - symbol
 
-If you can't use one of the primitive types, then its time to define some [object types][3] with an interface, a `type` or [generics][4] to better let TypeScript understand the "allowed" values for a certain variable, function etc.
+If you can't use one of the primitive types, then it's time to define some [object types][3] with an interface, a `type` or [generics][4] to better let TypeScript understand the "allowed" values for a certain variable, function etc.
 
 <h2 class="post-heading">Do's and Dont's</h2>
 
-Hopefully its clear that using the `any` type in TypeScript sort of defeats the purpose of writing TS code in the first place. When we use `any`, the TypeScript compiler allows for the type to literally be any data type, which is not "safe" and can lead to unexpected values if you aren't careful. The idea of TypeScript is to provide "strictly-typed" JS code so that its durable and safer than plain ole JS which is "loosely-typed".
+Hopefully it's clear that using the `any` type in TypeScript sort of defeats the purpose of writing TS code in the first place. When we use `any`, the TypeScript compiler allows for the type to literally be any data type, which is not "safe" and can lead to unexpected values if you aren't careful. The idea of TypeScript is to provide "strictly-typed" JS code so that its durable and safer than plain ole JS which is "loosely-typed".
 
 A few examples of writing type annotations with the primitive types:
 

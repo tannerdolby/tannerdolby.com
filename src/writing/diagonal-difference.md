@@ -1,9 +1,10 @@
 ---
 title: Solving the Diagonal Difference Problem
-date: 2021-08-03
-datetime: 2021-08-03 00:00:00 Z
+date: 2023-02-13
+datetime: 2023-02-13 00:00:00 Z
 tags:
   - javascript
+  - typescript
   - hackerrank
 permalink: "/writing/{{ title | slug }}/"
 preview: This article will discuss how to solve the "diagonal difference" problem which involves calculating the diagonal difference of a n x n size square matrix.
@@ -135,7 +136,7 @@ In short, move down one and right one position and we can traverse the diagonal 
 
 <h3 class="post-heading">Plain JavaScript Implementation</h3>
 
-Although the code in the TypeScript section is much safer and more sturdy, here is a the basic JavaScript implementation (without defined types) for calculating the diagonal difference of any square matrix. Where the function accepts a single argument, which is a 2D array. For a 2D array to be considered a "square" matrix, the length of the outer array must equal the length of each inner array like 3x3, 4x4 etc.
+Although the code in the TypeScript section is much safer and more sturdy, here is a the basic JavaScript implementation (without explicit type definitions) for calculating the diagonal difference of any square matrix. Where the function accepts a single argument, which is a 2D array. For a 2D array to be considered a "square" matrix, the length of the outer array must equal the length of each inner array like 3x3, 4x4 etc.
 
 ```js
 function diagonalDiff(arr) {
@@ -222,7 +223,7 @@ function diagonalDiff(arr): number {
       diff: 0
     }
     for (
-        var i = 0, j = 0, k = n-1; 
+        let i = 0, j = 0, k = n-1; 
         i < n, j < n, k >= 0; 
         i++, j++, k--
         ) {

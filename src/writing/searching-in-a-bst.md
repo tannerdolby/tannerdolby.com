@@ -1,8 +1,8 @@
 ---
-title: Searching for a value in a Binary Search Tree
-preview: Finding a value in a BST can be done iteratively or recursively in an elegant and efficient manner on average because of the properties of a BST.
-date: 2022-03-19
-datetime: 2022-03-19 00:00:00 Z
+title: Searching in a Binary Search Tree
+preview: Finding a value in a BST can be done iteratively or recursively in logarithmic time on average because of the properties of a BST.
+date: 2023-01-04
+datetime: 2023-01-04 00:00:00 Z
 tags:
  - cpp
  - trees
@@ -10,7 +10,7 @@ tags:
 
 {{ preview }}
 
-A [Tree](https://en.wikipedia.org/wiki/Tree_(data_structure)) data structure is commonly used to represent hierarchical data. A tree can have up to `n` child nodes, where in a [Binary Tree](https://en.wikipedia.org/wiki/Binary_tree) the maximum number of children is two. Building on this, a [Binary Search Tree](https://en.wikipedia.org/wiki/Binary_search_tree) has the following properties:
+The [Tree](https://en.wikipedia.org/wiki/Tree_(data_structure)) data structure is commonly used to represent hierarchical data. A tree can have up to `n` child nodes, where in a [Binary Tree](https://en.wikipedia.org/wiki/Binary_tree) the maximum number of children is two. Building on this, a [Binary Search Tree](https://en.wikipedia.org/wiki/Binary_search_tree) has the following properties:
 
 1. All of the nodes in the left subtree must be strictly less than the root node.
 2. All of the nodes in the right subtree must be greater than or equal to the root node.
@@ -83,9 +83,11 @@ This approach is similiar to the recursive logic as it runs in O(log(N)) time, b
 // Worst: O(N) time and O(1) space
 TreeNode *searchBST(TreeNode *root, int target) {
     while (root != NULL && root->val != target) {
-        if (target < root->val) {
+        if (target == root->val) {
+            return root;
+        } else if (target < root->val) {
             root = root->left;
-        } else if (target >= root->val) {
+        } else {
             root = root->right;
         }
     }
