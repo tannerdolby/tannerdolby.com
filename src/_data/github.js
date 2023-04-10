@@ -6,7 +6,7 @@ const repoUrls = [
     "eleventy-plugin-metagen",
     "eleventy-photo-gallery",
     "bug-saves-world",
-    "cipher-news",
+    "break0ut",
     "eleventy-plugin-sharp-respimg",
     "rotation-cipher"
 ];
@@ -23,7 +23,7 @@ function checkCache(cache, projectName) {
 }
 
 // Return an object containing a "minimal" github repo response.
-function pruneGitHubResponse(repo) {
+function formatResponse(repo) {
     return {
         title: repo.name,
         desc: repo.description,
@@ -57,23 +57,24 @@ async function fetchAndStoreData(url, projectName, cache) {
         // then we update the "local" file representing the cache
         if (cacheRecord && json) {
             cacheUpdated = true;
-            cache[idx] = pruneGitHubResponse(json);
+            cache[idx] = formatResponse(json);
         }
 
         // 2. if the repo name doesn't already exist in the cache, add the new data
         if (!cacheRecord && json) {
             cacheUpdated = true;
-            cache.push(pruneGitHubResponse(json));
+            cache.push(formatResponse(json));
         }
 
         // if the original cache has new records added or updated,
         // write to the cachedRepos.json file representing the "local" cache
         if (cacheUpdated) {
-            const cacheStr = JSON.stringify(cache, null, 2);
+            cache = cache.filter(repo => repoUrls.includes(repo.title));
+            const cacheStr = JSON.stringify(cache, null, 4);
             await writeFile(cachedReposPath, cacheStr);
         }
 
-        return pruneGitHubResponse(json);
+        return formatResponse(json);
 
     } catch (e) {
         console.error(`Unable to cache request: '${url}'. Checking cache for existing record.`, e);

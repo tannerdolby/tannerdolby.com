@@ -20,7 +20,7 @@ metadata:
             <p class="date">Posted on&nbsp;<time style="margin-bottom: 0;" datetime="{{ datetime | date('YYYY-MM-DD') }}">
             {{ datetime | date('MMMM DD, YYYY') }}</time>&nbsp;&bull; tagged with&nbsp;
             {% for tag in tags %}
-            <a class="post-tag" href="/writing?filter={{ tag }}" aria-label="Link to {{ tag }} posts">
+            <a class="post-tag" href="/writing/?filter={{ tag }}" aria-label="Link to {{ tag }} posts">
                 {{ tag }}
             </a>
             {% endfor %}
