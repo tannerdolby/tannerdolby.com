@@ -78,6 +78,8 @@ Reading has become an integral part of my life. Whether I'm reading for fun or t
 
 - The Eight by Katherine Neville
 
+- The Alchemist by Paulo Coelho
+
 <h4 class="h3-5">Tech</h4>
 
 - Java A Beginner's Guide (Eighth Edition) by Herbert Schildt

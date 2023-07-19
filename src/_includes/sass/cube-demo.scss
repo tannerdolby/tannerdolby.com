@@ -3,8 +3,6 @@
 *::after {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
 }
 
 /* Cube mixin credit @rolivaalonso */
@@ -99,9 +97,14 @@ $cube-z: 6vw;
   position: absolute;
 }
 
+.cube,
+.cube > div {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
 .cube {
   @include cuboid($cube-w, $cube-h, $cube-z);
-  // box-shadow: 0 30px 70px 70px #000;
   width: $cube-w;
   height: $cube-h;
   -webkit-transform: perspective(1000000px) rotateX(70deg) rotateZ(-45deg) scale3d(.55, .55, .55);
