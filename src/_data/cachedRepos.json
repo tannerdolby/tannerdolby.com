@@ -2,7 +2,7 @@
     {
         "title": "eleventy-plugin-metagen",
         "desc": "An Eleventy shortcode that generates document metadata.",
-        "stargazers": 37,
+        "stargazers": 39,
         "subscribers": 2,
         "forks": 3,
         "issues": 1,
@@ -13,10 +13,10 @@
     {
         "title": "eleventy-photo-gallery",
         "desc": "A starter site for creating a responsive image gallery using the Eleventy static site generator.",
-        "stargazers": 113,
+        "stargazers": 124,
         "subscribers": 3,
-        "forks": 6,
-        "issues": 3,
+        "forks": 5,
+        "issues": 2,
         "stargazers_url": "https://github.com/tannerdolby/eleventy-photo-gallery/stargazers/",
         "homepage": "https://eleventy-gallery.netlify.app",
         "repo_url": "https://github.com/tannerdolby/eleventy-photo-gallery"

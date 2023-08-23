@@ -14,7 +14,7 @@ permalink: "/writing/{{ title | slug }}/"
 
 <h2 class="post-heading">How to spot this?</h2>
 
-I only noticed this situation happening on Firefox, but the warning signs could probably be applied to any browser:
+I only noticed this behavior happening on Firefox, but the warning signs could probably be applied to all browsers.
 
 - nested links not being hoverable or clickable
 - inspecting an element in DevTools and being directed to the parent container for which your link is nested inside instead of taking you directly to the corresponding element
@@ -30,7 +30,7 @@ Why did this happen? Essentially, I had applied [`transform-style`](https://deve
 }
 ```
 
-and this caused nested content to be rendered in a way where the top-level parent container appered "above" or at the top of some stacking context (not z-index, but how nested elements are rendered in 3D space). Thus covering and essentially rendering the nested links useless as they couldn't be interacted with.
+and this caused nested content to be rendered in a way where the top-level parent container appeared "above" or at the top of some stacking context (not z-index, but how nested elements are rendered in 3D space). Thus covering and essentially rendering the nested links useless as they couldn't be interacted with.
 
 I'd recommend not applying `transform-style` to the whole page like I mistakenly had done, unless you are keeping track or defining how all nested elements are rendered in 3D space.
 
