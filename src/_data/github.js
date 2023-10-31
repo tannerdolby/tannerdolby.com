@@ -7,8 +7,8 @@ const repoUrls = [
     "eleventy-photo-gallery",
     "bug-saves-world",
     "break0ut",
-    "eleventy-plugin-sharp-respimg",
-    "rotation-cipher"
+    "react-chess",
+    "react-task-board"
 ];
 
 // Perform a cache lookup for a GitHub repo object.

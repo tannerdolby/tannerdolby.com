@@ -1,29 +1,29 @@
 [
     {
         "title": "eleventy-plugin-metagen",
-        "desc": "An Eleventy shortcode that generates document metadata.",
+        "desc": "Eleventy shortcode that generates document metadata.",
         "stargazers": 39,
         "subscribers": 2,
         "forks": 3,
-        "issues": 1,
+        "issues": 0,
         "stargazers_url": "https://github.com/tannerdolby/eleventy-plugin-metagen/stargazers/",
         "homepage": "https://www.npmjs.com/package/eleventy-plugin-metagen",
         "repo_url": "https://github.com/tannerdolby/eleventy-plugin-metagen"
     },
     {
         "title": "eleventy-photo-gallery",
-        "desc": "A starter site for creating a responsive image gallery using the Eleventy static site generator.",
-        "stargazers": 124,
+        "desc": "Starter site for creating a responsive image gallery using the Eleventy static site generator.",
+        "stargazers": 126,
         "subscribers": 3,
         "forks": 5,
-        "issues": 2,
+        "issues": 0,
         "stargazers_url": "https://github.com/tannerdolby/eleventy-photo-gallery/stargazers/",
         "homepage": "https://eleventy-gallery.netlify.app",
         "repo_url": "https://github.com/tannerdolby/eleventy-photo-gallery"
     },
     {
         "title": "bug-saves-world",
-        "desc": "A platformer game built with Phaser. Your a bug and you must collect all stars without taking damage.",
+        "desc": "Platformer game built with Phaser. You're a bug and you must collect all stars without taking damage.",
         "stargazers": 6,
         "subscribers": 3,
         "forks": 0,
@@ -31,28 +31,6 @@
         "stargazers_url": "https://github.com/tannerdolby/bug-saves-world/stargazers/",
         "homepage": "https://tannerdolby.itch.io/bug-saves-the-world",
         "repo_url": "https://github.com/tannerdolby/bug-saves-world"
-    },
-    {
-        "title": "eleventy-plugin-sharp-respimg",
-        "desc": "An Eleventy paired shortcode which performs build-time image transformations and generates responsive image markup.",
-        "stargazers": 10,
-        "subscribers": 2,
-        "forks": 3,
-        "issues": 1,
-        "stargazers_url": "https://github.com/tannerdolby/eleventy-plugin-sharp-respimg/stargazers/",
-        "homepage": "https://www.npmjs.com/package/eleventy-plugin-sharp-respimg",
-        "repo_url": "https://github.com/tannerdolby/eleventy-plugin-sharp-respimg"
-    },
-    {
-        "title": "rotation-cipher",
-        "desc": "A utility for creating caesar ciphers.",
-        "stargazers": 1,
-        "subscribers": 2,
-        "forks": 0,
-        "issues": 0,
-        "stargazers_url": "https://github.com/tannerdolby/rotation-cipher/stargazers/",
-        "homepage": "https://www.npmjs.com/package/rotation-cipher",
-        "repo_url": "https://github.com/tannerdolby/rotation-cipher"
     },
     {
         "title": "break0ut",
@@ -64,5 +42,27 @@
         "stargazers_url": "https://github.com/tannerdolby/break0ut/stargazers/",
         "homepage": "",
         "repo_url": "https://github.com/tannerdolby/break0ut"
+    },
+    {
+        "title": "react-task-board",
+        "desc": "Task board with drag-and-drop functionality built with React and Redux.",
+        "stargazers": 0,
+        "subscribers": 1,
+        "forks": 0,
+        "issues": 0,
+        "stargazers_url": "https://github.com/tannerdolby/react-task-board/stargazers/",
+        "homepage": "",
+        "repo_url": "https://github.com/tannerdolby/react-task-board"
+    },
+    {
+        "title": "react-chess",
+        "desc": "Chess application built with React, TypeScript, and Redux.",
+        "stargazers": 0,
+        "subscribers": 1,
+        "forks": 0,
+        "issues": 0,
+        "stargazers_url": "https://github.com/tannerdolby/react-chess/stargazers/",
+        "homepage": null,
+        "repo_url": "https://github.com/tannerdolby/react-chess"
     }
 ]
