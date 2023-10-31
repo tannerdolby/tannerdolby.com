@@ -1,5 +1,5 @@
 ---
-title: Generate a Fibonacci sequence
+title: Generate Fibonacci Numbers
 date: 2023-10-31
 datetime: 2023-10-31 00:00:00 Z
 tags:
