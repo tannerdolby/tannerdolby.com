@@ -14,7 +14,7 @@ preview: In JavaScript, arrays are predefined objects, where the indexes are the
 
 JavaScript is a [prototype based](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#class-based_vs._prototype-based_languages), multi-paradigm, single threaded, dynamic language which supports object oriented, imperative, and declarative styles.
 
-The one difference between other OOP languages like Java or C++ and JavaScript, is the fact that JavaScript isn't class based, its prototype based and doesn't require explicit `class` usage to define objects. It uses prototype based object constructions. Within a prototype based language like JavaScript, the prototypical object is an object used as a template to get the initial properties for a new object. We can use [function declarations](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function), [class declarations](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#class_declarations) and [class expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#class_expressions) for defining a template for objects.
+The one difference between other OOP languages like Java or C++ and JavaScript, is the fact that JavaScript isn't class based, it's prototype based and doesn't require explicit `class` usage to define objects. It uses prototype based object constructions. Within a prototype based language like JavaScript, the prototypical object is an object used as a template to get the initial properties for a new object. We can use [function declarations](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function), [class declarations](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#class_declarations) and [class expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#class_expressions) for defining a template for objects.
 
 Instead of defining a class declaration for every object like we would in Java:
 
@@ -60,7 +60,7 @@ The above is possible thanks to hoisting, which makes variables and function dec
 
 <h3 class="post-heading">Can I still use ES6 style classes</h3>
 
-You can most definitely still create the template for objects (classes) using ES6 style class syntax, which has been described as "class declartions" above. Just as shown earlier in the article, we can define classes in JavaScript with the ES6 style (class declaration) like this:
+You can most definitely still create the template for objects (classes) using ES6 style class syntax, which has been described as "class declarations" above. Just as shown earlier in the article, we can define classes in JavaScript with the ES6 style (class declaration) like this:
 
 {% filename "myclass.js" %}
 
@@ -99,7 +99,7 @@ function Square() {
   this.currShape = "Square";
 }
 // Pass in the prototypical instance to Object.create()
-// and assign it to the prototype property of Square defintion
+// and assign it to the prototype property of Square definition
 Square.prototype = Object.create(Shape.prototype);
 // Override the constructor with our constructor function Shape
 Square.prototype.constructor = Square;
@@ -150,7 +150,7 @@ tanner.about();
 // My name is Tanner. Am I hungry? true
 ```
 
-You can create a normal empty object simply by using `Object.create({})`. If you need to create a `null` object instance, like `Object.create(null)`, keep in mind its not a normal object and won't have access to almost all expected methods like "generic" objects will. There seem to be some ways around this, but the most fullproof option is setting the generic prototype as the new `null` objects prototype with [`setPrototypeOf`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf).
+You can create a normal empty object simply by using `Object.create({})`. If you need to create a `null` object instance, like `Object.create(null)`, keep in mind its not a normal object and won't have access to almost all expected methods like "generic" objects will. There seem to be some ways around this, but the most foolproof option is setting the generic prototype as the new `null` objects prototype with [`setPrototypeOf`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf).
 
 ```js
 let oddball = Object.create(null); // a "null" object (not standard)
@@ -183,7 +183,7 @@ console.log(arr[3].prop); // "bar" (access object properties)
 
 There are many [data structures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures) in JavaScript and like shown above, arrays can hold any of the primitive types (undefined, String, Number, Boolean, BigInt, Symbol) and structural types.
 
-> Note: In Java, a generic array can only hold values of the same data type and cannot grow dynamically. This is where an [`ArrayList`](https://www.geeksforgeeks.org/arraylist-in-java/) comes in handy because it's size can be dynamic and doesn't need to be "predefined" similiar to arrays in JavaScript.
+> Note: In Java, a generic array can only hold values of the same data type and cannot grow dynamically. This is where an [`ArrayList`](https://www.geeksforgeeks.org/arraylist-in-java/) comes in handy because it's size can be dynamic and doesn't need to be "predefined" similar to arrays in JavaScript.
 
 <h2 class="post-heading">How can I create an Array?</h2>
 
@@ -227,7 +227,7 @@ arr[4] = "fuzz";
 console.log(arr); // [1, 2, "foo", "bar", "fuzz"]
 ```
 
-Because the property names for an array object are it's indexes, when we access or assign an index in the array using bracket notation like `arr[4]`, there is an implicit type coersion happening in the background to cast the value `4` which is a Number to type String.
+Because the property names for an array object are it's indexes, when we access or assign an index in the array using bracket notation like `arr[4]`, there is an implicit type coercion happening in the background to cast the value `4` which is a Number to type String.
 
 <h2 class="post-heading">Arrays are objects in JavaScript?</h2>
 
