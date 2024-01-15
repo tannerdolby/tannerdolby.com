@@ -12,16 +12,16 @@ preview: In JavaScript, arrays are predefined objects, where the indexes are the
 
 <h2 class="post-heading">Is JavaScript Object Oriented?</h2>
 
-JavaScript is a [prototype based](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#class-based_vs._prototype-based_languages), multi-paradigm, single threaded, dynamic language which supports object oriented, imperative, and declarative styles. 
+JavaScript is a [prototype based](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#class-based_vs._prototype-based_languages), multi-paradigm, single threaded, dynamic language which supports object oriented, imperative, and declarative styles.
 
 The one difference between other OOP languages like Java or C++ and JavaScript, is the fact that JavaScript isn't class based, its prototype based and doesn't require explicit `class` usage to define objects. It uses prototype based object constructions. Within a prototype based language like JavaScript, the prototypical object is an object used as a template to get the initial properties for a new object. We can use [function declarations](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function), [class declarations](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#class_declarations) and [class expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#class_expressions) for defining a template for objects.
 
-Instead of defining a class declaration for every object like we would in Java: 
+Instead of defining a class declaration for every object like we would in Java:
 
 {% filename "Shape.java" %}
 
 ```java
-public class Shape { 
+public class Shape {
   public int x;
   public int y;
   public string currShape;
@@ -81,14 +81,14 @@ const MyOtherClass = class {
   constructor(foo) {
     this.foo = foo;
   }
-}
+};
 
 // named
 const SomeOtherClass = class SomeOther {
   constructor(foo) {
     this.foo = foo;
   }
-}
+};
 ```
 
 If you want to specify the "next" object in the inheritance chain. Like we would by defining a class as a child of some superclass `class Foo extends Bar`. We add a prototypical instance as the value of the `prototype` property within the constructor, then simply override the prototypes constructor to the constructor function.
@@ -97,7 +97,7 @@ If you want to specify the "next" object in the inheritance chain. Like we would
 function Square() {
   Shape.call(this);
   this.currShape = "Square";
-};
+}
 // Pass in the prototypical instance to Object.create()
 // and assign it to the prototype property of Square defintion
 Square.prototype = Object.create(Shape.prototype);
@@ -120,12 +120,12 @@ If your coming from a C or Java background which is class-based, it might take a
 We can define an [`Object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) in multiple ways in JavaScript:
 
 ```js
-// Create an object literal 
+// Create an object literal
 let obj = { x: 20, y: 40 };
 
 // Create an empty object and assign its properties/values (key value pairs)
 let someObj = {};
-someObj.prop1 = "hello"; 
+someObj.prop1 = "hello";
 
 // Create an object using the new keyword
 let myObj = new Object();
@@ -140,8 +140,8 @@ const Human = {
   isHungry: false,
   about: () => {
     console.log(`My name is ${this.name}. Am I hungry? ${this.isHungry}`);
-  }
-}
+  },
+};
 
 const tanner = Object.create(Human);
 tanner.name = "Tanner";
@@ -168,17 +168,17 @@ In Java and C++, we create the "template" for objects by using the `class` keywo
 
 In JavaScript, arrays can more closely resemble a Map with name/value pairs.
 
-> Arrays are predefined objects, where its indexes are the properties. 
+> Arrays are predefined objects, where its indexes are the properties.
 
-That means the first value of an array at index 0 would be displayed as `0: 15` where the 0th (first index) holds a value of 15. One of my favorite things about JavaScript arrays compared to other languages arrays (like Java) is the fact that JavaScript arrays can hold a collection of values with different data types and grow dynamically. 
+That means the first value of an array at index 0 would be displayed as `0: 15` where the 0th (first index) holds a value of 15. One of my favorite things about JavaScript arrays compared to other languages arrays (like Java) is the fact that JavaScript arrays can hold a collection of values with different data types and grow dynamically.
 
 ```js
-let arr = [10, "foo", true, { prop: "bar" }]
+let arr = [10, "foo", true, { prop: "bar" }];
 console.log(arr[0]); // 10 (Number)
 console.log(arr[1]); // "foo" (String)
 console.log(arr[2]); // true (Boolean)
 console.log(arr[3]); // Object { prop: "bar" }
-console.log(arr[3].prop) // "bar" (access object properties)
+console.log(arr[3].prop); // "bar" (access object properties)
 ```
 
 There are many [data structures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures) in JavaScript and like shown above, arrays can hold any of the primitive types (undefined, String, Number, Boolean, BigInt, Symbol) and structural types.
@@ -197,16 +197,16 @@ arr[0] = 1;
 arr[1] = 3;
 arr[2] = 5;
 
-console.log(arr) // [1, 3, 5]
+console.log(arr); // [1, 3, 5]
 ```
 
 Define the array inline:
 
 ```js
 let arr = [1, 2, "foo"];
-console.log(arr[0]) // 1
-console.log(arr[1]) // 2
-console.log(arr[2]) // "foo"
+console.log(arr[0]); // 1
+console.log(arr[1]); // 2
+console.log(arr[2]); // "foo"
 ```
 
 Use the `new` keyword to create an Array object and then assign its indexes some values:
@@ -231,7 +231,7 @@ Because the property names for an array object are it's indexes, when we access 
 
 <h2 class="post-heading">Arrays are objects in JavaScript?</h2>
 
-You might be asking yourself, so are arrays objects in JavaScript? And the answer is **yes**. If you check with `typeof [1,2,3]` it will output `[object Array] (3)` verifying it is indeed an Array object. We discussed at the beginning of the article, arrays are predefined objects. It becomes very clear arrays are objects when we use the `length` property of an array like `arr.length` to return the length. The way we access the length property using dot notation is exactly the same as how we would access the property of any object like `Object.property`. 
+You might be asking yourself, so are arrays objects in JavaScript? And the answer is **yes**. If you check with `typeof [1,2,3]` it will output `[object Array] (3)` verifying it is indeed an Array object. We discussed at the beginning of the article, arrays are predefined objects. It becomes very clear arrays are objects when we use the `length` property of an array like `arr.length` to return the length. The way we access the length property using dot notation is exactly the same as how we would access the property of any object like `Object.property`.
 
 To further solidify that arrays are objects, the indexes in an array are the properties, so when we access a value such as `arr["2"]` we are accessing the `Object["2"]` value. The value stored at index 2 can be accessed from the array object by using the property `"2"`.
 
