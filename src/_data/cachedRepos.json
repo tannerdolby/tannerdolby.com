@@ -1,8 +1,8 @@
 [
     {
         "title": "eleventy-plugin-metagen",
-        "desc": "Eleventy shortcode that generates document metadata.",
-        "stargazers": 39,
+        "desc": "Eleventy shortcode that generates document metadata",
+        "stargazers": 41,
         "subscribers": 2,
         "forks": 3,
         "issues": 0,
@@ -12,18 +12,40 @@
     },
     {
         "title": "eleventy-photo-gallery",
-        "desc": "Starter site for creating a responsive image gallery using the Eleventy static site generator.",
-        "stargazers": 126,
+        "desc": "Starter site for creating a responsive image gallery using the Eleventy static site generator",
+        "stargazers": 137,
         "subscribers": 3,
-        "forks": 5,
+        "forks": 6,
         "issues": 0,
         "stargazers_url": "https://github.com/tannerdolby/eleventy-photo-gallery/stargazers/",
         "homepage": "https://eleventy-gallery.netlify.app",
         "repo_url": "https://github.com/tannerdolby/eleventy-photo-gallery"
     },
     {
+        "title": "react-book",
+        "desc": "Book component with GSAP animation",
+        "stargazers": 0,
+        "subscribers": 1,
+        "forks": 0,
+        "issues": 0,
+        "stargazers_url": "https://github.com/tannerdolby/react-book/stargazers/",
+        "homepage": "https://extraordinary-kheer-4bd56b.netlify.app",
+        "repo_url": "https://github.com/tannerdolby/react-book"
+    },
+    {
+        "title": "react-task-board",
+        "desc": "Task board with drag-and-drop functionality built with React and Redux",
+        "stargazers": 0,
+        "subscribers": 1,
+        "forks": 0,
+        "issues": 0,
+        "stargazers_url": "https://github.com/tannerdolby/react-task-board/stargazers/",
+        "homepage": "https://exquisite-starship-1b43af.netlify.app/",
+        "repo_url": "https://github.com/tannerdolby/react-task-board"
+    },
+    {
         "title": "bug-saves-world",
-        "desc": "Platformer game built with Phaser. You're a bug and you must collect all stars without taking damage.",
+        "desc": "Platformer game built with Phaser. You're a bug and you must collect all stars without taking damage",
         "stargazers": 6,
         "subscribers": 3,
         "forks": 0,
@@ -33,36 +55,14 @@
         "repo_url": "https://github.com/tannerdolby/bug-saves-world"
     },
     {
-        "title": "break0ut",
-        "desc": "A remake of the 1970s arcade game Breakout.",
-        "stargazers": 1,
-        "subscribers": 2,
-        "forks": 0,
-        "issues": 0,
-        "stargazers_url": "https://github.com/tannerdolby/break0ut/stargazers/",
-        "homepage": "",
-        "repo_url": "https://github.com/tannerdolby/break0ut"
-    },
-    {
-        "title": "react-task-board",
-        "desc": "Task board with drag-and-drop functionality built with React and Redux.",
+        "title": "dsa",
+        "desc": "data structures and algorithms",
         "stargazers": 0,
         "subscribers": 1,
         "forks": 0,
         "issues": 0,
-        "stargazers_url": "https://github.com/tannerdolby/react-task-board/stargazers/",
-        "homepage": "",
-        "repo_url": "https://github.com/tannerdolby/react-task-board"
-    },
-    {
-        "title": "react-chess",
-        "desc": "Chess application built with React, TypeScript, and Redux.",
-        "stargazers": 0,
-        "subscribers": 1,
-        "forks": 0,
-        "issues": 0,
-        "stargazers_url": "https://github.com/tannerdolby/react-chess/stargazers/",
-        "homepage": null,
-        "repo_url": "https://github.com/tannerdolby/react-chess"
+        "stargazers_url": "https://github.com/tannerdolby/dsa/stargazers/",
+        "homepage": "https://github.com/tannerdolby/dsa",
+        "repo_url": "https://github.com/tannerdolby/dsa"
     }
 ]

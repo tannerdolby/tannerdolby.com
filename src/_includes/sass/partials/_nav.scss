@@ -16,22 +16,16 @@
             &.stl {
                 margin-right: auto;
             }
-            &:last-child {
-                position: relative;
-                right: 0;
-                height: 29px;
-                margin-left: 1rem;
-            }
             a {
                 color: #212121;
                 padding: 4px 0;
-                margin: 0 1.75rem;
+                margin: 0 1.5rem;
                 font-size: 1.0625rem;
                 text-decoration: none;
                 font-weight: 500;
 
                 &:first-child {
-                    margin-left: 0;
+                    margin-left: auto;
                 }
 
                 &:hover {
@@ -73,13 +67,12 @@
             text-decoration: none;
         }
 
-        span {
+        .initials {
             background: inherit;
-            border: 1.75px solid #212121;
+            border: 2px solid #212121;
             color: #212121;
             border-radius: 1px;
             padding: .5rem;
-            margin-right: .75rem;
             font-weight: 700;
             font-size: 1.0625rem;
         }
@@ -132,12 +125,6 @@
                     &:hover {
                         text-decoration: underline;
                     }
-                }
-                &:last-child {
-                    position: absolute;
-                    margin-top: 0;
-                    top: 2.6rem;
-                    right: 1.5rem;
                 }
             }
         }

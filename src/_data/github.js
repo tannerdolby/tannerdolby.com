@@ -6,9 +6,9 @@ const repoUrls = [
     "eleventy-plugin-metagen",
     "eleventy-photo-gallery",
     "bug-saves-world",
-    "rotation-cipher",
     "react-book",
-    "react-task-board"
+    "react-task-board",
+    "dsa",
 ];
 
 // Perform a cache lookup for a GitHub repo object.

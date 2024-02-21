@@ -167,19 +167,22 @@ h3, .h3 {
     margin-bottom: .5rem;
 }
 
-.skip-link {
-    position: fixed;
-    top: 0;
-    left: 0;
-    transform: translateY(-10rem);
-    transition: transform .3s ease-in-out;
-    padding: .5rem;
-    background: rgb(255, 255, 255);
-    color: $paragraph-text;
-    z-index: 999;
+#skip-link {
 
-    &:focus {
-        transform: translateY(0);
+    a {
+        display: block;
+        position: absolute;
+        left: -999px;
+        top: -999px;
+        // width: fit-content;
+    }
+
+    a:focus {
+        left: 0px;
+        top: 0px;
+        padding: 3px;
+        background: #fff;
+        border: 1px solid #990000;
     }
 }
 
@@ -187,7 +190,6 @@ h3, .h3 {
     margin-left: auto;
 }
 
-/* ya, you read this right */
 .four-oh-four {
     display: flex;
     flex-direction: column;
@@ -383,6 +385,15 @@ textarea {
     grid-column: 1 / 7;
     grid-row: 1;
     text-align: left;
+}
+
+.right-sidebar {
+    .h4 {
+        margin-top: 1.25rem;
+        margin-bottom: 0;
+        padding-bottom: 2px;
+        border-bottom: 1px solid lightgray;
+    }
 }
 
 #main-about {
@@ -651,6 +662,14 @@ textarea {
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
+    }
+
+    .job-title {
+        font-size: 1.15rem;
+    }
+
+    .job-duration {
+        font-size: 1rem;
     }
 
     h3, p {
