@@ -31,7 +31,9 @@
                 &:hover {
                     color: $link-blue-accessible;
                     text-decoration: none;
-                    background: #eee;
+                    background: #212121;
+                    border-radius: 5px;
+                    color: #fff;
                 }
 
                 &.section-active {

@@ -31,7 +31,9 @@
 .post-sidebar ul li a:hover {
   color: #2540AD;
   text-decoration: none;
-  background: #eee;
+  background: #212121;
+  border-radius: 5px;
+  color: #fff;
 }
 .post-sidebar ul li a.section-active {
   color: #f06;
@@ -150,11 +152,11 @@
 }
 .reach-me.submit-contact {
   background: #1a6bdd;
-  padding: 0.75rem 1.35rem;
+  padding: 0.65rem 1.35rem;
   border: none;
   color: #fff;
   margin-top: 1.35rem;
-  font-weight: 600;
+  font-weight: 500;
   max-width: fit-content;
   -moz-max-width: fit-content;
   box-shadow: none;
@@ -442,24 +444,24 @@
 main {
   transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);
-  /* Address this - TODO */
 }
 main.a11y-page {
   max-width: 85ch;
   margin: 0 auto 6rem auto;
   padding: 0 1.25rem;
 }
-main:focus {
-  outline: none;
-}
 main h1, main h2, main h3, main h4, main h5 {
-  margin: 0 0 1rem;
+  margin: 2rem 0 1.25rem;
 }
 main p {
   margin: 0 0 24px;
 }
 main blockquote {
   margin-bottom: 24px;
+}
+
+ul {
+  list-style: circle;
 }
 
 #main {
@@ -755,6 +757,7 @@ main blockquote {
   width: fit-content;
   width: -moz-fit-content;
   background: #f2f1f1;
+  background: #efefef;
   color: #212121;
   text-decoration: none;
 }
@@ -2045,7 +2048,7 @@ textarea:focus {
 }
 
 .experience-container {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 .experience-container div {
   display: flex;
@@ -2055,12 +2058,17 @@ textarea:focus {
 }
 .experience-container .job-title {
   font-size: 1.15rem;
+  margin-right: 0.5rem;
 }
 .experience-container .job-duration {
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 .experience-container h3, .experience-container p {
   margin-bottom: 0;
+}
+
+.book-list li {
+  font-size: 1.1rem;
 }
 
 @media screen and (max-width: 1250px) {

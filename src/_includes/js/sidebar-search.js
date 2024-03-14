@@ -1,4 +1,4 @@
-const searchInput = document.querySelector(".side-search");
+let searchInput = document.querySelector(".side-search");
 let search = "";
 
 function isActive(element) {
@@ -9,8 +9,8 @@ searchInput.addEventListener("input", (e) => {
     search = e.target.value;
     if (isActive(searchInput)) {
         searchInput.addEventListener("keyup", (e) => {
-            if (e.keyCode === 13) {
-                window.location.href = `/search?post=${search}`;
+            if (e.key === "Enter") {
+                window.location.href = `/search/?post=${search}`;
             }
         });
     }

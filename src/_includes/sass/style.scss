@@ -39,7 +39,7 @@ img {
 }
 
 p {
-    color: $paragraph-text;
+    color: $paragraph-text-color;
     font-size: 1.15rem;
     font-weight: 400;
     line-height: 1.6;
@@ -327,7 +327,7 @@ textarea {
             border: 1px solid lightgray;
             border: .08rem solid rgb(170, 170, 170);
             border: 1px solid #666;
-            color: $paragraph-text;
+            color: $paragraph-text-color;
 
             &:hover {
                 border: .08rem solid transparent;
@@ -609,7 +609,7 @@ textarea {
     a {
         color: $black-200;
         span {
-            color: $paragraph-text;
+            color: $paragraph-text-color;
             margin-bottom: 2px;
         }
         &:hover {
@@ -655,7 +655,7 @@ textarea {
 }
 
 .experience-container {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 
     div {
         display: flex;
@@ -666,14 +666,21 @@ textarea {
 
     .job-title {
         font-size: 1.15rem;
+        margin-right: .5rem;
     }
 
     .job-duration {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     h3, p {
         margin-bottom: 0;
+    }
+}
+
+.book-list {
+    li {
+        font-size: 1.1rem;
     }
 }
 
@@ -740,7 +747,7 @@ textarea {
         ul {
             li {
                 a {
-                    color: $paragraph-text;
+                    color: $paragraph-text-color;
                 }
             }
         }

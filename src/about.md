@@ -22,9 +22,7 @@ metadata:
   comments: true
 ---
 
-Hi there! My name is Tanner Dolby. I'm a Software Engineer and Mathematician based out of California. My academic background is in Applied Mathematics and I received my degree from ASU in 2020. I like working with JavaScript, Python, Node.js, React, 11ty, HTML, and CSS. I'm interested in applying my skills to build performant software and help others.
-
-I like contributing to open source projects on GitHub and learning new things along the way. I quite often find myself reading technical content, whether it's in book form or documentation on the web and then starting to build things from what I learned. This has proved to be a really surefire way to better understand a topic or concept.
+Hi there! My name is Tanner Dolby. I'm a Software Engineer and Mathematician based out of California. My academic background is in Applied Mathematics and I received my degree from ASU. I like working with JavaScript, Python, Node.js, React, 11ty, HTML, and CSS. I'm interested in applying my skills to build performant software and help others. I enjoy contributing to open source projects on GitHub and building fun side projects.
 
 ## Experience
 
@@ -44,26 +42,28 @@ I like contributing to open source projects on GitHub and learning new things al
 
 ## Interests
 
-I enjoy the outdoors! I like to go running, hiking, and mountain biking. I also like reading books and learning new things. I'm currently fixated on learning more about System Architecture Patterns, Chess, and Web Performance. If you would like to see me write about a specific topic or concept, feel free to message me on Twitter about it.
+I like to go running, skateboarding, and enjoy the outdoors. I enjoy reading books and learning new things. When I'm not doing something outside, I spend most of my time reading, contributing to open source projects on [GitHub][github], playing Chess, and making fun experiments on [CodePen][codepen]. I've taken an interest in Static Site Generators (SSG). In particular [Eleventy][eleventy], which this website is built with.
 
-When I'm not doing something outside, I spend most of my time reading, contributing to open source projects on [GitHub][github], playing Chess, and making fun experiments on [CodePen][codepen]. I've taken an interest in Static Site Generators (SSG). In particular [Eleventy][eleventy], which this website is built with.
-
-### Good Reads
+### Books
 Whether I'm reading for fun or to learn something new, it brings me a lot of happiness because there's always a new story I can dive into. Lately, I've been into fantasy, adventure, and sci-fi books, but I'm always open to book recommendations of any genre!
 
 <h4 class="h3-5">Fun</h4>
 
-- The Fallen by Ada Hoffmann
-- The Outside by Ada Hoffman
-- The Eight by Katherine Neville
-- The Alchemist by Paulo Coelho
+<ul class="book-list">
+    <li>The Fallen by Ada Hoffmann</li>
+    <li>The Outside by Ada Hoffman</li>
+    <li>The Eight by Katherine Neville</li>
+    <li>The Alchemist by Paulo Coelho</li>
+</ul>
 
 <h4 class="h3-5">Tech</h4>
 
-- Java A Beginner's Guide (Eighth Edition) by Herbert Schildt
-- Cracking the Coding Interview by Gayle Laakmann McDowell.
-- Software Architecture Patterns by Mark Richards.
-- Introduction to Algorithms by Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein.
+<ul class="book-list">
+    <li>Java A Beginner's Guide (Eighth Edition) by Herbert Schildt</li>
+    <li>Cracking the Coding Interview by Gayle Laakmann McDowell</li>
+    <li>Software Architecture Patterns by Mark Richards</li>
+    <li>Introduction to Algorithms by Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein</li>
+</ul>
 
 ## Education
 

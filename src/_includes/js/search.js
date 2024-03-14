@@ -1,5 +1,6 @@
 let urlParams = new URLSearchParams(window.location.search); // search?post=splat
 let searchBarQuery = urlParams.get("post");
+console.log("SEARCH.js", urlParams, searchBarQuery);
 
 const placeholder = document.querySelector(".result");
 const res = document.createElement("p");
