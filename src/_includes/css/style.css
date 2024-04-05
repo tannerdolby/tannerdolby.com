@@ -30,10 +30,7 @@
 }
 .post-sidebar ul li a:hover {
   color: #2540AD;
-  text-decoration: none;
-  background: #212121;
-  border-radius: 5px;
-  color: #fff;
+  text-decoration: underline;
 }
 .post-sidebar ul li a.section-active {
   color: #f06;

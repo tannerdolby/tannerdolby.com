@@ -6,7 +6,7 @@ const repoUrls = [
     "eleventy-plugin-metagen",
     "eleventy-photo-gallery",
     "bug-saves-world",
-    "react-book",
+    "react-pokedex",
     "react-task-board",
     "dsa",
 ];
