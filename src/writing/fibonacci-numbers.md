@@ -22,13 +22,12 @@ To calculate F(N), we can reach for a simple to understand brute force recursive
 
 ```python
 # O(2^n) time and O(n) space
-def fib(n: int) -> int: {
+def fib(n: int) -> int:
 	if n == 1:
-        return 0;
+        return 0
 	if n == 2:
-        return 1;
-	return fib(n-1) + fib(n-2);
-}
+        return 1
+	return fib(n-1) + fib(n-2)
 ```
 
 Using a tree to better visualize how the recursive calls are happening when we attempt to call `fib(n)`, view the example below. At each root node, the algorithm requires two operations in order to compute the `fib(n-1)` and `fib(n-2)` values. That is, if there is `n` nodes in the tree, we will require `2^n` operations to compute each root nodes left and right child node.
@@ -106,4 +105,3 @@ def fib(n: int) -> int:
         b = nthFib
     return b
 ```
-
