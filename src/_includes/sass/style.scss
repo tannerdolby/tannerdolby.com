@@ -167,6 +167,15 @@ h3, .h3 {
     margin-bottom: .5rem;
 }
 
+h4, .h4 {
+    $min-font-size: 1.15rem;
+    $flex-unit: 4vw;
+    $max-font-size: 1.25rem;
+    font-size: 1.5rem;
+    font-size: clamp(#{$min-font-size}, #{$flex-unit}, #{$max-font-size});
+    margin-bottom: .5rem;
+}
+
 #skip-link {
 
     a {
