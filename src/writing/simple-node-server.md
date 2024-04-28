@@ -5,8 +5,8 @@ tags:
   - javascript
 preview: To create a Node.js application, you need a web server, a request, a router, and request handlers. Frameworks like Express.js speed up development by providing a robust set of features to build web applications and APIs.
 permalink: "/writing/{{ title | slug }}/"
-date: 2021-08-14
-datetime: 2021-08-14 00:00:00 Z
+date: 2024-04-28
+datetime: 2024-04-28 00:00:00 Z
 ---
 
 {{ preview }}

@@ -13,7 +13,7 @@
     {
         "title": "eleventy-photo-gallery",
         "desc": "Starter site for creating a responsive image gallery using the Eleventy static site generator",
-        "stargazers": 139,
+        "stargazers": 142,
         "subscribers": 3,
         "forks": 6,
         "issues": 0,
@@ -45,13 +45,13 @@
     },
     {
         "title": "dsa",
-        "desc": "data structures and algorithms",
+        "desc": "notes while learning data structures and algorithms",
         "stargazers": 0,
-        "subscribers": 2,
+        "subscribers": 1,
         "forks": 0,
         "issues": 0,
         "stargazers_url": "https://github.com/tannerdolby/dsa/stargazers/",
-        "homepage": "",
+        "homepage": null,
         "repo_url": "https://github.com/tannerdolby/dsa"
     },
     {
