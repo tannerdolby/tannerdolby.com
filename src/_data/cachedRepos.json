@@ -44,17 +44,6 @@
         "repo_url": "https://github.com/tannerdolby/bug-saves-world"
     },
     {
-        "title": "dsa",
-        "desc": "notes while learning data structures and algorithms",
-        "stargazers": 0,
-        "subscribers": 1,
-        "forks": 0,
-        "issues": 0,
-        "stargazers_url": "https://github.com/tannerdolby/dsa/stargazers/",
-        "homepage": null,
-        "repo_url": "https://github.com/tannerdolby/dsa"
-    },
-    {
         "title": "react-pokedex",
         "desc": "Pokédex app built with Next.js",
         "stargazers": 0,
@@ -64,5 +53,16 @@
         "stargazers_url": "https://github.com/tannerdolby/react-pokedex/stargazers/",
         "homepage": "https://react-pokedex-one-alpha.vercel.app",
         "repo_url": "https://github.com/tannerdolby/react-pokedex"
+    },
+    {
+        "title": "frametools",
+        "desc": "GUIs built with Java AWT and Swing.",
+        "stargazers": 2,
+        "subscribers": 2,
+        "forks": 0,
+        "issues": 0,
+        "stargazers_url": "https://github.com/tannerdolby/frametools/stargazers/",
+        "homepage": "",
+        "repo_url": "https://github.com/tannerdolby/frametools"
     }
 ]

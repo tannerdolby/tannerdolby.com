@@ -22,7 +22,7 @@ metadata:
   comments: true
 ---
 
-Hi there! My name is Tanner Dolby. I'm a Software Engineer with a background in Applied Math. I like working with JavaScript, Python, Node.js, React, 11ty, HTML, and CSS. I'm interested in applying my skills to build performant software and help others. I enjoy contributing to open source projects on GitHub and learning new things.
+Hi there! My name is Tanner Dolby. I'm a Software Engineer with a background in Applied Math. I like working with Java, Python, JavaScript, Node.js, React, HTML, and CSS. I'm interested in building performant systems and helping others through software. I enjoy contributing to open source projects on GitHub and learning new things.
 
 ## Experience
 
