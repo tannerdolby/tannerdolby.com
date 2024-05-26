@@ -22,17 +22,6 @@
         "repo_url": "https://github.com/tannerdolby/eleventy-photo-gallery"
     },
     {
-        "title": "react-task-board",
-        "desc": "Task board with drag-and-drop functionality built with React and Redux",
-        "stargazers": 0,
-        "subscribers": 1,
-        "forks": 0,
-        "issues": 0,
-        "stargazers_url": "https://github.com/tannerdolby/react-task-board/stargazers/",
-        "homepage": "https://exquisite-starship-1b43af.netlify.app/",
-        "repo_url": "https://github.com/tannerdolby/react-task-board"
-    },
-    {
         "title": "bug-saves-world",
         "desc": "Platformer game built with Phaser. You're a bug and you must collect all stars without taking damage",
         "stargazers": 6,
@@ -53,6 +42,17 @@
         "stargazers_url": "https://github.com/tannerdolby/react-pokedex/stargazers/",
         "homepage": "https://react-pokedex-one-alpha.vercel.app",
         "repo_url": "https://github.com/tannerdolby/react-pokedex"
+    },
+    {
+        "title": "break0ut",
+        "desc": "Remake of the 1970s arcade game Breakout",
+        "stargazers": 1,
+        "subscribers": 2,
+        "forks": 0,
+        "issues": 0,
+        "stargazers_url": "https://github.com/tannerdolby/break0ut/stargazers/",
+        "homepage": "",
+        "repo_url": "https://github.com/tannerdolby/break0ut"
     },
     {
         "title": "frametools",
