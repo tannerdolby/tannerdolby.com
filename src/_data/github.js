@@ -7,7 +7,7 @@ const repoUrls = [
     "eleventy-photo-gallery",
     "bug-saves-world",
     "break0ut",
-    "react-pokedex",
+    "react-task-board",
     "frametools",
 ];
 

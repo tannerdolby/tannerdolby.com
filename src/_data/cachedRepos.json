@@ -13,9 +13,9 @@
     {
         "title": "eleventy-photo-gallery",
         "desc": "Starter site for creating a responsive image gallery using the Eleventy static site generator",
-        "stargazers": 142,
+        "stargazers": 143,
         "subscribers": 3,
-        "forks": 6,
+        "forks": 7,
         "issues": 0,
         "stargazers_url": "https://github.com/tannerdolby/eleventy-photo-gallery/stargazers/",
         "homepage": "https://eleventy-gallery.netlify.app",
@@ -24,24 +24,13 @@
     {
         "title": "bug-saves-world",
         "desc": "Platformer game built with Phaser. You're a bug and you must collect all stars without taking damage",
-        "stargazers": 6,
+        "stargazers": 7,
         "subscribers": 3,
         "forks": 0,
         "issues": 0,
         "stargazers_url": "https://github.com/tannerdolby/bug-saves-world/stargazers/",
         "homepage": "https://tannerdolby.itch.io/bug-saves-the-world",
         "repo_url": "https://github.com/tannerdolby/bug-saves-world"
-    },
-    {
-        "title": "react-pokedex",
-        "desc": "Pokédex app built with Next.js",
-        "stargazers": 0,
-        "subscribers": 1,
-        "forks": 0,
-        "issues": 0,
-        "stargazers_url": "https://github.com/tannerdolby/react-pokedex/stargazers/",
-        "homepage": "https://react-pokedex-one-alpha.vercel.app",
-        "repo_url": "https://github.com/tannerdolby/react-pokedex"
     },
     {
         "title": "break0ut",
@@ -56,7 +45,7 @@
     },
     {
         "title": "frametools",
-        "desc": "GUIs built with Java AWT and Swing.",
+        "desc": "GUIs built with Java AWT and Swing",
         "stargazers": 2,
         "subscribers": 2,
         "forks": 0,
@@ -64,5 +53,16 @@
         "stargazers_url": "https://github.com/tannerdolby/frametools/stargazers/",
         "homepage": "",
         "repo_url": "https://github.com/tannerdolby/frametools"
+    },
+    {
+        "title": "react-task-board",
+        "desc": "Task board with drag-and-drop functionality built with React and Redux",
+        "stargazers": 0,
+        "subscribers": 1,
+        "forks": 0,
+        "issues": 0,
+        "stargazers_url": "https://github.com/tannerdolby/react-task-board/stargazers/",
+        "homepage": "https://exquisite-starship-1b43af.netlify.app/",
+        "repo_url": "https://github.com/tannerdolby/react-task-board"
     }
 ]
