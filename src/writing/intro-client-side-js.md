@@ -44,57 +44,97 @@ I don't recommened writing HTML webpages purely with JavaScript, it will be huge
 
 From [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction), The Document Object Model (DOM) is the data representation of the objects that comprise the structure and content of a document on the web. The DOM represents the HTML or XML document so that programming languages can easily connect to the page. Think of the DOM as a large tree like structure with the `document` (root node) at the top of the tree with the `<html>` (root element) on the next branch and the rest of the HTML elements to follow.
 
-<h2 class="post-heading">Build the DOM Tree</h2>
+<h2 class="post-heading">Creating HTML Elements</h2>
 
-JavaScript allows for virtually creating HTML elements using the [Document](https://developer.mozilla.org/en-US/docs/Web/API/Document) interface and associated [methods](https://developer.mozilla.org/en-US/docs/Web/API/Document#Methods). Below is an example of virtually creating a new `<div>` element using `createElement()` and attaching it to the DOM tree within the `<body>` node of the current document.
+JavaScript allows us to programmtically create HTML elements using the [Document](https://developer.mozilla.org/en-US/docs/Web/API/Document) interface and associated [methods](https://developer.mozilla.org/en-US/docs/Web/API/Document#Methods) e.g. DOM methods. Below is an example of creating a new `<h1>` element using `createElement()` and adding it to the DOM as a child of the `<body>` node in the current document.
 
-{% filename "script.js" %}
+{% filename "index.html" %}
 
-```js
-const div = document.body.createElement("div");
+```html
+<html>
+    <body>
+        <script type="text/javascript">
+            const h1 = document.createElement('h1');
+            h1.textContent = 'Hello, World!';
+            document.body.appendChild(h1);
+        </script>
+    </body>
+</html>
 ```
 
-<h2 class="post-heading">Creating HTML attributes</h2>
+<h2 class="post-heading">Setting an Elements Text Content</h2>
 
-After virtually creating HTML elements with JavaScript, you can add and remove attributes from them. The `Document` interface provides a method called `createAttribute()` to create HTML element attributes.
+You can use `createTextNode()` and append the text node to an element, or use the `.textContent` field on the newly created DOM element.
 
 ```js
-var div_att = document.createAttribute("class");
-div_att.value = "page-content";
+const p = document.createElement('p');
+const textNode = document.createTextNode('Some text');
+p.appendChild(textNode);
+
+const div = document.createElement('div');
+div.textContent = 'Some other text';
 ```
 
-This creates a `class` attribute and assigns it the value "page-content", ie `class="page-content"`.
+<h2 class="post-heading">Creating and Removing HTML attributes</h2>
+
+After creating HTML elements with JavaScript, you can create and remove attributes. There is a DOM method called `createAttribute()` to create HTML element attributes and `removeAttribute()` to remove attributes.
+
+```js
+const h1 = document.createElement('h1');
+h1.textContent = 'Hello, World!';
+
+// Create a class attribute
+const h1_class = document.createAttribute('class');
+h1_class.value = 'page-content';
+
+// Set the attribute
+h1.setAttributeNode(h1_class);
+
+// Remove the class attribute
+h1.removeAttribute('class');
+```
+
+This creates a `class` attribute and assigns it the value "page-content", then sets the attribute on the DOM element which creates `<h1 class="page-content">Hello, World!</h1>`, then we remove the attribute to make it `<h1>Hello, World!</h1>`.
 
 <h2 class="post-heading">Injecting and Setting Element Attributes</h2>
 
-Up until this point, we have virtually created HTML elements using `createElement()` and gave those elements some attributes using `createAttribute()`. Now it's time to inject values into the attributes and set their values using the `setAttributeNode()` method. Putting all the previous steps together:
+Up until this point, we have created HTML elements using `createElement()` and gave those elements some attributes using `createAttribute()`. Now it's time to define values for the attributes and set the attributes on the DOM elements using the `setAttributeNode()` method. Putting all the previous steps together:
 
-1. Create the HTML div element.
-2. Create class attribute for the newly created element.
-3. Inject the class attribute value with the text "page-content".
-4. Set the injected attribute values for DOM elements.
+1. Create an HTML `<div>` element.
+2. Create a class attribute.
+3. Assign the class attributes value as "page-content".
+4. Set the class attribute on the `<div>` element binding the attribute to the DOM element.
 
 ```js
 const div = document.createElement('div');
-const div_class = document.createAttribute("class");
-div_class.value = "page-content";
+div.textContent = 'Some content';
+
+const div_class = document.createAttribute('class');
+div_class.value = 'page-content';
 div.setAttributeNode(div_class);
+```
+
+which creates:
+
+```html
+<div class="page-content">Some content</div>
 ```
 
 <h3 id="quickly-set-attr" class="post-heading">Create and set attributes more efficiently</h3>
 
-The faster way to create and set an attribute for any HTML DOM element, is by using `setAttribute` which takes two arguments. The first being a valid attribute name and the second being a value for that attribute.
+The faster way to create and set an attribute for a HTML DOM element is by using `setAttribute()` which takes two arguments. The first being a valid attribute name and the second being a value for that attribute.
 
 ```js
-const div = document.createElement('div';
-div.setAttribute("class", "page-content");
+const div = document.createElement('div');
+div.setAttribute('class', 'page-content');
 ```
 
 This produces the same markup `<div class="page-content"></div>` as the method above. You can also get and set the `class` attribute for a specific HTML element by accessing the `className` property of the [Element](https://developer.mozilla.org/en-US/docs/Web/API/Element/className) interface. 
 
 {% raw %}
 ```js
-HTMLElement.className = "page-content"
+const div = document.createElement('div');
+div.className = 'page-content';
 ```
 {% endraw %}
 
@@ -114,15 +154,26 @@ p.classList.remove("first-class"); // <p class="second-class"></p>
 
 <h2 class="post-heading">Binding elements to the DOM</h2>
 
-The final step in this workflow is to bind the HTML elements to our DOM tree using `appendChild()`. This step in the process truly improved my overall web content structuring and DOM understanding. 
+The final step in this workflow is to bind the HTML elements to the DOM tree using `appendChild()`. This step in the process truly improved my overall web content structuring and DOM understanding. 
 
-You can utilize the `appendChild()` method and bind the virtually created HTML elements to the DOM within the document as a child of the `body` tag.
+You can utilize the `appendChild()` method and bind the newly created HTML elements to the DOM within the document as a child of the `body` tag.
 
 ```js
-document.body.appendChild(div); // binding the div element to DOM tree
+const div = document.createElement('div');
+div.textContent = 'Hello!';
+div.className = 'page-content';
+
+// Binding the <div> element to the DOM
+document.body.appendChild(div);
+
+// If you had some other element you wanted to select and append to
+// simply select it from the DOM with querySelector, getElementById etc
+// then use appendChild in the same way
+const main = document.querySelector('main');
+main.appendChild(div);
 ```
 
-So far, you've created one HTML `div` element, set its `class` attribute and then finalized the processing by binding it to the DOM tree. Specifically binding the element onto the `<body>` node of the document. Now who said using JavaScript in web development had to be hard? 
+So far, you've created some HTML elements, created and set a `class` attribute and then added the element to the DOM. Specifically binding the element onto the `<body>` node of the document. Now who said using JavaScript in web development had to be hard? 
 
 <h2 class="post-heading">Setup Browser Testing Environment</h2>
 
@@ -181,7 +232,7 @@ Great! Now that the basic markup for `index.html` page is setup. Make sure you'v
 
 <h2 class="post-heading"> Putting it all together!</h2>
 
-Navigate to the `script.js` file in the home js-tutorial directory and lets start writing JS code for constructing a basic DOM tree. You will be utilizing everything mentioned so far to build a small web page with virtually created HTML elements.
+Navigate to the `script.js` file in the home js-tutorial directory and lets start writing JS code for constructing a basic DOM tree. You will be utilizing everything mentioned so far to build a small web page with programmatically created HTML elements.
 
 ### Step 1
 Create the `<main>` and `<section>` HTML elements with a `class` attribute then inject and set a value for each.
@@ -197,16 +248,16 @@ section.setAttribute("class", "page-content");
 ```
 
 ### Step 2
-Create the heading and paragraph elements and give them both some inner text.
+Create the heading and paragraph elements and give them both some text content.
 
 ```js
 const h1 = document.createElement("h1");
 h1.setAttribute("class", "section-title"); 
-h1.innerText = "Hello world!";
+h1.textContent = "Hello world!";
 
 const p = document.createElement("p");
 p.setAttribute("class", "section-text");
-p.innerText = "lorem ipsum dorem dolor.";
+p.textContent = "lorem ipsum dorem dolor.";
 ```
 
 ### Step 3
@@ -230,7 +281,7 @@ p2.innerHTML = `${img.alt}. This photo was found on bukk.it`;
 ```
 
 ### Step 5
-Bind virtually created HTML elements to the DOM Tree.
+Bind newly created HTML elements to the DOM.
 
 ```js
 section.appendChild(h1);
