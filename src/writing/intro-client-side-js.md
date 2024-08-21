@@ -96,7 +96,7 @@ h1.removeAttribute('class');
 
 This creates a `class` attribute and assigns it the value "page-content", then sets the attribute on the DOM element which creates `<h1 class="page-content">Hello, World!</h1>`, then we remove the attribute to make it `<h1>Hello, World!</h1>`.
 
-<h2 class="post-heading">Injecting and Setting Element Attributes</h2>
+<h2 class="post-heading">Setting Element Attributes</h2>
 
 Up until this point, we have created HTML elements using `createElement()` and gave those elements some attributes using `createAttribute()`. Now it's time to define values for the attributes and set the attributes on the DOM elements using the `setAttributeNode()` method. Putting all the previous steps together:
 
@@ -120,7 +120,7 @@ which creates:
 <div class="page-content">Some content</div>
 ```
 
-<h3 id="quickly-set-attr" class="post-heading">Create and set attributes more efficiently</h3>
+<h3 class="post-heading">Create and set attributes more efficiently</h3>
 
 The faster way to create and set an attribute for a HTML DOM element is by using `setAttribute()` which takes two arguments. The first being a valid attribute name and the second being a value for that attribute.
 
