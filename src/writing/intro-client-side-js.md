@@ -1,27 +1,28 @@
 ---
 title: An Introduction to Client-side JavaScript
 shortname: JS Client Side
-datetime: 2020-10-06 00:00:00 Z
-date: 2020-10-06
+datetime: 2024-08-20 00:00:00 Z
+date: 2024-08-20
 tags: 
     - html
     - javascript
-preview: Have you ever thought to yourself while building a website, how could I create HTML elements and bind them to the DOM? This article explains some of the fundamentals for interacting with the DOM tree using client-side JavaScript.
+preview: Have you ever thought to yourself while building a website, how could I manipulate the DOM? Possibly create new HTML elements or modify existing elements? This article explains some of the fundamentals for interacting with the DOM using client-side JavaScript.
 permalink: "/writing/{{ title | slug }}/"
 demo_link: https://browserjs-intro.netlify.app/
 ---
 
 {{ preview }} 
 
-Maybe you've been tasked with writing a function that creates multiple `<li>` list elements. If you wanted to programmaticlly set attributes and apply styles, this is where the power client-side JavaScript really shines! 
+Maybe you've been tasked with writing a function that creates multiple `<li>` list elements. If you wanted to create these HTML elements programmaticlly and set attributes along with applying styles, this is where the power of client-side JavaScript really shines! 
 
-Client-side means that the JavaScript code is run on the client machine, which is the browser. Server-side JavaScript means that the code is run on the server which is serving web pages.
+Client-side means that the JavaScript code is run on the client machine, which is the browser. Server-side JavaScript means that the code is run on a server and won't be executed in a browser environment.
 
 <h2 class="post-heading">This post will aim to cover:</h2>
 
-1. Virtually creating HTML elements in JavaScript
-2. Creating and setting attributes to HTML DOM elements
-3. Binding the created HTML elements to the DOM
+1. Manipulating and modifying the DOM with JavaScript
+1. Creating HTML elements
+2. Creating and setting attributes for HTML elements
+3. Binding newly created HTML elements to the DOM
 
 <h2 class="post-heading">What is JavaScript?</h2>
 
@@ -31,7 +32,9 @@ Client-side means that the JavaScript code is run on the client machine, which i
 
 If you're like me, I was (for some reason) afraid of learning to code in JavaScript at first. We just didn't get along. Then I stumbled upon this video titled: [This is truly the only way to learn JavaScript](https://www.youtube.com/watch?time_continue=4&v=HnXmI2UVZlU&feature=emb_logo) by Chris Hawkes.
 
-After watching the video, I was captivated by the fact you could virtually create HTML DOM elements in JavaScript. This essentially took out all the need to ever go into my `.html` files, hypothetically speaking. Other than to include a `script` element for referencing the client side JavaScript containing all of the virtually created DOM elements.
+After watching the video, I much better understood how the browser received an HTML file from a server and created a Document Object Model (DOM) which represented the HTML elements on the page. I was captivated by the fact that we could programmatically create HTML DOM elements in JavaScript without writing any HTML. This essentially meant I'd never need to go into my `.html` files ever again, hypothetically speaking :). Other than to include a `script` element for referencing the client-side JavaScript containing all of the virtually created DOM elements.
+
+I don't recommened writing HTML webpages purely with JavaScript, it will be huge bundle of client-side JS and the site will probably not be very performant. I do recommend writing HTML pages e.g. `index.html` then sprinkling in JavaScript to mutate and modify the DOM as needed.
 
 <h2 class="post-heading">So where does HTML fit into the picture?</h2>
 

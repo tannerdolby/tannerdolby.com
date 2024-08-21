@@ -1,7 +1,7 @@
 ---
 title: Using index files when working with Sass and @use rules
-date: 2021-08-22
-datetime: 2021-08-22 00:00:00 Z
+date: 2024-08-15
+datetime: 2024-08-15 00:00:00 Z
 tags:
  - scss
  - css
