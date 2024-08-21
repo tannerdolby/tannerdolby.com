@@ -13,7 +13,7 @@ demo_link: https://browserjs-intro.netlify.app/
 
 {{ preview }} 
 
-Maybe you've been tasked with writing a function that creates multiple `<li>` list elements. If you wanted to create these HTML elements programmaticlly and set attributes along with applying styles, this is where the power of client-side JavaScript really shines! 
+Maybe you've been tasked with writing a function that creates an unordered list `<ul>` with multiple list items `<li>` populated with data returned from an API. You can use DOM methods to create these HTML elements programmaticlly and define text content, set attributes, and apply styles. This is where the power of client-side JavaScript for DOM manipulation really shines! 
 
 Client-side means that the JavaScript code is run on the client machine, which is the browser. Server-side JavaScript means that the code is run on a server and won't be executed in a browser environment.
 
