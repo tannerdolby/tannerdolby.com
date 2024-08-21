@@ -304,4 +304,4 @@ If you read this far and followed each step, you should now have a very basic we
 
 For anyone wanting to start their journey with JavaScript, this is truly some of the best practice to become more familiar with the basics of DOM manipulation. Have a look at the <a href="https://github.com/tannerdolby/intro-browser-js">source code on Github</a>. You can also checkout similar posts in the #javascript or #html categories. Here's a link to <a href="{{ demo_link }}">the live demo</a>.
 
-If you are looking for a declarative library that handles all these DOM updates for you and allows you to focus on the user interface that you want to show. Checkout [React](https://react.dev/)!
+If you are looking for a declarative library that handles all these DOM updates for you and allows you to focus on the user interface that you want to show. Checkout [React](https://react.dev/) for building interactive UIs.
