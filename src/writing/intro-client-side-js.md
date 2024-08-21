@@ -34,7 +34,7 @@ If you're like me, I was (for some reason) afraid of learning to code in JavaScr
 
 After watching the video, I much better understood how the browser received an HTML file from a server and created a Document Object Model (DOM) which represented the HTML elements on the page. I was captivated by the fact that we could programmatically create HTML DOM elements in JavaScript without writing any HTML. This essentially meant I'd never need to go into my `.html` files ever again, hypothetically speaking :). Other than to include a `script` element for referencing the client-side JavaScript containing all of the virtually created DOM elements.
 
-I don't recommened writing HTML webpages purely with JavaScript, it will be huge bundle of client-side JS and the site will probably not be very performant. I do recommend writing HTML pages e.g. `index.html` then sprinkling in JavaScript to mutate and modify the DOM as needed.
+I don't recommened writing HTML webpages purely with JavaScript and DOM manipulation, it will quickly get out of hand. As the app gets larger and more complex, building a website this way will be very difficult to maintain. HTML is our friend (and the browsers) so I recommend writing as much HTML in pages as you can, then sprinkling in JavaScript to mutate and modify the DOM as needed.
 
 <h2 class="post-heading">So where does HTML fit into the picture?</h2>
 
