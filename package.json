@@ -42,6 +42,7 @@
     "npm-run-all": "^4.1.5",
     "nunjucks-date-filter": "^0.1.1",
     "sass": "^1.39.0",
+    "sharp": "^0.33.5",
     "slugify": "^1.6.0",
     "speedlify-score": "^2.0.2",
     "terser": "^5.7.2"
