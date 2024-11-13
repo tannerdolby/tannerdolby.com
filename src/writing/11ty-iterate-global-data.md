@@ -208,6 +208,7 @@ If you wanted to only use JSON in your global data file, you could do something 
 and using the data in a template would look like this:
 
 {% raw %}
+
 ```html
 <body>
   <h1>{{ customData.title }}</h1>
@@ -226,6 +227,7 @@ and using the data in a template would look like this:
   </div>
 </body>
 ```
+
 {% endraw %}
 
 <h2 id="using-global-data" class="post-heading">Iterating Global Data</h2>
@@ -344,16 +346,12 @@ To include the markdown in `cardBanner.md` within the layout file `global-data-d
 
 Now that everything is setup, build with `eleventy` and then serve the app locally using `eleventy --serve`. The employee grid should look like this:
 
-{% respimg 
+{% img 
    src="profile-grid-demo.png",
    alt="Employee Grid demo page",
-   inputDir="./src",
-   imgDir="/images/",
    widths=[320, 480, 640, 1024],
    sizes="(max-width: 400px) 33.3vw, 100vw",
-   className="demo-img",
-   width="640",
-   height="400"
+   cls="demo-img"
 %}
 
 <h2 id="conclusion" class="post-heading">Conclusion</h2>

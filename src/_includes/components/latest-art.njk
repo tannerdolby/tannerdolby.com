@@ -6,14 +6,12 @@
             {% for drawing in art | sortRecent(art) %}
                 <li>
                     <a href="/fun/#{{ drawing.id }}" aria-label="{{ drawing.name }}">
-                        {% respimg 
+                        {% img 
                             src=drawing.image.filename,
                             alt=drawing.image.alt,
                             widths=images.widths,
                             sizes=images.sizes,
-                            inputDir=images.inputDir,
-                            imgDir=images.imgDir,
-                            className="featured-art-item",
+                            cls="featured-art-item",
                             id=images.id,
                             width=images.width,
                             height=images.height

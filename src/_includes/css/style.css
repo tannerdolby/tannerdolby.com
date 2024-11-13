@@ -1645,6 +1645,13 @@ textarea:focus {
   margin: 2rem auto;
 }
 
+.headshot-img {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 200px;
+  height: 200px;
+}
+
 .hero-section {
   display: flex;
   align-items: center;
@@ -2053,8 +2060,6 @@ textarea:focus {
 
 .experience-container {
   margin-bottom: 1rem;
-}
-.experience-container div {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -2062,7 +2067,11 @@ textarea:focus {
 }
 .experience-container .job-title {
   font-size: 1.15rem;
+  font-weight: 400;
   margin-right: 0.5rem;
+  color: #212121;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 .experience-container .job-duration {
   font-size: 1.1rem;
@@ -2073,6 +2082,8 @@ textarea:focus {
 
 .book-list li {
   font-size: 1.1rem;
+  list-style: disc;
+  margin: 0.5rem 0;
 }
 
 @media screen and (max-width: 1250px) {

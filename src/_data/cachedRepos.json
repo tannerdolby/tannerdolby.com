@@ -3,7 +3,7 @@
         "title": "eleventy-plugin-metagen",
         "desc": "Eleventy shortcode that generates document metadata",
         "stargazers": 41,
-        "subscribers": 2,
+        "subscribers": 3,
         "forks": 3,
         "issues": 0,
         "stargazers_url": "https://github.com/tannerdolby/eleventy-plugin-metagen/stargazers/",
@@ -13,7 +13,7 @@
     {
         "title": "eleventy-photo-gallery",
         "desc": "Starter site for creating a responsive image gallery using the Eleventy static site generator",
-        "stargazers": 143,
+        "stargazers": 156,
         "subscribers": 3,
         "forks": 7,
         "issues": 0,
@@ -24,7 +24,7 @@
     {
         "title": "bug-saves-world",
         "desc": "Platformer game built with Phaser. You're a bug and you must collect all stars without taking damage",
-        "stargazers": 7,
+        "stargazers": 8,
         "subscribers": 3,
         "forks": 0,
         "issues": 0,
@@ -57,7 +57,7 @@
     {
         "title": "react-task-board",
         "desc": "Task board with drag-and-drop functionality built with React and Redux",
-        "stargazers": 0,
+        "stargazers": 2,
         "subscribers": 1,
         "forks": 0,
         "issues": 0,

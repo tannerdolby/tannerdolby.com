@@ -243,6 +243,12 @@ textarea {
     margin: 2rem auto;
 }
 
+.headshot-img {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+}
 
 .hero-section {
     display: flex;
@@ -665,17 +671,18 @@ textarea {
 
 .experience-container {
     margin-bottom: 1rem;
-
-    div {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 
     .job-title {
         font-size: 1.15rem;
+        font-weight: 400;
         margin-right: .5rem;
+        color: $paragraph;
+        margin-top: 0;
+        margin-bottom: 0;
     }
 
     .job-duration {
@@ -690,6 +697,8 @@ textarea {
 .book-list {
     li {
         font-size: 1.1rem;
+        list-style: disc;
+        margin: .5rem 0;
     }
 }
 

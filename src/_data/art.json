@@ -1,342 +1,354 @@
 [
     {
-        "name": "Christmas Scene",
-        "url": "https://codepen.io/tannerdolby/pen/PoBZONx",
-        "id": "christmas-scene-2022",
-        "vectornator": false,
-        "aria_label": "Link to demo of Christmas scene on CodePen",
-        "image": {
-            "filename": "css-christmas-scene-2022.png",
-            "fallback_src": "/images/css-christmas-scene-2022.png",
-            "alt": "Christmas tree and presents with a cat climbing on the biggest present. It's been awhile since I tinkered with CSS art so I'm a bit rusty :)"
+      "name": "Pixel art ghost",
+      "aria_label": "Link to pixel ghost on CodePen",
+      "desc": "Created this image of a ghost on the pixel drawing application PxL created by @jh3y. I animated the pixel ghosts eyes using CSS keyframes. Image also available as an SVG or jpeg.",
+      "id": "pixel-ghost",
+      "url": "https://codepen.io/tannerdolby/full/dyGjMEN",
+      "date_created": "July 12, 2020",
+      "credit": "https://pxl.netlify.app",
+      "image": {
+        "filename": "pxl-ghost-large.jpeg",
+        "fallback_src": "/images/pxl-ghost-large.jpeg",
+        "alt": "Pixel art ghost with dark gray background",
+        "large": {
+          "webp": "/images/pxl-ghost-large.webp",
+          "jpeg": "/images/pxl-ghost-large.jpeg",
+          "width": "1024w"
+        },
+        "med": {
+          "webp": "/images/pxl-ghost-med.webp",
+          "jpeg": "/images/pxl-ghost-med.jpeg",
+          "width": "640w"
+        },
+        "small": {
+          "webp": "/images/pxl-ghost-small.webp",
+          "jpeg": "/images/pxl-ghost-small.jpeg",
+          "width": "320w"
         }
+      }
     },
     {
-        "name": "3D CSS Books",
-        "url": "https://codepen.io/tannerdolby/full/MWvyjQQ",
-        "id": "3d-css-books",
-        "vectornator": false,
-        "aria_label": "Link to demo of 3D CSS Books on CodePen",
-        "image": {
-            "filename": "3d-css-books.png",
-            "fallback_src": "/images/3d-css-books.png",
-            "alt": "3D CSS books animated with GreenSock Animation Platform (GSAP)"
+      "name": "Blue crayon",
+      "id": "blue-crayon",
+      "aria_label": "Link to blue crayon on CodePen",
+      "url": "https://codepen.io/tannerdolby/full/PoZyXqB",
+      "credit": "https://hacks.mozilla.org/2014/09/single-div-drawings-with-css/",
+      "date_created": "July 16, 2020",
+      "desc": "A single div blue crayon that I built after reading an article on Mozilla Hacks by Lynn Fisher. I was amazed by the power of single div art described in an article and it got me interested in CSS illustrations.",
+      "image": {
+        "filename": "css-crayon-large.jpeg",
+        "fallback_src": "/images/css-crayon-large.jpeg",
+        "alt": "CSS drawing of a blue crayon",
+        "large": {
+          "webp": "/images/css-crayon-large.webp",
+          "jpeg": "/images/css-crayon-large.jpeg",
+          "width": "1024w"
+        },
+        "med": {
+          "webp": "/images/css-crayon-med.webp",
+          "jpeg": "/images/css-crayon-med.jpeg",
+          "width": "640w"
+        },
+        "small": {
+          "webp": "/images/css-crayon-small.webp",
+          "jpeg": "/images/css-crayon-small.jpeg",
+          "width": "320w"
         }
+      }
     },
     {
-        "name": "Single div CSS Pumpkin",
-        "url": "https://codepen.io/tannerdolby/full/jOwomNZ",
-        "id": "single-div-css-pumpkin",
-        "vectornator": false,
-        "aria_label": "Link to illustration of single div CSS pumpkin on CodePen",
-        "image": {
-            "filename": "single-div-pumpkin.png",
-            "fallback_src": "/images/single-div-pumpkin.png",
-            "alt": "Single div CSS drawing of a Pumpkin"
+      "name": "Cassette Tape",
+      "id": "cassette-tape",
+      "aria_label": "Link to cassette tape on CodePen",
+      "url": "https://codepen.io/tannerdolby/full/ExPqqVZ",
+      "date_created": "August 2, 2020",
+      "credit": "https://depositphotos.com/vector-images/cassette-tape.html",
+      "desc": "This drawing of a cassette is one of my all time favorites. I went the endless box-shadow route here which I haven't used in my more recent illustrations. Nonetheless, a cool looking compact cassette.",
+      "image": {
+        "filename": "css-cassette-large.jpeg",
+        "fallback_src": "/images/css-cassette-large.jpeg",
+        "alt": "CSS drawing of a cassette tape with blue background",
+        "large": {
+          "webp": "/images/css-cassette-large.webp",
+          "jpeg": "/images/css-cassette-large.jpeg",
+          "width": "1024w"
+        },
+        "med": {
+          "webp": "/images/css-cassette-med.webp",
+          "jpeg": "/images/css-cassette-med.jpeg",
+          "width": "640w"
+        },
+        "small": {
+          "webp": "/images/css-cassette-small.webp",
+          "jpeg": "/images/css-cassette-small.jpeg",
+          "width": "320w"
         }
+      }
     },
     {
-        "name": "Purple Cube and Crawly Critter",
-        "url": "https://dribbble.com/shots/16417334-Purple-Cube-and-Crawly-Critter",
-        "id": "purple-cube-and-crawly-critter",
-        "vectornator": true,
-        "aria_label": "Link to illustration of purple cube and crawly critter on dribbble",
-        "image": {
-            "filename": "vectornator-one.jpeg",
-            "fallback_src": "/images/vectornator-one.jpeg",
-            "alt": "Vector illustration of Purple Cube and Crawly Critter created using iPad and Vectornator."
+      "name": "Telephone booth",
+      "id": "telephone-booth",
+      "aria_label": "Link to telephone booth on CodePen",
+      "url": "https://codepen.io/tannerdolby/full/JjXYPQL",
+      "date_created": "August 10, 2020",
+      "credit": "https://dribbble.com/shots/11454238-Telephone-London",
+      "desc": "I'd seen this style of telephone booth in commercials, games and around the web so I finally created one. The booth is based on a illustration from dribbble. Click inside the booth to turn the lights on and off.",
+      "image": {
+        "filename": "css-booth-large.jpeg",
+        "fallback_src": "/images/css-booth-large.jpeg",
+        "alt": "CSS drawing of a red telephone booth with blue background",
+        "large": {
+          "webp": "/images/css-booth-large.webp",
+          "jpeg": "/images/css-booth-large.jpeg",
+          "width": "1024w"
+        },
+        "med": {
+          "webp": "/images/css-booth-med.webp",
+          "jpeg": "/images/css-booth-med.jpeg",
+          "width": "640w"
+        },
+        "small": {
+          "webp": "/images/css-booth-small.webp",
+          "jpeg": "/images/css-booth-small.jpeg",
+          "width": "320w"
         }
+      }
     },
     {
-        "name": "Rock Lee",
-        "order": 2,
-        "url": "https://codepen.io/tannerdolby/full/LYyQvjJ",
-        "recent": true,
-        "id": "rock-lee-css",
-        "aria_label": "Link to CSS Rock Lee illustration on CodePen",
-        "image": {
-            "filename": "rock-lee-css.png",
-            "fallback_src": "/images/rock-lee-css.png",
-            "alt": "Rock Lee, a shinobi of the Hidden Leaf Village in the anime series Naruto."
+      "name": "UPS Building",
+      "id": "ups-building",
+      "desc": "I saw this UPS store in a commercial while watching TV. It really caught my eye, so I attempted to recreate it with CSS. Really simplistic but I had fun watching this come to life.",
+      "aria_label": "Link to UPS building on CodePen",
+      "url": "https://codepen.io/tannerdolby/full/NWNEBYV",
+      "date_created": "September 21, 2020",
+      "credit": "https://ups.com",
+      "svg_credit": "https://worldvectorlogo.com/logo/ups",
+      "image": {
+        "filename": "ups-store-large.jpeg",
+        "fallback_src": "/images/ups-store-large.jpeg",
+        "alt": "UPS Building with glossy windows",
+        "large": {
+          "webp": "/images/ups-store-large.webp",
+          "width": "1024w"
+        },
+        "med": {
+          "webp": "/images/ups-store-med.webp",
+          "width": "640w"
+        },
+        "small": {
+          "webp": "/images/ups-store-small.webp",
+          "width": "320w"
         }
+      }
     },
     {
-        "name": "Cats Playing In a Box",
-        "order": 3,
-        "url": "https://codepen.io/tannerdolby/full/vYxyVLV",
-        "recent": true,
-        "id": "cats-playing-in-box",
-        "aria_label": "Link to cats playing in a box illustration on CodePen",
-        "image": {
-            "filename": "cats-in-box.png",
-            "fallback_src": "/images/cats-in-box.png",
-            "alt": "Two cats playing in a carboard box"
+      "name": "Archimedean spiral with randomized path",
+      "id": "archimedean-spiral",
+      "desc": "I've always been interested in spirals and the underlying mathematical equations that produce the spiral itself. This is my attempt at drawing a Archimedean Spiral using the Canvas API. Click the spiral to randomize its stroke path.",
+      "aria_label": "Link to archimedean spiral on CodePen",
+      "url": "https://codepen.io/tannerdolby/full/KKzrOEv",
+      "date_created": "September 22, 2020",
+      "credit": "https://en.wikipedia.org/wiki/Archimedean_spiral",
+      "image": {
+        "filename": "arc-spiral-large.jpeg",
+        "fallback_src": "/images/arc-spiral-large.jpeg",
+        "alt": "Archimedean Spirl with randomized offset spiral path",
+        "large": {
+          "webp": "/images/arc-spiral-large.webp",
+          "jpeg": "/images/arc-spiral-large.jpeg",
+          "width": "1024w"
+        },
+        "med": {
+          "webp": "/images/arc-spiral-med.webp",
+          "jpeg": "/images/arc-spiral-med.jpeg",
+          "width": "640w"
+        },
+        "small": {
+          "webp": "/images/arc-spiral-small.webp",
+          "jpeg": "/images/arc-spiral-small.jpeg",
+          "width": "320w"
         }
+      }
     },
     {
-        "name": "3D CSS Shipping Truck",
-        "id": "css-shipping-truck",
-        "recent": true,
-        "order": 1,
-        "aria_label": "Link to CSS shipping truck on CodePen",
-        "url": "https://codepen.io/tannerdolby/full/RwKybqL",
-        "image": {
-            "filename": "css-truck.png",
-            "fallback_src": "/images/css-truck.png",
-            "alt": "A 3D CSS Shipping Truck with green loading cubes"
-        }
+      "name": "CSS Movie Camera - Hide and Reveal",
+      "url": "https://codepen.io/tannerdolby/full/YzNgveQ",
+      "id": "css-movie-camera",
+      "aria_label": "Link to CSS movie camera on CodePen",
+      "image": {
+        "filename": "css-movie-camera.jpeg",
+        "fallback_src": "/images/css-movie-camera.jpeg",
+        "alt": "A hide and reveal movie camera scene"
+      }
     },
     {
-        "name": "Itachi Uchiha (Whimsical)",
-        "url": "https://codepen.io/tannerdolby/full/ExmRVxM",
-        "id": "itachi-uchiha-whimsical",
-        "aria_label": "Link to CSS illustration of Itachi Uchiha on CodePen",
-        "image": {
-            "filename": "itachi-whimsical.png",
-            "fallback_src": "/images/itachi-whimsical.png",
-            "alt": "CSS illustration of a whimsical Itachi Uchiha from the a anime series Naruto."
+      "name": "CSS Boombox",
+      "id": "css-boombox",
+      "desc": "I saw this illustration while scrolling through dribbble and wanted to try recreating it with CSS. I'm thinking about coming back to this drawing and adding some animation in the future.",
+      "aria_label": "Link to CSS Boombox on CodePen",
+      "url": "https://codepen.io/tannerdolby/full/abZYOMN",
+      "date_created": "October 29, 2020",
+      "recent": false,
+      "credit": "https://dribbble.com/shots/14159520-Boombox",
+      "image": {
+        "filename": "css-boombox-large.jpeg",
+        "fallback_src": "/images/css-boombox-large.jpeg",
+        "alt": "Old school boombox made with CSS",
+        "large": {
+          "webp": "/images/css-boombox-large.webp",
+          "jpeg": "/images/css-boombox-large.jpeg",
+          "width": "1024w"
+        },
+        "med": {
+          "webp": "/images/css-boombox-med.webp",
+          "width": "640w"
+        },
+        "small": {
+          "webp": "/images/css-boombox-small.webp",
+          "width": "320w"
         }
+      }
     },
     {
-        "name": "Window during nighttime",
-        "desc": "An interactive window made with CSS that displays two backgrounds, day and night. Based on this dribble shot",
-        "aria_label": "Link to nighttime window on CodePen",
-        "id": "window-nighttime",
-        "url": "https://codepen.io/tannerdolby/full/ZEWKEvR",
-        "date_created": "August 26, 2020",
-        "recent": true,
-        "order": 4,
-        "credit": "https://dribbble.com/shots/11283947-Taking-it-slow",
-        "image": {
-            "filename": "css-window-night-large.jpg",
-            "fallback_src": "/images/css-window-night-large.jpg",
-            "alt": "CSS drawing of a window with dark night sky background",
-            "large": {
-                "webp": "/images/css-window-night-large.webp",
-                "jpg": "/images/css-window-night-large.jpg",
-                "width": "1024w"
-            },
-            "med": {
-                "webp": "/images/css-window-night-med.webp",
-                "jpg": "/images/css-window-night-med.jpg",
-                "width": "640w"
-            },
-            "small": {
-                "webp": "/images/css-window-night-small.webp",
-                "jpg": "/images/css-window-night-small.jpg",
-                "width": "320w"
-            }
+      "name": "Window during nighttime",
+      "desc": "An interactive window made with CSS that displays two backgrounds, day and night. Based on this dribble shot",
+      "aria_label": "Link to nighttime window on CodePen",
+      "id": "window-nighttime",
+      "url": "https://codepen.io/tannerdolby/full/ZEWKEvR",
+      "date_created": "August 26, 2020",
+      "recent": true,
+      "order": 4,
+      "credit": "https://dribbble.com/shots/11283947-Taking-it-slow",
+      "image": {
+        "filename": "css-window-night-large.jpeg",
+        "fallback_src": "/images/css-window-night-large.jpeg",
+        "alt": "CSS drawing of a window with dark night sky background",
+        "large": {
+          "webp": "/images/css-window-night-large.webp",
+          "jpeg": "/images/css-window-night-large.jpeg",
+          "width": "1024w"
+        },
+        "med": {
+          "webp": "/images/css-window-night-med.webp",
+          "jpeg": "/images/css-window-night-med.jpeg",
+          "width": "640w"
+        },
+        "small": {
+          "webp": "/images/css-window-night-small.webp",
+          "jpeg": "/images/css-window-night-small.jpeg",
+          "width": "320w"
         }
+      }
     },
     {
-        "name": "CSS Boombox",
-        "id": "css-boombox",
-        "desc": "I saw this illustration while scrolling through dribbble and wanted to try recreating it with CSS. I'm thinking about coming back to this drawing and adding some animation in the future.",
-        "aria_label": "Link to CSS Boombox on CodePen",
-        "url": "https://codepen.io/tannerdolby/full/abZYOMN",
-        "date_created": "October 29, 2020",
-        "recent": false,
-        "credit": "https://dribbble.com/shots/14159520-Boombox",
-        "image": {
-            "filename": "css-boombox-large.jpg",
-            "fallback_src": "/images/css-boombox-large.jpg",
-            "alt": "Old school boombox made with CSS",
-            "large": {
-                "webp": "/images/css-boombox-large.webp",
-                "jpg": "/images/css-boombox-large.jpg",
-                "width": "1024w"
-            },
-            "med": {
-                "webp": "/images/css-boombox-med.webp",
-                "width": "640w"
-            },
-            "small": {
-                "webp": "/images/css-boombox-small.webp",
-                "width": "320w"
-            }
-        }
+      "name": "Itachi Uchiha (Whimsical)",
+      "url": "https://codepen.io/tannerdolby/full/ExmRVxM",
+      "id": "itachi-uchiha-whimsical",
+      "aria_label": "Link to CSS illustration of Itachi Uchiha on CodePen",
+      "image": {
+        "filename": "itachi-whimsical.jpeg",
+        "fallback_src": "/images/itachi-whimsical.jpeg",
+        "alt": "CSS illustration of a whimsical Itachi Uchiha from the a anime series Naruto."
+      }
     },
     {
-        "name": "CSS Movie Camera - Hide and Reveal",
-        "url": "https://codepen.io/tannerdolby/full/YzNgveQ",
-        "id": "css-movie-camera",
-        "aria_label": "Link to CSS movie camera on CodePen",
-        "image": {
-            "filename": "css-movie-camera.png",
-            "fallback_src": "/images/css-movie-camera.png",
-            "alt": "A hide and reveal movie camera scene"
-        }
+      "name": "3D CSS Shipping Truck",
+      "id": "css-shipping-truck",
+      "recent": true,
+      "order": 1,
+      "aria_label": "Link to CSS shipping truck on CodePen",
+      "url": "https://codepen.io/tannerdolby/full/RwKybqL",
+      "image": {
+        "filename": "css-truck.jpeg",
+        "fallback_src": "/images/css-truck.jpeg",
+        "alt": "A 3D CSS Shipping Truck with green loading cubes"
+      }
     },
     {
-        "name": "Archimedean spiral with randomized path",
-        "id": "archimedean-spiral",
-        "desc": "I've always been interested in spirals and the underlying mathematical equations that produce the spiral itself. This is my attempt at drawing a Archimedean Spiral using the Canvas API. Click the spiral to randomize its stroke path.",
-        "aria_label": "Link to archimedean spiral on CodePen",
-        "url": "https://codepen.io/tannerdolby/full/KKzrOEv",
-        "date_created": "September 22, 2020",
-        "credit": "https://en.wikipedia.org/wiki/Archimedean_spiral",
-        "image": {
-            "filename": "arc-spiral-large.jpg",
-            "fallback_src": "/images/arc-spiral-large.jpg",
-            "alt": "Archimedean Spirl with randomized offset spiral path",
-            "large": {
-                "webp": "/images/arc-spiral-large.webp",
-                "jpg": "/images/arc-spiral-large.jpg",
-                "width": "1024w"
-            },
-            "med": {
-                "webp": "/images/arc-spiral-med.webp",
-                "jpg": "/images/arc-spiral-med.jpg",
-                "width": "640w"
-            },
-            "small": {
-                "webp": "/images/arc-spiral-small.webp",
-                "jpg": "/images/arc-spiral-small.jpg",
-                "width": "320w"
-            }
-        }
+      "name": "Cats Playing In a Box",
+      "order": 3,
+      "url": "https://codepen.io/tannerdolby/full/vYxyVLV",
+      "recent": true,
+      "id": "cats-playing-in-box",
+      "aria_label": "Link to cats playing in a box illustration on CodePen",
+      "image": {
+        "filename": "cats-in-box.jpeg",
+        "fallback_src": "/images/cats-in-box.jpeg",
+        "alt": "Two cats playing in a carboard box"
+      }
     },
     {
-        "name": "UPS Building",
-        "id": "ups-building",
-        "desc": "I saw this UPS store in a commercial while watching TV. It really caught my eye, so I attempted to recreate it with CSS. Really simplistic but I had fun watching this come to life.",
-        "aria_label": "Link to UPS building on CodePen",
-        "url": "https://codepen.io/tannerdolby/full/NWNEBYV",
-        "date_created": "September 21, 2020",
-        "credit": "https://ups.com",
-        "svg_credit": "https://worldvectorlogo.com/logo/ups",
-        "image": {
-            "filename": "ups-store-large.jpg",
-            "fallback_src": "/images/ups-store-large.jpg",
-            "alt": "UPS Building with glossy windows",
-            "large": {
-                "webp": "/images/ups-store-large.webp",
-                "width": "1024w"
-            },
-            "med": {
-                "webp": "/images/ups-store-med.webp",
-                "width": "640w"
-            },
-            "small": {
-                "webp": "/images/ups-store-small.webp",
-                "width": "320w"
-            }
-        }
+      "name": "Rock Lee",
+      "order": 2,
+      "url": "https://codepen.io/tannerdolby/full/LYyQvjJ",
+      "recent": true,
+      "id": "rock-lee-css",
+      "aria_label": "Link to CSS Rock Lee illustration on CodePen",
+      "image": {
+        "filename": "rock-lee-css.jpeg",
+        "fallback_src": "/images/rock-lee-css.jpeg",
+        "alt": "Rock Lee, a shinobi of the Hidden Leaf Village in the anime series Naruto."
+      }
     },
     {
-        "name": "Telephone booth",
-        "id": "telephone-booth",
-        "aria_label": "Link to telephone booth on CodePen",
-        "url": "https://codepen.io/tannerdolby/full/JjXYPQL",
-        "date_created": "August 10, 2020",
-        "credit": "https://dribbble.com/shots/11454238-Telephone-London",
-        "desc": "I'd seen this style of telephone booth in commercials, games and around the web so I finally created one. The booth is based on a illustration from dribbble. Click inside the booth to turn the lights on and off.",
-        "image": {
-            "filename": "css-booth-large.jpg",
-            "fallback_src": "/images/css-booth-large.jpg",
-            "alt": "CSS drawing of a red telephone booth with blue background",
-            "large": {
-                "webp": "/images/css-booth-large.webp",
-                "jpg": "/images/css-booth-large.jpg",
-                "width": "1024w"
-            },
-            "med": {
-                "webp": "/images/css-booth-med.webp",
-                "jpg": "/images/css-booth-med.jpg",
-                "width": "640w"
-            },
-            "small": {
-                "webp": "/images/css-booth-small.webp",
-                "jpg": "/images/css-booth-small.jpg",
-                "width": "320w"
-            }
-        }
+      "name": "Purple Cube and Crawly Critter",
+      "url": "https://dribbble.com/shots/16417334-Purple-Cube-and-Crawly-Critter",
+      "id": "purple-cube-and-crawly-critter",
+      "vectornator": true,
+      "aria_label": "Link to illustration of purple cube and crawly critter on dribbble",
+      "image": {
+        "filename": "vectornator-one.jpeg",
+        "fallback_src": "/images/vectornator-one.jpeg",
+        "alt": "Vector illustration of Purple Cube and Crawly Critter created using iPad and Vectornator."
+      }
     },
     {
-        "name": "Cassette Tape",
-        "id": "cassette-tape",
-        "aria_label": "Link to cassette tape on CodePen",
-        "url": "https://codepen.io/tannerdolby/full/ExPqqVZ",
-        "date_created": "August 2, 2020",
-        "credit": "https://depositphotos.com/vector-images/cassette-tape.html",
-        "desc": "This drawing of a cassette is one of my all time favorites. I went the endless box-shadow route here which I haven't used in my more recent illustrations. Nonetheless, a cool looking compact cassette.",
-        "image": {
-            "filename": "css-cassette-large.jpg",
-            "fallback_src": "/images/css-cassette-large.jpg",
-            "alt": "CSS drawing of a cassette tape with blue background",
-            "large": {
-                "webp": "/images/css-cassette-large.webp",
-                "jpg": "/images/css-cassette-large.jpg",
-                "width": "1024w"
-            },
-            "med": {
-                "webp": "/images/css-cassette-med.webp",
-                "jpg": "/images/css-cassette-med.jpg",
-                "width": "640w"
-            },
-            "small": {
-                "webp": "/images/css-cassette-small.webp",
-                "jpg": "/images/css-cassette-small.jpg",
-                "width": "320w"
-            }
-        }
+      "name": "Single div CSS Pumpkin",
+      "url": "https://codepen.io/tannerdolby/full/jOwomNZ",
+      "id": "single-div-css-pumpkin",
+      "vectornator": false,
+      "aria_label": "Link to illustration of single div CSS pumpkin on CodePen",
+      "image": {
+        "filename": "single-div-pumpkin.jpeg",
+        "fallback_src": "/images/single-div-pumpkin.jpeg",
+        "alt": "Single div CSS drawing of a Pumpkin"
+      }
     },
     {
-        "name": "Blue crayon",
-        "id": "blue-crayon",
-        "aria_label": "Link to blue crayon on CodePen",
-        "url": "https://codepen.io/tannerdolby/full/PoZyXqB",
-        "credit": "https://hacks.mozilla.org/2014/09/single-div-drawings-with-css/",
-        "date_created": "July 16, 2020",
-        "desc": "A single div blue crayon that I built after reading an article on Mozilla Hacks by Lynn Fisher. I was amazed by the power of single div art described in an article and it got me interested in CSS illustrations.",
-        "image": {
-            "filename": "css-crayon-large.jpg",
-            "fallback_src": "/images/css-crayon-large.jpg",
-            "alt": "CSS drawing of a blue crayon",
-            "large": {
-                "webp": "/images/css-crayon-large.webp",
-                "jpg": "/images/css-crayon-large.jpg",
-                "width": "1024w"
-            },
-            "med": {
-                "webp": "/images/css-crayon-med.webp",
-                "jpg": "/images/css-crayon-med.jpg",
-                "width": "640w"
-            },
-            "small": {
-                "webp": "/images/css-crayon-small.webp",
-                "jpg": "/images/css-crayon-small.jpg",
-                "width": "320w"
-            }
-        }
+      "name": "3D CSS Books",
+      "url": "https://codepen.io/tannerdolby/full/MWvyjQQ",
+      "id": "3d-css-books",
+      "vectornator": false,
+      "aria_label": "Link to demo of 3D CSS Books on CodePen",
+      "image": {
+        "filename": "3d-css-books.jpeg",
+        "fallback_src": "/images/3d-css-books.jpeg",
+        "alt": "3D CSS books animated with GreenSock Animation Platform (GSAP)"
+      }
     },
     {
-        "name": "Pixel art ghost",
-        "aria_label": "Link to pixel ghost on CodePen",
-        "desc": "Created this image of a ghost on the pixel drawing application PxL created by @jh3y. I animated the pixel ghosts eyes using CSS keyframes. Image also available as an SVG or PNG.",
-        "id": "pixel-ghost",
-        "url": "https://codepen.io/tannerdolby/full/dyGjMEN",
-        "date_created": "July 12, 2020",
-        "credit": "https://pxl.netlify.app",
-        "image": {
-            "filename": "pxl-ghost-large.jpg",
-            "fallback_src": "/images/pxl-ghost-large.jpg",
-            "alt": "Pixel art ghost with dark gray background",
-            "large": {
-                "webp": "/images/pxl-ghost-large.webp",
-                "jpg": "/images/pxl-ghost-large.jpg",
-                "width": "1024w"
-            },
-            "med": {
-                "webp": "/images/pxl-ghost-med.webp",
-                "jpg": "/images/pxl-ghost-med.jpg",
-                "width": "640w"
-            },
-            "small": {
-                "webp": "/images/pxl-ghost-small.webp",
-                "jpg": "/images/pxl-ghost-small.jpg",
-                "width": "320w"
-            }
-        }
+      "name": "Christmas Scene",
+      "url": "https://codepen.io/tannerdolby/pen/PoBZONx",
+      "id": "christmas-scene-2022",
+      "vectornator": false,
+      "aria_label": "Link to demo of Christmas scene on CodePen",
+      "image": {
+        "filename": "css-christmas-scene-2022.jpeg",
+        "fallback_src": "/images/css-christmas-scene-2022.jpeg",
+        "alt": "Christmas tree and presents with a cat climbing on the biggest present. It's been awhile since I tinkered with CSS art so I'm a bit rusty :)"
+      }
+    },
+    {
+      "name": "Square Pattern",
+      "url": "https://codepen.io/tannerdolby/pen/RweZWNg",
+      "id": "square-pattern",
+      "vectornator": false,
+      "aria_label": "Link to demo of Square Pattern on CodePen",
+      "image": {
+        "filename": "square-pattern.jpeg",
+        "fallback_src": "/images/square-pattern.jpeg",
+        "alt": "Rpeating pattern of white squares rotated on a black background"
+      }
     }
-]
+  ]

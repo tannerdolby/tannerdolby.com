@@ -14,19 +14,16 @@ pageId: main-art
     <h1 class="h1">{{ title }}</h1>
     {{ content | safe }}
 </header>
-
 <main class="art">
 {% for drawing in art %}
     <div class="art-details">
         <a href="{{ drawing.url }}" aria-label="{{ drawing.aria_label }}">
-        {% respimg
+        {% img
             src=drawing.image.filename,
             alt=drawing.image.alt,
-            inputDir="./src",
-            imgDir=imgDir,
             widths=widths,
             sizes=sizes,
-            className=class,
+            cls=class,
             id=drawing.id,
             width=1024,
             height=768
